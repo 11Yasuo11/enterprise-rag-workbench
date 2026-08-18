@@ -10,6 +10,10 @@ from rag_workbench.recovery.contracts import (
     recovery_draft_schema_identity,
     recovery_verifier_schema_identity,
 )
+from rag_workbench.recovery.instruction_boundary import (
+    apply_untrusted_instruction_boundary,
+    evaluate_instruction_boundary,
+)
 from rag_workbench.recovery.runtime import (
     CachedRecoveryStage,
     HostedStructuredRecoveryClient,
@@ -31,8 +35,10 @@ __all__ = [
     "HostedStructuredRecoveryClient",
     "RecoveryOutcome",
     "RecoveryPipeline",
+    "apply_untrusted_instruction_boundary",
     "build_claim_verifier_messages",
     "build_recovery_draft_messages",
+    "evaluate_instruction_boundary",
     "evaluate_recovery",
     "recovery_cache_key",
     "recovery_draft_schema_identity",

@@ -236,3 +236,21 @@ V3 topic from the stress test: `RETRIEVAL_SCALABILITY_UNDER_HARD_NEGATIVES`.
 Generate → Verify recovery code under `src/rag_workbench/recovery/` and migration
 `0022` is additive research scaffolding. It is not on the official v2 query path,
 was not executed in this release-hardening phase, and is `FUTURE_RESEARCH`.
+
+## 14. V3 Phase 2 — recovery safety research
+
+Research artifacts only. Official v2 remains immutable. Architecture
+`enterprise-rag-workbench-v3-research`, `production=false`.
+
+Independent variable order is frozen in
+`src/rag_workbench/experiments/v3_phase2_safety.py` as `SELECTION_POLICY`.
+The Phase-1 Generate→Verify baseline (`generate-verify-draft-v1` /
+`generate-verify-claim-verifier-v1`) is not retuned.
+
+Experiment 1 adds a deterministic untrusted-instruction boundary after claim
+verification and completeness. It uses document trust metadata, sentence
+speech-act structure, and question illocution. It is not a naive keyword
+blocker.
+
+Safety validation dataset `acmeai-v3-recovery-safety-validation-v1` (60 cases)
+is a candidate-selection set, not the final unseen V3 benchmark.

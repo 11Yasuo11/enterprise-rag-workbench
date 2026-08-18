@@ -34,6 +34,8 @@ from rag_workbench.db.models import (
     V2Phase4ExperimentRecord,
     V2QualityAbExperimentRecord,
     V3Phase1ExperimentRecord,
+    V3Phase2ExperimentRecord,
+    V3Phase2LedgerRecord,
 )
 from rag_workbench.db.session import get_db, get_engine
 
@@ -48,6 +50,8 @@ def _clear_inside_test_transaction(session: Session) -> None:
         V2Phase3ExperimentRecord,
         V2Phase2ExperimentRecord,
         V2Phase1ExperimentRecord,
+        V3Phase2LedgerRecord,
+        V3Phase2ExperimentRecord,
         V3Phase1ExperimentRecord,
         RecoveryStageCacheRecord,
         ResearchArchitectureRecord,

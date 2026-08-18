@@ -176,8 +176,9 @@ def persist_v3_markdown(status: dict[str, Any], *, replace: bool = True) -> None
     if count == 1:
         if not replace:
             return
-        prefix = text.split(V3_PHASE1_BENCHMARK_HEADING, 1)[0]
-        path.write_text(prefix.rstrip() + "\n\n" + section + "\n")
+        from rag_workbench.experiments.v3_phase2_safety_report import _replace_heading_section
+
+        path.write_text(_replace_heading_section(text, V3_PHASE1_BENCHMARK_HEADING, section))
         return
     if not status.get("completed") and not status.get("diagnostic"):
         return

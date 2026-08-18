@@ -36,6 +36,7 @@ from rag_workbench.experiments.configs import ExperimentConfig, load_experiment_
 from rag_workbench.generation.context_builder import ContextBuilder
 from rag_workbench.generation.generator import RagService
 from rag_workbench.ingestion.chunkers import FixedTokenChunker, FixedTokenConfig
+from rag_workbench.ingestion.corpus_roots import collect_corpus_paths
 from rag_workbench.ingestion.loaders import load_document
 from rag_workbench.ingestion.pipeline import IngestionPipeline
 from rag_workbench.providers.embeddings import (
@@ -530,22 +531,11 @@ class ExperimentRunner:
             pipeline.ingest_path(path)
 
     def _corpus_paths(self, config: ExperimentConfig) -> list[Path]:
-        paths = sorted(
-            path
-            for path in self.corpus_root.iterdir()
-            if path.is_file() and path.suffix.lower() in {".md", ".markdown", ".pdf"}
+        paths = collect_corpus_paths(
+            config.identity.corpus_version,
+            self.corpus_root,
+            require_manifest_complete=True,
         )
-        manifest = Path("data/corpus_manifests") / f"{config.identity.corpus_version}.txt"
-        if manifest.is_file():
-            allowed = {
-                line.strip()
-                for line in manifest.read_text(encoding="utf-8").splitlines()
-                if line.strip() and not line.lstrip().startswith("#")
-            }
-            paths = [path for path in paths if path.name in allowed]
-            missing = sorted(allowed - {path.name for path in paths})
-            if missing:
-                raise ValueError(f"Corpus manifest references missing files: {', '.join(missing)}")
         if not paths:
             raise ValueError(f"No corpus documents found under {self.corpus_root}")
         return paths
@@ -789,17 +779,4 @@ def plan_configurations(
 
 
 def _corpus_paths_for(config: ExperimentConfig, corpus_root: Path) -> list[Path]:
-    paths = sorted(
-        item
-        for item in corpus_root.iterdir()
-        if item.is_file() and item.suffix.lower() in {".md", ".markdown", ".pdf"}
-    )
-    manifest = Path("data/corpus_manifests") / f"{config.identity.corpus_version}.txt"
-    if manifest.is_file():
-        allowed = {
-            line.strip()
-            for line in manifest.read_text(encoding="utf-8").splitlines()
-            if line.strip() and not line.lstrip().startswith("#")
-        }
-        paths = [item for item in paths if item.name in allowed]
-    return paths
+    return collect_corpus_paths(config.identity.corpus_version, corpus_root)

@@ -252,5 +252,9 @@ verification and completeness. It uses document trust metadata, sentence
 speech-act structure, and question illocution. It is not a naive keyword
 blocker.
 
+V3 files live under `data/v3_research_corpus/` and are ingested only for corpus
+version `acmeai-v0.1-v3-research-extension`. They are not mixed into
+`data/synthetic_company`, so frozen V1/V2 hashing and index identity stay intact.
+
 Safety validation dataset `acmeai-v3-recovery-safety-validation-v1` (60 cases)
 is a candidate-selection set, not the final unseen V3 benchmark.

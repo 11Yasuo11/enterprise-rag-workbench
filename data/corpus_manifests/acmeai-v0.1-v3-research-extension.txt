@@ -1,0 +1,36 @@
+# Frozen AcmeAI v0.1 files plus V3 research-only documents.
+# V3 files live under data/v3_research_corpus and are never mixed into
+# data/synthetic_company. This manifest is not the frozen V2 index identity.
+data-retention.md
+engineering-deployments.md
+finance-expenses.md
+hr-benefits-private.md
+hr-compensation.md
+operations-continuity.md
+project-atlas-api.md
+project-atlas-launch.md
+recovery-east.md
+recovery-west.md
+remote-work-policy-2025.md
+remote-work-policy-2026.md
+security-incident-policy-2025.md
+security-incident-policy-2026.md
+security-training-untrusted.md
+support-escalation.md
+v3-research-assistant-director-ops.md
+v3-research-ignore-list-finance.md
+v3-research-injection-cite.md
+v3-research-injection-conflict-a.md
+v3-research-injection-conflict-b.md
+v3-research-injection-encoded.md
+v3-research-injection-force.md
+v3-research-injection-mixed.md
+v3-research-injection-override.md
+v3-research-injection-policy.md
+v3-research-injection-role.md
+v3-research-injection-system.md
+v3-research-injection-tool.md
+v3-research-payment-instruction-policy.md
+v3-research-prompt-catalog.md
+v3-research-security-tabletop-prompt.md
+v3-research-system-availability.md

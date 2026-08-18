@@ -1,9 +1,10 @@
-from collections.abc import Iterator
+from collections.abc import Iterator, Sequence
 from pathlib import Path
 from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
+from rag_workbench.ingestion.corpus_roots import corpus_roots_for_version
 from rag_workbench.ingestion.loaders import load_document
 
 EvaluationCategory = Literal[
@@ -105,14 +106,18 @@ class DatasetValidationResult(BaseModel):
 def load_evaluation_dataset(path: Path, *, validate: bool = True) -> EvaluationDataset:
     dataset = EvaluationDataset.model_validate_json(path.read_text(encoding="utf-8"))
     if validate:
-        result = validate_evaluation_dataset(dataset, path.parent.parent / "synthetic_company")
+        data_root = path.parent.parent
+        result = validate_evaluation_dataset(
+            dataset,
+            corpus_roots_for_version(dataset.corpus_version, data_root=data_root),
+        )
         if not result.valid:
             raise ValueError("Invalid evaluation dataset: " + "; ".join(result.errors))
     return dataset
 
 
 def validate_evaluation_dataset(
-    dataset: EvaluationDataset, corpus_root: Path
+    dataset: EvaluationDataset, corpus_root: Path | Sequence[Path]
 ) -> DatasetValidationResult:
     errors: list[str] = []
     ids = [case.case_id for case in dataset.cases]
@@ -120,15 +125,19 @@ def validate_evaluation_dataset(
     if duplicates:
         errors.append(f"duplicate evaluation IDs: {', '.join(duplicates)}")
 
+    roots = [corpus_root] if isinstance(corpus_root, Path) else list(corpus_root)
     corpus: dict[str, object] = {}
-    for path in sorted(corpus_root.rglob("*")):
-        if not path.is_file() or path.suffix.lower() not in {".md", ".markdown", ".pdf"}:
+    for root in roots:
+        if not root.exists():
             continue
-        if "eval" in path.parts:
-            errors.append(f"evaluation data appears inside corpus root: {path}")
-            continue
-        document = load_document(path)
-        corpus[document.document_id] = document
+        for path in sorted(root.rglob("*")):
+            if not path.is_file() or path.suffix.lower() not in {".md", ".markdown", ".pdf"}:
+                continue
+            if "eval" in path.parts:
+                errors.append(f"evaluation data appears inside corpus root: {path}")
+                continue
+            document = load_document(path)
+            corpus[document.document_id] = document
 
     for case in dataset.cases:
         referenced = set(case.expected_document_ids) | set(case.forbidden_document_ids)

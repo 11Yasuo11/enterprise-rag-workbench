@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 from datetime import UTC, datetime
 from pathlib import Path
@@ -30,14 +31,17 @@ from rag_workbench.experiments.v3_generate_verify import (
     v3_control_configuration,
     verify_persisted_v2,
 )
+from rag_workbench.experiments.v3_phase2_gold_audit import offline_gold_boundary_audit
 from rag_workbench.experiments.v3_phase2_safety_cases import (
     CASES,
     DATASET_ID,
     DATASET_PATH,
     EXPECTED_DISTRIBUTION,
     GENERATION_METHOD,
+    dataset_overlap_report,
     write_dataset,
 )
+from rag_workbench.ingestion.corpus_roots import V3_RESEARCH_CORPUS, V3_RESEARCH_CORPUS_VERSION
 from rag_workbench.recovery.contracts import (
     CLAIM_VERIFIER_PROMPT_VERSION,
     RECOVERY_DRAFT_PROMPT_VERSION,
@@ -178,9 +182,19 @@ def exp1_configuration() -> dict[str, Any]:
         "parent": PHASE1_RECOVERY_BASELINE,
         "recovery": recovery,
         "frozen_retrieval": {
-            "corpus_identity": CORPUS_IDENTITY,
-            "semantic_index_identity": SEMANTIC_INDEX_IDENTITY,
-            "unchanged": True,
+            "v2_corpus_identity": CORPUS_IDENTITY,
+            "v2_semantic_index_identity": SEMANTIC_INDEX_IDENTITY,
+            "v2_index_immutable": True,
+            "algorithm_unchanged": True,
+            "no_query_rewrite": True,
+            "no_corrective_retrieval": True,
+            "v3_validation_corpus_version": V3_RESEARCH_CORPUS_VERSION,
+            "v3_extra_corpus_root": str(V3_RESEARCH_CORPUS),
+            "note": (
+                "Dense, BM25, RRF, Cross-Encoder, Top-K, chunking, and embedding model "
+                "are unchanged. Extra V3 research documents are ingested only under the "
+                "V3 corpus version. The frozen V2 index identity is never mutated."
+            ),
         },
         "safety": {
             "mechanism": BOUNDARY_VERSION,
@@ -499,17 +513,30 @@ class V3Phase2SafetyBenchmark:
     def freeze_dataset(self) -> dict[str, Any]:
         record = self.initialize()
         if record.dataset_frozen_at is not None and record.dataset_hash:
+            development = dict(record.development_results or {})
+            if "offline_gold_boundary_audit" not in development:
+                development["offline_gold_boundary_audit"] = offline_gold_boundary_audit()
+                record.development_results = development
+                self.session.commit()
             return {
                 "dataset_id": record.dataset_id,
                 "dataset_hash": record.dataset_hash,
                 "overlap_report": record.overlap_report,
                 "frozen": True,
             }
-        payload = write_dataset()
-        overlap = payload["overlap_report"]
+        if DATASET_PATH.exists():
+            dataset_hash = hashlib.sha256(DATASET_PATH.read_bytes()).hexdigest()
+            overlap = dataset_overlap_report()
+            overlap["dataset_hash"] = dataset_hash
+            payload_cases = json.loads(DATASET_PATH.read_text())["cases"]
+        else:
+            payload = write_dataset()
+            dataset_hash = str(payload["dataset_hash"])
+            overlap = payload["overlap_report"]
+            payload_cases = payload["cases"]
         record.dataset_id = DATASET_ID
-        record.dataset_hash = payload["dataset_hash"]
-        record.case_ids = [item["case_id"] for item in payload["cases"]]
+        record.dataset_hash = dataset_hash
+        record.case_ids = [item["case_id"] for item in payload_cases]
         record.category_distribution = EXPECTED_DISTRIBUTION
         record.generation_method = GENERATION_METHOD
         record.maximum_prior_overlap = overlap["maximum_normalized_overlap"]
@@ -517,6 +544,9 @@ class V3Phase2SafetyBenchmark:
         record.overlap_report = overlap
         record.dataset_frozen_at = datetime.now(UTC)
         record.freeze_timestamp = record.dataset_frozen_at
+        development = dict(record.development_results or {})
+        development["offline_gold_boundary_audit"] = offline_gold_boundary_audit()
+        record.development_results = development
         research = self.session.get(ResearchArchitectureRecord, V3_ARCHITECTURE_ID)
         if research is not None:
             research.v3_phase2_dataset_id = DATASET_ID
@@ -524,7 +554,7 @@ class V3Phase2SafetyBenchmark:
         self.session.commit()
         return {
             "dataset_id": DATASET_ID,
-            "dataset_hash": payload["dataset_hash"],
+            "dataset_hash": dataset_hash,
             "overlap_report": overlap,
             "frozen": True,
         }
@@ -612,25 +642,72 @@ class V3Phase2SafetyBenchmark:
         record = self.initialize()
         record.hosted_preflight = preflight
         record.stop_reason = "BUDGET_AUTHORIZATION_REQUIRED"
-        record.completed_at = datetime.now(UTC)
-        record.selected_candidate = NO_SAFE_CANDIDATE
+        record.selected_candidate = None
+        record.completed_at = None
         self.session.commit()
+        required_judge = (
+            preflight["missing_logical_calls"]["primary_judge"]
+            + preflight["missing_logical_calls"]["recovery_draft"]
+            + preflight["missing_logical_calls"]["claim_verifier"]
+        )
         return {
             "stop": "BUDGET_AUTHORIZATION_REQUIRED",
             "required": {
                 "ALLOW_EXTERNAL_JUDGE_CALLS": True,
                 "ALLOW_EXTERNAL_CALLS": True,
-                "MAX_EXTERNAL_JUDGE_CALLS": preflight["missing_logical_calls"]["primary_judge"]
-                + preflight["missing_logical_calls"]["recovery_draft"]
-                + preflight["missing_logical_calls"]["claim_verifier"],
-                "MAX_EXTERNAL_EMBEDDING_CALLS": "preflight missing query embeddings plus new document embeddings",
+                "JUDGE_API_KEY": "required",
+                "EMBEDDING_API_KEY": "required for non-hashing embeddings matching frozen V2",
+                "MAX_EXTERNAL_JUDGE_CALLS": required_judge,
+                "MAX_EXTERNAL_EMBEDDING_CALLS": (
+                    "query embeddings for 60 validation cases plus document embeddings "
+                    "for V3 research corpus files under a new V3 index identity; "
+                    "do not write extra chunks into the frozen V2 semantic index"
+                ),
             },
             "preflight": preflight,
-            "selected_candidate": NO_SAFE_CANDIDATE,
+            "selected_candidate": None,
+            "no_safe_candidate": False,
             "note": (
-                "Experiment 1 adds zero extra hosted calls on top of the shared Phase-1 "
-                "recovery baseline. Hosted baseline inference was not authorized in this environment."
+                "Budget stop is not candidate-selection failure. Experiment 1 adds zero "
+                "extra hosted calls on top of the shared Phase-1 recovery baseline. "
+                "Hosted baseline inference was not authorized in this environment, so "
+                "no safety candidate was accepted or rejected on the frozen validation set."
             ),
+        }
+
+    def execute(self) -> dict[str, Any]:
+        from rag_workbench.config import get_settings
+
+        freeze = self.freeze_dataset()
+        audit = offline_gold_boundary_audit()
+        record = self.initialize()
+        development = dict(record.development_results or {})
+        development["offline_gold_boundary_audit"] = audit
+        record.development_results = development
+        self.session.commit()
+        preflight = hosted_preflight_estimate()
+        settings = get_settings()
+        required_judge = (
+            preflight["missing_logical_calls"]["primary_judge"]
+            + preflight["missing_logical_calls"]["recovery_draft"]
+            + preflight["missing_logical_calls"]["claim_verifier"]
+        )
+        authorized = (
+            settings.allow_external_judge_calls
+            and settings.allow_external_calls
+            and bool(settings.effective_judge_api_key)
+            and settings.max_external_judge_calls >= required_judge
+        )
+        if not authorized:
+            payload = self.authorization_stop(preflight)
+            payload["dataset"] = freeze
+            payload["offline_gold_boundary_audit"] = audit
+            return payload
+        return {
+            "error": "hosted validation remains gated on matching frozen V2 embedding/judge identities",
+            "dataset": freeze,
+            "offline_gold_boundary_audit": audit,
+            "preflight": preflight,
         }
 
     def status(self) -> dict[str, Any]:

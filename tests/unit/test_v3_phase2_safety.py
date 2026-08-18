@@ -12,6 +12,7 @@ from rag_workbench.experiments.v2_quality_recovery import (
     V1_BENCHMARK_HEADING,
 )
 from rag_workbench.experiments.v3_generate_verify import V3_ARCHITECTURE_ID, end_to_end_metrics
+from rag_workbench.experiments.v3_phase2_gold_audit import offline_gold_boundary_audit
 from rag_workbench.experiments.v3_phase2_safety import (
     EXP1_ID,
     INJECTION_CATEGORIES,
@@ -34,6 +35,11 @@ from rag_workbench.experiments.v3_phase2_safety_cases import (
     dataset_overlap_report,
 )
 from rag_workbench.experiments.v3_phase2_safety_report import V3_PHASE2_BENCHMARK_HEADING
+from rag_workbench.ingestion.corpus_roots import (
+    V3_RESEARCH_CORPUS_VERSION,
+    collect_corpus_paths,
+)
+from rag_workbench.ingestion.loaders import load_document
 from rag_workbench.recovery.contracts import (
     CLAIM_VERIFIER_PROMPT_VERSION,
     CLAIM_VERIFIER_SYSTEM_PROMPT,
@@ -370,3 +376,54 @@ def test_recovery_still_triggers_only_after_schema_valid_negative() -> None:
         [{"behavior": "CORRECT_ANSWER", "expected_answerability": True}]
     )["precision"] == 1.0
     assert V3_PHASE2_BENCHMARK_HEADING.startswith("## ")
+
+
+def test_v3_research_corpus_is_isolated_from_frozen_v2() -> None:
+    frozen = sorted(Path("data/synthetic_company").glob("*.md"))
+    extra = sorted(Path("data/v3_research_corpus").glob("*.md"))
+    assert len(frozen) == 16
+    assert len(extra) == 17
+    assert not any(path.name.startswith("v3-research-") for path in frozen)
+    v1_paths = collect_corpus_paths("acmeai-v1", Path("data/synthetic_company"))
+    assert len(v1_paths) == 16
+    assert all(path.parent.name == "synthetic_company" for path in v1_paths)
+    v3_paths = collect_corpus_paths(
+        V3_RESEARCH_CORPUS_VERSION,
+        Path("data/synthetic_company"),
+        require_manifest_complete=True,
+    )
+    assert len(v3_paths) == 33
+    assert sum(path.parent.name == "v3_research_corpus" for path in v3_paths) == 17
+
+
+def test_validation_cases_reference_union_corpus_documents() -> None:
+    documents = {
+        load_document(path).document_id
+        for path in collect_corpus_paths(
+            V3_RESEARCH_CORPUS_VERSION,
+            Path("data/synthetic_company"),
+            require_manifest_complete=True,
+        )
+    }
+    for item in CASES:
+        for document_id in list(item.get("expected_document_ids") or []) + list(
+            item.get("forbidden_document_ids") or []
+        ):
+            assert document_id in documents, document_id
+
+
+def test_offline_gold_boundary_audit_is_not_promotion_evidence() -> None:
+    audit = offline_gold_boundary_audit()
+    assert audit["label"] == "OFFLINE_PROXY_NOT_PROMOTION"
+    assert audit["not_hosted_generate_verify"] is True
+    assert audit["missing_gold_documents"] == []
+    assert audit["legitimate_block_count"] == 0
+    assert audit["injection_unblock_count"] == 0
+    policy = exp1_configuration()["frozen_retrieval"]
+    assert policy["v2_index_immutable"] is True
+    assert policy["algorithm_unchanged"] is True
+    assert policy["v3_validation_corpus_version"] == V3_RESEARCH_CORPUS_VERSION
+    assert SELECTION_POLICY["quality_retries"] is False
+    source = inspect.getsource(evaluate_recovery)
+    assert "keep asking" not in source.casefold()
+    assert "self-consistency" not in source.casefold()

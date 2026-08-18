@@ -35,26 +35,7 @@ def main() -> None:
             ):
                 payload = benchmark.authorization_stop(payload)
         elif phase == "execute":
-            benchmark.initialize()
-            preflight = hosted_preflight_estimate()
-            if (
-                not settings.allow_external_judge_calls
-                or not settings.allow_external_calls
-                or settings.max_external_judge_calls
-                < (
-                    preflight["missing_logical_calls"]["primary_judge"]
-                    + preflight["missing_logical_calls"]["recovery_draft"]
-                    + preflight["missing_logical_calls"]["claim_verifier"]
-                )
-            ):
-                payload = benchmark.authorization_stop(preflight)
-            else:
-                payload = {
-                    "error": (
-                        "hosted validation path requires an authorized environment "
-                        "with ingested corpus"
-                    )
-                }
+            payload = benchmark.execute()
         else:
             payload = benchmark.status()
         persist_v3_phase2_markdown(benchmark.status())

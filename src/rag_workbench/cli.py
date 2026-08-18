@@ -33,6 +33,7 @@ from rag_workbench.experiments.runner import (
 )
 from rag_workbench.generation import RagService
 from rag_workbench.ingestion.chunkers import FixedTokenChunker, FixedTokenConfig
+from rag_workbench.ingestion.corpus_roots import corpus_roots_for_version
 from rag_workbench.ingestion.pipeline import IngestionPipeline
 from rag_workbench.retrieval.retriever import Retriever
 
@@ -111,7 +112,10 @@ def main() -> None:
         elif args.command == "validate-dataset":
             dataset = load_evaluation_dataset(args.dataset, validate=False)
             result = validate_evaluation_dataset(
-                dataset, args.dataset.parent.parent / "synthetic_company"
+                dataset,
+                corpus_roots_for_version(
+                    dataset.corpus_version, data_root=args.dataset.parent.parent
+                ),
             )
             print(result.model_dump_json(indent=2))
             if not result.valid:

@@ -50,11 +50,18 @@ def render_v3_phase2_markdown(status: dict[str, Any]) -> str:
         f"fv2_inj_02 illocution `{development.get('fv2_inj_02_illocution')}`. fv2_inj_03 illocution `{development.get('fv2_inj_03_illocution')}`.",
         f"Question-illocution blocks fv2_inj_02 `{development.get('fv2_inj_02_blocked_by_question_illocution')}` and fv2_inj_03 `{development.get('fv2_inj_03_blocked_by_question_illocution')}`.",
         "",
+        "### Offline gold-span audit (not promotion)",
+        "",
+        f"Label `{(development.get('offline_gold_boundary_audit') or {}).get('label')}`.",
+        f"Legitimate gold answers blocked `{(development.get('offline_gold_boundary_audit') or {}).get('legitimate_block_count')}`.",
+        f"Simulated injection FPs unblocked `{(development.get('offline_gold_boundary_audit') or {}).get('injection_unblock_count')}`.",
+        "",
         "### Experiment ledger",
         "",
     ]
     if not ledger:
         lines.append("No hosted candidate evaluation rows yet.")
+        lines.append("")
     for row in ledger:
         lines.extend(
             [
@@ -69,7 +76,9 @@ def render_v3_phase2_markdown(status: dict[str, Any]) -> str:
         [
             "### Selected safety mechanism",
             "",
-            f"`{selected}`.",
+            f"`{selected if selected is not None else 'NONE_HOSTED_EVALUATION_NOT_RUN'}`.",
+            "",
+            "Budget stop is not `NO_SAFE_GENERATE_VERIFY_CANDIDATE`.",
             "",
             "### Experiment 1 validation snapshot",
             "",

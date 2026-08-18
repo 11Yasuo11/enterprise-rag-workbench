@@ -113,6 +113,7 @@ from rag_workbench.providers.embeddings.openai_compatible import (
 )
 from rag_workbench.providers.llm.extractive import ExtractiveGenerationProvider
 from rag_workbench.recovery.contracts import (
+    CANNOT_DRAFT,
     CLAIM_VERIFIER_PROMPT_VERSION,
     PRIMARY_JUDGE_STAGE,
     RECOVERY_DRAFT_PROMPT_VERSION,
@@ -145,11 +146,16 @@ DIAGNOSIS_ONLY_NOTICE = (
     "for any v3 architecture. New v3 candidates must be evaluated on a genuinely "
     "unseen dataset after diagnostic GO."
 )
+NO_GO = "NO_GO_FOR_UNSEEN_V3_PHASE1"
+NO_GO_ALIASES = frozenset({NO_GO, "NO_GO_FOR_UNSEEN_EXPERIMENT"})
 GO_POLICY = {
     "historical_judge_fn_rescues_min": 6,
     "historical_should_abstain_false_positive_recoveries": 0,
+    "unsupported_recovered_answers": 0,
     "unauthorized_evidence_used": 0,
+    "unauthorized_supporting_ids": 0,
     "invalid_citation_ids": 0,
+    "version_violations": 0,
     "frozen_before_diagnostic": True,
     "not_promotion_evidence": True,
 }
@@ -330,6 +336,151 @@ def end_to_end_metrics(rows: list[dict[str, Any]]) -> dict[str, Any]:
         "tn": correct_abstentions,
         "answerable_case_count": len(answerable),
         "answerable_case_correct_answer_rate": answerable_correct_rate,
+    }
+
+
+def diagnostic_is_go(value: str | None) -> bool:
+    return value == "GO"
+
+
+def classify_recovery_failure(typed_failure: str | None, claim_states: list[str] | None = None) -> str | None:
+    if not typed_failure:
+        return None
+    if typed_failure in {CANNOT_DRAFT, "DRAFT_CANNOT_ANSWER"}:
+        return "DRAFT_CANNOT_ANSWER"
+    if typed_failure in {"CLAIM_NOT_ALL_SUPPORTED", "CLAIM_NOT_SUPPORTED"}:
+        states = set(claim_states or [])
+        if "CONTRADICTED" in states:
+            return "CLAIM_CONTRADICTED"
+        return "CLAIM_NOT_SUPPORTED"
+    if typed_failure == "CLAIM_CONTRADICTED":
+        return "CLAIM_CONTRADICTED"
+    if typed_failure == "COMPLETENESS_FAILURE":
+        return "COMPLETENESS_FAILURE"
+    if typed_failure in {"UNAUTHORIZED_OR_INVALID_CITATION", "INVALID_CITATION"}:
+        return "INVALID_CITATION"
+    if typed_failure == "INVALID_SUPPORTING_ID":
+        return "INVALID_SUPPORTING_ID"
+    if typed_failure in {"INACTIVE_VERSION", "VERSION_MISMATCH", "VERSION_FAILURE"}:
+        return "VERSION_FAILURE"
+    if typed_failure in {
+        "UNAUTHORIZED_SUPPORTING_ID",
+        "ACL_FAILURE",
+        "SECURITY_FAILURE",
+    }:
+        return "SECURITY_FAILURE"
+    if typed_failure in {
+        "DRAFT_REQUEST_ERROR",
+        "VERIFIER_REQUEST_ERROR",
+        "PROVIDER_REQUEST_ERROR",
+        "JUDGE_REQUEST_ERROR",
+    }:
+        return "PROVIDER_REQUEST_ERROR"
+    return "UNKNOWN"
+
+
+def diagnostic_rollup(diagnostic: dict[str, Any]) -> dict[str, Any]:
+    rows = list(diagnostic.get("cases") or [])
+    fn_rows = [item for item in rows if item.get("cohort") == "FN"]
+    safety_rows = [item for item in rows if item.get("cohort") == "SAFETY"]
+    incremental = [
+        (item.get("draft_latency_ms") or 0) + (item.get("verifier_latency_ms") or 0)
+        for item in rows
+        if item.get("recovery_triggered")
+    ]
+    draft_tokens_in = sum(item.get("draft_prompt_tokens") or 0 for item in rows if item.get("draft_live"))
+    draft_tokens_out = sum(
+        item.get("draft_completion_tokens") or 0 for item in rows if item.get("draft_live")
+    )
+    verifier_tokens_in = sum(
+        item.get("verifier_prompt_tokens") or 0 for item in rows if item.get("draft_success")
+    )
+    verifier_tokens_out = sum(
+        item.get("verifier_completion_tokens") or 0 for item in rows if item.get("draft_success")
+    )
+    input_tokens = draft_tokens_in + verifier_tokens_in
+    output_tokens = draft_tokens_out + verifier_tokens_out
+    draft_calls = sum(1 for item in rows if item.get("draft_external_calls"))
+    verifier_calls = sum(item.get("verifier_external_calls") or 0 for item in rows)
+    failure_census = Counter(
+        classify_recovery_failure(item.get("typed_failure"), item.get("claim_states"))
+        for item in rows
+        if item.get("typed_failure")
+    )
+    category_rescues = Counter(
+        item["category"] for item in fn_rows if item.get("valid_rescue")
+    )
+    category_fn = Counter(item["category"] for item in fn_rows)
+    unsupported_recovered = sum(1 for item in rows if item.get("behavior") == "UNSUPPORTED_ANSWER")
+    version_violations = sum(
+        1
+        for item in rows
+        if classify_recovery_failure(item.get("typed_failure")) == "VERSION_FAILURE"
+    )
+    cost_usd = official_token_cost(
+        model=SOL_MODEL, input_tokens=input_tokens, output_tokens=output_tokens
+    )
+    return {
+        "historical_fn_cases": len(fn_rows),
+        "draft_success_count": sum(1 for item in fn_rows if item.get("draft_success")),
+        "verification_pass_count": sum(1 for item in fn_rows if item.get("verification_pass")),
+        "valid_rescue_count": sum(1 for item in fn_rows if item.get("valid_rescue")),
+        "still_abstain_count": sum(1 for item in fn_rows if not item.get("answered")),
+        "unsupported_recovery_count": unsupported_recovered,
+        "safety_control_false_positives": sum(
+            1 for item in safety_rows if item.get("false_positive_recovery")
+        ),
+        "near_duplicate_rescues": category_rescues.get("near_duplicate", 0),
+        "near_duplicate_fn": category_fn.get("near_duplicate", 0),
+        "multi_document_rescues": category_rescues.get("multidoc_two", 0)
+        + category_rescues.get("multidoc_three", 0),
+        "two_document_rescues": category_rescues.get("multidoc_two", 0),
+        "three_document_rescues": category_rescues.get("multidoc_three", 0),
+        "exact_id_rescues": category_rescues.get("exact_identifier", 0),
+        "version_region_rescues": category_rescues.get("version_region", 0),
+        "failure_census": dict(failure_census),
+        "version_violations": version_violations,
+        "recovery_funnel": {
+            "primary_judge_negatives": len(rows),
+            "recovery_triggers": sum(1 for item in rows if item.get("recovery_triggered")),
+            "draft_successes": sum(1 for item in rows if item.get("draft_success")),
+            "verification_passes": sum(1 for item in rows if item.get("verification_pass")),
+            "completeness_passes": sum(
+                1 for item in rows if item.get("completeness_state") == "COMPLETE"
+            ),
+            "valid_rescues": sum(1 for item in fn_rows if item.get("valid_rescue")),
+            "false_positive_recoveries": sum(
+                1 for item in safety_rows if item.get("false_positive_recovery")
+            ),
+            "completeness_failures": sum(
+                1 for item in rows if item.get("typed_failure") == "COMPLETENESS_FAILURE"
+            ),
+        },
+        "usage": {
+            "additional_draft_calls": draft_calls,
+            "additional_verifier_calls": verifier_calls,
+            "recovery_input_tokens": input_tokens,
+            "recovery_output_tokens": output_tokens,
+            "new_query_embedding_calls": 0,
+            "new_sol_judge_calls": 0,
+            "external_reranker_calls": 0,
+            "fallback_trigger_rate": 1.0 if rows else 0.0,
+        },
+        "cost": {
+            "sol_recovery_usd": cost_usd,
+            "additional_cost_usd": cost_usd,
+            "embedding_cost": 0.0,
+            "pricing_source": "official OpenAI gpt-5.6-sol short-context list prices",
+        },
+        "latency": {
+            "incremental": {
+                "mean_ms": mean(incremental) if incremental else 0.0,
+                "p50_ms": median(incremental) if incremental else 0.0,
+                "p95_ms": _percentile(incremental, 0.95) if incremental else 0.0,
+                "worst_case_ms": max(incremental) if incremental else 0.0,
+                "count": len(incremental),
+            }
+        },
     }
 
 
@@ -839,11 +990,19 @@ class V3GenerateVerifyBenchmark:
         fps = [item["case_id"] for item in safety_rows if item["false_positive_recovery"]]
         unauthorized = sum(item["unauthorized_evidence_used"] for item in rows)
         invalid_ids = sum(item["invalid_citation_ids"] for item in rows)
+        unsupported_recovered = sum(1 for item in rows if item["behavior"] == "UNSUPPORTED_ANSWER")
+        version_violations = sum(
+            1
+            for item in rows
+            if classify_recovery_failure(item.get("typed_failure")) == "VERSION_FAILURE"
+        )
         go = (
             len(rescues) >= GO_POLICY["historical_judge_fn_rescues_min"]
             and len(fps) == GO_POLICY["historical_should_abstain_false_positive_recoveries"]
+            and unsupported_recovered == GO_POLICY["unsupported_recovered_answers"]
             and unauthorized == GO_POLICY["unauthorized_evidence_used"]
             and invalid_ids == GO_POLICY["invalid_citation_ids"]
+            and version_violations == GO_POLICY["version_violations"]
         )
         diagnostic = {
             "notice": DIAGNOSIS_ONLY_NOTICE,
@@ -856,7 +1015,9 @@ class V3GenerateVerifyBenchmark:
             "false_positive_count": len(fps),
             "unauthorized_evidence_used": unauthorized,
             "invalid_citation_ids": invalid_ids,
-            "go_nogo": "GO" if go else "NO_GO_FOR_UNSEEN_EXPERIMENT",
+            "unsupported_recovered_answers": unsupported_recovered,
+            "version_violations": version_violations,
+            "go_nogo": "GO" if go else NO_GO,
             "cases": rows,
             "go_policy": GO_POLICY,
         }
@@ -864,6 +1025,7 @@ class V3GenerateVerifyBenchmark:
         record.go_nogo = diagnostic["go_nogo"]
         record.diagnostic_completed_at = datetime.now(UTC)
         record.diagnosis_only = True
+        self._store_diagnostic_rollup(record)
         self.session.commit()
         verify_persisted_v2(self.session)
         self._persist_markdown()
@@ -871,8 +1033,8 @@ class V3GenerateVerifyBenchmark:
 
     def freeze_unseen_dataset(self) -> dict[str, Any]:
         record = self.initialize()
-        if record.go_nogo != "GO":
-            raise ValueError("NO_GO_FOR_UNSEEN_EXPERIMENT")
+        if not diagnostic_is_go(record.go_nogo):
+            raise ValueError(NO_GO)
         if record.dataset_frozen_at is not None and record.dataset_hash:
             return {
                 "dataset_id": record.dataset_id,
@@ -903,8 +1065,8 @@ class V3GenerateVerifyBenchmark:
 
     def embedding_preflight(self, *, persist: bool = True) -> dict[str, Any]:
         record = self.initialize()
-        if record.go_nogo != "GO":
-            raise ValueError("NO_GO_FOR_UNSEEN_EXPERIMENT")
+        if not diagnostic_is_go(record.go_nogo):
+            raise ValueError(NO_GO)
         if record.dataset_frozen_at is None:
             self.freeze_unseen_dataset()
             record = self.initialize()
@@ -945,8 +1107,8 @@ class V3GenerateVerifyBenchmark:
         record = self.initialize()
         if record.retrieval_frozen_at is not None:
             return self.status()
-        if record.go_nogo != "GO":
-            raise ValueError("NO_GO_FOR_UNSEEN_EXPERIMENT")
+        if not diagnostic_is_go(record.go_nogo):
+            raise ValueError(NO_GO)
         preflight = self.embedding_preflight()
         if (
             not self.settings.allow_external_calls
@@ -1028,11 +1190,11 @@ class V3GenerateVerifyBenchmark:
         if record.diagnostic_completed_at is None:
             self.execute_diagnostic()
             record = self.initialize()
-        if record.go_nogo != "GO":
+        if not diagnostic_is_go(record.go_nogo):
             record.selected_strategy = CONTROL_STRATEGY
             record.selection = {
                 "selected_strategy": CONTROL_STRATEGY,
-                "reason": "NO_GO_FOR_UNSEEN_EXPERIMENT",
+                "reason": NO_GO,
             }
             record.completed_at = datetime.now(UTC)
             research = self.session.get(ResearchArchitectureRecord, V3_ARCHITECTURE_ID)
@@ -1670,6 +1832,57 @@ class V3GenerateVerifyBenchmark:
             "primary_remaining_bottleneck": bottleneck,
             "regressions": regressions,
         }
+
+    def _store_diagnostic_rollup(self, record: V3Phase1ExperimentRecord) -> dict[str, Any]:
+        diagnostic = record.diagnostic or {}
+        rollup = diagnostic_rollup(diagnostic)
+        diagnostic = {
+            **diagnostic,
+            "rollup": {key: value for key, value in rollup.items() if key not in {"recovery_funnel", "usage", "cost", "latency"}},
+            "unsupported_recovered_answers": rollup["unsupported_recovery_count"],
+            "version_violations": rollup["version_violations"],
+        }
+        if diagnostic.get("go_nogo") in NO_GO_ALIASES:
+            diagnostic["go_nogo"] = NO_GO
+        record.diagnostic = diagnostic
+        record.go_nogo = diagnostic.get("go_nogo") or record.go_nogo
+        record.recovery_funnel = rollup["recovery_funnel"]
+        record.valid_rescues = {
+            "count": rollup["valid_rescue_count"],
+            "case_ids": diagnostic.get("rescues") or [],
+        }
+        record.false_positive_recoveries = {
+            "count": rollup["safety_control_false_positives"],
+            "case_ids": diagnostic.get("false_positives") or [],
+        }
+        record.usage = {**(record.usage or {}), **rollup["usage"]}
+        record.cost = rollup["cost"]
+        record.latency = {**(record.latency or {}), **rollup["latency"]}
+        record.primary_remaining_bottleneck = "PROMPT_INJECTION_FALSE_POSITIVE_RECOVERY"
+        return rollup
+
+    def finalize_diagnostic_artifacts(self) -> dict[str, Any]:
+        record = self.initialize()
+        if record.diagnostic_completed_at is None or not record.diagnostic:
+            raise ValueError("diagnostic traces are missing")
+        self._store_diagnostic_rollup(record)
+        if record.go_nogo in NO_GO_ALIASES:
+            record.go_nogo = NO_GO
+            record.selected_strategy = CONTROL_STRATEGY
+            record.selection = {
+                "selected_strategy": CONTROL_STRATEGY,
+                "reason": NO_GO,
+            }
+            record.diagnosis_only = True
+            record.production_status = False
+            research = self.session.get(ResearchArchitectureRecord, V3_ARCHITECTURE_ID)
+            if research is not None:
+                research.selected_v3_strategy = CONTROL_STRATEGY
+                research.production_status = False
+        verify_persisted_v2(self.session)
+        self.session.commit()
+        self._persist_markdown()
+        return self.status()
 
     def status(self, *, include_cases: bool = False) -> dict[str, Any]:
         record = self.session.get(V3Phase1ExperimentRecord, LOCK_ID)

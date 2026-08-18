@@ -616,6 +616,7 @@ class ResearchArchitectureRecord(Base):
     final_v2_dataset_id: Mapped[str | None] = mapped_column(String(100))
     selected_v3_strategy: Mapped[str | None] = mapped_column(String(80))
     v3_phase1_dataset_id: Mapped[str | None] = mapped_column(String(100))
+    v3_phase2_dataset_id: Mapped[str | None] = mapped_column(String(100))
     v3_research_status: Mapped[str | None] = mapped_column(String(40))
     immutable: Mapped[bool] = mapped_column(Boolean, nullable=False, default=True)
     frozen_at: Mapped[datetime] = mapped_column(
@@ -943,5 +944,40 @@ class V3Phase1ExperimentRecord(Base):
     diagnostic_completed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     retrieval_frozen_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     execution_started_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    completed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+
+
+class V3Phase2ExperimentRecord(Base):
+    __tablename__ = "v3_phase2_experiment_locks"
+
+    lock_id: Mapped[str] = mapped_column(String(100), primary_key=True)
+    architecture_id: Mapped[str] = mapped_column(String(100), nullable=False, index=True)
+    parent_architecture_id: Mapped[str] = mapped_column(String(100), nullable=False)
+    production_status: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False)
+    dataset_id: Mapped[str | None] = mapped_column(String(100))
+    dataset_hash: Mapped[str | None] = mapped_column(String(64))
+    case_ids: Mapped[list[str] | None] = mapped_column(JSON)
+    category_distribution: Mapped[dict[str, Any] | None] = mapped_column(JSON)
+    generation_method: Mapped[str | None] = mapped_column(String(100))
+    maximum_prior_overlap: Mapped[float | None] = mapped_column(Float)
+    closest_previous_case: Mapped[dict[str, Any] | None] = mapped_column(JSON)
+    overlap_report: Mapped[dict[str, Any] | None] = mapped_column(JSON)
+    selection_policy: Mapped[dict[str, Any]] = mapped_column(JSON, nullable=False)
+    baseline_configuration: Mapped[dict[str, Any]] = mapped_column(JSON, nullable=False)
+    experiments: Mapped[list[dict[str, Any]] | None] = mapped_column(JSON)
+    selected_experiment_id: Mapped[str | None] = mapped_column(String(80))
+    selected_safety_mechanism: Mapped[str | None] = mapped_column(String(120))
+    validation_metrics: Mapped[dict[str, Any] | None] = mapped_column(JSON)
+    development_replay: Mapped[dict[str, Any] | None] = mapped_column(JSON)
+    hosted_preflight: Mapped[dict[str, Any] | None] = mapped_column(JSON)
+    usage: Mapped[dict[str, Any] | None] = mapped_column(JSON)
+    cost: Mapped[dict[str, Any] | None] = mapped_column(JSON)
+    verdict: Mapped[str | None] = mapped_column(String(80))
+    v3_status: Mapped[str | None] = mapped_column(String(40))
+    primary_remaining_bottleneck: Mapped[str | None] = mapped_column(String(80))
+    dataset_frozen_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    selection_policy_frozen_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), nullable=False, server_default=func.now()
+    )
     completed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
 

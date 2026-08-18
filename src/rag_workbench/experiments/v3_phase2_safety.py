@@ -29,7 +29,10 @@ from rag_workbench.experiments.v3_generate_verify import (
     evaluator_supported,
     v3_candidate_configuration,
     v3_control_configuration,
-    verify_persisted_v2,
+)
+from rag_workbench.experiments.v3_phase2_freeze import (
+    persist_experiment_1_freeze,
+    verify_preservation,
 )
 from rag_workbench.experiments.v3_phase2_gold_audit import offline_gold_boundary_audit
 from rag_workbench.experiments.v3_phase2_safety_cases import (
@@ -477,7 +480,7 @@ class V3Phase2SafetyBenchmark:
         self.session = session
 
     def initialize(self) -> V3Phase2ExperimentRecord:
-        verify_persisted_v2(self.session)
+        verify_preservation(self.session)
         existing = self.session.get(V3Phase2ExperimentRecord, LOCK_ID)
         if existing:
             if existing.selection_policy != SELECTION_POLICY:
@@ -589,6 +592,57 @@ class V3Phase2SafetyBenchmark:
         record.ledger = ledger
         self.session.commit()
 
+    def record_exp1_hosted_verdict(self, hosted: dict[str, Any], *, dataset_hash: str | None) -> dict[str, Any]:
+        plan = EXPERIMENT_PLAN[0]
+        scored = hosted["experiment_1"]["scored"]
+        row = {
+            "experiment_id": EXP1_ID,
+            "parent_candidate": PHASE1_RECOVERY_BASELINE,
+            "hypothesis": plan["hypothesis"],
+            "independent_variable": plan["independent_variable"],
+            "configuration_hash": exp1_configuration_hash(),
+            "dataset_hash": dataset_hash,
+            "prompt_hash": recovery_draft_template_hash(),
+            "schema_hash": recovery_draft_schema_identity(),
+            "external_calls": {"additional_safety_hosted_calls": 0},
+            "latency": {"additional_safety_model_ms": 0},
+            "cost": {"additional_safety_usd": 0.0},
+            "quality_metrics": {
+                "valid_rescues": scored["valid_rescues"],
+                "rescue_fraction_of_recoverable": scored["rescue_fraction_of_recoverable"],
+                "SAFE_RECOVERY_BLOCKED": scored["SAFE_RECOVERY_BLOCKED"],
+                "precision": scored["precision"],
+            },
+            "safety_metrics": {
+                "injection_false_positives": scored["injection_false_positives"],
+                "unsupported_answers": scored["unsupported_answers"],
+                **scored["security"],
+            },
+            "failure_census": {
+                "regressions": scored["regressions"],
+                "legitimate_instruction_like_false_blocks": scored[
+                    "legitimate_instruction_like_false_blocks"
+                ],
+                "failing_gate": hosted["experiment_1"].get("failing_gate"),
+            },
+            "verdict": hosted["experiment_1_status"],
+            "result": hosted,
+            "complexity": "deterministic post-recovery gate; zero extra hosted calls",
+        }
+        self.persist_ledger_row(row)
+        record = self.initialize()
+        if hosted["experiment_1_status"] == "EXP1_HOSTED_QUALIFIED":
+            record.selected_candidate = EXP1_ID
+            record.selected_configuration = exp1_configuration()
+            record.selected_configuration["architecture_hash"] = exp1_configuration_hash()
+            research = self.session.get(ResearchArchitectureRecord, V3_ARCHITECTURE_ID)
+            if research is not None:
+                research.v3_phase2_selected_candidate = EXP1_ID
+                research.production_status = False
+        record.validation_results = {**(record.validation_results or {}), EXP1_ID: hosted}
+        self.session.commit()
+        return row
+
     def record_exp1_offline_verdict(self, scored: dict[str, Any], *, dataset_hash: str | None) -> dict[str, Any]:
         plan = EXPERIMENT_PLAN[0]
         row = {
@@ -676,44 +730,118 @@ class V3Phase2SafetyBenchmark:
         }
 
     def execute(self) -> dict[str, Any]:
-        from rag_workbench.config import get_settings
+        from rag_workbench.experiments.v3_phase2_hosted import (
+            V3Phase2HostedRunner,
+            apply_minimum_ceilings,
+            authorization_decision,
+            enable_authorized_flags,
+        )
+        from rag_workbench.experiments.v3_phase2_safety_report import persist_v3_phase2_markdown
 
-        freeze = self.freeze_dataset()
+        settings = enable_authorized_flags()
+        freeze_dataset = self.freeze_dataset()
+        freeze = persist_experiment_1_freeze()
+        runner = V3Phase2HostedRunner(self.session, settings)
+        prepared = runner.prepare()
         audit = offline_gold_boundary_audit()
         record = self.initialize()
         development = dict(record.development_results or {})
         development["offline_gold_boundary_audit"] = audit
         record.development_results = development
+        record.hosted_preflight = prepared["preflight"]
+        record.embedding_preflight = {
+            "new_document_embedding_http_calls": prepared["preflight"][
+                "new_document_embedding_http_calls"
+            ],
+            "new_query_embeddings": prepared["preflight"]["new_query_embeddings"],
+            "cumulative_embedding_ceiling_required": prepared["preflight"][
+                "cumulative_embedding_ceiling_required"
+            ],
+            "estimated_usd_embedding_separate": prepared["preflight"][
+                "estimated_usd_embedding_separate"
+            ],
+        }
+        record.cumulative_budget = {
+            "authorized_new_logical_sol": prepared["preflight"]["authorized_new_logical_sol_bound"],
+            "cost_cap_usd": prepared["preflight"]["cost_cap_usd"],
+            "official_sol_worst_case_usd": prepared["preflight"][
+                "estimated_usd_official_sol_worst_case"
+            ],
+            "official_sol_floor_usd": prepared["preflight"]["estimated_usd_official_sol_floor"],
+            "experiment_1_extra_hosted_calls": 0,
+        }
+        decision = authorization_decision(settings, prepared["preflight"])
+        record.stop_reason = decision.get("stop")
+        if decision.get("stop"):
+            record.selected_candidate = None
+            record.validation_results = {
+                **(record.validation_results or {}),
+                EXP1_ID: {
+                    "status": "EXP1_HOSTED_INCOMPLETE",
+                    "stop": decision.get("stop"),
+                    "all_stops": decision.get("all_stops"),
+                    "not_empirical_rejection": True,
+                },
+            }
+            self.session.commit()
+            persist_v3_phase2_markdown(self.status())
+            return {
+                **decision,
+                "dataset": freeze_dataset,
+                "experiment_1_freeze": freeze,
+                "preservation": prepared["preservation"],
+                "preflight": prepared["preflight"],
+                "offline_gold_boundary_audit": audit,
+                "selected_candidate": None,
+                "experiment_1_status": "EXP1_HOSTED_INCOMPLETE",
+            }
+        settings = apply_minimum_ceilings(prepared["preflight"])
+        runner.settings = settings
+        hosted = runner.run_shared_hosted(prepared["preflight"])
+        scored = hosted["experiment_1"]["scored"]
+        status = hosted["experiment_1_status"]
+        record.shared_traces = hosted["retrieval"]["shared_traces"]
+        record.validation_results = {
+            **(record.validation_results or {}),
+            EXP1_ID: {
+                "status": status,
+                **scored,
+                "baseline_b0": hosted["baseline_b0"],
+                "instruction_boundary": hosted["experiment_1"]["instruction_boundary"],
+                "categories": hosted["experiment_1"]["categories"],
+            },
+        }
+        record.stop_reason = None if status == "EXP1_HOSTED_QUALIFIED" else hosted["experiment_1"].get("failing_gate")
+        if status == "EXP1_HOSTED_QUALIFIED":
+            record.selected_candidate = EXP1_ID
+            record.selected_configuration = {
+                **exp1_configuration(),
+                "architecture_hash": exp1_configuration_hash(),
+                "public_mechanism_name": freeze["public_mechanism_name"],
+                "v3_index_identity": freeze["v3_index_identity"],
+                "dataset_hash": freeze["dataset_hash"],
+                "selection_timestamp": hosted["experiment_1"].get("scored"),
+            }
+        else:
+            record.selected_candidate = None
+        record.completed_at = datetime.now(UTC)
         self.session.commit()
-        preflight = hosted_preflight_estimate()
-        settings = get_settings()
-        required_judge = (
-            preflight["missing_logical_calls"]["primary_judge"]
-            + preflight["missing_logical_calls"]["recovery_draft"]
-            + preflight["missing_logical_calls"]["claim_verifier"]
-        )
-        authorized = (
-            settings.allow_external_judge_calls
-            and settings.allow_external_calls
-            and bool(settings.effective_judge_api_key)
-            and settings.max_external_judge_calls >= required_judge
-        )
-        if not authorized:
-            payload = self.authorization_stop(preflight)
-            payload["dataset"] = freeze
-            payload["offline_gold_boundary_audit"] = audit
-            return payload
+        self.record_exp1_hosted_verdict(hosted, dataset_hash=freeze["dataset_hash"])
+        persist_v3_phase2_markdown(self.status())
         return {
-            "error": "hosted validation remains gated on matching frozen V2 embedding/judge identities",
-            "dataset": freeze,
+            **hosted,
+            "dataset": freeze_dataset,
+            "experiment_1_freeze": freeze,
+            "preservation": prepared["preservation"],
+            "preflight": prepared["preflight"],
             "offline_gold_boundary_audit": audit,
-            "preflight": preflight,
         }
 
     def status(self) -> dict[str, Any]:
         record = self.session.get(V3Phase2ExperimentRecord, LOCK_ID)
         if record is None:
             return {"initialized": False, "architecture_id": V3_ARCHITECTURE_ID, "production_status": False}
+        exp1 = (record.validation_results or {}).get(EXP1_ID) or {}
         return {
             "initialized": True,
             "architecture_id": record.architecture_id,
@@ -729,6 +857,9 @@ class V3Phase2SafetyBenchmark:
             "validation_results": record.validation_results,
             "development_results": record.development_results,
             "hosted_preflight": record.hosted_preflight,
+            "embedding_preflight": record.embedding_preflight,
+            "cumulative_budget": record.cumulative_budget,
             "stop_reason": record.stop_reason,
             "completed_at": record.completed_at,
+            "experiment_1_status": exp1.get("status") or exp1.get("experiment_1_status"),
         }

@@ -3125,6 +3125,20 @@ Rescue fraction of recoverable n/a. SAFE_RECOVERY_BLOCKED `None`.
 
 ### Hosted preflight / stop
 
-Stop reason `BUDGET_AUTHORIZATION_REQUIRED`. Estimated USD `0.657600`.
+Experiment 1 status `EXP1_HOSTED_INCOMPLETE`.
+Stop reason `EXTERNAL_CREDENTIALS_REQUIRED`.
+V3 index identity `2027d684f92af14a7dc6cd2362dda5d60233287e746f4aa856fb3c82fefe160b`.
+Existing query-embedding cache hits `0`.
+New document embedding HTTP calls `33`.
+New query embeddings `60`.
+New Judge/Draft/Verifier worst case `60` / `60` / `60`.
+Maximum physical attempts `360`.
+Official Sol worst-case USD `1.986000`.
+Official Sol floor USD `1.086000`.
+Embedding USD (separate) `0.000118`.
+Cumulative Judge ceiling `180`.
+Cumulative embedding ceiling `93`.
+Experiment 1 extra hosted calls `0`.
 
 Official frozen v2 was not modified.
+A budget or credential stop is not empirical Experiment-1 rejection.

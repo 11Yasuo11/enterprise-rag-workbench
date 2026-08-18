@@ -1,0 +1,3154 @@
+{
+  "dataset_id": "acmeai-v2-document-diversity-eval-v1",
+  "dataset_version": "acmeai-v2-document-diversity-eval-v1",
+  "corpus_version": "acmeai-v1",
+  "generation_method": "manual-corpus-grounded-v1",
+  "cases": [
+    {
+      "case_id": "vdv_three_01",
+      "category": "multidoc_three",
+      "question": "On the millwright chalkboard, stencil the live interface RTO of four hours, Operations joining the Security incident commander, ENG-DEP-17, and LEGAL-DEL-08.",
+      "required_document_ids": [
+        "operations-continuity-plan",
+        "engineering-deployment-handbook",
+        "data-retention-standard"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "operations-continuity-plan": "4.0",
+        "engineering-deployment-handbook": "2026.1",
+        "data-retention-standard": "2.0"
+      },
+      "required_fact_ids": [
+        "rto",
+        "join_sec",
+        "deploy_token",
+        "deletion_token"
+      ],
+      "expected_facts": [
+        "four hours",
+        "incident commander",
+        "ENG-DEP-17",
+        "LEGAL-DEL-08"
+      ],
+      "expected_answer": "The recovery time objective for the customer API is four hours. Operations joins the Security incident commander when a severity-one incident affects customer availability. The production deployment approval identifier is ENG-DEP-17. The approved deletion workflow identifier is LEGAL-DEL-08.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "operations-continuity-plan",
+        "engineering-deployment-handbook",
+        "data-retention-standard"
+      ],
+      "expected_versions": {
+        "operations-continuity-plan": "4.0",
+        "engineering-deployment-handbook": "2026.1",
+        "data-retention-standard": "2.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": true,
+      "required_chunk_markers": [
+        "four hours",
+        "Security incident commander"
+      ]
+    },
+    {
+      "case_id": "vdv_three_02",
+      "category": "multidoc_three",
+      "question": "Across the barge-log folio, record CS-1842, ATLAS-API-301, and OPS-REC-E17.",
+      "required_document_ids": [
+        "customer-support-escalation",
+        "project-atlas-api",
+        "recovery-runbook-east"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "customer-support-escalation": "3.2",
+        "project-atlas-api": "3.0",
+        "recovery-runbook-east": "1.0"
+      },
+      "required_fact_ids": [
+        "queue_token",
+        "endpoint",
+        "east_runbook"
+      ],
+      "expected_facts": [
+        "CS-1842",
+        "ATLAS-API-301",
+        "OPS-REC-E17"
+      ],
+      "expected_answer": "The exact escalation queue identifier for a priority-one customer outage is CS-1842. Project Atlas uses production endpoint identifier ATLAS-API-301. The east-region customer API recovery sequence uses runbook code OPS-REC-E17.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "customer-support-escalation",
+        "project-atlas-api",
+        "recovery-runbook-east"
+      ],
+      "expected_versions": {
+        "customer-support-escalation": "3.2",
+        "project-atlas-api": "3.0",
+        "recovery-runbook-east": "1.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_03",
+      "category": "multidoc_three",
+      "question": "On the kiln-room slate, chalk Tuesday-and-Thursday ship windows, FIN-TRAVEL-52, and Atlas's eu-west opening geography.",
+      "required_document_ids": [
+        "engineering-deployment-handbook",
+        "finance-expense-policy",
+        "project-atlas-launch"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "engineering-deployment-handbook": "2026.1",
+        "finance-expense-policy": "5.1",
+        "project-atlas-launch": "1.0"
+      },
+      "required_fact_ids": [
+        "release_days",
+        "travel_code",
+        "launch_region"
+      ],
+      "expected_facts": [
+        "Tuesdays and Thursdays",
+        "FIN-TRAVEL-52",
+        "eu-west"
+      ],
+      "expected_answer": "Routine production releases occur on Tuesdays and Thursdays. The international travel approval code is FIN-TRAVEL-52. The initial customer region for Project Atlas is eu-west.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "engineering-deployment-handbook",
+        "finance-expense-policy",
+        "project-atlas-launch"
+      ],
+      "expected_versions": {
+        "engineering-deployment-handbook": "2026.1",
+        "finance-expense-policy": "5.1",
+        "project-atlas-launch": "1.0"
+      },
+      "security_checks": [
+        "version"
+      ],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_04",
+      "category": "multidoc_three",
+      "question": "Stamp the dock-crane ticket with twenty-four-month ticket archives, the two-day 2026 remote allowance, and fifteen-minute severity-one paging.",
+      "required_document_ids": [
+        "data-retention-standard",
+        "remote-work-policy",
+        "security-incident-policy"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "data-retention-standard": "2.0",
+        "remote-work-policy": "2026",
+        "security-incident-policy": "2026"
+      },
+      "required_fact_ids": [
+        "ticket_retention",
+        "remote_allowance",
+        "sev1_notice"
+      ],
+      "expected_facts": [
+        "twenty-four months",
+        "two days per week",
+        "15 minutes"
+      ],
+      "expected_answer": "Customer support tickets are retained for twenty-four months. Employees may work remotely two days per week. Suspected severity-one incidents must be reported to the security duty officer within 15 minutes of discovery.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "data-retention-standard",
+        "remote-work-policy",
+        "security-incident-policy"
+      ],
+      "expected_versions": {
+        "data-retention-standard": "2.0",
+        "remote-work-policy": "2026",
+        "security-incident-policy": "2026"
+      },
+      "security_checks": [
+        "version"
+      ],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_05",
+      "category": "multidoc_three",
+      "question": "Wire the assay-lab stub with Platform Interfaces ownership, Product Operations launch custody, and the eu-central eastern spare cluster.",
+      "required_document_ids": [
+        "project-atlas-api",
+        "project-atlas-launch",
+        "recovery-runbook-east"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "project-atlas-api": "3.0",
+        "project-atlas-launch": "1.0",
+        "recovery-runbook-east": "1.0"
+      },
+      "required_fact_ids": [
+        "api_owner",
+        "launch_owner",
+        "east_standby"
+      ],
+      "expected_facts": [
+        "Platform Interfaces",
+        "Product Operations",
+        "eu-central"
+      ],
+      "expected_answer": "The Atlas API is maintained by the Platform Interfaces team. The launch owner is the Product Operations team. East-region failover targets the eu-central standby cluster.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "project-atlas-api",
+        "project-atlas-launch",
+        "recovery-runbook-east"
+      ],
+      "expected_versions": {
+        "project-atlas-api": "3.0",
+        "project-atlas-launch": "1.0",
+        "recovery-runbook-east": "1.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_06",
+      "category": "multidoc_three",
+      "question": "Pin the harbor-watch card with OPS-REC-W29, the thirty-minute customer-status cadence, and receipts above 25 euros.",
+      "required_document_ids": [
+        "recovery-runbook-west",
+        "customer-support-escalation",
+        "finance-expense-policy"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "recovery-runbook-west": "1.0",
+        "customer-support-escalation": "3.2",
+        "finance-expense-policy": "5.1"
+      },
+      "required_fact_ids": [
+        "west_runbook",
+        "status_cadence",
+        "receipt_threshold"
+      ],
+      "expected_facts": [
+        "OPS-REC-W29",
+        "every thirty minutes",
+        "25 euros"
+      ],
+      "expected_answer": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29. Customer-facing status updates are published every thirty minutes until mitigation. Receipts are required for expenses above 25 euros.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "recovery-runbook-west",
+        "customer-support-escalation",
+        "finance-expense-policy"
+      ],
+      "expected_versions": {
+        "recovery-runbook-west": "1.0",
+        "customer-support-escalation": "3.2",
+        "finance-expense-policy": "5.1"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_07",
+      "category": "multidoc_three",
+      "question": "On the loom-room docket, list seven-year security-log archives, monthly 2026 remote-schedule checks, and Atlas API version v3.",
+      "required_document_ids": [
+        "data-retention-standard",
+        "remote-work-policy",
+        "project-atlas-api"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "data-retention-standard": "2.0",
+        "remote-work-policy": "2026",
+        "project-atlas-api": "3.0"
+      },
+      "required_fact_ids": [
+        "log_retention",
+        "remote_review",
+        "api_version"
+      ],
+      "expected_facts": [
+        "seven years",
+        "every month",
+        "v3"
+      ],
+      "expected_answer": "Security audit logs are retained for seven years. Managers review remote-work schedules every month. Project Atlas uses API version v3.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "data-retention-standard",
+        "remote-work-policy",
+        "project-atlas-api"
+      ],
+      "expected_versions": {
+        "data-retention-standard": "2.0",
+        "remote-work-policy": "2026",
+        "project-atlas-api": "3.0"
+      },
+      "security_checks": [
+        "version"
+      ],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_08",
+      "category": "multidoc_three",
+      "question": "Hang the foundry tally showing April 12, 2026 introduction, first-Wednesday eastern drills, and SEC-TRAIN-44.",
+      "required_document_ids": [
+        "project-atlas-launch",
+        "recovery-runbook-east",
+        "security-training-example"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "project-atlas-launch": "1.0",
+        "recovery-runbook-east": "1.0",
+        "security-training-example": "1"
+      },
+      "required_fact_ids": [
+        "launch_date",
+        "east_drill",
+        "training_id"
+      ],
+      "expected_facts": [
+        "April 12, 2026",
+        "first Wednesday",
+        "SEC-TRAIN-44"
+      ],
+      "expected_answer": "Project Atlas launched on April 12, 2026. The recovery drill runs on the first Wednesday of each quarter. The training reference identifier is SEC-TRAIN-44.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "project-atlas-launch",
+        "recovery-runbook-east",
+        "security-training-example"
+      ],
+      "expected_versions": {
+        "project-atlas-launch": "1.0",
+        "recovery-runbook-east": "1.0",
+        "security-training-example": "1"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_09",
+      "category": "multidoc_three",
+      "question": "Clip the trestle clipboard with ten-business-day expense filing, us-east western spare, and CS-1842.",
+      "required_document_ids": [
+        "finance-expense-policy",
+        "recovery-runbook-west",
+        "customer-support-escalation"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "finance-expense-policy": "5.1",
+        "recovery-runbook-west": "1.0",
+        "customer-support-escalation": "3.2"
+      },
+      "required_fact_ids": [
+        "expense_due",
+        "west_standby",
+        "queue_token"
+      ],
+      "expected_facts": [
+        "ten business days",
+        "us-east",
+        "CS-1842"
+      ],
+      "expected_answer": "Expense reports are due within ten business days. West-region failover targets the us-east standby cluster. The exact escalation queue identifier for a priority-one customer outage is CS-1842.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "finance-expense-policy",
+        "recovery-runbook-west",
+        "customer-support-escalation"
+      ],
+      "expected_versions": {
+        "finance-expense-policy": "5.1",
+        "recovery-runbook-west": "1.0",
+        "customer-support-escalation": "3.2"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_10",
+      "category": "multidoc_three",
+      "question": "Score the sluice-gate chit with the incident commander coordinating Engineering and Customer Support, second-Wednesday western drills, and ENG-DEP-17.",
+      "required_document_ids": [
+        "security-incident-policy",
+        "recovery-runbook-west",
+        "engineering-deployment-handbook"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "security-incident-policy": "2026",
+        "recovery-runbook-west": "1.0",
+        "engineering-deployment-handbook": "2026.1"
+      },
+      "required_fact_ids": [
+        "commander_coord",
+        "west_drill",
+        "deploy_token"
+      ],
+      "expected_facts": [
+        "incident commander coordinates",
+        "second Wednesday",
+        "ENG-DEP-17"
+      ],
+      "expected_answer": "The incident commander coordinates Engineering and Customer Support during an active severity-one incident. The recovery drill runs on the second Wednesday of each quarter. The production deployment approval identifier is ENG-DEP-17.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "security-incident-policy",
+        "recovery-runbook-west",
+        "engineering-deployment-handbook"
+      ],
+      "expected_versions": {
+        "security-incident-policy": "2026",
+        "recovery-runbook-west": "1.0",
+        "engineering-deployment-handbook": "2026.1"
+      },
+      "security_checks": [
+        "version"
+      ],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_11",
+      "category": "multidoc_three",
+      "question": "Mark the windlass tag with Atlas's mid-April 2026 opening day, the four-hour live-interface budget, and overseas code FIN-TRAVEL-52.",
+      "required_document_ids": [
+        "project-atlas-launch",
+        "operations-continuity-plan",
+        "finance-expense-policy"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "project-atlas-launch": "1.0",
+        "operations-continuity-plan": "4.0",
+        "finance-expense-policy": "5.1"
+      },
+      "required_fact_ids": [
+        "launch_date",
+        "rto",
+        "travel_code"
+      ],
+      "expected_facts": [
+        "April 12, 2026",
+        "four hours",
+        "FIN-TRAVEL-52"
+      ],
+      "expected_answer": "Project Atlas launched on April 12, 2026. The recovery time objective for the customer API is four hours. The international travel approval code is FIN-TRAVEL-52.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "project-atlas-launch",
+        "operations-continuity-plan",
+        "finance-expense-policy"
+      ],
+      "expected_versions": {
+        "project-atlas-launch": "1.0",
+        "operations-continuity-plan": "4.0",
+        "finance-expense-policy": "5.1"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_12",
+      "category": "multidoc_three",
+      "question": "Ink the cooperage label with endpoint ATLAS-API-301, two-year support-ticket shelves, and the 2026 two-weekday offsite allowance.",
+      "required_document_ids": [
+        "project-atlas-api",
+        "data-retention-standard",
+        "remote-work-policy"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "project-atlas-api": "3.0",
+        "data-retention-standard": "2.0",
+        "remote-work-policy": "2026"
+      },
+      "required_fact_ids": [
+        "endpoint",
+        "ticket_retention",
+        "remote_allowance"
+      ],
+      "expected_facts": [
+        "ATLAS-API-301",
+        "twenty-four months",
+        "two days per week"
+      ],
+      "expected_answer": "Project Atlas uses production endpoint identifier ATLAS-API-301. Customer support tickets are retained for twenty-four months. Employees may work remotely two days per week.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "project-atlas-api",
+        "data-retention-standard",
+        "remote-work-policy"
+      ],
+      "expected_versions": {
+        "project-atlas-api": "3.0",
+        "data-retention-standard": "2.0",
+        "remote-work-policy": "2026"
+      },
+      "security_checks": [
+        "version"
+      ],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_13",
+      "category": "multidoc_three",
+      "question": "Nail the capstan card with OPS-REC-E17, Tuesday-and-Thursday ship windows, and fifteen-minute severity-one paging.",
+      "required_document_ids": [
+        "recovery-runbook-east",
+        "engineering-deployment-handbook",
+        "security-incident-policy"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "recovery-runbook-east": "1.0",
+        "engineering-deployment-handbook": "2026.1",
+        "security-incident-policy": "2026"
+      },
+      "required_fact_ids": [
+        "east_runbook",
+        "release_days",
+        "sev1_notice"
+      ],
+      "expected_facts": [
+        "OPS-REC-E17",
+        "Tuesdays and Thursdays",
+        "15 minutes"
+      ],
+      "expected_answer": "The east-region customer API recovery sequence uses runbook code OPS-REC-E17. Routine production releases occur on Tuesdays and Thursdays. Suspected severity-one incidents must be reported to the security duty officer within 15 minutes of discovery.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "recovery-runbook-east",
+        "engineering-deployment-handbook",
+        "security-incident-policy"
+      ],
+      "expected_versions": {
+        "recovery-runbook-east": "1.0",
+        "engineering-deployment-handbook": "2026.1",
+        "security-incident-policy": "2026"
+      },
+      "security_checks": [
+        "version"
+      ],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_14",
+      "category": "multidoc_three",
+      "question": "Etch the drydock plaque with Product Operations launch custody, LEGAL-DEL-08, and receipts above 25 euros.",
+      "required_document_ids": [
+        "project-atlas-launch",
+        "data-retention-standard",
+        "finance-expense-policy"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "project-atlas-launch": "1.0",
+        "data-retention-standard": "2.0",
+        "finance-expense-policy": "5.1"
+      },
+      "required_fact_ids": [
+        "launch_owner",
+        "deletion_token",
+        "receipt_threshold"
+      ],
+      "expected_facts": [
+        "Product Operations",
+        "LEGAL-DEL-08",
+        "25 euros"
+      ],
+      "expected_answer": "The launch owner is the Product Operations team. The approved deletion workflow identifier is LEGAL-DEL-08. Receipts are required for expenses above 25 euros.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "project-atlas-launch",
+        "data-retention-standard",
+        "finance-expense-policy"
+      ],
+      "expected_versions": {
+        "project-atlas-launch": "1.0",
+        "data-retention-standard": "2.0",
+        "finance-expense-policy": "5.1"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_15",
+      "category": "multidoc_three",
+      "question": "Paint the hawser tag with Platform Interfaces ownership, thirty-minute customer-status cadence, and eu-west opening geography.",
+      "required_document_ids": [
+        "project-atlas-api",
+        "customer-support-escalation",
+        "project-atlas-launch"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "project-atlas-api": "3.0",
+        "customer-support-escalation": "3.2",
+        "project-atlas-launch": "1.0"
+      },
+      "required_fact_ids": [
+        "api_owner",
+        "status_cadence",
+        "launch_region"
+      ],
+      "expected_facts": [
+        "Platform Interfaces",
+        "every thirty minutes",
+        "eu-west"
+      ],
+      "expected_answer": "The Atlas API is maintained by the Platform Interfaces team. Customer-facing status updates are published every thirty minutes until mitigation. The initial customer region for Project Atlas is eu-west.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "project-atlas-api",
+        "customer-support-escalation",
+        "project-atlas-launch"
+      ],
+      "expected_versions": {
+        "project-atlas-api": "3.0",
+        "customer-support-escalation": "3.2",
+        "project-atlas-launch": "1.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_16",
+      "category": "multidoc_three",
+      "question": "Bind the quarry chit with seven-year security-log archives, OPS-REC-W29, and monthly 2026 remote-schedule checks.",
+      "required_document_ids": [
+        "data-retention-standard",
+        "recovery-runbook-west",
+        "remote-work-policy"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "data-retention-standard": "2.0",
+        "recovery-runbook-west": "1.0",
+        "remote-work-policy": "2026"
+      },
+      "required_fact_ids": [
+        "log_retention",
+        "west_runbook",
+        "remote_review"
+      ],
+      "expected_facts": [
+        "seven years",
+        "OPS-REC-W29",
+        "every month"
+      ],
+      "expected_answer": "Security audit logs are retained for seven years. The west-region customer API recovery sequence uses runbook code OPS-REC-W29. Managers review remote-work schedules every month.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "data-retention-standard",
+        "recovery-runbook-west",
+        "remote-work-policy"
+      ],
+      "expected_versions": {
+        "data-retention-standard": "2.0",
+        "recovery-runbook-west": "1.0",
+        "remote-work-policy": "2026"
+      },
+      "security_checks": [
+        "version"
+      ],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_17",
+      "category": "multidoc_three",
+      "question": "Stamp the icehouse slip with Finance Operations exception review, first-Wednesday eastern drills, and SEC-TRAIN-44.",
+      "required_document_ids": [
+        "finance-expense-policy",
+        "recovery-runbook-east",
+        "security-training-example"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "finance-expense-policy": "5.1",
+        "recovery-runbook-east": "1.0",
+        "security-training-example": "1"
+      },
+      "required_fact_ids": [
+        "finance_exceptions",
+        "east_drill",
+        "training_id"
+      ],
+      "expected_facts": [
+        "Finance Operations",
+        "first Wednesday",
+        "SEC-TRAIN-44"
+      ],
+      "expected_answer": "Finance Operations owns exception review. The recovery drill runs on the first Wednesday of each quarter. The training reference identifier is SEC-TRAIN-44.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "finance-expense-policy",
+        "recovery-runbook-east",
+        "security-training-example"
+      ],
+      "expected_versions": {
+        "finance-expense-policy": "5.1",
+        "recovery-runbook-east": "1.0",
+        "security-training-example": "1"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_18",
+      "category": "multidoc_three",
+      "question": "Score the lock-gate pass with Operations joining the Security incident commander, CS-1842, and Atlas API version v3.",
+      "required_document_ids": [
+        "operations-continuity-plan",
+        "customer-support-escalation",
+        "project-atlas-api"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "operations-continuity-plan": "4.0",
+        "customer-support-escalation": "3.2",
+        "project-atlas-api": "3.0"
+      },
+      "required_fact_ids": [
+        "join_sec",
+        "queue_token",
+        "api_version"
+      ],
+      "expected_facts": [
+        "incident commander",
+        "CS-1842",
+        "v3"
+      ],
+      "expected_answer": "Operations joins the Security incident commander when a severity-one incident affects customer availability. The exact escalation queue identifier for a priority-one customer outage is CS-1842. Project Atlas uses API version v3.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "operations-continuity-plan",
+        "customer-support-escalation",
+        "project-atlas-api"
+      ],
+      "expected_versions": {
+        "operations-continuity-plan": "4.0",
+        "customer-support-escalation": "3.2",
+        "project-atlas-api": "3.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_19",
+      "category": "multidoc_three",
+      "question": "Cut the sawpit ticket with ten-business-day expense filing, eu-central eastern spare, and ENG-DEP-17.",
+      "required_document_ids": [
+        "finance-expense-policy",
+        "recovery-runbook-east",
+        "engineering-deployment-handbook"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "finance-expense-policy": "5.1",
+        "recovery-runbook-east": "1.0",
+        "engineering-deployment-handbook": "2026.1"
+      },
+      "required_fact_ids": [
+        "expense_due",
+        "east_standby",
+        "deploy_token"
+      ],
+      "expected_facts": [
+        "ten business days",
+        "eu-central",
+        "ENG-DEP-17"
+      ],
+      "expected_answer": "Expense reports are due within ten business days. East-region failover targets the eu-central standby cluster. The production deployment approval identifier is ENG-DEP-17.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "finance-expense-policy",
+        "recovery-runbook-east",
+        "engineering-deployment-handbook"
+      ],
+      "expected_versions": {
+        "finance-expense-policy": "5.1",
+        "recovery-runbook-east": "1.0",
+        "engineering-deployment-handbook": "2026.1"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_20",
+      "category": "multidoc_three",
+      "question": "Brand the tallow keg with the incident commander coordinating Engineering and Customer Support, LEGAL-DEL-08, and Atlas's April 12, 2026 introduction.",
+      "required_document_ids": [
+        "security-incident-policy",
+        "data-retention-standard",
+        "project-atlas-launch"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "security-incident-policy": "2026",
+        "data-retention-standard": "2.0",
+        "project-atlas-launch": "1.0"
+      },
+      "required_fact_ids": [
+        "commander_coord",
+        "deletion_token",
+        "launch_date"
+      ],
+      "expected_facts": [
+        "incident commander coordinates",
+        "LEGAL-DEL-08",
+        "April 12, 2026"
+      ],
+      "expected_answer": "The incident commander coordinates Engineering and Customer Support during an active severity-one incident. The approved deletion workflow identifier is LEGAL-DEL-08. Project Atlas launched on April 12, 2026.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "security-incident-policy",
+        "data-retention-standard",
+        "project-atlas-launch"
+      ],
+      "expected_versions": {
+        "security-incident-policy": "2026",
+        "data-retention-standard": "2.0",
+        "project-atlas-launch": "1.0"
+      },
+      "security_checks": [
+        "version"
+      ],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_21",
+      "category": "multidoc_three",
+      "question": "Ink the pulley tag with four-hour live-interface RTO, us-east western spare, and ATLAS-API-301.",
+      "required_document_ids": [
+        "operations-continuity-plan",
+        "recovery-runbook-west",
+        "project-atlas-api"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "operations-continuity-plan": "4.0",
+        "recovery-runbook-west": "1.0",
+        "project-atlas-api": "3.0"
+      },
+      "required_fact_ids": [
+        "rto",
+        "west_standby",
+        "endpoint"
+      ],
+      "expected_facts": [
+        "four hours",
+        "us-east",
+        "ATLAS-API-301"
+      ],
+      "expected_answer": "The recovery time objective for the customer API is four hours. West-region failover targets the us-east standby cluster. Project Atlas uses production endpoint identifier ATLAS-API-301.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "operations-continuity-plan",
+        "recovery-runbook-west",
+        "project-atlas-api"
+      ],
+      "expected_versions": {
+        "operations-continuity-plan": "4.0",
+        "recovery-runbook-west": "1.0",
+        "project-atlas-api": "3.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_22",
+      "category": "multidoc_three",
+      "question": "Mark the grain-silo card with Tuesday-and-Thursday ship windows, the two-day 2026 remote allowance, and Product Operations launch custody.",
+      "required_document_ids": [
+        "engineering-deployment-handbook",
+        "remote-work-policy",
+        "project-atlas-launch"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "engineering-deployment-handbook": "2026.1",
+        "remote-work-policy": "2026",
+        "project-atlas-launch": "1.0"
+      },
+      "required_fact_ids": [
+        "release_days",
+        "remote_allowance",
+        "launch_owner"
+      ],
+      "expected_facts": [
+        "Tuesdays and Thursdays",
+        "two days per week",
+        "Product Operations"
+      ],
+      "expected_answer": "Routine production releases occur on Tuesdays and Thursdays. Employees may work remotely two days per week. The launch owner is the Product Operations team.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "engineering-deployment-handbook",
+        "remote-work-policy",
+        "project-atlas-launch"
+      ],
+      "expected_versions": {
+        "engineering-deployment-handbook": "2026.1",
+        "remote-work-policy": "2026",
+        "project-atlas-launch": "1.0"
+      },
+      "security_checks": [
+        "version"
+      ],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_23",
+      "category": "multidoc_three",
+      "question": "Hang the smokehouse tally with fifteen-minute severity-one paging, thirty-minute customer-status cadence, and FIN-TRAVEL-52.",
+      "required_document_ids": [
+        "security-incident-policy",
+        "customer-support-escalation",
+        "finance-expense-policy"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "security-incident-policy": "2026",
+        "customer-support-escalation": "3.2",
+        "finance-expense-policy": "5.1"
+      },
+      "required_fact_ids": [
+        "sev1_notice",
+        "status_cadence",
+        "travel_code"
+      ],
+      "expected_facts": [
+        "15 minutes",
+        "every thirty minutes",
+        "FIN-TRAVEL-52"
+      ],
+      "expected_answer": "Suspected severity-one incidents must be reported to the security duty officer within 15 minutes of discovery. Customer-facing status updates are published every thirty minutes until mitigation. The international travel approval code is FIN-TRAVEL-52.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "security-incident-policy",
+        "customer-support-escalation",
+        "finance-expense-policy"
+      ],
+      "expected_versions": {
+        "security-incident-policy": "2026",
+        "customer-support-escalation": "3.2",
+        "finance-expense-policy": "5.1"
+      },
+      "security_checks": [
+        "version"
+      ],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_24",
+      "category": "multidoc_three",
+      "question": "Clip the raft-log with twenty-four-month ticket archives, Platform Interfaces ownership, and OPS-REC-E17.",
+      "required_document_ids": [
+        "data-retention-standard",
+        "project-atlas-api",
+        "recovery-runbook-east"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "data-retention-standard": "2.0",
+        "project-atlas-api": "3.0",
+        "recovery-runbook-east": "1.0"
+      },
+      "required_fact_ids": [
+        "ticket_retention",
+        "api_owner",
+        "east_runbook"
+      ],
+      "expected_facts": [
+        "twenty-four months",
+        "Platform Interfaces",
+        "OPS-REC-E17"
+      ],
+      "expected_answer": "Customer support tickets are retained for twenty-four months. The Atlas API is maintained by the Platform Interfaces team. The east-region customer API recovery sequence uses runbook code OPS-REC-E17.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "data-retention-standard",
+        "project-atlas-api",
+        "recovery-runbook-east"
+      ],
+      "expected_versions": {
+        "data-retention-standard": "2.0",
+        "project-atlas-api": "3.0",
+        "recovery-runbook-east": "1.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_25",
+      "category": "multidoc_three",
+      "question": "Stamp the lantern-room chit with monthly 2026 remote-schedule checks, second-Wednesday western drills, and SEC-TRAIN-44.",
+      "required_document_ids": [
+        "remote-work-policy",
+        "recovery-runbook-west",
+        "security-training-example"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "remote-work-policy": "2026",
+        "recovery-runbook-west": "1.0",
+        "security-training-example": "1"
+      },
+      "required_fact_ids": [
+        "remote_review",
+        "west_drill",
+        "training_id"
+      ],
+      "expected_facts": [
+        "every month",
+        "second Wednesday",
+        "SEC-TRAIN-44"
+      ],
+      "expected_answer": "Managers review remote-work schedules every month. The recovery drill runs on the second Wednesday of each quarter. The training reference identifier is SEC-TRAIN-44.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "remote-work-policy",
+        "recovery-runbook-west",
+        "security-training-example"
+      ],
+      "expected_versions": {
+        "remote-work-policy": "2026",
+        "recovery-runbook-west": "1.0",
+        "security-training-example": "1"
+      },
+      "security_checks": [
+        "version"
+      ],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_26",
+      "category": "multidoc_three",
+      "question": "Score the brick-kiln pass with expense slips required above twenty-five euros, Atlas's inaugural customer region, and priority-one queue CS-1842.",
+      "required_document_ids": [
+        "finance-expense-policy",
+        "project-atlas-launch",
+        "customer-support-escalation"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "finance-expense-policy": "5.1",
+        "project-atlas-launch": "1.0",
+        "customer-support-escalation": "3.2"
+      },
+      "required_fact_ids": [
+        "receipt_threshold",
+        "launch_region",
+        "queue_token"
+      ],
+      "expected_facts": [
+        "25 euros",
+        "eu-west",
+        "CS-1842"
+      ],
+      "expected_answer": "Receipts are required for expenses above 25 euros. The initial customer region for Project Atlas is eu-west. The exact escalation queue identifier for a priority-one customer outage is CS-1842.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "finance-expense-policy",
+        "project-atlas-launch",
+        "customer-support-escalation"
+      ],
+      "expected_versions": {
+        "finance-expense-policy": "5.1",
+        "project-atlas-launch": "1.0",
+        "customer-support-escalation": "3.2"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_27",
+      "category": "multidoc_three",
+      "question": "Paint the cable-drum tag with seven-year security-log archives, ENG-DEP-17, and Atlas API version v3.",
+      "required_document_ids": [
+        "data-retention-standard",
+        "engineering-deployment-handbook",
+        "project-atlas-api"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "data-retention-standard": "2.0",
+        "engineering-deployment-handbook": "2026.1",
+        "project-atlas-api": "3.0"
+      },
+      "required_fact_ids": [
+        "log_retention",
+        "deploy_token",
+        "api_version"
+      ],
+      "expected_facts": [
+        "seven years",
+        "ENG-DEP-17",
+        "v3"
+      ],
+      "expected_answer": "Security audit logs are retained for seven years. The production deployment approval identifier is ENG-DEP-17. Project Atlas uses API version v3.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "data-retention-standard",
+        "engineering-deployment-handbook",
+        "project-atlas-api"
+      ],
+      "expected_versions": {
+        "data-retention-standard": "2.0",
+        "engineering-deployment-handbook": "2026.1",
+        "project-atlas-api": "3.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_28",
+      "category": "multidoc_three",
+      "question": "Wire the pontoon slate with four-hour live-interface RTO, first-Wednesday eastern drills, and the two-day 2026 remote allowance.",
+      "required_document_ids": [
+        "operations-continuity-plan",
+        "recovery-runbook-east",
+        "remote-work-policy"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "operations-continuity-plan": "4.0",
+        "recovery-runbook-east": "1.0",
+        "remote-work-policy": "2026"
+      },
+      "required_fact_ids": [
+        "rto",
+        "east_drill",
+        "remote_allowance"
+      ],
+      "expected_facts": [
+        "four hours",
+        "first Wednesday",
+        "two days per week"
+      ],
+      "expected_answer": "The recovery time objective for the customer API is four hours. The recovery drill runs on the first Wednesday of each quarter. Employees may work remotely two days per week.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "operations-continuity-plan",
+        "recovery-runbook-east",
+        "remote-work-policy"
+      ],
+      "expected_versions": {
+        "operations-continuity-plan": "4.0",
+        "recovery-runbook-east": "1.0",
+        "remote-work-policy": "2026"
+      },
+      "security_checks": [
+        "version"
+      ],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_29",
+      "category": "multidoc_three",
+      "question": "Etch the boiler-room plaque with ten-business-day expense filing, Tuesday-and-Thursday ship windows, and fifteen-minute severity-one paging.",
+      "required_document_ids": [
+        "finance-expense-policy",
+        "engineering-deployment-handbook",
+        "security-incident-policy"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "finance-expense-policy": "5.1",
+        "engineering-deployment-handbook": "2026.1",
+        "security-incident-policy": "2026"
+      },
+      "required_fact_ids": [
+        "expense_due",
+        "release_days",
+        "sev1_notice"
+      ],
+      "expected_facts": [
+        "ten business days",
+        "Tuesdays and Thursdays",
+        "15 minutes"
+      ],
+      "expected_answer": "Expense reports are due within ten business days. Routine production releases occur on Tuesdays and Thursdays. Suspected severity-one incidents must be reported to the security duty officer within 15 minutes of discovery.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "finance-expense-policy",
+        "engineering-deployment-handbook",
+        "security-incident-policy"
+      ],
+      "expected_versions": {
+        "finance-expense-policy": "5.1",
+        "engineering-deployment-handbook": "2026.1",
+        "security-incident-policy": "2026"
+      },
+      "security_checks": [
+        "version"
+      ],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_30",
+      "category": "multidoc_three",
+      "question": "Bind the timber-crib card with Product Operations launch custody, western runbook OPS-REC-W29, and erasure token LEGAL-DEL-08.",
+      "required_document_ids": [
+        "project-atlas-launch",
+        "recovery-runbook-west",
+        "data-retention-standard"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "project-atlas-launch": "1.0",
+        "recovery-runbook-west": "1.0",
+        "data-retention-standard": "2.0"
+      },
+      "required_fact_ids": [
+        "launch_owner",
+        "west_runbook",
+        "deletion_token"
+      ],
+      "expected_facts": [
+        "Product Operations",
+        "OPS-REC-W29",
+        "LEGAL-DEL-08"
+      ],
+      "expected_answer": "The launch owner is the Product Operations team. The west-region customer API recovery sequence uses runbook code OPS-REC-W29. The approved deletion workflow identifier is LEGAL-DEL-08.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "project-atlas-launch",
+        "recovery-runbook-west",
+        "data-retention-standard"
+      ],
+      "expected_versions": {
+        "project-atlas-launch": "1.0",
+        "recovery-runbook-west": "1.0",
+        "data-retention-standard": "2.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_31",
+      "category": "multidoc_three",
+      "question": "Nail the winch ticket with ATLAS-API-301, monthly 2026 remote-schedule checks, and the incident commander coordinating Engineering and Customer Support.",
+      "required_document_ids": [
+        "project-atlas-api",
+        "remote-work-policy",
+        "security-incident-policy"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "project-atlas-api": "3.0",
+        "remote-work-policy": "2026",
+        "security-incident-policy": "2026"
+      },
+      "required_fact_ids": [
+        "endpoint",
+        "remote_review",
+        "commander_coord"
+      ],
+      "expected_facts": [
+        "ATLAS-API-301",
+        "every month",
+        "incident commander coordinates"
+      ],
+      "expected_answer": "Project Atlas uses production endpoint identifier ATLAS-API-301. Managers review remote-work schedules every month. The incident commander coordinates Engineering and Customer Support during an active severity-one incident.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "project-atlas-api",
+        "remote-work-policy",
+        "security-incident-policy"
+      ],
+      "expected_versions": {
+        "project-atlas-api": "3.0",
+        "remote-work-policy": "2026",
+        "security-incident-policy": "2026"
+      },
+      "security_checks": [
+        "version"
+      ],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_32",
+      "category": "multidoc_three",
+      "question": "Cut the ballast chit with thirty-minute customer-status cadence, eu-central eastern spare, and FIN-TRAVEL-52.",
+      "required_document_ids": [
+        "customer-support-escalation",
+        "recovery-runbook-east",
+        "finance-expense-policy"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "customer-support-escalation": "3.2",
+        "recovery-runbook-east": "1.0",
+        "finance-expense-policy": "5.1"
+      },
+      "required_fact_ids": [
+        "status_cadence",
+        "east_standby",
+        "travel_code"
+      ],
+      "expected_facts": [
+        "every thirty minutes",
+        "eu-central",
+        "FIN-TRAVEL-52"
+      ],
+      "expected_answer": "Customer-facing status updates are published every thirty minutes until mitigation. East-region failover targets the eu-central standby cluster. The international travel approval code is FIN-TRAVEL-52.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "customer-support-escalation",
+        "recovery-runbook-east",
+        "finance-expense-policy"
+      ],
+      "expected_versions": {
+        "customer-support-escalation": "3.2",
+        "recovery-runbook-east": "1.0",
+        "finance-expense-policy": "5.1"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_33",
+      "category": "multidoc_three",
+      "question": "Mark the flax-house slip with Operations joining the Security incident commander, Tuesday-and-Thursday ship windows, and Atlas's April 12, 2026 introduction.",
+      "required_document_ids": [
+        "operations-continuity-plan",
+        "engineering-deployment-handbook",
+        "project-atlas-launch"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "operations-continuity-plan": "4.0",
+        "engineering-deployment-handbook": "2026.1",
+        "project-atlas-launch": "1.0"
+      },
+      "required_fact_ids": [
+        "join_sec",
+        "release_days",
+        "launch_date"
+      ],
+      "expected_facts": [
+        "incident commander",
+        "Tuesdays and Thursdays",
+        "April 12, 2026"
+      ],
+      "expected_answer": "Operations joins the Security incident commander when a severity-one incident affects customer availability. Routine production releases occur on Tuesdays and Thursdays. Project Atlas launched on April 12, 2026.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "operations-continuity-plan",
+        "engineering-deployment-handbook",
+        "project-atlas-launch"
+      ],
+      "expected_versions": {
+        "operations-continuity-plan": "4.0",
+        "engineering-deployment-handbook": "2026.1",
+        "project-atlas-launch": "1.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_34",
+      "category": "multidoc_three",
+      "question": "Score the cider-press tag with Platform Interfaces ownership, seven-year security-log archives, and us-east western spare.",
+      "required_document_ids": [
+        "project-atlas-api",
+        "data-retention-standard",
+        "recovery-runbook-west"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "project-atlas-api": "3.0",
+        "data-retention-standard": "2.0",
+        "recovery-runbook-west": "1.0"
+      },
+      "required_fact_ids": [
+        "api_owner",
+        "log_retention",
+        "west_standby"
+      ],
+      "expected_facts": [
+        "Platform Interfaces",
+        "seven years",
+        "us-east"
+      ],
+      "expected_answer": "The Atlas API is maintained by the Platform Interfaces team. Security audit logs are retained for seven years. West-region failover targets the us-east standby cluster.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "project-atlas-api",
+        "data-retention-standard",
+        "recovery-runbook-west"
+      ],
+      "expected_versions": {
+        "project-atlas-api": "3.0",
+        "data-retention-standard": "2.0",
+        "recovery-runbook-west": "1.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_35",
+      "category": "multidoc_three",
+      "question": "Hang the ropewalk docket with CS-1842, ENG-DEP-17, and SEC-TRAIN-44.",
+      "required_document_ids": [
+        "customer-support-escalation",
+        "engineering-deployment-handbook",
+        "security-training-example"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "customer-support-escalation": "3.2",
+        "engineering-deployment-handbook": "2026.1",
+        "security-training-example": "1"
+      },
+      "required_fact_ids": [
+        "queue_token",
+        "deploy_token",
+        "training_id"
+      ],
+      "expected_facts": [
+        "CS-1842",
+        "ENG-DEP-17",
+        "SEC-TRAIN-44"
+      ],
+      "expected_answer": "The exact escalation queue identifier for a priority-one customer outage is CS-1842. The production deployment approval identifier is ENG-DEP-17. The training reference identifier is SEC-TRAIN-44.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "customer-support-escalation",
+        "engineering-deployment-handbook",
+        "security-training-example"
+      ],
+      "expected_versions": {
+        "customer-support-escalation": "3.2",
+        "engineering-deployment-handbook": "2026.1",
+        "security-training-example": "1"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_three_36",
+      "category": "multidoc_three",
+      "question": "Pin the ice-floe card with twenty-four-month ticket archives, receipts above 25 euros, and eu-west opening geography.",
+      "required_document_ids": [
+        "data-retention-standard",
+        "finance-expense-policy",
+        "project-atlas-launch"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "data-retention-standard": "2.0",
+        "finance-expense-policy": "5.1",
+        "project-atlas-launch": "1.0"
+      },
+      "required_fact_ids": [
+        "ticket_retention",
+        "receipt_threshold",
+        "launch_region"
+      ],
+      "expected_facts": [
+        "twenty-four months",
+        "25 euros",
+        "eu-west"
+      ],
+      "expected_answer": "Customer support tickets are retained for twenty-four months. Receipts are required for expenses above 25 euros. The initial customer region for Project Atlas is eu-west.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "data-retention-standard",
+        "finance-expense-policy",
+        "project-atlas-launch"
+      ],
+      "expected_versions": {
+        "data-retention-standard": "2.0",
+        "finance-expense-policy": "5.1",
+        "project-atlas-launch": "1.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_two_01",
+      "category": "multidoc_two",
+      "question": "On the vinegar-vat slip, pair receipts above 25 euros with FIN-TRAVEL-52 and the four-hour live-interface RTO.",
+      "required_document_ids": [
+        "finance-expense-policy",
+        "operations-continuity-plan"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "finance-expense-policy": "5.1",
+        "operations-continuity-plan": "4.0"
+      },
+      "required_fact_ids": [
+        "receipt_threshold",
+        "travel_code",
+        "rto"
+      ],
+      "expected_facts": [
+        "25 euros",
+        "FIN-TRAVEL-52",
+        "four hours"
+      ],
+      "expected_answer": "Receipts are required for expenses above 25 euros. The international travel approval code is FIN-TRAVEL-52. The recovery time objective for the customer API is four hours.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "finance-expense-policy",
+        "operations-continuity-plan"
+      ],
+      "expected_versions": {
+        "finance-expense-policy": "5.1",
+        "operations-continuity-plan": "4.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": true,
+      "required_chunk_markers": [
+        "25 euros",
+        "FIN-TRAVEL-52"
+      ]
+    },
+    {
+      "case_id": "vdv_two_02",
+      "category": "multidoc_two",
+      "question": "Across the peat-shed folio, combine twenty-four-month ticket archives, LEGAL-DEL-08, and CS-1842.",
+      "required_document_ids": [
+        "data-retention-standard",
+        "customer-support-escalation"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "data-retention-standard": "2.0",
+        "customer-support-escalation": "3.2"
+      },
+      "required_fact_ids": [
+        "ticket_retention",
+        "deletion_token",
+        "queue_token"
+      ],
+      "expected_facts": [
+        "twenty-four months",
+        "LEGAL-DEL-08",
+        "CS-1842"
+      ],
+      "expected_answer": "Customer support tickets are retained for twenty-four months. The approved deletion workflow identifier is LEGAL-DEL-08. The exact escalation queue identifier for a priority-one customer outage is CS-1842.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "data-retention-standard",
+        "customer-support-escalation"
+      ],
+      "expected_versions": {
+        "data-retention-standard": "2.0",
+        "customer-support-escalation": "3.2"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": true,
+      "required_chunk_markers": [
+        "twenty-four months",
+        "LEGAL-DEL-08"
+      ]
+    },
+    {
+      "case_id": "vdv_two_03",
+      "category": "multidoc_two",
+      "question": "On the cider-house slate, join ATLAS-API-301, Platform Interfaces ownership, and OPS-REC-E17.",
+      "required_document_ids": [
+        "project-atlas-api",
+        "recovery-runbook-east"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "project-atlas-api": "3.0",
+        "recovery-runbook-east": "1.0"
+      },
+      "required_fact_ids": [
+        "endpoint",
+        "api_owner",
+        "east_runbook"
+      ],
+      "expected_facts": [
+        "ATLAS-API-301",
+        "Platform Interfaces",
+        "OPS-REC-E17"
+      ],
+      "expected_answer": "Project Atlas uses production endpoint identifier ATLAS-API-301. The Atlas API is maintained by the Platform Interfaces team. The east-region customer API recovery sequence uses runbook code OPS-REC-E17.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "project-atlas-api",
+        "recovery-runbook-east"
+      ],
+      "expected_versions": {
+        "project-atlas-api": "3.0",
+        "recovery-runbook-east": "1.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": true,
+      "required_chunk_markers": [
+        "ATLAS-API-301",
+        "Platform Interfaces"
+      ]
+    },
+    {
+      "case_id": "vdv_two_04",
+      "category": "multidoc_two",
+      "question": "Stamp the oyster-bed ticket with Atlas's mid-April 2026 opening day plus approval mark ENG-DEP-17.",
+      "required_document_ids": [
+        "project-atlas-launch",
+        "engineering-deployment-handbook"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "project-atlas-launch": "1.0",
+        "engineering-deployment-handbook": "2026.1"
+      },
+      "required_fact_ids": [
+        "launch_date",
+        "deploy_token"
+      ],
+      "expected_facts": [
+        "April 12, 2026",
+        "ENG-DEP-17"
+      ],
+      "expected_answer": "Project Atlas launched on April 12, 2026. The production deployment approval identifier is ENG-DEP-17.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "project-atlas-launch",
+        "engineering-deployment-handbook"
+      ],
+      "expected_versions": {
+        "project-atlas-launch": "1.0",
+        "engineering-deployment-handbook": "2026.1"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_two_05",
+      "category": "multidoc_two",
+      "question": "Wire the kelp-dryer stub with fifteen-minute severity-one paging and the two-day 2026 remote allowance.",
+      "required_document_ids": [
+        "security-incident-policy",
+        "remote-work-policy"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "security-incident-policy": "2026",
+        "remote-work-policy": "2026"
+      },
+      "required_fact_ids": [
+        "sev1_notice",
+        "remote_allowance"
+      ],
+      "expected_facts": [
+        "15 minutes",
+        "two days per week"
+      ],
+      "expected_answer": "Suspected severity-one incidents must be reported to the security duty officer within 15 minutes of discovery. Employees may work remotely two days per week.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "security-incident-policy",
+        "remote-work-policy"
+      ],
+      "expected_versions": {
+        "security-incident-policy": "2026",
+        "remote-work-policy": "2026"
+      },
+      "security_checks": [
+        "version"
+      ],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_two_06",
+      "category": "multidoc_two",
+      "question": "Pin the herring-crate card with OPS-REC-W29 and seven-year security-log archives.",
+      "required_document_ids": [
+        "recovery-runbook-west",
+        "data-retention-standard"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "recovery-runbook-west": "1.0",
+        "data-retention-standard": "2.0"
+      },
+      "required_fact_ids": [
+        "west_runbook",
+        "log_retention"
+      ],
+      "expected_facts": [
+        "OPS-REC-W29",
+        "seven years"
+      ],
+      "expected_answer": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29. Security audit logs are retained for seven years.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "recovery-runbook-west",
+        "data-retention-standard"
+      ],
+      "expected_versions": {
+        "recovery-runbook-west": "1.0",
+        "data-retention-standard": "2.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_two_07",
+      "category": "multidoc_two",
+      "question": "Hang the flax-comb docket with Product Operations launch custody plus the half-hour public-status drumbeat.",
+      "required_document_ids": [
+        "project-atlas-launch",
+        "customer-support-escalation"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "project-atlas-launch": "1.0",
+        "customer-support-escalation": "3.2"
+      },
+      "required_fact_ids": [
+        "launch_owner",
+        "status_cadence"
+      ],
+      "expected_facts": [
+        "Product Operations",
+        "every thirty minutes"
+      ],
+      "expected_answer": "The launch owner is the Product Operations team. Customer-facing status updates are published every thirty minutes until mitigation.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "project-atlas-launch",
+        "customer-support-escalation"
+      ],
+      "expected_versions": {
+        "project-atlas-launch": "1.0",
+        "customer-support-escalation": "3.2"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_two_08",
+      "category": "multidoc_two",
+      "question": "Clip the resin-pot tally with midweek production sailing days plus FIN-TRAVEL-52.",
+      "required_document_ids": [
+        "engineering-deployment-handbook",
+        "finance-expense-policy"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "engineering-deployment-handbook": "2026.1",
+        "finance-expense-policy": "5.1"
+      },
+      "required_fact_ids": [
+        "release_days",
+        "travel_code"
+      ],
+      "expected_facts": [
+        "Tuesdays and Thursdays",
+        "FIN-TRAVEL-52"
+      ],
+      "expected_answer": "Routine production releases occur on Tuesdays and Thursdays. The international travel approval code is FIN-TRAVEL-52.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "engineering-deployment-handbook",
+        "finance-expense-policy"
+      ],
+      "expected_versions": {
+        "engineering-deployment-handbook": "2026.1",
+        "finance-expense-policy": "5.1"
+      },
+      "security_checks": [
+        "version"
+      ],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_two_09",
+      "category": "multidoc_two",
+      "question": "Score the lime-kiln pass with eu-central eastern spare and Atlas API version v3.",
+      "required_document_ids": [
+        "recovery-runbook-east",
+        "project-atlas-api"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "recovery-runbook-east": "1.0",
+        "project-atlas-api": "3.0"
+      },
+      "required_fact_ids": [
+        "east_standby",
+        "api_version"
+      ],
+      "expected_facts": [
+        "eu-central",
+        "v3"
+      ],
+      "expected_answer": "East-region failover targets the eu-central standby cluster. Project Atlas uses API version v3.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "recovery-runbook-east",
+        "project-atlas-api"
+      ],
+      "expected_versions": {
+        "recovery-runbook-east": "1.0",
+        "project-atlas-api": "3.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_two_10",
+      "category": "multidoc_two",
+      "question": "Brand the tar-brush chit with monthly 2026 remote-schedule checks and LEGAL-DEL-08.",
+      "required_document_ids": [
+        "remote-work-policy",
+        "data-retention-standard"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "remote-work-policy": "2026",
+        "data-retention-standard": "2.0"
+      },
+      "required_fact_ids": [
+        "remote_review",
+        "deletion_token"
+      ],
+      "expected_facts": [
+        "every month",
+        "LEGAL-DEL-08"
+      ],
+      "expected_answer": "Managers review remote-work schedules every month. The approved deletion workflow identifier is LEGAL-DEL-08.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "remote-work-policy",
+        "data-retention-standard"
+      ],
+      "expected_versions": {
+        "remote-work-policy": "2026",
+        "data-retention-standard": "2.0"
+      },
+      "security_checks": [
+        "version"
+      ],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_two_11",
+      "category": "multidoc_two",
+      "question": "Ink the coble-tag with the incident commander coordinating Engineering and Customer Support and CS-1842.",
+      "required_document_ids": [
+        "security-incident-policy",
+        "customer-support-escalation"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "security-incident-policy": "2026",
+        "customer-support-escalation": "3.2"
+      },
+      "required_fact_ids": [
+        "commander_coord",
+        "queue_token"
+      ],
+      "expected_facts": [
+        "incident commander coordinates",
+        "CS-1842"
+      ],
+      "expected_answer": "The incident commander coordinates Engineering and Customer Support during an active severity-one incident. The exact escalation queue identifier for a priority-one customer outage is CS-1842.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "security-incident-policy",
+        "customer-support-escalation"
+      ],
+      "expected_versions": {
+        "security-incident-policy": "2026",
+        "customer-support-escalation": "3.2"
+      },
+      "security_checks": [
+        "version"
+      ],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_two_12",
+      "category": "multidoc_two",
+      "question": "Mark the ballast-stone slip with ten-business-day expense filing and us-east western spare.",
+      "required_document_ids": [
+        "finance-expense-policy",
+        "recovery-runbook-west"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "finance-expense-policy": "5.1",
+        "recovery-runbook-west": "1.0"
+      },
+      "required_fact_ids": [
+        "expense_due",
+        "west_standby"
+      ],
+      "expected_facts": [
+        "ten business days",
+        "us-east"
+      ],
+      "expected_answer": "Expense reports are due within ten business days. West-region failover targets the us-east standby cluster.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "finance-expense-policy",
+        "recovery-runbook-west"
+      ],
+      "expected_versions": {
+        "finance-expense-policy": "5.1",
+        "recovery-runbook-west": "1.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_two_13",
+      "category": "multidoc_two",
+      "question": "Paint the sail-loft card with four-hour live-interface RTO and ATLAS-API-301.",
+      "required_document_ids": [
+        "operations-continuity-plan",
+        "project-atlas-api"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "operations-continuity-plan": "4.0",
+        "project-atlas-api": "3.0"
+      },
+      "required_fact_ids": [
+        "rto",
+        "endpoint"
+      ],
+      "expected_facts": [
+        "four hours",
+        "ATLAS-API-301"
+      ],
+      "expected_answer": "The recovery time objective for the customer API is four hours. Project Atlas uses production endpoint identifier ATLAS-API-301.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "operations-continuity-plan",
+        "project-atlas-api"
+      ],
+      "expected_versions": {
+        "operations-continuity-plan": "4.0",
+        "project-atlas-api": "3.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_two_14",
+      "category": "multidoc_two",
+      "question": "Bind the peat-brick ticket with first-Wednesday eastern drills and SEC-TRAIN-44.",
+      "required_document_ids": [
+        "recovery-runbook-east",
+        "security-training-example"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "recovery-runbook-east": "1.0",
+        "security-training-example": "1"
+      },
+      "required_fact_ids": [
+        "east_drill",
+        "training_id"
+      ],
+      "expected_facts": [
+        "first Wednesday",
+        "SEC-TRAIN-44"
+      ],
+      "expected_answer": "The recovery drill runs on the first Wednesday of each quarter. The training reference identifier is SEC-TRAIN-44.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "recovery-runbook-east",
+        "security-training-example"
+      ],
+      "expected_versions": {
+        "recovery-runbook-east": "1.0",
+        "security-training-example": "1"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_one_01",
+      "category": "single_document",
+      "question": "On the maple-press slate, copy both the live interface RTO of four hours and Operations joining the Security incident commander.",
+      "required_document_ids": [
+        "operations-continuity-plan"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "operations-continuity-plan": "4.0"
+      },
+      "required_fact_ids": [
+        "rto",
+        "join_sec"
+      ],
+      "expected_facts": [
+        "four hours",
+        "incident commander"
+      ],
+      "expected_answer": "The recovery time objective for the customer API is four hours. Operations joins the Security incident commander when a severity-one incident affects customer availability.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "operations-continuity-plan"
+      ],
+      "expected_versions": {
+        "operations-continuity-plan": "4.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": true,
+      "required_chunk_markers": [
+        "four hours",
+        "Security incident commander"
+      ]
+    },
+    {
+      "case_id": "vdv_one_02",
+      "category": "single_document",
+      "question": "Across the oak-vat folio, copy both twenty-four-month ticket archives and LEGAL-DEL-08.",
+      "required_document_ids": [
+        "data-retention-standard"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "data-retention-standard": "2.0"
+      },
+      "required_fact_ids": [
+        "ticket_retention",
+        "deletion_token"
+      ],
+      "expected_facts": [
+        "twenty-four months",
+        "LEGAL-DEL-08"
+      ],
+      "expected_answer": "Customer support tickets are retained for twenty-four months. The approved deletion workflow identifier is LEGAL-DEL-08.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "data-retention-standard"
+      ],
+      "expected_versions": {
+        "data-retention-standard": "2.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": true,
+      "required_chunk_markers": [
+        "twenty-four months",
+        "LEGAL-DEL-08"
+      ]
+    },
+    {
+      "case_id": "vdv_one_03",
+      "category": "single_document",
+      "question": "On the walnut-jig chalkboard, copy both receipts above 25 euros and FIN-TRAVEL-52.",
+      "required_document_ids": [
+        "finance-expense-policy"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "finance-expense-policy": "5.1"
+      },
+      "required_fact_ids": [
+        "receipt_threshold",
+        "travel_code"
+      ],
+      "expected_facts": [
+        "25 euros",
+        "FIN-TRAVEL-52"
+      ],
+      "expected_answer": "Receipts are required for expenses above 25 euros. The international travel approval code is FIN-TRAVEL-52.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "finance-expense-policy"
+      ],
+      "expected_versions": {
+        "finance-expense-policy": "5.1"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": true,
+      "required_chunk_markers": [
+        "25 euros",
+        "FIN-TRAVEL-52"
+      ]
+    },
+    {
+      "case_id": "vdv_one_04",
+      "category": "single_document",
+      "question": "Stamp the cedar-frame ticket with both ATLAS-API-301 and Platform Interfaces ownership.",
+      "required_document_ids": [
+        "project-atlas-api"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "project-atlas-api": "3.0"
+      },
+      "required_fact_ids": [
+        "endpoint",
+        "api_owner"
+      ],
+      "expected_facts": [
+        "ATLAS-API-301",
+        "Platform Interfaces"
+      ],
+      "expected_answer": "Project Atlas uses production endpoint identifier ATLAS-API-301. The Atlas API is maintained by the Platform Interfaces team.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "project-atlas-api"
+      ],
+      "expected_versions": {
+        "project-atlas-api": "3.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": true,
+      "required_chunk_markers": [
+        "ATLAS-API-301",
+        "Platform Interfaces"
+      ]
+    },
+    {
+      "case_id": "vdv_one_05",
+      "category": "single_document",
+      "question": "Wire the beech-lathe stub with Atlas's April 12, 2026 introduction date.",
+      "required_document_ids": [
+        "project-atlas-launch"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "project-atlas-launch": "1.0"
+      },
+      "required_fact_ids": [
+        "launch_date"
+      ],
+      "expected_facts": [
+        "April 12, 2026"
+      ],
+      "expected_answer": "Project Atlas launched on April 12, 2026.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "project-atlas-launch"
+      ],
+      "expected_versions": {
+        "project-atlas-launch": "1.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_one_06",
+      "category": "single_document",
+      "question": "Pin the ash-spoke card with the ENG-DEP-17 release token.",
+      "required_document_ids": [
+        "engineering-deployment-handbook"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "engineering-deployment-handbook": "2026.1"
+      },
+      "required_fact_ids": [
+        "deploy_token"
+      ],
+      "expected_facts": [
+        "ENG-DEP-17"
+      ],
+      "expected_answer": "The production deployment approval identifier is ENG-DEP-17.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "engineering-deployment-handbook"
+      ],
+      "expected_versions": {
+        "engineering-deployment-handbook": "2026.1"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_one_07",
+      "category": "single_document",
+      "question": "Hang the elm-yoke docket with CS-1842.",
+      "required_document_ids": [
+        "customer-support-escalation"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "customer-support-escalation": "3.2"
+      },
+      "required_fact_ids": [
+        "queue_token"
+      ],
+      "expected_facts": [
+        "CS-1842"
+      ],
+      "expected_answer": "The exact escalation queue identifier for a priority-one customer outage is CS-1842.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "customer-support-escalation"
+      ],
+      "expected_versions": {
+        "customer-support-escalation": "3.2"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_one_08",
+      "category": "single_document",
+      "question": "Clip the pine-cleat tally with SEC-TRAIN-44.",
+      "required_document_ids": [
+        "security-training-example"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "security-training-example": "1"
+      },
+      "required_fact_ids": [
+        "training_id"
+      ],
+      "expected_facts": [
+        "SEC-TRAIN-44"
+      ],
+      "expected_answer": "The training reference identifier is SEC-TRAIN-44.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "security-training-example"
+      ],
+      "expected_versions": {
+        "security-training-example": "1"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_dup_01",
+      "category": "near_duplicate",
+      "question": "On the eastern spar-yard slate, copy only OPS-REC-E17, ignoring any western twin sequence.",
+      "required_document_ids": [
+        "recovery-runbook-east"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "recovery-runbook-east": "1.0"
+      },
+      "required_fact_ids": [
+        "east_runbook"
+      ],
+      "expected_facts": [
+        "OPS-REC-E17"
+      ],
+      "expected_answer": "The east-region customer API recovery sequence uses runbook code OPS-REC-E17.",
+      "forbidden_document_ids": [
+        "recovery-runbook-west"
+      ],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "recovery-runbook-east"
+      ],
+      "expected_versions": {
+        "recovery-runbook-east": "1.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_dup_02",
+      "category": "near_duplicate",
+      "question": "Across the western spar-yard folio, copy only OPS-REC-W29, ignoring any eastern twin sequence.",
+      "required_document_ids": [
+        "recovery-runbook-west"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "recovery-runbook-west": "1.0"
+      },
+      "required_fact_ids": [
+        "west_runbook"
+      ],
+      "expected_facts": [
+        "OPS-REC-W29"
+      ],
+      "expected_answer": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29.",
+      "forbidden_document_ids": [
+        "recovery-runbook-east"
+      ],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "recovery-runbook-west"
+      ],
+      "expected_versions": {
+        "recovery-runbook-west": "1.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_dup_03",
+      "category": "near_duplicate",
+      "question": "On the eastern spare-cluster chalkboard, name only the eu-central destination, not the western twin spare.",
+      "required_document_ids": [
+        "recovery-runbook-east"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "recovery-runbook-east": "1.0"
+      },
+      "required_fact_ids": [
+        "east_standby"
+      ],
+      "expected_facts": [
+        "eu-central"
+      ],
+      "expected_answer": "East-region failover targets the eu-central standby cluster.",
+      "forbidden_document_ids": [
+        "recovery-runbook-west"
+      ],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "recovery-runbook-east"
+      ],
+      "expected_versions": {
+        "recovery-runbook-east": "1.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_dup_04",
+      "category": "near_duplicate",
+      "question": "Stamp the western spare-cluster ticket with only the us-east destination, not the eastern twin spare.",
+      "required_document_ids": [
+        "recovery-runbook-west"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "recovery-runbook-west": "1.0"
+      },
+      "required_fact_ids": [
+        "west_standby"
+      ],
+      "expected_facts": [
+        "us-east"
+      ],
+      "expected_answer": "West-region failover targets the us-east standby cluster.",
+      "forbidden_document_ids": [
+        "recovery-runbook-east"
+      ],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "recovery-runbook-west"
+      ],
+      "expected_versions": {
+        "recovery-runbook-west": "1.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_dup_05",
+      "category": "near_duplicate",
+      "question": "Wire the eastern drill-calendar stub with only the first-Wednesday cadence, not the western twin drill.",
+      "required_document_ids": [
+        "recovery-runbook-east"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "recovery-runbook-east": "1.0"
+      },
+      "required_fact_ids": [
+        "east_drill"
+      ],
+      "expected_facts": [
+        "first Wednesday"
+      ],
+      "expected_answer": "The recovery drill runs on the first Wednesday of each quarter.",
+      "forbidden_document_ids": [
+        "recovery-runbook-west"
+      ],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "recovery-runbook-east"
+      ],
+      "expected_versions": {
+        "recovery-runbook-east": "1.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_dup_06",
+      "category": "near_duplicate",
+      "question": "Pin the western drill-calendar card with only the second-Wednesday cadence, not the eastern twin drill.",
+      "required_document_ids": [
+        "recovery-runbook-west"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "recovery-runbook-west": "1.0"
+      },
+      "required_fact_ids": [
+        "west_drill"
+      ],
+      "expected_facts": [
+        "second Wednesday"
+      ],
+      "expected_answer": "The recovery drill runs on the second Wednesday of each quarter.",
+      "forbidden_document_ids": [
+        "recovery-runbook-east"
+      ],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "recovery-runbook-west"
+      ],
+      "expected_versions": {
+        "recovery-runbook-west": "1.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_id_01",
+      "category": "exact_identifier",
+      "question": "From the brass-token drawer, copy the literal CS-1842 queue mark.",
+      "required_document_ids": [
+        "customer-support-escalation"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "customer-support-escalation": "3.2"
+      },
+      "required_fact_ids": [
+        "queue_token"
+      ],
+      "expected_facts": [
+        "CS-1842"
+      ],
+      "expected_answer": "The exact escalation queue identifier for a priority-one customer outage is CS-1842.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "customer-support-escalation"
+      ],
+      "expected_versions": {
+        "customer-support-escalation": "3.2"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_id_02",
+      "category": "exact_identifier",
+      "question": "From the iron-token drawer, copy the literal ENG-DEP-17 approval mark.",
+      "required_document_ids": [
+        "engineering-deployment-handbook"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "engineering-deployment-handbook": "2026.1"
+      },
+      "required_fact_ids": [
+        "deploy_token"
+      ],
+      "expected_facts": [
+        "ENG-DEP-17"
+      ],
+      "expected_answer": "The production deployment approval identifier is ENG-DEP-17.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "engineering-deployment-handbook"
+      ],
+      "expected_versions": {
+        "engineering-deployment-handbook": "2026.1"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_id_03",
+      "category": "exact_identifier",
+      "question": "From the copper-token drawer, copy the literal ATLAS-API-301 endpoint mark.",
+      "required_document_ids": [
+        "project-atlas-api"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "project-atlas-api": "3.0"
+      },
+      "required_fact_ids": [
+        "endpoint"
+      ],
+      "expected_facts": [
+        "ATLAS-API-301"
+      ],
+      "expected_answer": "Project Atlas uses production endpoint identifier ATLAS-API-301.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "project-atlas-api"
+      ],
+      "expected_versions": {
+        "project-atlas-api": "3.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_id_04",
+      "category": "exact_identifier",
+      "question": "From the pewter-token drawer, copy the literal LEGAL-DEL-08 erasure mark.",
+      "required_document_ids": [
+        "data-retention-standard"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "data-retention-standard": "2.0"
+      },
+      "required_fact_ids": [
+        "deletion_token"
+      ],
+      "expected_facts": [
+        "LEGAL-DEL-08"
+      ],
+      "expected_answer": "The approved deletion workflow identifier is LEGAL-DEL-08.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "data-retention-standard"
+      ],
+      "expected_versions": {
+        "data-retention-standard": "2.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_ver_01",
+      "category": "version_region",
+      "question": "Reading only the active 2026 people-ops pamphlet, count the permitted offsite weekdays.",
+      "required_document_ids": [
+        "remote-work-policy"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "remote-work-policy": "2026"
+      },
+      "required_fact_ids": [
+        "remote_allowance"
+      ],
+      "expected_facts": [
+        "two days per week"
+      ],
+      "expected_answer": "Employees may work remotely two days per week.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "remote-work-policy"
+      ],
+      "expected_versions": {
+        "remote-work-policy": "2026"
+      },
+      "security_checks": [
+        "version"
+      ],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_ver_02",
+      "category": "version_region",
+      "question": "Reading only the active 2026 people-ops pamphlet, name the manager cadence for inspecting offsite rotas.",
+      "required_document_ids": [
+        "remote-work-policy"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "remote-work-policy": "2026"
+      },
+      "required_fact_ids": [
+        "remote_review"
+      ],
+      "expected_facts": [
+        "every month"
+      ],
+      "expected_answer": "Managers review remote-work schedules every month.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "remote-work-policy"
+      ],
+      "expected_versions": {
+        "remote-work-policy": "2026"
+      },
+      "security_checks": [
+        "version"
+      ],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_ver_03",
+      "category": "version_region",
+      "question": "Reading only the active 2026 incident pamphlet, give the paging deadline after a severity-one suspicion.",
+      "required_document_ids": [
+        "security-incident-policy"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "security-incident-policy": "2026"
+      },
+      "required_fact_ids": [
+        "sev1_notice"
+      ],
+      "expected_facts": [
+        "15 minutes"
+      ],
+      "expected_answer": "Suspected severity-one incidents must be reported to the security duty officer within 15 minutes of discovery.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "security-incident-policy"
+      ],
+      "expected_versions": {
+        "security-incident-policy": "2026"
+      },
+      "security_checks": [
+        "version"
+      ],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_ver_04",
+      "category": "version_region",
+      "question": "Reading only the active 2026 incident pamphlet, name the two groups the commander must assemble.",
+      "required_document_ids": [
+        "security-incident-policy"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "security-incident-policy": "2026"
+      },
+      "required_fact_ids": [
+        "commander_coord"
+      ],
+      "expected_facts": [
+        "Engineering and Customer Support"
+      ],
+      "expected_answer": "The incident commander coordinates Engineering and Customer Support during an active severity-one incident.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "security-incident-policy"
+      ],
+      "expected_versions": {
+        "security-incident-policy": "2026"
+      },
+      "security_checks": [
+        "version"
+      ],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_sem_01",
+      "category": "semantic_paraphrase",
+      "question": "In plain speech, who keeps Atlas's live contract, without quoting a department slogan?",
+      "required_document_ids": [
+        "project-atlas-api"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "project-atlas-api": "3.0"
+      },
+      "required_fact_ids": [
+        "api_owner"
+      ],
+      "expected_facts": [
+        "Platform Interfaces"
+      ],
+      "expected_answer": "The Atlas API is maintained by the Platform Interfaces team.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "project-atlas-api"
+      ],
+      "expected_versions": {
+        "project-atlas-api": "3.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_sem_02",
+      "category": "semantic_paraphrase",
+      "question": "In plain speech, which product group shepherded Atlas's public opening?",
+      "required_document_ids": [
+        "project-atlas-launch"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "project-atlas-launch": "1.0"
+      },
+      "required_fact_ids": [
+        "launch_owner"
+      ],
+      "expected_facts": [
+        "Product Operations"
+      ],
+      "expected_answer": "The launch owner is the Product Operations team.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "project-atlas-launch"
+      ],
+      "expected_versions": {
+        "project-atlas-launch": "1.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_sem_03",
+      "category": "semantic_paraphrase",
+      "question": "In plain speech, how long may support tickets linger in archive before they are dropped?",
+      "required_document_ids": [
+        "data-retention-standard"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "data-retention-standard": "2.0"
+      },
+      "required_fact_ids": [
+        "ticket_retention"
+      ],
+      "expected_facts": [
+        "twenty-four months"
+      ],
+      "expected_answer": "Customer support tickets are retained for twenty-four months.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "data-retention-standard"
+      ],
+      "expected_versions": {
+        "data-retention-standard": "2.0"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_sem_04",
+      "category": "semantic_paraphrase",
+      "question": "In plain speech, what weekday pair is reserved for ordinary production ship windows?",
+      "required_document_ids": [
+        "engineering-deployment-handbook"
+      ],
+      "required_chunk_ids": [],
+      "required_version_ids": {
+        "engineering-deployment-handbook": "2026.1"
+      },
+      "required_fact_ids": [
+        "release_days"
+      ],
+      "expected_facts": [
+        "Tuesdays and Thursdays"
+      ],
+      "expected_answer": "Routine production releases occur on Tuesdays and Thursdays.",
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_REQUIRED",
+      "expected_answerability": true,
+      "should_abstain": false,
+      "expected_document_ids": [
+        "engineering-deployment-handbook"
+      ],
+      "expected_versions": {
+        "engineering-deployment-handbook": "2026.1"
+      },
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_acl_01",
+      "category": "acl_sensitive",
+      "question": "As a rank-and-file employee without HR leadership rights, retrieve the confidential HR-COMP-900 compensation cipher.",
+      "required_document_ids": [],
+      "required_chunk_ids": [],
+      "required_version_ids": {},
+      "required_fact_ids": [],
+      "expected_facts": [],
+      "expected_answer": null,
+      "forbidden_document_ids": [
+        "hr-compensation-bands"
+      ],
+      "expected_access_behavior": "EXCLUDE_FORBIDDEN",
+      "expected_answerability": false,
+      "should_abstain": true,
+      "expected_document_ids": [],
+      "expected_versions": {},
+      "security_checks": [
+        "acl"
+      ],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": [],
+      "principal": {
+        "principal_id": "vdv-acl-01",
+        "tenant_id": "acmeai",
+        "permission_groups": [
+          "employees"
+        ]
+      }
+    },
+    {
+      "case_id": "vdv_acl_02",
+      "category": "acl_sensitive",
+      "question": "As a rank-and-file employee without HR leadership rights, retrieve the confidential HR-BEN-771 benefits cipher.",
+      "required_document_ids": [],
+      "required_chunk_ids": [],
+      "required_version_ids": {},
+      "required_fact_ids": [],
+      "expected_facts": [],
+      "expected_answer": null,
+      "forbidden_document_ids": [
+        "hr-benefits-private"
+      ],
+      "expected_access_behavior": "EXCLUDE_FORBIDDEN",
+      "expected_answerability": false,
+      "should_abstain": true,
+      "expected_document_ids": [],
+      "expected_versions": {},
+      "security_checks": [
+        "acl"
+      ],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": [],
+      "principal": {
+        "principal_id": "vdv-acl-02",
+        "tenant_id": "acmeai",
+        "permission_groups": [
+          "employees"
+        ]
+      }
+    },
+    {
+      "case_id": "vdv_none_01",
+      "category": "partial_no_answer",
+      "question": "Quote the unpublished Antarctic dirigible loft restoration budget and its crate serial.",
+      "required_document_ids": [],
+      "required_chunk_ids": [],
+      "required_version_ids": {},
+      "required_fact_ids": [],
+      "expected_facts": [],
+      "expected_answer": null,
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_PARTIAL",
+      "expected_answerability": false,
+      "should_abstain": true,
+      "expected_document_ids": [],
+      "expected_versions": {},
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    },
+    {
+      "case_id": "vdv_none_02",
+      "category": "partial_no_answer",
+      "question": "Name the Belgian payroll-tax percentage for 2026 lunar-shift contractors.",
+      "required_document_ids": [],
+      "required_chunk_ids": [],
+      "required_version_ids": {},
+      "required_fact_ids": [],
+      "expected_facts": [],
+      "expected_answer": null,
+      "forbidden_document_ids": [],
+      "expected_access_behavior": "ALLOW_PARTIAL",
+      "expected_answerability": false,
+      "should_abstain": true,
+      "expected_document_ids": [],
+      "expected_versions": {},
+      "security_checks": [],
+      "requires_multiple_chunks_same_document": false,
+      "required_chunk_markers": []
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+from rag_workbench.recovery.contracts import (
+    CANNOT_DRAFT,
+    CLAIM_VERIFIER_PROMPT_VERSION,
+    PRIMARY_JUDGE_STAGE,
+    RECOVERY_DRAFT_PROMPT_VERSION,
+    RECOVERY_DRAFT_STAGE,
+    STAGE_CLAIM_VERIFIER,
+    build_claim_verifier_messages,
+    build_recovery_draft_messages,
+    recovery_draft_schema_identity,
+    recovery_verifier_schema_identity,
+)
+from rag_workbench.recovery.runtime import (
+    CachedRecoveryStage,
+    HostedStructuredRecoveryClient,
+    RecoveryOutcome,
+    RecoveryPipeline,
+    evaluate_recovery,
+    recovery_cache_key,
+    verification_passes,
+)
+
+__all__ = [
+    "CANNOT_DRAFT",
+    "CLAIM_VERIFIER_PROMPT_VERSION",
+    "PRIMARY_JUDGE_STAGE",
+    "RECOVERY_DRAFT_PROMPT_VERSION",
+    "RECOVERY_DRAFT_STAGE",
+    "STAGE_CLAIM_VERIFIER",
+    "CachedRecoveryStage",
+    "HostedStructuredRecoveryClient",
+    "RecoveryOutcome",
+    "RecoveryPipeline",
+    "build_claim_verifier_messages",
+    "build_recovery_draft_messages",
+    "evaluate_recovery",
+    "recovery_cache_key",
+    "recovery_draft_schema_identity",
+    "recovery_verifier_schema_identity",
+    "verification_passes",
+]

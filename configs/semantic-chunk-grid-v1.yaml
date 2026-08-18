@@ -1,0 +1,11 @@
+base_config: semantic-embedding-v1.yaml
+# Controlled pairs avoid an unnecessary 4 x 4 Cartesian expansion.
+variants:
+  - {chunk_size: 300, chunk_overlap: 0}
+  - {chunk_size: 300, chunk_overlap: 50}
+  - {chunk_size: 500, chunk_overlap: 50}
+  - {chunk_size: 500, chunk_overlap: 100}
+  - {chunk_size: 800, chunk_overlap: 100}
+  - {chunk_size: 800, chunk_overlap: 200}
+  - {chunk_size: 1200, chunk_overlap: 100}
+  - {chunk_size: 1200, chunk_overlap: 200}

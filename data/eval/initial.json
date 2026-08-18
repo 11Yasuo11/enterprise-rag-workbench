@@ -1,0 +1,60 @@
+{
+  "dataset_version": "acmeai-initial-v1",
+  "cases": [
+    {
+      "case_id": "single-document-fact",
+      "question": "How often are customer-facing status updates published during an outage?",
+      "expected_answer": "Every thirty minutes.",
+      "expected_document_ids": ["customer-support-escalation"],
+      "expected_chunk_ids": [],
+      "should_abstain": false,
+      "category": "single_document"
+    },
+    {
+      "case_id": "multi-document",
+      "question": "What are the production deployment approval identifier and the priority-one support escalation queue identifier?",
+      "expected_answer": "ENG-DEP-17 and CS-1842.",
+      "expected_document_ids": ["engineering-deployment-handbook", "customer-support-escalation"],
+      "expected_chunk_ids": [],
+      "should_abstain": false,
+      "category": "multi_document"
+    },
+    {
+      "case_id": "current-version",
+      "question": "Under the current policy, how quickly must a severity-one incident be reported?",
+      "expected_answer": "Within 15 minutes.",
+      "expected_document_ids": ["security-incident-policy"],
+      "expected_chunk_ids": [],
+      "should_abstain": false,
+      "category": "versioning"
+    },
+    {
+      "case_id": "restricted-document",
+      "question": "What is the executive compensation review code?",
+      "expected_answer": null,
+      "expected_document_ids": [],
+      "expected_chunk_ids": [],
+      "should_abstain": true,
+      "category": "access_control",
+      "permission_groups": ["employees"]
+    },
+    {
+      "case_id": "no-answer",
+      "question": "Where is AcmeAI's lunar research office located?",
+      "expected_answer": null,
+      "expected_document_ids": [],
+      "expected_chunk_ids": [],
+      "should_abstain": true,
+      "category": "abstention"
+    },
+    {
+      "case_id": "exact-identifier",
+      "question": "What is the exact priority-one customer outage escalation queue identifier?",
+      "expected_answer": "CS-1842.",
+      "expected_document_ids": ["customer-support-escalation"],
+      "expected_chunk_ids": [],
+      "should_abstain": false,
+      "category": "exact_identifier"
+    }
+  ]
+}

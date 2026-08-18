@@ -1,0 +1,88 @@
+{
+  "suite_id": "v2-reliability-fixtures",
+  "suite_kind": "operational_reliability",
+  "not_a_quality_dataset": true,
+  "promotion_evidence": false,
+  "historical_source": "persisted-v1-final-eval-traces",
+  "historical_calls_retried": false,
+  "cases": [
+    {
+      "case_id": "fv1_ver_03",
+      "category": "version_region",
+      "operational_class": "GENERATOR_FAILURE",
+      "question": "Yard docket YD-55 asks for the 2026 manager cadence for inspecting offsite calendars, not the retired quarterly cadence.",
+      "expected_answer": "Managers review remote-work schedules every month.",
+      "expected_facts": ["every month"],
+      "judge_decision": {
+        "answerable": true,
+        "supporting_chunk_ids": ["49679d97-020f-4418-9430-4c296bc824b1"],
+        "confidence": 0.98,
+        "reason_code": "SUFFICIENT_EVIDENCE",
+        "requirements": []
+      },
+      "supporting_chunk_ids": ["49679d97-020f-4418-9430-4c296bc824b1"],
+      "validated_context": [
+        {
+          "chunk_id": "49679d97-020f-4418-9430-4c296bc824b1",
+          "document_id": "remote-work-policy",
+          "version": "2026",
+          "is_active": true,
+          "section": "Review",
+          "text": "Managers review remote-work schedules every month ."
+        }
+      ],
+      "retrieved_chunk_ids": [
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "49679d97-020f-4418-9430-4c296bc824b1",
+        "bd832158-c74b-4f03-8f53-60a2d30e69e8",
+        "826df8a1-5461-4515-95f7-1998a4d3c205",
+        "c91ee2ff-af75-461a-9372-0c562e46051d"
+      ],
+      "generation_context_chunk_ids": ["49679d97-020f-4418-9430-4c296bc824b1"],
+      "actual_generator_behavior": {
+        "provider": "local-extractive",
+        "model": "deterministic-extractive-v1",
+        "status": "abstained",
+        "answer": null,
+        "citations": [],
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "generation_latency_ms": 0.04020900814794004
+      },
+      "failure_classification": "GENERATION_FAILURE",
+      "answerability_operational_error": null
+    },
+    {
+      "case_id": "fv1_dup_05",
+      "category": "near_duplicate",
+      "operational_class": "PROVIDER_REQUEST_FAILURE",
+      "question": "Yard docket YD-63 must keep the east pamphlet and reject its western twin when copying the east pamphlet drill weekday.",
+      "expected_answer": "The east recovery drill runs on the first Wednesday of each quarter.",
+      "judge_decision": {
+        "answerable": false,
+        "supporting_chunk_ids": [],
+        "confidence": null,
+        "reason_code": "UNKNOWN",
+        "requirements": []
+      },
+      "supporting_chunk_ids": [],
+      "generation_context_chunk_ids": [],
+      "answerability_operational_error": "JUDGE_REQUEST_ERROR",
+      "persisted_provider_evidence": {
+        "gate_cache_operational_error": "JUDGE_REQUEST_ERROR",
+        "fail_closed_reason_code": "UNKNOWN",
+        "external_judge_calls": 1,
+        "gate_cache_hit": false,
+        "judge_latency_ms": 1450.0669590051984,
+        "context_pruning_latency_ms": 45194.552895001834,
+        "configured_timeout_seconds": 45.0,
+        "historical_timing_note": "context_pruning matched the 45s hosted timeout; stored judge_latency/tokens were leftover from the previous logical request because ExternalJudgeCallLimitGate did not copy last_timing on exception."
+      },
+      "actual_behavior": {
+        "status": "abstained",
+        "answer": null,
+        "fail_closed": true
+      }
+    }
+  ]
+}

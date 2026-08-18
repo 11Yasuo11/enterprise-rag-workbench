@@ -1,0 +1,11 @@
+# Project benchmark criteria, not production service-level objectives.
+thresholds:
+  - metric: recall_at_k
+    max_decrease: 0.05
+  - metric: abstention_f1
+    max_decrease: 0.05
+  - metric: security_success_rate
+    min_value: 1.0
+    security_critical: true
+  - metric: version_accuracy
+    min_value: 1.0

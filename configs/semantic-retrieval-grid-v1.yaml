@@ -1,0 +1,5 @@
+base_config: semantic-embedding-v1.yaml
+# Execute only after choosing a promising semantic ingestion/index configuration.
+grid:
+  top_k: [3, 5, 8, 10]
+  score_threshold: [0.1, 0.2, 0.3, 0.4]

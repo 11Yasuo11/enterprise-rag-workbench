@@ -1,0 +1,28 @@
+base_config: semantic-embedding-v1.yaml
+variants:
+  - name: semantic-threshold-020
+    score_threshold: 0.20
+  - name: semantic-threshold-025
+    score_threshold: 0.25
+  - name: semantic-threshold-0287598
+    score_threshold: 0.287598
+  - name: semantic-threshold-030
+    score_threshold: 0.30
+  - name: semantic-threshold-0336398
+    score_threshold: 0.336398
+  - name: semantic-threshold-035
+    score_threshold: 0.35
+  - name: semantic-threshold-0350269
+    score_threshold: 0.350269
+  - name: semantic-threshold-040
+    score_threshold: 0.40
+  - name: semantic-threshold-045
+    score_threshold: 0.45
+  - name: semantic-threshold-050
+    score_threshold: 0.50
+  - name: semantic-threshold-0501983
+    score_threshold: 0.501983
+  - name: semantic-threshold-055
+    score_threshold: 0.55
+  - name: semantic-threshold-060
+    score_threshold: 0.60

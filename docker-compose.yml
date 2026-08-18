@@ -1,0 +1,66 @@
+services:
+  db:
+    image: pgvector/pgvector:pg17
+    environment:
+      POSTGRES_DB: rag_workbench
+      POSTGRES_USER: rag
+      POSTGRES_PASSWORD: rag
+    ports:
+      - "5432:5432"
+    volumes:
+      - rag_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U rag -d rag_workbench"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  api:
+    build:
+      context: .
+      dockerfile: services/api/Dockerfile
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATABASE_URL: postgresql+psycopg://rag:rag@db:5432/rag_workbench
+      EMBEDDING_PROVIDER: ${EMBEDDING_PROVIDER:-hashing}
+      LLM_PROVIDER: ${LLM_PROVIDER:-extractive}
+      ALLOW_EXTERNAL_CALLS: ${ALLOW_EXTERNAL_CALLS:-false}
+      ALLOW_EXTERNAL_JUDGE_CALLS: ${ALLOW_EXTERNAL_JUDGE_CALLS:-false}
+    command: ["sh", "-c", "alembic upgrade head && uvicorn rag_workbench.api.app:app --host 0.0.0.0 --port 8000"]
+    volumes:
+      - ./data:/app/data:ro
+      - ./BENCHMARK.md:/app/BENCHMARK.md:ro
+      - reranker_model_cache:/root/.cache/huggingface
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 40s
+    depends_on:
+      db:
+        condition: service_healthy
+
+  web:
+    build:
+      context: apps/web
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+
+volumes:
+  rag_postgres_data:
+  reranker_model_cache:

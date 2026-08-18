@@ -1,0 +1,18 @@
+{
+  "baseline": {
+    "NONE": 69,
+    "RANKING_MISS": 12,
+    "MULTI_HOP_FAILURE": 8,
+    "RETRIEVAL_MISS": 2,
+    "JUDGE_FALSE_NEGATIVE": 9
+  },
+  "graph_rag": {
+    "decision": "Inconclusive",
+    "reason": "multi-hop volume is too small to justify GraphRAG infrastructure",
+    "retrieval_miss": 2,
+    "ranking_miss": 12,
+    "judge_false_negative": 9,
+    "multi_hop_failure": 8,
+    "verdict": "INCONCLUSIVE"
+  }
+}

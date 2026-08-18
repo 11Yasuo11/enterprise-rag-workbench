@@ -1,0 +1,22 @@
+name: baseline-hashing-v1
+identity:
+  corpus_version: acmeai-v0.1
+  evaluation_dataset_version: acmeai-initial-v1
+ingestion:
+  chunk_strategy: fixed_token
+  chunk_size: 180
+  chunk_overlap: 30
+  embedding_provider: hashing
+  embedding_model: local-hashing-64
+  embedding_dimension: 64
+  embedding_version: "1"
+retrieval:
+  top_k: 5
+  score_threshold: 0.2
+  distance_metric: cosine
+generation:
+  llm_provider: extractive
+  llm_model: deterministic-extractive-v1
+  prompt_version: baseline-v1
+  temperature: 0.0
+  context_budget: 1200

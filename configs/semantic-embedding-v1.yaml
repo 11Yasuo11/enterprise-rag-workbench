@@ -1,0 +1,22 @@
+name: semantic-baseline-v1
+identity:
+  corpus_version: acmeai-v1
+  evaluation_dataset_version: acmeai-eval-v1
+ingestion:
+  chunk_strategy: fixed_token
+  chunk_size: 180
+  chunk_overlap: 30
+  embedding_provider: openai-compatible
+  embedding_model: text-embedding-3-small
+  embedding_dimension: 64
+  embedding_version: "1"
+retrieval:
+  top_k: 5
+  score_threshold: 0.2
+  distance_metric: cosine
+generation:
+  llm_provider: extractive
+  llm_model: deterministic-extractive-v1
+  prompt_version: baseline-v1
+  temperature: 0.0
+  context_budget: 1200

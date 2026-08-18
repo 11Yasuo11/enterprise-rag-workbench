@@ -1,0 +1,9 @@
+baseline_config_hash,citation_correctness,citation_validity,corpus_hash,correct_abstentions,correct_answers,coverage_gain,dataset_hash,embedding_calls,estimated_cost,experiment_id,experiment_name,f1,git_commit,incorrect_abstentions,incorrect_answers,judge_calls,p50_latency,p95_latency,precision,reason,recall,recall_at_20_gain,reranker_calls,unsupported_answers,verdict
+964a639905502159e9e66d1b3b1bbfe7013a7f6e8cbc73a33d8412a91419a5da,,,f78baa9c2d891d2be09383eba5830c3aa3bc0b510b702e83a38f1a36d7b21ff5,9,60,,c944cc944889546feba41fded3bb8c8b23c5c937cf359d36e8bfc93b63743d69,100,0.535025,phase0-baseline,baseline,0.794701986754967,NO_COMMITS_ON_MAIN,31,0,100,2740.203167502841,5572.968583997863,1.0,,0.6593406593406593,,0,0,BASELINE
+,,,,,,0.0,,,,query_rewrite,query_rewrite,,,,,,,,,quality gain below the frozen materiality bar,,0.0,,,REJECT
+,,,,,,0.0,,,,multi_query,multi_query,,,,,,,,,quality gain below the frozen materiality bar,,0.0,,,REJECT
+,,,,,,0.0,,,,hyde,hyde,,,,,,,,,quality gain below the frozen materiality bar,,0.00649350649350644,,,REJECT
+,,,,,,0.0,,,,learned_sparse,learned_sparse,,,,,,,,,quality gain below the frozen materiality bar,,0.0,,,REJECT
+,,,,,,0.012987012987012991,,,,multi_vector,multi_vector,,,,,,,,,quality gain below the frozen materiality bar,,0.0,,,REJECT
+,,,,,,0.0,,,,query_decomposition,query_decomposition,,,,,,,,,quality gain below the frozen materiality bar,,0.0,,,REJECT
+,,,,,,,,,,dense_bm25_learned_sparse,dense_bm25_learned_sparse,,,,,,,,,A/B did not show a complementary sparse gap that justifies a three-way fusion,,,,,REJECT

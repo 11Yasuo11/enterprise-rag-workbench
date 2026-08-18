@@ -1,0 +1,8 @@
+base_config: semantic-embedding-v1.yaml
+variants:
+  - name: semantic-threshold-026
+    score_threshold: 0.26
+  - name: semantic-threshold-028
+    score_threshold: 0.28
+  - name: semantic-threshold-0285
+    score_threshold: 0.285

@@ -3015,7 +3015,14 @@ Rescues 14: `['fv2_two_09', 'fv2_two_12', 'fv2_two_13', 'fv2_two_15', 'fv2_three
 Safety controls 9.
 False positives 2: `['fv2_inj_02', 'fv2_inj_03']`.
 Unauthorized evidence 0. Invalid citation IDs 0.
-GO / NO_GO: `NO_GO_FOR_UNSEEN_EXPERIMENT`.
+Unsupported recovered answers 2.
+GO / NO_GO: `NO_GO_FOR_UNSEEN_V3_PHASE1`.
+
+Diagnostic category rescues are historical FN traces only and are not promotion evidence.
+Near-duplicate 7 / 8.
+Two-document 4. Three-document 2. Multi-document 6.
+Exact-ID 0. Version/region 1.
+Failure census `{'DRAFT_CANNOT_ANSWER': 10}`.
 
 ### New dataset
 
@@ -3068,14 +3075,14 @@ Citation validity n/a. Invalid citations 0.
 
 ### Latency, usage, cost
 
-Incremental fallback mean n/a / p50 n/a / p95 n/a (n=0). Candidate total mean n/a / p50 n/a / p95 n/a (n=0).
-Fallback trigger rate n/a. Additional draft calls 0. Additional verifier calls 0.
-Additional recovery tokens in/out 0/0. Additional Sol cost USD n/a. Embedding cost None.
+Incremental fallback mean 3978.688958 / p50 4683.139667 / p95 7247.741792 (n=26). Candidate total mean n/a / p50 n/a / p95 n/a (n=0).
+Fallback trigger rate 1.000000. Additional draft calls 26. Additional verifier calls 16.
+Additional recovery tokens in/out 31904/5923. Additional Sol cost USD 0.337210. Embedding cost 0.0.
 
 ### Selection
 
-Selected `V2_JUDGE_FIRST_ONLY`. Reason `NO_GO_FOR_UNSEEN_EXPERIMENT`. Primary quality None. Hard gates None. Regression gate None.
-Remaining bottleneck `None`.
+Selected `V2_JUDGE_FIRST_ONLY`. Reason `NO_GO_FOR_UNSEEN_V3_PHASE1`. Primary quality None. Hard gates None. Regression gate None.
+Remaining bottleneck `PROMPT_INJECTION_FALSE_POSITIVE_RECOVERY`.
 
 Official frozen v2 was not modified.
 

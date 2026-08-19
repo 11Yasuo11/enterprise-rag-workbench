@@ -1,0 +1,111 @@
+{
+  "phase": "V3_PHASE5C_POST_CLOSURE_AUDIT_RESEARCH",
+  "gate": "DATASET_INDEPENDENCE",
+  "result": "FAIL",
+  "maximum_prior_overlap": 0.7273,
+  "threshold": 0.5,
+  "cases_above_threshold": 20,
+  "violations": [
+    {
+      "query_id": "clean_id_003",
+      "overlap": 0.7273,
+      "prior": "eval_v1.json:identifier_04"
+    },
+    {
+      "query_id": "clean_id_002",
+      "overlap": 0.6429,
+      "prior": "initial.json:exact-identifier"
+    },
+    {
+      "query_id": "clean_single_003",
+      "overlap": 0.6,
+      "prior": "eval_v1.json:single_08"
+    },
+    {
+      "query_id": "clean_three_022",
+      "overlap": 0.5789,
+      "prior": "acmeai_multidoc_eval_v2.json:v2_version_02"
+    },
+    {
+      "query_id": "clean_same_004",
+      "overlap": 0.5789,
+      "prior": "acmeai_v3_ranking_validation_v1.json:v3rk_samedoc_10"
+    },
+    {
+      "query_id": "clean_none_004",
+      "overlap": 0.5789,
+      "prior": "initial.json:current-version"
+    },
+    {
+      "query_id": "clean_dup_005",
+      "overlap": 0.5455,
+      "prior": "eval_v1.json:single_14"
+    },
+    {
+      "query_id": "clean_dup_006",
+      "overlap": 0.5455,
+      "prior": "eval_v1.json:single_16"
+    },
+    {
+      "query_id": "clean_vr_003",
+      "overlap": 0.5455,
+      "prior": "initial.json:current-version"
+    },
+    {
+      "query_id": "clean_id_008",
+      "overlap": 0.5385,
+      "prior": "eval_v1.json:identifier_03"
+    },
+    {
+      "query_id": "clean_two_005",
+      "overlap": 0.5333,
+      "prior": "eval_v1.json:single_03"
+    },
+    {
+      "query_id": "clean_three_006",
+      "overlap": 0.5333,
+      "prior": "acmeai_evidence_judge_e2e_eval_v1.json:judge_three_13"
+    },
+    {
+      "query_id": "clean_same_007",
+      "overlap": 0.5294,
+      "prior": "acmeai_multidoc_eval_v2.json:v2_partial_03"
+    },
+    {
+      "query_id": "clean_three_016",
+      "overlap": 0.5263,
+      "prior": "acmeai_evidence_judge_e2e_eval_v1.json:judge_three_13"
+    },
+    {
+      "query_id": "clean_three_028",
+      "overlap": 0.5,
+      "prior": "acmeai_multidoc_eval_v2.json:v2_three_10"
+    },
+    {
+      "query_id": "clean_same_001",
+      "overlap": 0.5,
+      "prior": "acmeai_v3_ranking_validation_v1.json:v3rk_samedoc_09"
+    },
+    {
+      "query_id": "clean_same_003",
+      "overlap": 0.5,
+      "prior": "eval_v1.json:multi_02"
+    },
+    {
+      "query_id": "clean_id_007",
+      "overlap": 0.5,
+      "prior": "eval_v1.json:identifier_06"
+    },
+    {
+      "query_id": "clean_vr_006",
+      "overlap": 0.5,
+      "prior": "eval_v1.json:duplicate_01"
+    },
+    {
+      "query_id": "clean_vr_007",
+      "overlap": 0.5,
+      "prior": "eval_v1.json:duplicate_02"
+    }
+  ],
+  "note": "Manifest preliminary lexical check reported 0.471 but canonical repository validator found 0.727. The manifest heuristic is NOT authoritative."
+}

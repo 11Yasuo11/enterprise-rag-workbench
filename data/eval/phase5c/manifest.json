@@ -1,0 +1,32 @@
+{
+  "dataset_id": "acmeai-enterprise-rag-v3-clean-e2e-final-120",
+  "case_count": 120,
+  "answerable_count": 102,
+  "should_abstain_count": 18,
+  "category_distribution": {
+    "single_document": 4,
+    "multidoc_two": 20,
+    "multidoc_three": 30,
+    "near_duplicate": 16,
+    "same_document_multi_chunk": 10,
+    "exact_identifier": 8,
+    "version_region": 8,
+    "semantic_paraphrase": 6,
+    "acl_sensitive": 4,
+    "partial_no_answer": 4,
+    "prompt_injection": 10
+  },
+  "dataset_sha256": "595d8033ab059ce110696b938109afcf8a4c4716c0ae9ab23df1637464352d64",
+  "source_audit_zip_sha256": "8f776dbd4f5e1c8686161db133785777433643a8c6e5d145226df4d8c8c49efe",
+  "authoring_basis": "Independent re-authoring from the 16-document / 19-chunk synthetic corpus contained in rag_evaluation_audit_export.zip.",
+  "qa": {
+    "unique_query_ids": true,
+    "grounded_required_facts_checked": true,
+    "answer_leakage_check_exact_identifier": true,
+    "multidoc_two_requires_two_documents": true,
+    "multidoc_three_requires_three_documents": true,
+    "same_document_multi_chunk_requires_multiple_chunks": true,
+    "lexical_overlap_heuristic_max_vs_previous_120": 0.47058823529411764,
+    "note": "The repository's canonical independence validator must still be run before inference; this lexical heuristic is not a substitute."
+  }
+}

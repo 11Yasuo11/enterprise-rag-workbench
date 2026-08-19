@@ -1,0 +1,23 @@
+{
+  "dataset_id": "acmeai-enterprise-rag-v3-final-unseen-e2e-120",
+  "dataset_path": "data/eval/phase5k/acmeai_enterprise_rag_v3_final_unseen_e2e_120.jsonl",
+  "dataset_hash": "12851a9915ad51eccf2629e6765a8dc9a1731eb308987b0e53ac56468274f404",
+  "case_count": 120,
+  "distribution": {
+    "single_document": 10,
+    "two_document": 16,
+    "three_document": 16,
+    "same_document_multi_chunk": 10,
+    "semantic_paraphrase": 10,
+    "exact_identifier": 8,
+    "near_duplicate": 8,
+    "version_sensitive": 8,
+    "region_sensitive": 6,
+    "numeric_date_constraint": 8,
+    "acl_should_abstain": 5,
+    "tenant_isolation": 5,
+    "prompt_injection": 5,
+    "unsupported_no_answer": 5
+  },
+  "frozen_at": "2026-08-19T16:45:24.461517+00:00"
+}

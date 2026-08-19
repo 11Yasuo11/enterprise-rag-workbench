@@ -1,0 +1,1491 @@
+{
+  "phase": "V3_PHASE5I_VERSION_SENSITIVE_RANKING_ROBUSTNESS",
+  "candidate_identity": "VERSION_AWARE_RANKING_V1",
+  "candidate_hash": "7e3bc1c4d744801056269268e6e35f7a3399d792db16f869a6f5c16fef44ecda",
+  "metrics": {
+    "I0": {
+      "Hit@5": 1.0,
+      "Recall@5": 1.0,
+      "MRR": 1.0,
+      "nDCG@5": 1.0,
+      "complete_evidence_top5_coverage": 1.0
+    },
+    "I1": {
+      "Hit@5": 1.0,
+      "Recall@5": 1.0,
+      "MRR": 1.0,
+      "nDCG@5": 1.0,
+      "complete_evidence_top5_coverage": 1.0
+    },
+    "by_category": {
+      "ordinary_qa": {
+        "I0": {
+          "Hit@5": 1.0,
+          "Recall@5": 1.0,
+          "MRR": 1.0,
+          "nDCG@5": 1.0,
+          "complete_evidence_top5_coverage": 1.0
+        },
+        "I1": {
+          "Hit@5": 1.0,
+          "Recall@5": 1.0,
+          "MRR": 1.0,
+          "nDCG@5": 1.0,
+          "complete_evidence_top5_coverage": 1.0
+        }
+      },
+      "region_sensitive": {
+        "I0": {
+          "Hit@5": 1.0,
+          "Recall@5": 1.0,
+          "MRR": 1.0,
+          "nDCG@5": 1.0,
+          "complete_evidence_top5_coverage": 1.0
+        },
+        "I1": {
+          "Hit@5": 1.0,
+          "Recall@5": 1.0,
+          "MRR": 1.0,
+          "nDCG@5": 1.0,
+          "complete_evidence_top5_coverage": 1.0
+        }
+      },
+      "version_region": {
+        "I0": {
+          "Hit@5": 1.0,
+          "Recall@5": 1.0,
+          "MRR": 1.0,
+          "nDCG@5": 1.0,
+          "complete_evidence_top5_coverage": 1.0
+        },
+        "I1": {
+          "Hit@5": 1.0,
+          "Recall@5": 1.0,
+          "MRR": 1.0,
+          "nDCG@5": 1.0,
+          "complete_evidence_top5_coverage": 1.0
+        }
+      },
+      "version_sensitive": {
+        "I0": {
+          "Hit@5": 1.0,
+          "Recall@5": 1.0,
+          "MRR": 1.0,
+          "nDCG@5": 1.0,
+          "complete_evidence_top5_coverage": 1.0
+        },
+        "I1": {
+          "Hit@5": 1.0,
+          "Recall@5": 1.0,
+          "MRR": 1.0,
+          "nDCG@5": 1.0,
+          "complete_evidence_top5_coverage": 1.0
+        }
+      }
+    }
+  },
+  "unsupported_answers_attributable_to_ranking_candidate": 0,
+  "citation_correctness_delta_risk": "none_detected_in_retrieval_only_phase",
+  "per_case": [
+    {
+      "query_id": "p5i_ver_01",
+      "category": "version_sensitive",
+      "required_document_ids": [
+        "recovery-runbook-east"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "operations-continuity-plan",
+        "project-atlas-api",
+        "project-atlas-api"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "operations-continuity-plan",
+        "project-atlas-api",
+        "project-atlas-api"
+      ]
+    },
+    {
+      "query_id": "p5i_ver_02",
+      "category": "version_sensitive",
+      "required_document_ids": [
+        "recovery-runbook-west"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "operations-continuity-plan",
+        "project-atlas-api",
+        "project-atlas-launch"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "operations-continuity-plan",
+        "project-atlas-api",
+        "project-atlas-launch"
+      ]
+    },
+    {
+      "query_id": "p5i_ver_03",
+      "category": "version_sensitive",
+      "required_document_ids": [
+        "recovery-runbook-west"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "security-incident-policy",
+        "project-atlas-launch",
+        "operations-continuity-plan"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "security-incident-policy",
+        "project-atlas-launch",
+        "operations-continuity-plan"
+      ]
+    },
+    {
+      "query_id": "p5i_ver_04",
+      "category": "version_sensitive",
+      "required_document_ids": [
+        "recovery-runbook-east"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "security-incident-policy",
+        "operations-continuity-plan",
+        "project-atlas-api"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "security-incident-policy",
+        "operations-continuity-plan",
+        "project-atlas-api"
+      ]
+    },
+    {
+      "query_id": "p5i_ver_05",
+      "category": "version_sensitive",
+      "required_document_ids": [
+        "recovery-runbook-east"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "operations-continuity-plan",
+        "project-atlas-api",
+        "project-atlas-api"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "operations-continuity-plan",
+        "project-atlas-api",
+        "project-atlas-api"
+      ]
+    },
+    {
+      "query_id": "p5i_ver_06",
+      "category": "version_sensitive",
+      "required_document_ids": [
+        "recovery-runbook-west"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "operations-continuity-plan",
+        "project-atlas-api",
+        "project-atlas-launch"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "operations-continuity-plan",
+        "project-atlas-api",
+        "project-atlas-launch"
+      ]
+    },
+    {
+      "query_id": "p5i_ver_07",
+      "category": "version_sensitive",
+      "required_document_ids": [
+        "recovery-runbook-west"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "security-incident-policy",
+        "project-atlas-launch",
+        "operations-continuity-plan"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "security-incident-policy",
+        "project-atlas-launch",
+        "operations-continuity-plan"
+      ]
+    },
+    {
+      "query_id": "p5i_ver_08",
+      "category": "version_sensitive",
+      "required_document_ids": [
+        "recovery-runbook-east"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "security-incident-policy",
+        "operations-continuity-plan",
+        "project-atlas-api"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "security-incident-policy",
+        "operations-continuity-plan",
+        "project-atlas-api"
+      ]
+    },
+    {
+      "query_id": "p5i_ver_09",
+      "category": "version_sensitive",
+      "required_document_ids": [
+        "recovery-runbook-east"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "operations-continuity-plan",
+        "project-atlas-api",
+        "project-atlas-api"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "operations-continuity-plan",
+        "project-atlas-api",
+        "project-atlas-api"
+      ]
+    },
+    {
+      "query_id": "p5i_ver_10",
+      "category": "version_sensitive",
+      "required_document_ids": [
+        "recovery-runbook-west"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "operations-continuity-plan",
+        "project-atlas-api",
+        "project-atlas-launch"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "operations-continuity-plan",
+        "project-atlas-api",
+        "project-atlas-launch"
+      ]
+    },
+    {
+      "query_id": "p5i_ver_11",
+      "category": "version_sensitive",
+      "required_document_ids": [
+        "recovery-runbook-west"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "security-incident-policy",
+        "project-atlas-launch",
+        "operations-continuity-plan"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "security-incident-policy",
+        "project-atlas-launch",
+        "operations-continuity-plan"
+      ]
+    },
+    {
+      "query_id": "p5i_ver_12",
+      "category": "version_sensitive",
+      "required_document_ids": [
+        "recovery-runbook-east"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "security-incident-policy",
+        "operations-continuity-plan",
+        "project-atlas-api"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "security-incident-policy",
+        "operations-continuity-plan",
+        "project-atlas-api"
+      ]
+    },
+    {
+      "query_id": "p5i_ver_13",
+      "category": "version_sensitive",
+      "required_document_ids": [
+        "recovery-runbook-east"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "operations-continuity-plan",
+        "project-atlas-api",
+        "project-atlas-api"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "operations-continuity-plan",
+        "project-atlas-api",
+        "project-atlas-api"
+      ]
+    },
+    {
+      "query_id": "p5i_ver_14",
+      "category": "version_sensitive",
+      "required_document_ids": [
+        "recovery-runbook-west"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "operations-continuity-plan",
+        "project-atlas-api",
+        "project-atlas-launch"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "operations-continuity-plan",
+        "project-atlas-api",
+        "project-atlas-launch"
+      ]
+    },
+    {
+      "query_id": "p5i_ver_15",
+      "category": "version_sensitive",
+      "required_document_ids": [
+        "recovery-runbook-west"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "security-incident-policy",
+        "project-atlas-launch",
+        "operations-continuity-plan"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "security-incident-policy",
+        "project-atlas-launch",
+        "operations-continuity-plan"
+      ]
+    },
+    {
+      "query_id": "p5i_ver_16",
+      "category": "version_sensitive",
+      "required_document_ids": [
+        "recovery-runbook-east"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "security-incident-policy",
+        "operations-continuity-plan",
+        "project-atlas-api"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "security-incident-policy",
+        "operations-continuity-plan",
+        "project-atlas-api"
+      ]
+    },
+    {
+      "query_id": "p5i_reg_01",
+      "category": "region_sensitive",
+      "required_document_ids": [
+        "recovery-runbook-east"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "operations-continuity-plan",
+        "project-atlas-launch",
+        "project-atlas-api"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "operations-continuity-plan",
+        "project-atlas-launch",
+        "project-atlas-api"
+      ]
+    },
+    {
+      "query_id": "p5i_reg_02",
+      "category": "region_sensitive",
+      "required_document_ids": [
+        "recovery-runbook-west"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "operations-continuity-plan",
+        "project-atlas-launch",
+        "project-atlas-api"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "operations-continuity-plan",
+        "project-atlas-launch",
+        "project-atlas-api"
+      ]
+    },
+    {
+      "query_id": "p5i_reg_03",
+      "category": "region_sensitive",
+      "required_document_ids": [
+        "recovery-runbook-east"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "project-atlas-launch",
+        "operations-continuity-plan",
+        "project-atlas-api"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "project-atlas-launch",
+        "operations-continuity-plan",
+        "project-atlas-api"
+      ]
+    },
+    {
+      "query_id": "p5i_reg_04",
+      "category": "region_sensitive",
+      "required_document_ids": [
+        "recovery-runbook-west"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "project-atlas-launch",
+        "operations-continuity-plan",
+        "project-atlas-api"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "project-atlas-launch",
+        "operations-continuity-plan",
+        "project-atlas-api"
+      ]
+    },
+    {
+      "query_id": "p5i_reg_09",
+      "category": "region_sensitive",
+      "required_document_ids": [
+        "recovery-runbook-east"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "operations-continuity-plan",
+        "project-atlas-launch",
+        "project-atlas-api"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "operations-continuity-plan",
+        "project-atlas-launch",
+        "project-atlas-api"
+      ]
+    },
+    {
+      "query_id": "p5i_reg_10",
+      "category": "region_sensitive",
+      "required_document_ids": [
+        "recovery-runbook-west"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "operations-continuity-plan",
+        "project-atlas-launch",
+        "project-atlas-api"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "operations-continuity-plan",
+        "project-atlas-launch",
+        "project-atlas-api"
+      ]
+    },
+    {
+      "query_id": "p5i_reg_11",
+      "category": "region_sensitive",
+      "required_document_ids": [
+        "recovery-runbook-east"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "project-atlas-launch",
+        "operations-continuity-plan",
+        "project-atlas-api"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "project-atlas-launch",
+        "operations-continuity-plan",
+        "project-atlas-api"
+      ]
+    },
+    {
+      "query_id": "p5i_reg_12",
+      "category": "region_sensitive",
+      "required_document_ids": [
+        "recovery-runbook-west"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "project-atlas-launch",
+        "operations-continuity-plan",
+        "project-atlas-api"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "project-atlas-launch",
+        "operations-continuity-plan",
+        "project-atlas-api"
+      ]
+    },
+    {
+      "query_id": "p5i_vr_01",
+      "category": "version_region",
+      "required_document_ids": [
+        "recovery-runbook-east"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "operations-continuity-plan",
+        "data-retention-standard",
+        "finance-expense-policy"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "operations-continuity-plan",
+        "data-retention-standard",
+        "finance-expense-policy"
+      ]
+    },
+    {
+      "query_id": "p5i_vr_02",
+      "category": "version_region",
+      "required_document_ids": [
+        "recovery-runbook-west"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "operations-continuity-plan",
+        "data-retention-standard",
+        "project-atlas-launch"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "operations-continuity-plan",
+        "data-retention-standard",
+        "project-atlas-launch"
+      ]
+    },
+    {
+      "query_id": "p5i_vr_03",
+      "category": "version_region",
+      "required_document_ids": [
+        "recovery-runbook-east"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "operations-continuity-plan",
+        "project-atlas-api",
+        "project-atlas-launch"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "operations-continuity-plan",
+        "project-atlas-api",
+        "project-atlas-launch"
+      ]
+    },
+    {
+      "query_id": "p5i_vr_04",
+      "category": "version_region",
+      "required_document_ids": [
+        "recovery-runbook-west"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "operations-continuity-plan",
+        "project-atlas-launch",
+        "project-atlas-api"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "operations-continuity-plan",
+        "project-atlas-launch",
+        "project-atlas-api"
+      ]
+    },
+    {
+      "query_id": "p5i_vr_09",
+      "category": "version_region",
+      "required_document_ids": [
+        "recovery-runbook-east"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "operations-continuity-plan",
+        "data-retention-standard",
+        "finance-expense-policy"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "operations-continuity-plan",
+        "data-retention-standard",
+        "finance-expense-policy"
+      ]
+    },
+    {
+      "query_id": "p5i_vr_10",
+      "category": "version_region",
+      "required_document_ids": [
+        "recovery-runbook-west"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "operations-continuity-plan",
+        "data-retention-standard",
+        "project-atlas-launch"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "operations-continuity-plan",
+        "data-retention-standard",
+        "project-atlas-launch"
+      ]
+    },
+    {
+      "query_id": "p5i_vr_11",
+      "category": "version_region",
+      "required_document_ids": [
+        "recovery-runbook-east"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "operations-continuity-plan",
+        "project-atlas-api",
+        "project-atlas-launch"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "operations-continuity-plan",
+        "project-atlas-api",
+        "project-atlas-launch"
+      ]
+    },
+    {
+      "query_id": "p5i_vr_12",
+      "category": "version_region",
+      "required_document_ids": [
+        "recovery-runbook-west"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "operations-continuity-plan",
+        "project-atlas-launch",
+        "project-atlas-api"
+      ],
+      "i1_top5_docs": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "operations-continuity-plan",
+        "project-atlas-launch",
+        "project-atlas-api"
+      ]
+    },
+    {
+      "query_id": "p5i_ord_01",
+      "category": "ordinary_qa",
+      "required_document_ids": [
+        "engineering-deployment-handbook"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "engineering-deployment-handbook",
+        "project-atlas-api",
+        "data-retention-standard",
+        "customer-support-escalation",
+        "finance-expense-policy"
+      ],
+      "i1_top5_docs": [
+        "engineering-deployment-handbook",
+        "project-atlas-api",
+        "data-retention-standard",
+        "customer-support-escalation",
+        "finance-expense-policy"
+      ]
+    },
+    {
+      "query_id": "p5i_ord_02",
+      "category": "ordinary_qa",
+      "required_document_ids": [
+        "operations-continuity-plan"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "operations-continuity-plan",
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "data-retention-standard",
+        "customer-support-escalation"
+      ],
+      "i1_top5_docs": [
+        "operations-continuity-plan",
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "data-retention-standard",
+        "customer-support-escalation"
+      ]
+    },
+    {
+      "query_id": "p5i_ord_03",
+      "category": "ordinary_qa",
+      "required_document_ids": [
+        "remote-work-policy"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "remote-work-policy",
+        "remote-work-policy",
+        "finance-expense-policy",
+        "data-retention-standard",
+        "customer-support-escalation"
+      ],
+      "i1_top5_docs": [
+        "remote-work-policy",
+        "remote-work-policy",
+        "finance-expense-policy",
+        "data-retention-standard",
+        "customer-support-escalation"
+      ]
+    },
+    {
+      "query_id": "p5i_ord_04",
+      "category": "ordinary_qa",
+      "required_document_ids": [
+        "customer-support-escalation"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "customer-support-escalation",
+        "operations-continuity-plan",
+        "security-incident-policy",
+        "data-retention-standard",
+        "recovery-runbook-east"
+      ],
+      "i1_top5_docs": [
+        "customer-support-escalation",
+        "operations-continuity-plan",
+        "security-incident-policy",
+        "data-retention-standard",
+        "recovery-runbook-east"
+      ]
+    },
+    {
+      "query_id": "p5i_ord_05",
+      "category": "ordinary_qa",
+      "required_document_ids": [
+        "data-retention-standard"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "data-retention-standard",
+        "engineering-deployment-handbook",
+        "customer-support-escalation",
+        "finance-expense-policy",
+        "security-training-example"
+      ],
+      "i1_top5_docs": [
+        "data-retention-standard",
+        "engineering-deployment-handbook",
+        "customer-support-escalation",
+        "finance-expense-policy",
+        "security-training-example"
+      ]
+    },
+    {
+      "query_id": "p5i_ord_06",
+      "category": "ordinary_qa",
+      "required_document_ids": [
+        "finance-expense-policy"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "finance-expense-policy",
+        "engineering-deployment-handbook",
+        "data-retention-standard",
+        "recovery-runbook-east",
+        "customer-support-escalation"
+      ],
+      "i1_top5_docs": [
+        "finance-expense-policy",
+        "engineering-deployment-handbook",
+        "data-retention-standard",
+        "recovery-runbook-east",
+        "customer-support-escalation"
+      ]
+    },
+    {
+      "query_id": "p5i_ord_07",
+      "category": "ordinary_qa",
+      "required_document_ids": [
+        "project-atlas-api"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "project-atlas-api",
+        "project-atlas-api",
+        "project-atlas-launch",
+        "project-atlas-launch",
+        "engineering-deployment-handbook"
+      ],
+      "i1_top5_docs": [
+        "project-atlas-api",
+        "project-atlas-api",
+        "project-atlas-launch",
+        "project-atlas-launch",
+        "engineering-deployment-handbook"
+      ]
+    },
+    {
+      "query_id": "p5i_ord_08",
+      "category": "ordinary_qa",
+      "required_document_ids": [
+        "project-atlas-launch"
+      ],
+      "i0": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i1": {
+        "hit5": 1.0,
+        "recall5": 1.0,
+        "mrr": 1.0,
+        "ndcg5": 1.0,
+        "coverage5": 1.0
+      },
+      "i0_top5_docs": [
+        "project-atlas-launch",
+        "project-atlas-launch",
+        "project-atlas-api",
+        "recovery-runbook-east",
+        "project-atlas-api"
+      ],
+      "i1_top5_docs": [
+        "project-atlas-launch",
+        "project-atlas-launch",
+        "project-atlas-api",
+        "recovery-runbook-east",
+        "project-atlas-api"
+      ]
+    }
+  ]
+}

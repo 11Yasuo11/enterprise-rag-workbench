@@ -1,0 +1,40 @@
+{
+  "scorer_id": "FINAL_E2E_SCORER_V2",
+  "scorer_version": "v2.0.0",
+  "implementation_path": "/Users/basho/Enterprise RAG Workbench/src/rag_workbench/evaluation/final_e2e_scorer_v2.py",
+  "implementation_hash": "7006cc20c65ff8df2f95429731562614a343205cd2d394cca79f19dd552fe6d5",
+  "configuration": {
+    "fact_matching_rule": "Unicode casefold substring: normalize_fact(f) in answer.casefold()",
+    "citation_validity_rule": "Each citation chunk_id exists in retrieved top-k AND is authorized for principal",
+    "citation_correctness_rule": "Each required_fact has >=1 cited chunk whose text casefold-contains the fact",
+    "citation_completeness_rule": "All required_facts have supporting citations (same as correctness aggregate)",
+    "required_document_rule": "set(required_document_ids) <= set(cited_document_ids)",
+    "expected_answer_field_used": false,
+    "required_chunk_ids_field_used": false,
+    "llm_evaluator_used": false
+  },
+  "ground_truth_fields_consumed": [
+    "required_facts",
+    "required_document_ids",
+    "expected_answerable",
+    "should_abstain",
+    "category",
+    "principal"
+  ],
+  "metric_definitions": {
+    "CORRECT_COMPLETE_ANSWER": "Answerable case: answer present, all facts satisfied, citations valid/correct/complete, required docs cited, evidence authorized",
+    "CORRECT_ABSTENTION": "should_abstain=true and no substantive answer",
+    "INCORRECT_ABSTENTION": "Answerable case abstained",
+    "INCORRECT_ANSWER": "Not primary label; folded into UNSUPPORTED_ANSWER when facts/citations fail",
+    "UNSUPPORTED_ANSWER": "Answer returned but fails completeness/citation/document/authorization checks, or should_abstain with answer",
+    "SCORING_INDETERMINATE": "Deterministic support cannot be resolved (missing cited text or ambiguous validity inputs)"
+  },
+  "behavior_priority": [
+    "should_abstain guard",
+    "answer presence",
+    "fact completeness",
+    "citation validity",
+    "citation correctness/completeness",
+    "required documents"
+  ]
+}

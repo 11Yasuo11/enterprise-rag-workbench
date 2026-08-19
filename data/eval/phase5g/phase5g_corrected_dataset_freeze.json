@@ -1,0 +1,24 @@
+{
+  "dataset_id": "acmeai-enterprise-rag-v3-phase5g-corrected-safety-diagnostic-48",
+  "dataset_path": "data/eval/phase5g/v3_phase5g_corrected_safety_diagnostic_48_cases.jsonl",
+  "dataset_hash": "1c4097a38965fa263bf6277c7c347196bdb0ccefce2d83d5dd597aed516633b3",
+  "case_count": 48,
+  "distribution": {
+    "prompt_injection": 6,
+    "numeric_constraint_negative": 12,
+    "numeric_constraint_positive": 8,
+    "date_constraint_negative": 8,
+    "date_constraint_positive": 4,
+    "acl_sensitive": 4,
+    "tenant_isolation": 3,
+    "version_sensitive": 3
+  },
+  "source_dataset_id": "acmeai-enterprise-rag-v3-phase5e-constraint-safety-holdout-48",
+  "source_dataset_hash": "c1bd32ccfbb961fa677036342bb2d0da4e7d2d43b1adfc37a998e0240334e1f0",
+  "benchmark_status": [
+    "CORRECTED_DIAGNOSTIC_BENCHMARK",
+    "POST_HOC_DATASET_REPAIR",
+    "NOT_VALID_FOR_FINAL_PROMOTION"
+  ],
+  "manifest_path": "data/eval/phase5g/phase5g_dataset_repair_manifest.json"
+}

@@ -1,0 +1,794 @@
+{
+  "phase": "V3_PHASE5J_GENERATOR_FINAL_FACT_COMPLETENESS",
+  "candidate_identity": "GENERATOR_COMPLETENESS_V3",
+  "candidate_hash": "fe3f558738fd6f2c72df6d0e36ed74dd8a239366f626ae3f2c1be2e14b0f6ad7",
+  "metrics": {
+    "J0": {
+      "cases": 30,
+      "generator_completeness_given_complete_evidence": 0.733333,
+      "correct_complete_answers": 22,
+      "partial_answers": 8,
+      "unsupported_claims": 0,
+      "citation_correctness": 1.0
+    },
+    "J1": {
+      "cases": 30,
+      "generator_completeness_given_complete_evidence": 0.733333,
+      "correct_complete_answers": 22,
+      "partial_answers": 8,
+      "unsupported_claims": 0,
+      "citation_correctness": 1.0
+    }
+  },
+  "regressions_j0_correct_to_j1_incorrect": [],
+  "rows_by_arm": {
+    "J0": [
+      {
+        "query_id": "p5j_mf_01",
+        "category": "multi_fact_answers",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The recovery time objective for the customer API is four hours. [C2] The production deployment approval identifier is ENG-DEP-17. [C1]",
+        "used_chunk_ids": [
+          "ops1",
+          "eng1"
+        ]
+      },
+      {
+        "query_id": "p5j_mf_02",
+        "category": "multi_fact_answers",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The recovery time objective for the customer API is four hours. [C2] The production deployment approval identifier is ENG-DEP-17. [C1]",
+        "used_chunk_ids": [
+          "ops1",
+          "eng1"
+        ]
+      },
+      {
+        "query_id": "p5j_mf_03",
+        "category": "multi_fact_answers",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The recovery time objective for the customer API is four hours. [C2] The production deployment approval identifier is ENG-DEP-17. [C1]",
+        "used_chunk_ids": [
+          "ops1",
+          "eng1"
+        ]
+      },
+      {
+        "query_id": "p5j_mf_04",
+        "category": "multi_fact_answers",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The recovery time objective for the customer API is four hours. [C2] The production deployment approval identifier is ENG-DEP-17. [C1]",
+        "used_chunk_ids": [
+          "ops1",
+          "eng1"
+        ]
+      },
+      {
+        "query_id": "p5j_mf_05",
+        "category": "multi_fact_answers",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The recovery time objective for the customer API is four hours. [C2] The production deployment approval identifier is ENG-DEP-17. [C1]",
+        "used_chunk_ids": [
+          "ops1",
+          "eng1"
+        ]
+      },
+      {
+        "query_id": "p5j_mf_06",
+        "category": "multi_fact_answers",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The recovery time objective for the customer API is four hours. [C2] The production deployment approval identifier is ENG-DEP-17. [C1]",
+        "used_chunk_ids": [
+          "ops1",
+          "eng1"
+        ]
+      },
+      {
+        "query_id": "p5j_mf_07",
+        "category": "multi_fact_answers",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The recovery time objective for the customer API is four hours. [C2] The production deployment approval identifier is ENG-DEP-17. [C1]",
+        "used_chunk_ids": [
+          "ops1",
+          "eng1"
+        ]
+      },
+      {
+        "query_id": "p5j_mf_08",
+        "category": "multi_fact_answers",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The recovery time objective for the customer API is four hours. [C2] The production deployment approval identifier is ENG-DEP-17. [C1]",
+        "used_chunk_ids": [
+          "ops1",
+          "eng1"
+        ]
+      },
+      {
+        "query_id": "p5j_mf_09",
+        "category": "multi_fact_answers",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The recovery time objective for the customer API is four hours. [C2] The production deployment approval identifier is ENG-DEP-17. [C1]",
+        "used_chunk_ids": [
+          "ops1",
+          "eng1"
+        ]
+      },
+      {
+        "query_id": "p5j_mf_10",
+        "category": "multi_fact_answers",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The recovery time objective for the customer API is four hours. [C2] The production deployment approval identifier is ENG-DEP-17. [C1]",
+        "used_chunk_ids": [
+          "ops1",
+          "eng1"
+        ]
+      },
+      {
+        "query_id": "p5j_md_01",
+        "category": "multiple_document_facts",
+        "complete": false,
+        "partial": true,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29. [C1]",
+        "used_chunk_ids": [
+          "west1"
+        ]
+      },
+      {
+        "query_id": "p5j_md_02",
+        "category": "multiple_document_facts",
+        "complete": false,
+        "partial": true,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29. [C1]",
+        "used_chunk_ids": [
+          "west1"
+        ]
+      },
+      {
+        "query_id": "p5j_md_03",
+        "category": "multiple_document_facts",
+        "complete": false,
+        "partial": true,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29. [C1]",
+        "used_chunk_ids": [
+          "west1"
+        ]
+      },
+      {
+        "query_id": "p5j_md_04",
+        "category": "multiple_document_facts",
+        "complete": false,
+        "partial": true,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29. [C1]",
+        "used_chunk_ids": [
+          "west1"
+        ]
+      },
+      {
+        "query_id": "p5j_md_05",
+        "category": "multiple_document_facts",
+        "complete": false,
+        "partial": true,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29. [C1]",
+        "used_chunk_ids": [
+          "west1"
+        ]
+      },
+      {
+        "query_id": "p5j_md_06",
+        "category": "multiple_document_facts",
+        "complete": false,
+        "partial": true,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29. [C1]",
+        "used_chunk_ids": [
+          "west1"
+        ]
+      },
+      {
+        "query_id": "p5j_md_07",
+        "category": "multiple_document_facts",
+        "complete": false,
+        "partial": true,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29. [C1]",
+        "used_chunk_ids": [
+          "west1"
+        ]
+      },
+      {
+        "query_id": "p5j_md_08",
+        "category": "multiple_document_facts",
+        "complete": false,
+        "partial": true,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29. [C1]",
+        "used_chunk_ids": [
+          "west1"
+        ]
+      },
+      {
+        "query_id": "p5j_dr_01",
+        "category": "date_range_endpoints",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "Its production endpoint identifier is ATLAS-API-301. [C1] The initial customer region is eu-west. [C2]",
+        "used_chunk_ids": [
+          "api1",
+          "launch1"
+        ]
+      },
+      {
+        "query_id": "p5j_dr_02",
+        "category": "date_range_endpoints",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "Its production endpoint identifier is ATLAS-API-301. [C1] The initial customer region is eu-west. [C2]",
+        "used_chunk_ids": [
+          "api1",
+          "launch1"
+        ]
+      },
+      {
+        "query_id": "p5j_dr_03",
+        "category": "date_range_endpoints",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "Its production endpoint identifier is ATLAS-API-301. [C1] The initial customer region is eu-west. [C2]",
+        "used_chunk_ids": [
+          "api1",
+          "launch1"
+        ]
+      },
+      {
+        "query_id": "p5j_dr_04",
+        "category": "date_range_endpoints",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "Its production endpoint identifier is ATLAS-API-301. [C1] The initial customer region is eu-west. [C2]",
+        "used_chunk_ids": [
+          "api1",
+          "launch1"
+        ]
+      },
+      {
+        "query_id": "p5j_dr_05",
+        "category": "date_range_endpoints",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "Its production endpoint identifier is ATLAS-API-301. [C1] The initial customer region is eu-west. [C2]",
+        "used_chunk_ids": [
+          "api1",
+          "launch1"
+        ]
+      },
+      {
+        "query_id": "p5j_dr_06",
+        "category": "date_range_endpoints",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "Its production endpoint identifier is ATLAS-API-301. [C1] The initial customer region is eu-west. [C2]",
+        "used_chunk_ids": [
+          "api1",
+          "launch1"
+        ]
+      },
+      {
+        "query_id": "p5j_sc_01",
+        "category": "same_document_multi_chunk",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The international travel approval code is FIN-TRAVEL-52. [C2] Expense reports are due within ten business days. [C1]",
+        "used_chunk_ids": [
+          "fin2",
+          "fin1"
+        ]
+      },
+      {
+        "query_id": "p5j_sc_02",
+        "category": "same_document_multi_chunk",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The international travel approval code is FIN-TRAVEL-52. [C2] Expense reports are due within ten business days. [C1]",
+        "used_chunk_ids": [
+          "fin2",
+          "fin1"
+        ]
+      },
+      {
+        "query_id": "p5j_sc_03",
+        "category": "same_document_multi_chunk",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The international travel approval code is FIN-TRAVEL-52. [C2] Expense reports are due within ten business days. [C1]",
+        "used_chunk_ids": [
+          "fin2",
+          "fin1"
+        ]
+      },
+      {
+        "query_id": "p5j_sc_04",
+        "category": "same_document_multi_chunk",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The international travel approval code is FIN-TRAVEL-52. [C2] Expense reports are due within ten business days. [C1]",
+        "used_chunk_ids": [
+          "fin2",
+          "fin1"
+        ]
+      },
+      {
+        "query_id": "p5j_sc_05",
+        "category": "same_document_multi_chunk",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The international travel approval code is FIN-TRAVEL-52. [C2] Expense reports are due within ten business days. [C1]",
+        "used_chunk_ids": [
+          "fin2",
+          "fin1"
+        ]
+      },
+      {
+        "query_id": "p5j_sc_06",
+        "category": "same_document_multi_chunk",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The international travel approval code is FIN-TRAVEL-52. [C2] Expense reports are due within ten business days. [C1]",
+        "used_chunk_ids": [
+          "fin2",
+          "fin1"
+        ]
+      }
+    ],
+    "J1": [
+      {
+        "query_id": "p5j_mf_01",
+        "category": "multi_fact_answers",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The production deployment approval identifier is ENG-DEP-17. [C1] The recovery time objective for the customer API is four hours. [C2]",
+        "used_chunk_ids": [
+          "eng1",
+          "ops1"
+        ]
+      },
+      {
+        "query_id": "p5j_mf_02",
+        "category": "multi_fact_answers",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The production deployment approval identifier is ENG-DEP-17. [C1] The recovery time objective for the customer API is four hours. [C2]",
+        "used_chunk_ids": [
+          "eng1",
+          "ops1"
+        ]
+      },
+      {
+        "query_id": "p5j_mf_03",
+        "category": "multi_fact_answers",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The production deployment approval identifier is ENG-DEP-17. [C1] The recovery time objective for the customer API is four hours. [C2]",
+        "used_chunk_ids": [
+          "eng1",
+          "ops1"
+        ]
+      },
+      {
+        "query_id": "p5j_mf_04",
+        "category": "multi_fact_answers",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The production deployment approval identifier is ENG-DEP-17. [C1] The recovery time objective for the customer API is four hours. [C2]",
+        "used_chunk_ids": [
+          "eng1",
+          "ops1"
+        ]
+      },
+      {
+        "query_id": "p5j_mf_05",
+        "category": "multi_fact_answers",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The production deployment approval identifier is ENG-DEP-17. [C1] The recovery time objective for the customer API is four hours. [C2]",
+        "used_chunk_ids": [
+          "eng1",
+          "ops1"
+        ]
+      },
+      {
+        "query_id": "p5j_mf_06",
+        "category": "multi_fact_answers",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The production deployment approval identifier is ENG-DEP-17. [C1] The recovery time objective for the customer API is four hours. [C2]",
+        "used_chunk_ids": [
+          "eng1",
+          "ops1"
+        ]
+      },
+      {
+        "query_id": "p5j_mf_07",
+        "category": "multi_fact_answers",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The production deployment approval identifier is ENG-DEP-17. [C1] The recovery time objective for the customer API is four hours. [C2]",
+        "used_chunk_ids": [
+          "eng1",
+          "ops1"
+        ]
+      },
+      {
+        "query_id": "p5j_mf_08",
+        "category": "multi_fact_answers",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The production deployment approval identifier is ENG-DEP-17. [C1] The recovery time objective for the customer API is four hours. [C2]",
+        "used_chunk_ids": [
+          "eng1",
+          "ops1"
+        ]
+      },
+      {
+        "query_id": "p5j_mf_09",
+        "category": "multi_fact_answers",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The production deployment approval identifier is ENG-DEP-17. [C1] The recovery time objective for the customer API is four hours. [C2]",
+        "used_chunk_ids": [
+          "eng1",
+          "ops1"
+        ]
+      },
+      {
+        "query_id": "p5j_mf_10",
+        "category": "multi_fact_answers",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The production deployment approval identifier is ENG-DEP-17. [C1] The recovery time objective for the customer API is four hours. [C2]",
+        "used_chunk_ids": [
+          "eng1",
+          "ops1"
+        ]
+      },
+      {
+        "query_id": "p5j_md_01",
+        "category": "multiple_document_facts",
+        "complete": false,
+        "partial": true,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29. [C1]",
+        "used_chunk_ids": [
+          "west1"
+        ]
+      },
+      {
+        "query_id": "p5j_md_02",
+        "category": "multiple_document_facts",
+        "complete": false,
+        "partial": true,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29. [C1]",
+        "used_chunk_ids": [
+          "west1"
+        ]
+      },
+      {
+        "query_id": "p5j_md_03",
+        "category": "multiple_document_facts",
+        "complete": false,
+        "partial": true,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29. [C1]",
+        "used_chunk_ids": [
+          "west1"
+        ]
+      },
+      {
+        "query_id": "p5j_md_04",
+        "category": "multiple_document_facts",
+        "complete": false,
+        "partial": true,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29. [C1]",
+        "used_chunk_ids": [
+          "west1"
+        ]
+      },
+      {
+        "query_id": "p5j_md_05",
+        "category": "multiple_document_facts",
+        "complete": false,
+        "partial": true,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29. [C1]",
+        "used_chunk_ids": [
+          "west1"
+        ]
+      },
+      {
+        "query_id": "p5j_md_06",
+        "category": "multiple_document_facts",
+        "complete": false,
+        "partial": true,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29. [C1]",
+        "used_chunk_ids": [
+          "west1"
+        ]
+      },
+      {
+        "query_id": "p5j_md_07",
+        "category": "multiple_document_facts",
+        "complete": false,
+        "partial": true,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29. [C1]",
+        "used_chunk_ids": [
+          "west1"
+        ]
+      },
+      {
+        "query_id": "p5j_md_08",
+        "category": "multiple_document_facts",
+        "complete": false,
+        "partial": true,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29. [C1]",
+        "used_chunk_ids": [
+          "west1"
+        ]
+      },
+      {
+        "query_id": "p5j_dr_01",
+        "category": "date_range_endpoints",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "Its production endpoint identifier is ATLAS-API-301. [C1] The initial customer region is eu-west. [C2]",
+        "used_chunk_ids": [
+          "api1",
+          "launch1"
+        ]
+      },
+      {
+        "query_id": "p5j_dr_02",
+        "category": "date_range_endpoints",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "Its production endpoint identifier is ATLAS-API-301. [C1] The initial customer region is eu-west. [C2]",
+        "used_chunk_ids": [
+          "api1",
+          "launch1"
+        ]
+      },
+      {
+        "query_id": "p5j_dr_03",
+        "category": "date_range_endpoints",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "Its production endpoint identifier is ATLAS-API-301. [C1] The initial customer region is eu-west. [C2]",
+        "used_chunk_ids": [
+          "api1",
+          "launch1"
+        ]
+      },
+      {
+        "query_id": "p5j_dr_04",
+        "category": "date_range_endpoints",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "Its production endpoint identifier is ATLAS-API-301. [C1] The initial customer region is eu-west. [C2]",
+        "used_chunk_ids": [
+          "api1",
+          "launch1"
+        ]
+      },
+      {
+        "query_id": "p5j_dr_05",
+        "category": "date_range_endpoints",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "Its production endpoint identifier is ATLAS-API-301. [C1] The initial customer region is eu-west. [C2]",
+        "used_chunk_ids": [
+          "api1",
+          "launch1"
+        ]
+      },
+      {
+        "query_id": "p5j_dr_06",
+        "category": "date_range_endpoints",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "Its production endpoint identifier is ATLAS-API-301. [C1] The initial customer region is eu-west. [C2]",
+        "used_chunk_ids": [
+          "api1",
+          "launch1"
+        ]
+      },
+      {
+        "query_id": "p5j_sc_01",
+        "category": "same_document_multi_chunk",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The international travel approval code is FIN-TRAVEL-52. [C2] Expense reports are due within ten business days. [C1]",
+        "used_chunk_ids": [
+          "fin2",
+          "fin1"
+        ]
+      },
+      {
+        "query_id": "p5j_sc_02",
+        "category": "same_document_multi_chunk",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The international travel approval code is FIN-TRAVEL-52. [C2] Expense reports are due within ten business days. [C1]",
+        "used_chunk_ids": [
+          "fin2",
+          "fin1"
+        ]
+      },
+      {
+        "query_id": "p5j_sc_03",
+        "category": "same_document_multi_chunk",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The international travel approval code is FIN-TRAVEL-52. [C2] Expense reports are due within ten business days. [C1]",
+        "used_chunk_ids": [
+          "fin2",
+          "fin1"
+        ]
+      },
+      {
+        "query_id": "p5j_sc_04",
+        "category": "same_document_multi_chunk",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The international travel approval code is FIN-TRAVEL-52. [C2] Expense reports are due within ten business days. [C1]",
+        "used_chunk_ids": [
+          "fin2",
+          "fin1"
+        ]
+      },
+      {
+        "query_id": "p5j_sc_05",
+        "category": "same_document_multi_chunk",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The international travel approval code is FIN-TRAVEL-52. [C2] Expense reports are due within ten business days. [C1]",
+        "used_chunk_ids": [
+          "fin2",
+          "fin1"
+        ]
+      },
+      {
+        "query_id": "p5j_sc_06",
+        "category": "same_document_multi_chunk",
+        "complete": true,
+        "partial": false,
+        "unsupported_claim": false,
+        "citation_correctness": 1.0,
+        "answer": "The international travel approval code is FIN-TRAVEL-52. [C2] Expense reports are due within ten business days. [C1]",
+        "used_chunk_ids": [
+          "fin2",
+          "fin1"
+        ]
+      }
+    ]
+  }
+}

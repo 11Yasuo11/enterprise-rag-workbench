@@ -1,0 +1,23 @@
+{
+  "phase": "V3_PHASE5E_CONSTRAINT_SEMANTICS_HARDENING",
+  "consumed_phase5d_failure_case_id": "p5d_none_new_03",
+  "diagnosed_relationship": {
+    "question": "at least 25 euros",
+    "evidence": "greater than 25 euros"
+  },
+  "root_cause_summary": "ANSWERABILITY_CONSTRAINT_GUARD_V1 modeled GE(25) entailment using numeric monotonicity: it treated evidence_op=ABOVE (i.e., GT) as satisfying required_op=AT_LEAST (GE). This assumes the policy fact is monotone over a single numeric value, ignoring the boundary inclusion difference where evidence GT(25) excludes exactly 25 from the policy scope.",
+  "code_level_cause": {
+    "file": "src/rag_workbench/safety/answerability_constraint_guard_v1.py",
+    "function": "_numeric_entails",
+    "logic_snippet": "if kind == \"AT_LEAST\": return evidence_at_least or evidence_above or evidence_exact",
+    "why_it_breaks": [
+      "The guard interprets evidence operator ABOVE as satisfying AT_LEAST.",
+      "But under the required boundary-semantics model, GT(25) is an open lower bound (values > 25), while GE(25) is a closed lower bound (values >= 25).",
+      "Therefore GT(25) does NOT entail GE(25) for policy scope questions that depend on whether the boundary value 25 is included."
+    ]
+  },
+  "implications": [
+    "The fix must replace V1's monotone entailment shortcut with an explicit relational boundary semantics model (EQ/GT/GE/LT/LE and BEFORE/AFTER/ON) that respects open vs closed boundaries."
+  ]
+}
+

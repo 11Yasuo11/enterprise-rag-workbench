@@ -1,0 +1,329 @@
+{
+  "audit_id": "v3-phase5k-execution-integrity-audit",
+  "phase": "V3_PHASE5KX_FINAL_EXECUTION_INTEGRITY_AUDIT",
+  "mode": [
+    "DIAGNOSTIC_ONLY",
+    "NO_MODEL_CHANGE",
+    "NO_DATASET_CHANGE",
+    "NO_RETUNING"
+  ],
+  "original_phase_k_preserved": true,
+  "dataset_integrity": {
+    "dataset_path": "data/eval/phase5k/acmeai_enterprise_rag_v3_final_unseen_e2e_120.jsonl",
+    "dataset_hash_actual": "12851a9915ad51eccf2629e6765a8dc9a1731eb308987b0e53ac56468274f404",
+    "dataset_hash_expected": "12851a9915ad51eccf2629e6765a8dc9a1731eb308987b0e53ac56468274f404",
+    "unchanged": true
+  },
+  "runner_identity": {
+    "script_path": "scripts/phase5k_run_final_e2e.py",
+    "entry_point": "main()",
+    "manifest_hash": "58128b81ebafbf7be6320b507684a88253485c1a10bc6d4f95ab33eb967387a0",
+    "phasek_report_hash": "a8e6776b9aaa5f14376a33db7351bec96f948548d64305028de06c4a9162442a"
+  },
+  "provider_audit": {
+    "settings_flags": {
+      "embedding_provider_default": "hashing",
+      "embedding_model_default": "local-hashing-64",
+      "allow_external_calls": true,
+      "allow_external_judge_calls": true,
+      "embedding_api_key_present": true,
+      "judge_api_key_present": true,
+      "openai_api_key_present": false,
+      "judge_provider_default": "openai",
+      "judge_model_default": "gpt-5.6-sol",
+      "llm_provider_default": "extractive"
+    },
+    "embedding_expected": "text-embedding-3-small (openai-compatible)",
+    "embedding_actual": "HashingEmbeddingProvider(dimension=64)",
+    "cross_encoder_expected": "cross-encoder/ms-marco-MiniLM-L6-v2",
+    "cross_encoder_actual": "CrossEncoderReranker(device=cpu)",
+    "judge_expected": "GPT_5_6_SOL_EVIDENCE_SUFFICIENCY_V1",
+    "judge_actual": "NOT_INVOKED (no gate.evaluate call in runner)",
+    "recovery_expected": "existing Generate\u2192Verify recovery runtime",
+    "recovery_actual": "NOT_INVOKED (custom _answer_from_top5 shortcut)",
+    "generator_expected": "GENERATOR_COMPLETENESS_V2",
+    "generator_actual": "NOT_INVOKED (no ExtractiveGenerationProvider / RagService path)"
+  },
+  "arm_execution_identities": {
+    "expected_differences": {
+      "FINAL_R": "Stable V2 architecture",
+      "FINAL_A": "Current V3 reference architecture",
+      "FINAL_B": "Final frozen V3 candidate manifest"
+    },
+    "actual_implementation": {
+      "shared_retrieval_once_per_case": true,
+      "shared_top5_across_all_arms": true,
+      "arm_switch_only_flag": {
+        "FINAL_R": false,
+        "FINAL_A": true,
+        "FINAL_B": true
+      },
+      "effect_of_flag": "only toggles fallback to top5[:1] in _answer_from_top5",
+      "FINAL_A_equals_FINAL_B_runtime": true,
+      "R_A_B_judge_pipeline_switched": false,
+      "R_A_B_generator_pipeline_switched": false
+    },
+    "match_status": "MISMATCH"
+  },
+  "api_cache_audit": {
+    "runner_reported_external_api_calls": 0,
+    "runner_cost_actual_usd": 0.0,
+    "reason_external_calls_zero": "runner uses local hashing embeddings and never invokes hosted judge/recovery/generator providers",
+    "embedding_cache_key_mode": "Retriever.query_embedding_cache (hashing provider keys)",
+    "judge_cache_key_mode": "not applicable in this runner (judge cache never consulted)",
+    "recovery_cache_key_mode": "not applicable in this runner (recovery cache never consulted)"
+  },
+  "abstention_root_cause_audit": {
+    "answerable_case_count": 100,
+    "census": {
+      "TOP5_EMPTY": 100
+    },
+    "interpretation": "All answerable cases hit TOP5_EMPTY earliest in reproduced path; judge/recovery are bypassed entirely."
+  },
+  "representative_case_traces": [
+    {
+      "query_id": "p5k_single_document_001",
+      "category": "single_document",
+      "expected_answerable": true,
+      "dense_candidates": 0,
+      "bm25_candidates": 0,
+      "rrf_union": 0,
+      "top5_count": 0,
+      "top5_document_ids": [],
+      "required_document_ids": [
+        "engineering-deployment-handbook"
+      ],
+      "selected_matches_required": 0,
+      "injection_guard_triggered": false,
+      "earliest_abstention_point": "TOP5_EMPTY"
+    },
+    {
+      "query_id": "p5k_two_document_011",
+      "category": "two_document",
+      "expected_answerable": true,
+      "dense_candidates": 0,
+      "bm25_candidates": 0,
+      "rrf_union": 0,
+      "top5_count": 0,
+      "top5_document_ids": [],
+      "required_document_ids": [
+        "finance-expense-policy",
+        "data-retention-standard"
+      ],
+      "selected_matches_required": 0,
+      "injection_guard_triggered": false,
+      "earliest_abstention_point": "TOP5_EMPTY"
+    },
+    {
+      "query_id": "p5k_three_document_027",
+      "category": "three_document",
+      "expected_answerable": true,
+      "dense_candidates": 0,
+      "bm25_candidates": 0,
+      "rrf_union": 0,
+      "top5_count": 0,
+      "top5_document_ids": [],
+      "required_document_ids": [
+        "remote-work-policy",
+        "engineering-deployment-handbook",
+        "operations-continuity-plan"
+      ],
+      "selected_matches_required": 0,
+      "injection_guard_triggered": false,
+      "earliest_abstention_point": "TOP5_EMPTY"
+    },
+    {
+      "query_id": "p5k_semantic_paraphrase_053",
+      "category": "semantic_paraphrase",
+      "expected_answerable": true,
+      "dense_candidates": 0,
+      "bm25_candidates": 0,
+      "rrf_union": 0,
+      "top5_count": 0,
+      "top5_document_ids": [],
+      "required_document_ids": [
+        "project-atlas-api"
+      ],
+      "selected_matches_required": 0,
+      "injection_guard_triggered": false,
+      "earliest_abstention_point": "TOP5_EMPTY"
+    },
+    {
+      "query_id": "p5k_exact_identifier_063",
+      "category": "exact_identifier",
+      "expected_answerable": true,
+      "dense_candidates": 0,
+      "bm25_candidates": 0,
+      "rrf_union": 0,
+      "top5_count": 0,
+      "top5_document_ids": [],
+      "required_document_ids": [
+        "customer-support-escalation"
+      ],
+      "selected_matches_required": 0,
+      "injection_guard_triggered": false,
+      "earliest_abstention_point": "TOP5_EMPTY"
+    },
+    {
+      "query_id": "p5k_version_sensitive_079",
+      "category": "version_sensitive",
+      "expected_answerable": true,
+      "dense_candidates": 0,
+      "bm25_candidates": 0,
+      "rrf_union": 0,
+      "top5_count": 0,
+      "top5_document_ids": [],
+      "required_document_ids": [
+        "recovery-runbook-east"
+      ],
+      "selected_matches_required": 0,
+      "injection_guard_triggered": false,
+      "earliest_abstention_point": "TOP5_EMPTY"
+    },
+    {
+      "query_id": "p5k_numeric_date_constraint_093",
+      "category": "numeric_date_constraint",
+      "expected_answerable": true,
+      "dense_candidates": 0,
+      "bm25_candidates": 0,
+      "rrf_union": 0,
+      "top5_count": 0,
+      "top5_document_ids": [],
+      "required_document_ids": [
+        "finance-expense-policy"
+      ],
+      "selected_matches_required": 0,
+      "injection_guard_triggered": false,
+      "earliest_abstention_point": "TOP5_EMPTY"
+    },
+    {
+      "query_id": "p5k_region_sensitive_087",
+      "category": "region_sensitive",
+      "expected_answerable": true,
+      "dense_candidates": 0,
+      "bm25_candidates": 0,
+      "rrf_union": 0,
+      "top5_count": 0,
+      "top5_document_ids": [],
+      "required_document_ids": [
+        "recovery-runbook-east"
+      ],
+      "selected_matches_required": 0,
+      "injection_guard_triggered": false,
+      "earliest_abstention_point": "TOP5_EMPTY"
+    },
+    {
+      "query_id": "p5k_same_document_multi_chunk_043",
+      "category": "same_document_multi_chunk",
+      "expected_answerable": true,
+      "dense_candidates": 0,
+      "bm25_candidates": 0,
+      "rrf_union": 0,
+      "top5_count": 0,
+      "top5_document_ids": [],
+      "required_document_ids": [
+        "remote-work-policy"
+      ],
+      "selected_matches_required": 0,
+      "injection_guard_triggered": false,
+      "earliest_abstention_point": "TOP5_EMPTY"
+    },
+    {
+      "query_id": "p5k_near_duplicate_071",
+      "category": "near_duplicate",
+      "expected_answerable": true,
+      "dense_candidates": 0,
+      "bm25_candidates": 0,
+      "rrf_union": 0,
+      "top5_count": 0,
+      "top5_document_ids": [],
+      "required_document_ids": [
+        "recovery-runbook-east"
+      ],
+      "selected_matches_required": 0,
+      "injection_guard_triggered": false,
+      "earliest_abstention_point": "TOP5_EMPTY"
+    }
+  ],
+  "retrieval_metric_audit": {
+    "runner_reported": {
+      "recall_at_5": 0.16666666666666666,
+      "recall_at_10": 0.16666666666666666,
+      "recall_at_20": 0.16666666666666666,
+      "mrr": 0.16666666666666666,
+      "ndcg_at_5": 0.16666666666666666
+    },
+    "independent_recomputation": {
+      "answerable_case_count": 100,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "recall_at_20": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_5": 0.0
+    },
+    "explanation_identical_recall": "Metrics are averaged over all 120 cases; the 20 abstain categories have empty required docs and are hardcoded to recall=1.0, while 100 answerable cases contribute ~0. This yields 20/120 = 0.1667 for Recall@5, @10, @20 and similar constants for MRR/nDCG under empty top-k for answerables."
+  },
+  "fallback_mock_audit": {
+    "activated_nonproduction_paths": [
+      "HashingEmbeddingProvider (explicit local deterministic embedding)",
+      "custom _answer_from_top5 shortcut (bypasses judge/recovery/generator)",
+      "hardcoded external_api_calls=0 and cost=0 in summarize()"
+    ],
+    "phasek_runner_uses_hosted_path": false
+  },
+  "component_matrix": [
+    {
+      "component": "Embedding",
+      "expected": "openai-compatible text-embedding-3-small",
+      "actual": "hashing/local",
+      "match": "MISMATCH"
+    },
+    {
+      "component": "Judge",
+      "expected": "GPT_5_6_SOL_EVIDENCE_SUFFICIENCY_V1",
+      "actual": "not called",
+      "match": "MISMATCH"
+    },
+    {
+      "component": "Recovery",
+      "expected": "existing Generate\u2192Verify",
+      "actual": "not called",
+      "match": "MISMATCH"
+    },
+    {
+      "component": "Generator",
+      "expected": "GENERATOR_COMPLETENESS_V2",
+      "actual": "not called",
+      "match": "MISMATCH"
+    },
+    {
+      "component": "Cross-Encoder",
+      "expected": "pointwise cross-encoder top5",
+      "actual": "called local cross-encoder",
+      "match": "PARTIAL_MATCH"
+    },
+    {
+      "component": "Injection guard",
+      "expected": "QUESTION_INJECTION_GUARD_V2",
+      "actual": "called",
+      "match": "MATCH"
+    },
+    {
+      "component": "Constraint guard",
+      "expected": "ANSWERABILITY_CONSTRAINT_GUARD_V2",
+      "actual": "not called",
+      "match": "MISMATCH"
+    },
+    {
+      "component": "Auth/Tenant checks",
+      "expected": "enabled end-to-end",
+      "actual": "limited citation-level check only",
+      "match": "PARTIAL_MATCH"
+    }
+  ],
+  "execution_validity": "PHASE5K_EXECUTION_INVALID",
+  "primary_execution_root_cause": "Phase-K runner (`scripts/phase5k_run_final_e2e.py`) is a non-production deterministic shortcut pipeline that bypasses hosted judge/recovery/generator architecture and does not instantiate per-arm architecture identities.",
+  "infra_fix_classification": "EVALUATION_INFRASTRUCTURE_FIX",
+  "same_dataset_rerun_policy": "SAME_FROZEN_DATASET_RERUN_ALLOWED_AS_CORRECTIVE_EXECUTION",
+  "rerun_label_required": "CORRECTED_EXECUTION_OF_SAME_FROZEN_FINAL_BENCHMARK"
+}

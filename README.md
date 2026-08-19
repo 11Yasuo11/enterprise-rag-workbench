@@ -380,6 +380,19 @@ V3 research explored Generate→Verify recovery, prompt-injection boundaries, an
 
 **V3_RESEARCH_CYCLE_COMPLETE.** Selected V3 research architecture: `V3_GENERATE_VERIFY_WITH_EVIDENCE_INSTRUCTION_BOUNDARY` (production = false). Full evidence: [`BENCHMARK.md`](BENCHMARK.md).
 
+Authoritative closure (Phase-5KR corrected scoring, 74.17% final accuracy, promotion rejected):
+
+- [V3 Research Postmortem & Interview Guide](docs/V3_RAG_RESEARCH_POSTMORTEM_AND_INTERVIEW_GUIDE.md)
+- [V3 Interview Cheat Sheet](docs/V3_RAG_INTERVIEW_CHEAT_SHEET.md)
+
+Final benchmark scripts (do not confuse invalid historical execution with authoritative results):
+
+| Script | Role |
+|---|---|
+| `scripts/phase5k_run_final_e2e.py` | Historical invalid Phase-K runner (16.67% — audit only) |
+| `scripts/phase5kc_corrected_final_execution.py` | Corrected Phase-5KC execution |
+| `scripts/phase5kr_final_corrected_scoring.py` | Authoritative Phase-5KR scoring |
+
 ### Future research direction
 
 `SAFE_RECOVERY_AFTER_IMPROVED_RANKING` — not part of the current V3 cycle. Research question: How can recovery utilization improve under better ranking without reintroducing unsupported or prompt-injection answers?

@@ -1,0 +1,44 @@
+{
+  "phase": "V3_PHASE5C_POST_CLOSURE_AUDIT_RESEARCH",
+  "historical_generator_audit": {
+    "cases_analyzed": [
+      "fv3_two_07",
+      "fv3_two_12",
+      "fv3_two_13",
+      "fv3_two_17",
+      "fv3_two_18"
+    ],
+    "root_cause": "overlap_candidates[:2] selects top-2 sentences globally by query-term overlap score. For multi-document queries, both selected sentences can come from the same document chunk, omitting the other documents required fact entirely.",
+    "code_location": "src/rag_workbench/providers/llm/extractive.py:overlap_candidates()",
+    "failure_pattern": "GENERATOR_INCOMPLETE \u2014 answer contains only first documents fact",
+    "evidence": {
+      "fv3_two_07": "Answer had ENG-DEP-17 only, missing \"thirty minutes\"",
+      "fv3_two_12": "Answer had \"15 minutes\" only, missing \"seven years\"",
+      "fv3_two_13": "Answer had \"Tuesdays and Thursdays\" only, missing \"two days\"",
+      "fv3_two_17": "Answer had \"CS-1842\" only, missing \"twenty-four months\" (zero-overlap edge case)",
+      "fv3_two_18": "Answer had \"FIN-TRAVEL-52\" only, missing \"April 12, 2026\""
+    },
+    "note": "Phase 3 incorrectly counted these as CORRECT_ANSWER using a weak evaluation rule that did not verify all required facts were present."
+  },
+  "generator_candidate": {
+    "identity": "GENERATOR_COMPLETENESS_V2",
+    "model_name": "deterministic-extractive-v2",
+    "algorithm": "overlap_candidates_complete",
+    "fix_description": "Per-chunk-diverse sentence selection: selects best sentence from each chunk in generation context before filling remaining slots globally. Preserves deterministic behavior.",
+    "constraints_preserved": [
+      "validated supporting evidence only",
+      "no unrestricted free-form generation",
+      "no weakening of abstention",
+      "no Judge modification",
+      "no retrieval modification",
+      "no ranking modification",
+      "no citation weakening",
+      "no ACL weakening",
+      "no version weakening",
+      "no prompt-injection weakening",
+      "deterministic behavior preserved"
+    ],
+    "generator_candidate_hash": "1ffd72c587f8df330944e8a1e8d5914b4440f1d3fafed9bd74a5ff03ccd43f16",
+    "regression_tests": "tests/unit/test_generator_completeness_v2.py (10 tests, all pass)"
+  }
+}

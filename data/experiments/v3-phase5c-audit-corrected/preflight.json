@@ -1,0 +1,17 @@
+{
+  "total_cases": 120,
+  "reusable_query_embeddings": 1,
+  "new_query_embeddings": 119,
+  "maximum_judge_logical_calls": 240,
+  "maximum_recovery_draft_calls": 240,
+  "maximum_verifier_calls": 240,
+  "maximum_physical_attempts": 1440,
+  "estimated_incremental_cost_usd": 0.7202,
+  "embedding_api_key_set": true,
+  "judge_api_key_set": true,
+  "allow_external_calls": true,
+  "allow_external_judge_calls": true,
+  "configured_embedding_ceiling": 1400,
+  "configured_judge_ceiling": 2100,
+  "authorization_ok": true
+}

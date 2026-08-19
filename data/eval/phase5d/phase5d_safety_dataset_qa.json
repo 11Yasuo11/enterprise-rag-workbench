@@ -1,0 +1,297 @@
+{
+  "valid": true,
+  "case_count": 40,
+  "category_distribution": {
+    "prompt_injection": 20,
+    "partial_no_answer": 8,
+    "acl_sensitive": 4,
+    "tenant_isolation": 4,
+    "version_region": 4
+  },
+  "errors": [],
+  "per_case": [
+    {
+      "query_id": "clean_inj_001",
+      "category": "prompt_injection",
+      "ok": true,
+      "fingerprint": "484fcae8d4ed",
+      "reasons": []
+    },
+    {
+      "query_id": "clean_inj_002",
+      "category": "prompt_injection",
+      "ok": true,
+      "fingerprint": "4186536f9031",
+      "reasons": []
+    },
+    {
+      "query_id": "clean_inj_004",
+      "category": "prompt_injection",
+      "ok": true,
+      "fingerprint": "6d4d0ee9151c",
+      "reasons": []
+    },
+    {
+      "query_id": "clean_inj_005",
+      "category": "prompt_injection",
+      "ok": true,
+      "fingerprint": "075bcc5e2138",
+      "reasons": []
+    },
+    {
+      "query_id": "clean_inj_006",
+      "category": "prompt_injection",
+      "ok": true,
+      "fingerprint": "81fb08bbb749",
+      "reasons": []
+    },
+    {
+      "query_id": "clean_inj_007",
+      "category": "prompt_injection",
+      "ok": true,
+      "fingerprint": "1e0cdced24c3",
+      "reasons": []
+    },
+    {
+      "query_id": "clean_inj_008",
+      "category": "prompt_injection",
+      "ok": true,
+      "fingerprint": "b6d9683347bc",
+      "reasons": []
+    },
+    {
+      "query_id": "clean_inj_009",
+      "category": "prompt_injection",
+      "ok": true,
+      "fingerprint": "49e58785ec6e",
+      "reasons": []
+    },
+    {
+      "query_id": "clean_inj_010",
+      "category": "prompt_injection",
+      "ok": true,
+      "fingerprint": "992845b28ba5",
+      "reasons": []
+    },
+    {
+      "query_id": "p5d_inj_new_01",
+      "category": "prompt_injection",
+      "ok": true,
+      "fingerprint": "7b93f24ebf7d",
+      "reasons": []
+    },
+    {
+      "query_id": "p5d_inj_new_02",
+      "category": "prompt_injection",
+      "ok": true,
+      "fingerprint": "5d0cde1bd738",
+      "reasons": []
+    },
+    {
+      "query_id": "p5d_inj_new_03",
+      "category": "prompt_injection",
+      "ok": true,
+      "fingerprint": "071d4c478ac6",
+      "reasons": []
+    },
+    {
+      "query_id": "p5d_inj_new_04",
+      "category": "prompt_injection",
+      "ok": true,
+      "fingerprint": "cf38765dd622",
+      "reasons": []
+    },
+    {
+      "query_id": "p5d_inj_new_05",
+      "category": "prompt_injection",
+      "ok": true,
+      "fingerprint": "9484db1ccd3e",
+      "reasons": []
+    },
+    {
+      "query_id": "p5d_inj_new_06",
+      "category": "prompt_injection",
+      "ok": true,
+      "fingerprint": "4d4b4e94e5ab",
+      "reasons": []
+    },
+    {
+      "query_id": "p5d_inj_new_07",
+      "category": "prompt_injection",
+      "ok": true,
+      "fingerprint": "b5182d4040c1",
+      "reasons": []
+    },
+    {
+      "query_id": "p5d_inj_new_08",
+      "category": "prompt_injection",
+      "ok": true,
+      "fingerprint": "d07551863b0a",
+      "reasons": []
+    },
+    {
+      "query_id": "p5d_inj_new_09",
+      "category": "prompt_injection",
+      "ok": true,
+      "fingerprint": "dcf33e22fc75",
+      "reasons": []
+    },
+    {
+      "query_id": "p5d_inj_new_10",
+      "category": "prompt_injection",
+      "ok": true,
+      "fingerprint": "79171f629267",
+      "reasons": []
+    },
+    {
+      "query_id": "p5d_inj_new_11",
+      "category": "prompt_injection",
+      "ok": true,
+      "fingerprint": "c63da52a783d",
+      "reasons": []
+    },
+    {
+      "query_id": "clean_none_001",
+      "category": "partial_no_answer",
+      "ok": true,
+      "fingerprint": "22a6b986f1e7",
+      "reasons": []
+    },
+    {
+      "query_id": "clean_none_002",
+      "category": "partial_no_answer",
+      "ok": true,
+      "fingerprint": "a58d39c13662",
+      "reasons": []
+    },
+    {
+      "query_id": "clean_none_004",
+      "category": "partial_no_answer",
+      "ok": true,
+      "fingerprint": "2883c599f314",
+      "reasons": []
+    },
+    {
+      "query_id": "p5d_none_new_01",
+      "category": "partial_no_answer",
+      "ok": true,
+      "fingerprint": "a363bd979b54",
+      "reasons": []
+    },
+    {
+      "query_id": "p5d_none_new_02",
+      "category": "partial_no_answer",
+      "ok": true,
+      "fingerprint": "ee494b7cf7bb",
+      "reasons": []
+    },
+    {
+      "query_id": "p5d_none_new_03",
+      "category": "partial_no_answer",
+      "ok": true,
+      "fingerprint": "0eef81bda2e0",
+      "reasons": []
+    },
+    {
+      "query_id": "p5d_none_new_04",
+      "category": "partial_no_answer",
+      "ok": true,
+      "fingerprint": "cec07273cce7",
+      "reasons": []
+    },
+    {
+      "query_id": "p5d_none_new_05",
+      "category": "partial_no_answer",
+      "ok": true,
+      "fingerprint": "8e609767047a",
+      "reasons": []
+    },
+    {
+      "query_id": "clean_acl_001",
+      "category": "acl_sensitive",
+      "ok": true,
+      "fingerprint": "edc7dd464a2a",
+      "reasons": []
+    },
+    {
+      "query_id": "clean_acl_002",
+      "category": "acl_sensitive",
+      "ok": true,
+      "fingerprint": "7dd30266a579",
+      "reasons": []
+    },
+    {
+      "query_id": "clean_acl_003",
+      "category": "acl_sensitive",
+      "ok": true,
+      "fingerprint": "bf471226feea",
+      "reasons": []
+    },
+    {
+      "query_id": "clean_acl_004",
+      "category": "acl_sensitive",
+      "ok": true,
+      "fingerprint": "3dc9540d7a09",
+      "reasons": []
+    },
+    {
+      "query_id": "p5d_tenant_01",
+      "category": "tenant_isolation",
+      "ok": true,
+      "fingerprint": "97b459db4542",
+      "reasons": []
+    },
+    {
+      "query_id": "p5d_tenant_02",
+      "category": "tenant_isolation",
+      "ok": true,
+      "fingerprint": "6340606eed12",
+      "reasons": []
+    },
+    {
+      "query_id": "p5d_tenant_03",
+      "category": "tenant_isolation",
+      "ok": true,
+      "fingerprint": "68d4e9d2525d",
+      "reasons": []
+    },
+    {
+      "query_id": "p5d_tenant_04",
+      "category": "tenant_isolation",
+      "ok": true,
+      "fingerprint": "39367a9b576a",
+      "reasons": []
+    },
+    {
+      "query_id": "clean_vr_001",
+      "category": "version_region",
+      "ok": true,
+      "fingerprint": "af5b07c8df63",
+      "reasons": []
+    },
+    {
+      "query_id": "clean_vr_002",
+      "category": "version_region",
+      "ok": true,
+      "fingerprint": "b232cfb36705",
+      "reasons": []
+    },
+    {
+      "query_id": "clean_vr_003",
+      "category": "version_region",
+      "ok": true,
+      "fingerprint": "4bc16f219b89",
+      "reasons": []
+    },
+    {
+      "query_id": "clean_vr_004",
+      "category": "version_region",
+      "ok": true,
+      "fingerprint": "08b917096218",
+      "reasons": []
+    }
+  ],
+  "qa_version": "phase5d_safety_dataset_qa_v1",
+  "dataset_path": "data/eval/phase5d/v3_phase5d_safety_holdout_40_cases.jsonl",
+  "dataset_sha256": "79fc16a1abf4fda080a1e68173e87b6d1020da26f1d43a236206689aabc943d5"
+}

@@ -1,0 +1,18 @@
+{
+  "phase": "V3_PHASE5I_VERSION_SENSITIVE_RANKING_ROBUSTNESS",
+  "identity": "v3-phase5i-version-ranking",
+  "historical_cases": [
+    "p5e_version_01",
+    "p5e_version_02",
+    "p5e_version_03"
+  ],
+  "source": "phase5f_audit_summary.json + phase5g corrected diagnostic",
+  "finding": "required East/West recovery-runbook evidence exists in BM25 candidate results but is dropped before final pointwise Cross-Encoder Top-5",
+  "root_cause_hypothesis": "semantic reranker underweights lexical version/region tokens relative to generic incident policy context",
+  "classification": "semantic reranker score deficiency with lexical exact-signal loss",
+  "notes": [
+    "Do not use pairwise complementarity rerank as default; it is historically rejected.",
+    "Maintain causal isolation: only ranking component changes in Phase 5I."
+  ]
+}
+

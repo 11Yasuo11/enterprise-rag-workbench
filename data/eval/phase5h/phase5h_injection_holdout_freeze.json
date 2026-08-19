@@ -1,0 +1,10 @@
+{
+  "dataset_id": "acmeai-enterprise-rag-v3-phase5h-injection-holdout-30",
+  "dataset_path": "data/eval/phase5h/v3_phase5h_injection_holdout_30_cases.jsonl",
+  "dataset_hash": "a94bf3c06671e8ecac6b112978bc6b8c53e764d91896b6cd58d4f0a0d41a53c6",
+  "case_count": 30,
+  "distribution": {
+    "true_injection_attacks": 20,
+    "benign_security_analysis": 10
+  }
+}

@@ -1,0 +1,308 @@
+{
+  "valid": true,
+  "case_count": 48,
+  "category_distribution": {
+    "prompt_injection": 6,
+    "numeric_constraint_negative": 12,
+    "numeric_constraint_positive": 8,
+    "date_constraint_negative": 8,
+    "date_constraint_positive": 4,
+    "acl_sensitive": 4,
+    "tenant_isolation": 3,
+    "version_sensitive": 3
+  },
+  "errors": [],
+  "per_case": [
+    {
+      "query_id": "p5e_inj_new_01",
+      "category": "prompt_injection",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_inj_new_02",
+      "category": "prompt_injection",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_inj_new_03",
+      "category": "prompt_injection",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_inj_new_04",
+      "category": "prompt_injection",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_inj_new_05",
+      "category": "prompt_injection",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_inj_new_06",
+      "category": "prompt_injection",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_num_neg_01",
+      "category": "numeric_constraint_negative",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_num_neg_02",
+      "category": "numeric_constraint_negative",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_num_neg_03",
+      "category": "numeric_constraint_negative",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_num_neg_04",
+      "category": "numeric_constraint_negative",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_num_neg_05",
+      "category": "numeric_constraint_negative",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_num_neg_06",
+      "category": "numeric_constraint_negative",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_num_neg_07",
+      "category": "numeric_constraint_negative",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_num_neg_08",
+      "category": "numeric_constraint_negative",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_num_neg_09",
+      "category": "numeric_constraint_negative",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_num_neg_10",
+      "category": "numeric_constraint_negative",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_num_neg_11",
+      "category": "numeric_constraint_negative",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_num_neg_12",
+      "category": "numeric_constraint_negative",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_num_pos_01",
+      "category": "numeric_constraint_positive",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_num_pos_02",
+      "category": "numeric_constraint_positive",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_num_pos_03",
+      "category": "numeric_constraint_positive",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_num_pos_04",
+      "category": "numeric_constraint_positive",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_num_pos_05",
+      "category": "numeric_constraint_positive",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_num_pos_06",
+      "category": "numeric_constraint_positive",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_num_pos_07",
+      "category": "numeric_constraint_positive",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_num_pos_08",
+      "category": "numeric_constraint_positive",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_date_neg_01",
+      "category": "date_constraint_negative",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_date_neg_02",
+      "category": "date_constraint_negative",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_date_neg_03",
+      "category": "date_constraint_negative",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_date_neg_04",
+      "category": "date_constraint_negative",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_date_neg_05",
+      "category": "date_constraint_negative",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_date_neg_06",
+      "category": "date_constraint_negative",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_date_neg_07",
+      "category": "date_constraint_negative",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_date_neg_08",
+      "category": "date_constraint_negative",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_date_pos_01",
+      "category": "date_constraint_positive",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_date_pos_02",
+      "category": "date_constraint_positive",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_date_pos_03",
+      "category": "date_constraint_positive",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_date_pos_04",
+      "category": "date_constraint_positive",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_acl_01",
+      "category": "acl_sensitive",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_acl_02",
+      "category": "acl_sensitive",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_acl_03",
+      "category": "acl_sensitive",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_acl_04",
+      "category": "acl_sensitive",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_tenant_01",
+      "category": "tenant_isolation",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_tenant_02",
+      "category": "tenant_isolation",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_tenant_03",
+      "category": "tenant_isolation",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_version_01",
+      "category": "version_sensitive",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_version_02",
+      "category": "version_sensitive",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "query_id": "p5e_version_03",
+      "category": "version_sensitive",
+      "ok": true,
+      "errors": []
+    }
+  ],
+  "dataset_path": "data/eval/phase5g/v3_phase5g_corrected_safety_diagnostic_48_cases.jsonl",
+  "dataset_sha256": "1c4097a38965fa263bf6277c7c347196bdb0ccefce2d83d5dd597aed516633b3",
+  "qa_version": "phase5g_dataset_qa_v1"
+}

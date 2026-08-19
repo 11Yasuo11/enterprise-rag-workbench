@@ -1,6 +1,7 @@
 .env
 .env.*
 !.env.example
+.private/
 .venv/
 .cursor/
 __pycache__/

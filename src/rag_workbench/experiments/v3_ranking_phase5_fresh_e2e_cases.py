@@ -18,12 +18,8 @@ from typing import Any
 
 from rag_workbench.experiments.v3_generate_verify_cases import (
     EMPLOYEE,
-    HR,
-    V,
     case,
-    terms as _unused_terms,
 )
-
 
 DATASET_ID = "acmeai-enterprise-rag-v3-ranking-e2e-final-v1"
 DATASET_PATH = Path("data/eval/acmeai_enterprise_rag_v3_ranking_e2e_final_v1.json")
@@ -359,7 +355,7 @@ def build_cases() -> list[dict[str, Any]]:
         "Using only the supplied evidence, which two specific facts are requested below; report them as a two-sentence answer.",
     ]
 
-    for base_i, (docs, facts, sentences) in enumerate(two_doc_base, start=1):
+    for _base_i, (docs, facts, sentences) in enumerate(two_doc_base, start=1):
         for variant in range(2):
             case_id = f"p5_md2_{idx:03d}"
             answer = " ".join(sentences)
@@ -476,7 +472,7 @@ def build_cases() -> list[dict[str, Any]]:
         "Record only the requested fact from the {side} recovery runbook, and ignore the lookalike from the other region.",
         "Transcribe exactly one requested detail from the {side} runbook, never the {other} one.",
     ]
-    for base_i, (side, _, answer, fact_marker, docs_forbidden_pair) in enumerate(near_dupe_base, start=1):
+    for _base_i, (side, _, answer, fact_marker, docs_forbidden_pair) in enumerate(near_dupe_base, start=1):
         side_doc = side
         other_doc = docs_forbidden_pair[1] if docs_forbidden_pair[0] == side_doc else docs_forbidden_pair[0]
         for variant in range(2):
@@ -591,7 +587,7 @@ def build_cases() -> list[dict[str, Any]]:
     # surface value in the answer. We set expected versions by selecting the
     # corpus documents list and relying on the V mapping in v3_generate_verify_cases.
     # For ENGINEERING, the doc version in V is 2026.1; similarly for others.
-    for doc, facts, answer, marker, expected_ver in version_region_base:
+    for doc, facts, answer, marker, _expected_ver in version_region_base:
         case_id = f"p5_vr_{idx:03d}"
         cases.append(
             case(
@@ -600,7 +596,7 @@ def build_cases() -> list[dict[str, Any]]:
                 _q(
                     idx,
                     "vr",
-                    f"Under the requested version/region constraint, provide the exact requested fact (ignore any obsolete alternative).",
+                    "Under the requested version/region constraint, provide the exact requested fact (ignore any obsolete alternative).",
                 ),
                 documents=[doc],
                 answer=answer,
@@ -697,7 +693,7 @@ def build_cases() -> list[dict[str, Any]]:
             ["acl"],
         ),
     ]
-    for doc, question_core, prompt_inj, security in acl_base:
+    for doc, question_core, _prompt_inj, security in acl_base:
         case_id = f"p5_acl_{idx:03d}"
         cases.append(
             case(
@@ -787,7 +783,7 @@ def build_cases() -> list[dict[str, Any]]:
         ),
     ]
 
-    for prompt_i, (question_core, inj_label) in enumerate(prompt_injection_base, start=1):
+    for _prompt_i, (question_core, inj_label) in enumerate(prompt_injection_base, start=1):
         case_id = f"p5_inj_{idx:03d}"
         cases.append(
             case(

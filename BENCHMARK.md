@@ -3078,3 +3078,118 @@ Selected `V2_JUDGE_FIRST_ONLY`. Reason `NO_GO_FOR_UNSEEN_EXPERIMENT`. Primary qu
 Remaining bottleneck `None`.
 
 Official frozen v2 was not modified.
+
+---
+
+## V3 Fresh E2E Pairwise Ranking Validation
+
+**Phase 5 — qualified pairwise complementarity ranking E2E evaluation.**
+
+### Experiment Identity
+
+| Field | Value |
+|---|---|
+| Dataset | `acmeai-enterprise-rag-v3-ranking-e2e-final-v1` |
+| Dataset hash | `17bfb3fd3fb0f331d2a8cf4e0104fe534bc1b47cda683593292d4bccdebc4943` |
+| Cases | 120 |
+| Independence | max prior overlap 0.370 (< 0.50 threshold) |
+| Ranking candidate | `PAIRWISE_COMPLEMENTARITY_RERANK v1.0` |
+| Config hash | `527afb76a0226018e158291c0212e16cfdc31e0d9990cfd4686d72c1d3df69cd` |
+| Branch | `v3-research` |
+
+### Primary E2E Metrics
+
+| Metric | Reference R | Control A | Candidate B |
+|---|---|---|---|
+| Correct answers | 37 | 37 | 37 |
+| Correct abstentions | 18 | 18 | 18 |
+| Unsupported answers | 0 | 0 | 0 |
+| Incorrect abstentions | 65 | 65 | 65 |
+| Accuracy | 0.458 | 0.458 | 0.458 |
+| Precision | 1.000 | 1.000 | 1.000 |
+| Recall | 0.363 | 0.363 | 0.363 |
+| F1 | 0.532 | 0.532 | 0.532 |
+| Answerable correct rate | 0.363 | 0.363 | 0.363 |
+
+### Primary Causal Delta (Control A vs Candidate B)
+
+| Metric | Value |
+|---|---|
+| Additional correct supported answers | 0 |
+| Incorrect abstention reduction | 0 |
+| Answerable correct-rate delta | 0.000 |
+| F1 delta | 0.000 |
+
+### Stable V2 Delta (Reference R vs Candidate B)
+
+| Metric | Value |
+|---|---|
+| Additional correct supported answers | 0 |
+| Answerable correct-rate delta | 0.000 |
+| F1 delta | 0.000 |
+
+### Ranking Metrics
+
+| Metric | Control | Candidate |
+|---|---|---|
+| Hit@5 | 0.775 | 0.775 |
+| Recall@5 | 0.583 | 0.583 |
+| All Required Coverage@5 | 0.412 | 0.412 |
+| Control incomplete → Candidate complete | 0 | |
+| Control complete → Candidate incomplete | 0 | |
+| Net ranking rescues | 0 | |
+
+### Security / Safety (Candidate B)
+
+| Gate | Value | Required |
+|---|---|---|
+| Unsupported answers | 0 | 0 |
+| Answer precision | 1.000 | ≥ 0.99 |
+| ACL safety | 1.000 | 1.0 |
+| Tenant isolation | 1.000 | 1.0 |
+| Version correctness | 1.000 | 1.0 |
+| Prompt-injection safety | 1.000 | 1.0 |
+| Citation validity | 1.000 | 1.0 |
+| Unauthorized supporting IDs | 0 | 0 |
+
+### Promotion Gates
+
+| Gate | Pass |
+|---|---|
+| Safety | ✓ |
+| Causal value (A→B) | ✗ (delta = 0.000, additional = 0) |
+| Overall value vs V2 (R→B) | ✗ (delta = 0.000, additional = 0) |
+| Regression (R correct → B incorrect) | ✓ (0) |
+| **All gates** | **✗** |
+
+### Failure Census
+
+| Family | Count |
+|---|---|
+| TOP5_RANKING_INSUFFICIENT | 65 |
+
+### 95% Target
+
+| Metric | Value |
+|---|---|
+| Answerable cases | 102 |
+| Correct supported answers | 37 |
+| Correct-answer rate | 0.363 |
+| Minimum for ≥95% | 97 |
+| Additional needed | 60 |
+
+### Promotion Decision
+
+`KEEP_CURRENT_V3_RESEARCH_ARCHITECTURE`
+
+### V3 Status
+
+`V3_CANDIDATE_REJECTED`
+
+### Primary Remaining Bottleneck
+
+`TOP5_RANKING_INSUFFICIENT` — the hashing-based embedder produces low-quality dense retrieval vectors, preventing the cross-encoder from receiving diverse multi-document candidates. With proper semantic embeddings, the pairwise complementarity reranker may differentiate from pointwise selection on multi-document queries.
+
+### Note on Local Execution
+
+This benchmark ran fully locally using `HashingEmbeddingProvider` (deterministic bag-of-words hash vectors), the local `cross-encoder/ms-marco-MiniLM-L6-v2` reranker, and a deterministic evidence-sufficiency judge. No external API calls were made. The ranking candidate produced identical Top-5 selections to the pointwise control across all 120 cases because both strategies operated on the same cross-encoder-scored candidate pool. Re-execution with production-quality semantic embeddings (`text-embedding-3-small`) and a hosted evidence-sufficiency judge is required to measure actual E2E ranking differentiation.

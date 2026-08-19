@@ -4,7 +4,7 @@ An enterprise-oriented RAG engineering and evaluation workbench for retrieval, r
 
 It is a research and evaluation system, not a production SaaS product. The included AcmeAI knowledge base under `data/synthetic_company` is synthetic. It is not real company data. Every architecture change is measured against a frozen one-shot dataset, with one independent variable, precommitted promotion rules, and persisted failure traces.
 
-**Stable release:** V2 (`enterprise-rag-workbench-v2`). Historical V1 remains frozen and visible. V3 and Agentic RAG are future research, not current features.
+**Stable release:** V2 (`enterprise-rag-workbench-v2`). Historical V1 remains frozen and visible. V3 research is complete — the candidate was rejected and V2 remains the stable release.
 
 | Identity | Value |
 |---|---|
@@ -365,18 +365,24 @@ python -m rag_workbench.cli experiment run \
 
 ---
 
-## Future V3 research
+## V3 research (completed, not promoted)
 
-**Future research, not current features.** Priority follows measured V2 bottlenecks:
+V3 research explored Generate→Verify recovery, prompt-injection boundaries, and evidence-set ranking. Pairwise complementarity improved retrieval coverage substantially on fresh validation and final evaluation, but failed the frozen E2E promotion gates due to limited answer-quality gain and one safety regression. The candidate was therefore rejected and V2 remains the stable release.
 
-1. Generate → Verify recovery for Judge false negatives
-2. Claim-level evidence verification
-3. Final evidence ranking improvement
-4. Large-corpus retrieval under hard negatives
-5. Corrective retrieval
-6. Agentic RAG — possible later architecture: RAG plus GitHub, SQL, Notion, Web, Gmail, and Calendar, with risk-tiered approval. **Not implemented.**
+| Phase | Result |
+|---|---|
+| Phase 1 — Generate→Verify diagnostic | Recovery showed promising historical gains |
+| Phase 2 — Instruction boundary | Deterministic evidence/instruction boundary accepted |
+| Phase 3 — Fresh A/B | Quality gain did not generalize strongly (+1 rescue, +0.010 rate) |
+| Phase 4A — Root-cause | 33/37 Draft failures were ranking-caused, not Draft-model failures |
+| Phase 4B — Ranking validation | Pairwise complementarity qualified (+10 net retrieval rescues) |
+| Phase 5B — Final E2E | Ranking improved (Recall@5 +4.6%, 3-doc coverage 2×) but E2E gain insufficient (+0.029 rate vs +0.05 required) and 1 injection safety failure |
 
-V3, if it exists later, must be documented as its own release. Historical V2 results stay on this page.
+**V3_RESEARCH_CYCLE_COMPLETE.** Selected V3 research architecture: `V3_GENERATE_VERIFY_WITH_EVIDENCE_INSTRUCTION_BOUNDARY` (production = false). Full evidence: [`BENCHMARK.md`](BENCHMARK.md).
+
+### Future research direction
+
+`SAFE_RECOVERY_AFTER_IMPROVED_RANKING` — not part of the current V3 cycle. Research question: How can recovery utilization improve under better ranking without reintroducing unsupported or prompt-injection answers?
 
 ---
 

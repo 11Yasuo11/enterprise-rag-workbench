@@ -66,7 +66,9 @@ FROZEN_JUDGE_SCHEMA_HASH = "6ce9db94e2afa0cdaad4bb29b1b527c08458bebe7d4e47739770
 FROZEN_BOUNDARY_HASH = "7eaa50e05ca3dbef872d7aa812b473384830da6dcd084ca5d91c258d122596f2"
 FROZEN_EXP1_CONFIGURATION_HASH = "8f8ec19a195ef88ad15fd0699664984d4568f54336baf99320541237c8bf0ef9"
 PUBLIC_BOUNDARY_NAME = "evidence-instruction-boundary-v1"
-COST_CAP_USD = 1.0
+# Authorized budget for the hosted Experiment-1 selection run (Sol only).
+# Note: embeddings are reported separately and remain governed by embedding cache ceilings.
+COST_CAP_USD = 2.25
 AUTHORIZED_NEW_LOGICAL_SOL = 180
 EMBEDDING_MODEL = "text-embedding-3-small"
 EMBEDDING_PROVIDER = "openai-compatible"

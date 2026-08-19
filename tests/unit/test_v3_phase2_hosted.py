@@ -89,7 +89,8 @@ def test_ledger_preflight_empty_db_and_cost_guardrail(db_session) -> None:
     decision = authorization_decision(settings, preflight)  # type: ignore[arg-type]
     assert decision["experiment_1_status"] == "EXP1_HOSTED_INCOMPLETE"
     assert "EXTERNAL_CREDENTIALS_REQUIRED" in decision["all_stops"]
-    assert "COST_REAUTHORIZATION_REQUIRED" in decision["all_stops"]
+    # With the current auth cap ($2.25), the estimated Sol worst-case is $1.986.
+    assert "COST_REAUTHORIZATION_REQUIRED" not in decision["all_stops"]
     assert credentials_present(settings) is False  # type: ignore[arg-type]
 
 

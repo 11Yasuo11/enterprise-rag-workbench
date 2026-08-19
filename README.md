@@ -396,6 +396,7 @@ data/synthetic_company       Searchable synthetic corpus
 data/eval                    Frozen evaluation datasets
 data/experiments             Persisted research artifacts
 docs/                        Engineering decisions and experiment chronology
+02_WIKI/RAG/                 Obsidian-compatible RAG knowledge hub (start: RAG.md)
 migrations                   Alembic history (additive; do not rewrite)
 BENCHMARK.md                 Full measured research log
 ```

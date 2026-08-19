@@ -3193,3 +3193,49 @@ Official frozen v2 was not modified.
 ### Note on Local Execution
 
 This benchmark ran fully locally using `HashingEmbeddingProvider` (deterministic bag-of-words hash vectors), the local `cross-encoder/ms-marco-MiniLM-L6-v2` reranker, and a deterministic evidence-sufficiency judge. No external API calls were made. The ranking candidate produced identical Top-5 selections to the pointwise control across all 120 cases because both strategies operated on the same cross-encoder-scored candidate pool. Re-execution with production-quality semantic embeddings (`text-embedding-3-small`) and a hosted evidence-sufficiency judge is required to measure actual E2E ranking differentiation.
+
+### Protocol Status
+
+```
+PROTOCOL_INVALID_FOR_PROMOTION
+DIAGNOSTIC_ONLY
+```
+
+This result must NOT be interpreted as empirical rejection of `PAIRWISE_COMPLEMENTARITY_RERANK v1.0`. The experiment did not test the intended architecture.
+
+---
+
+## V3 Phase 5B — Protocol-Correct Fresh Final E2E Benchmark (BLOCKED)
+
+**Status: `BLOCKED` — `EXTERNAL_CREDENTIALS_REQUIRED`**
+
+Phase 5B was initiated to run the final protocol-correct E2E benchmark using the frozen production-quality identities:
+
+| Component | Required Identity |
+|---|---|
+| Embedding | `openai-compatible` / `text-embedding-3-small` / dim 64 |
+| Primary Judge | GPT-5.6 Sol / `evidence-sufficiency-v1` |
+| Recovery Draft | `generate-verify-draft-v1` |
+| Recovery Verifier | `generate-verify-claim-verifier-v1` |
+| Safety | `evidence-instruction-boundary-v1` |
+| Cross-Encoder | `cross-encoder/ms-marco-MiniLM-L6-v2` rev `233902d` |
+| Candidate | `PAIRWISE_COMPLEMENTARITY_RERANK v1.0` (`527afb76...`) |
+
+### Credential Check
+
+| Credential | Available |
+|---|---|
+| `EMBEDDING_API_KEY` | ✗ |
+| `JUDGE_API_KEY` | ✗ |
+
+Execution stopped before dataset creation per protocol: credentials must be available before any new dataset is created or any inference is attempted.
+
+### Prior Dataset Classification
+
+| Dataset | Status |
+|---|---|
+| `acmeai-enterprise-rag-v3-ranking-e2e-final-v1` | `DIAGNOSTICALLY_CONSUMED`, `PROTOCOL_INVALID_FOR_PROMOTION`, `NOT_VALID_FOR_FUTURE_PROMOTION` |
+
+### Next Step
+
+Provide `EMBEDDING_API_KEY` and `JUDGE_API_KEY` via the Cursor Dashboard (Cloud Agents > Secrets), then resume Phase 5B. The new dataset `acmeai-enterprise-rag-v3-ranking-e2e-final-v2` will be created only after credential and budget verification pass.

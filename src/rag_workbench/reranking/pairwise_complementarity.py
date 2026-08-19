@@ -1,52 +1,158 @@
+# ruff: noqa: E501
+"""Pairwise complementarity rerank.
+
+Preserves original Cross-Encoder relevance as primary signal but applies
+stronger pairwise redundancy penalties with query-conditioned complementarity
+scoring during greedy evidence-set construction.
+
+Key differences from listwise_evidence_set v1.0:
+  - Stronger redundancy penalty (λ=0.45 vs 0.30)
+  - Stronger complement bonus (λ=0.35 vs 0.25)
+  - Pairwise token-Jaccard between the *query-relevant* token subsets of
+    chunk pairs, not the full chunk text. This penalises overlap in
+    query-relevant content more than incidental textual similarity.
+"""
+
 from __future__ import annotations
 
+import re
 from collections.abc import Sequence
 from typing import Any
 
 from rag_workbench.reranking.document_diversity import (
     assert_no_evaluation_label_leakage,
-    select_max_2_chunks_per_document_top5,
+)
+from rag_workbench.reranking.listwise_evidence_set import (
+    _chunk_score,
+    _chunk_text,
+    _normalise_scores,
 )
 
-PAIRWISE_COMPLEMENTARITY_RERANK_V1 = "PAIRWISE_COMPLEMENTARITY_RERANK v1.0"
-PAIRWISE_COMPLEMENTARITY_RERANK_V1_CONFIG_HASH = (
-    "527afb76a0226018e158291c0212e16cfdc31e0d9990cfd4686d72c1d3df69cd"
-)
+ALGORITHM_ID = "PAIRWISE_COMPLEMENTARITY_RERANK"
+ALGORITHM_VERSION = "1.0"
+
+LAMBDA_REDUNDANCY = 0.45
+LAMBDA_COMPLEMENT = 0.35
+
+_TOKEN_RE = re.compile(r"[a-z0-9]+")
 
 
-def pairwise_complementarity_rerank_top5(
+def _tokenize(text: str) -> set[str]:
+    return set(_TOKEN_RE.findall(text.casefold()))
+
+
+def _query_relevant_tokens(chunk_tokens: set[str], query_tokens: set[str]) -> set[str]:
+    return chunk_tokens & query_tokens
+
+
+def _jaccard(a: set[str], b: set[str]) -> float:
+    union = a | b
+    if not union:
+        return 0.0
+    return len(a & b) / len(union)
+
+
+def select_pairwise_complementarity_top5(
     ranked_candidates: Sequence[Any],
+    query: str,
     *,
     top_k: int = 5,
-) -> list[dict[str, Any]]:
-    """Frozen Candidate-B Top-5 selection.
+    lambda_redundancy: float = LAMBDA_REDUNDANCY,
+    lambda_complement: float = LAMBDA_COMPLEMENT,
+) -> list[Any]:
+    """Greedy pairwise complementarity selection.
 
-    Runtime-safe: selection is purely structural over the frozen
-    cross-encoder-ranked candidate list and does *not* use any evaluation
-    labels (expected answers, required ids, etc).
+    Keeps CE relevance as primary signal. Penalises redundancy based on
+    query-relevant token overlap with already-selected chunks. Rewards
+    complementary evidence based on uncovered query tokens.
 
-    The current qualified Candidate-B mapping uses the frozen rule:
-    "at most two chunks per canonical document_id", preserving input order.
+    Same-document chunks with distinct query-relevant content are preserved.
     """
-    # Defensive check: ensure callers didn't smuggle evaluation labels into
-    # the ranking candidates (selection must be label-free).
-    for item in ranked_candidates:
-        assert_no_evaluation_label_leakage(item)
+    if top_k < 1:
+        raise ValueError("top_k must be positive")
+    candidates = list(ranked_candidates)
+    if not candidates:
+        return []
+    for c in candidates:
+        assert_no_evaluation_label_leakage(c)
 
-    selected = select_max_2_chunks_per_document_top5(
-        ranked_candidates, top_k=top_k, max_chunks_per_document=2
-    )
-    # The selector returns the original dicts in input order. We only add a
-    # retrieval_source marker so downstream traces can distinguish arms.
-    for item in selected:
-        if not isinstance(item, dict):
-            raise TypeError(
-                "pairwise_complementarity_rerank_top5 expects dict candidates; "
-                f"got {type(item).__name__}"
+    query_tokens = _tokenize(query)
+    raw_scores = [_chunk_score(c) for c in candidates]
+    norm_scores = _normalise_scores(raw_scores)
+    chunk_tokens = [_tokenize(_chunk_text(c)) for c in candidates]
+    chunk_qr_tokens = [ct & query_tokens for ct in chunk_tokens]
+
+    selected: list[Any] = []
+    selected_qr_tokens: list[set[str]] = []
+    selected_all_tokens: list[set[str]] = []
+    covered_query_tokens: set[str] = set()
+    used_indices: set[int] = set()
+
+    for _ in range(min(top_k, len(candidates))):
+        best_idx = -1
+        best_score = float("-inf")
+        for idx in range(len(candidates)):
+            if idx in used_indices:
+                continue
+            relevance = norm_scores[idx]
+            qr = chunk_qr_tokens[idx]
+            ct = chunk_tokens[idx]
+
+            if selected_qr_tokens:
+                redundancy = max(_jaccard(qr, sq) for sq in selected_qr_tokens)
+            else:
+                redundancy = 0.0
+
+            if selected_all_tokens:
+                text_redundancy = max(_jaccard(ct, st) for st in selected_all_tokens)
+            else:
+                text_redundancy = 0.0
+
+            combined_redundancy = 0.6 * redundancy + 0.4 * text_redundancy
+
+            uncovered = query_tokens - covered_query_tokens
+            new_coverage = len(ct & uncovered) / len(uncovered) if uncovered else 0.0
+
+            marginal = (
+                relevance
+                - lambda_redundancy * combined_redundancy
+                + lambda_complement * new_coverage
             )
 
-    return [
-        {**item, "retrieval_source": "pairwise_complementarity_rerank_top5"}
-        for item in selected
-    ]
+            if marginal > best_score:
+                best_score = marginal
+                best_idx = idx
 
+        if best_idx < 0:
+            break
+        selected.append(candidates[best_idx])
+        selected_qr_tokens.append(chunk_qr_tokens[best_idx])
+        selected_all_tokens.append(chunk_tokens[best_idx])
+        covered_query_tokens |= (chunk_tokens[best_idx] & query_tokens)
+        used_indices.add(best_idx)
+
+    return selected
+
+
+def pairwise_configuration(
+    *,
+    lambda_redundancy: float = LAMBDA_REDUNDANCY,
+    lambda_complement: float = LAMBDA_COMPLEMENT,
+) -> dict[str, Any]:
+    return {
+        "algorithm_id": ALGORITHM_ID,
+        "algorithm_version": ALGORITHM_VERSION,
+        "lambda_redundancy": lambda_redundancy,
+        "lambda_complement": lambda_complement,
+        "redundancy_mode": "pairwise_query_relevant_token_jaccard",
+        "combined_redundancy_weights": {"query_relevant": 0.6, "full_text": 0.4},
+        "selection_objective": (
+            "score(chunk | selected) = normalised_CE_relevance "
+            "- λ_redundancy * (0.6·qr_jaccard + 0.4·text_jaccard) "
+            "+ λ_complement * query_token_new_coverage"
+        ),
+        "query_conditioned_complementarity": True,
+        "respects_same_document_multi_chunk": True,
+        "no_fixed_document_quota": True,
+        "no_ground_truth_labels": True,
+    }

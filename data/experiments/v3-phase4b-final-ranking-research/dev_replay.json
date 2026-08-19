@@ -1,0 +1,241 @@
+{
+  "label": "DEVELOPMENT_ONLY_NOT_PROMOTION_EVIDENCE",
+  "b_cases": 33,
+  "rescued": 7,
+  "not_rescued": 26,
+  "details": [
+    {
+      "case_id": "fv3_two_08",
+      "status": "RESCUED"
+    },
+    {
+      "case_id": "fv3_two_14",
+      "status": "NOT_RESCUED",
+      "missing": [
+        "finance-expense-policy"
+      ]
+    },
+    {
+      "case_id": "fv3_two_19",
+      "status": "RESCUED"
+    },
+    {
+      "case_id": "fv3_three_01",
+      "status": "NOT_RESCUED",
+      "missing": [
+        "operations-continuity-plan",
+        "customer-support-escalation"
+      ]
+    },
+    {
+      "case_id": "fv3_three_02",
+      "status": "NOT_RESCUED",
+      "missing": [
+        "recovery-runbook-west",
+        "recovery-runbook-east",
+        "customer-support-escalation"
+      ]
+    },
+    {
+      "case_id": "fv3_three_04",
+      "status": "NOT_RESCUED",
+      "missing": [
+        "customer-support-escalation"
+      ]
+    },
+    {
+      "case_id": "fv3_three_05",
+      "status": "NOT_RESCUED",
+      "missing": [
+        "security-incident-policy",
+        "remote-work-policy"
+      ]
+    },
+    {
+      "case_id": "fv3_three_07",
+      "status": "NOT_RESCUED",
+      "missing": [
+        "data-retention-standard",
+        "recovery-runbook-west"
+      ]
+    },
+    {
+      "case_id": "fv3_three_09",
+      "status": "NOT_RESCUED",
+      "missing": [
+        "recovery-runbook-west"
+      ]
+    },
+    {
+      "case_id": "fv3_three_10",
+      "status": "NOT_RESCUED",
+      "missing": [
+        "finance-expense-policy",
+        "project-atlas-launch",
+        "remote-work-policy"
+      ]
+    },
+    {
+      "case_id": "fv3_three_12",
+      "status": "NOT_RESCUED",
+      "missing": [
+        "recovery-runbook-east",
+        "customer-support-escalation"
+      ]
+    },
+    {
+      "case_id": "fv3_three_13",
+      "status": "NOT_RESCUED",
+      "missing": [
+        "operations-continuity-plan",
+        "remote-work-policy",
+        "recovery-runbook-west"
+      ]
+    },
+    {
+      "case_id": "fv3_three_14",
+      "status": "NOT_RESCUED",
+      "missing": [
+        "finance-expense-policy",
+        "security-incident-policy"
+      ]
+    },
+    {
+      "case_id": "fv3_three_15",
+      "status": "NOT_RESCUED",
+      "missing": [
+        "project-atlas-launch",
+        "engineering-deployment-handbook",
+        "customer-support-escalation"
+      ]
+    },
+    {
+      "case_id": "fv3_three_16",
+      "status": "NOT_RESCUED",
+      "missing": [
+        "finance-expense-policy",
+        "recovery-runbook-east"
+      ]
+    },
+    {
+      "case_id": "fv3_three_17",
+      "status": "NOT_RESCUED",
+      "missing": [
+        "project-atlas-launch",
+        "security-incident-policy"
+      ]
+    },
+    {
+      "case_id": "fv3_three_18",
+      "status": "NOT_RESCUED",
+      "missing": [
+        "operations-continuity-plan",
+        "customer-support-escalation"
+      ]
+    },
+    {
+      "case_id": "fv3_three_19",
+      "status": "NOT_RESCUED",
+      "missing": [
+        "remote-work-policy"
+      ]
+    },
+    {
+      "case_id": "fv3_three_20",
+      "status": "NOT_RESCUED",
+      "missing": [
+        "finance-expense-policy",
+        "engineering-deployment-handbook",
+        "recovery-runbook-west"
+      ]
+    },
+    {
+      "case_id": "fv3_three_21",
+      "status": "NOT_RESCUED",
+      "missing": [
+        "project-atlas-launch",
+        "remote-work-policy",
+        "customer-support-escalation"
+      ]
+    },
+    {
+      "case_id": "fv3_three_22",
+      "status": "NOT_RESCUED",
+      "missing": [
+        "finance-expense-policy",
+        "security-incident-policy"
+      ]
+    },
+    {
+      "case_id": "fv3_three_25",
+      "status": "NOT_RESCUED",
+      "missing": [
+        "customer-support-escalation"
+      ]
+    },
+    {
+      "case_id": "fv3_three_26",
+      "status": "RESCUED"
+    },
+    {
+      "case_id": "fv3_three_27",
+      "status": "NOT_RESCUED",
+      "missing": [
+        "remote-work-policy",
+        "customer-support-escalation"
+      ]
+    },
+    {
+      "case_id": "fv3_three_28",
+      "status": "NOT_RESCUED",
+      "missing": [
+        "operations-continuity-plan",
+        "engineering-deployment-handbook"
+      ]
+    },
+    {
+      "case_id": "fv3_dup_03",
+      "status": "RESCUED"
+    },
+    {
+      "case_id": "fv3_dup_04",
+      "status": "NOT_RESCUED",
+      "missing": [
+        "recovery-runbook-west"
+      ]
+    },
+    {
+      "case_id": "fv3_dup_05",
+      "status": "RESCUED"
+    },
+    {
+      "case_id": "fv3_dup_06",
+      "status": "NOT_RESCUED",
+      "missing": [
+        "recovery-runbook-west"
+      ]
+    },
+    {
+      "case_id": "fv3_dup_07",
+      "status": "RESCUED"
+    },
+    {
+      "case_id": "fv3_dup_13",
+      "status": "RESCUED"
+    },
+    {
+      "case_id": "fv3_dup_14",
+      "status": "NOT_RESCUED",
+      "missing": [
+        "recovery-runbook-west"
+      ]
+    },
+    {
+      "case_id": "fv3_id_09",
+      "status": "NOT_RESCUED",
+      "missing": [
+        "finance-expense-policy"
+      ]
+    }
+  ]
+}

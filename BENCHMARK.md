@@ -3156,17 +3156,98 @@ Final controlled A/B was not executed. No final inference was consumed.
 
 Frozen Enterprise RAG Workbench v1 and public v2 were not modified. Phase-1 Generate→Verify prompts were not rewritten.
 
----
+## V3 Final Frozen Generate→Verify A/B
 
-## V3 Phase 5 — Local Diagnostic Run
+This section is V3 research. It does not replace frozen Enterprise RAG Workbench v2.
+Architecture `enterprise-rag-workbench-v3-research`. Parent `enterprise-rag-workbench-v2`. Production `false`.
 
-**Status: PROTOCOL_INVALID_FOR_PROMOTION. DIAGNOSTIC_ONLY.**
+### Dataset identity
 
-This benchmark ran fully locally using `HashingEmbeddingProvider` (deterministic bag-of-words hash vectors), the local cross-encoder, and a deterministic evidence-sufficiency judge. No external API calls were made. The ranking candidate produced identical Top-5 selections to the pointwise control across all 120 cases because both strategies operated on the same low-quality hashing-based pool.
+Dataset `acmeai-enterprise-rag-v3-final-eval`. Hash `9b04ccfb0229ad853f396b570de76347c3df2f8ea6d502f9cd202642967fbac0`. Cases `120`.
+Generation method `manual-corpus-grounded-v3-final`. Freeze `2026-08-18 23:31:08.745983+00:00`.
+Maximum prior overlap 0.480000 vs `acmeai_v3_recovery_safety_validation_v1.json` / `s80_ver_02`.
+Independence pass `True`. Overlap ceiling `0.5`.
 
-```text
-PROTOCOL_INVALID_FOR_PROMOTION
-DIAGNOSTIC_ONLY
-```
+### Candidate architecture
 
-This result must NOT be interpreted as empirical rejection of `PAIRWISE_COMPLEMENTARITY_RERANK v1.0`. The experiment did not test the intended architecture.
+Control A is official frozen V2 Judge-first. Candidate B uses the same Top-5 and Primary Judge. Recovery runs only after a schema-valid Judge `answerable=false`: `generate-verify-draft-v1` → `generate-verify-claim-verifier-v1` → completeness → deterministic ACL/tenant/version/citation validation → `evidence-instruction-boundary-v1`.
+Safety mechanism `evidence-instruction-boundary-v1`. Draft `generate-verify-draft-v1`. Verifier `generate-verify-claim-verifier-v1`.
+
+### Control A metrics
+
+Cases 120. Answerable 102. Should-abstain 18.
+Correct answers 59. Correct abstentions 18. Incorrect abstentions 43. Unsupported 0.
+Accuracy 0.641667. Precision 1.000000. Recall 0.578431. F1 0.732919.
+Answerable-case correct-answer rate 0.578431.
+
+### Candidate B metrics
+
+Cases 120. Answerable 102. Should-abstain 18.
+Correct answers 60. Correct abstentions 18. Incorrect abstentions 42. Unsupported 0.
+Accuracy 0.650000. Precision 1.000000. Recall 0.588235. F1 0.740741.
+Answerable-case correct-answer rate 0.588235.
+
+### Paired deltas
+
+Candidate correct − Control correct 1.
+Incorrect abstention delta -1. Unsupported delta 0.
+Answerable correct-rate delta 0.009804. F1 delta 0.007821.
+A abstain → B correct 1. A abstain → B unsupported 0.
+A correct → B correct 59. A correct → B incorrect 0.
+A correct abstain → B correct abstain 18. A correct abstain → B answer 0.
+Additional correct supported 1. Rescue IDs `['fv3_dup_12']`.
+
+### Safety
+
+ACL 1.000000. Tenant 1.000000. Version 1.000000. Prompt-injection 1.000000.
+Citation validity 1.000000. Citation correctness 1.000000.
+Unauthorized supporting IDs 0. Invalid supporting IDs 0. Content identity failures 0.
+Instruction-boundary invocations 6. PASS 6. FAIL 0. SAFE_RECOVERY_BLOCKED 0.
+Prompt-injection cases safe 10 / 10.
+
+### Cost
+
+New query embeddings 120. Embedding tokens 4018.
+Primary Judge logical 120 / physical 120 / live 120.
+Recovery draft logical 61. Verifier logical 6. Transport retries 0.
+Judge tokens in/out 78467/6475. Recovery tokens in/out 47902/4341.
+Embedding USD 0.000080. Judge USD 0.586585. Recovery USD 0.369740. Total final benchmark USD 0.956405.
+Historical diagnostic cost is excluded from this total.
+
+### Latency
+
+Embedding mean 272.031746 / p50 246.538166 / p95 310.863417 / max 1865.639917 (n=120).
+Dense mean 4.540271 / p50 4.337646 / p95 7.581167 / max 19.374875 (n=120). BM25 mean 4.972851 / p50 4.541729 / p95 10.181417 / max 12.147708 (n=120). RRF mean 0.140229 / p50 0.141167 / p95 0.204625 / max 0.473000 (n=120). Cross-Encoder mean 60.648342 / p50 58.993125 / p95 77.735750 / max 176.303250 (n=120).
+Primary Judge mean 1971.361291 / p50 1787.472751 / p95 3253.727792 / max 5328.769833 (n=120). Draft mean 1888.117767 / p50 1420.850958 / p95 4615.962583 / max 5649.615708 (n=61). Verifier mean 0.000000 / p50 0.000000 / p95 0.000000 / max 0.000000 (n=6). Boundary mean 0.334278 / p50 0.337938 / p95 0.458208 / max 0.458208 (n=6).
+Control total mean 2313.744553 / p50 2119.260354 / p95 3727.692791 / max 5637.492001 (n=120). Candidate total mean 3391.203892 / p50 3074.564083 / p95 6965.794500 / max 9972.622582 (n=120).
+Recovery-triggered Candidate mean 4101.930174 / p50 3376.019582 / p95 8403.200085 / max 9972.622582 (n=61). Non-recovery Candidate mean 2656.385194 / p50 2385.089834 / p95 4718.140293 / max 5637.492001 (n=59).
+
+### Failure census
+
+`{'RECOVERY_DRAFT_CANNOT_ANSWER': 37, 'CROSS_ENCODER_DEMOTED_REQUIRED_EVIDENCE': 4, 'CROSS_ENCODER_FAILED_TO_PROMOTE': 1}`.
+Primary remaining bottleneck `RECOVERY_DRAFT_CANNOT_ANSWER`.
+
+### Retrieval
+
+Hit@5 0.862745. Recall@5 0.745098. MRR 0.654575. nDCG 0.635942.
+Required Evidence Recall 0.745098. All Required Evidence Coverage@5 0.637255.
+Pool Required Evidence Recall 1.000000. Pool All Required Evidence Coverage 1.000000.
+Pool-complete / Top-5-incomplete 40.
+
+### Recovery funnel
+
+Judge negatives 61 → triggered 61 → draft 6 → verify 6 → completeness 6 → boundary PASS 6 → correct supported recovery 1.
+Losses `{'not_triggered': 0, 'draft': 55, 'claim_verification': 0, 'completeness': 0, 'instruction_boundary': 0}`.
+
+### 95% target
+
+Answerable 102. Correct supported 60. Rate 0.588235.
+Minimum correct for >=95% 97. Additional still required 37. Claimed 95 `False`.
+
+### Promotion decision
+
+`KEEP_V2_JUDGE_FIRST`. V3 status `V3_CANDIDATE_REJECTED`. Selected `V2_JUDGE_FIRST_ONLY`.
+
+### Known limitations
+
+This is a one-shot evaluation of an already-frozen candidate. Failures discovered here are future research, not a license to retune prompts, the instruction boundary, retrieval, the Judge, or the promotion policy. Official public v2 was not modified.

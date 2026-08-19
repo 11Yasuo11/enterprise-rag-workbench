@@ -1,0 +1,39 @@
+{
+  "ranking_strategy": "PAIRWISE_COMPLEMENTARITY_RERANK",
+  "algorithm_version": "1.0",
+  "configuration": {
+    "algorithm_id": "PAIRWISE_COMPLEMENTARITY_RERANK",
+    "algorithm_version": "1.0",
+    "lambda_redundancy": 0.45,
+    "lambda_complement": 0.35,
+    "redundancy_mode": "pairwise_query_relevant_token_jaccard",
+    "combined_redundancy_weights": {
+      "query_relevant": 0.6,
+      "full_text": 0.4
+    },
+    "selection_objective": "score(chunk | selected) = normalised_CE_relevance - \u03bb_redundancy * (0.6\u00b7qr_jaccard + 0.4\u00b7text_jaccard) + \u03bb_complement * query_token_new_coverage",
+    "query_conditioned_complementarity": true,
+    "respects_same_document_multi_chunk": true,
+    "no_fixed_document_quota": true,
+    "no_ground_truth_labels": true
+  },
+  "configuration_hash": "527afb76a0226018e158291c0212e16cfdc31e0d9990cfd4686d72c1d3df69cd",
+  "model_identity": "cross-encoder/ms-marco-MiniLM-L6-v2 (scoring only, selection is local)",
+  "validation_dataset_id": "acmeai-v3-ranking-validation-v1",
+  "validation_dataset_hash": "d669f4889c4ade7f7e6e15f3ef83b579af9cd219bc569445d2d1ac02c1573d83",
+  "validation_results": {
+    "all_required_evidence_coverage_at_5": 0.875,
+    "three_document_coverage_at_5": 0.6857,
+    "two_document_coverage_at_5": 1.0,
+    "same_doc_multi_chunk_coverage": 1.0,
+    "near_duplicate_preferred_source_success": 0.5333,
+    "exact_identifier_recall_at_5": 1.0,
+    "version_correctness": 1.0,
+    "acl_safety": 1.0,
+    "rescues": 11,
+    "regressions": 1,
+    "net_rescues": 10
+  },
+  "selection_timestamp": "2026-08-19T11:28:56.056492+00:00",
+  "frozen": true
+}

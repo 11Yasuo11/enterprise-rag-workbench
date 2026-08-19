@@ -117,8 +117,12 @@ def persist_v3_phase2_markdown(status: dict[str, Any], path: Path | None = None)
     target = path or Path("BENCHMARK.md")
     rendered = render_v3_phase2_markdown(status)
     current = target.read_text() if target.exists() else ""
-    if V3_PHASE2_BENCHMARK_HEADING in current:
-        prefix, _sep, _rest = current.partition(V3_PHASE2_BENCHMARK_HEADING)
-        target.write_text(prefix.rstrip() + "\n\n" + rendered)
+    if V3_PHASE2_BENCHMARK_HEADING not in current:
+        target.write_text(current.rstrip() + "\n\n" + rendered)
         return
-    target.write_text(current.rstrip() + "\n\n" + rendered)
+    prefix, _sep, rest = current.partition(V3_PHASE2_BENCHMARK_HEADING)
+    next_idx = rest.find("\n## ")
+    suffix = rest[next_idx:] if next_idx != -1 else ""
+    target.write_text(
+        prefix.rstrip() + "\n\n" + rendered.rstrip() + ("\n" + suffix if suffix else "\n")
+    )

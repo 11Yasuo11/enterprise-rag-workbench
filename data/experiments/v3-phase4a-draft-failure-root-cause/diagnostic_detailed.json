@@ -1,0 +1,2023 @@
+{
+  "diagnosis": {
+    "fv3_two_08": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_two_14": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_two_19": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_01": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_02": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_04": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_05": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_07": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_09": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_10": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_11": "A_TRUE_DRAFT_FAILURE_WITH_SUFFICIENT_TOP5",
+    "fv3_three_12": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_13": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_14": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_15": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_16": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_17": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_18": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_19": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_20": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_21": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_22": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_25": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_26": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_27": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_28": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_dup_03": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_dup_04": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_dup_05": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_dup_06": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_dup_07": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_dup_09": "A_TRUE_DRAFT_FAILURE_WITH_SUFFICIENT_TOP5",
+    "fv3_dup_10": "A_TRUE_DRAFT_FAILURE_WITH_SUFFICIENT_TOP5",
+    "fv3_dup_11": "C_EVIDENCE_PRESENT_BUT_VERSION_OR_SOURCE_WRONG",
+    "fv3_dup_13": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_dup_14": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_id_09": "B_TOP5_INSUFFICIENT_RANKING_FAILURE"
+  },
+  "funnel": {
+    "fv3_two_08": {
+      "category": "multidoc_two",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 2,
+      "required_documents": [
+        "operations-continuity-plan",
+        "project-atlas-launch"
+      ],
+      "required_markers": [
+        "four hours",
+        "Product Operations"
+      ],
+      "candidate_pool_evidence_complete": true,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "project-atlas-launch"
+      ],
+      "missing_required_markers": [
+        "Product Operations"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.5
+    },
+    "fv3_two_14": {
+      "category": "multidoc_two",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 2,
+      "required_documents": [
+        "operations-continuity-plan",
+        "finance-expense-policy"
+      ],
+      "required_markers": [
+        "four hours",
+        "25 euros"
+      ],
+      "candidate_pool_evidence_complete": true,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "finance-expense-policy"
+      ],
+      "missing_required_markers": [
+        "25 euros"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.5
+    },
+    "fv3_two_19": {
+      "category": "multidoc_two",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 2,
+      "required_documents": [
+        "remote-work-policy",
+        "project-atlas-api"
+      ],
+      "required_markers": [
+        "every month",
+        "Platform Interfaces"
+      ],
+      "candidate_pool_evidence_complete": true,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [],
+      "missing_required_markers": [
+        "every month"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 1.0,
+      "metrics_preferred_source_success": 1.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 1.0
+    },
+    "fv3_three_01": {
+      "category": "multidoc_three",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 3,
+      "required_documents": [
+        "engineering-deployment-handbook",
+        "operations-continuity-plan",
+        "customer-support-escalation"
+      ],
+      "required_markers": [
+        "ENG-DEP-17",
+        "four hours",
+        "CS-1842"
+      ],
+      "candidate_pool_evidence_complete": true,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "engineering-deployment-handbook"
+      ],
+      "missing_required_markers": [
+        "ENG-DEP-17",
+        "four hours"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.6666666666666666
+    },
+    "fv3_three_02": {
+      "category": "multidoc_three",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 3,
+      "required_documents": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "customer-support-escalation"
+      ],
+      "required_markers": [
+        "OPS-REC-E17",
+        "OPS-REC-W29",
+        "CS-1842"
+      ],
+      "candidate_pool_evidence_complete": true,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "customer-support-escalation"
+      ],
+      "missing_required_markers": [
+        "OPS-REC-E17",
+        "OPS-REC-W29",
+        "CS-1842"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.0
+    },
+    "fv3_three_04": {
+      "category": "multidoc_three",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 3,
+      "required_documents": [
+        "finance-expense-policy",
+        "data-retention-standard",
+        "customer-support-escalation"
+      ],
+      "required_markers": [
+        "FIN-TRAVEL-52",
+        "LEGAL-DEL-08",
+        "thirty minutes"
+      ],
+      "candidate_pool_evidence_complete": true,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "finance-expense-policy"
+      ],
+      "missing_required_markers": [
+        "FIN-TRAVEL-52"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.6666666666666666
+    },
+    "fv3_three_05": {
+      "category": "multidoc_three",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 3,
+      "required_documents": [
+        "engineering-deployment-handbook",
+        "remote-work-policy",
+        "security-incident-policy"
+      ],
+      "required_markers": [
+        "ENG-DEP-17",
+        "two days",
+        "15 minutes"
+      ],
+      "candidate_pool_evidence_complete": true,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "remote-work-policy"
+      ],
+      "missing_required_markers": [
+        "two days",
+        "15 minutes"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.6666666666666666
+    },
+    "fv3_three_07": {
+      "category": "multidoc_three",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 3,
+      "required_documents": [
+        "recovery-runbook-west",
+        "project-atlas-api",
+        "data-retention-standard"
+      ],
+      "required_markers": [
+        "us-east",
+        "v3",
+        "seven years"
+      ],
+      "candidate_pool_evidence_complete": false,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "recovery-runbook-west"
+      ],
+      "missing_required_markers": [
+        "us-east",
+        "seven years"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.6666666666666666
+    },
+    "fv3_three_09": {
+      "category": "multidoc_three",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 3,
+      "required_documents": [
+        "engineering-deployment-handbook",
+        "recovery-runbook-east",
+        "recovery-runbook-west"
+      ],
+      "required_markers": [
+        "Tuesdays and Thursdays",
+        "OPS-REC-E17",
+        "OPS-REC-W29"
+      ],
+      "candidate_pool_evidence_complete": true,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "recovery-runbook-east",
+        "recovery-runbook-west"
+      ],
+      "missing_required_markers": [
+        "OPS-REC-E17",
+        "OPS-REC-W29"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.3333333333333333
+    },
+    "fv3_three_10": {
+      "category": "multidoc_three",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 3,
+      "required_documents": [
+        "project-atlas-launch",
+        "remote-work-policy",
+        "finance-expense-policy"
+      ],
+      "required_markers": [
+        "Product Operations",
+        "every month",
+        "ten business days"
+      ],
+      "candidate_pool_evidence_complete": false,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "project-atlas-launch",
+        "remote-work-policy",
+        "finance-expense-policy"
+      ],
+      "missing_required_markers": [
+        "Product Operations",
+        "every month",
+        "ten business days"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.0
+    },
+    "fv3_three_11": {
+      "category": "multidoc_three",
+      "diagnosis": "A_TRUE_DRAFT_FAILURE_WITH_SUFFICIENT_TOP5",
+      "required_evidence_count": 3,
+      "required_documents": [
+        "data-retention-standard",
+        "security-incident-policy",
+        "engineering-deployment-handbook"
+      ],
+      "required_markers": [
+        "LEGAL-DEL-08",
+        "Engineering and Customer Support",
+        "ENG-DEP-17"
+      ],
+      "candidate_pool_evidence_complete": true,
+      "top5_evidence_complete": true,
+      "missing_required_documents": [],
+      "missing_required_markers": [],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": false,
+      "metrics_version_correct": 1.0,
+      "metrics_preferred_source_success": 1.0,
+      "pool_complete": true,
+      "retrieval_complete": true,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 1.0
+    },
+    "fv3_three_12": {
+      "category": "multidoc_three",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 3,
+      "required_documents": [
+        "customer-support-escalation",
+        "recovery-runbook-east",
+        "project-atlas-api"
+      ],
+      "required_markers": [
+        "thirty minutes",
+        "first Wednesday",
+        "ATLAS-API-301"
+      ],
+      "candidate_pool_evidence_complete": true,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "recovery-runbook-east"
+      ],
+      "missing_required_markers": [
+        "first Wednesday"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.6666666666666666
+    },
+    "fv3_three_13": {
+      "category": "multidoc_three",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 3,
+      "required_documents": [
+        "operations-continuity-plan",
+        "recovery-runbook-west",
+        "remote-work-policy"
+      ],
+      "required_markers": [
+        "four hours",
+        "second Wednesday",
+        "two days"
+      ],
+      "candidate_pool_evidence_complete": true,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "operations-continuity-plan",
+        "recovery-runbook-west",
+        "remote-work-policy"
+      ],
+      "missing_required_markers": [
+        "four hours",
+        "second Wednesday",
+        "two days"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.0
+    },
+    "fv3_three_14": {
+      "category": "multidoc_three",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 3,
+      "required_documents": [
+        "finance-expense-policy",
+        "project-atlas-api",
+        "security-incident-policy"
+      ],
+      "required_markers": [
+        "FIN-TRAVEL-52",
+        "Platform Interfaces",
+        "15 minutes"
+      ],
+      "candidate_pool_evidence_complete": true,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "finance-expense-policy",
+        "security-incident-policy"
+      ],
+      "missing_required_markers": [
+        "FIN-TRAVEL-52",
+        "Platform Interfaces",
+        "15 minutes"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.3333333333333333
+    },
+    "fv3_three_15": {
+      "category": "multidoc_three",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 3,
+      "required_documents": [
+        "engineering-deployment-handbook",
+        "customer-support-escalation",
+        "project-atlas-launch"
+      ],
+      "required_markers": [
+        "ENG-DEP-17",
+        "CS-1842",
+        "eu-west"
+      ],
+      "candidate_pool_evidence_complete": true,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "customer-support-escalation",
+        "project-atlas-launch"
+      ],
+      "missing_required_markers": [
+        "CS-1842",
+        "eu-west"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.3333333333333333
+    },
+    "fv3_three_16": {
+      "category": "multidoc_three",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 3,
+      "required_documents": [
+        "recovery-runbook-east",
+        "data-retention-standard",
+        "finance-expense-policy"
+      ],
+      "required_markers": [
+        "OPS-REC-E17",
+        "twenty-four months",
+        "25 euros"
+      ],
+      "candidate_pool_evidence_complete": false,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "recovery-runbook-east",
+        "finance-expense-policy"
+      ],
+      "missing_required_markers": [
+        "OPS-REC-E17",
+        "twenty-four months",
+        "25 euros"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.3333333333333333
+    },
+    "fv3_three_17": {
+      "category": "multidoc_three",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 3,
+      "required_documents": [
+        "recovery-runbook-west",
+        "security-incident-policy",
+        "project-atlas-launch"
+      ],
+      "required_markers": [
+        "OPS-REC-W29",
+        "15 minutes",
+        "April 12, 2026"
+      ],
+      "candidate_pool_evidence_complete": false,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "recovery-runbook-west",
+        "project-atlas-launch"
+      ],
+      "missing_required_markers": [
+        "OPS-REC-W29",
+        "15 minutes",
+        "April 12, 2026"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.3333333333333333
+    },
+    "fv3_three_18": {
+      "category": "multidoc_three",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 3,
+      "required_documents": [
+        "operations-continuity-plan",
+        "project-atlas-api",
+        "customer-support-escalation"
+      ],
+      "required_markers": [
+        "four hours",
+        "v3",
+        "thirty minutes"
+      ],
+      "candidate_pool_evidence_complete": true,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "operations-continuity-plan",
+        "customer-support-escalation"
+      ],
+      "missing_required_markers": [
+        "four hours",
+        "thirty minutes"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.3333333333333333
+    },
+    "fv3_three_19": {
+      "category": "multidoc_three",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 3,
+      "required_documents": [
+        "remote-work-policy",
+        "data-retention-standard",
+        "recovery-runbook-east"
+      ],
+      "required_markers": [
+        "two days",
+        "LEGAL-DEL-08",
+        "eu-central"
+      ],
+      "candidate_pool_evidence_complete": true,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "remote-work-policy",
+        "recovery-runbook-east"
+      ],
+      "missing_required_markers": [
+        "two days",
+        "eu-central"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.3333333333333333
+    },
+    "fv3_three_20": {
+      "category": "multidoc_three",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 3,
+      "required_documents": [
+        "engineering-deployment-handbook",
+        "finance-expense-policy",
+        "recovery-runbook-west"
+      ],
+      "required_markers": [
+        "ENG-DEP-17",
+        "FIN-TRAVEL-52",
+        "us-east"
+      ],
+      "candidate_pool_evidence_complete": true,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "finance-expense-policy",
+        "recovery-runbook-west"
+      ],
+      "missing_required_markers": [
+        "FIN-TRAVEL-52",
+        "us-east"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.3333333333333333
+    },
+    "fv3_three_21": {
+      "category": "multidoc_three",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 3,
+      "required_documents": [
+        "customer-support-escalation",
+        "remote-work-policy",
+        "project-atlas-launch"
+      ],
+      "required_markers": [
+        "CS-1842",
+        "every month",
+        "Product Operations"
+      ],
+      "candidate_pool_evidence_complete": false,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "customer-support-escalation",
+        "remote-work-policy",
+        "project-atlas-launch"
+      ],
+      "missing_required_markers": [
+        "CS-1842",
+        "every month",
+        "Product Operations"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.0
+    },
+    "fv3_three_22": {
+      "category": "multidoc_three",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 3,
+      "required_documents": [
+        "security-incident-policy",
+        "recovery-runbook-east",
+        "finance-expense-policy"
+      ],
+      "required_markers": [
+        "15 minutes",
+        "first Wednesday",
+        "ten business days"
+      ],
+      "candidate_pool_evidence_complete": false,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "security-incident-policy",
+        "recovery-runbook-east",
+        "finance-expense-policy"
+      ],
+      "missing_required_markers": [
+        "15 minutes",
+        "first Wednesday",
+        "ten business days"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.0
+    },
+    "fv3_three_25": {
+      "category": "multidoc_three",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 3,
+      "required_documents": [
+        "recovery-runbook-west",
+        "customer-support-escalation",
+        "data-retention-standard"
+      ],
+      "required_markers": [
+        "second Wednesday",
+        "thirty minutes",
+        "twenty-four months"
+      ],
+      "candidate_pool_evidence_complete": true,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "recovery-runbook-west"
+      ],
+      "missing_required_markers": [
+        "second Wednesday",
+        "twenty-four months"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.6666666666666666
+    },
+    "fv3_three_26": {
+      "category": "multidoc_three",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 3,
+      "required_documents": [
+        "recovery-runbook-east",
+        "operations-continuity-plan",
+        "finance-expense-policy"
+      ],
+      "required_markers": [
+        "OPS-REC-E17",
+        "four hours",
+        "FIN-TRAVEL-52"
+      ],
+      "candidate_pool_evidence_complete": true,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "recovery-runbook-east",
+        "finance-expense-policy"
+      ],
+      "missing_required_markers": [
+        "OPS-REC-E17",
+        "four hours",
+        "FIN-TRAVEL-52"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.3333333333333333
+    },
+    "fv3_three_27": {
+      "category": "multidoc_three",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 3,
+      "required_documents": [
+        "remote-work-policy",
+        "project-atlas-api",
+        "customer-support-escalation"
+      ],
+      "required_markers": [
+        "two days",
+        "Platform Interfaces",
+        "CS-1842"
+      ],
+      "candidate_pool_evidence_complete": true,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "remote-work-policy",
+        "customer-support-escalation"
+      ],
+      "missing_required_markers": [
+        "two days",
+        "Platform Interfaces",
+        "CS-1842"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.3333333333333333
+    },
+    "fv3_three_28": {
+      "category": "multidoc_three",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 3,
+      "required_documents": [
+        "engineering-deployment-handbook",
+        "operations-continuity-plan",
+        "project-atlas-launch"
+      ],
+      "required_markers": [
+        "ENG-DEP-17",
+        "four hours",
+        "April 12, 2026"
+      ],
+      "candidate_pool_evidence_complete": false,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "operations-continuity-plan",
+        "project-atlas-launch"
+      ],
+      "missing_required_markers": [
+        "four hours",
+        "April 12, 2026"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.3333333333333333
+    },
+    "fv3_dup_03": {
+      "category": "near_duplicate",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 1,
+      "required_documents": [
+        "recovery-runbook-east"
+      ],
+      "required_markers": [
+        "first Wednesday"
+      ],
+      "candidate_pool_evidence_complete": true,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "recovery-runbook-east"
+      ],
+      "missing_required_markers": [
+        "first Wednesday"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.0
+    },
+    "fv3_dup_04": {
+      "category": "near_duplicate",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 1,
+      "required_documents": [
+        "recovery-runbook-west"
+      ],
+      "required_markers": [
+        "second Wednesday"
+      ],
+      "candidate_pool_evidence_complete": true,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "recovery-runbook-west"
+      ],
+      "missing_required_markers": [
+        "second Wednesday"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.0
+    },
+    "fv3_dup_05": {
+      "category": "near_duplicate",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 1,
+      "required_documents": [
+        "recovery-runbook-east"
+      ],
+      "required_markers": [
+        "eu-central"
+      ],
+      "candidate_pool_evidence_complete": true,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "recovery-runbook-east"
+      ],
+      "missing_required_markers": [
+        "eu-central"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.0
+    },
+    "fv3_dup_06": {
+      "category": "near_duplicate",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 1,
+      "required_documents": [
+        "recovery-runbook-west"
+      ],
+      "required_markers": [
+        "us-east"
+      ],
+      "candidate_pool_evidence_complete": true,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "recovery-runbook-west"
+      ],
+      "missing_required_markers": [
+        "us-east"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.0
+    },
+    "fv3_dup_07": {
+      "category": "near_duplicate",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 1,
+      "required_documents": [
+        "recovery-runbook-east"
+      ],
+      "required_markers": [
+        "OPS-REC-E17"
+      ],
+      "candidate_pool_evidence_complete": true,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "recovery-runbook-east"
+      ],
+      "missing_required_markers": [
+        "OPS-REC-E17"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.0
+    },
+    "fv3_dup_09": {
+      "category": "near_duplicate",
+      "diagnosis": "A_TRUE_DRAFT_FAILURE_WITH_SUFFICIENT_TOP5",
+      "required_evidence_count": 1,
+      "required_documents": [
+        "recovery-runbook-east"
+      ],
+      "required_markers": [
+        "first Wednesday"
+      ],
+      "candidate_pool_evidence_complete": true,
+      "top5_evidence_complete": true,
+      "missing_required_documents": [],
+      "missing_required_markers": [],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": false,
+      "metrics_version_correct": 1.0,
+      "metrics_preferred_source_success": 1.0,
+      "pool_complete": true,
+      "retrieval_complete": true,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 1.0
+    },
+    "fv3_dup_10": {
+      "category": "near_duplicate",
+      "diagnosis": "A_TRUE_DRAFT_FAILURE_WITH_SUFFICIENT_TOP5",
+      "required_evidence_count": 1,
+      "required_documents": [
+        "recovery-runbook-west"
+      ],
+      "required_markers": [
+        "second Wednesday"
+      ],
+      "candidate_pool_evidence_complete": true,
+      "top5_evidence_complete": true,
+      "missing_required_documents": [],
+      "missing_required_markers": [],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": false,
+      "metrics_version_correct": 1.0,
+      "metrics_preferred_source_success": 1.0,
+      "pool_complete": true,
+      "retrieval_complete": true,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 1.0
+    },
+    "fv3_dup_11": {
+      "category": "near_duplicate",
+      "diagnosis": "C_EVIDENCE_PRESENT_BUT_VERSION_OR_SOURCE_WRONG",
+      "required_evidence_count": 1,
+      "required_documents": [
+        "recovery-runbook-east"
+      ],
+      "required_markers": [
+        "eu-central"
+      ],
+      "candidate_pool_evidence_complete": true,
+      "top5_evidence_complete": true,
+      "missing_required_documents": [],
+      "missing_required_markers": [],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 1.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": true,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 1.0
+    },
+    "fv3_dup_13": {
+      "category": "near_duplicate",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 1,
+      "required_documents": [
+        "recovery-runbook-east"
+      ],
+      "required_markers": [
+        "OPS-REC-E17"
+      ],
+      "candidate_pool_evidence_complete": true,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "recovery-runbook-east"
+      ],
+      "missing_required_markers": [
+        "OPS-REC-E17"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.0
+    },
+    "fv3_dup_14": {
+      "category": "near_duplicate",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 1,
+      "required_documents": [
+        "recovery-runbook-west"
+      ],
+      "required_markers": [
+        "OPS-REC-W29"
+      ],
+      "candidate_pool_evidence_complete": true,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "recovery-runbook-west"
+      ],
+      "missing_required_markers": [
+        "OPS-REC-W29"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.0
+    },
+    "fv3_id_09": {
+      "category": "exact_identifier",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_evidence_count": 1,
+      "required_documents": [
+        "finance-expense-policy"
+      ],
+      "required_markers": [
+        "25 euros"
+      ],
+      "candidate_pool_evidence_complete": true,
+      "top5_evidence_complete": false,
+      "missing_required_documents": [
+        "finance-expense-policy"
+      ],
+      "missing_required_markers": [
+        "25 euros"
+      ],
+      "primary_judge_answerable": false,
+      "primary_judge_class": "FN",
+      "draft_typed_failure": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "safe_draft_abstention": true,
+      "metrics_version_correct": 0.0,
+      "metrics_preferred_source_success": 0.0,
+      "pool_complete": true,
+      "retrieval_complete": false,
+      "pool_required_evidence_recall": 1.0,
+      "top5_required_evidence_recall_at_5": 0.0
+    }
+  },
+  "md_two_cases": [
+    "fv3_two_08",
+    "fv3_two_14",
+    "fv3_two_19"
+  ],
+  "md_three_cases": [
+    "fv3_three_01",
+    "fv3_three_02",
+    "fv3_three_04",
+    "fv3_three_05",
+    "fv3_three_07",
+    "fv3_three_09",
+    "fv3_three_10",
+    "fv3_three_11",
+    "fv3_three_12",
+    "fv3_three_13",
+    "fv3_three_14",
+    "fv3_three_15",
+    "fv3_three_16",
+    "fv3_three_17",
+    "fv3_three_18",
+    "fv3_three_19",
+    "fv3_three_20",
+    "fv3_three_21",
+    "fv3_three_22",
+    "fv3_three_25",
+    "fv3_three_26",
+    "fv3_three_27",
+    "fv3_three_28"
+  ],
+  "md_counts": {
+    "two": {
+      "B_TOP5_INSUFFICIENT_RANKING_FAILURE": 3
+    },
+    "three": {
+      "B_TOP5_INSUFFICIENT_RANKING_FAILURE": 22,
+      "A_TRUE_DRAFT_FAILURE_WITH_SUFFICIENT_TOP5": 1
+    }
+  },
+  "three_details": [
+    {
+      "case_id": "fv3_three_01",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_docs_count": 3,
+      "represented_in_candidate_pool": 3,
+      "represented_in_top5": 2,
+      "same_document_crowding": {},
+      "missing_markers": [
+        "ENG-DEP-17",
+        "four hours"
+      ],
+      "missing_marker_ranks": [
+        {
+          "marker": "ENG-DEP-17",
+          "min_union_rank": 5
+        },
+        {
+          "marker": "four hours",
+          "min_union_rank": 6
+        }
+      ]
+    },
+    {
+      "case_id": "fv3_three_02",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_docs_count": 3,
+      "represented_in_candidate_pool": 3,
+      "represented_in_top5": 0,
+      "same_document_crowding": {},
+      "missing_markers": [
+        "OPS-REC-E17",
+        "OPS-REC-W29",
+        "CS-1842"
+      ],
+      "missing_marker_ranks": [
+        {
+          "marker": "OPS-REC-E17",
+          "min_union_rank": 7
+        },
+        {
+          "marker": "OPS-REC-W29",
+          "min_union_rank": 8
+        },
+        {
+          "marker": "CS-1842",
+          "min_union_rank": 17
+        }
+      ]
+    },
+    {
+      "case_id": "fv3_three_04",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_docs_count": 3,
+      "represented_in_candidate_pool": 3,
+      "represented_in_top5": 2,
+      "same_document_crowding": {},
+      "missing_markers": [
+        "FIN-TRAVEL-52"
+      ],
+      "missing_marker_ranks": [
+        {
+          "marker": "FIN-TRAVEL-52",
+          "min_union_rank": 15
+        }
+      ]
+    },
+    {
+      "case_id": "fv3_three_05",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_docs_count": 3,
+      "represented_in_candidate_pool": 3,
+      "represented_in_top5": 2,
+      "same_document_crowding": {},
+      "missing_markers": [
+        "two days",
+        "15 minutes"
+      ],
+      "missing_marker_ranks": [
+        {
+          "marker": "two days",
+          "min_union_rank": 13
+        },
+        {
+          "marker": "15 minutes",
+          "min_union_rank": 11
+        }
+      ]
+    },
+    {
+      "case_id": "fv3_three_07",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_docs_count": 3,
+      "represented_in_candidate_pool": 3,
+      "represented_in_top5": 2,
+      "same_document_crowding": {
+        "project-atlas-api": 2
+      },
+      "missing_markers": [
+        "us-east",
+        "seven years"
+      ],
+      "missing_marker_ranks": [
+        {
+          "marker": "us-east",
+          "min_union_rank": 8
+        },
+        {
+          "marker": "seven years",
+          "min_union_rank": null
+        }
+      ]
+    },
+    {
+      "case_id": "fv3_three_09",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_docs_count": 3,
+      "represented_in_candidate_pool": 3,
+      "represented_in_top5": 1,
+      "same_document_crowding": {},
+      "missing_markers": [
+        "OPS-REC-E17",
+        "OPS-REC-W29"
+      ],
+      "missing_marker_ranks": [
+        {
+          "marker": "OPS-REC-E17",
+          "min_union_rank": 1
+        },
+        {
+          "marker": "OPS-REC-W29",
+          "min_union_rank": 3
+        }
+      ]
+    },
+    {
+      "case_id": "fv3_three_10",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_docs_count": 3,
+      "represented_in_candidate_pool": 3,
+      "represented_in_top5": 0,
+      "same_document_crowding": {},
+      "missing_markers": [
+        "Product Operations",
+        "every month",
+        "ten business days"
+      ],
+      "missing_marker_ranks": [
+        {
+          "marker": "Product Operations",
+          "min_union_rank": 7
+        },
+        {
+          "marker": "every month",
+          "min_union_rank": null
+        },
+        {
+          "marker": "ten business days",
+          "min_union_rank": null
+        }
+      ]
+    },
+    {
+      "case_id": "fv3_three_11",
+      "diagnosis": "A_TRUE_DRAFT_FAILURE_WITH_SUFFICIENT_TOP5",
+      "required_docs_count": 3,
+      "represented_in_candidate_pool": 3,
+      "represented_in_top5": 3,
+      "same_document_crowding": {},
+      "missing_markers": [],
+      "missing_marker_ranks": []
+    },
+    {
+      "case_id": "fv3_three_12",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_docs_count": 3,
+      "represented_in_candidate_pool": 3,
+      "represented_in_top5": 2,
+      "same_document_crowding": {},
+      "missing_markers": [
+        "first Wednesday"
+      ],
+      "missing_marker_ranks": [
+        {
+          "marker": "first Wednesday",
+          "min_union_rank": 6
+        }
+      ]
+    },
+    {
+      "case_id": "fv3_three_13",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_docs_count": 3,
+      "represented_in_candidate_pool": 3,
+      "represented_in_top5": 0,
+      "same_document_crowding": {},
+      "missing_markers": [
+        "four hours",
+        "second Wednesday",
+        "two days"
+      ],
+      "missing_marker_ranks": [
+        {
+          "marker": "four hours",
+          "min_union_rank": 7
+        },
+        {
+          "marker": "second Wednesday",
+          "min_union_rank": 3
+        },
+        {
+          "marker": "two days",
+          "min_union_rank": 12
+        }
+      ]
+    },
+    {
+      "case_id": "fv3_three_14",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_docs_count": 3,
+      "represented_in_candidate_pool": 3,
+      "represented_in_top5": 1,
+      "same_document_crowding": {},
+      "missing_markers": [
+        "FIN-TRAVEL-52",
+        "Platform Interfaces",
+        "15 minutes"
+      ],
+      "missing_marker_ranks": [
+        {
+          "marker": "FIN-TRAVEL-52",
+          "min_union_rank": 14
+        },
+        {
+          "marker": "Platform Interfaces",
+          "min_union_rank": 4
+        },
+        {
+          "marker": "15 minutes",
+          "min_union_rank": 10
+        }
+      ]
+    },
+    {
+      "case_id": "fv3_three_15",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_docs_count": 3,
+      "represented_in_candidate_pool": 3,
+      "represented_in_top5": 1,
+      "same_document_crowding": {},
+      "missing_markers": [
+        "CS-1842",
+        "eu-west"
+      ],
+      "missing_marker_ranks": [
+        {
+          "marker": "CS-1842",
+          "min_union_rank": 16
+        },
+        {
+          "marker": "eu-west",
+          "min_union_rank": 11
+        }
+      ]
+    },
+    {
+      "case_id": "fv3_three_16",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_docs_count": 3,
+      "represented_in_candidate_pool": 3,
+      "represented_in_top5": 1,
+      "same_document_crowding": {},
+      "missing_markers": [
+        "OPS-REC-E17",
+        "twenty-four months",
+        "25 euros"
+      ],
+      "missing_marker_ranks": [
+        {
+          "marker": "OPS-REC-E17",
+          "min_union_rank": 6
+        },
+        {
+          "marker": "twenty-four months",
+          "min_union_rank": null
+        },
+        {
+          "marker": "25 euros",
+          "min_union_rank": null
+        }
+      ]
+    },
+    {
+      "case_id": "fv3_three_17",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_docs_count": 3,
+      "represented_in_candidate_pool": 3,
+      "represented_in_top5": 1,
+      "same_document_crowding": {},
+      "missing_markers": [
+        "OPS-REC-W29",
+        "15 minutes",
+        "April 12, 2026"
+      ],
+      "missing_marker_ranks": [
+        {
+          "marker": "OPS-REC-W29",
+          "min_union_rank": 4
+        },
+        {
+          "marker": "15 minutes",
+          "min_union_rank": 9
+        },
+        {
+          "marker": "April 12, 2026",
+          "min_union_rank": null
+        }
+      ]
+    },
+    {
+      "case_id": "fv3_three_18",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_docs_count": 3,
+      "represented_in_candidate_pool": 3,
+      "represented_in_top5": 1,
+      "same_document_crowding": {
+        "project-atlas-api": 2
+      },
+      "missing_markers": [
+        "four hours",
+        "thirty minutes"
+      ],
+      "missing_marker_ranks": [
+        {
+          "marker": "four hours",
+          "min_union_rank": 3
+        },
+        {
+          "marker": "thirty minutes",
+          "min_union_rank": 18
+        }
+      ]
+    },
+    {
+      "case_id": "fv3_three_19",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_docs_count": 3,
+      "represented_in_candidate_pool": 3,
+      "represented_in_top5": 1,
+      "same_document_crowding": {},
+      "missing_markers": [
+        "two days",
+        "eu-central"
+      ],
+      "missing_marker_ranks": [
+        {
+          "marker": "two days",
+          "min_union_rank": 12
+        },
+        {
+          "marker": "eu-central",
+          "min_union_rank": 1
+        }
+      ]
+    },
+    {
+      "case_id": "fv3_three_20",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_docs_count": 3,
+      "represented_in_candidate_pool": 3,
+      "represented_in_top5": 1,
+      "same_document_crowding": {},
+      "missing_markers": [
+        "FIN-TRAVEL-52",
+        "us-east"
+      ],
+      "missing_marker_ranks": [
+        {
+          "marker": "FIN-TRAVEL-52",
+          "min_union_rank": 14
+        },
+        {
+          "marker": "us-east",
+          "min_union_rank": 8
+        }
+      ]
+    },
+    {
+      "case_id": "fv3_three_21",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_docs_count": 3,
+      "represented_in_candidate_pool": 3,
+      "represented_in_top5": 0,
+      "same_document_crowding": {},
+      "missing_markers": [
+        "CS-1842",
+        "every month",
+        "Product Operations"
+      ],
+      "missing_marker_ranks": [
+        {
+          "marker": "CS-1842",
+          "min_union_rank": 17
+        },
+        {
+          "marker": "every month",
+          "min_union_rank": null
+        },
+        {
+          "marker": "Product Operations",
+          "min_union_rank": 10
+        }
+      ]
+    },
+    {
+      "case_id": "fv3_three_22",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_docs_count": 3,
+      "represented_in_candidate_pool": 3,
+      "represented_in_top5": 0,
+      "same_document_crowding": {},
+      "missing_markers": [
+        "15 minutes",
+        "first Wednesday",
+        "ten business days"
+      ],
+      "missing_marker_ranks": [
+        {
+          "marker": "15 minutes",
+          "min_union_rank": 9
+        },
+        {
+          "marker": "first Wednesday",
+          "min_union_rank": 5
+        },
+        {
+          "marker": "ten business days",
+          "min_union_rank": null
+        }
+      ]
+    },
+    {
+      "case_id": "fv3_three_25",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_docs_count": 3,
+      "represented_in_candidate_pool": 3,
+      "represented_in_top5": 2,
+      "same_document_crowding": {},
+      "missing_markers": [
+        "second Wednesday",
+        "twenty-four months"
+      ],
+      "missing_marker_ranks": [
+        {
+          "marker": "second Wednesday",
+          "min_union_rank": 3
+        },
+        {
+          "marker": "twenty-four months",
+          "min_union_rank": 8
+        }
+      ]
+    },
+    {
+      "case_id": "fv3_three_26",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_docs_count": 3,
+      "represented_in_candidate_pool": 3,
+      "represented_in_top5": 1,
+      "same_document_crowding": {},
+      "missing_markers": [
+        "OPS-REC-E17",
+        "four hours",
+        "FIN-TRAVEL-52"
+      ],
+      "missing_marker_ranks": [
+        {
+          "marker": "OPS-REC-E17",
+          "min_union_rank": 5
+        },
+        {
+          "marker": "four hours",
+          "min_union_rank": 2
+        },
+        {
+          "marker": "FIN-TRAVEL-52",
+          "min_union_rank": 14
+        }
+      ]
+    },
+    {
+      "case_id": "fv3_three_27",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_docs_count": 3,
+      "represented_in_candidate_pool": 3,
+      "represented_in_top5": 1,
+      "same_document_crowding": {},
+      "missing_markers": [
+        "two days",
+        "Platform Interfaces",
+        "CS-1842"
+      ],
+      "missing_marker_ranks": [
+        {
+          "marker": "two days",
+          "min_union_rank": 12
+        },
+        {
+          "marker": "Platform Interfaces",
+          "min_union_rank": 6
+        },
+        {
+          "marker": "CS-1842",
+          "min_union_rank": 16
+        }
+      ]
+    },
+    {
+      "case_id": "fv3_three_28",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "required_docs_count": 3,
+      "represented_in_candidate_pool": 3,
+      "represented_in_top5": 1,
+      "same_document_crowding": {},
+      "missing_markers": [
+        "four hours",
+        "April 12, 2026"
+      ],
+      "missing_marker_ranks": [
+        {
+          "marker": "four hours",
+          "min_union_rank": 5
+        },
+        {
+          "marker": "April 12, 2026",
+          "min_union_rank": null
+        }
+      ]
+    }
+  ],
+  "near_analysis": [
+    {
+      "case_id": "fv3_dup_03",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "preferred_source_id": "recovery-runbook-east",
+      "preferred_source_in_candidate_pool": true,
+      "preferred_source_in_top5": false,
+      "wrong_near_duplicate_displaced_preferred_source": false,
+      "active_current_source_available_in_pool": true,
+      "version_correct_top5": 0.0,
+      "preferred_source_success_metric": 0.0,
+      "forbidden_document_ids": [
+        "recovery-runbook-west"
+      ]
+    },
+    {
+      "case_id": "fv3_dup_04",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "preferred_source_id": "recovery-runbook-west",
+      "preferred_source_in_candidate_pool": true,
+      "preferred_source_in_top5": false,
+      "wrong_near_duplicate_displaced_preferred_source": false,
+      "active_current_source_available_in_pool": true,
+      "version_correct_top5": 0.0,
+      "preferred_source_success_metric": 0.0,
+      "forbidden_document_ids": [
+        "recovery-runbook-east"
+      ]
+    },
+    {
+      "case_id": "fv3_dup_05",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "preferred_source_id": "recovery-runbook-east",
+      "preferred_source_in_candidate_pool": true,
+      "preferred_source_in_top5": false,
+      "wrong_near_duplicate_displaced_preferred_source": false,
+      "active_current_source_available_in_pool": true,
+      "version_correct_top5": 0.0,
+      "preferred_source_success_metric": 0.0,
+      "forbidden_document_ids": [
+        "recovery-runbook-west"
+      ]
+    },
+    {
+      "case_id": "fv3_dup_06",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "preferred_source_id": "recovery-runbook-west",
+      "preferred_source_in_candidate_pool": true,
+      "preferred_source_in_top5": false,
+      "wrong_near_duplicate_displaced_preferred_source": false,
+      "active_current_source_available_in_pool": true,
+      "version_correct_top5": 0.0,
+      "preferred_source_success_metric": 0.0,
+      "forbidden_document_ids": [
+        "recovery-runbook-east"
+      ]
+    },
+    {
+      "case_id": "fv3_dup_07",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "preferred_source_id": "recovery-runbook-east",
+      "preferred_source_in_candidate_pool": true,
+      "preferred_source_in_top5": false,
+      "wrong_near_duplicate_displaced_preferred_source": true,
+      "active_current_source_available_in_pool": true,
+      "version_correct_top5": 0.0,
+      "preferred_source_success_metric": 0.0,
+      "forbidden_document_ids": [
+        "recovery-runbook-west"
+      ]
+    },
+    {
+      "case_id": "fv3_dup_09",
+      "diagnosis": "A_TRUE_DRAFT_FAILURE_WITH_SUFFICIENT_TOP5",
+      "preferred_source_id": "recovery-runbook-east",
+      "preferred_source_in_candidate_pool": true,
+      "preferred_source_in_top5": true,
+      "wrong_near_duplicate_displaced_preferred_source": false,
+      "active_current_source_available_in_pool": true,
+      "version_correct_top5": 1.0,
+      "preferred_source_success_metric": 1.0,
+      "forbidden_document_ids": [
+        "recovery-runbook-west"
+      ]
+    },
+    {
+      "case_id": "fv3_dup_10",
+      "diagnosis": "A_TRUE_DRAFT_FAILURE_WITH_SUFFICIENT_TOP5",
+      "preferred_source_id": "recovery-runbook-west",
+      "preferred_source_in_candidate_pool": true,
+      "preferred_source_in_top5": true,
+      "wrong_near_duplicate_displaced_preferred_source": false,
+      "active_current_source_available_in_pool": true,
+      "version_correct_top5": 1.0,
+      "preferred_source_success_metric": 1.0,
+      "forbidden_document_ids": [
+        "recovery-runbook-east"
+      ]
+    },
+    {
+      "case_id": "fv3_dup_11",
+      "diagnosis": "C_EVIDENCE_PRESENT_BUT_VERSION_OR_SOURCE_WRONG",
+      "preferred_source_id": "recovery-runbook-east",
+      "preferred_source_in_candidate_pool": true,
+      "preferred_source_in_top5": true,
+      "wrong_near_duplicate_displaced_preferred_source": false,
+      "active_current_source_available_in_pool": true,
+      "version_correct_top5": 1.0,
+      "preferred_source_success_metric": 0.0,
+      "forbidden_document_ids": [
+        "recovery-runbook-west"
+      ]
+    },
+    {
+      "case_id": "fv3_dup_13",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "preferred_source_id": "recovery-runbook-east",
+      "preferred_source_in_candidate_pool": true,
+      "preferred_source_in_top5": false,
+      "wrong_near_duplicate_displaced_preferred_source": false,
+      "active_current_source_available_in_pool": true,
+      "version_correct_top5": 0.0,
+      "preferred_source_success_metric": 0.0,
+      "forbidden_document_ids": [
+        "recovery-runbook-west"
+      ]
+    },
+    {
+      "case_id": "fv3_dup_14",
+      "diagnosis": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+      "preferred_source_id": "recovery-runbook-west",
+      "preferred_source_in_candidate_pool": true,
+      "preferred_source_in_top5": false,
+      "wrong_near_duplicate_displaced_preferred_source": false,
+      "active_current_source_available_in_pool": true,
+      "version_correct_top5": 0.0,
+      "preferred_source_success_metric": 0.0,
+      "forbidden_document_ids": [
+        "recovery-runbook-east"
+      ]
+    }
+  ],
+  "secondary_reason_counts": {
+    "MISSING_REQUIRED_DOCUMENT": 32,
+    "MULTI_DOCUMENT_COVERAGE_LOSS": 24,
+    "TOP5_CAPACITY_LOSS": 33,
+    "MISSING_REQUIRED_FACT/CHUNK": 33,
+    "MISSING_REQUIRED_FACT": 1
+  },
+  "rank_buckets": {
+    "rank 1-5 (inconsistency)": 21,
+    "rank 11-20": 16,
+    "rank 6": 5,
+    "rank 7": 3,
+    "rank 8": 4,
+    "rank 9-10": 5
+  },
+  "rank_not_in_pool_units": 9,
+  "marker_recall_pool_avg": 0.918918918918919,
+  "marker_recall_top5_avg": 0.27477477477477474
+}

@@ -1,0 +1,16 @@
+{
+  "experiment_id": "v3-phase5b-frozen-ranking-e2e",
+  "dataset_id": "acmeai-enterprise-rag-v3-ranking-e2e-final-v2",
+  "dataset_hash": "58ac25869720e094ada10717f4b10999a03382f4a7b45f95d88371730a63acdf",
+  "control_architecture_hash": "874df3fa101cbced79f6f764140234914baae548a6751b4b5af611bb9c63a226",
+  "candidate_architecture_hash": "f7db32ea838f7a611b0df7bad341827dcbbe528c2012d38f76278a4fe0028e90",
+  "candidate_ranking_hash": "527afb76a0226018e158291c0212e16cfdc31e0d9990cfd4686d72c1d3df69cd",
+  "promotion_policy_hash": "cad4da92bbeef04473f01c9a451c7106ed69f953721fa02be157847621250432",
+  "pairwise_algorithm_id": "PAIRWISE_COMPLEMENTARITY_RERANK",
+  "pairwise_algorithm_version": "1.0",
+  "dataset_frozen_at": "2026-08-19T13:19:12.034058+00:00",
+  "selection_policy_frozen_at": "2026-08-19T13:19:12.034058+00:00",
+  "completed_at": "2026-08-19T13:33:48.786720+00:00",
+  "promotion_decision": "KEEP_CURRENT_V3_RESEARCH_ARCHITECTURE",
+  "v3_status": "V3_CANDIDATE_REJECTED"
+}

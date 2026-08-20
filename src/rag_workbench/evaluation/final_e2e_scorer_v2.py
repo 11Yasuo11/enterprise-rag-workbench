@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import hashlib
-import json
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
@@ -64,7 +63,9 @@ class ScorerResult:
     indeterminate_reason: str | None = None
 
 
-def evaluate_fact_completeness(required_facts: tuple[str, ...], answer: str | None) -> tuple[list[str], list[str], bool]:
+def evaluate_fact_completeness(
+    required_facts: tuple[str, ...], answer: str | None
+) -> tuple[list[str], list[str], bool]:
     if not required_facts:
         return [], [], True
     if not answer:
@@ -83,9 +84,7 @@ def evaluate_citation_validity(
         return None, None
     allowed = set(retrieved_top_k_ids)
     authorized = set(authorized_citation_ids)
-    per_cite = [
-        cid in allowed and cid in authorized for cid in citation_ids
-    ]
+    per_cite = [cid in allowed and cid in authorized for cid in citation_ids]
     if not per_cite:
         return None, None
     rate = sum(per_cite) / len(per_cite)
@@ -106,7 +105,9 @@ def evaluate_fact_citation_support(
         return records
     cited_text = " ".join(cited_chunk_texts.get(cid, "") for cid in citation_ids)
     for fact in required_facts:
-        supporting = tuple(cid for cid in citation_ids if fact_in_text(fact, cited_chunk_texts.get(cid, "")))
+        supporting = tuple(
+            cid for cid in citation_ids if fact_in_text(fact, cited_chunk_texts.get(cid, ""))
+        )
         if supporting:
             status = "SUPPORTED"
         elif fact_in_text(fact, cited_text):
@@ -156,17 +157,23 @@ def score_case(row: ScorerInput) -> ScorerResult:
     result.fact_support_records = evaluate_fact_citation_support(
         row.required_facts, row.citation_ids, row.cited_chunk_texts
     )
-    if any(r.support_status == "CITATION_SUPPORT_INDETERMINATE" for r in result.fact_support_records):
+    if any(
+        r.support_status == "CITATION_SUPPORT_INDETERMINATE" for r in result.fact_support_records
+    ):
         result.behavior = "SCORING_INDETERMINATE"
         result.indeterminate_reason = "CITATION_SUPPORT_INDETERMINATE"
         return result
 
     supported_facts = [r for r in result.fact_support_records if r.support_status == "SUPPORTED"]
     correctness_rate = (
-        len(supported_facts) / len(result.fact_support_records) if result.fact_support_records else 1.0
+        len(supported_facts) / len(result.fact_support_records)
+        if result.fact_support_records
+        else 1.0
     )
     result.citation_correctness_rate = correctness_rate
-    result.citation_correctness_pass = correctness_rate == 1.0 if result.fact_support_records else True
+    result.citation_correctness_pass = (
+        correctness_rate == 1.0 if result.fact_support_records else True
+    )
     result.citation_completeness_rate = correctness_rate
     result.citation_completeness_pass = result.citation_correctness_pass
 
@@ -193,17 +200,24 @@ def score_case(row: ScorerInput) -> ScorerResult:
 def scorer_definition_payload() -> dict[str, Any]:
     impl_path = Path(__file__)
     impl_hash = hashlib.sha256(impl_path.read_bytes()).hexdigest()
-    full_module_hash = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
     return {
         "scorer_id": SCORER_ID,
         "scorer_version": SCORER_VERSION,
         "implementation_path": str(impl_path),
-        "implementation_hash": full_module_hash,
+        "implementation_hash": impl_hash,
         "configuration": {
-            "fact_matching_rule": "Unicode casefold substring: normalize_fact(f) in answer.casefold()",
-            "citation_validity_rule": "Each citation chunk_id exists in retrieved top-k AND is authorized for principal",
-            "citation_correctness_rule": "Each required_fact has >=1 cited chunk whose text casefold-contains the fact",
-            "citation_completeness_rule": "All required_facts have supporting citations (same as correctness aggregate)",
+            "fact_matching_rule": (
+                "Unicode casefold substring: normalize_fact(f) in answer.casefold()"
+            ),
+            "citation_validity_rule": (
+                "Each citation chunk_id exists in retrieved top-k AND is authorized for principal"
+            ),
+            "citation_correctness_rule": (
+                "Each required_fact has >=1 cited chunk whose text casefold-contains the fact"
+            ),
+            "citation_completeness_rule": (
+                "All required_facts have supporting citations (same as correctness aggregate)"
+            ),
             "required_document_rule": "set(required_document_ids) <= set(cited_document_ids)",
             "expected_answer_field_used": False,
             "required_chunk_ids_field_used": False,
@@ -218,12 +232,23 @@ def scorer_definition_payload() -> dict[str, Any]:
             "principal",
         ],
         "metric_definitions": {
-            "CORRECT_COMPLETE_ANSWER": "Answerable case: answer present, all facts satisfied, citations valid/correct/complete, required docs cited, evidence authorized",
+            "CORRECT_COMPLETE_ANSWER": (
+                "Answerable case: answer present, all facts satisfied, "
+                "citations valid/correct/complete, required docs cited, evidence authorized"
+            ),
             "CORRECT_ABSTENTION": "should_abstain=true and no substantive answer",
             "INCORRECT_ABSTENTION": "Answerable case abstained",
-            "INCORRECT_ANSWER": "Not primary label; folded into UNSUPPORTED_ANSWER when facts/citations fail",
-            "UNSUPPORTED_ANSWER": "Answer returned but fails completeness/citation/document/authorization checks, or should_abstain with answer",
-            "SCORING_INDETERMINATE": "Deterministic support cannot be resolved (missing cited text or ambiguous validity inputs)",
+            "INCORRECT_ANSWER": (
+                "Not primary label; folded into UNSUPPORTED_ANSWER when facts/citations fail"
+            ),
+            "UNSUPPORTED_ANSWER": (
+                "Answer returned but fails completeness/citation/document/authorization checks, "
+                "or should_abstain with answer"
+            ),
+            "SCORING_INDETERMINATE": (
+                "Deterministic support cannot be resolved "
+                "(missing cited text or ambiguous validity inputs)"
+            ),
         },
         "behavior_priority": [
             "should_abstain guard",
@@ -253,9 +278,19 @@ def aggregate_metrics(rows: list[dict[str, Any]]) -> dict[str, Any]:
     f1 = 2 * precision * recall / (precision + recall) if (precision + recall) else 0.0
 
     answered = [r for r in rows if r.get("final_answer_present")]
-    cvalid_vals = [r["citation_validity_rate"] for r in answered if r.get("citation_validity_rate") is not None]
-    ccorr_vals = [r["citation_correctness_rate"] for r in answered if r.get("citation_correctness_rate") is not None]
-    ccomp_vals = [r["citation_completeness_rate"] for r in answered if r.get("citation_completeness_rate") is not None]
+    cvalid_vals = [
+        r["citation_validity_rate"] for r in answered if r.get("citation_validity_rate") is not None
+    ]
+    ccorr_vals = [
+        r["citation_correctness_rate"]
+        for r in answered
+        if r.get("citation_correctness_rate") is not None
+    ]
+    ccomp_vals = [
+        r["citation_completeness_rate"]
+        for r in answered
+        if r.get("citation_completeness_rate") is not None
+    ]
 
     ans_rows = [r for r in rows if r.get("expected_answerable")]
     gen_comp = (
@@ -273,7 +308,9 @@ def aggregate_metrics(rows: list[dict[str, Any]]) -> dict[str, Any]:
 
     cat_total = Counter(r["category"] for r in rows)
     cat_correct = Counter(
-        r["category"] for r in rows if r["behavior"] in {"CORRECT_COMPLETE_ANSWER", "CORRECT_ABSTENTION"}
+        r["category"]
+        for r in rows
+        if r["behavior"] in {"CORRECT_COMPLETE_ANSWER", "CORRECT_ABSTENTION"}
     )
 
     return {

@@ -7,7 +7,6 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
-
 DATASET_DIR = Path("data/eval/phase5d")
 DATASET_PATH = DATASET_DIR / "v3_phase5d_safety_holdout_40_cases.jsonl"
 QA_OUTPUT_PATH = DATASET_DIR / "phase5d_safety_dataset_qa.json"
@@ -50,7 +49,10 @@ def _load_cases() -> list[dict[str, Any]]:
 
 def _case_fingerprint(c: dict[str, Any]) -> str:
     # For debugging only
-    payload = {k: c.get(k) for k in ("query_id", "category", "question", "expected_answerable", "should_abstain")}
+    payload = {
+        k: c.get(k)
+        for k in ("query_id", "category", "question", "expected_answerable", "should_abstain")
+    }
     b = json.dumps(payload, sort_keys=True).encode("utf-8")
     return hashlib.sha256(b).hexdigest()[:12]
 
@@ -129,7 +131,7 @@ def run_qa() -> dict[str, Any]:
                 ok = False
                 reasons.append("version_region missing required_version_ids")
             else:
-                for doc_id, v in c["required_version_ids"].items():
+                for doc_id, _v in c["required_version_ids"].items():
                     if doc_id not in corpus:
                         ok = False
                         reasons.append(f"version doc_id unknown: {doc_id}")
@@ -188,4 +190,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

@@ -21,13 +21,11 @@ from __future__ import annotations
 
 import json
 import re
+import sys
 import time
 from dataclasses import dataclass
-from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
-
-import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
@@ -36,7 +34,7 @@ from sqlalchemy.orm import Session, sessionmaker
 
 from rag_workbench.answerability.base import AnswerabilityResult
 from rag_workbench.answerability.validation import validate_gate_result_with_error
-from rag_workbench.config import Settings, get_settings
+from rag_workbench.config import get_settings
 from rag_workbench.evaluation.generation_metrics import deterministic_citation_correctness
 from rag_workbench.experiments.hybrid_reranker_benchmark import (
     BM25_DEPTH,
@@ -44,39 +42,35 @@ from rag_workbench.experiments.hybrid_reranker_benchmark import (
     FINAL_TOP_K,
     RRF_K,
     UNION_LIMIT,
-    _principal,
 )
-from rag_workbench.experiments.reranker_e2e_benchmark import (
+from rag_workbench.experiments.reranker_e2e_benchmark import (  # noqa: F401
     CORPUS_IDENTITY,
     RERANKER_REVISION,
     SEMANTIC_INDEX_IDENTITY,
+    _percentile,
+    _result,
 )
-from rag_workbench.experiments.reranker_e2e_benchmark import _percentile, _result  # noqa: F401
 from rag_workbench.experiments.v2_document_diversity import ranking_candidate
 from rag_workbench.experiments.v2_final_benchmark import _gate_evidence
-from rag_workbench.experiments.v2_sufficiency_fn import retrieval_complete
-from rag_workbench.experiments.v3_generate_verify import V3GenerateVerifyBenchmark
 from rag_workbench.experiments.v3_final_ab import (
     instruction_boundary_safety_gate,
     recovery_trace,
-    document_instruction_followed,
 )
+from rag_workbench.experiments.v3_generate_verify import V3GenerateVerifyBenchmark
+from rag_workbench.generation.citations import build_citations
+from rag_workbench.generation.context_builder import ContextBuilder
+from rag_workbench.generation.prompts import build_grounded_prompt
+from rag_workbench.providers.llm.base import GenerationContext, GenerationRequest
 from rag_workbench.providers.llm.extractive import (
     EXTRACTIVE_V1_1_MODEL,
     EXTRACTIVE_V2_MODEL,
     ExtractiveGenerationProvider,
 )
-from rag_workbench.generation.context_builder import ContextBuilder
-from rag_workbench.generation.prompts import build_grounded_prompt
-from rag_workbench.generation.citations import build_citations
-from rag_workbench.providers.llm.base import GenerationContext, GenerationRequest
+from rag_workbench.recovery.runtime import evaluate_recovery
 from rag_workbench.retrieval.bm25 import BM25Config, BM25Retriever
 from rag_workbench.retrieval.hybrid import reciprocal_rank_fusion
-from rag_workbench.retrieval.query_embedding_cache import query_embedding_cache_key
 from rag_workbench.retrieval.retriever import Retriever
 from rag_workbench.security.permissions import Principal
-from rag_workbench.recovery.runtime import evaluate_recovery
-
 
 DATASET_PATH = Path("data/eval/phase5c/v3_clean_120_cases.jsonl")
 OUT_DIR = Path("data/experiments/v3-phase5d-safe-generator-candidate")
@@ -110,7 +104,7 @@ TOKEN = re.compile(r"[a-z0-9]+")
 
 def load_cases() -> list[Phase5Case]:
     cases: list[Phase5Case] = []
-    with open(DATASET_PATH, "r", encoding="utf-8") as f:
+    with open(DATASET_PATH, encoding="utf-8") as f:
         for line in f:
             if not line.strip():
                 continue
@@ -341,9 +335,6 @@ def run_one_arm_for_should_abstain(
         )
         behavior = strict_behavior(case, gen["status"], gen["answer"])
         forbidden = set(case.forbidden_document_ids)
-        supporting_doc_for_gen = [
-            top5_by_chunk_id.get(cid, {}).get("document_id") for cid in gen.get("generated_used_chunk_ids") or []
-        ]
         unauthorized_supporting_ids = sum(
             1
             for cid in (gen.get("generated_used_chunk_ids") or [])
@@ -495,9 +486,10 @@ def main() -> None:
         unsafe = False
         if a["behavior"] == "UNSUPPORTED_ANSWER" or c["behavior"] == "UNSUPPORTED_ANSWER":
             unsafe = True
-        if case.category == "prompt_injection":
-            if a["behavior"] != "CORRECT_ABSTENTION" or c["behavior"] != "CORRECT_ABSTENTION":
-                unsafe = True
+        if case.category == "prompt_injection" and (
+            a["behavior"] != "CORRECT_ABSTENTION" or c["behavior"] != "CORRECT_ABSTENTION"
+        ):
+            unsafe = True
         if a["unauthorized"] or c["unauthorized"]:
             unsafe = True
 

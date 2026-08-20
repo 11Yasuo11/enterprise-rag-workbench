@@ -1,29 +1,23 @@
 # ruff: noqa: E501
 from __future__ import annotations
 
-import json
 import importlib.util
+import json
+import sys
 from dataclasses import dataclass
 from datetime import UTC, datetime
 from pathlib import Path
-from statistics import mean, median
+from statistics import mean
 from typing import Any
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 
-import sys
-
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
 from rag_workbench.answerability.base import AnswerabilityResult
-from rag_workbench.answerability.openai_compatible import (
-    EVIDENCE_GATE_PROMPT_VERSION,
-    OpenAICompatibleAnswerabilityGate,
-)
-from rag_workbench.answerability.transport import DEFAULT_TRANSPORT_RETRY_POLICY
 from rag_workbench.answerability.validation import validate_gate_result_with_error
-from rag_workbench.config import Settings, get_settings
+from rag_workbench.config import get_settings
 from rag_workbench.evaluation.generation_metrics import deterministic_citation_correctness
 from rag_workbench.experiments.hybrid_reranker_benchmark import (
     BM25_DEPTH,
@@ -31,45 +25,32 @@ from rag_workbench.experiments.hybrid_reranker_benchmark import (
     FINAL_TOP_K,
     RRF_K,
     UNION_LIMIT,
-    _principal as _make_principal,
 )
 from rag_workbench.experiments.reranker_e2e_benchmark import (
     SEMANTIC_INDEX_IDENTITY,
-    RERANKER_REVISION,
 )
 from rag_workbench.experiments.v2_document_diversity import ranking_candidate
-from rag_workbench.experiments.v2_final_benchmark import V2FinalCase, _behavior
-from rag_workbench.experiments.v2_quality_recovery import stable_hash
-from rag_workbench.experiments.v2_sufficiency_fn import SOL_MODEL
+from rag_workbench.experiments.v2_final_benchmark import V2FinalCase
 from rag_workbench.experiments.v3_final_ab import (
     instruction_boundary_safety_gate,
 )
 from rag_workbench.experiments.v3_generate_verify import (
     V3GenerateVerifyBenchmark,
-    document_instruction_followed,
-    evaluator_supported,
 )
 from rag_workbench.providers.llm.extractive import (
     EXTRACTIVE_V2_MODEL,
     ExtractiveGenerationProvider,
-    EXTRACTIVE_V1_1_MODEL,
 )
 from rag_workbench.recovery.runtime import evaluate_recovery
 from rag_workbench.reranking import Reranker
-from rag_workbench.reranking.pairwise_complementarity import (
-    select_pairwise_complementarity_top5,
-)
 from rag_workbench.retrieval.bm25 import BM25Config, BM25Retriever
 from rag_workbench.retrieval.hybrid import reciprocal_rank_fusion
-from rag_workbench.retrieval.query_embedding_cache import query_embedding_cache_key
 from rag_workbench.retrieval.retriever import Retriever
-from rag_workbench.security.permissions import Principal
-
 from rag_workbench.safety.answerability_constraint_guard_v1 import (
     should_abstain_due_to_answerability_constraint,
 )
 from rag_workbench.safety.question_injection_guard_v2 import is_question_injection_v2
-
+from rag_workbench.security.permissions import Principal
 
 DATASET_PATH = Path("data/eval/phase5d/v3_phase5d_safety_holdout_40_cases.jsonl")
 OUTPUT_DIR = Path("data/experiments/v3-phase5d-safety-holdout-40-run")
@@ -215,7 +196,7 @@ def generate_answer(
 ) -> dict[str, Any]:
     from rag_workbench.generation.context_builder import ContextBuilder
     from rag_workbench.generation.prompts import build_grounded_prompt
-    from rag_workbench.providers.llm.base import GenerationContext, GenerationRequest
+    from rag_workbench.providers.llm.base import GenerationRequest
     from rag_workbench.retrieval.vector_search import RetrievalResult
 
     gen_provider = ExtractiveGenerationProvider(revision=provider_revision)
@@ -298,9 +279,6 @@ def run_experiment() -> None:
     recovery = benchmark._recovery_cache(max(1, len(cases)))
 
     # Retrieval components
-    from rag_workbench.providers.embeddings.openai_compatible import (
-        OpenAICompatibleEmbeddingProvider,
-    )
     from rag_workbench.providers.embeddings.hashing import HashingEmbeddingProvider
 
     # Use configured embedding provider (same approach as phase5c_experiment).
@@ -384,7 +362,7 @@ def run_experiment() -> None:
                     for item in pointwise_top5
                     if item["chunk_id"] in pw_result.supporting_chunk_ids
                 ]
-                constraint_detected = True if evidence_texts else False
+                constraint_detected = bool(evidence_texts)
                 if constraint_enabled:
                     constraint_guard_triggered = should_abstain_due_to_answerability_constraint(
                         question=case.question, evidence_texts=evidence_texts

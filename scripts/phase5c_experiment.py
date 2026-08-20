@@ -16,73 +16,48 @@ Requires: PostgreSQL running, EMBEDDING_API_KEY, JUDGE_API_KEY set.
 
 from __future__ import annotations
 
-import hashlib
 import json
+import sys
 import time
 from collections import Counter
 from dataclasses import dataclass
 from datetime import UTC, datetime
 from pathlib import Path
-from statistics import mean, median
+from statistics import mean
 from typing import Any
 
-import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session, sessionmaker
 
-from rag_workbench.answerability.base import AnswerabilityResult, GateEvidence
-from rag_workbench.answerability.cache import CachedAnswerabilityGate, gate_cache_key
-from rag_workbench.answerability.openai_compatible import (
-    EVIDENCE_GATE_PROMPT_VERSION,
-    OpenAICompatibleAnswerabilityGate,
-)
-from rag_workbench.answerability.planning import ExternalJudgeCallLimitGate
+from rag_workbench.answerability.base import AnswerabilityResult
 from rag_workbench.answerability.transport import DEFAULT_TRANSPORT_RETRY_POLICY
 from rag_workbench.answerability.validation import validate_gate_result_with_error
 from rag_workbench.config import Settings, get_settings
 from rag_workbench.evaluation.generation_metrics import deterministic_citation_correctness
-from rag_workbench.evaluation.hybrid_metrics import (
-    aggregate_retrieval_metrics,
-    retrieval_case_metrics,
-)
 from rag_workbench.experiments.hybrid_reranker_benchmark import (
     BM25_DEPTH,
     DENSE_DEPTH,
     FINAL_TOP_K,
     RRF_K,
     UNION_LIMIT,
-    _principal as _make_principal,
-    _trace,
-    aggregate_pool,
-    pool_metrics,
 )
 from rag_workbench.experiments.reranker_e2e_benchmark import (
-    CORPUS_IDENTITY,
     RERANKER_REVISION,
     SEMANTIC_INDEX_IDENTITY,
-    _percentile,
-    _result,
 )
 from rag_workbench.experiments.v2_document_diversity import ranking_candidate
 from rag_workbench.experiments.v2_final_benchmark import (
-    HIDDEN_GROUND_TRUTH_FIELDS,
     V2FinalCase,
-    _behavior,
     _gate_evidence,
-    classification,
 )
 from rag_workbench.experiments.v2_quality_recovery import stable_hash
-from rag_workbench.experiments.v2_sufficiency_fn import SOL_MODEL, retrieval_complete
 from rag_workbench.experiments.v3_final_ab import (
     instruction_boundary_safety_gate,
-    recovery_trace,
 )
 from rag_workbench.experiments.v3_generate_verify import (
     V3GenerateVerifyBenchmark,
-    document_instruction_followed,
-    evaluator_supported,
 )
 from rag_workbench.providers.llm.extractive import (
     EXTRACTIVE_V1_1_MODEL,
@@ -92,8 +67,6 @@ from rag_workbench.providers.llm.extractive import (
 from rag_workbench.recovery.runtime import evaluate_recovery
 from rag_workbench.reranking import Reranker
 from rag_workbench.reranking.pairwise_complementarity import (
-    ALGORITHM_ID as PAIRWISE_ALGORITHM_ID,
-    ALGORITHM_VERSION as PAIRWISE_ALGORITHM_VERSION,
     pairwise_configuration,
     select_pairwise_complementarity_top5,
 )
@@ -200,10 +173,7 @@ def check_all_required_facts(answer: str | None, required_facts: list[str]) -> b
     if not answer:
         return False
     answer_lower = answer.lower()
-    for fact in required_facts:
-        if fact.lower() not in answer_lower:
-            return False
-    return True
+    return all(fact.lower() in answer_lower for fact in required_facts)
 
 
 def strict_behavior(case: Phase5CCase, status: str, answer: str | None) -> str:
@@ -222,7 +192,7 @@ def strict_behavior(case: Phase5CCase, status: str, answer: str | None) -> str:
 
 def run_preflight(session: Session, settings: Settings, cases: list[Phase5CCase]) -> dict[str, Any]:
     """Cost/credential preflight."""
-    from rag_workbench.db.models import QueryEmbeddingCacheRecord, AnswerabilityGateCacheRecord
+    from rag_workbench.db.models import QueryEmbeddingCacheRecord
 
     keys = {
         query_embedding_cache_key(
@@ -404,7 +374,6 @@ def run_experiment():
     arm_d_rows: list[dict] = []
 
     for idx, case in enumerate(cases):
-        v2_case = case.as_v2_case()
         principal = principal_from_case(case)
         print(f"  [{idx+1}/120] {case.query_id} ({case.category})", end="")
 
@@ -606,8 +575,6 @@ def metrics_for_rows(rows: list[dict], cases: list[Phase5CCase]) -> dict[str, An
     pi_safe = sum(1 for r in pi_cases if r["behavior"] in ("CORRECT_ABSTENTION",))
     acl_cases = [r for r in rows if r["category"] == "acl_sensitive"]
     acl_safe = sum(1 for r in acl_cases if r["behavior"] in ("CORRECT_ABSTENTION",))
-    version_cases = [r for r in rows if r["category"] == "version_region"]
-
     # Generator completeness given complete evidence
     complete_evidence_rows = [
         r for r in rows

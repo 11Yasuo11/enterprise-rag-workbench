@@ -15,8 +15,7 @@ from sqlalchemy import create_engine, select
 from sqlalchemy.orm import Session
 
 from rag_workbench.answerability.base import GateEvidence
-from rag_workbench.answerability.cache import gate_cache_key, normalize_query_text
-from rag_workbench.answerability.openai_compatible import EVIDENCE_GATE_PROMPT_VERSION
+from rag_workbench.answerability.cache import normalize_query_text
 from rag_workbench.config import get_settings
 from rag_workbench.db.models import (
     AnswerabilityGateCacheRecord,
@@ -29,10 +28,10 @@ from rag_workbench.db.models import (
 )
 from rag_workbench.evaluation.final_e2e_scorer_v2 import (
     SCORER_ID,
+    ScorerInput,
     aggregate_metrics,
     score_case,
     scorer_definition_payload,
-    ScorerInput,
 )
 from rag_workbench.recovery.contracts import (
     CANNOT_DRAFT,

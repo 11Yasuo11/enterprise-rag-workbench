@@ -8,7 +8,6 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
-
 DATASET_DIR = Path("data/eval/phase5g")
 DATASET_PATH = DATASET_DIR / "v3_phase5g_corrected_safety_diagnostic_48_cases.jsonl"
 QA_OUTPUT_PATH = DATASET_DIR / "phase5g_dataset_qa.json"
@@ -31,7 +30,11 @@ def _sha256_bytes(b: bytes) -> str:
 
 
 def _load_cases() -> list[dict[str, Any]]:
-    return [json.loads(line) for line in DATASET_PATH.read_text(encoding="utf-8").splitlines() if line.strip()]
+    return [
+        json.loads(line)
+        for line in DATASET_PATH.read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ]
 
 
 def _check_case(c: dict[str, Any]) -> list[str]:
@@ -44,11 +47,20 @@ def _check_case(c: dict[str, Any]) -> list[str]:
         errs.append("question too short")
     if c.get("expected_answerable") != (not c.get("should_abstain")):
         errs.append("expected_answerable/should_abstain mismatch")
-    if c.get("expected_answer") is not None and str(c["expected_answer"]).casefold() in q.casefold():
+    if (
+        c.get("expected_answer") is not None
+        and str(c["expected_answer"]).casefold() in q.casefold()
+    ):
         errs.append("expected_answer leaked into question")
 
     # category semantics
-    if cat in {"numeric_constraint_negative", "date_constraint_negative", "prompt_injection", "acl_sensitive", "tenant_isolation"}:
+    if cat in {
+        "numeric_constraint_negative",
+        "date_constraint_negative",
+        "prompt_injection",
+        "acl_sensitive",
+        "tenant_isolation",
+    }:
         if c.get("expected_answerable") is not False:
             errs.append(f"{cat} must be expected_answerable=false")
         if c.get("should_abstain") is not True:
@@ -84,21 +96,23 @@ def _check_case(c: dict[str, Any]) -> list[str]:
     if cat == "version_sensitive" and "version" not in q.casefold():
         errs.append("version_sensitive question should explicitly mention version")
 
-    if cat == "numeric_constraint_positive":
-        if not re.search(r"(?is)\bthreshold\b", q):
-            errs.append("numeric_constraint_positive should ask threshold relation")
+    if cat == "numeric_constraint_positive" and not re.search(r"(?is)\bthreshold\b", q):
+        errs.append("numeric_constraint_positive should ask threshold relation")
 
-    if cat == "numeric_constraint_negative":
-        if not re.search(r"(?is)\b(?:exactly|equal to|at least|no less than|at most|no more than|below|less than)\s*25\s*euros\b", q):
-            errs.append("numeric_constraint_negative missing explicit boundary expression")
+    if cat == "numeric_constraint_negative" and not re.search(
+        r"(?is)\b(?:exactly|equal to|at least|no less than|at most|no more than|below|less than)\s*25\s*euros\b",
+        q,
+    ):
+        errs.append("numeric_constraint_negative missing explicit boundary expression")
 
-    if cat == "date_constraint_positive":
-        if not re.search(r"(?is)\bon\s+2026\b", q):
-            errs.append("date_constraint_positive missing explicit ON 2026 wording")
+    if cat == "date_constraint_positive" and not re.search(r"(?is)\bon\s+2026\b", q):
+        errs.append("date_constraint_positive missing explicit ON 2026 wording")
 
-    if cat == "date_constraint_negative":
-        if not re.search(r"(?is)\b(?:before|after)\s+2026\b", q):
-            errs.append("date_constraint_negative missing before/after 2026 wording")
+    if cat == "date_constraint_negative" and not re.search(
+        r"(?is)\b(?:before|after)\s+2026\b",
+        q,
+    ):
+        errs.append("date_constraint_negative missing before/after 2026 wording")
 
     # minimal structure
     if not isinstance(c.get("required_facts", []), list):
@@ -129,7 +143,9 @@ def run_qa() -> dict[str, Any]:
         errs = _check_case(c)
         ok = not errs
         errors.extend(errs)
-        per_case.append({"query_id": c["query_id"], "category": c["category"], "ok": ok, "errors": errs})
+        per_case.append(
+            {"query_id": c["query_id"], "category": c["category"], "ok": ok, "errors": errs}
+        )
 
     out = {
         "valid": not errors,
@@ -155,4 +171,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

@@ -10,7 +10,6 @@ from rag_workbench.providers.llm.base import GenerationContext, GenerationReques
 from rag_workbench.providers.llm.extractive import (
     EXTRACTIVE_V2_MODEL,
     ExtractiveGenerationProvider,
-    generate_extractive_v2,
     overlap_candidates,
     overlap_candidates_complete,
 )
@@ -74,7 +73,7 @@ def test_fv3_two_07_baseline_misses_second_fact():
         [("chunk-eng", "C1", ENG_CHUNK), ("chunk-support", "C2", SUPPORT_CHUNK)],
     )
     selected = overlap_candidates(req)
-    chunk_ids = {entry[3] for entry in selected}
+    _ = {entry[3] for entry in selected}
     # Baseline may select both from same chunk — this documents the known weakness
     # (We don't assert failure since it depends on term overlap scoring)
 
@@ -177,7 +176,7 @@ def test_v2_no_overlap_returns_empty():
         "What is the meaning of life?",
         [("chunk-eng", "C1", ENG_CHUNK)],
     )
-    selected = overlap_candidates_complete(req)
+    _ = overlap_candidates_complete(req)
     # Terms like "meaning", "life" may not overlap with engineering text
     # This tests graceful degradation
 

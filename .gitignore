@@ -32,3 +32,6 @@ Thumbs.db
 .huggingface/
 huggingface/
 docker-data/
+
+# Local hygiene baselines (not research artifacts)
+data/repo_hygiene/

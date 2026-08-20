@@ -3,12 +3,9 @@
 
 from __future__ import annotations
 
-import hashlib
 import json
 import re
-from collections import Counter
 from pathlib import Path
-
 
 DATASET_PATH = Path("data/eval/phase5c/v3_clean_120_cases.jsonl")
 CORPUS_DIR = Path("data/synthetic_company")
@@ -24,7 +21,7 @@ def load_corpus() -> dict[str, dict]:
         text = p.read_text()
         lines = text.split("\n")
         if lines[0].strip() == "---":
-            end = next(i for i, l in enumerate(lines[1:], 1) if l.strip() == "---")
+            end = next(i for i, line in enumerate(lines[1:], 1) if line.strip() == "---")
             fm_text = "\n".join(lines[1:end])
             doc_id_m = re.search(r"document_id:\s*(.+)", fm_text)
             version_m = re.search(r'version:\s*"?([^"\n]+)"?', fm_text)
@@ -85,7 +82,7 @@ def check_ground_truth_support(case: dict, corpus: dict[str, list[dict]]) -> tup
                 break
         if not found:
             # Search all docs as fallback
-            for did, entries in corpus.items():
+            for _did, entries in corpus.items():
                 for entry in entries:
                     if marker.lower() in entry["full_text"].lower():
                         found = True

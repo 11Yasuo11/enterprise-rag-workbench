@@ -9,12 +9,9 @@ set of query_ids discovered from phase5c_safety_failures_detailed.jsonl.
 from __future__ import annotations
 
 import json
-import re
-import time
+import sys
 from pathlib import Path
 from typing import Any
-
-import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
@@ -26,8 +23,8 @@ from rag_workbench.experiments.hybrid_reranker_benchmark import (
     DENSE_DEPTH,
     FINAL_TOP_K,
     RRF_K,
-    UNION_LIMIT,
     SEMANTIC_INDEX_IDENTITY,
+    UNION_LIMIT,
 )
 from rag_workbench.experiments.reranker_e2e_benchmark import RERANKER_REVISION
 from rag_workbench.experiments.v2_document_diversity import ranking_candidate
@@ -37,7 +34,6 @@ from rag_workbench.retrieval.hybrid import reciprocal_rank_fusion
 from rag_workbench.retrieval.retriever import Retriever
 from rag_workbench.retrieval.vector_search import RetrievalResult
 from rag_workbench.security.permissions import Principal
-
 
 PHASE5C_DATASET_PATH = Path("data/eval/phase5c/v3_clean_120_cases.jsonl")
 FAILURES_PATH = Path(
@@ -65,8 +61,6 @@ def main() -> None:
     settings = get_settings()
     engine = create_engine(settings.database_url)
     # V3GenerateVerifyBenchmark builds its own reranker + retrieval infra.
-    session = engine.connect()
-
     # We need the benchmark to get the frozen reranker revision identity.
     # (V3GenerateVerifyBenchmark expects an ORM Session; we’ll use a Session
     # created via SQLAlchemy sessionmaker by reusing its internal construction.)

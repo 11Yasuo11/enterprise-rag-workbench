@@ -43,12 +43,11 @@ from rag_workbench.reranking import Reranker
 from rag_workbench.retrieval.bm25 import BM25Config, BM25Retriever
 from rag_workbench.retrieval.hybrid import reciprocal_rank_fusion
 from rag_workbench.retrieval.retriever import Retriever
+from rag_workbench.safety.question_injection_guard_v2 import is_question_injection_v2
 from rag_workbench.safety.safe_recovery_boundary_v3 import (
     should_abstain_due_to_safe_recovery_boundary_v3,
 )
-from rag_workbench.safety.question_injection_guard_v2 import is_question_injection_v2
 from rag_workbench.security.permissions import Principal
-
 
 DATASET_PATH = Path("data/eval/phase5g/v3_phase5g_corrected_safety_diagnostic_48_cases.jsonl")
 OUTPUT_DIR = Path("data/experiments/v3-phase5g-dataset-repair-g0-corrected-diagnostic")

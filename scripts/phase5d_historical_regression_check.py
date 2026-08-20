@@ -8,7 +8,6 @@ from rag_workbench.safety.answerability_constraint_guard_v1 import (
 )
 from rag_workbench.safety.question_injection_guard_v2 import is_question_injection_v2
 
-
 PHASE5C_DATASET_PATH = Path("data/eval/phase5c/v3_clean_120_cases.jsonl")
 RETRIEVAL_TRACE_PATH = Path(
     "data/experiments/v3-phase5d-safe-generator-candidate/phase5c_safety_failures_retrieval_trace.jsonl"

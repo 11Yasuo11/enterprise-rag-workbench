@@ -33,10 +33,11 @@ Snapshot after repository-hygiene cleanup on branch `chore/repository-hygiene-cl
 
 ## Research Status
 
-- **V3 research:** closed — `V3_RESEARCH_FULLY_CLOSED_AFTER_CORRECTED_SCORING`
-- **Authoritative final strict E2E accuracy:** 74.17% (Phase-5KR)
-- **V2:** remains stable/release baseline (`main` / `v2.0.0`)
-- **V3:** not promoted — `V3_QUALITY_IMPROVEMENT_NOT_CONFIRMED`, `V3_RELEASE_PROMOTION_REJECTED`
+- **Current executing quality+serving:** V14 packet/year-token logic inside `CanonicalRagRuntime` (Web + Eval)
+- **Latest V2 regression:** 60/60 after V14 (`data/experiments/rag-release-pipeline-v14/`) — **regression set, not unseen**
+- **Production finalization:** `READY_FOR_PRODUCTION_DEPLOYMENT_REVIEW` (not deployed)
+- **V3 research:** closed — not promoted (`V3_QUALITY_IMPROVEMENT_NOT_CONFIRMED`)
+- **Historical V2 release baseline:** `main` / tag `v2.0.0`
 
 ## Remaining Product Limitations
 
@@ -53,3 +54,10 @@ These are **RAG RESEARCH LIMITATIONS**, not repository code-quality failures:
 ## Hygiene Scope Note
 
 This cleanup changed formatting, imports, unused locals, and equivalent lint-safe syntax only. Retrieval, ranking, Judge, generator, safety, datasets, and recorded experiment metrics were not modified.
+
+## Interview polish docs
+
+- [`ARCHITECTURE_DECISIONS.md`](ARCHITECTURE_DECISIONS.md)
+- [`RAG_FAILURE_ANALYSIS.md`](RAG_FAILURE_ANALYSIS.md)
+- [`INTERVIEW_DEMO_RUNBOOK.md`](INTERVIEW_DEMO_RUNBOOK.md)
+- Readiness script: `./scripts/interview_readiness_check.sh`

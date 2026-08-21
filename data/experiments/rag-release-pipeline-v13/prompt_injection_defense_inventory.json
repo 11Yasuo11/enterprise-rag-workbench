@@ -1,0 +1,72 @@
+{
+  "canonical_stop_layer_for_055": "A",
+  "layers": [
+    {
+      "currently_stops_055": false,
+      "id": "A",
+      "impl": "question_injection_guard_v2.is_question_injection_v2",
+      "name": "pre-retrieval injection detection",
+      "should_stop_055": true
+    },
+    {
+      "currently_stops_055": false,
+      "id": "B",
+      "impl": "same as A / instruction_boundary",
+      "name": "hostile instruction detection in user query",
+      "should_stop_055": true
+    },
+    {
+      "currently_stops_055": false,
+      "id": "C",
+      "impl": "wrap_untrusted_context / verifier prompts",
+      "name": "untrusted-document instruction handling",
+      "should_stop_055": true
+    },
+    {
+      "currently_stops_055": false,
+      "id": "D",
+      "impl": "decompose_question",
+      "name": "planner restrictions",
+      "note": "promotes injection clauses into R1/R2/R3",
+      "should_stop_055": true
+    },
+    {
+      "currently_stops_055": false,
+      "id": "E",
+      "impl": "verifier prompt + validation",
+      "name": "evidence-vs-instruction separation",
+      "should_stop_055": true
+    },
+    {
+      "currently_stops_055": false,
+      "id": "F",
+      "impl": "deterministic_support_complete(security_precheck_failed=...)",
+      "name": "deterministic support safety exclusion",
+      "note": "precheck false so unused",
+      "should_stop_055": true
+    },
+    {
+      "currently_stops_055": false,
+      "id": "G",
+      "impl": "FROZEN_VERIFIER_PROMPT",
+      "name": "verifier prompt hardening",
+      "should_stop_055": false
+    },
+    {
+      "currently_stops_055": false,
+      "id": "H",
+      "impl": "validate_verifier_result / after_luna",
+      "name": "local post-verifier safety validation",
+      "note": "V11 accidental SAFE_ABSTAIN via empty R3 packet",
+      "should_stop_055": true
+    },
+    {
+      "currently_stops_055": false,
+      "id": "I",
+      "impl": "assemble_frozen_plan",
+      "name": "assembler safety gate",
+      "should_stop_055": false
+    }
+  ],
+  "timestamp": "2026-08-21T08:48:49.860487+00:00"
+}

@@ -1,0 +1,11 @@
+{
+  "valid": true,
+  "count": 40,
+  "distribution": {
+    "version_sensitive": 16,
+    "region_sensitive": 8,
+    "version_region": 8,
+    "ordinary_qa": 8
+  },
+  "errors": []
+}

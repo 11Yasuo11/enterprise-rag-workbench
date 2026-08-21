@@ -1,0 +1,9 @@
+{
+  "assertion_passed": true,
+  "method": "offline script imports no provider and consumes frozen JSON/JSONL only",
+  "new_cost_usd": 0.0,
+  "new_embedding_calls": 0,
+  "new_luna_calls": 0,
+  "new_openai_calls": 0,
+  "new_sol_calls": 0
+}

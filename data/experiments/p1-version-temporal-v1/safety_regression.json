@@ -1,0 +1,31 @@
+{
+  "acl_constraint_preserved": true,
+  "authorization_before_temporal_filter": true,
+  "fresh_acl_allow": {
+    "n": 3,
+    "passed": 3,
+    "regressions": []
+  },
+  "fresh_acl_deny": {
+    "n": 3,
+    "passed": 3,
+    "regressions": []
+  },
+  "fresh_prompt_injection": {
+    "n": 4,
+    "passed": 4,
+    "regressions": []
+  },
+  "fresh_unanswerable": {
+    "n": 6,
+    "passed": 6,
+    "regressions": []
+  },
+  "historical_restricted_documents_remain_restricted": true,
+  "passed": true,
+  "permission_group_constraint_preserved": true,
+  "region_constraint_preserved": true,
+  "temporal_breadth_does_not_change_authorization_breadth": true,
+  "tenant_constraint_preserved": true,
+  "unit_acl_temporal_expansion_test_passed": true
+}

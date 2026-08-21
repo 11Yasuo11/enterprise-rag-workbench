@@ -1,0 +1,29 @@
+{
+  "api_calls": 0,
+  "case_id": "fresh_v2_052",
+  "frozen_v8_state": {
+    "luna_calls_before_request": 42,
+    "sol_calls_before_request": 5,
+    "stage_spend_usd": 0.1341727
+  },
+  "requested_call": {
+    "kind": "SOL",
+    "normal_escalation_number_for_case": 1,
+    "conservative_projected_cost_usd": 0.0275
+  },
+  "old": {
+    "decision": "REJECT",
+    "error": "TARGETED_FOUR_SOL_CALL_LIMIT",
+    "reason": "Global targeted-four MAX_SOL_CALLS=5 was inherited by the V2 stage."
+  },
+  "new": {
+    "active_stage": "FRESH_V2_REGRESSION",
+    "decision": "ALLOW",
+    "per_case_sol_calls_before_request": 0,
+    "projected_stage_spend_usd": 0.1616727,
+    "stage_cap_usd": 0.3,
+    "within_budget": true
+  },
+  "inference_semantics_changed": false,
+  "result": "PASS"
+}

@@ -1,0 +1,22 @@
+{
+  "case_count": 3,
+  "case_ids": [
+    "fresh_v2_010",
+    "fresh_v2_021",
+    "fresh_v2_023"
+  ],
+  "experiment_id": "TARGETED_THREE_V10",
+  "gold_loaded_before_freeze": false,
+  "predictions_immutable": true,
+  "predictions_sha256": "feae23c6bdc400fb589806079148471f5a7da02bc4cb8f7a039c935d905d86e6",
+  "stage_guard": {
+    "case_count": 3,
+    "luna_calls": 0,
+    "per_case_counts": {},
+    "sol_calls": 0,
+    "stage": "TARGETED_THREE",
+    "stage_cost_cap_usd": 0.08,
+    "stage_spend_usd": 0.0
+  },
+  "timestamp": "2026-08-21T00:55:14.123609+00:00"
+}

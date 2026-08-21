@@ -1,0 +1,13 @@
+{
+  "acl_violations": 0,
+  "citation_validity_regressions": 0,
+  "correct_abstention_regressions": 0,
+  "experiment_id": "UNIVERSAL_REQUIREMENT_COMPLETENESS_V1",
+  "fail_closed_checks_preserved": true,
+  "previous_correctness_regressions": 0,
+  "region_violations": 0,
+  "regression_query_ids": [],
+  "tenant_violations": 0,
+  "unsupported_answer_increase": 0,
+  "version_regressions": 0
+}

@@ -1,0 +1,4 @@
+{
+  "reason": "Mandatory V2 regression gate failed before Fresh V3 creation was authorized.",
+  "status": "NOT_CREATED_OR_FROZEN"
+}

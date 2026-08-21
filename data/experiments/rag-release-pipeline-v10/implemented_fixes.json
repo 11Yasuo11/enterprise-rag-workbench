@@ -1,0 +1,65 @@
+{
+  "api_calls": 0,
+  "fixes": [
+    {
+      "addresses": [
+        "fresh_v2_010"
+      ],
+      "case_id_branches": false,
+      "contract": "Split dual-output connectors alongside/together with/as well as into independent atomic requirements.",
+      "files": [
+        "src/rag_workbench/experiments/atomic_requirement_contract_v1/contract.py"
+      ],
+      "generalizes": true,
+      "id": "planner_alongside_connectors"
+    },
+    {
+      "addresses": [
+        "fresh_v2_021"
+      ],
+      "case_id_branches": false,
+      "contract": "Treat leading Using-only presently/currently enforceable|active|current|effective clauses as version context_qualifiers.",
+      "files": [
+        "src/rag_workbench/experiments/atomic_requirement_contract_v1/contract.py"
+      ],
+      "generalizes": true,
+      "id": "planner_using_only_version_qualifier"
+    },
+    {
+      "addresses": [
+        "fresh_v2_023"
+      ],
+      "case_id_branches": false,
+      "contract": "Demote evidence-access preambles (read/consult/open/... <doc>) before an output imperative to context_qualifiers.",
+      "files": [
+        "src/rag_workbench/experiments/atomic_requirement_contract_v1/contract.py"
+      ],
+      "generalizes": true,
+      "id": "planner_evidence_access_preamble"
+    },
+    {
+      "addresses": [
+        "fresh_v2_010"
+      ],
+      "case_id_branches": false,
+      "contract": "Add destination/geography direct-support family with region-anchor disambiguation; keep token/code requirements out of cadence.",
+      "files": [
+        "src/rag_workbench/experiments/atomic_requirement_contract_v1/deterministic_support.py"
+      ],
+      "generalizes": true,
+      "id": "deterministic_destination_relation"
+    }
+  ],
+  "forbidden_patterns_avoided": [
+    "case-ID branches",
+    "exact-question branches",
+    "hardcoded gold answers",
+    "special casing eu-central",
+    "special casing Tuesdays/Thursdays"
+  ],
+  "shared_root_causes": [
+    "QUESTION_PLAN_ERROR",
+    "QUALIFIER_REQUIREMENT_ERROR"
+  ],
+  "timestamp": "2026-08-21T00:58:43.225190+00:00"
+}

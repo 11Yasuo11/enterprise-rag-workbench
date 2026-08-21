@@ -1,0 +1,33 @@
+{
+  "candidate_rc": "RC_FINAL_PRE_API_V6",
+  "candidate_source_changed": false,
+  "case_count": 60,
+  "category_counts": {
+    "acl_allow": 3,
+    "acl_deny": 3,
+    "cadence": 4,
+    "cross_version": 5,
+    "current_temporal": 5,
+    "deadline_date": 4,
+    "historical_temporal": 5,
+    "multidoc_three": 6,
+    "multidoc_two": 8,
+    "numeric_boundary": 5,
+    "prompt_injection": 3,
+    "single_semantic": 6,
+    "unanswerable": 3
+  },
+  "dataset_id": "FRESH_UNSEEN_HOLDOUT_V2",
+  "gold_path": "data/experiments/rag-release-pipeline-v6/fresh-holdout-v2/fresh_v2_gold.json",
+  "gold_sha256": "a7447233a1269b5cb1c633ac951fe08f417da6bda8bd6fc0fcd8497549f10410",
+  "pre_freeze_corrections": [
+    "2025 corpus fact correction",
+    "cross-version version-set representation",
+    "two invalid question replacements"
+  ],
+  "question_plan_baseline_sha256": "ac3feeb50c20fb1803810bdc0cfa593e7e3548d788fd03a88c0c882ad75cd9a2",
+  "questions_and_gold_separate": true,
+  "questions_path": "data/experiments/rag-release-pipeline-v6/fresh-holdout-v2/fresh_v2_questions.json",
+  "questions_sha256": "3d85dfeb7960aa5ba3b736e0b576dd8c98e85222eaa1d02b92d5960b5211509c",
+  "timestamp": "2026-08-20T20:01:11.979112+00:00"
+}

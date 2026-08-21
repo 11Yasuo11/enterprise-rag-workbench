@@ -1,0 +1,27 @@
+{
+  "actual_new_development": {
+    "actual_new_openai_cost_usd": 0.0,
+    "new_luna_calls": 0,
+    "new_openai_calls_during_local_development": 0,
+    "new_sol_calls": 0
+  },
+  "cost_kind": "SIMULATED COST from saved usage; actual new development cost is zero",
+  "existing_sol_baseline": {
+    "estimated_cost_per_100_queries_usd": 0.03658333333333333,
+    "input_tokens": 71566,
+    "luna_calls": 0,
+    "output_tokens": 6736,
+    "sol_calls": 110
+  },
+  "experiment_id": "REQUIREMENT_ASSEMBLER_SELECTIVE_ROUTING_V1",
+  "proposed_selective_routing": {
+    "estimated_cost_per_100_queries_usd": 0.015847,
+    "estimated_cost_total_usd": 0.0190164,
+    "input_tokens": 44166,
+    "luna_calls": 68,
+    "output_tokens": 8486,
+    "sol_calls": 0,
+    "sol_calls_avoided": 110,
+    "sol_escalation_rate": 0.0
+  }
+}

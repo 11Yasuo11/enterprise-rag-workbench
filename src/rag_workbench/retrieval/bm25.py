@@ -14,7 +14,8 @@ from sqlalchemy.orm import Session
 
 from rag_workbench.db.models import Chunk, Document, DocumentVersion
 from rag_workbench.retrieval.base import RetrievalMode
-from rag_workbench.retrieval.filters import RetrievalFilters
+from rag_workbench.retrieval.filters import RetrievalFilters, apply_temporal_version_filter
+from rag_workbench.retrieval.temporal import plan_temporal_scope
 from rag_workbench.retrieval.vector_search import RetrievalResult
 from rag_workbench.security.permissions import Principal, apply_document_acl
 
@@ -29,6 +30,18 @@ def tokenize_bm25(text: str) -> tuple[str, ...]:
     for match in _TOKEN_PATTERN.finditer(normalized):
         token = match.group(0)
         tokens.append(token)
+        # Keep the surface form and add a conservative English singular form.
+        # This improves lexical recall without introducing synonym expansion.
+        if len(token) > 4 and token.endswith("ies"):
+            tokens.append(token[:-3] + "y")
+        elif len(token) > 4 and token.endswith(("sses", "shes", "ches", "xes", "zes")):
+            tokens.append(token[:-2])
+        elif (
+            len(token) > 3
+            and token.endswith("s")
+            and not token.endswith(("ss", "us", "is"))
+        ):
+            tokens.append(token[:-1])
         if any(separator in token for separator in "-_.:/"):
             tokens.extend(part for part in re.split(r"[-_.:/]+", token) if part)
     return tuple(tokens)
@@ -97,21 +110,25 @@ class BM25Retriever:
         if top_k < 1 or top_k > 100:
             raise ValueError("top_k must be between 1 and 100")
 
+        provider_names = {self.embedding_provider}
+        if self.embedding_provider in {"openai", "openai-compatible"}:
+            provider_names = {"openai", "openai-compatible"}
         statement = (
             select(Chunk, Document, DocumentVersion)
             .join(Document, Chunk.document_fk == Document.id)
             .join(DocumentVersion, Chunk.document_version_id == DocumentVersion.id)
             .where(
-                DocumentVersion.is_active.is_(True),
                 Chunk.index_identity == self.index_identity,
-                Chunk.embedding_provider == self.embedding_provider,
+                Chunk.embedding_provider.in_(tuple(sorted(provider_names))),
                 Chunk.embedding_model == self.embedding_model,
                 Chunk.embedding_version == self.embedding_version,
                 Chunk.embedding_dimension == self.embedding_dimension,
             )
         )
-        # Tenant, ACL, and active-version predicates are part of the SQL candidate set.
+        # Authorization is constrained before temporal breadth is applied.
         statement = apply_document_acl(statement, principal)
+        temporal_scope = filters.temporal_scope if filters else plan_temporal_scope(query)
+        statement = apply_temporal_version_filter(statement, temporal_scope)
         if filters:
             if filters.document_ids:
                 statement = statement.where(Document.document_id.in_(filters.document_ids))

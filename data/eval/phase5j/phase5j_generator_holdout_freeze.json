@@ -1,0 +1,12 @@
+{
+  "dataset_id": "acmeai-enterprise-rag-v3-phase5j-generator-holdout-30",
+  "dataset_path": "data/eval/phase5j/v3_phase5j_generator_holdout_30.jsonl",
+  "dataset_hash": "2185fda4e38a9804d8112a139619c84c3e75b173cf375dcdc71905eafde338b6",
+  "case_count": 30,
+  "distribution": {
+    "multi_fact_answers": 10,
+    "multiple_document_facts": 8,
+    "date_range_endpoints": 6,
+    "same_document_multi_chunk": 6
+  }
+}

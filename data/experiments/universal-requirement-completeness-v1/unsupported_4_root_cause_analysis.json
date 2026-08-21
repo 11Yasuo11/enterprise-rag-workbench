@@ -1,0 +1,374 @@
+{
+  "cases": [
+    {
+      "cross_encoder_rank": 4,
+      "date_constraints": [
+        {
+          "constraint_type": "date",
+          "operator": "on",
+          "raw_text": "on April 12 , 2026",
+          "unit": null,
+          "upper_value": null,
+          "value": "April 12 , 2026"
+        }
+      ],
+      "generator_input": [
+        {
+          "chunk_id": "826df8a1-5461-4515-95f7-1998a4d3c205",
+          "dense_score": 0.624598,
+          "document_id": "project-atlas-launch",
+          "document_version_id": "e431da5b-ef31-440f-a5a4-80a35fb97e24",
+          "found_by_bm25": true,
+          "found_by_dense": true,
+          "fusion_score": 0.032786885,
+          "lexical_score": 7.231998,
+          "metadata": {
+            "chunk_overlap": 30,
+            "chunk_size": 180,
+            "chunk_strategy": "fixed_token",
+            "chunker_version": "1"
+          },
+          "page": null,
+          "rank": 4,
+          "retrieval_source": "hybrid_rrf",
+          "score": -10.729618072509766,
+          "section": "Launch",
+          "source": "data/synthetic_company/project-atlas-launch.md",
+          "source_type": "markdown",
+          "text": "Project Atlas launched on April 12 , 2026 . The launch owner is the Product Operations team .",
+          "title": "Project Atlas Launch Brief",
+          "version": "1.0"
+        }
+      ],
+      "generator_input_complete": true,
+      "judge_decision": "GO",
+      "judge_supporting_chunk_ids": [
+        "826df8a1-5461-4515-95f7-1998a4d3c205"
+      ],
+      "local_fix_possible": true,
+      "missing_or_wrong_requirements": [],
+      "numeric_constraints": [],
+      "old_citations": [
+        "826df8a1-5461-4515-95f7-1998a4d3c205"
+      ],
+      "old_failure_reason": "FINAL_E2E_SCORER_V2 v2.0.0 used a raw casefold substring. The expected 'April 12, 2026' did not match tokenized corpus/output text 'April 12 , 2026'.",
+      "old_output": "Project Atlas launched on April 12 , 2026 . [C1] The launch owner is the Product Operations team . [C1]",
+      "query_id": "p5k_numeric_date_constraint_094",
+      "question": "PhaseK audit token numeric_date_constraint-094 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. What launch date is stated for Project Atlas?",
+      "required_evidence_present_corpus": true,
+      "required_evidence_present_top15": true,
+      "required_facts": [
+        "April 12, 2026"
+      ],
+      "retrieved_document_ids_top15": [
+        "data-retention-standard",
+        "data-retention-standard",
+        "project-atlas-api",
+        "project-atlas-launch",
+        "project-atlas-launch",
+        "project-atlas-api",
+        "finance-expense-policy",
+        "operations-continuity-plan",
+        "finance-expense-policy",
+        "customer-support-escalation",
+        "engineering-deployment-handbook",
+        "security-training-example"
+      ],
+      "root_cause": "DATASET_OR_SCORER_ISSUE",
+      "root_cause_evidence": {
+        "historical_citation_validity_pass": true,
+        "historical_fact_completeness_pass": false,
+        "historical_fact_support": [
+          {
+            "required_fact": "April 12, 2026",
+            "support_status": "NOT_SUPPORTED",
+            "supporting_citation_ids": []
+          }
+        ],
+        "punctuation_normalized_match": true,
+        "raw_substring_match": false
+      },
+      "saved_luna_decision": "GO",
+      "saved_verifier_requirements": []
+    },
+    {
+      "cross_encoder_rank": 4,
+      "date_constraints": [
+        {
+          "constraint_type": "date",
+          "operator": "on",
+          "raw_text": "on April 12 , 2026",
+          "unit": null,
+          "upper_value": null,
+          "value": "April 12 , 2026"
+        }
+      ],
+      "generator_input": [
+        {
+          "chunk_id": "826df8a1-5461-4515-95f7-1998a4d3c205",
+          "dense_score": 0.630696,
+          "document_id": "project-atlas-launch",
+          "document_version_id": "e431da5b-ef31-440f-a5a4-80a35fb97e24",
+          "found_by_bm25": true,
+          "found_by_dense": true,
+          "fusion_score": 0.032786885,
+          "lexical_score": 7.231998,
+          "metadata": {
+            "chunk_overlap": 30,
+            "chunk_size": 180,
+            "chunk_strategy": "fixed_token",
+            "chunker_version": "1"
+          },
+          "page": null,
+          "rank": 4,
+          "retrieval_source": "hybrid_rrf",
+          "score": -10.75888729095459,
+          "section": "Launch",
+          "source": "data/synthetic_company/project-atlas-launch.md",
+          "source_type": "markdown",
+          "text": "Project Atlas launched on April 12 , 2026 . The launch owner is the Product Operations team .",
+          "title": "Project Atlas Launch Brief",
+          "version": "1.0"
+        }
+      ],
+      "generator_input_complete": true,
+      "judge_decision": "GO",
+      "judge_supporting_chunk_ids": [
+        "826df8a1-5461-4515-95f7-1998a4d3c205"
+      ],
+      "local_fix_possible": true,
+      "missing_or_wrong_requirements": [],
+      "numeric_constraints": [],
+      "old_citations": [
+        "826df8a1-5461-4515-95f7-1998a4d3c205"
+      ],
+      "old_failure_reason": "FINAL_E2E_SCORER_V2 v2.0.0 used a raw casefold substring. The expected 'April 12, 2026' did not match tokenized corpus/output text 'April 12 , 2026'.",
+      "old_output": "Project Atlas launched on April 12 , 2026 . [C1] The launch owner is the Product Operations team . [C1]",
+      "query_id": "p5k_numeric_date_constraint_096",
+      "question": "PhaseK audit token numeric_date_constraint-096 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. What launch date is stated for Project Atlas?",
+      "required_evidence_present_corpus": true,
+      "required_evidence_present_top15": true,
+      "required_facts": [
+        "April 12, 2026"
+      ],
+      "retrieved_document_ids_top15": [
+        "data-retention-standard",
+        "project-atlas-api",
+        "data-retention-standard",
+        "project-atlas-launch",
+        "project-atlas-launch",
+        "project-atlas-api",
+        "operations-continuity-plan",
+        "finance-expense-policy",
+        "finance-expense-policy",
+        "customer-support-escalation",
+        "engineering-deployment-handbook",
+        "security-training-example"
+      ],
+      "root_cause": "DATASET_OR_SCORER_ISSUE",
+      "root_cause_evidence": {
+        "historical_citation_validity_pass": true,
+        "historical_fact_completeness_pass": false,
+        "historical_fact_support": [
+          {
+            "required_fact": "April 12, 2026",
+            "support_status": "NOT_SUPPORTED",
+            "supporting_citation_ids": []
+          }
+        ],
+        "punctuation_normalized_match": true,
+        "raw_substring_match": false
+      },
+      "saved_luna_decision": "GO",
+      "saved_verifier_requirements": []
+    },
+    {
+      "cross_encoder_rank": 4,
+      "date_constraints": [
+        {
+          "constraint_type": "date",
+          "operator": "on",
+          "raw_text": "on April 12 , 2026",
+          "unit": null,
+          "upper_value": null,
+          "value": "April 12 , 2026"
+        }
+      ],
+      "generator_input": [
+        {
+          "chunk_id": "826df8a1-5461-4515-95f7-1998a4d3c205",
+          "dense_score": 0.630029,
+          "document_id": "project-atlas-launch",
+          "document_version_id": "e431da5b-ef31-440f-a5a4-80a35fb97e24",
+          "found_by_bm25": true,
+          "found_by_dense": true,
+          "fusion_score": 0.032786885,
+          "lexical_score": 7.231998,
+          "metadata": {
+            "chunk_overlap": 30,
+            "chunk_size": 180,
+            "chunk_strategy": "fixed_token",
+            "chunker_version": "1"
+          },
+          "page": null,
+          "rank": 4,
+          "retrieval_source": "hybrid_rrf",
+          "score": -10.74113655090332,
+          "section": "Launch",
+          "source": "data/synthetic_company/project-atlas-launch.md",
+          "source_type": "markdown",
+          "text": "Project Atlas launched on April 12 , 2026 . The launch owner is the Product Operations team .",
+          "title": "Project Atlas Launch Brief",
+          "version": "1.0"
+        }
+      ],
+      "generator_input_complete": true,
+      "judge_decision": "GO",
+      "judge_supporting_chunk_ids": [
+        "826df8a1-5461-4515-95f7-1998a4d3c205"
+      ],
+      "local_fix_possible": true,
+      "missing_or_wrong_requirements": [],
+      "numeric_constraints": [],
+      "old_citations": [
+        "826df8a1-5461-4515-95f7-1998a4d3c205"
+      ],
+      "old_failure_reason": "FINAL_E2E_SCORER_V2 v2.0.0 used a raw casefold substring. The expected 'April 12, 2026' did not match tokenized corpus/output text 'April 12 , 2026'.",
+      "old_output": "Project Atlas launched on April 12 , 2026 . [C1] The launch owner is the Product Operations team . [C1]",
+      "query_id": "p5k_numeric_date_constraint_098",
+      "question": "PhaseK audit token numeric_date_constraint-098 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. What launch date is stated for Project Atlas?",
+      "required_evidence_present_corpus": true,
+      "required_evidence_present_top15": true,
+      "required_facts": [
+        "April 12, 2026"
+      ],
+      "retrieved_document_ids_top15": [
+        "data-retention-standard",
+        "project-atlas-api",
+        "data-retention-standard",
+        "project-atlas-launch",
+        "project-atlas-launch",
+        "project-atlas-api",
+        "operations-continuity-plan",
+        "finance-expense-policy",
+        "finance-expense-policy",
+        "customer-support-escalation",
+        "engineering-deployment-handbook",
+        "security-training-example"
+      ],
+      "root_cause": "DATASET_OR_SCORER_ISSUE",
+      "root_cause_evidence": {
+        "historical_citation_validity_pass": true,
+        "historical_fact_completeness_pass": false,
+        "historical_fact_support": [
+          {
+            "required_fact": "April 12, 2026",
+            "support_status": "NOT_SUPPORTED",
+            "supporting_citation_ids": []
+          }
+        ],
+        "punctuation_normalized_match": true,
+        "raw_substring_match": false
+      },
+      "saved_luna_decision": "GO",
+      "saved_verifier_requirements": []
+    },
+    {
+      "cross_encoder_rank": 2,
+      "date_constraints": [
+        {
+          "constraint_type": "date",
+          "operator": "on",
+          "raw_text": "on April 12 , 2026",
+          "unit": null,
+          "upper_value": null,
+          "value": "April 12 , 2026"
+        }
+      ],
+      "generator_input": [
+        {
+          "chunk_id": "826df8a1-5461-4515-95f7-1998a4d3c205",
+          "dense_score": 0.624169,
+          "document_id": "project-atlas-launch",
+          "document_version_id": "e431da5b-ef31-440f-a5a4-80a35fb97e24",
+          "found_by_bm25": true,
+          "found_by_dense": true,
+          "fusion_score": 0.032786885,
+          "lexical_score": 7.231998,
+          "metadata": {
+            "chunk_overlap": 30,
+            "chunk_size": 180,
+            "chunk_strategy": "fixed_token",
+            "chunker_version": "1"
+          },
+          "page": null,
+          "rank": 2,
+          "retrieval_source": "hybrid_rrf",
+          "score": -10.65605354309082,
+          "section": "Launch",
+          "source": "data/synthetic_company/project-atlas-launch.md",
+          "source_type": "markdown",
+          "text": "Project Atlas launched on April 12 , 2026 . The launch owner is the Product Operations team .",
+          "title": "Project Atlas Launch Brief",
+          "version": "1.0"
+        }
+      ],
+      "generator_input_complete": true,
+      "judge_decision": "GO",
+      "judge_supporting_chunk_ids": [
+        "826df8a1-5461-4515-95f7-1998a4d3c205"
+      ],
+      "local_fix_possible": true,
+      "missing_or_wrong_requirements": [],
+      "numeric_constraints": [],
+      "old_citations": [
+        "826df8a1-5461-4515-95f7-1998a4d3c205"
+      ],
+      "old_failure_reason": "FINAL_E2E_SCORER_V2 v2.0.0 used a raw casefold substring. The expected 'April 12, 2026' did not match tokenized corpus/output text 'April 12 , 2026'.",
+      "old_output": "Project Atlas launched on April 12 , 2026 . [C1] The launch owner is the Product Operations team . [C1]",
+      "query_id": "p5k_numeric_date_constraint_100",
+      "question": "PhaseK audit token numeric_date_constraint-100 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. What launch date is stated for Project Atlas?",
+      "required_evidence_present_corpus": true,
+      "required_evidence_present_top15": true,
+      "required_facts": [
+        "April 12, 2026"
+      ],
+      "retrieved_document_ids_top15": [
+        "data-retention-standard",
+        "project-atlas-launch",
+        "project-atlas-api",
+        "data-retention-standard",
+        "project-atlas-launch",
+        "project-atlas-api",
+        "operations-continuity-plan",
+        "finance-expense-policy",
+        "finance-expense-policy",
+        "customer-support-escalation",
+        "engineering-deployment-handbook",
+        "security-training-example"
+      ],
+      "root_cause": "DATASET_OR_SCORER_ISSUE",
+      "root_cause_evidence": {
+        "historical_citation_validity_pass": true,
+        "historical_fact_completeness_pass": false,
+        "historical_fact_support": [
+          {
+            "required_fact": "April 12, 2026",
+            "support_status": "NOT_SUPPORTED",
+            "supporting_citation_ids": []
+          }
+        ],
+        "punctuation_normalized_match": true,
+        "raw_substring_match": false
+      },
+      "saved_luna_decision": "GO",
+      "saved_verifier_requirements": []
+    }
+  ],
+  "classification_counts": {
+    "DATASET_OR_SCORER_ISSUE": 4
+  },
+  "experiment_id": "UNIVERSAL_REQUIREMENT_COMPLETENESS_V1",
+  "n": 4,
+  "new_openai_calls": 0
+}

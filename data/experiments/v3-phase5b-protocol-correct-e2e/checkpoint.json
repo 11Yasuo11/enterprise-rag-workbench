@@ -1,0 +1,62 @@
+{
+  "identity": {
+    "lock_id": "v3-phase5b-protocol-correct-e2e-ranking-validation",
+    "pairwise_candidate": "PAIRWISE_COMPLEMENTARITY_RERANK v1.0",
+    "pairwise_candidate_config_hash": "527afb76a0226018e158291c0212e16cfdc31e0d9990cfd4686d72c1d3df69cd",
+    "target_dataset_id": "acmeai-enterprise-rag-v3-ranking-e2e-final-v2",
+    "phase": "V3_PHASE_5B"
+  },
+  "protocol_correction": {
+    "prior_phase5_dataset_id": "acmeai-enterprise-rag-v3-ranking-e2e-final-v1",
+    "prior_phase5_dataset_hash": "17bfb3fd3fb0f331d2a8cf4e0104fe534bc1b47cda683593292d4bccdebc4943",
+    "prior_phase5_status": "PROTOCOL_INVALID_FOR_PROMOTION",
+    "prior_phase5_classification": [
+      "DIAGNOSTICALLY_CONSUMED",
+      "PROTOCOL_INVALID_FOR_PROMOTION",
+      "NOT_VALID_FOR_FUTURE_PROMOTION"
+    ],
+    "reason": "Previous Phase-5 used HashingEmbeddingProvider and deterministic Judge/recovery instead of the required text-embedding-3-small + GPT-5.6 Sol Judge + hosted Generate-Verify recovery."
+  },
+  "required_runtime_identities": {
+    "embedding_provider": "openai-compatible",
+    "embedding_model": "text-embedding-3-small",
+    "embedding_version": "v1",
+    "embedding_dimension": 64,
+    "primary_judge": "GPT_5_6_SOL_EVIDENCE_SUFFICIENCY_V1",
+    "judge_prompt": "evidence-sufficiency-v1",
+    "recovery_draft": "generate-verify-draft-v1",
+    "recovery_verifier": "generate-verify-claim-verifier-v1",
+    "safety_boundary": "evidence-instruction-boundary-v1",
+    "cross_encoder": "cross-encoder/ms-marco-MiniLM-L6-v2",
+    "cross_encoder_revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+    "candidate_ranking": "PAIRWISE_COMPLEMENTARITY_RERANK v1.0"
+  },
+  "credential_check": {
+    "EMBEDDING_API_KEY": false,
+    "JUDGE_API_KEY": false,
+    "allow_external_calls": false,
+    "allow_external_judge_calls": false
+  },
+  "stages": {
+    "credential_check_done": true,
+    "external_preflight_done": false,
+    "dataset_created": false,
+    "dataset_frozen": false,
+    "retrieval_done": false,
+    "hosted_judge_done": false,
+    "analysis_done": false
+  },
+  "result": {
+    "verdict": "BLOCKED",
+    "stop_code": "EXTERNAL_CREDENTIALS_REQUIRED",
+    "required_credentials": [
+      "EMBEDDING_API_KEY",
+      "JUDGE_API_KEY"
+    ],
+    "next_step": "Provide EMBEDDING_API_KEY and JUDGE_API_KEY via runtime secrets, then resume Phase 5B.",
+    "promotion_decision": "KEEP_CURRENT_V3_RESEARCH_ARCHITECTURE",
+    "v3_status": "V3_CANDIDATE_REJECTED",
+    "v3_research_cycle": "BLOCKED_AWAITING_CREDENTIALS",
+    "primary_remaining_limitation": "EXTERNAL_CREDENTIALS_REQUIRED"
+  }
+}

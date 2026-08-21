@@ -1,0 +1,13 @@
+{
+  "experiment_id": "v3-phase3-final-frozen-generate-verify-ab",
+  "dataset_id": "acmeai-enterprise-rag-v3-final-eval",
+  "dataset_hash": "9b04ccfb0229ad853f396b570de76347c3df2f8ea6d502f9cd202642967fbac0",
+  "control_architecture_hash": "874df3fa101cbced79f6f764140234914baae548a6751b4b5af611bb9c63a226",
+  "candidate_architecture_hash": "4cc7a5a8319a98114cc0fdca66c7c41bea5e8ebe2a5c25fad8f6c4daa49dd31b",
+  "promotion_policy_hash": "b24ce65b8fa51c80f06df11f0f5ecbc5e61bb04e07e5ff60b72695953647e91e",
+  "dataset_frozen_at": "2026-08-18T23:31:08.745983+00:00",
+  "selection_policy_frozen_at": "2026-08-18T23:31:08.745983+00:00",
+  "completed_at": "2026-08-18T23:42:30.070534+00:00",
+  "promotion_decision": "KEEP_V2_JUDGE_FIRST",
+  "v3_status": "V3_CANDIDATE_REJECTED"
+}

@@ -1,0 +1,2 @@
+{"calls":{"embedding":0,"luna":17,"sol":0},"cost_usd":0.00917172,"experiment_id":"RAG_RELEASE_PIPELINE_V5_TARGETED_19_REAL_API","final_generation_llm_calls":0,"status":"PASS_19_OF_19","tokens":{"cached_input":25701,"input":37655,"output":4805}}
+{"calls":{"embedding":0,"luna":4,"sol":0},"cost_usd":0.0031391500000000003,"experiment_id":"FRESH_V1_1_REGRESSION_RERUN","final_generation_llm_calls":0,"status":"INCOMPLETE_FROZEN_RUNTIME_FAILURE","tokens":{"cached_input":0,"input":9463,"output":645}}

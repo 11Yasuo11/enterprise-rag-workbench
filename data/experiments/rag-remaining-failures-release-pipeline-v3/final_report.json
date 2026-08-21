@@ -1,0 +1,35 @@
+{
+  "experiment_id": "RAG_REMAINING_FAILURES_RELEASE_PIPELINE_V3",
+  "final_generation_llm_calls": 0,
+  "final_status": "NOT_READY_FOR_PRODUCTION",
+  "p0_generalization": {
+    "passed": 60,
+    "required": 60
+  },
+  "p1_targeted": {
+    "correct": 0,
+    "cost_usd": 0.00254755,
+    "first_causal_failure": {
+      "authorized_with_complete_metadata": 8,
+      "code": "P1_SCORER_TEMPORAL_AUTHORIZATION_METADATA_OMISSION",
+      "component": "scripts/run_p1_version_temporal_targeted_real_api_confirmation_v1.py:score_and_finalize",
+      "formal_results_reclassified": false,
+      "frozen_citations_checked": 8,
+      "mechanism": "Citation authorization was evaluated without version/is_active metadata and without the question temporal scope, so version_is_eligible used the current-only default and rejected historical citations."
+    },
+    "formal_verdict": "P1_TARGETED_REAL_API_FAILED",
+    "luna_calls": 5,
+    "required": 5,
+    "sol_calls": 0
+  },
+  "p2_through_release_evaluations": "NOT_RUN_BLOCKED_BY_P1_CONFIRMATION",
+  "plan_hash_rebase": {
+    "passed": 60,
+    "required": 60
+  },
+  "production_action_taken": false,
+  "timestamp": "2026-08-20T18:15:14.013453+00:00",
+  "total_api_cost_usd": 0.00254755,
+  "total_hard_cap_usd": 0.8,
+  "verdict": "PIPELINE_FAILED_P1_CONFIRMATION"
+}

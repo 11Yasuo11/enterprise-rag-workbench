@@ -1,0 +1,5 @@
+{
+  "api_calls": 0,
+  "test_module": "tests/unit/test_cross_version_output_cardinality_v11.py",
+  "passed": true
+}

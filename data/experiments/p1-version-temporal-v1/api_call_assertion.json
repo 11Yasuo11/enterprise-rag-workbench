@@ -1,0 +1,10 @@
+{
+  "assertion_passed": true,
+  "cached_embedding_hits": 8,
+  "external_transport_attempts": 0,
+  "new_cost_usd": 0.0,
+  "new_embedding_calls": 0,
+  "new_luna_calls": 0,
+  "new_openai_calls": 0,
+  "new_sol_calls": 0
+}

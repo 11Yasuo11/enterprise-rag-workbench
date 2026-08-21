@@ -1,0 +1,427 @@
+{
+  "case_count": 5,
+  "case_ids": [
+    "fresh_v1_029",
+    "fresh_v1_031",
+    "fresh_v1_032",
+    "fresh_v1_033",
+    "fresh_v1_035"
+  ],
+  "cases": [
+    {
+      "case_id": "fresh_v1_029",
+      "category": "version_temporal",
+      "deterministic_evidence_complete": false,
+      "local_checks": {
+        "authorization_precedes_temporal_expansion": true,
+        "embedding_cache_hit": true,
+        "no_downstream_redecomposition": true,
+        "p0_cardinality": true,
+        "payload_requested_versions": true,
+        "question_plan_hash_stable": false,
+        "required_facts_present": true,
+        "requirement_version_mapping": true,
+        "same_document_versions_distinct": true,
+        "stable_qualifier_ids": true,
+        "stable_requirement_ids": true,
+        "temporal_mode": true,
+        "top15_requested_versions": true
+      },
+      "principal": {
+        "permission_groups": [
+          "employees"
+        ],
+        "principal_id": "fresh-eval-user",
+        "tenant_id": "acmeai"
+      },
+      "question": "Under the 2025 remote-work policy, how many remote days per week were allowed?",
+      "question_plan": {
+        "cardinality_match": true,
+        "context_qualifiers": [
+          {
+            "qualifier_id": "Q1",
+            "qualifier_type": "version",
+            "text": "Under the 2025 remote-work policy"
+          }
+        ],
+        "detected_output_units": [
+          "how many remote days per week were allowed"
+        ],
+        "question": "Under the 2025 remote-work policy, how many remote days per week were allowed?",
+        "question_plan_hash": "b4e00f6e96ee4826e6469cf694cd80b93d77e7ab57f8f15e0b0d7a8d7a3b0f3b",
+        "requirements": [
+          {
+            "requirement_id": "R1",
+            "requirement_text": "how many remote days per week were allowed",
+            "requirement_type": "fact"
+          }
+        ]
+      },
+      "resolution": {
+        "reason": "unique valid candidate",
+        "selected_version_ids": [
+          "82e742b7-92c3-417a-b3f0-a350037b0bac"
+        ],
+        "selections_by_document": {
+          "remote-work-policy": [
+            "2025"
+          ]
+        },
+        "status": "VERSION_RESOLVED"
+      },
+      "selected_document_ids": [
+        "remote-work-policy"
+      ],
+      "selected_version_ids": [
+        "82e742b7-92c3-417a-b3f0-a350037b0bac"
+      ],
+      "temporal_scope": {
+        "document_scope": [],
+        "requested_versions": [
+          "2025"
+        ],
+        "temporal_mode": "HISTORICAL_ONLY"
+      }
+    },
+    {
+      "case_id": "fresh_v1_031",
+      "category": "version_temporal",
+      "deterministic_evidence_complete": false,
+      "local_checks": {
+        "authorization_precedes_temporal_expansion": true,
+        "embedding_cache_hit": true,
+        "no_downstream_redecomposition": true,
+        "p0_cardinality": true,
+        "payload_requested_versions": true,
+        "question_plan_hash_stable": false,
+        "required_facts_present": true,
+        "requirement_version_mapping": true,
+        "same_document_versions_distinct": true,
+        "stable_qualifier_ids": true,
+        "stable_requirement_ids": true,
+        "temporal_mode": true,
+        "top15_requested_versions": true
+      },
+      "principal": {
+        "permission_groups": [
+          "employees"
+        ],
+        "principal_id": "fresh-eval-user",
+        "tenant_id": "acmeai"
+      },
+      "question": "How did the remote-work allowance change from the 2025 policy to the 2026 policy?",
+      "question_plan": {
+        "cardinality_match": true,
+        "context_qualifiers": [
+          {
+            "qualifier_id": "Q1",
+            "qualifier_type": "time",
+            "text": "2025"
+          },
+          {
+            "qualifier_id": "Q2",
+            "qualifier_type": "time",
+            "text": "2026"
+          }
+        ],
+        "detected_output_units": [
+          "2025 the remote-work allowance",
+          "2026 the remote-work allowance"
+        ],
+        "question": "How did the remote-work allowance change from the 2025 policy to the 2026 policy?",
+        "question_plan_hash": "860544a05d05d72075bb0254e927fee03013e6ba91865ec12df1c087d271c528",
+        "requirements": [
+          {
+            "requirement_id": "R1",
+            "requirement_text": "2025 the remote-work allowance",
+            "requirement_type": "fact"
+          },
+          {
+            "requirement_id": "R2",
+            "requirement_text": "2026 the remote-work allowance",
+            "requirement_type": "fact"
+          }
+        ]
+      },
+      "resolution": {
+        "reason": "explicit version set resolved per document",
+        "selected_version_ids": [
+          "82e742b7-92c3-417a-b3f0-a350037b0bac",
+          "e131a2f3-b35e-4d18-8990-650cf48e1c8c"
+        ],
+        "selections_by_document": {
+          "remote-work-policy": [
+            "2025",
+            "2026"
+          ]
+        },
+        "status": "VERSION_SET_RESOLVED"
+      },
+      "selected_document_ids": [
+        "remote-work-policy"
+      ],
+      "selected_version_ids": [
+        "82e742b7-92c3-417a-b3f0-a350037b0bac",
+        "e131a2f3-b35e-4d18-8990-650cf48e1c8c"
+      ],
+      "temporal_scope": {
+        "document_scope": [],
+        "requested_versions": [
+          "2025",
+          "2026"
+        ],
+        "temporal_mode": "CROSS_VERSION"
+      }
+    },
+    {
+      "case_id": "fresh_v1_032",
+      "category": "version_temporal",
+      "deterministic_evidence_complete": false,
+      "local_checks": {
+        "authorization_precedes_temporal_expansion": true,
+        "embedding_cache_hit": true,
+        "no_downstream_redecomposition": true,
+        "p0_cardinality": true,
+        "payload_requested_versions": true,
+        "question_plan_hash_stable": false,
+        "required_facts_present": true,
+        "requirement_version_mapping": true,
+        "same_document_versions_distinct": true,
+        "stable_qualifier_ids": true,
+        "stable_requirement_ids": true,
+        "temporal_mode": true,
+        "top15_requested_versions": true
+      },
+      "principal": {
+        "permission_groups": [
+          "employees"
+        ],
+        "principal_id": "fresh-eval-user",
+        "tenant_id": "acmeai"
+      },
+      "question": "How did manager review frequency for remote-work schedules change between 2025 and 2026?",
+      "question_plan": {
+        "cardinality_match": true,
+        "context_qualifiers": [
+          {
+            "qualifier_id": "Q1",
+            "qualifier_type": "time",
+            "text": "2025"
+          },
+          {
+            "qualifier_id": "Q2",
+            "qualifier_type": "time",
+            "text": "2026"
+          }
+        ],
+        "detected_output_units": [
+          "2025 manager review frequency for remote-work schedules",
+          "2026 manager review frequency for remote-work schedules"
+        ],
+        "question": "How did manager review frequency for remote-work schedules change between 2025 and 2026?",
+        "question_plan_hash": "ea19fe5a61d39c012fc114cc145e53df9da4cad2b08eca6cdad551867d6f6c23",
+        "requirements": [
+          {
+            "requirement_id": "R1",
+            "requirement_text": "2025 manager review frequency for remote-work schedules",
+            "requirement_type": "fact"
+          },
+          {
+            "requirement_id": "R2",
+            "requirement_text": "2026 manager review frequency for remote-work schedules",
+            "requirement_type": "fact"
+          }
+        ]
+      },
+      "resolution": {
+        "reason": "explicit version set resolved per document",
+        "selected_version_ids": [
+          "82e742b7-92c3-417a-b3f0-a350037b0bac",
+          "e131a2f3-b35e-4d18-8990-650cf48e1c8c"
+        ],
+        "selections_by_document": {
+          "remote-work-policy": [
+            "2025",
+            "2026"
+          ]
+        },
+        "status": "VERSION_SET_RESOLVED"
+      },
+      "selected_document_ids": [
+        "remote-work-policy"
+      ],
+      "selected_version_ids": [
+        "82e742b7-92c3-417a-b3f0-a350037b0bac",
+        "e131a2f3-b35e-4d18-8990-650cf48e1c8c"
+      ],
+      "temporal_scope": {
+        "document_scope": [],
+        "requested_versions": [
+          "2025",
+          "2026"
+        ],
+        "temporal_mode": "CROSS_VERSION"
+      }
+    },
+    {
+      "case_id": "fresh_v1_033",
+      "category": "version_temporal",
+      "deterministic_evidence_complete": false,
+      "local_checks": {
+        "authorization_precedes_temporal_expansion": true,
+        "embedding_cache_hit": true,
+        "no_downstream_redecomposition": true,
+        "p0_cardinality": true,
+        "payload_requested_versions": true,
+        "question_plan_hash_stable": false,
+        "required_facts_present": true,
+        "requirement_version_mapping": true,
+        "same_document_versions_distinct": true,
+        "stable_qualifier_ids": true,
+        "stable_requirement_ids": true,
+        "temporal_mode": true,
+        "top15_requested_versions": true
+      },
+      "principal": {
+        "permission_groups": [
+          "employees"
+        ],
+        "principal_id": "fresh-eval-user",
+        "tenant_id": "acmeai"
+      },
+      "question": "What was the severity-one reporting window under the 2025 security policy?",
+      "question_plan": {
+        "cardinality_match": true,
+        "context_qualifiers": [],
+        "detected_output_units": [
+          "What was the severity-one reporting window under the 2025 security policy"
+        ],
+        "question": "What was the severity-one reporting window under the 2025 security policy?",
+        "question_plan_hash": "a1cae724c4ff4683b4dba1a3f77aabc145d1194dc900e9aa827557e5cc781d6d",
+        "requirements": [
+          {
+            "requirement_id": "R1",
+            "requirement_text": "What was the severity-one reporting window under the 2025 security policy",
+            "requirement_type": "fact"
+          }
+        ]
+      },
+      "resolution": {
+        "reason": "unique valid candidate",
+        "selected_version_ids": [
+          "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588"
+        ],
+        "selections_by_document": {
+          "security-incident-policy": [
+            "2025"
+          ]
+        },
+        "status": "VERSION_RESOLVED"
+      },
+      "selected_document_ids": [
+        "security-incident-policy"
+      ],
+      "selected_version_ids": [
+        "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588"
+      ],
+      "temporal_scope": {
+        "document_scope": [],
+        "requested_versions": [
+          "2025"
+        ],
+        "temporal_mode": "HISTORICAL_ONLY"
+      }
+    },
+    {
+      "case_id": "fresh_v1_035",
+      "category": "version_temporal",
+      "deterministic_evidence_complete": false,
+      "local_checks": {
+        "authorization_precedes_temporal_expansion": true,
+        "embedding_cache_hit": true,
+        "no_downstream_redecomposition": true,
+        "p0_cardinality": true,
+        "payload_requested_versions": true,
+        "question_plan_hash_stable": false,
+        "required_facts_present": true,
+        "requirement_version_mapping": true,
+        "same_document_versions_distinct": true,
+        "stable_qualifier_ids": true,
+        "stable_requirement_ids": true,
+        "temporal_mode": true,
+        "top15_requested_versions": true
+      },
+      "principal": {
+        "permission_groups": [
+          "employees"
+        ],
+        "principal_id": "fresh-eval-user",
+        "tenant_id": "acmeai"
+      },
+      "question": "Compare the severity-one reporting deadline in the 2025 and 2026 security policies.",
+      "question_plan": {
+        "cardinality_match": true,
+        "context_qualifiers": [
+          {
+            "qualifier_id": "Q1",
+            "qualifier_type": "time",
+            "text": "2025"
+          },
+          {
+            "qualifier_id": "Q2",
+            "qualifier_type": "time",
+            "text": "2026"
+          }
+        ],
+        "detected_output_units": [
+          "2025 the severity-one reporting deadline security policies",
+          "2026 the severity-one reporting deadline security policies"
+        ],
+        "question": "Compare the severity-one reporting deadline in the 2025 and 2026 security policies.",
+        "question_plan_hash": "aac9eb51fd23d3d8452dbf1482f7545d050962ae13b09e5d6d61f71e7a3d626c",
+        "requirements": [
+          {
+            "requirement_id": "R1",
+            "requirement_text": "2025 the severity-one reporting deadline security policies",
+            "requirement_type": "fact"
+          },
+          {
+            "requirement_id": "R2",
+            "requirement_text": "2026 the severity-one reporting deadline security policies",
+            "requirement_type": "fact"
+          }
+        ]
+      },
+      "resolution": {
+        "reason": "explicit version set resolved per document",
+        "selected_version_ids": [
+          "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588",
+          "c4d49578-2eec-4051-a54b-addc12af0efa"
+        ],
+        "selections_by_document": {
+          "security-incident-policy": [
+            "2025",
+            "2026"
+          ]
+        },
+        "status": "VERSION_SET_RESOLVED"
+      },
+      "selected_document_ids": [
+        "security-incident-policy"
+      ],
+      "selected_version_ids": [
+        "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588",
+        "c4d49578-2eec-4051-a54b-addc12af0efa"
+      ],
+      "temporal_scope": {
+        "document_scope": [],
+        "requested_versions": [
+          "2025",
+          "2026"
+        ],
+        "temporal_mode": "CROSS_VERSION"
+      }
+    }
+  ],
+  "experiment_id": "P1_VERSION_TEMPORAL_TARGETED_REAL_API_CONFIRMATION_V1"
+}

@@ -1,0 +1,6 @@
+{
+  "evaluation_executed": false,
+  "reason": "Existing 60-case regression failed before completion.",
+  "release_gates_evaluated": false,
+  "status": "NOT_RUN"
+}

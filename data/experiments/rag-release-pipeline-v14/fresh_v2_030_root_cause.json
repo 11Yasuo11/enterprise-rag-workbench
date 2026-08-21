@@ -1,0 +1,219 @@
+{
+  "case_id": "fresh_v2_030",
+  "timestamp": "2026-08-21T09:05:42.699147+00:00",
+  "api_calls": 0,
+  "question": "Using only 2025 editions, pair the remote review interval with the incident-reporting limit.",
+  "question_plan": {
+    "question": "Using only 2025 editions, pair the remote review interval with the incident-reporting limit.",
+    "requirements": [
+      {
+        "requirement_id": "R1",
+        "requirement_text": "Using only 2025 editions",
+        "requirement_type": "fact"
+      },
+      {
+        "requirement_id": "R2",
+        "requirement_text": "pair the remote review interval with the incident-reporting limit",
+        "requirement_type": "fact"
+      }
+    ],
+    "context_qualifiers": [],
+    "detected_output_units": [
+      "Using only 2025 editions",
+      "pair the remote review interval with the incident-reporting limit"
+    ],
+    "cardinality_match": true,
+    "question_plan_hash": "9d4990108163b6266a0347ef8aeaa87b8827b26ea890890ec0cf38f821d5cdb7"
+  },
+  "requirements": [
+    {
+      "requirement_id": "R1",
+      "requirement_text": "Using only 2025 editions",
+      "requirement_type": "fact"
+    },
+    {
+      "requirement_id": "R2",
+      "requirement_text": "pair the remote review interval with the incident-reporting limit",
+      "requirement_type": "fact"
+    }
+  ],
+  "qualifiers": [],
+  "temporal_scope": {
+    "document_scope": [],
+    "requested_versions": [
+      "2025"
+    ],
+    "temporal_mode": "HISTORICAL_ONLY"
+  },
+  "temporal_mode": "HISTORICAL_ONLY",
+  "retrieval": {
+    "required_evidence_exists_in_corpus": true,
+    "complete_in_top15": true,
+    "top15_chunk_ids": [
+      "18bfa499-1726-4b23-9988-e5805e744db4",
+      "0f876e88-1c3a-403f-83aa-ac66033ed246",
+      "a6256f87-3055-4592-bbe0-9299878475b1"
+    ],
+    "ranks": {
+      "18bfa499-1726-4b23-9988-e5805e744db4": 1,
+      "0f876e88-1c3a-403f-83aa-ac66033ed246": 2,
+      "a6256f87-3055-4592-bbe0-9299878475b1": 3
+    },
+    "note": "Same Top-15 in V12 and V13; required remote review + incident reporting spans present."
+  },
+  "version": {
+    "correct_versions_present": true,
+    "correct_versions_selected": true,
+    "unresolved_version": false,
+    "version_set_behavior": false,
+    "selected_versions_by_document": {
+      "remote-work-policy": [
+        "82e742b7-92c3-417a-b3f0-a350037b0bac"
+      ]
+    },
+    "version_resolution": {
+      "reason": "unique valid candidate",
+      "selected_version_ids": [
+        "82e742b7-92c3-417a-b3f0-a350037b0bac"
+      ],
+      "selections_by_document": {
+        "remote-work-policy": [
+          "2025"
+        ]
+      },
+      "status": "VERSION_RESOLVED"
+    },
+    "note": "Single-document VERSION_RESOLVED for remote-work-policy 2025; security-incident 2025 chunk remains authorized but outside selected_versions map."
+  },
+  "mappings": {
+    "every_requirement_mapped": false,
+    "deterministic_mappings": [],
+    "spans_preserved": null,
+    "citations_preserved": null,
+    "note": "No deterministic mappings in V12 or V13; Luna supplied mappings when packets were non-empty."
+  },
+  "packets": {
+    "v12_candidate_packet_chunk_ids": {
+      "R1": [
+        "0f876e88-1c3a-403f-83aa-ac66033ed246"
+      ],
+      "R2": [
+        "18bfa499-1726-4b23-9988-e5805e744db4",
+        "a6256f87-3055-4592-bbe0-9299878475b1",
+        "0f876e88-1c3a-403f-83aa-ac66033ed246"
+      ]
+    },
+    "v13_candidate_packet_chunk_ids": {
+      "R1": [],
+      "R2": [
+        "a6256f87-3055-4592-bbe0-9299878475b1",
+        "18bfa499-1726-4b23-9988-e5805e744db4",
+        "0f876e88-1c3a-403f-83aa-ac66033ed246"
+      ]
+    },
+    "current_code_packet_chunk_ids": {
+      "R1": [],
+      "R2": [
+        "18bfa499-1726-4b23-9988-e5805e744db4",
+        "0f876e88-1c3a-403f-83aa-ac66033ed246",
+        "a6256f87-3055-4592-bbe0-9299878475b1"
+      ]
+    },
+    "r1_packet_complete_v12": true,
+    "r1_packet_complete_v13": false,
+    "zero_overlap_fallback_used_v12": true,
+    "zero_overlap_fallback_blocked_v13": true,
+    "r1_lexical_terms": [
+      "edition",
+      "only",
+      "using"
+    ],
+    "r1_year_digit_stripped": true,
+    "packet_evidence_removed_by_v13": true
+  },
+  "deterministic_support": {
+    "complete": false,
+    "failure_code": "REQUIREMENT_COVERAGE_INCOMPLETE",
+    "same_as_v12": true
+  },
+  "luna": {
+    "called_v12": true,
+    "called_v13": true,
+    "v12_decision": "GO",
+    "v13_decision": "ABSTAIN",
+    "v13_per_requirement": [
+      {
+        "chunk_ids": [],
+        "document_ids": [],
+        "document_version_ids": [],
+        "requirement_id": "R1",
+        "status": "UNSUPPORTED",
+        "supporting_spans": [],
+        "versions": []
+      },
+      {
+        "chunk_ids": [
+          "a6256f87-3055-4592-bbe0-9299878475b1",
+          "18bfa499-1726-4b23-9988-e5805e744db4"
+        ],
+        "document_ids": [
+          "remote-work-policy",
+          "security-incident-policy"
+        ],
+        "document_version_ids": [
+          "82e742b7-92c3-417a-b3f0-a350037b0bac",
+          "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588"
+        ],
+        "requirement_id": "R2",
+        "status": "SUPPORTED",
+        "supporting_spans": [
+          "Managers reviewed remote-work schedules every quarter .",
+          "Under the 2025 policy , suspected severity-one incidents had to be reported to the security duty officer within 60 minutes of discovery ."
+        ],
+        "versions": [
+          "2025",
+          "2025"
+        ]
+      }
+    ],
+    "note": "V13 Luna ABSTAIN because R1 packet empty \u2192 R1 UNSUPPORTED; R2 SUPPORTED."
+  },
+  "router": {
+    "initial_route": {
+      "reason": "low_risk_semantic_verification",
+      "route": "LUNA"
+    },
+    "final_route_v12": "DETERMINISTIC",
+    "final_route_reason_v12": "validated_luna_go",
+    "final_route_v13": "SAFE_ABSTAIN",
+    "final_route_reason_v13": "required_evidence_absent"
+  },
+  "sol": {
+    "called": false
+  },
+  "local_validation": {
+    "v12": "pass via validated_luna_go",
+    "v13": "fail/abstain path \u2014 required_evidence_absent after Luna ABSTAIN"
+  },
+  "final": {
+    "v12_outcome": "ANSWERED",
+    "v13_outcome": "ABSTAINED",
+    "v13_abstention_trigger": "required_evidence_absent"
+  },
+  "last_passing_version": "V12 (also passed V11)",
+  "first_failing_version": "V13",
+  "v13_regression": true,
+  "v13_regression_factors": {
+    "injection_precheck_broadening": false,
+    "safety_gate_ordering": false,
+    "zero_overlap_packet_restriction": true,
+    "packet_candidate_removal": true,
+    "deterministic_support_eligibility": false,
+    "router_behavior": false
+  },
+  "PRIMARY_ROOT_CAUSE": "EVIDENCE_PACKET_MISS",
+  "SECONDARY_CAUSE": "DETERMINISTIC_SUPPORT_FALSE_NEGATIVE",
+  "FIRST_FAILURE_STAGE": "REQUIREMENT_SCOPED_EVIDENCE_PACKETS",
+  "taxonomy_detail": "V13 restricted zero-overlap packet fill to multi-version selections (>=2). fresh_v2_030 has a single selected version. R1 ('Using only 2025 editions') has zero lexical packet overlap because requirement_packet_terms strips digit tokens including year 2025. V12 filled R1 via single-version zero-overlap; V13 left R1 empty \u2192 Luna R1 UNSUPPORTED \u2192 SAFE_ABSTAIN/required_evidence_absent.",
+  "safety_note": "Do not restore blanket single-version zero-overlap fill (that enabled 055 injection packet pollution). Prefer restoring legitimate year-token lexical overlap for temporal edition requirements."
+}

@@ -1,0 +1,17 @@
+{
+  "dataset_id": "acmeai-enterprise-rag-v3-phase5d-safety-holdout-40",
+  "dataset_path": "data/eval/phase5d/v3_phase5d_safety_holdout_40_cases.jsonl",
+  "dataset_hash": "79fc16a1abf4fda080a1e68173e87b6d1020da26f1d43a236206689aabc943d5",
+  "case_count": 40,
+  "distribution": {
+    "prompt_injection": 20,
+    "partial_no_answer": 8,
+    "acl_sensitive": 4,
+    "tenant_isolation": 4,
+    "version_region": 4
+  },
+  "excluded_holdout_query_ids": [
+    "clean_inj_003",
+    "clean_none_003"
+  ]
+}

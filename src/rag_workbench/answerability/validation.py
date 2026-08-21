@@ -9,6 +9,8 @@ from rag_workbench.answerability.base import (
     ValidatedAnswerabilityResult,
 )
 from rag_workbench.db.models import Chunk, Document, DocumentVersion
+from rag_workbench.retrieval.filters import apply_temporal_version_filter
+from rag_workbench.retrieval.temporal import TemporalScopePlan, version_is_eligible
 from rag_workbench.security.permissions import Principal, apply_document_acl
 
 
@@ -18,6 +20,7 @@ def validate_gate_result_with_error(
     *,
     session: Session,
     principal: Principal,
+    temporal_scope: TemporalScopePlan | None = None,
 ) -> ValidatedAnswerabilityResult:
     """Fail closed and identify the operational reason without exposing evidence labels."""
     requirement_support = tuple(
@@ -55,7 +58,11 @@ def validate_gate_result_with_error(
             return _failed(GateOperationalError.VERSION_MISMATCH)
         if chunk.text != evidence.text:
             return _failed(GateOperationalError.INVALID_SUPPORTING_ID)
-        if not version.is_active:
+        if not version_is_eligible(
+            temporal_scope or TemporalScopePlan("UNSPECIFIED_CURRENT_DEFAULT"),
+            version=version.version,
+            is_active=version.is_active,
+        ):
             return _failed(GateOperationalError.INACTIVE_VERSION)
         if evidence.index_identity and chunk.index_identity != evidence.index_identity:
             return _failed(GateOperationalError.EXPERIMENT_MISMATCH)
@@ -64,7 +71,10 @@ def validate_gate_result_with_error(
         select(Chunk.id)
         .join(Document, Chunk.document_fk == Document.id)
         .join(DocumentVersion, Chunk.document_version_id == DocumentVersion.id)
-        .where(Chunk.id.in_(all_selected), DocumentVersion.is_active.is_(True))
+        .where(Chunk.id.in_(all_selected))
+    )
+    authorized_statement = apply_temporal_version_filter(
+        authorized_statement, temporal_scope
     )
     authorized = set(
         session.scalars(apply_document_acl(authorized_statement, principal)).all()
@@ -89,10 +99,15 @@ def validate_gate_result(
     *,
     session: Session,
     principal: Principal,
+    temporal_scope: TemporalScopePlan | None = None,
 ) -> AnswerabilityResult:
     """Backward-compatible result-only validation API."""
     return validate_gate_result_with_error(
-        result, retrieved_chunks, session=session, principal=principal
+        result,
+        retrieved_chunks,
+        session=session,
+        principal=principal,
+        temporal_scope=temporal_scope,
     ).result
 
 

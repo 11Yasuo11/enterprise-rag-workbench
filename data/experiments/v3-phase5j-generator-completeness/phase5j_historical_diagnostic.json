@@ -1,0 +1,14 @@
+{
+  "phase": "V3_PHASE5J_GENERATOR_FINAL_FACT_COMPLETENESS",
+  "identity": "v3-phase5j-generator-completeness",
+  "historical_case": "p5e_date_pos_04",
+  "source": "phase5g_g0_corrected_diagnostic_report.json",
+  "finding": "final answer omitted required endpoint identifier fact while citing relevant documents",
+  "possible_causes": [
+    "sentence-selection issue",
+    "multi-fact coverage issue",
+    "question-term overlap bias favoring region/date over endpoint token"
+  ],
+  "guardrail": "Only create GENERATOR_COMPLETENESS_V3 if generator-only root cause is confirmed in isolated trace."
+}
+

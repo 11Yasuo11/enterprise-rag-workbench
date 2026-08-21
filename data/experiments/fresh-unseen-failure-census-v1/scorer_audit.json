@@ -1,0 +1,103 @@
+{
+  "audited_failure_count": 19,
+  "cases": [
+    {
+      "case_id": "fresh_v1_009",
+      "classification": "INCORRECT_ABSTENTION",
+      "correct": true
+    },
+    {
+      "case_id": "fresh_v1_011",
+      "classification": "UNSUPPORTED_ANSWER",
+      "correct": true
+    },
+    {
+      "case_id": "fresh_v1_013",
+      "classification": "UNSUPPORTED_ANSWER",
+      "correct": true
+    },
+    {
+      "case_id": "fresh_v1_015",
+      "classification": "INCORRECT_ABSTENTION",
+      "correct": true
+    },
+    {
+      "case_id": "fresh_v1_016",
+      "classification": "INCORRECT_ABSTENTION",
+      "correct": true
+    },
+    {
+      "case_id": "fresh_v1_017",
+      "classification": "INCORRECT_ABSTENTION",
+      "correct": true
+    },
+    {
+      "case_id": "fresh_v1_022",
+      "classification": "INCORRECT_ABSTENTION",
+      "correct": true
+    },
+    {
+      "case_id": "fresh_v1_023",
+      "classification": "INCORRECT_ABSTENTION",
+      "correct": true
+    },
+    {
+      "case_id": "fresh_v1_025",
+      "classification": "INCORRECT_ABSTENTION",
+      "correct": true
+    },
+    {
+      "case_id": "fresh_v1_028",
+      "classification": "UNSUPPORTED_ANSWER",
+      "correct": true
+    },
+    {
+      "case_id": "fresh_v1_029",
+      "classification": "INCORRECT_ABSTENTION",
+      "correct": true
+    },
+    {
+      "case_id": "fresh_v1_030",
+      "classification": "UNSUPPORTED_ANSWER",
+      "correct": true
+    },
+    {
+      "case_id": "fresh_v1_031",
+      "classification": "INCORRECT_ABSTENTION",
+      "correct": true
+    },
+    {
+      "case_id": "fresh_v1_032",
+      "classification": "INCORRECT_ABSTENTION",
+      "correct": true
+    },
+    {
+      "case_id": "fresh_v1_033",
+      "classification": "INCORRECT_ABSTENTION",
+      "correct": true
+    },
+    {
+      "case_id": "fresh_v1_035",
+      "classification": "INCORRECT_ABSTENTION",
+      "correct": true
+    },
+    {
+      "case_id": "fresh_v1_036",
+      "classification": "INCORRECT_ABSTENTION",
+      "correct": true
+    },
+    {
+      "case_id": "fresh_v1_040",
+      "classification": "INCORRECT_ABSTENTION",
+      "correct": true
+    },
+    {
+      "case_id": "fresh_v1_044",
+      "classification": "INCORRECT_ABSTENTION",
+      "correct": true
+    }
+  ],
+  "correct_classification_count": 19,
+  "scorer_false_negative_count": 0,
+  "scorer_false_positive_count": 0
+}

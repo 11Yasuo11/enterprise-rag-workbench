@@ -1,0 +1,33 @@
+{
+  "citations": {
+    "authorized_only": true,
+    "minimum": 1,
+    "type": "tuple[str, ...]"
+  },
+  "compatibility_accessor": {
+    "supporting_span": "allowed only when cardinality == 1"
+  },
+  "contract_id": "CANONICAL_EVIDENCE_MAPPING_V1",
+  "failure_code": "INVALID_EVIDENCE_MAPPING_SCHEMA",
+  "normalization_inputs": [
+    "supporting_span scalar",
+    "supporting_spans one item",
+    "supporting_spans multiple items"
+  ],
+  "required_fields": [
+    "requirement_id",
+    "document_id",
+    "document_version_id",
+    "version",
+    "chunk_id",
+    "supporting_spans",
+    "citations",
+    "authorized"
+  ],
+  "supporting_spans": {
+    "lossless": true,
+    "minimum": 1,
+    "type": "tuple[str, ...]"
+  },
+  "timestamp": "2026-08-20T19:49:55.650687+00:00"
+}

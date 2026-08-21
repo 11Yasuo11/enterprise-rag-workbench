@@ -1,0 +1,49 @@
+{
+  "cost": {
+    "fresh_v2_regression_usd": 0.21249544,
+    "fresh_v3_usd": 0.0,
+    "total_v9_cap_usd": 0.6,
+    "total_v9_usd": 0.21249544
+  },
+  "final_status": "NOT_READY_FOR_PRODUCTION",
+  "fresh_v2_regression": {
+    "first_causal_failure": {
+      "case_id": "fresh_v2_010",
+      "facts_missing": [
+        "eu-central"
+      ],
+      "facts_satisfied": [
+        "Tuesdays and Thursdays"
+      ],
+      "type": "UNSUPPORTED_ANSWER"
+    },
+    "passed": false,
+    "predictions_sha256": "36760635baf04a80e10c5cd53dd6a21c2cf4353fdd884b50a48e56186f1f2d47",
+    "quality": {
+      "citation_completeness": 0.9833333333333333,
+      "citation_correctness": 0.9833333333333333,
+      "citation_validity": 1.0,
+      "correct": 57,
+      "incorrect_abstentions": 2,
+      "precision": 0.9795918367346939,
+      "recall": 0.96,
+      "requirement_completeness": 0.9666666666666667,
+      "strict_accuracy": 0.95,
+      "total": 60,
+      "unsupported_answers": 1,
+      "version_correctness": 0.95
+    },
+    "runtime_exceptions": 0,
+    "safety_violations": 0
+  },
+  "fresh_v3": "NOT_CREATED_OR_RUN_AFTER_MANDATORY_V2_GATE_FAILURE",
+  "local_regression": "PASS_558_OF_558",
+  "production_deployed": false,
+  "rc": {
+    "dirty_diff_hash": "f9ce0a5535102513db6710848702d50e994a9cd48d962d7e4f8fc61127a864a1",
+    "freeze_id": "RC_FINAL_PRE_API_V9",
+    "git_sha": "6e9741f55dc0436963ea1c0ba30b9a30bccbd207"
+  },
+  "stage_guard_fix": "PASS",
+  "verdict": "PIPELINE_V9_FAILED_V2_REGRESSION"
+}

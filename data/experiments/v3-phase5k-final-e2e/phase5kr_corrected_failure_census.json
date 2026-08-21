@@ -1,0 +1,167 @@
+{
+  "phase": "v3-phase5kr-final-corrected-scoring",
+  "arm": "FINAL_B",
+  "failure_census": {
+    "OTHER": 23,
+    "JUDGE_FALSE_NEGATIVE": 4,
+    "GENERATOR_INCOMPLETE": 4
+  },
+  "per_case": [
+    {
+      "query_id": "p5k_single_document_001",
+      "behavior": "INCORRECT_ABSTENTION",
+      "primary_cause": "OTHER"
+    },
+    {
+      "query_id": "p5k_single_document_006",
+      "behavior": "INCORRECT_ABSTENTION",
+      "primary_cause": "OTHER"
+    },
+    {
+      "query_id": "p5k_single_document_008",
+      "behavior": "INCORRECT_ABSTENTION",
+      "primary_cause": "OTHER"
+    },
+    {
+      "query_id": "p5k_three_document_027",
+      "behavior": "INCORRECT_ABSTENTION",
+      "primary_cause": "OTHER"
+    },
+    {
+      "query_id": "p5k_three_document_028",
+      "behavior": "INCORRECT_ABSTENTION",
+      "primary_cause": "OTHER"
+    },
+    {
+      "query_id": "p5k_three_document_029",
+      "behavior": "INCORRECT_ABSTENTION",
+      "primary_cause": "OTHER"
+    },
+    {
+      "query_id": "p5k_three_document_030",
+      "behavior": "INCORRECT_ABSTENTION",
+      "primary_cause": "OTHER"
+    },
+    {
+      "query_id": "p5k_three_document_031",
+      "behavior": "INCORRECT_ABSTENTION",
+      "primary_cause": "OTHER"
+    },
+    {
+      "query_id": "p5k_three_document_032",
+      "behavior": "INCORRECT_ABSTENTION",
+      "primary_cause": "OTHER"
+    },
+    {
+      "query_id": "p5k_three_document_033",
+      "behavior": "INCORRECT_ABSTENTION",
+      "primary_cause": "OTHER"
+    },
+    {
+      "query_id": "p5k_three_document_034",
+      "behavior": "INCORRECT_ABSTENTION",
+      "primary_cause": "OTHER"
+    },
+    {
+      "query_id": "p5k_three_document_035",
+      "behavior": "INCORRECT_ABSTENTION",
+      "primary_cause": "OTHER"
+    },
+    {
+      "query_id": "p5k_three_document_036",
+      "behavior": "INCORRECT_ABSTENTION",
+      "primary_cause": "OTHER"
+    },
+    {
+      "query_id": "p5k_three_document_037",
+      "behavior": "INCORRECT_ABSTENTION",
+      "primary_cause": "OTHER"
+    },
+    {
+      "query_id": "p5k_three_document_038",
+      "behavior": "INCORRECT_ABSTENTION",
+      "primary_cause": "OTHER"
+    },
+    {
+      "query_id": "p5k_three_document_039",
+      "behavior": "INCORRECT_ABSTENTION",
+      "primary_cause": "OTHER"
+    },
+    {
+      "query_id": "p5k_three_document_040",
+      "behavior": "INCORRECT_ABSTENTION",
+      "primary_cause": "OTHER"
+    },
+    {
+      "query_id": "p5k_three_document_041",
+      "behavior": "INCORRECT_ABSTENTION",
+      "primary_cause": "OTHER"
+    },
+    {
+      "query_id": "p5k_three_document_042",
+      "behavior": "INCORRECT_ABSTENTION",
+      "primary_cause": "OTHER"
+    },
+    {
+      "query_id": "p5k_version_sensitive_079",
+      "behavior": "INCORRECT_ABSTENTION",
+      "primary_cause": "OTHER"
+    },
+    {
+      "query_id": "p5k_version_sensitive_080",
+      "behavior": "INCORRECT_ABSTENTION",
+      "primary_cause": "JUDGE_FALSE_NEGATIVE"
+    },
+    {
+      "query_id": "p5k_version_sensitive_081",
+      "behavior": "INCORRECT_ABSTENTION",
+      "primary_cause": "OTHER"
+    },
+    {
+      "query_id": "p5k_version_sensitive_082",
+      "behavior": "INCORRECT_ABSTENTION",
+      "primary_cause": "JUDGE_FALSE_NEGATIVE"
+    },
+    {
+      "query_id": "p5k_version_sensitive_083",
+      "behavior": "INCORRECT_ABSTENTION",
+      "primary_cause": "OTHER"
+    },
+    {
+      "query_id": "p5k_version_sensitive_084",
+      "behavior": "INCORRECT_ABSTENTION",
+      "primary_cause": "JUDGE_FALSE_NEGATIVE"
+    },
+    {
+      "query_id": "p5k_version_sensitive_085",
+      "behavior": "INCORRECT_ABSTENTION",
+      "primary_cause": "OTHER"
+    },
+    {
+      "query_id": "p5k_version_sensitive_086",
+      "behavior": "INCORRECT_ABSTENTION",
+      "primary_cause": "JUDGE_FALSE_NEGATIVE"
+    },
+    {
+      "query_id": "p5k_numeric_date_constraint_094",
+      "behavior": "UNSUPPORTED_ANSWER",
+      "primary_cause": "GENERATOR_INCOMPLETE"
+    },
+    {
+      "query_id": "p5k_numeric_date_constraint_096",
+      "behavior": "UNSUPPORTED_ANSWER",
+      "primary_cause": "GENERATOR_INCOMPLETE"
+    },
+    {
+      "query_id": "p5k_numeric_date_constraint_098",
+      "behavior": "UNSUPPORTED_ANSWER",
+      "primary_cause": "GENERATOR_INCOMPLETE"
+    },
+    {
+      "query_id": "p5k_numeric_date_constraint_100",
+      "behavior": "UNSUPPORTED_ANSWER",
+      "primary_cause": "GENERATOR_INCOMPLETE"
+    }
+  ],
+  "judge_false_negative_policy": "Assigned only when judge_input_recoverable and top5_complete_evidence=1.0 and judge_answerable=false"
+}

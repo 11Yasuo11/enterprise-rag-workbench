@@ -1,0 +1,98 @@
+{
+  "assembler_hash": "1b1d4a68a510c8f23d16d0dcadcf8b47b675d370b4b8067d67f2af4b9774b20c",
+  "canonical_evidence_mapping_schema_hash": "c66924259020a0e0c714f045d231f076362a0a18f417e46b2313240fe54a25d9",
+  "canonical_question_plan_baseline_sha256": "fbd7feaf0fb565279cbb57123f2802c412710e7f0b8dbaf34d87f10299006854",
+  "citation_authorization_hash": "d6c39189eaad50d437d12606dcc9aeaf30560bce48c362cb93d56e021d776ae3",
+  "constraint_engine_hash": "f550af0e91ae18afd358df606e8f1aa30e1b3cb12b42e9401dcdefb4629845af",
+  "cross_encoder": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+  "dirty_worktree": true,
+  "dirty_worktree_diff_hash": "4b97368a382738b7db8a119f1fd9d419bfbd56f094203f9cebfc71055dcaa6f4",
+  "embedding_model": "text-embedding-3-small",
+  "freeze_id": "RC_FINAL_PRE_API_V6",
+  "git_sha": "6e9741f55dc0436963ea1c0ba30b9a30bccbd207",
+  "luna_model": "gpt-5.6-luna",
+  "normalization_adapter_hash": "c66924259020a0e0c714f045d231f076362a0a18f417e46b2313240fe54a25d9",
+  "p0_hash": "efc23a5900c802d1e730fa059c26f3e1db6cc0a83b96b1ef09298c9d0a665efe",
+  "p1_hash": "b8ed3172f62b042399fb25188c5756e0caf5d32b8c12591308f6b5759eda357f",
+  "p2_hash": "ce936d81c6c96eb56ef37c75ad254846eb679ad52f29d5a31d805d153648c833",
+  "p3_hash": "3b63cb05b4e60bdc9840367b3da81db4c6413a90d2261912d1ce670b25da5ee5",
+  "p4_hash": "f550af0e91ae18afd358df606e8f1aa30e1b3cb12b42e9401dcdefb4629845af",
+  "p5_hash": "09ade8d67355d293e5e375b366708a7d39a49ac6d8a51f61a0e14fcc5c356640",
+  "planner_hash": "a40debdbe9842790879cbda308cc9621a965390273aa39736c47ae83cc508e1c",
+  "post_freeze_changes_forbidden": [
+    "code",
+    "prompt",
+    "config"
+  ],
+  "pricing": {
+    "context": "short-context <=272K list prices",
+    "models": {
+      "gpt-5.6-luna": {
+        "cache_write_per_million": 0.25,
+        "cached_input_per_million": 0.02,
+        "input_per_million": 0.2,
+        "output_per_million": 1.2
+      },
+      "gpt-5.6-sol": {
+        "cache_write_per_million": 6.25,
+        "cached_input_per_million": 0.5,
+        "input_per_million": 5.0,
+        "output_per_million": 30.0
+      }
+    },
+    "source": {
+      "consulted_at": "2026-08-20",
+      "luna": "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+      "pricing": "https://developers.openai.com/api/docs/pricing",
+      "sol": "https://developers.openai.com/api/docs/models/gpt-5.6-sol"
+    }
+  },
+  "prompt_hashes": {
+    "schemas": "66f25b63171d91924ea5b19de3ee501ea0e278b4a4d094d5caee5766ac300c7b",
+    "verifier": "58634e34316c423a7c7df0794712f2255633e5fa5baa065d8d526a2c0dc21b85"
+  },
+  "retrieval_configuration": {
+    "architecture": "ACL/Tenant/Region -> temporal expansion -> dense(50)+BM25(50) -> RRF(k=60, union=100) -> Cross-Encoder -> Top-15",
+    "index_identity": "e598d9fb91b13a8c6bd6be94b1bc0a54bbce27dd4e98dc158669d7198bc6f466",
+    "top_k": 15
+  },
+  "router_hash": "5e1741a13b9ae8a7bf33347298b0c8844329339fa1e99532171cb2ddade17e22",
+  "safety_configuration_hash": "8f3585b24174dd1fa83ba7d1f418406afeecf9c5e5a763f26c12078545f347a4",
+  "scorer": {
+    "hash": "f61e017702267a65ed509edad34e5bacc98c2652d50c46987655c52770c61a03",
+    "id": "FINAL_E2E_SCORER_V2"
+  },
+  "sol_model": "gpt-5.6-sol",
+  "source_hashes": {
+    "scripts/run_p1_version_temporal_targeted_real_api_confirmation_v1.py": "3066061b72430be99081166cc189924d5e1bf03d72c6e2feb77a5a8bcdca4267",
+    "scripts/run_p1_version_temporal_v1.py": "de44ad863f5275182ba4c109686cd1db2e6f69fa22303c1217bb3b126f89e9cf",
+    "scripts/run_rag_release_pipeline_v4_evaluation.py": "98a0e9cf56631dc81e2384284dc13d388bfad531253638c7e22f1b6d9700e3c8",
+    "src/rag_workbench/config.py": "8aa630c3dcc4a86c3877fbc60a03347a4e6f59006c88b1a3fb7fb82057e9fda5",
+    "src/rag_workbench/evaluation/citation_authorization.py": "d6c39189eaad50d437d12606dcc9aeaf30560bce48c362cb93d56e021d776ae3",
+    "src/rag_workbench/evaluation/final_e2e_scorer_v2.py": "f61e017702267a65ed509edad34e5bacc98c2652d50c46987655c52770c61a03",
+    "src/rag_workbench/experiments/atomic_requirement_contract_v1/contract.py": "a40debdbe9842790879cbda308cc9621a965390273aa39736c47ae83cc508e1c",
+    "src/rag_workbench/experiments/atomic_requirement_contract_v1/evidence_mapping.py": "c66924259020a0e0c714f045d231f076362a0a18f417e46b2313240fe54a25d9",
+    "src/rag_workbench/experiments/atomic_requirement_contract_v1/verifier.py": "775b031c53b723ce5e2fc83fb47470c790c8188587c43ba3f426074f5ef8e9f1",
+    "src/rag_workbench/experiments/deterministic_constraint_inference.py": "f550af0e91ae18afd358df606e8f1aa30e1b3cb12b42e9401dcdefb4629845af",
+    "src/rag_workbench/experiments/requirement_assembler_selective_routing_v1/assembler.py": "1b1d4a68a510c8f23d16d0dcadcf8b47b675d370b4b8067d67f2af4b9774b20c",
+    "src/rag_workbench/experiments/requirement_assembler_selective_routing_v1/router.py": "5e1741a13b9ae8a7bf33347298b0c8844329339fa1e99532171cb2ddade17e22",
+    "src/rag_workbench/experiments/requirement_assembler_selective_routing_v1/versioning.py": "523a8e2c83ef38034cfb0442b2752f0a7bb5875b7385135e4d807be4a4e28efb",
+    "src/rag_workbench/experiments/safe_recovery_luna_v2/identities.py": "7351e3d36d3cceb88cbba73f14d31fa099c69a570aa339b96181560bb3af6d99",
+    "src/rag_workbench/experiments/safe_recovery_luna_v2/pipeline.py": "5742349259a080d85540f942dc89b161c831b3ab9129a49af5954de82a2ac05a",
+    "src/rag_workbench/experiments/safe_recovery_luna_v2/pricing.py": "4cb8598d295816aa13c20503e5f53208c9b69015fa3d77727cfe2a629ff9452e",
+    "src/rag_workbench/reranking/cross_encoder.py": "6233437a63950b62f5185cb5b74458b6771ae0059a54f100f863023c75af3546",
+    "src/rag_workbench/retrieval/bm25.py": "63eac45a1e7adc7f345ef3358628f1128997afc387a17ae322b295d501f8102f",
+    "src/rag_workbench/retrieval/filters.py": "4bd411550ebfc7f9564d44c900412dde957eb71966e32b7c0d52f5d6765431f9",
+    "src/rag_workbench/retrieval/hybrid.py": "3cec7a36b922b75fc18bb7c19df89d28aa49bff8bffb6e4764cc551ec220c028",
+    "src/rag_workbench/retrieval/retriever.py": "db08ae036df08ee62add42af7317ae25d78ab002d6709d86a12c9efe7684e3c4",
+    "src/rag_workbench/retrieval/temporal.py": "b8ed3172f62b042399fb25188c5756e0caf5d32b8c12591308f6b5759eda357f",
+    "src/rag_workbench/safety/question_injection_guard_v2.py": "31dbcd441b01c97b785a66b83c4ac541ebf82c9308c4cc60c9decf98049697e1"
+  },
+  "targeted_preflight_sha256": "285d4191c3494b433e255625b4be35d7cc2f818804a3855d0991d0667450fa94",
+  "targeted_runtime_inputs_sha256": "1b8ee0bfff136ba2cc4504c9335856ad0b9ce852c127564284aa4ca0274f031e",
+  "temporal_planner_hash": "b8ed3172f62b042399fb25188c5756e0caf5d32b8c12591308f6b5759eda357f",
+  "timestamp": "2026-08-20T19:50:18.128454+00:00",
+  "top_k": 15,
+  "verifier_hash": "775b031c53b723ce5e2fc83fb47470c790c8188587c43ba3f426074f5ef8e9f1",
+  "version_resolver_hash": "523a8e2c83ef38034cfb0442b2752f0a7bb5875b7385135e4d807be4a4e28efb"
+}

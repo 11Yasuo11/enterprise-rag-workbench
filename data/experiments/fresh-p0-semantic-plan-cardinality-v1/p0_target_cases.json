@@ -1,0 +1,34 @@
+{
+  "case_count": 11,
+  "case_ids": [
+    "fresh_v1_009",
+    "fresh_v1_011",
+    "fresh_v1_013",
+    "fresh_v1_015",
+    "fresh_v1_016",
+    "fresh_v1_023",
+    "fresh_v1_025",
+    "fresh_v1_028",
+    "fresh_v1_030",
+    "fresh_v1_036",
+    "fresh_v1_044"
+  ],
+  "experiment_id": "FRESH_P0_SEMANTIC_PLAN_CARDINALITY_V1",
+  "primary_buckets": {
+    "QUALIFIER_REQUIREMENT_ERROR": [
+      "fresh_v1_009",
+      "fresh_v1_015",
+      "fresh_v1_023",
+      "fresh_v1_025",
+      "fresh_v1_044"
+    ],
+    "QUESTION_PLAN_ERROR": [
+      "fresh_v1_011",
+      "fresh_v1_013",
+      "fresh_v1_016",
+      "fresh_v1_028",
+      "fresh_v1_030",
+      "fresh_v1_036"
+    ]
+  }
+}

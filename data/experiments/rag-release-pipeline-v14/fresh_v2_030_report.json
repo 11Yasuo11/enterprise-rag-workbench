@@ -1,0 +1,46 @@
+{
+  "cost": {
+    "actual_usd": 0.00082765,
+    "hard_cap_usd": 0.03,
+    "passed": true
+  },
+  "experiment_id": "TARGETED_FRESH_V2_030_V14",
+  "final_generation_llm_calls": 0,
+  "first_causal_failure": null,
+  "latency": {
+    "median_ms": 4765.219249995425,
+    "p95_ms": 4765.219249995425
+  },
+  "luna_calls": 1,
+  "passed": true,
+  "quality": {
+    "citation_completeness": 1.0,
+    "citation_correctness": 1.0,
+    "citation_validity": 1.0,
+    "contract_mismatches": 0,
+    "correct": 1,
+    "incorrect_abstentions": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "requirement_completeness": 1.0,
+    "strict_accuracy": 1.0,
+    "total": 1,
+    "unsupported_answers": 0,
+    "version_correctness": 1.0
+  },
+  "routing": {
+    "DETERMINISTIC": 1
+  },
+  "runtime_exceptions": 0,
+  "safety": {
+    "acl_violations": 0,
+    "invalid_citations": 0,
+    "prompt_injection_regressions": 0,
+    "region_violations": 0,
+    "restricted_data_leaks": 0,
+    "tenant_violations": 0
+  },
+  "sol_calls": 0,
+  "timestamp": "2026-08-21T09:13:59.202891+00:00",
+  "verdict": "TARGETED_030_PASSED"
+}

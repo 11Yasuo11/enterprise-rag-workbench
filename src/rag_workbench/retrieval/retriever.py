@@ -9,11 +9,12 @@ from rag_workbench.db.models import Chunk, Document, DocumentVersion
 from rag_workbench.experiments.configs import IngestionConfig, index_identity_for
 from rag_workbench.providers.embeddings import EmbeddingProvider
 from rag_workbench.retrieval.base import RetrievalMode
-from rag_workbench.retrieval.filters import RetrievalFilters
+from rag_workbench.retrieval.filters import RetrievalFilters, apply_temporal_version_filter
 from rag_workbench.retrieval.query_embedding_cache import (
     QueryEmbeddingCache,
     QueryEmbeddingResult,
 )
+from rag_workbench.retrieval.temporal import plan_temporal_scope
 from rag_workbench.retrieval.vector_search import RetrievalResult
 from rag_workbench.security.permissions import Principal, apply_document_acl
 
@@ -74,6 +75,8 @@ class Retriever:
         if top_k < 1 or top_k > 100:
             raise ValueError("top_k must be between 1 and 100")
         embedding = self.query_embedding_cache.get_or_embed(query)
+        if filters is None:
+            filters = RetrievalFilters(temporal_scope=plan_temporal_scope(query))
         return self.retrieve_with_embedding(
             embedding,
             top_k=top_k,
@@ -95,14 +98,16 @@ class Retriever:
             raise ValueError("A principal is required; retrieval is never authorization-free")
         query_vector = embedding.vector
         distance = Chunk.embedding.cosine_distance(query_vector)
+        provider_names = {self.embedding_provider.provider_name}
+        if self.embedding_provider.provider_name in {"openai", "openai-compatible"}:
+            provider_names = {"openai", "openai-compatible"}
         statement = (
             select(Chunk, Document, DocumentVersion, distance.label("distance"))
             .join(Document, Chunk.document_fk == Document.id)
             .join(DocumentVersion, Chunk.document_version_id == DocumentVersion.id)
             .where(
-                DocumentVersion.is_active.is_(True),
                 Chunk.index_identity == self.index_identity,
-                Chunk.embedding_provider == self.embedding_provider.provider_name,
+                Chunk.embedding_provider.in_(tuple(sorted(provider_names))),
                 Chunk.embedding_model == self.embedding_provider.model_name,
                 Chunk.embedding_version == self.embedding_provider.version,
                 Chunk.embedding_dimension == self.embedding_provider.dimension,
@@ -110,6 +115,9 @@ class Retriever:
         )
         acl_started = time.perf_counter()
         statement = apply_document_acl(statement, principal)
+        statement = apply_temporal_version_filter(
+            statement, filters.temporal_scope if filters else None
+        )
         acl_filter_latency_ms = (time.perf_counter() - acl_started) * 1000
         if filters:
             if filters.document_ids:

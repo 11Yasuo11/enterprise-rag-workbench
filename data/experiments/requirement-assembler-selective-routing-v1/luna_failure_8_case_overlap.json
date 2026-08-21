@@ -1,0 +1,532 @@
+{
+  "experiment_id": "REQUIREMENT_ASSEMBLER_SELECTIVE_ROUTING_V1",
+  "identical_sets": false,
+  "intersection": [],
+  "intersection_count": 0,
+  "kind": "DIAGNOSTIC RESULT \u2014 saved artifacts only",
+  "new_openai_calls": 0,
+  "only_in_set_a": [
+    "p5k_near_duplicate_077",
+    "p5k_region_sensitive_088",
+    "p5k_region_sensitive_089",
+    "p5k_region_sensitive_090",
+    "p5k_semantic_paraphrase_054",
+    "p5k_single_document_002",
+    "p5k_single_document_005",
+    "p5k_single_document_009"
+  ],
+  "only_in_set_b": [
+    "p5k_version_sensitive_079",
+    "p5k_version_sensitive_080",
+    "p5k_version_sensitive_081",
+    "p5k_version_sensitive_082",
+    "p5k_version_sensitive_083",
+    "p5k_version_sensitive_084",
+    "p5k_version_sensitive_085",
+    "p5k_version_sensitive_086"
+  ],
+  "set_a_cases": [
+    {
+      "adaptive_luna_decision": "NOT_CALLED",
+      "category": "near_duplicate",
+      "expected_requirements_evaluation_only": [
+        "OPS-REC-E17"
+      ],
+      "luna_decision": "GO",
+      "query_id": "p5k_near_duplicate_077",
+      "question": "PhaseK audit token near_duplicate-077 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. For east-region recovery, what runbook code is specified?",
+      "required_document_ids_evaluation_only": [
+        "recovery-runbook-east"
+      ],
+      "retrieved_document_ids_top15": [
+        "data-retention-standard",
+        "data-retention-standard",
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "project-atlas-api",
+        "operations-continuity-plan",
+        "project-atlas-launch",
+        "operations-continuity-plan",
+        "security-incident-policy",
+        "project-atlas-api",
+        "finance-expense-policy",
+        "project-atlas-launch",
+        "finance-expense-policy",
+        "customer-support-escalation",
+        "engineering-deployment-handbook"
+      ],
+      "sol_decision": "GO"
+    },
+    {
+      "adaptive_luna_decision": "NOT_CALLED",
+      "category": "region_sensitive",
+      "expected_requirements_evaluation_only": [
+        "us-east standby cluster"
+      ],
+      "luna_decision": "GO",
+      "query_id": "p5k_region_sensitive_088",
+      "question": "PhaseK audit token region_sensitive-088 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. Which standby cluster is targeted by west-region recovery failover?",
+      "required_document_ids_evaluation_only": [
+        "recovery-runbook-west"
+      ],
+      "retrieved_document_ids_top15": [
+        "data-retention-standard",
+        "data-retention-standard",
+        "recovery-runbook-west",
+        "project-atlas-api",
+        "recovery-runbook-east",
+        "project-atlas-launch",
+        "operations-continuity-plan",
+        "security-incident-policy",
+        "project-atlas-api",
+        "operations-continuity-plan",
+        "project-atlas-launch",
+        "finance-expense-policy",
+        "customer-support-escalation",
+        "engineering-deployment-handbook",
+        "security-training-example"
+      ],
+      "sol_decision": "GO"
+    },
+    {
+      "adaptive_luna_decision": "NOT_CALLED",
+      "category": "region_sensitive",
+      "expected_requirements_evaluation_only": [
+        "eu-central standby cluster"
+      ],
+      "luna_decision": "GO",
+      "query_id": "p5k_region_sensitive_089",
+      "question": "PhaseK audit token region_sensitive-089 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. Which standby cluster is targeted by east-region recovery failover?",
+      "required_document_ids_evaluation_only": [
+        "recovery-runbook-east"
+      ],
+      "retrieved_document_ids_top15": [
+        "data-retention-standard",
+        "data-retention-standard",
+        "recovery-runbook-east",
+        "project-atlas-api",
+        "operations-continuity-plan",
+        "project-atlas-api",
+        "security-incident-policy",
+        "recovery-runbook-west",
+        "project-atlas-launch",
+        "operations-continuity-plan",
+        "project-atlas-launch",
+        "finance-expense-policy",
+        "customer-support-escalation",
+        "engineering-deployment-handbook",
+        "security-training-example"
+      ],
+      "sol_decision": "GO"
+    },
+    {
+      "adaptive_luna_decision": "NOT_CALLED",
+      "category": "region_sensitive",
+      "expected_requirements_evaluation_only": [
+        "us-east standby cluster"
+      ],
+      "luna_decision": "GO",
+      "query_id": "p5k_region_sensitive_090",
+      "question": "PhaseK audit token region_sensitive-090 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. Which standby cluster is targeted by west-region recovery failover?",
+      "required_document_ids_evaluation_only": [
+        "recovery-runbook-west"
+      ],
+      "retrieved_document_ids_top15": [
+        "data-retention-standard",
+        "recovery-runbook-west",
+        "data-retention-standard",
+        "project-atlas-api",
+        "recovery-runbook-east",
+        "project-atlas-launch",
+        "operations-continuity-plan",
+        "project-atlas-api",
+        "security-incident-policy",
+        "operations-continuity-plan",
+        "project-atlas-launch",
+        "finance-expense-policy",
+        "customer-support-escalation",
+        "engineering-deployment-handbook",
+        "security-training-example"
+      ],
+      "sol_decision": "GO"
+    },
+    {
+      "adaptive_luna_decision": "NOT_CALLED",
+      "category": "semantic_paraphrase",
+      "expected_requirements_evaluation_only": [
+        "Platform Interfaces team"
+      ],
+      "luna_decision": "ABSTAIN",
+      "query_id": "p5k_semantic_paraphrase_054",
+      "question": "PhaseK audit token semantic_paraphrase-054 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. In plain language, who maintains the Atlas API?",
+      "required_document_ids_evaluation_only": [
+        "project-atlas-api"
+      ],
+      "retrieved_document_ids_top15": [
+        "data-retention-standard",
+        "project-atlas-api",
+        "data-retention-standard",
+        "project-atlas-api",
+        "security-incident-policy",
+        "operations-continuity-plan",
+        "security-incident-policy",
+        "operations-continuity-plan",
+        "project-atlas-launch",
+        "project-atlas-launch",
+        "finance-expense-policy",
+        "remote-work-policy",
+        "customer-support-escalation",
+        "recovery-runbook-east",
+        "recovery-runbook-west"
+      ],
+      "sol_decision": "GO"
+    },
+    {
+      "adaptive_luna_decision": "NOT_CALLED",
+      "category": "single_document",
+      "expected_requirements_evaluation_only": [
+        "ENG-DEP-17"
+      ],
+      "luna_decision": "GO",
+      "query_id": "p5k_single_document_002",
+      "question": "PhaseK audit token single_document-002 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. State the production deployment approval identifier.",
+      "required_document_ids_evaluation_only": [
+        "engineering-deployment-handbook"
+      ],
+      "retrieved_document_ids_top15": [
+        "data-retention-standard",
+        "data-retention-standard",
+        "security-incident-policy",
+        "project-atlas-api",
+        "engineering-deployment-handbook",
+        "project-atlas-api",
+        "operations-continuity-plan",
+        "security-incident-policy",
+        "finance-expense-policy",
+        "operations-continuity-plan",
+        "project-atlas-launch",
+        "remote-work-policy",
+        "project-atlas-launch",
+        "security-training-example",
+        "customer-support-escalation"
+      ],
+      "sol_decision": "GO"
+    },
+    {
+      "adaptive_luna_decision": "NOT_CALLED",
+      "category": "single_document",
+      "expected_requirements_evaluation_only": [
+        "ENG-DEP-17"
+      ],
+      "luna_decision": "GO",
+      "query_id": "p5k_single_document_005",
+      "question": "PhaseK audit token single_document-005 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. State the production deployment approval identifier.",
+      "required_document_ids_evaluation_only": [
+        "engineering-deployment-handbook"
+      ],
+      "retrieved_document_ids_top15": [
+        "data-retention-standard",
+        "data-retention-standard",
+        "security-incident-policy",
+        "project-atlas-api",
+        "engineering-deployment-handbook",
+        "project-atlas-api",
+        "operations-continuity-plan",
+        "security-incident-policy",
+        "finance-expense-policy",
+        "operations-continuity-plan",
+        "project-atlas-launch",
+        "remote-work-policy",
+        "project-atlas-launch",
+        "security-training-example",
+        "customer-support-escalation"
+      ],
+      "sol_decision": "GO"
+    },
+    {
+      "adaptive_luna_decision": "NOT_CALLED",
+      "category": "single_document",
+      "expected_requirements_evaluation_only": [
+        "ENG-DEP-17"
+      ],
+      "luna_decision": "GO",
+      "query_id": "p5k_single_document_009",
+      "question": "PhaseK audit token single_document-009 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. State the production deployment approval identifier.",
+      "required_document_ids_evaluation_only": [
+        "engineering-deployment-handbook"
+      ],
+      "retrieved_document_ids_top15": [
+        "data-retention-standard",
+        "data-retention-standard",
+        "security-incident-policy",
+        "project-atlas-api",
+        "engineering-deployment-handbook",
+        "project-atlas-api",
+        "operations-continuity-plan",
+        "security-incident-policy",
+        "finance-expense-policy",
+        "operations-continuity-plan",
+        "project-atlas-launch",
+        "remote-work-policy",
+        "project-atlas-launch",
+        "security-training-example",
+        "customer-support-escalation"
+      ],
+      "sol_decision": "GO"
+    }
+  ],
+  "set_a_count": 8,
+  "set_a_definition": "Sol correct complete answer; Luna-first not correct complete",
+  "set_b_cases": [
+    {
+      "adaptive_luna_decision": "ABSTAIN",
+      "category": "version_sensitive",
+      "expected_requirements_evaluation_only": [
+        "OPS-REC-E17"
+      ],
+      "luna_decision": "ABSTAIN",
+      "query_id": "p5k_version_sensitive_079",
+      "question": "PhaseK audit token version_sensitive-079 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. When release control selects the currently active operational handbook revision, report the east-failover recovery token.",
+      "required_document_ids_evaluation_only": [
+        "recovery-runbook-east"
+      ],
+      "retrieved_document_ids_top15": [
+        "data-retention-standard",
+        "data-retention-standard",
+        "project-atlas-api",
+        "project-atlas-api",
+        "security-incident-policy",
+        "recovery-runbook-east",
+        "operations-continuity-plan",
+        "security-incident-policy",
+        "recovery-runbook-west",
+        "operations-continuity-plan",
+        "project-atlas-launch",
+        "remote-work-policy",
+        "finance-expense-policy",
+        "engineering-deployment-handbook",
+        "project-atlas-launch"
+      ],
+      "sol_decision": "ABSTAIN"
+    },
+    {
+      "adaptive_luna_decision": "ABSTAIN",
+      "category": "version_sensitive",
+      "expected_requirements_evaluation_only": [
+        "OPS-REC-W29"
+      ],
+      "luna_decision": "ABSTAIN",
+      "query_id": "p5k_version_sensitive_080",
+      "question": "PhaseK audit token version_sensitive-080 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. When release control selects the currently active operational handbook revision, report the west-failover recovery token.",
+      "required_document_ids_evaluation_only": [
+        "recovery-runbook-west"
+      ],
+      "retrieved_document_ids_top15": [
+        "data-retention-standard",
+        "data-retention-standard",
+        "project-atlas-api",
+        "project-atlas-api",
+        "recovery-runbook-west",
+        "security-incident-policy",
+        "recovery-runbook-east",
+        "operations-continuity-plan",
+        "security-incident-policy",
+        "project-atlas-launch",
+        "operations-continuity-plan",
+        "remote-work-policy",
+        "finance-expense-policy",
+        "engineering-deployment-handbook",
+        "project-atlas-launch"
+      ],
+      "sol_decision": "ABSTAIN"
+    },
+    {
+      "adaptive_luna_decision": "ABSTAIN",
+      "category": "version_sensitive",
+      "expected_requirements_evaluation_only": [
+        "OPS-REC-E17"
+      ],
+      "luna_decision": "ABSTAIN",
+      "query_id": "p5k_version_sensitive_081",
+      "question": "PhaseK audit token version_sensitive-081 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. When release control selects the currently active operational handbook revision, report the east-failover recovery token.",
+      "required_document_ids_evaluation_only": [
+        "recovery-runbook-east"
+      ],
+      "retrieved_document_ids_top15": [
+        "data-retention-standard",
+        "data-retention-standard",
+        "project-atlas-api",
+        "project-atlas-api",
+        "security-incident-policy",
+        "recovery-runbook-east",
+        "operations-continuity-plan",
+        "security-incident-policy",
+        "recovery-runbook-west",
+        "operations-continuity-plan",
+        "project-atlas-launch",
+        "remote-work-policy",
+        "finance-expense-policy",
+        "engineering-deployment-handbook",
+        "project-atlas-launch"
+      ],
+      "sol_decision": "ABSTAIN"
+    },
+    {
+      "adaptive_luna_decision": "ABSTAIN",
+      "category": "version_sensitive",
+      "expected_requirements_evaluation_only": [
+        "OPS-REC-W29"
+      ],
+      "luna_decision": "ABSTAIN",
+      "query_id": "p5k_version_sensitive_082",
+      "question": "PhaseK audit token version_sensitive-082 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. When release control selects the currently active operational handbook revision, report the west-failover recovery token.",
+      "required_document_ids_evaluation_only": [
+        "recovery-runbook-west"
+      ],
+      "retrieved_document_ids_top15": [
+        "data-retention-standard",
+        "data-retention-standard",
+        "project-atlas-api",
+        "project-atlas-api",
+        "recovery-runbook-west",
+        "security-incident-policy",
+        "recovery-runbook-east",
+        "operations-continuity-plan",
+        "security-incident-policy",
+        "project-atlas-launch",
+        "operations-continuity-plan",
+        "remote-work-policy",
+        "finance-expense-policy",
+        "engineering-deployment-handbook",
+        "project-atlas-launch"
+      ],
+      "sol_decision": "ABSTAIN"
+    },
+    {
+      "adaptive_luna_decision": "ABSTAIN",
+      "category": "version_sensitive",
+      "expected_requirements_evaluation_only": [
+        "OPS-REC-E17"
+      ],
+      "luna_decision": "ABSTAIN",
+      "query_id": "p5k_version_sensitive_083",
+      "question": "PhaseK audit token version_sensitive-083 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. When release control selects the currently active operational handbook revision, report the east-failover recovery token.",
+      "required_document_ids_evaluation_only": [
+        "recovery-runbook-east"
+      ],
+      "retrieved_document_ids_top15": [
+        "data-retention-standard",
+        "data-retention-standard",
+        "project-atlas-api",
+        "project-atlas-api",
+        "security-incident-policy",
+        "recovery-runbook-east",
+        "operations-continuity-plan",
+        "security-incident-policy",
+        "recovery-runbook-west",
+        "operations-continuity-plan",
+        "project-atlas-launch",
+        "remote-work-policy",
+        "finance-expense-policy",
+        "engineering-deployment-handbook",
+        "project-atlas-launch"
+      ],
+      "sol_decision": "ABSTAIN"
+    },
+    {
+      "adaptive_luna_decision": "ABSTAIN",
+      "category": "version_sensitive",
+      "expected_requirements_evaluation_only": [
+        "OPS-REC-W29"
+      ],
+      "luna_decision": "ABSTAIN",
+      "query_id": "p5k_version_sensitive_084",
+      "question": "PhaseK audit token version_sensitive-084 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. When release control selects the currently active operational handbook revision, report the west-failover recovery token.",
+      "required_document_ids_evaluation_only": [
+        "recovery-runbook-west"
+      ],
+      "retrieved_document_ids_top15": [
+        "data-retention-standard",
+        "data-retention-standard",
+        "project-atlas-api",
+        "project-atlas-api",
+        "recovery-runbook-west",
+        "security-incident-policy",
+        "recovery-runbook-east",
+        "operations-continuity-plan",
+        "security-incident-policy",
+        "project-atlas-launch",
+        "operations-continuity-plan",
+        "remote-work-policy",
+        "finance-expense-policy",
+        "engineering-deployment-handbook",
+        "project-atlas-launch"
+      ],
+      "sol_decision": "ABSTAIN"
+    },
+    {
+      "adaptive_luna_decision": "ABSTAIN",
+      "category": "version_sensitive",
+      "expected_requirements_evaluation_only": [
+        "OPS-REC-E17"
+      ],
+      "luna_decision": "ABSTAIN",
+      "query_id": "p5k_version_sensitive_085",
+      "question": "PhaseK audit token version_sensitive-085 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. When release control selects the currently active operational handbook revision, report the east-failover recovery token.",
+      "required_document_ids_evaluation_only": [
+        "recovery-runbook-east"
+      ],
+      "retrieved_document_ids_top15": [
+        "data-retention-standard",
+        "data-retention-standard",
+        "project-atlas-api",
+        "project-atlas-api",
+        "security-incident-policy",
+        "recovery-runbook-east",
+        "operations-continuity-plan",
+        "security-incident-policy",
+        "recovery-runbook-west",
+        "project-atlas-launch",
+        "operations-continuity-plan",
+        "remote-work-policy",
+        "finance-expense-policy",
+        "engineering-deployment-handbook",
+        "project-atlas-launch"
+      ],
+      "sol_decision": "ABSTAIN"
+    },
+    {
+      "adaptive_luna_decision": "ABSTAIN",
+      "category": "version_sensitive",
+      "expected_requirements_evaluation_only": [
+        "OPS-REC-W29"
+      ],
+      "luna_decision": "ABSTAIN",
+      "query_id": "p5k_version_sensitive_086",
+      "question": "PhaseK audit token version_sensitive-086 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. When release control selects the currently active operational handbook revision, report the west-failover recovery token.",
+      "required_document_ids_evaluation_only": [
+        "recovery-runbook-west"
+      ],
+      "retrieved_document_ids_top15": [
+        "data-retention-standard",
+        "data-retention-standard",
+        "project-atlas-api",
+        "project-atlas-api",
+        "recovery-runbook-west",
+        "security-incident-policy",
+        "recovery-runbook-east",
+        "operations-continuity-plan",
+        "security-incident-policy",
+        "project-atlas-launch",
+        "operations-continuity-plan",
+        "remote-work-policy",
+        "finance-expense-policy",
+        "engineering-deployment-handbook",
+        "customer-support-escalation"
+      ],
+      "sol_decision": "ABSTAIN"
+    }
+  ],
+  "set_b_count": 8,
+  "set_b_definition": "adaptive recovery version-sensitive Luna ABSTAIN"
+}

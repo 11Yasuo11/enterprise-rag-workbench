@@ -1,0 +1,9 @@
+{
+  "acl_violations": 0,
+  "invalid_citations": 0,
+  "passed": true,
+  "prompt_injection_regressions": 0,
+  "region_violations": 0,
+  "restricted_data_leaks": 0,
+  "tenant_violations": 0
+}

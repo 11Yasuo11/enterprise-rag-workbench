@@ -1,0 +1,88 @@
+{
+  "all_passed": true,
+  "current_version_regression_passed": true,
+  "fresh_previously_successful_categories": {
+    "access_control_allow": {
+      "n": 3,
+      "passed": 3,
+      "regressions": []
+    },
+    "access_control_deny": {
+      "n": 3,
+      "passed": 3,
+      "regressions": []
+    },
+    "prompt_injection": {
+      "n": 4,
+      "passed": 4,
+      "regressions": []
+    },
+    "single_semantic": {
+      "n": 8,
+      "passed": 8,
+      "regressions": []
+    },
+    "unanswerable": {
+      "n": 6,
+      "passed": 6,
+      "regressions": []
+    }
+  },
+  "historical": {
+    "correct_historical_abstentions": {
+      "n": 20,
+      "passed": 20
+    },
+    "scorer_normalization_fixes": {
+      "n": 4,
+      "passed": 4
+    },
+    "three_document_generator_fixes": {
+      "n": 16,
+      "passed": 16
+    },
+    "version_sensitive_local_fixes": {
+      "n": 8,
+      "passed": 8
+    }
+  },
+  "local_test_execution": {
+    "full_unit_suite": {
+      "n": 438,
+      "passed": 438
+    },
+    "p1_focused": {
+      "n": 7,
+      "passed": 7
+    },
+    "ruff": {
+      "passed": true
+    }
+  },
+  "new_api_calls": 0,
+  "p0": {
+    "assembly_preservation": {
+      "passed": true
+    },
+    "atomic_requirement_contract": {
+      "downstream_redecomposition": false,
+      "same_plan_validator_assembler": true,
+      "stable_hash": true,
+      "stable_ids": true
+    },
+    "passed": true,
+    "qualifier_separation": {
+      "case_count": 11,
+      "passed": true
+    },
+    "semantic_cardinality": {
+      "case_count": 11,
+      "passed": true
+    },
+    "unsupported_four": {
+      "case_count": 4,
+      "passed": true
+    }
+  },
+  "safety_passed": true
+}

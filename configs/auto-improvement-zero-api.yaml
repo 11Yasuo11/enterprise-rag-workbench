@@ -1,0 +1,18 @@
+run_id: phase5kr-ranking-grid-zero-api-v1
+
+auto_improvement:
+  enabled: true
+  max_iterations: 1
+  max_candidates_per_iteration: 3
+  planner:
+    mode: rule_based
+  llm_planner:
+    enabled: false
+  semantic_judge:
+    enabled: false
+  paid_api_fallback:
+    enabled: false
+  candidate_search:
+    mode: grid
+  auto_promote:
+    enabled: false

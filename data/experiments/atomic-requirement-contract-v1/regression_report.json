@@ -1,0 +1,26 @@
+{
+  "contract_change_is_structurally_non_breaking": true,
+  "correct_abstentions": {
+    "n": 20,
+    "passed": 20
+  },
+  "experiment_id": "ATOMIC_REQUIREMENT_CONTRACT_V1",
+  "method": "saved-output structural replay plus focused local contract tests",
+  "new_api_calls": 0,
+  "previously_recovered_adaptive": {
+    "n": 3,
+    "passed": 3
+  },
+  "scorer_normalization_cases": {
+    "n": 4,
+    "passed": 4
+  },
+  "three_document_fixes": {
+    "n": 16,
+    "passed": 16
+  },
+  "version_sensitive_fixes": {
+    "n": 8,
+    "passed": 8
+  }
+}

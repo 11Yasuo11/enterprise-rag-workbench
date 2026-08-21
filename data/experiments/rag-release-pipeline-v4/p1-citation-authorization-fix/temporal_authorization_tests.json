@@ -1,0 +1,19 @@
+{
+  "api_calls": 0,
+  "cases": {
+    "A_current_active": "PASS_AUTHORIZED",
+    "B_current_superseded": "PASS_UNAUTHORIZED",
+    "C_historical_requested": "PASS_AUTHORIZED",
+    "D_cross_version_both": "PASS_AUTHORIZED",
+    "E_acl_denied_historical": "PASS_UNAUTHORIZED",
+    "F_wrong_tenant_historical": "PASS_UNAUTHORIZED",
+    "G_wrong_region_historical": "PASS_UNAUTHORIZED",
+    "H_unrequested_historical": "PASS_UNAUTHORIZED",
+    "per_document_scope": "PASS_NO_CROSS_DOCUMENT_LEAKAGE",
+    "unspecified_default": "PASS_CURRENT_ONLY"
+  },
+  "command": ".venv/bin/pytest -q tests/unit/test_citation_authorization.py",
+  "passed": 10,
+  "total": 10,
+  "version_expansion_weakened_security": false
+}

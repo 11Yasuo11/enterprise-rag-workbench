@@ -1,0 +1,10 @@
+{
+  "case_count": 60,
+  "experiment_id": "FRESH_UNSEEN_EVALUATION_V1_2",
+  "gold_loaded_before_freeze": false,
+  "predictions_immutable": true,
+  "predictions_path": "data/experiments/fresh-unseen-evaluation-v1-2/fresh_predictions.jsonl",
+  "predictions_sha256": "a6e44ddc85161b4494f15996ad75a80db90c1b7014d3f324c7538ceaabe42280",
+  "questions_sha256": "c669df5527843b749c1c3874f246fbc576db9064b25c2ff07c647c11abbfdebe",
+  "timestamp": "2026-08-20T15:44:38.315306+00:00"
+}

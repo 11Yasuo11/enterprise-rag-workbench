@@ -1,0 +1,83 @@
+{
+  "all_preserved_or_failed_closed": true,
+  "cases": [
+    {
+      "assembled_mapping_count": 0,
+      "case_id": "fresh_v1_009",
+      "fail_closed_when_not_complete": true,
+      "validated_mapping_count": 0,
+      "validated_mapping_subset_assembled": true
+    },
+    {
+      "assembled_mapping_count": 2,
+      "case_id": "fresh_v1_011",
+      "fail_closed_when_not_complete": true,
+      "validated_mapping_count": 2,
+      "validated_mapping_subset_assembled": true
+    },
+    {
+      "assembled_mapping_count": 2,
+      "case_id": "fresh_v1_013",
+      "fail_closed_when_not_complete": true,
+      "validated_mapping_count": 2,
+      "validated_mapping_subset_assembled": true
+    },
+    {
+      "assembled_mapping_count": 0,
+      "case_id": "fresh_v1_015",
+      "fail_closed_when_not_complete": true,
+      "validated_mapping_count": 0,
+      "validated_mapping_subset_assembled": true
+    },
+    {
+      "assembled_mapping_count": 0,
+      "case_id": "fresh_v1_016",
+      "fail_closed_when_not_complete": true,
+      "validated_mapping_count": 0,
+      "validated_mapping_subset_assembled": true
+    },
+    {
+      "assembled_mapping_count": 0,
+      "case_id": "fresh_v1_023",
+      "fail_closed_when_not_complete": true,
+      "validated_mapping_count": 0,
+      "validated_mapping_subset_assembled": true
+    },
+    {
+      "assembled_mapping_count": 0,
+      "case_id": "fresh_v1_025",
+      "fail_closed_when_not_complete": true,
+      "validated_mapping_count": 0,
+      "validated_mapping_subset_assembled": true
+    },
+    {
+      "assembled_mapping_count": 3,
+      "case_id": "fresh_v1_028",
+      "fail_closed_when_not_complete": true,
+      "validated_mapping_count": 3,
+      "validated_mapping_subset_assembled": true
+    },
+    {
+      "assembled_mapping_count": 2,
+      "case_id": "fresh_v1_030",
+      "fail_closed_when_not_complete": true,
+      "validated_mapping_count": 2,
+      "validated_mapping_subset_assembled": true
+    },
+    {
+      "assembled_mapping_count": 0,
+      "case_id": "fresh_v1_036",
+      "fail_closed_when_not_complete": true,
+      "validated_mapping_count": 0,
+      "validated_mapping_subset_assembled": true
+    },
+    {
+      "assembled_mapping_count": 0,
+      "case_id": "fresh_v1_044",
+      "fail_closed_when_not_complete": true,
+      "validated_mapping_count": 0,
+      "validated_mapping_subset_assembled": true
+    }
+  ],
+  "first_mapping_truncation_removed": true
+}

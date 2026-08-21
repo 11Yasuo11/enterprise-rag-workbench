@@ -1,0 +1,131 @@
+{
+  "case_ids": [
+    "p5k_three_document_027",
+    "p5k_three_document_033",
+    "p5k_three_document_041",
+    "p5k_version_sensitive_079",
+    "p5k_version_sensitive_080",
+    "judge_near_05",
+    "p5k_numeric_date_constraint_093",
+    "p5k_numeric_date_constraint_094",
+    "target_duration_001",
+    "p5k_single_document_001",
+    "p5k_semantic_paraphrase_054",
+    "p5k_unsupported_no_answer_116"
+  ],
+  "config_hashes": {
+    "scripts/run_combined_targeted_real_api_validation_v1.py": "2f97bf5f213fae19b4ebfbc6f6c94163c6162ba01577f2cdd5b651a1a5078d83",
+    "src/rag_workbench/evaluation/final_e2e_scorer_v2.py": "f61e017702267a65ed509edad34e5bacc98c2652d50c46987655c52770c61a03",
+    "src/rag_workbench/experiments/combined_targeted_real_api_validation_v1/runtime.py": "9d485b011bcb6212401654ac78adba582f33d329d16fc3550cc7fe1ec3383065",
+    "src/rag_workbench/experiments/requirement_assembler_selective_routing_v1/router.py": "27b6442ca0d428942dce582c5321c4d28bff887bfacd86febcf37a17247e97eb",
+    "src/rag_workbench/experiments/requirement_assembler_selective_routing_v1/versioning.py": "0fec8e203a8be858ce534ae90b6606aa2220f45546ea72fd88f7d2c8b5730e97",
+    "src/rag_workbench/experiments/safe_recovery_luna_v2/verifier.py": "0c3eb8112853a6afa4d9bc5075e6a7031a5e7f04f6be0834705cfb89d820a77c",
+    "src/rag_workbench/experiments/universal_requirement_completeness_v1/constraints.py": "885d6da6167933afe57d57a322b6f7f7aeacf5ea6833a7804b3ba58ce7ba0ff2",
+    "src/rag_workbench/experiments/universal_requirement_completeness_v1/requirements.py": "101991187d3bdafa0f7487205d4adb0b1353a825e06b98d3394f1c1e6761dc30"
+  },
+  "configured_openai_credential_present": true,
+  "credential_resolution": "effective_judge_api_key_then_openai_api_key",
+  "dataset_hash": "91ebb3dcdabc7618804c814c49339fe6fa3ceb791e9cb8d0f9dfb9c1da8a8418",
+  "dirty_status": [
+    " M README.md",
+    " M docs/REPOSITORY_QUALITY_STATUS.md",
+    " M src/rag_workbench/evaluation/final_e2e_scorer_v2.py",
+    "?? artifacts/",
+    "?? configs/auto-improvement-zero-api.yaml",
+    "?? configs/deterministic-eval-gate.yaml",
+    "?? configs/phase5kr-control-cache-only.yaml",
+    "?? configs/phase5kr-one-doc-diversity-candidate.yaml",
+    "?? data/experiments/adaptive-top20-abstention-recovery-v1/",
+    "?? data/experiments/combined-targeted-real-api-validation-v1/",
+    "?? data/experiments/requirement-assembler-selective-routing-v1/",
+    "?? data/experiments/safe-recovery-luna-v2/",
+    "?? data/experiments/universal-requirement-completeness-v1/",
+    "?? docs/ARCHITECTURE_DECISIONS.md",
+    "?? docs/DETERMINISTIC_EVAL_AUDIT.md",
+    "?? docs/DETERMINISTIC_EVAL_LOOP.md",
+    "?? docs/E2E_EVAL_CONNECTION_AUDIT.md",
+    "?? docs/HYBRID_AUTO_IMPROVEMENT.md",
+    "?? docs/INTERVIEW_DEMO_RUNBOOK.md",
+    "?? docs/RAG_FAILURE_ANALYSIS.md",
+    "?? scripts/compare_eval.py",
+    "?? scripts/interview_readiness_check.sh",
+    "?? scripts/run_adaptive_top20_abstention_recovery_v1.py",
+    "?? scripts/run_auto_improvement.py",
+    "?? scripts/run_combined_targeted_real_api_validation_v1.py",
+    "?? scripts/run_eval.py",
+    "?? scripts/run_experiment.py",
+    "?? scripts/run_requirement_assembler_selective_routing_v1.py",
+    "?? scripts/run_safe_recovery_luna_v2.py",
+    "?? scripts/run_universal_requirement_completeness_v1.py",
+    "?? src/rag_workbench/evaluation/auto_improvement.py",
+    "?? src/rag_workbench/evaluation/eval_loop.py",
+    "?? src/rag_workbench/evaluation/experiment_runner.py",
+    "?? src/rag_workbench/evaluation/semantic_eval.py",
+    "?? src/rag_workbench/experiments/adaptive_top20_abstention_recovery_v1/",
+    "?? src/rag_workbench/experiments/combined_targeted_real_api_validation_v1/",
+    "?? src/rag_workbench/experiments/requirement_assembler_selective_routing_v1/",
+    "?? src/rag_workbench/experiments/safe_recovery_luna_v2/",
+    "?? src/rag_workbench/experiments/universal_requirement_completeness_v1/",
+    "?? tests/unit/test_adaptive_top20_abstention_recovery_v1.py",
+    "?? tests/unit/test_auto_improvement.py",
+    "?? tests/unit/test_combined_targeted_real_api_validation_v1.py",
+    "?? tests/unit/test_deterministic_eval_loop.py",
+    "?? tests/unit/test_experiment_runner.py",
+    "?? tests/unit/test_requirement_assembler_selective_routing_v1.py",
+    "?? tests/unit/test_safe_recovery_luna_v2.py",
+    "?? tests/unit/test_universal_requirement_completeness_v1.py"
+  ],
+  "dirty_working_tree": true,
+  "experiment_id": "COMBINED_TARGETED_REAL_API_VALIDATION_V1",
+  "git_commit_sha": "6e9741f55dc0436963ea1c0ba30b9a30bccbd207",
+  "models": {
+    "final_generator": "deterministic-requirement-assembler-v3+universal-completeness-v1",
+    "luna": "gpt-5.6-luna",
+    "sol": "gpt-5.6-sol"
+  },
+  "openai_api_key_present": false,
+  "pipeline": {
+    "assembler": "deterministic-requirement-assembler-v3+universal-completeness-v1",
+    "id": "combined-targeted-real-api-validation-v1.0.0",
+    "router": "selective-risk-router-v1",
+    "scorer": "FINAL_E2E_SCORER_V2",
+    "top_k": 15,
+    "version_resolver": "deterministic-version-resolver-v1"
+  },
+  "pricing": {
+    "context": "short-context <=272K list prices",
+    "models": {
+      "gpt-5.6-luna": {
+        "cache_write_per_million": 0.25,
+        "cached_input_per_million": 0.02,
+        "input_per_million": 0.2,
+        "output_per_million": 1.2
+      },
+      "gpt-5.6-sol": {
+        "cache_write_per_million": 6.25,
+        "cached_input_per_million": 0.5,
+        "input_per_million": 5.0,
+        "output_per_million": 30.0
+      }
+    },
+    "source": {
+      "consulted_at": "2026-08-20",
+      "luna": "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+      "pricing": "https://developers.openai.com/api/docs/pricing",
+      "sol": "https://developers.openai.com/api/docs/models/gpt-5.6-sol"
+    }
+  },
+  "prompt_hashes": {
+    "luna_schema": "bf60dfe1ba616b77a3ec3b4f644b863bb1d2b24eb101f5fa33082c222e161884",
+    "luna_system": "5d17d442f59f7edbd35d8ae339becf1818f3f460c0225ae1da3993223530b84c",
+    "sol_system": "f0f6b3b2980f13e41a7d0b126ae2b5aaaad7e6040a2d681bd0716657e30127ab"
+  },
+  "runtime_amendment": {
+    "change": "structured verifier max_completion_tokens raised to 700",
+    "prior_freeze_path": "data/experiments/combined-targeted-real-api-validation-v1/freeze_manifest_initial_pre_amendment.json",
+    "prior_freeze_sha256": "723f1f02af846bc7a16610b9faf7a62865bb7e25d4ec9defbe0ea5d6622f56d2",
+    "prior_paid_calls": 4,
+    "reason": "first real Luna response truncated at the original 220-token cap"
+  },
+  "timestamp": "2026-08-20T14:27:39.782001+00:00"
+}

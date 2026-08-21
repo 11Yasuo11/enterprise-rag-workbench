@@ -1,0 +1,43 @@
+{
+  "api_calls": {
+    "embedding": 0,
+    "luna": 0,
+    "openai": 0,
+    "sol": 0
+  },
+  "checks": {
+    "all60_adapter_preflight": "PASS",
+    "all60_schema_audit": "PASS",
+    "atomic_requirement_contract_precheck": "PASS",
+    "citation_authorization": "PASS",
+    "deterministic_constraints": "PASS",
+    "focused_p0_p5_and_mapping_suite_123_of_123": "PASS",
+    "full_unit_suite_519_of_519": "PASS",
+    "git_diff_check": "PASS",
+    "local_original_19": "PASS",
+    "mapping_schema_contract": "PASS",
+    "p0_planner_generalization": "PASS_60_OF_60",
+    "p1_zero_api_runtime": "PASS",
+    "packet_matching": "PASS",
+    "router": "PASS",
+    "ruff_src_scripts_tests": "PASS",
+    "version_and_temporal": "PASS"
+  },
+  "cost_usd": 0.0,
+  "historical_protected_results_sha256": "88160d6a19ba53f6df0f97bb80346a0fb2c16950df696cfb6da46f0c0b7d7994",
+  "historical_protected_results_source": "data/experiments/rag-release-pipeline-v5/full_local_regression.json",
+  "passed": true,
+  "protected_groups": {
+    "acl_allow": "3/3",
+    "acl_deny": "3/3",
+    "correct_abstentions": "20/20",
+    "prompt_injection": "4/4",
+    "scorer_normalization": "4/4",
+    "single_semantic": "8/8",
+    "three_document": "16/16",
+    "unanswerable": "6/6",
+    "version_sensitive": "8/8"
+  },
+  "timestamp": "2026-08-20T19:49:56.010773+00:00",
+  "verdict": "FULL_ZERO_API_LOCAL_REGRESSION_PASSED"
+}

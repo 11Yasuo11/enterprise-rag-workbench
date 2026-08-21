@@ -1,0 +1,58 @@
+{
+  "phase": "v3-phase5kq-final-quality-scoring-audit",
+  "citation_validity": {
+    "function": "rag_workbench.evaluation.generation_metrics.deterministic_citation_correctness",
+    "code_path": "scripts/phase5kc_corrected_final_execution.py -> deterministic_citation_correctness(citations, top5_chunk_ids)",
+    "rule": "cited_chunk_ids subset of retrieved top5 chunk ids",
+    "uses_required_chunk_ids": false,
+    "uses_ground_truth": false,
+    "distinct_from_citation_correctness": true
+  },
+  "citation_correctness_phase5kc": {
+    "function": "rag_workbench.evaluation.generation_metrics.deterministic_citation_support",
+    "code_path": "scripts/phase5kc_corrected_final_execution.py -> deterministic_citation_support(...)",
+    "inputs": {
+      "answer": "generated answer text",
+      "expected_answer": "HARDCODED None in phase5kc runner",
+      "cited_document_ids": "document ids of cited chunks from top5",
+      "expected_document_ids": "case.required_document_ids",
+      "should_abstain": "case.should_abstain"
+    },
+    "rule": "if not expected_answer -> return 0.0; else token subset of answer AND cited docs superset required docs",
+    "uses_required_chunk_ids": false,
+    "uses_exact_gt_chunk_match": false,
+    "uses_semantic_claim_support": false,
+    "critical_bug": "expected_answer is always None, so any non-abstain answer gets citation_correctness=0.0"
+  },
+  "ground_truth_required_chunk_match": {
+    "present_in_dataset": "required_chunk_ids field absent in frozen dataset",
+    "present_in_phase5kc_scorer": false
+  },
+  "correct_complete_answer_rule": {
+    "code_path": "phase5kc runner behavior assignment",
+    "requires_all": [
+      "not should_abstain",
+      "status != abstained",
+      "all required_facts substring in answer",
+      "citation_validity == 1.0",
+      "citation_correctness == 1.0"
+    ],
+    "note": "Because citation_correctness forced to 0.0 for answered cases, behavior becomes UNSUPPORTED_ANSWER whenever an answer is produced and facts/cvalid pass"
+  },
+  "failure_census_phase5kc": {
+    "code_path": "phase5kc runner failure_census loop",
+    "priority_order": [
+      "category version_sensitive -> VERSION_FAILURE",
+      "category region_sensitive -> REGION_FAILURE",
+      "category numeric_date_constraint -> CONSTRAINT_FAILURE",
+      "category prompt_injection -> PROMPT_INJECTION_FAILURE",
+      "citation validity/correctness < 1 -> CITATION_FAILURE",
+      "judge_answerable False -> JUDGE_FALSE_NEGATIVE",
+      "OTHER"
+    ],
+    "issues": [
+      "Category-name based attribution before pipeline stage",
+      "CITATION_FAILURE triggered by scorer bug (ccorr=0.0) even when validity=1.0"
+    ]
+  }
+}

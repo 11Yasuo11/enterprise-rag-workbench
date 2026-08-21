@@ -1,0 +1,10 @@
+{
+  "blocking_verdict": "FRESH_UNSEEN_EVALUATION_INCONCLUSIVE",
+  "evaluated": false,
+  "experiment_id": "FRESH_UNSEEN_EVALUATION_V1_1",
+  "hard_cap_new_openai_cost_usd": 0.5,
+  "paid_api_calls": 0,
+  "reason": "Route-specific maximum cannot be projected faithfully before hybrid retrieval/Top-15; dry run stopped at missing query-embedding boundary.",
+  "status": "NOT_RUN_MANDATORY_DRY_RUN_GATE_FAILED",
+  "timestamp": "2026-08-20T15:25:27.515779+00:00"
+}

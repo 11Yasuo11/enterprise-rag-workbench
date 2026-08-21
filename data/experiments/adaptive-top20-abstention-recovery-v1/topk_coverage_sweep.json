@@ -1,0 +1,74 @@
+{
+  "denominator_answerable": 100,
+  "experiment_id": "ADAPTIVE_TOP20_ABSTENTION_RECOVERY_V1",
+  "kind": "DIAGNOSTIC RESULT",
+  "llm_api_calls": 0,
+  "rows": [
+    {
+      "all_required_evidence_coverage": 0.73,
+      "average_chunks": 5,
+      "estimated_evidence_tokens": 78.75,
+      "k": 5,
+      "new_llm_api_calls": 0,
+      "ranking_23_recoverable": 0,
+      "required_evidence_recall": 0.7025316455696202,
+      "three_document_complete_coverage": 0.0,
+      "two_document_complete_coverage": 1.0
+    },
+    {
+      "all_required_evidence_coverage": 0.8,
+      "average_chunks": 6,
+      "estimated_evidence_tokens": 93.58333333333333,
+      "k": 6,
+      "new_llm_api_calls": 0,
+      "ranking_23_recoverable": 7,
+      "required_evidence_recall": 0.7721518987341772,
+      "three_document_complete_coverage": 0.0,
+      "two_document_complete_coverage": 1.0
+    },
+    {
+      "all_required_evidence_coverage": 0.8,
+      "average_chunks": 8,
+      "estimated_evidence_tokens": 129.65,
+      "k": 8,
+      "new_llm_api_calls": 0,
+      "ranking_23_recoverable": 7,
+      "required_evidence_recall": 0.7721518987341772,
+      "three_document_complete_coverage": 0.0,
+      "two_document_complete_coverage": 1.0
+    },
+    {
+      "all_required_evidence_coverage": 0.8,
+      "average_chunks": 10,
+      "estimated_evidence_tokens": 163.40833333333333,
+      "k": 10,
+      "new_llm_api_calls": 0,
+      "ranking_23_recoverable": 7,
+      "required_evidence_recall": 0.8417721518987342,
+      "three_document_complete_coverage": 0.0,
+      "two_document_complete_coverage": 1.0
+    },
+    {
+      "all_required_evidence_coverage": 0.96,
+      "average_chunks": 15,
+      "estimated_evidence_tokens": 261.65,
+      "k": 15,
+      "new_llm_api_calls": 0,
+      "ranking_23_recoverable": 23,
+      "required_evidence_recall": 0.9746835443037974,
+      "three_document_complete_coverage": 1.0,
+      "two_document_complete_coverage": 1.0
+    },
+    {
+      "all_required_evidence_coverage": 0.96,
+      "average_chunks": 20,
+      "estimated_evidence_tokens": 310.475,
+      "k": 20,
+      "new_llm_api_calls": 0,
+      "ranking_23_recoverable": 23,
+      "required_evidence_recall": 0.9746835443037974,
+      "three_document_complete_coverage": 1.0,
+      "two_document_complete_coverage": 1.0
+    }
+  ]
+}

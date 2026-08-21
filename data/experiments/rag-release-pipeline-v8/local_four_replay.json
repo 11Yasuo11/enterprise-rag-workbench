@@ -1,0 +1,202 @@
+{
+  "api_calls": 0,
+  "case_count": 4,
+  "cases": [
+    {
+      "answer": "R1: The Atlas API is maintained by the Platform Interfaces team . [C1]",
+      "assembly_failure": null,
+      "assembly_status": "answered",
+      "case_id": "fresh_v2_003",
+      "citations": [
+        "3f2b1506-ee1e-4728-8fbe-35947c82c3b4"
+      ],
+      "classification": "FIXED_LOCALLY",
+      "deterministic_support": {
+        "complete": true,
+        "failure_code": null
+      },
+      "initial_route": {
+        "reason": "complete_literal_support",
+        "route": "DETERMINISTIC"
+      },
+      "mappings": [
+        {
+          "chunk_id": "3f2b1506-ee1e-4728-8fbe-35947c82c3b4",
+          "citations": [
+            "3f2b1506-ee1e-4728-8fbe-35947c82c3b4"
+          ],
+          "document_id": "project-atlas-api",
+          "document_version_id": "cf5dfd1d-b744-48f1-bfde-41a198d86f35",
+          "relation_family": "maintenance",
+          "requirement_id": "R1",
+          "supporting_spans": [
+            "The Atlas API is maintained by the Platform Interfaces team ."
+          ],
+          "version": "3.0"
+        }
+      ],
+      "validation_failure": null,
+      "validation_valid": true
+    },
+    {
+      "answer": "R1: The recovery drill runs on the second Wednesday of each quarter . [C1]\nR2: Customer-facing status updates are published every thirty minutes until mitigation . [C2]\nR3: HR leadership reviews exceptions on Fridays . [C3]",
+      "assembly_failure": null,
+      "assembly_status": "answered",
+      "case_id": "fresh_v2_019",
+      "citations": [
+        "d60d3666-be70-4f64-b83e-7fe72c86f426",
+        "ab9cf7c9-3671-43d6-90fd-12630f084203",
+        "da32c0f9-c58f-42b4-a5e0-a98675a73fd7"
+      ],
+      "classification": "FIXED_LOCALLY",
+      "deterministic_support": {
+        "complete": true,
+        "failure_code": null
+      },
+      "initial_route": {
+        "reason": "complete_literal_support",
+        "route": "DETERMINISTIC"
+      },
+      "mappings": [
+        {
+          "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+          "citations": [
+            "d60d3666-be70-4f64-b83e-7fe72c86f426"
+          ],
+          "document_id": "recovery-runbook-west",
+          "document_version_id": "687b9971-bd2b-44c9-ba4a-83f68eb86ac2",
+          "relation_family": "cadence",
+          "requirement_id": "R1",
+          "supporting_spans": [
+            "The recovery drill runs on the second Wednesday of each quarter ."
+          ],
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "ab9cf7c9-3671-43d6-90fd-12630f084203",
+          "citations": [
+            "ab9cf7c9-3671-43d6-90fd-12630f084203"
+          ],
+          "document_id": "customer-support-escalation",
+          "document_version_id": "7be9eb6b-b1db-46b9-8ef3-ae30257098c7",
+          "relation_family": "cadence",
+          "requirement_id": "R2",
+          "supporting_spans": [
+            "Customer-facing status updates are published every thirty minutes until mitigation ."
+          ],
+          "version": "3.2"
+        },
+        {
+          "chunk_id": "da32c0f9-c58f-42b4-a5e0-a98675a73fd7",
+          "citations": [
+            "da32c0f9-c58f-42b4-a5e0-a98675a73fd7"
+          ],
+          "document_id": "hr-benefits-private",
+          "document_version_id": "63e72e6d-5ac6-48ff-b55d-72247bfaed32",
+          "relation_family": "cadence",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "HR leadership reviews exceptions on Fridays ."
+          ],
+          "version": "2026"
+        }
+      ],
+      "validation_failure": null,
+      "validation_valid": true
+    },
+    {
+      "answer": "R1: The incident commander coordinates Engineering and Customer Support during an active severity-one incident . [C1]",
+      "assembly_failure": null,
+      "assembly_status": "answered",
+      "case_id": "fresh_v2_024",
+      "citations": [
+        "12b0a957-4a2f-4c06-a8aa-55067b120c4b"
+      ],
+      "classification": "FIXED_LOCALLY",
+      "deterministic_support": {
+        "complete": true,
+        "failure_code": null
+      },
+      "initial_route": {
+        "reason": "complete_literal_support",
+        "route": "DETERMINISTIC"
+      },
+      "mappings": [
+        {
+          "chunk_id": "12b0a957-4a2f-4c06-a8aa-55067b120c4b",
+          "citations": [
+            "12b0a957-4a2f-4c06-a8aa-55067b120c4b"
+          ],
+          "document_id": "security-incident-policy",
+          "document_version_id": "c4d49578-2eec-4051-a54b-addc12af0efa",
+          "relation_family": "coordination",
+          "requirement_id": "R1",
+          "supporting_spans": [
+            "The incident commander coordinates Engineering and Customer Support during an active severity-one incident ."
+          ],
+          "version": "2026"
+        }
+      ],
+      "validation_failure": null,
+      "validation_valid": true
+    },
+    {
+      "answer": "R1: Under the current 2026 policy , employees may work remotely two days per week . [C1]\nR2: Under the current 2026 policy , suspected severity-one incidents must be reported to the security duty officer within 15 minutes of discovery . [C2]",
+      "assembly_failure": null,
+      "assembly_status": "answered",
+      "case_id": "fresh_v2_025",
+      "citations": [
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "bd832158-c74b-4f03-8f53-60a2d30e69e8"
+      ],
+      "classification": "FIXED_LOCALLY",
+      "deterministic_support": {
+        "complete": true,
+        "failure_code": null
+      },
+      "initial_route": {
+        "reason": "complete_literal_support",
+        "route": "DETERMINISTIC"
+      },
+      "mappings": [
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "citations": [
+            "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+          ],
+          "document_id": "remote-work-policy",
+          "document_version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+          "relation_family": "allowance",
+          "requirement_id": "R1",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ],
+          "version": "2026"
+        },
+        {
+          "chunk_id": "bd832158-c74b-4f03-8f53-60a2d30e69e8",
+          "citations": [
+            "bd832158-c74b-4f03-8f53-60a2d30e69e8"
+          ],
+          "document_id": "security-incident-policy",
+          "document_version_id": "c4d49578-2eec-4051-a54b-addc12af0efa",
+          "relation_family": "deadline",
+          "requirement_id": "R2",
+          "supporting_spans": [
+            "Under the current 2026 policy , suspected severity-one incidents must be reported to the security duty officer within 15 minutes of discovery ."
+          ],
+          "version": "2026"
+        }
+      ],
+      "validation_failure": null,
+      "validation_valid": true
+    }
+  ],
+  "counts": {
+    "FIXED_LOCALLY": 4,
+    "REAL_API_CONFIRMATION_REQUIRED": 0,
+    "STILL_FAILING": 0
+  },
+  "passed": true,
+  "still_failing": 0
+}

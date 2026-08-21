@@ -1,0 +1,209 @@
+{
+  "config_hash": "329702734337e41e8edb2cf4fe94231ce5ebec3e094f5dc3ca4f142d91c0597d",
+  "cost_impact": {
+    "actual_new_development": {
+      "actual_new_openai_cost_usd": 0.0,
+      "new_luna_calls": 0,
+      "new_openai_calls_during_local_development": 0,
+      "new_sol_calls": 0
+    },
+    "cost_kind": "SIMULATED COST from saved usage; actual new development cost is zero",
+    "existing_sol_baseline": {
+      "estimated_cost_per_100_queries_usd": 0.03658333333333333,
+      "input_tokens": 71566,
+      "luna_calls": 0,
+      "output_tokens": 6736,
+      "sol_calls": 110
+    },
+    "experiment_id": "REQUIREMENT_ASSEMBLER_SELECTIVE_ROUTING_V1",
+    "proposed_selective_routing": {
+      "estimated_cost_per_100_queries_usd": 0.015847,
+      "estimated_cost_total_usd": 0.0190164,
+      "input_tokens": 44166,
+      "luna_calls": 68,
+      "output_tokens": 8486,
+      "sol_calls": 0,
+      "sol_calls_avoided": 110,
+      "sol_escalation_rate": 0.0
+    }
+  },
+  "created_at": "2026-08-20T13:34:49.713700+00:00",
+  "experiment": {
+    "assembler": "deterministic-requirement-assembler-v3",
+    "experiment_id": "REQUIREMENT_ASSEMBLER_SELECTIVE_ROUTING_V1",
+    "luna_model": "gpt-5.6-luna",
+    "pipeline_version": "requirement-assembler-selective-routing-v1.0.0",
+    "recovery_top_k": 15,
+    "router": "selective-risk-router-v1",
+    "sol_model": "gpt-5.6-sol",
+    "version_resolver": "deterministic-version-resolver-v1"
+  },
+  "files_changed": [
+    "src/rag_workbench/experiments/requirement_assembler_selective_routing_v1/",
+    "scripts/run_requirement_assembler_selective_routing_v1.py",
+    "tests/unit/test_requirement_assembler_selective_routing_v1.py",
+    "data/experiments/requirement-assembler-selective-routing-v1/"
+  ],
+  "fresh_promotion_evidence": false,
+  "git_commit": "6e9741f55dc0436963ea1c0ba30b9a30bccbd207",
+  "kind": "LOCAL HISTORICAL REPLAY / COUNTERFACTUAL DIAGNOSTIC",
+  "limitations": [
+    "Uses saved historical model outcomes and is counterfactual, not a fresh execution.",
+    "Dataset labels score outcomes but are not router inputs.",
+    "Repeated synthetic query templates make deterministic literal support unusually effective."
+  ],
+  "luna_failure_overlap": {
+    "identical_sets": false,
+    "intersection_count": 0,
+    "only_in_set_a": [
+      "p5k_near_duplicate_077",
+      "p5k_region_sensitive_088",
+      "p5k_region_sensitive_089",
+      "p5k_region_sensitive_090",
+      "p5k_semantic_paraphrase_054",
+      "p5k_single_document_002",
+      "p5k_single_document_005",
+      "p5k_single_document_009"
+    ],
+    "only_in_set_b": [
+      "p5k_version_sensitive_079",
+      "p5k_version_sensitive_080",
+      "p5k_version_sensitive_081",
+      "p5k_version_sensitive_082",
+      "p5k_version_sensitive_083",
+      "p5k_version_sensitive_084",
+      "p5k_version_sensitive_085",
+      "p5k_version_sensitive_086"
+    ],
+    "set_a_count": 8,
+    "set_b_count": 8
+  },
+  "new_api_cost_during_development": {
+    "actual_new_openai_cost_usd": 0.0,
+    "new_luna_calls": 0,
+    "new_openai_calls_during_local_development": 0,
+    "new_sol_calls": 0
+  },
+  "new_openai_calls_during_local_development": 0,
+  "next_paid_experiment": {
+    "necessary": true,
+    "precondition": "Freeze code/config and use cases lacking reusable saved outputs.",
+    "priority_cases": [
+      "unresolved or conflicting version metadata boundary fixtures",
+      "suspicious Luna ABSTAIN cases outside deterministic literal patterns",
+      "Luna GO cases whose spans stress punctuation/normalization validation"
+    ],
+    "scope": "Targeted <=12-case validation only; no 120-case rerun."
+  },
+  "quality_impact": {
+    "accuracy_delta": 0.19999999999999996,
+    "current_adaptive": {
+      "accuracy": 0.7666666666666667,
+      "correct_abstentions": 20,
+      "correct_complete_answers": 72,
+      "incorrect_abstentions": 24,
+      "three_document_complete_answers": 0,
+      "unsupported_answers": 4,
+      "version_sensitive_complete_answers": 0
+    },
+    "diagnostic_only": true,
+    "proposed_local_counterfactual": {
+      "accuracy": 0.9666666666666667,
+      "correct_abstentions": 20,
+      "correct_complete_answers": 96,
+      "incorrect_abstentions": 0,
+      "three_document_complete_answers": 16,
+      "unsupported_answers": 4,
+      "version_sensitive_complete_answers": 8
+    }
+  },
+  "reproduction_commands": [
+    "uv run pytest tests/unit/test_requirement_assembler_selective_routing_v1.py -q",
+    "uv run python scripts/run_requirement_assembler_selective_routing_v1.py --local-replay"
+  ],
+  "requirement_assembler_result": {
+    "final_generator_openai_calls": 0,
+    "new_api_calls": 0,
+    "new_assembler_complete_answers": 16,
+    "new_assembler_incomplete_answers": 0,
+    "new_assembler_safe_abstentions": 0,
+    "new_assembler_unsupported_answers": 0,
+    "old_api_calls": 0,
+    "old_generator_complete_answers": 0,
+    "old_generator_incomplete_answers": 16,
+    "old_generator_safe_abstentions": 16,
+    "old_generator_unsupported_answers": 0,
+    "three_document_cases": 16
+  },
+  "router_design": {
+    "initial_rules": [
+      "security precheck -> SAFE_ABSTAIN",
+      "complete literal deterministic support -> DETERMINISTIC",
+      "conflict -> SOL",
+      "multiple active unresolved versions -> SOL",
+      "version-sensitive unresolved/incomplete metadata -> SOL",
+      "otherwise -> LUNA"
+    ],
+    "post_luna_rules": [
+      "validated GO -> deterministic assembler",
+      "GO failing local validation -> SOL",
+      "UNCERTAIN -> SOL",
+      "ABSTAIN with genuine missing evidence -> SAFE_ABSTAIN",
+      "ABSTAIN with complete deterministic evidence or resolved version -> SOL",
+      "other ABSTAIN -> SAFE_ABSTAIN"
+    ]
+  },
+  "safety": {
+    "acl_tenant_prompt_injection_paths_preserved": true,
+    "correct_abstentions_projected": 20,
+    "final_generator_openai_calls": 0,
+    "unsupported_answers_projected": 4
+  },
+  "selective_routing_simulation": {
+    "cases_with_insufficient_saved_model_outputs": 0,
+    "deterministic_cases": 42,
+    "estimated_sol_call_reduction_count": 110,
+    "estimated_sol_call_reduction_rate": 1.0,
+    "historical_quality_retained": true,
+    "luna_routed_cases": 68,
+    "predicted_behavior_counts": {
+      "CORRECT_ABSTENTION": 20,
+      "CORRECT_COMPLETE_ANSWER": 96,
+      "UNSUPPORTED_ANSWER": 4
+    },
+    "predicted_historical_accuracy": 0.9666666666666667,
+    "predicted_historical_correct_cases": 116,
+    "safe_abstain_precheck_cases": 10,
+    "sol_routed_cases": 0,
+    "total_cases": 120
+  },
+  "source_artifact_hashes": {
+    "data/experiments/adaptive-top20-abstention-recovery-v1/adaptive_top20_recovery_rows.jsonl": "fe4157f72a48d6314e163ba9441ab04d50e263cc828f8e63ae1265ffa5cfafdb",
+    "data/experiments/adaptive-top20-abstention-recovery-v1/ranked_traces.jsonl": "1a31d845c5b18e3d9e25d6f02d60b69737d715e760f2a6ec4481b9207827105a",
+    "data/experiments/safe-recovery-luna-v2/per_case_B1.jsonl": "9cfa246c806833fed7517be49b2e2e358de6a843dda2f9ffdd4744ff80512dac",
+    "data/experiments/safe-recovery-luna-v2/per_case_R.jsonl": "aafa8ae5f3554916aa637c81c6fa52ec1adb7c949caa0eeacb8bc5673291e4e8",
+    "data/experiments/v3-phase5k-final-e2e/phase5kr_corrected_per_case_results.jsonl": "a1e8e27f970aa0949a6e995017438089ba0a87e35ead68ab52e63c9cca9acc17"
+  },
+  "three_document_generator_root_cause": {
+    "cases": 16,
+    "classification_counts": {
+      "GENERATOR_REQUIREMENT_BLIND": 16
+    },
+    "explanation": "deterministic-extractive-v2 only creates a per-chunk candidate when a sentence has non-zero lexical overlap with the question; the remote-work support used semantically equivalent vocabulary, so the verified requirement was silently absent from selection."
+  },
+  "verdict": "READY_FOR_TARGETED_PAID_VALIDATION",
+  "version_sensitive_result": {
+    "analysis": {
+      "DETERMINISTICALLY_RESOLVABLE": 8
+    },
+    "replay": {
+      "ambiguous": 0,
+      "correct_complete_answers": 8,
+      "deterministically_resolved": 8,
+      "metadata_insufficient": 0,
+      "safe_abstentions": 0,
+      "unsupported_answers": 0
+    },
+    "root_cause": "The historical requirement splitter treated the active-revision condition as an answer requirement. Metadata uniquely resolves the requested region's active version; only the recovery token is an output requirement."
+  }
+}

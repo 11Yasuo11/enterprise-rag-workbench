@@ -1,0 +1,12 @@
+{
+  "total_chunk_count": 24,
+  "estimated_input_tokens": 480,
+  "expected_embedding_batches": 1,
+  "batch_size_assumed": 64,
+  "model": "text-embedding-3-small",
+  "estimated_cost_usd": 9.6e-06,
+  "hard_budget_usd": 0.2,
+  "within_budget": true,
+  "reembedding_required": false,
+  "action": "SKIP_REEMBED_VALIDATE_EXISTING"
+}

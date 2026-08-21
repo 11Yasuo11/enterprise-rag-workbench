@@ -1,0 +1,8 @@
+{
+  "case_count_expected": 60,
+  "freeze_created": false,
+  "gold_loaded": false,
+  "predictions_persisted": false,
+  "reason": "Deterministic runtime exception TARGETED_FOUR_SOL_CALL_LIMIT occurred before the runner's atomic prediction persistence step.",
+  "status": "NO_PREDICTION_FREEZE_RUNTIME_EXCEPTION"
+}

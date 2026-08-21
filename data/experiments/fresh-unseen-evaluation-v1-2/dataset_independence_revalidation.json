@@ -1,0 +1,10 @@
+{
+  "experiment_id": "FRESH_UNSEEN_EVALUATION_V1_2",
+  "manifest_hashes_match": true,
+  "passed": true,
+  "preserved_gold_cases_verified": 59,
+  "preserved_question_cases_verified": 59,
+  "revalidated_at": "2026-08-20T15:30:42.075330+00:00",
+  "source_artifact": "data/experiments/fresh-unseen-evaluation-v1-1/dataset_replacement_audit.json",
+  "source_artifact_sha256": "e5df16975e90cf2351e1bb0a29bc29f0762f33866b0e2555bfd025801d48c465"
+}

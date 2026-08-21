@@ -1,0 +1,326 @@
+{
+  "api_accounting": {
+    "new_luna_calls": 0,
+    "new_openai_calls": 0,
+    "new_openai_cost_usd": 0.0,
+    "new_sol_calls": 0
+  },
+  "constraint_validator_tests": {
+    "n": 7,
+    "passed": 7
+  },
+  "created_at": "2026-08-20T13:59:17.896073+00:00",
+  "experiment_id": "UNIVERSAL_REQUIREMENT_COMPLETENESS_V1",
+  "files_changed": [
+    "src/rag_workbench/evaluation/final_e2e_scorer_v2.py",
+    "src/rag_workbench/experiments/universal_requirement_completeness_v1/",
+    "scripts/run_universal_requirement_completeness_v1.py",
+    "tests/unit/test_universal_requirement_completeness_v1.py",
+    "data/experiments/universal-requirement-completeness-v1/"
+  ],
+  "four_case_result": {
+    "historical_unsupported": 4,
+    "new_correct_complete": 4,
+    "new_unsupported": 0
+  },
+  "four_unsupported_root_causes": {
+    "p5k_numeric_date_constraint_094": "DATASET_OR_SCORER_ISSUE",
+    "p5k_numeric_date_constraint_096": "DATASET_OR_SCORER_ISSUE",
+    "p5k_numeric_date_constraint_098": "DATASET_OR_SCORER_ISSUE",
+    "p5k_numeric_date_constraint_100": "DATASET_OR_SCORER_ISSUE"
+  },
+  "git_commit": "6e9741f55dc0436963ea1c0ba30b9a30bccbd207",
+  "historical_120_counterfactual": {
+    "citation_validity": 1.0,
+    "correct_abstentions": 20,
+    "correct_complete_answers": 100,
+    "experiment_id": "UNIVERSAL_REQUIREMENT_COMPLETENESS_V1",
+    "f1": 1.0,
+    "fresh_accuracy": false,
+    "historical_predicted_accuracy": 1.0,
+    "incorrect_abstentions": 0,
+    "label": "HISTORICAL COUNTERFACTUAL ONLY",
+    "new_openai_calls": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "saved_outputs_sufficient": true,
+    "total_cases": 120,
+    "unsupported_answers": 0
+  },
+  "kind": "HISTORICAL COUNTERFACTUAL ONLY",
+  "next_paid_validation": {
+    "maximum_initial_cases": 12,
+    "recommended": true,
+    "run_during_this_experiment": false,
+    "scope": "Combined production-like targeted validation of incorrect-abstention recovery, the punctuation/constraint path, and selective Luna/Sol boundaries."
+  },
+  "retrieval_status": {
+    "all_four_complete_in_top15": true,
+    "retrieval_changes_made": false
+  },
+  "safety": {
+    "acl_violations": 0,
+    "citation_validity_regressions": 0,
+    "correct_abstention_regressions": 0,
+    "experiment_id": "UNIVERSAL_REQUIREMENT_COMPLETENESS_V1",
+    "fail_closed_checks_preserved": true,
+    "previous_correctness_regressions": 0,
+    "region_violations": 0,
+    "regression_query_ids": [],
+    "tenant_violations": 0,
+    "unsupported_answer_increase": 0,
+    "version_regressions": 0
+  },
+  "source_artifact_hashes": {
+    "data/eval/phase5k/acmeai_enterprise_rag_v3_final_unseen_e2e_120.jsonl": "12851a9915ad51eccf2629e6765a8dc9a1731eb308987b0e53ac56468274f404",
+    "data/experiments/adaptive-top20-abstention-recovery-v1/adaptive_top20_recovery_rows.jsonl": "fe4157f72a48d6314e163ba9441ab04d50e263cc828f8e63ae1265ffa5cfafdb",
+    "data/experiments/adaptive-top20-abstention-recovery-v1/ranked_traces.jsonl": "1a31d845c5b18e3d9e25d6f02d60b69737d715e760f2a6ec4481b9207827105a",
+    "data/experiments/requirement-assembler-selective-routing-v1/selective_router_simulation.json": "3b89de1646992de231891829b8e87dc486c0d3cdb6868430eee5a7d6b0b4beda",
+    "data/experiments/safe-recovery-luna-v2/per_case_B1.jsonl": "9cfa246c806833fed7517be49b2e2e358de6a843dda2f9ffdd4744ff80512dac",
+    "data/experiments/v3-phase5k-final-e2e/phase5kr_corrected_per_case_results.jsonl": "a1e8e27f970aa0949a6e995017438089ba0a87e35ead68ab52e63c9cca9acc17"
+  },
+  "universal_regression_replay": {
+    "correct_abstentions": {
+      "n": 20,
+      "passed": 20,
+      "regressions": []
+    },
+    "previously_recovered_adaptive": {
+      "cases": [
+        {
+          "api_calls": 0,
+          "query_id": "p5k_single_document_001",
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "query_id": "p5k_single_document_006",
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "query_id": "p5k_single_document_008",
+          "status": "answered"
+        }
+      ],
+      "n": 3,
+      "passed": 3,
+      "population": "previously_recovered_adaptive",
+      "regressions": []
+    },
+    "three_document": {
+      "cases": [
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_027",
+          "requirement_count": 3,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_028",
+          "requirement_count": 3,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_029",
+          "requirement_count": 3,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_030",
+          "requirement_count": 3,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_031",
+          "requirement_count": 3,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_032",
+          "requirement_count": 3,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_033",
+          "requirement_count": 3,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_034",
+          "requirement_count": 3,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_035",
+          "requirement_count": 3,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_036",
+          "requirement_count": 3,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_037",
+          "requirement_count": 3,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_038",
+          "requirement_count": 3,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_039",
+          "requirement_count": 3,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_040",
+          "requirement_count": 3,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_041",
+          "requirement_count": 3,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_042",
+          "requirement_count": 3,
+          "status": "answered"
+        }
+      ],
+      "n": 16,
+      "passed": 16,
+      "population": "three_document",
+      "regressions": []
+    },
+    "unsupported_four": {
+      "n": 4,
+      "passed": 4,
+      "regressions": []
+    },
+    "version_sensitive": {
+      "cases": [
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 1,
+          "query_id": "p5k_version_sensitive_079",
+          "requirement_count": 1,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 1,
+          "query_id": "p5k_version_sensitive_080",
+          "requirement_count": 1,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 1,
+          "query_id": "p5k_version_sensitive_081",
+          "requirement_count": 1,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 1,
+          "query_id": "p5k_version_sensitive_082",
+          "requirement_count": 1,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 1,
+          "query_id": "p5k_version_sensitive_083",
+          "requirement_count": 1,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 1,
+          "query_id": "p5k_version_sensitive_084",
+          "requirement_count": 1,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 1,
+          "query_id": "p5k_version_sensitive_085",
+          "requirement_count": 1,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 1,
+          "query_id": "p5k_version_sensitive_086",
+          "requirement_count": 1,
+          "status": "answered"
+        }
+      ],
+      "n": 8,
+      "passed": 8,
+      "population": "version_sensitive",
+      "regressions": []
+    }
+  },
+  "verdict": "READY_FOR_COMBINED_TARGETED_API_VALIDATION"
+}

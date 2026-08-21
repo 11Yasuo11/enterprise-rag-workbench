@@ -1,0 +1,83 @@
+{
+  "cost": {
+    "budget_cap_usd": 0.1,
+    "cached_input_tokens": 0,
+    "input_tokens": 9249,
+    "output_tokens": 1534,
+    "projected_max_cost_usd": 0.062957,
+    "total_experiment_cost_usd": 0.0041523
+  },
+  "experiment_id": "ATOMIC_REQUIREMENT_CONTRACT_V1",
+  "fresh_unseen_evaluation_executed": false,
+  "latency": {
+    "median_ms": 3997.194790994399,
+    "p95_ms": 4060.489040988614
+  },
+  "next_step": "FRESH_UNSEEN_EVALUATION",
+  "quality": {
+    "citation_validity": 1.0,
+    "contract_mismatches": 0,
+    "correct": 5,
+    "five_target_cases": 5,
+    "incorrect_abstentions": 0,
+    "luna_calls": 5,
+    "requirement_completeness": 1.0,
+    "sol_calls": 0,
+    "sol_escalation_rate": 0.0,
+    "unsupported_answers": 0,
+    "version_correctness": 1.0
+  },
+  "regression": {
+    "contract_change_is_structurally_non_breaking": true,
+    "correct_abstentions": {
+      "n": 20,
+      "passed": 20
+    },
+    "experiment_id": "ATOMIC_REQUIREMENT_CONTRACT_V1",
+    "method": "saved-output structural replay plus focused local contract tests",
+    "new_api_calls": 0,
+    "previously_recovered_adaptive": {
+      "n": 3,
+      "passed": 3
+    },
+    "scorer_normalization_cases": {
+      "n": 4,
+      "passed": 4
+    },
+    "three_document_fixes": {
+      "n": 16,
+      "passed": 16
+    },
+    "version_sensitive_fixes": {
+      "n": 8,
+      "passed": 8
+    }
+  },
+  "requirement_contract": {
+    "assembler_hash_match": true,
+    "contract_mismatch_case_ids": [],
+    "contract_mismatch_count": 0,
+    "experiment_id": "ATOMIC_REQUIREMENT_CONTRACT_V1",
+    "luna_hash_match": true,
+    "luna_may_redecompose": false,
+    "shared_frozen_plan": true,
+    "sol_hash_match": true,
+    "sol_may_redecompose": false,
+    "validator_hash_match": true,
+    "validator_redecomposes_after_model_call": false
+  },
+  "root_cause": "Raw-question local decomposition and model-side implicit decomposition created two competing requirement identities; audit, scope, and discourse clauses were promoted inconsistently.",
+  "safety": {
+    "acl_violations": 0,
+    "experiment_id": "ATOMIC_REQUIREMENT_CONTRACT_V1",
+    "final_generator_openai_calls": 0,
+    "invalid_citations": 0,
+    "passed": true,
+    "prompt_injection_regressions": 0,
+    "region_violations": 0,
+    "tenant_violations": 0,
+    "unsupported_answers": 0
+  },
+  "timestamp": "2026-08-20T14:48:02.128595+00:00",
+  "verdict": "ATOMIC_REQUIREMENT_CONTRACT_PASSED"
+}

@@ -1,0 +1,20 @@
+{
+  "REAL_CROSS_ENCODER_LOADED": true,
+  "model_id": "cross-encoder/ms-marco-MiniLM-L6-v2",
+  "device": "cpu",
+  "inference_ok": true,
+  "top15_count": 3,
+  "scores": [
+    1.1243973970413208,
+    -3.3242053985595703,
+    -11.437315940856934
+  ],
+  "order_chunk_ids": [
+    "c1",
+    "c3",
+    "c2"
+  ],
+  "schema_ok": true,
+  "identity_fallback": false,
+  "latency_ms": 16638.590667003882
+}

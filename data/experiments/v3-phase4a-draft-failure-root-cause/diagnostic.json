@@ -1,0 +1,145 @@
+{
+  "case_ids": [
+    "fv3_two_08",
+    "fv3_two_14",
+    "fv3_two_19",
+    "fv3_three_01",
+    "fv3_three_02",
+    "fv3_three_04",
+    "fv3_three_05",
+    "fv3_three_07",
+    "fv3_three_09",
+    "fv3_three_10",
+    "fv3_three_11",
+    "fv3_three_12",
+    "fv3_three_13",
+    "fv3_three_14",
+    "fv3_three_15",
+    "fv3_three_16",
+    "fv3_three_17",
+    "fv3_three_18",
+    "fv3_three_19",
+    "fv3_three_20",
+    "fv3_three_21",
+    "fv3_three_22",
+    "fv3_three_25",
+    "fv3_three_26",
+    "fv3_three_27",
+    "fv3_three_28",
+    "fv3_dup_03",
+    "fv3_dup_04",
+    "fv3_dup_05",
+    "fv3_dup_06",
+    "fv3_dup_07",
+    "fv3_dup_09",
+    "fv3_dup_10",
+    "fv3_dup_11",
+    "fv3_dup_13",
+    "fv3_dup_14",
+    "fv3_id_09"
+  ],
+  "diagnosis": {
+    "fv3_two_08": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_two_14": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_two_19": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_01": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_02": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_04": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_05": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_07": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_09": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_10": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_11": "A_TRUE_DRAFT_FAILURE_WITH_SUFFICIENT_TOP5",
+    "fv3_three_12": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_13": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_14": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_15": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_16": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_17": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_18": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_19": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_20": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_21": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_22": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_25": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_26": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_27": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_three_28": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_dup_03": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_dup_04": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_dup_05": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_dup_06": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_dup_07": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_dup_09": "A_TRUE_DRAFT_FAILURE_WITH_SUFFICIENT_TOP5",
+    "fv3_dup_10": "A_TRUE_DRAFT_FAILURE_WITH_SUFFICIENT_TOP5",
+    "fv3_dup_11": "C_EVIDENCE_PRESENT_BUT_VERSION_OR_SOURCE_WRONG",
+    "fv3_dup_13": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_dup_14": "B_TOP5_INSUFFICIENT_RANKING_FAILURE",
+    "fv3_id_09": "B_TOP5_INSUFFICIENT_RANKING_FAILURE"
+  },
+  "A_detail": {
+    "fv3_three_11": {
+      "category": "multidoc_three",
+      "required_docs": [
+        "data-retention-standard",
+        "security-incident-policy",
+        "engineering-deployment-handbook"
+      ],
+      "required_markers": [
+        "LEGAL-DEL-08",
+        "Engineering and Customer Support",
+        "ENG-DEP-17"
+      ],
+      "atomic_claims_len": 0,
+      "candidate_answer_present": false,
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "preferred_source_success": 1.0,
+      "version_correct": 1.0
+    },
+    "fv3_dup_09": {
+      "category": "near_duplicate",
+      "required_docs": [
+        "recovery-runbook-east"
+      ],
+      "required_markers": [
+        "first Wednesday"
+      ],
+      "atomic_claims_len": 0,
+      "candidate_answer_present": false,
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "preferred_source_success": 1.0,
+      "version_correct": 1.0
+    },
+    "fv3_dup_10": {
+      "category": "near_duplicate",
+      "required_docs": [
+        "recovery-runbook-west"
+      ],
+      "required_markers": [
+        "second Wednesday"
+      ],
+      "atomic_claims_len": 0,
+      "candidate_answer_present": false,
+      "draft_output_status": "CANNOT_DRAFT_SUPPORTED_ANSWER",
+      "preferred_source_success": 1.0,
+      "version_correct": 1.0
+    }
+  },
+  "A_patterns": {
+    "OVER_CONSERVATIVE_DRAFT_ABSTENTION": [
+      "fv3_three_11"
+    ],
+    "NEAR_DUPLICATE_DISAMBIGUATION_FAILURE": [
+      "fv3_dup_09",
+      "fv3_dup_10"
+    ]
+  },
+  "B_rank_buckets": {
+    "rank 1-5 (inconsistency)": 21,
+    "rank 11-20": 16,
+    "rank 6": 5,
+    "rank 7": 3,
+    "rank 8": 4,
+    "rank 9-10": 5
+  }
+}

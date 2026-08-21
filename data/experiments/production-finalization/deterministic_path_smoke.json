@@ -1,0 +1,9 @@
+{
+  "status": "answer",
+  "route": "deterministic",
+  "luna_calls": 0,
+  "sol_calls": 0,
+  "DETERMINISTIC_SUPPORT_COMPLETE": true,
+  "final_generation_llm_calls": 0,
+  "pass": true
+}

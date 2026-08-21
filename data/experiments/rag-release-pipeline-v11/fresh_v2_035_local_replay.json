@@ -1,0 +1,20 @@
+{
+  "answer": "R1: Under the 2025 policy , employees could work remotely three days per week . [C1] Under the current 2026 policy , employees may work remotely two days per week . [C2]\nR2: Under the 2025 policy , suspected severity-one incidents had to be reported to the security duty officer within 60 minutes of discovery . [C3] Under the current 2026 policy , suspected severity-one incidents must be reported to the security duty officer within 15 minutes of discovery . [C4]",
+  "api_calls": 0,
+  "case_id": "fresh_v2_035",
+  "citations": [
+    "0f876e88-1c3a-403f-83aa-ac66033ed246",
+    "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+    "18bfa499-1726-4b23-9988-e5805e744db4",
+    "bd832158-c74b-4f03-8f53-60a2d30e69e8"
+  ],
+  "correct": true,
+  "deterministic_complete": true,
+  "facts_ok": true,
+  "requirement_complete": true,
+  "scorer_behavior": "CORRECT_COMPLETE_ANSWER",
+  "status": "FIXED_LOCALLY",
+  "three_days_in_packet": true,
+  "timestamp": "2026-08-21T01:08:36.479808+00:00",
+  "version_ok": true
+}

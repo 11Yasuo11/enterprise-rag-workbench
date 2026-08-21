@@ -1,0 +1,16 @@
+{
+  "cycles": {
+    "v4": 0.01659742,
+    "v5": 0.01231087,
+    "v6": 0.17573674,
+    "v7": 0.12409575,
+    "v8": 0.1341727,
+    "v9": 0.21249544
+  },
+  "historical_v8_partial_retained": true,
+  "lifetime_v4_through_v9_usd": 0.67540892,
+  "v9_additional_cap_usd": 0.6,
+  "v9_fresh_v3_usd": 0.0,
+  "v9_total_usd": 0.21249544,
+  "v9_v2_regression_usd": 0.21249544
+}

@@ -1,0 +1,12 @@
+{
+  "strategy": "blue_green_versioned_index_identity",
+  "existing_indexes_preserved": true,
+  "new_index_build": "NOT_REQUIRED",
+  "active_canonical_index": "e598d9fb91b13a8c6bd6be94b1bc0a54bbce27dd4e98dc158669d7198bc6f466",
+  "rollback": "switch EMBEDDING_PROVIDER back to hashing / prior index_identity",
+  "validation": "REEMBED_NOT_REQUIRED_EXISTING_SEMANTIC_INDEX_VALID",
+  "missing_embeddings": 0,
+  "duplicate_active_chunk_vectors": 0,
+  "dimension_mismatch": 0,
+  "embedded_chunks_equal_expected": true
+}

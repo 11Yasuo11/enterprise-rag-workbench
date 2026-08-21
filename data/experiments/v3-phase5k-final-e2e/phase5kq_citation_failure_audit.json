@@ -1,0 +1,575 @@
+{
+  "counts": {
+    "ANSWER_CONTENT_FAILURE_NOT_CITATION_FAILURE": 19,
+    "SCORER_EXACT_MATCH_ERROR": 59
+  },
+  "cases": [
+    {
+      "query_id": "p5k_single_document_001",
+      "classification": "ANSWER_CONTENT_FAILURE_NOT_CITATION_FAILURE",
+      "note": "no persisted answer; phase5kc census may have labeled CITATION_FAILURE or JUDGE_FALSE_NEGATIVE without per-case trace"
+    },
+    {
+      "query_id": "p5k_single_document_002",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_single_document_003",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_single_document_004",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_single_document_005",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_single_document_006",
+      "classification": "ANSWER_CONTENT_FAILURE_NOT_CITATION_FAILURE",
+      "note": "no persisted answer; phase5kc census may have labeled CITATION_FAILURE or JUDGE_FALSE_NEGATIVE without per-case trace"
+    },
+    {
+      "query_id": "p5k_single_document_007",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_single_document_008",
+      "classification": "ANSWER_CONTENT_FAILURE_NOT_CITATION_FAILURE",
+      "note": "no persisted answer; phase5kc census may have labeled CITATION_FAILURE or JUDGE_FALSE_NEGATIVE without per-case trace"
+    },
+    {
+      "query_id": "p5k_single_document_009",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_single_document_010",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_two_document_011",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_two_document_012",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_two_document_013",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_two_document_014",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_two_document_015",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_two_document_016",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_two_document_017",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_two_document_018",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_two_document_019",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_two_document_020",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_two_document_021",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_two_document_022",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_two_document_023",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_two_document_024",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_two_document_025",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_two_document_026",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_three_document_027",
+      "classification": "ANSWER_CONTENT_FAILURE_NOT_CITATION_FAILURE",
+      "note": "no persisted answer; phase5kc census may have labeled CITATION_FAILURE or JUDGE_FALSE_NEGATIVE without per-case trace"
+    },
+    {
+      "query_id": "p5k_three_document_028",
+      "classification": "ANSWER_CONTENT_FAILURE_NOT_CITATION_FAILURE",
+      "note": "no persisted answer; phase5kc census may have labeled CITATION_FAILURE or JUDGE_FALSE_NEGATIVE without per-case trace"
+    },
+    {
+      "query_id": "p5k_three_document_029",
+      "classification": "ANSWER_CONTENT_FAILURE_NOT_CITATION_FAILURE",
+      "note": "no persisted answer; phase5kc census may have labeled CITATION_FAILURE or JUDGE_FALSE_NEGATIVE without per-case trace"
+    },
+    {
+      "query_id": "p5k_three_document_030",
+      "classification": "ANSWER_CONTENT_FAILURE_NOT_CITATION_FAILURE",
+      "note": "no persisted answer; phase5kc census may have labeled CITATION_FAILURE or JUDGE_FALSE_NEGATIVE without per-case trace"
+    },
+    {
+      "query_id": "p5k_three_document_031",
+      "classification": "ANSWER_CONTENT_FAILURE_NOT_CITATION_FAILURE",
+      "note": "no persisted answer; phase5kc census may have labeled CITATION_FAILURE or JUDGE_FALSE_NEGATIVE without per-case trace"
+    },
+    {
+      "query_id": "p5k_three_document_032",
+      "classification": "ANSWER_CONTENT_FAILURE_NOT_CITATION_FAILURE",
+      "note": "no persisted answer; phase5kc census may have labeled CITATION_FAILURE or JUDGE_FALSE_NEGATIVE without per-case trace"
+    },
+    {
+      "query_id": "p5k_three_document_033",
+      "classification": "ANSWER_CONTENT_FAILURE_NOT_CITATION_FAILURE",
+      "note": "no persisted answer; phase5kc census may have labeled CITATION_FAILURE or JUDGE_FALSE_NEGATIVE without per-case trace"
+    },
+    {
+      "query_id": "p5k_three_document_034",
+      "classification": "ANSWER_CONTENT_FAILURE_NOT_CITATION_FAILURE",
+      "note": "no persisted answer; phase5kc census may have labeled CITATION_FAILURE or JUDGE_FALSE_NEGATIVE without per-case trace"
+    },
+    {
+      "query_id": "p5k_three_document_035",
+      "classification": "ANSWER_CONTENT_FAILURE_NOT_CITATION_FAILURE",
+      "note": "no persisted answer; phase5kc census may have labeled CITATION_FAILURE or JUDGE_FALSE_NEGATIVE without per-case trace"
+    },
+    {
+      "query_id": "p5k_three_document_036",
+      "classification": "ANSWER_CONTENT_FAILURE_NOT_CITATION_FAILURE",
+      "note": "no persisted answer; phase5kc census may have labeled CITATION_FAILURE or JUDGE_FALSE_NEGATIVE without per-case trace"
+    },
+    {
+      "query_id": "p5k_three_document_037",
+      "classification": "ANSWER_CONTENT_FAILURE_NOT_CITATION_FAILURE",
+      "note": "no persisted answer; phase5kc census may have labeled CITATION_FAILURE or JUDGE_FALSE_NEGATIVE without per-case trace"
+    },
+    {
+      "query_id": "p5k_three_document_038",
+      "classification": "ANSWER_CONTENT_FAILURE_NOT_CITATION_FAILURE",
+      "note": "no persisted answer; phase5kc census may have labeled CITATION_FAILURE or JUDGE_FALSE_NEGATIVE without per-case trace"
+    },
+    {
+      "query_id": "p5k_three_document_039",
+      "classification": "ANSWER_CONTENT_FAILURE_NOT_CITATION_FAILURE",
+      "note": "no persisted answer; phase5kc census may have labeled CITATION_FAILURE or JUDGE_FALSE_NEGATIVE without per-case trace"
+    },
+    {
+      "query_id": "p5k_three_document_040",
+      "classification": "ANSWER_CONTENT_FAILURE_NOT_CITATION_FAILURE",
+      "note": "no persisted answer; phase5kc census may have labeled CITATION_FAILURE or JUDGE_FALSE_NEGATIVE without per-case trace"
+    },
+    {
+      "query_id": "p5k_three_document_041",
+      "classification": "ANSWER_CONTENT_FAILURE_NOT_CITATION_FAILURE",
+      "note": "no persisted answer; phase5kc census may have labeled CITATION_FAILURE or JUDGE_FALSE_NEGATIVE without per-case trace"
+    },
+    {
+      "query_id": "p5k_three_document_042",
+      "classification": "ANSWER_CONTENT_FAILURE_NOT_CITATION_FAILURE",
+      "note": "no persisted answer; phase5kc census may have labeled CITATION_FAILURE or JUDGE_FALSE_NEGATIVE without per-case trace"
+    },
+    {
+      "query_id": "p5k_same_document_multi_chunk_043",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_same_document_multi_chunk_044",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_same_document_multi_chunk_045",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_same_document_multi_chunk_046",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_same_document_multi_chunk_047",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_same_document_multi_chunk_048",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_same_document_multi_chunk_049",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_same_document_multi_chunk_050",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_same_document_multi_chunk_051",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_same_document_multi_chunk_052",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_semantic_paraphrase_053",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_semantic_paraphrase_054",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_semantic_paraphrase_055",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_semantic_paraphrase_056",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_semantic_paraphrase_057",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_semantic_paraphrase_058",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_semantic_paraphrase_059",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_semantic_paraphrase_060",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_semantic_paraphrase_061",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_semantic_paraphrase_062",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_exact_identifier_063",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_exact_identifier_064",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_exact_identifier_065",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_exact_identifier_066",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_exact_identifier_067",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_exact_identifier_068",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_exact_identifier_069",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_exact_identifier_070",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_near_duplicate_071",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_near_duplicate_072",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_near_duplicate_073",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_near_duplicate_074",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_near_duplicate_075",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_near_duplicate_076",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_near_duplicate_077",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    },
+    {
+      "query_id": "p5k_near_duplicate_078",
+      "classification": "SCORER_EXACT_MATCH_ERROR",
+      "facts_ok": true,
+      "doc_ok": true,
+      "cvalid": 1.0,
+      "ccorr_bug": 0.0
+    }
+  ]
+}

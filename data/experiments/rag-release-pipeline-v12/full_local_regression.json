@@ -1,0 +1,20 @@
+{
+  "api_calls": 0,
+  "timestamp": "2026-08-21T08:38:12.649047+00:00",
+  "pass": true,
+  "v2_plan_traversal_60": {
+    "ok": 60,
+    "fail": [],
+    "pass": true
+  },
+  "v2_analyze_traversal_60": {
+    "ok": 60,
+    "fail": [],
+    "pass": true
+  },
+  "fresh_v2_032_no_false_unresolved": true,
+  "fresh_v2_032_local": "STRUCTURALLY_FIXED_REAL_API_REQUIRED",
+  "unit_suite": "PASS",
+  "ruff": "PASS",
+  "git_diff_check": "PASS"
+}

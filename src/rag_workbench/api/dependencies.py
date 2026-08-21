@@ -17,6 +17,8 @@ from rag_workbench.providers.embeddings import (
     OpenAICompatibleEmbeddingProvider,
 )
 from rag_workbench.providers.llm import ExtractiveGenerationProvider, OpenAICompatibleLLMProvider
+from rag_workbench.reranking.cross_encoder import CrossEncoderReranker
+from rag_workbench.runtime.identity_reranker import IdentityReranker
 
 
 @lru_cache
@@ -36,6 +38,15 @@ def embedding_provider() -> EmbeddingProvider:
             provider_name=settings.embedding_provider,
         )
     raise ValueError(f"Unsupported embedding provider: {settings.embedding_provider}")
+
+
+@lru_cache
+def production_reranker():
+    """Process-scoped reranker. Hashing/local may use identity; production requires CE."""
+    settings = get_settings()
+    if settings.embedding_provider == "hashing":
+        return IdentityReranker()
+    return CrossEncoderReranker(device="cpu")
 
 
 @lru_cache

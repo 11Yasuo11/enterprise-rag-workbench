@@ -1,0 +1,526 @@
+{
+  "cases": [
+    {
+      "case_id": "fresh_v2_035",
+      "category": "cross_version",
+      "constraint_inference": null,
+      "deterministic_mappings": [
+        {
+          "chunk_id": "0f876e88-1c3a-403f-83aa-ac66033ed246",
+          "citations": [
+            "0f876e88-1c3a-403f-83aa-ac66033ed246"
+          ],
+          "document_id": "remote-work-policy",
+          "document_version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac",
+          "relation_family": "allowance",
+          "requirement_id": "R1",
+          "supporting_spans": [
+            "Under the 2025 policy , employees could work remotely three days per week ."
+          ],
+          "version": "2025"
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "citations": [
+            "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+          ],
+          "document_id": "remote-work-policy",
+          "document_version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+          "relation_family": "allowance",
+          "requirement_id": "R1",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ],
+          "version": "2026"
+        },
+        {
+          "chunk_id": "18bfa499-1726-4b23-9988-e5805e744db4",
+          "citations": [
+            "18bfa499-1726-4b23-9988-e5805e744db4"
+          ],
+          "document_id": "security-incident-policy",
+          "document_version_id": "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588",
+          "relation_family": "deadline",
+          "requirement_id": "R2",
+          "supporting_spans": [
+            "Under the 2025 policy , suspected severity-one incidents had to be reported to the security duty officer within 60 minutes of discovery ."
+          ],
+          "version": "2025"
+        },
+        {
+          "chunk_id": "bd832158-c74b-4f03-8f53-60a2d30e69e8",
+          "citations": [
+            "bd832158-c74b-4f03-8f53-60a2d30e69e8"
+          ],
+          "document_id": "security-incident-policy",
+          "document_version_id": "c4d49578-2eec-4051-a54b-addc12af0efa",
+          "relation_family": "deadline",
+          "requirement_id": "R2",
+          "supporting_spans": [
+            "Under the current 2026 policy , suspected severity-one incidents must be reported to the security duty officer within 15 minutes of discovery ."
+          ],
+          "version": "2026"
+        }
+      ],
+      "deterministic_support": {
+        "complete": true,
+        "failure_code": null
+      },
+      "evidence_rows": [
+        {
+          "chunk_id": "bd832158-c74b-4f03-8f53-60a2d30e69e8",
+          "dense_score": 0.385269,
+          "document_id": "security-incident-policy",
+          "document_version_id": "c4d49578-2eec-4051-a54b-addc12af0efa",
+          "found_by_bm25": true,
+          "found_by_dense": true,
+          "fusion_score": 0.031754032,
+          "lexical_score": 1.639827,
+          "metadata": {
+            "chunk_overlap": 30,
+            "chunk_size": 180,
+            "chunk_strategy": "fixed_token",
+            "chunker_version": "1"
+          },
+          "page": null,
+          "rank": 1,
+          "retrieval_source": "hybrid_rrf",
+          "score": -3.3699824810028076,
+          "section": "Initial notification",
+          "source": "data/synthetic_company/security-incident-policy-2026.md",
+          "source_type": "markdown",
+          "text": "Under the current 2026 policy , suspected severity-one incidents must be reported to the security duty officer within 15 minutes of discovery .",
+          "title": "Security Incident Response Policy",
+          "version": "2026"
+        },
+        {
+          "chunk_id": "18bfa499-1726-4b23-9988-e5805e744db4",
+          "dense_score": 0.339944,
+          "document_id": "security-incident-policy",
+          "document_version_id": "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588",
+          "found_by_bm25": true,
+          "found_by_dense": true,
+          "fusion_score": 0.031498016,
+          "lexical_score": 1.639827,
+          "metadata": {
+            "chunk_overlap": 30,
+            "chunk_size": 180,
+            "chunk_strategy": "fixed_token",
+            "chunker_version": "1"
+          },
+          "page": null,
+          "rank": 2,
+          "retrieval_source": "hybrid_rrf",
+          "score": -3.4259090423583984,
+          "section": "Initial notification",
+          "source": "data/synthetic_company/security-incident-policy-2026.md",
+          "source_type": "markdown",
+          "text": "Under the 2025 policy , suspected severity-one incidents had to be reported to the security duty officer within 60 minutes of discovery .",
+          "title": "Security Incident Response Policy",
+          "version": "2025"
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "dense_score": 0.437352,
+          "document_id": "remote-work-policy",
+          "document_version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+          "found_by_bm25": true,
+          "found_by_dense": true,
+          "fusion_score": 0.032522475,
+          "lexical_score": 2.941775,
+          "metadata": {
+            "chunk_overlap": 30,
+            "chunk_size": 180,
+            "chunk_strategy": "fixed_token",
+            "chunker_version": "1"
+          },
+          "page": null,
+          "rank": 3,
+          "retrieval_source": "hybrid_rrf",
+          "score": -3.4457993507385254,
+          "section": "Weekly allowance",
+          "source": "data/synthetic_company/remote-work-policy-2026.md",
+          "source_type": "markdown",
+          "text": "Under the current 2026 policy , employees may work remotely two days per week .",
+          "title": "Remote Work Policy",
+          "version": "2026"
+        },
+        {
+          "chunk_id": "0f876e88-1c3a-403f-83aa-ac66033ed246",
+          "dense_score": 0.356838,
+          "document_id": "remote-work-policy",
+          "document_version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac",
+          "found_by_bm25": true,
+          "found_by_dense": true,
+          "fusion_score": 0.030798389,
+          "lexical_score": 1.238019,
+          "metadata": {
+            "chunk_overlap": 30,
+            "chunk_size": 180,
+            "chunk_strategy": "fixed_token",
+            "chunker_version": "1"
+          },
+          "page": null,
+          "rank": 4,
+          "retrieval_source": "hybrid_rrf",
+          "score": -3.8637614250183105,
+          "section": "Weekly allowance",
+          "source": "data/synthetic_company/remote-work-policy-2026.md",
+          "source_type": "markdown",
+          "text": "Under the 2025 policy , employees could work remotely three days per week .",
+          "title": "Remote Work Policy",
+          "version": "2025"
+        },
+        {
+          "chunk_id": "a6256f87-3055-4592-bbe0-9299878475b1",
+          "dense_score": 0.306514,
+          "document_id": "remote-work-policy",
+          "document_version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac",
+          "found_by_bm25": true,
+          "found_by_dense": true,
+          "fusion_score": 0.030536131,
+          "lexical_score": 1.384834,
+          "metadata": {
+            "chunk_overlap": 30,
+            "chunk_size": 180,
+            "chunk_strategy": "fixed_token",
+            "chunker_version": "1"
+          },
+          "page": null,
+          "rank": 5,
+          "retrieval_source": "hybrid_rrf",
+          "score": -7.163089752197266,
+          "section": "Review",
+          "source": "data/synthetic_company/remote-work-policy-2026.md",
+          "source_type": "markdown",
+          "text": "Managers reviewed remote-work schedules every quarter .",
+          "title": "Remote Work Policy",
+          "version": "2025"
+        },
+        {
+          "chunk_id": "49679d97-020f-4418-9430-4c296bc824b1",
+          "dense_score": null,
+          "document_id": "remote-work-policy",
+          "document_version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+          "found_by_bm25": true,
+          "found_by_dense": false,
+          "fusion_score": 0.015384615,
+          "lexical_score": 1.384834,
+          "metadata": {
+            "chunk_overlap": 30,
+            "chunk_size": 180,
+            "chunk_strategy": "fixed_token",
+            "chunker_version": "1"
+          },
+          "page": null,
+          "rank": 6,
+          "retrieval_source": "hybrid_rrf",
+          "score": -7.176514625549316,
+          "section": "Review",
+          "source": "data/synthetic_company/remote-work-policy-2026.md",
+          "source_type": "markdown",
+          "text": "Managers review remote-work schedules every month .",
+          "title": "Remote Work Policy",
+          "version": "2026"
+        },
+        {
+          "chunk_id": "12b0a957-4a2f-4c06-a8aa-55067b120c4b",
+          "dense_score": null,
+          "document_id": "security-incident-policy",
+          "document_version_id": "c4d49578-2eec-4051-a54b-addc12af0efa",
+          "found_by_bm25": true,
+          "found_by_dense": false,
+          "fusion_score": 0.016393443,
+          "lexical_score": 4.529152,
+          "metadata": {
+            "chunk_overlap": 30,
+            "chunk_size": 180,
+            "chunk_strategy": "fixed_token",
+            "chunker_version": "1"
+          },
+          "page": null,
+          "rank": 7,
+          "retrieval_source": "hybrid_rrf",
+          "score": -7.961673259735107,
+          "section": "Coordination",
+          "source": "data/synthetic_company/security-incident-policy-2026.md",
+          "source_type": "markdown",
+          "text": "The incident commander coordinates Engineering and Customer Support during an active severity-one incident .",
+          "title": "Security Incident Response Policy",
+          "version": "2026"
+        }
+      ],
+      "gold_fields_received": false,
+      "initial_route": {
+        "reason": "complete_literal_support",
+        "route": "DETERMINISTIC"
+      },
+      "principal": {
+        "permission_groups": [
+          "employees"
+        ],
+        "principal_id": "fresh-v2-employee",
+        "tenant_id": "acmeai"
+      },
+      "question": "Create a two-year change card: remote allowance and incident reporting deadline for both 2025 and 2026.",
+      "question_plan": {
+        "cardinality_match": true,
+        "context_qualifiers": [
+          {
+            "qualifier_id": "Q1",
+            "qualifier_type": "time",
+            "text": "2025"
+          },
+          {
+            "qualifier_id": "Q2",
+            "qualifier_type": "time",
+            "text": "2026"
+          }
+        ],
+        "detected_output_units": [
+          "Create a two-year change card: remote allowance",
+          "incident reporting deadline"
+        ],
+        "question": "Create a two-year change card: remote allowance and incident reporting deadline for both 2025 and 2026.",
+        "question_plan_hash": "f6909e64f751b6f7c7abe8c0c253659138dc0471625fb6ce188bb9074bd78567",
+        "requirements": [
+          {
+            "requirement_id": "R1",
+            "requirement_text": "Create a two-year change card: remote allowance",
+            "requirement_type": "fact"
+          },
+          {
+            "requirement_id": "R2",
+            "requirement_text": "incident reporting deadline",
+            "requirement_type": "fact"
+          }
+        ]
+      },
+      "selected_versions_by_document": {
+        "remote-work-policy": [
+          "82e742b7-92c3-417a-b3f0-a350037b0bac",
+          "e131a2f3-b35e-4d18-8990-650cf48e1c8c"
+        ],
+        "security-incident-policy": [
+          "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588",
+          "c4d49578-2eec-4051-a54b-addc12af0efa"
+        ]
+      },
+      "temporal_scope": {
+        "document_scope": [],
+        "requested_versions": [
+          "2025",
+          "2026"
+        ],
+        "temporal_mode": "CROSS_VERSION"
+      },
+      "top15": [
+        {
+          "chunk_id": "bd832158-c74b-4f03-8f53-60a2d30e69e8",
+          "dense_score": 0.385269,
+          "document_id": "security-incident-policy",
+          "document_version_id": "c4d49578-2eec-4051-a54b-addc12af0efa",
+          "found_by_bm25": true,
+          "found_by_dense": true,
+          "fusion_score": 0.031754032,
+          "lexical_score": 1.639827,
+          "metadata": {
+            "chunk_overlap": 30,
+            "chunk_size": 180,
+            "chunk_strategy": "fixed_token",
+            "chunker_version": "1"
+          },
+          "page": null,
+          "rank": 1,
+          "retrieval_source": "hybrid_rrf",
+          "score": -3.3699824810028076,
+          "section": "Initial notification",
+          "source": "data/synthetic_company/security-incident-policy-2026.md",
+          "source_type": "markdown",
+          "text": "Under the current 2026 policy , suspected severity-one incidents must be reported to the security duty officer within 15 minutes of discovery .",
+          "title": "Security Incident Response Policy",
+          "version": "2026"
+        },
+        {
+          "chunk_id": "18bfa499-1726-4b23-9988-e5805e744db4",
+          "dense_score": 0.339944,
+          "document_id": "security-incident-policy",
+          "document_version_id": "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588",
+          "found_by_bm25": true,
+          "found_by_dense": true,
+          "fusion_score": 0.031498016,
+          "lexical_score": 1.639827,
+          "metadata": {
+            "chunk_overlap": 30,
+            "chunk_size": 180,
+            "chunk_strategy": "fixed_token",
+            "chunker_version": "1"
+          },
+          "page": null,
+          "rank": 2,
+          "retrieval_source": "hybrid_rrf",
+          "score": -3.4259090423583984,
+          "section": "Initial notification",
+          "source": "data/synthetic_company/security-incident-policy-2026.md",
+          "source_type": "markdown",
+          "text": "Under the 2025 policy , suspected severity-one incidents had to be reported to the security duty officer within 60 minutes of discovery .",
+          "title": "Security Incident Response Policy",
+          "version": "2025"
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "dense_score": 0.437352,
+          "document_id": "remote-work-policy",
+          "document_version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+          "found_by_bm25": true,
+          "found_by_dense": true,
+          "fusion_score": 0.032522475,
+          "lexical_score": 2.941775,
+          "metadata": {
+            "chunk_overlap": 30,
+            "chunk_size": 180,
+            "chunk_strategy": "fixed_token",
+            "chunker_version": "1"
+          },
+          "page": null,
+          "rank": 3,
+          "retrieval_source": "hybrid_rrf",
+          "score": -3.4457993507385254,
+          "section": "Weekly allowance",
+          "source": "data/synthetic_company/remote-work-policy-2026.md",
+          "source_type": "markdown",
+          "text": "Under the current 2026 policy , employees may work remotely two days per week .",
+          "title": "Remote Work Policy",
+          "version": "2026"
+        },
+        {
+          "chunk_id": "0f876e88-1c3a-403f-83aa-ac66033ed246",
+          "dense_score": 0.356838,
+          "document_id": "remote-work-policy",
+          "document_version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac",
+          "found_by_bm25": true,
+          "found_by_dense": true,
+          "fusion_score": 0.030798389,
+          "lexical_score": 1.238019,
+          "metadata": {
+            "chunk_overlap": 30,
+            "chunk_size": 180,
+            "chunk_strategy": "fixed_token",
+            "chunker_version": "1"
+          },
+          "page": null,
+          "rank": 4,
+          "retrieval_source": "hybrid_rrf",
+          "score": -3.8637614250183105,
+          "section": "Weekly allowance",
+          "source": "data/synthetic_company/remote-work-policy-2026.md",
+          "source_type": "markdown",
+          "text": "Under the 2025 policy , employees could work remotely three days per week .",
+          "title": "Remote Work Policy",
+          "version": "2025"
+        },
+        {
+          "chunk_id": "a6256f87-3055-4592-bbe0-9299878475b1",
+          "dense_score": 0.306514,
+          "document_id": "remote-work-policy",
+          "document_version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac",
+          "found_by_bm25": true,
+          "found_by_dense": true,
+          "fusion_score": 0.030536131,
+          "lexical_score": 1.384834,
+          "metadata": {
+            "chunk_overlap": 30,
+            "chunk_size": 180,
+            "chunk_strategy": "fixed_token",
+            "chunker_version": "1"
+          },
+          "page": null,
+          "rank": 5,
+          "retrieval_source": "hybrid_rrf",
+          "score": -7.163089752197266,
+          "section": "Review",
+          "source": "data/synthetic_company/remote-work-policy-2026.md",
+          "source_type": "markdown",
+          "text": "Managers reviewed remote-work schedules every quarter .",
+          "title": "Remote Work Policy",
+          "version": "2025"
+        },
+        {
+          "chunk_id": "49679d97-020f-4418-9430-4c296bc824b1",
+          "dense_score": null,
+          "document_id": "remote-work-policy",
+          "document_version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+          "found_by_bm25": true,
+          "found_by_dense": false,
+          "fusion_score": 0.015384615,
+          "lexical_score": 1.384834,
+          "metadata": {
+            "chunk_overlap": 30,
+            "chunk_size": 180,
+            "chunk_strategy": "fixed_token",
+            "chunker_version": "1"
+          },
+          "page": null,
+          "rank": 6,
+          "retrieval_source": "hybrid_rrf",
+          "score": -7.176514625549316,
+          "section": "Review",
+          "source": "data/synthetic_company/remote-work-policy-2026.md",
+          "source_type": "markdown",
+          "text": "Managers review remote-work schedules every month .",
+          "title": "Remote Work Policy",
+          "version": "2026"
+        },
+        {
+          "chunk_id": "12b0a957-4a2f-4c06-a8aa-55067b120c4b",
+          "dense_score": null,
+          "document_id": "security-incident-policy",
+          "document_version_id": "c4d49578-2eec-4051-a54b-addc12af0efa",
+          "found_by_bm25": true,
+          "found_by_dense": false,
+          "fusion_score": 0.016393443,
+          "lexical_score": 4.529152,
+          "metadata": {
+            "chunk_overlap": 30,
+            "chunk_size": 180,
+            "chunk_strategy": "fixed_token",
+            "chunker_version": "1"
+          },
+          "page": null,
+          "rank": 7,
+          "retrieval_source": "hybrid_rrf",
+          "score": -7.961673259735107,
+          "section": "Coordination",
+          "source": "data/synthetic_company/security-incident-policy-2026.md",
+          "source_type": "markdown",
+          "text": "The incident commander coordinates Engineering and Customer Support during an active severity-one incident .",
+          "title": "Security Incident Response Policy",
+          "version": "2026"
+        }
+      ],
+      "verifier_payload_sha256": "743610179fcac02c1a855991528b40c81b9b2c3da5f29d216434def067f8b9c0",
+      "version_resolution": {
+        "reason": "explicit version set resolved per document",
+        "selected_version_ids": [
+          "82e742b7-92c3-417a-b3f0-a350037b0bac",
+          "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+          "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588",
+          "c4d49578-2eec-4051-a54b-addc12af0efa"
+        ],
+        "selections_by_document": {
+          "remote-work-policy": [
+            "2025",
+            "2026"
+          ],
+          "security-incident-policy": [
+            "2025",
+            "2026"
+          ]
+        },
+        "status": "VERSION_SET_RESOLVED"
+      }
+    }
+  ],
+  "experiment_id": "TARGETED_FRESH_V2_035_V11",
+  "stage": "TARGETED_ONE"
+}

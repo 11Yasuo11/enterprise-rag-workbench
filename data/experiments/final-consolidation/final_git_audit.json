@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-08-21T09:38:29.214648+00:00",
+  "dirty_diff_sha256": "b863fab31ea693b8d3f66a59448a1cc30afc539381e4268cffa6d724774b6ca1",
+  "secrets": [],
+  "secrets_count": 0,
+  "huge_binaries_staged_risk": [
+    "artifacts/",
+    ".local/",
+    "*.zip"
+  ],
+  "gitignore_covers_bulk": true,
+  "gold_leakage_runtime_check": "no case-id hardcoding detected in V14 implemented_fix",
+  "pass": true
+}

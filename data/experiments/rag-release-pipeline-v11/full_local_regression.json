@@ -1,0 +1,21 @@
+{
+  "api_calls": 0,
+  "fresh_v2_035_local": "FIXED_LOCALLY",
+  "no_new_unsupported_deterministic": {
+    "failed": [],
+    "pass": true
+  },
+  "pass": true,
+  "prior_direct_no_unsupported_regression": {
+    "failed": [],
+    "pass": true
+  },
+  "ruff": "PASS",
+  "timestamp": "2026-08-21T01:11:59.039171+00:00",
+  "unit_suite": "PASS",
+  "v2_plan_traversal_60": {
+    "fail": [],
+    "ok": 60,
+    "pass": true
+  }
+}

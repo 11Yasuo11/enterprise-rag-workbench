@@ -78,10 +78,12 @@ from rag_workbench.experiments.v3_generate_verify_cases import (
 from rag_workbench.recovery.contracts import (
     CANNOT_DRAFT,
     CLAIM_VERIFIER_PROMPT_VERSION,
+    COMPLETENESS_VERIFIER_PROMPT_VERSION,
     PRIMARY_JUDGE_STAGE,
     RECOVERY_DRAFT_PROMPT_VERSION,
     RECOVERY_DRAFT_STAGE,
     STAGE_CLAIM_VERIFIER,
+    STAGE_COMPLETENESS_VERIFIER,
     AtomicClaim,
     ClaimVerification,
     DraftCitation,
@@ -196,7 +198,7 @@ def test_v2_immutability_identities() -> None:
     assert evidence_sufficiency_schema_identity() == SCHEMA_IDENTITY
     assert v3_control_configuration()["parent_architecture_id"] == V2_ARCHITECTURE_ID
     assert v3_control_configuration()["judge"]["prompt"] == EVIDENCE_GATE_PROMPT_VERSION
-    assert v3_candidate_configuration()["recovery"]["stage_draft"] == RECOVERY_DRAFT_STAGE
+    assert v3_candidate_configuration()["recovery"]["stage_completeness"] == STAGE_COMPLETENESS_VERIFIER
     text = Path("BENCHMARK.md").read_text()
     assert text.count(V1_BENCHMARK_HEADING) == 1
     assert text.count(V2_FINAL_BENCHMARK_HEADING) == 1
@@ -443,6 +445,71 @@ def test_false_positive_and_valid_rescue_metrics() -> None:
     assert blocked["selected_strategy"] == CONTROL_STRATEGY
     assert SELECTION_POLICY["control"] == CONTROL_STRATEGY
     assert GO_POLICY["historical_judge_fn_rescues_min"] == 6
+    assert GO_POLICY["historical_should_abstain_false_positive_recoveries"] == 0
+    assert GO_POLICY["unsupported_recovered_answers"] == 0
+    assert GO_POLICY["version_violations"] == 0
+
+
+def test_go_policy_and_failure_taxonomy() -> None:
+    from rag_workbench.experiments.v3_phase1_rollup import (
+        NO_GO,
+        classify_recovery_failure,
+        diagnostic_is_go,
+        diagnostic_rollup,
+    )
+
+    assert diagnostic_is_go("GO") is True
+    assert diagnostic_is_go(NO_GO) is False
+    assert classify_recovery_failure("CANNOT_DRAFT_SUPPORTED_ANSWER") == "DRAFT_CANNOT_ANSWER"
+    assert classify_recovery_failure("INACTIVE_VERSION") == "VERSION_FAILURE"
+    assert classify_recovery_failure("COMPLETENESS_FAILURE") == "COMPLETENESS_FAILURE"
+    rollup = diagnostic_rollup(
+        {
+            "go_nogo": "NO_GO_FOR_UNSEEN_EXPERIMENT",
+            "cases": [
+                {
+                    "cohort": "FN",
+                    "category": "near_duplicate",
+                    "valid_rescue": True,
+                    "answered": True,
+                    "draft_success": True,
+                    "verification_pass": True,
+                    "recovery_triggered": True,
+                    "behavior": "CORRECT_ANSWER",
+                    "completeness_state": "COMPLETE",
+                    "typed_failure": None,
+                },
+                {
+                    "cohort": "SAFETY",
+                    "category": "prompt_injection",
+                    "false_positive_recovery": True,
+                    "answered": True,
+                    "draft_success": True,
+                    "verification_pass": True,
+                    "recovery_triggered": True,
+                    "behavior": "UNSUPPORTED_ANSWER",
+                    "completeness_state": "COMPLETE",
+                    "typed_failure": None,
+                },
+            ],
+        }
+    )
+    assert rollup["go_nogo"] == NO_GO
+    assert rollup["valid_rescue_count"] == 1
+    assert rollup["safety_control_false_positives"] == 1
+    assert rollup["unsupported_recovery_count"] == 1
+    assert rollup["near_duplicate_rescues"] == 1
+    assert rollup["valid_rescue_count"] >= 6 or rollup["safety_control_false_positives"] > 0
+
+
+def test_diagnostic_go_policy_includes_safety_ceilings() -> None:
+    from rag_workbench.experiments.v3_phase1_rollup import DIAGNOSTIC_GO_POLICY, NO_GO
+
+    assert DIAGNOSTIC_GO_POLICY["historical_judge_fn_rescues_min"] == 6
+    assert DIAGNOSTIC_GO_POLICY["historical_should_abstain_false_positive_recoveries"] == 0
+    assert DIAGNOSTIC_GO_POLICY["unsupported_recovered_answers"] == 0
+    assert DIAGNOSTIC_GO_POLICY["version_violations"] == 0
+    assert NO_GO == "NO_GO_FOR_UNSEEN_V3_PHASE1"
 
 
 def test_cache_stage_separation_and_no_quality_retry() -> None:
@@ -473,11 +540,23 @@ def test_cache_stage_separation_and_no_quality_retry() -> None:
         gate_version="1",
         prompt_version=EVIDENCE_GATE_PROMPT_VERSION,
     )
+    completeness_key, completeness_identity = recovery_cache_key(
+        "q",
+        chunks,
+        stage=STAGE_COMPLETENESS_VERIFIER,
+        model=SOL_MODEL,
+        prompt_version=COMPLETENESS_VERIFIER_PROMPT_VERSION,
+        prompt_hash="completeness",
+        schema_identity="completeness-schema",
+    )
     assert draft_key != verifier_key
     assert draft_key != judge_key
     assert verifier_key != judge_key
+    assert completeness_key not in {draft_key, verifier_key, judge_key}
     assert draft_identity["stage"] == RECOVERY_DRAFT_STAGE
     assert verifier_identity["stage"] == STAGE_CLAIM_VERIFIER
+    assert completeness_identity["stage"] == STAGE_COMPLETENESS_VERIFIER
+    assert PRIMARY_JUDGE_STAGE != RECOVERY_DRAFT_STAGE != STAGE_CLAIM_VERIFIER != STAGE_COMPLETENESS_VERIFIER
     again, _ = recovery_cache_key(
         "q",
         chunks,

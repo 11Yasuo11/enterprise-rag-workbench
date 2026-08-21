@@ -1,0 +1,5 @@
+{
+  "dataset_created": false,
+  "reason": "Existing 60-case regression did not complete under RC_FINAL_PRE_API_V5.",
+  "status": "NOT_RUN_DUE_TO_REGRESSION_FAILURE"
+}

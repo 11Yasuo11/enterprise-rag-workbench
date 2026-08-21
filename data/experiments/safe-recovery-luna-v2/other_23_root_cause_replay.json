@@ -1,0 +1,2353 @@
+{
+  "kind": "DIAGNOSTIC RESULT",
+  "n": 23,
+  "summary": [
+    {
+      "root_cause": "RANKING_TOPK_INCOMPLETE",
+      "count": 23,
+      "pct_of_other": 100.0
+    }
+  ],
+  "cases": [
+    {
+      "query_id": "p5k_single_document_001",
+      "category": "single_document",
+      "required_fact_ids": [
+        "ENG-DEP-17"
+      ],
+      "required_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "568f5013-fc88-403d-b549-dfeb8b36abe7",
+        "680771c4-18c3-4bb3-8131-c35ed32b6b20"
+      ],
+      "evidence_exists_in_corpus": true,
+      "passed_acl": true,
+      "passed_tenant": true,
+      "passed_version": true,
+      "passed_region": true,
+      "candidate_pool_complete": true,
+      "top_k_complete": false,
+      "judge_input_complete": false,
+      "judge_decision": "NO",
+      "generator_status": "INCORRECT_ABSTENTION",
+      "final_root_cause": "RANKING_TOPK_INCOMPLETE",
+      "evidence": "required docs ['engineering-deployment-handbook'] missing from Top-5 after CE",
+      "ranks": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": 1,
+          "bm25_rank": 1,
+          "rrf_rank": 1,
+          "ce_rank": 6,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "568f5013-fc88-403d-b549-dfeb8b36abe7",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        }
+      ],
+      "top5_document_ids": [
+        "data-retention-standard",
+        "data-retention-standard",
+        "security-incident-policy",
+        "project-atlas-api",
+        "project-atlas-api"
+      ],
+      "diagnostic_only": true
+    },
+    {
+      "query_id": "p5k_single_document_006",
+      "category": "single_document",
+      "required_fact_ids": [
+        "ENG-DEP-17"
+      ],
+      "required_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "568f5013-fc88-403d-b549-dfeb8b36abe7",
+        "680771c4-18c3-4bb3-8131-c35ed32b6b20"
+      ],
+      "evidence_exists_in_corpus": true,
+      "passed_acl": true,
+      "passed_tenant": true,
+      "passed_version": true,
+      "passed_region": true,
+      "candidate_pool_complete": true,
+      "top_k_complete": false,
+      "judge_input_complete": false,
+      "judge_decision": "NO",
+      "generator_status": "INCORRECT_ABSTENTION",
+      "final_root_cause": "RANKING_TOPK_INCOMPLETE",
+      "evidence": "required docs ['engineering-deployment-handbook'] missing from Top-5 after CE",
+      "ranks": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": 1,
+          "bm25_rank": 1,
+          "rrf_rank": 1,
+          "ce_rank": 6,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "568f5013-fc88-403d-b549-dfeb8b36abe7",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        }
+      ],
+      "top5_document_ids": [
+        "data-retention-standard",
+        "data-retention-standard",
+        "security-incident-policy",
+        "project-atlas-api",
+        "project-atlas-api"
+      ],
+      "diagnostic_only": true
+    },
+    {
+      "query_id": "p5k_single_document_008",
+      "category": "single_document",
+      "required_fact_ids": [
+        "ENG-DEP-17"
+      ],
+      "required_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "568f5013-fc88-403d-b549-dfeb8b36abe7",
+        "680771c4-18c3-4bb3-8131-c35ed32b6b20"
+      ],
+      "evidence_exists_in_corpus": true,
+      "passed_acl": true,
+      "passed_tenant": true,
+      "passed_version": true,
+      "passed_region": true,
+      "candidate_pool_complete": true,
+      "top_k_complete": false,
+      "judge_input_complete": false,
+      "judge_decision": "NO",
+      "generator_status": "INCORRECT_ABSTENTION",
+      "final_root_cause": "RANKING_TOPK_INCOMPLETE",
+      "evidence": "required docs ['engineering-deployment-handbook'] missing from Top-5 after CE",
+      "ranks": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": 1,
+          "bm25_rank": 1,
+          "rrf_rank": 1,
+          "ce_rank": 6,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "568f5013-fc88-403d-b549-dfeb8b36abe7",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        }
+      ],
+      "top5_document_ids": [
+        "data-retention-standard",
+        "data-retention-standard",
+        "security-incident-policy",
+        "project-atlas-api",
+        "project-atlas-api"
+      ],
+      "diagnostic_only": true
+    },
+    {
+      "query_id": "p5k_three_document_027",
+      "category": "three_document",
+      "required_fact_ids": [
+        "ENG-DEP-17",
+        "four hours",
+        "two days per week"
+      ],
+      "required_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "568f5013-fc88-403d-b549-dfeb8b36abe7",
+        "ad94946f-9f88-4186-989a-71e0cd9287f1",
+        "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+        "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+        "a7b19d72-3cc9-4210-9145-d6bb2b57534f"
+      ],
+      "evidence_exists_in_corpus": true,
+      "passed_acl": true,
+      "passed_tenant": true,
+      "passed_version": true,
+      "passed_region": true,
+      "candidate_pool_complete": true,
+      "top_k_complete": false,
+      "judge_input_complete": false,
+      "judge_decision": "NO",
+      "generator_status": "INCORRECT_ABSTENTION",
+      "final_root_cause": "RANKING_TOPK_INCOMPLETE",
+      "evidence": "required docs ['engineering-deployment-handbook', 'operations-continuity-plan'] missing from Top-5 after CE",
+      "ranks": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": 3,
+          "bm25_rank": 3,
+          "rrf_rank": 3,
+          "ce_rank": 11,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": 2,
+          "bm25_rank": 2,
+          "rrf_rank": 1,
+          "ce_rank": 6,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "dense_rank": 8,
+          "bm25_rank": 8,
+          "rrf_rank": 7,
+          "ce_rank": 10,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "568f5013-fc88-403d-b549-dfeb8b36abe7",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "ad94946f-9f88-4186-989a-71e0cd9287f1",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "a7b19d72-3cc9-4210-9145-d6bb2b57534f",
+          "document_id": "remote-work-policy",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        }
+      ],
+      "top5_document_ids": [
+        "data-retention-standard",
+        "data-retention-standard",
+        "project-atlas-api",
+        "project-atlas-api",
+        "remote-work-policy"
+      ],
+      "diagnostic_only": true
+    },
+    {
+      "query_id": "p5k_three_document_028",
+      "category": "three_document",
+      "required_fact_ids": [
+        "ENG-DEP-17",
+        "four hours",
+        "two days per week"
+      ],
+      "required_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "568f5013-fc88-403d-b549-dfeb8b36abe7",
+        "ad94946f-9f88-4186-989a-71e0cd9287f1",
+        "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+        "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+        "a7b19d72-3cc9-4210-9145-d6bb2b57534f"
+      ],
+      "evidence_exists_in_corpus": true,
+      "passed_acl": true,
+      "passed_tenant": true,
+      "passed_version": true,
+      "passed_region": true,
+      "candidate_pool_complete": true,
+      "top_k_complete": false,
+      "judge_input_complete": false,
+      "judge_decision": "NO",
+      "generator_status": "INCORRECT_ABSTENTION",
+      "final_root_cause": "RANKING_TOPK_INCOMPLETE",
+      "evidence": "required docs ['engineering-deployment-handbook', 'operations-continuity-plan'] missing from Top-5 after CE",
+      "ranks": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": 3,
+          "bm25_rank": 3,
+          "rrf_rank": 3,
+          "ce_rank": 11,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": 2,
+          "bm25_rank": 2,
+          "rrf_rank": 1,
+          "ce_rank": 6,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "dense_rank": 8,
+          "bm25_rank": 8,
+          "rrf_rank": 7,
+          "ce_rank": 10,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "568f5013-fc88-403d-b549-dfeb8b36abe7",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "ad94946f-9f88-4186-989a-71e0cd9287f1",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "a7b19d72-3cc9-4210-9145-d6bb2b57534f",
+          "document_id": "remote-work-policy",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        }
+      ],
+      "top5_document_ids": [
+        "data-retention-standard",
+        "data-retention-standard",
+        "project-atlas-api",
+        "project-atlas-api",
+        "remote-work-policy"
+      ],
+      "diagnostic_only": true
+    },
+    {
+      "query_id": "p5k_three_document_029",
+      "category": "three_document",
+      "required_fact_ids": [
+        "ENG-DEP-17",
+        "four hours",
+        "two days per week"
+      ],
+      "required_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "568f5013-fc88-403d-b549-dfeb8b36abe7",
+        "ad94946f-9f88-4186-989a-71e0cd9287f1",
+        "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+        "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+        "a7b19d72-3cc9-4210-9145-d6bb2b57534f"
+      ],
+      "evidence_exists_in_corpus": true,
+      "passed_acl": true,
+      "passed_tenant": true,
+      "passed_version": true,
+      "passed_region": true,
+      "candidate_pool_complete": true,
+      "top_k_complete": false,
+      "judge_input_complete": false,
+      "judge_decision": "NO",
+      "generator_status": "INCORRECT_ABSTENTION",
+      "final_root_cause": "RANKING_TOPK_INCOMPLETE",
+      "evidence": "required docs ['engineering-deployment-handbook', 'operations-continuity-plan'] missing from Top-5 after CE",
+      "ranks": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": 3,
+          "bm25_rank": 3,
+          "rrf_rank": 3,
+          "ce_rank": 10,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": 2,
+          "bm25_rank": 2,
+          "rrf_rank": 1,
+          "ce_rank": 6,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "dense_rank": 7,
+          "bm25_rank": 8,
+          "rrf_rank": 6,
+          "ce_rank": 11,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "568f5013-fc88-403d-b549-dfeb8b36abe7",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "ad94946f-9f88-4186-989a-71e0cd9287f1",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "a7b19d72-3cc9-4210-9145-d6bb2b57534f",
+          "document_id": "remote-work-policy",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        }
+      ],
+      "top5_document_ids": [
+        "data-retention-standard",
+        "data-retention-standard",
+        "project-atlas-api",
+        "project-atlas-api",
+        "remote-work-policy"
+      ],
+      "diagnostic_only": true
+    },
+    {
+      "query_id": "p5k_three_document_030",
+      "category": "three_document",
+      "required_fact_ids": [
+        "ENG-DEP-17",
+        "four hours",
+        "two days per week"
+      ],
+      "required_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "568f5013-fc88-403d-b549-dfeb8b36abe7",
+        "ad94946f-9f88-4186-989a-71e0cd9287f1",
+        "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+        "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+        "a7b19d72-3cc9-4210-9145-d6bb2b57534f"
+      ],
+      "evidence_exists_in_corpus": true,
+      "passed_acl": true,
+      "passed_tenant": true,
+      "passed_version": true,
+      "passed_region": true,
+      "candidate_pool_complete": true,
+      "top_k_complete": false,
+      "judge_input_complete": false,
+      "judge_decision": "NO",
+      "generator_status": "INCORRECT_ABSTENTION",
+      "final_root_cause": "RANKING_TOPK_INCOMPLETE",
+      "evidence": "required docs ['engineering-deployment-handbook', 'remote-work-policy'] missing from Top-5 after CE",
+      "ranks": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": 3,
+          "bm25_rank": 3,
+          "rrf_rank": 3,
+          "ce_rank": 10,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": 2,
+          "bm25_rank": 2,
+          "rrf_rank": 1,
+          "ce_rank": 5,
+          "in_pool": true,
+          "in_top5": true
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "dense_rank": 7,
+          "bm25_rank": 8,
+          "rrf_rank": 6,
+          "ce_rank": 11,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "568f5013-fc88-403d-b549-dfeb8b36abe7",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "ad94946f-9f88-4186-989a-71e0cd9287f1",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "a7b19d72-3cc9-4210-9145-d6bb2b57534f",
+          "document_id": "remote-work-policy",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        }
+      ],
+      "top5_document_ids": [
+        "data-retention-standard",
+        "project-atlas-api",
+        "data-retention-standard",
+        "project-atlas-api",
+        "operations-continuity-plan"
+      ],
+      "diagnostic_only": true
+    },
+    {
+      "query_id": "p5k_three_document_031",
+      "category": "three_document",
+      "required_fact_ids": [
+        "ENG-DEP-17",
+        "four hours",
+        "two days per week"
+      ],
+      "required_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "568f5013-fc88-403d-b549-dfeb8b36abe7",
+        "ad94946f-9f88-4186-989a-71e0cd9287f1",
+        "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+        "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+        "a7b19d72-3cc9-4210-9145-d6bb2b57534f"
+      ],
+      "evidence_exists_in_corpus": true,
+      "passed_acl": true,
+      "passed_tenant": true,
+      "passed_version": true,
+      "passed_region": true,
+      "candidate_pool_complete": true,
+      "top_k_complete": false,
+      "judge_input_complete": false,
+      "judge_decision": "NO",
+      "generator_status": "INCORRECT_ABSTENTION",
+      "final_root_cause": "RANKING_TOPK_INCOMPLETE",
+      "evidence": "required docs ['engineering-deployment-handbook', 'remote-work-policy'] missing from Top-5 after CE",
+      "ranks": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": 3,
+          "bm25_rank": 3,
+          "rrf_rank": 3,
+          "ce_rank": 10,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": 2,
+          "bm25_rank": 2,
+          "rrf_rank": 1,
+          "ce_rank": 5,
+          "in_pool": true,
+          "in_top5": true
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "dense_rank": 8,
+          "bm25_rank": 8,
+          "rrf_rank": 7,
+          "ce_rank": 11,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "568f5013-fc88-403d-b549-dfeb8b36abe7",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "ad94946f-9f88-4186-989a-71e0cd9287f1",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "a7b19d72-3cc9-4210-9145-d6bb2b57534f",
+          "document_id": "remote-work-policy",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        }
+      ],
+      "top5_document_ids": [
+        "data-retention-standard",
+        "project-atlas-api",
+        "data-retention-standard",
+        "project-atlas-api",
+        "operations-continuity-plan"
+      ],
+      "diagnostic_only": true
+    },
+    {
+      "query_id": "p5k_three_document_032",
+      "category": "three_document",
+      "required_fact_ids": [
+        "ENG-DEP-17",
+        "four hours",
+        "two days per week"
+      ],
+      "required_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "568f5013-fc88-403d-b549-dfeb8b36abe7",
+        "ad94946f-9f88-4186-989a-71e0cd9287f1",
+        "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+        "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+        "a7b19d72-3cc9-4210-9145-d6bb2b57534f"
+      ],
+      "evidence_exists_in_corpus": true,
+      "passed_acl": true,
+      "passed_tenant": true,
+      "passed_version": true,
+      "passed_region": true,
+      "candidate_pool_complete": true,
+      "top_k_complete": false,
+      "judge_input_complete": false,
+      "judge_decision": "NO",
+      "generator_status": "INCORRECT_ABSTENTION",
+      "final_root_cause": "RANKING_TOPK_INCOMPLETE",
+      "evidence": "required docs ['engineering-deployment-handbook', 'remote-work-policy'] missing from Top-5 after CE",
+      "ranks": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": 3,
+          "bm25_rank": 3,
+          "rrf_rank": 3,
+          "ce_rank": 10,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": 2,
+          "bm25_rank": 2,
+          "rrf_rank": 1,
+          "ce_rank": 5,
+          "in_pool": true,
+          "in_top5": true
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "dense_rank": 8,
+          "bm25_rank": 8,
+          "rrf_rank": 7,
+          "ce_rank": 11,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "568f5013-fc88-403d-b549-dfeb8b36abe7",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "ad94946f-9f88-4186-989a-71e0cd9287f1",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "a7b19d72-3cc9-4210-9145-d6bb2b57534f",
+          "document_id": "remote-work-policy",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        }
+      ],
+      "top5_document_ids": [
+        "data-retention-standard",
+        "project-atlas-api",
+        "data-retention-standard",
+        "project-atlas-api",
+        "operations-continuity-plan"
+      ],
+      "diagnostic_only": true
+    },
+    {
+      "query_id": "p5k_three_document_033",
+      "category": "three_document",
+      "required_fact_ids": [
+        "ENG-DEP-17",
+        "four hours",
+        "two days per week"
+      ],
+      "required_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "568f5013-fc88-403d-b549-dfeb8b36abe7",
+        "ad94946f-9f88-4186-989a-71e0cd9287f1",
+        "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+        "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+        "a7b19d72-3cc9-4210-9145-d6bb2b57534f"
+      ],
+      "evidence_exists_in_corpus": true,
+      "passed_acl": true,
+      "passed_tenant": true,
+      "passed_version": true,
+      "passed_region": true,
+      "candidate_pool_complete": true,
+      "top_k_complete": false,
+      "judge_input_complete": false,
+      "judge_decision": "NO",
+      "generator_status": "INCORRECT_ABSTENTION",
+      "final_root_cause": "RANKING_TOPK_INCOMPLETE",
+      "evidence": "required docs ['engineering-deployment-handbook', 'remote-work-policy'] missing from Top-5 after CE",
+      "ranks": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": 3,
+          "bm25_rank": 3,
+          "rrf_rank": 3,
+          "ce_rank": 10,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": 2,
+          "bm25_rank": 2,
+          "rrf_rank": 1,
+          "ce_rank": 5,
+          "in_pool": true,
+          "in_top5": true
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "dense_rank": 7,
+          "bm25_rank": 8,
+          "rrf_rank": 6,
+          "ce_rank": 11,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "568f5013-fc88-403d-b549-dfeb8b36abe7",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "ad94946f-9f88-4186-989a-71e0cd9287f1",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "a7b19d72-3cc9-4210-9145-d6bb2b57534f",
+          "document_id": "remote-work-policy",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        }
+      ],
+      "top5_document_ids": [
+        "data-retention-standard",
+        "project-atlas-api",
+        "data-retention-standard",
+        "project-atlas-api",
+        "operations-continuity-plan"
+      ],
+      "diagnostic_only": true
+    },
+    {
+      "query_id": "p5k_three_document_034",
+      "category": "three_document",
+      "required_fact_ids": [
+        "ENG-DEP-17",
+        "four hours",
+        "two days per week"
+      ],
+      "required_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "568f5013-fc88-403d-b549-dfeb8b36abe7",
+        "ad94946f-9f88-4186-989a-71e0cd9287f1",
+        "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+        "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+        "a7b19d72-3cc9-4210-9145-d6bb2b57534f"
+      ],
+      "evidence_exists_in_corpus": true,
+      "passed_acl": true,
+      "passed_tenant": true,
+      "passed_version": true,
+      "passed_region": true,
+      "candidate_pool_complete": true,
+      "top_k_complete": false,
+      "judge_input_complete": false,
+      "judge_decision": "NO",
+      "generator_status": "INCORRECT_ABSTENTION",
+      "final_root_cause": "RANKING_TOPK_INCOMPLETE",
+      "evidence": "required docs ['engineering-deployment-handbook', 'operations-continuity-plan'] missing from Top-5 after CE",
+      "ranks": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": 3,
+          "bm25_rank": 3,
+          "rrf_rank": 3,
+          "ce_rank": 11,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": 2,
+          "bm25_rank": 2,
+          "rrf_rank": 1,
+          "ce_rank": 6,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "dense_rank": 7,
+          "bm25_rank": 8,
+          "rrf_rank": 6,
+          "ce_rank": 12,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "568f5013-fc88-403d-b549-dfeb8b36abe7",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "ad94946f-9f88-4186-989a-71e0cd9287f1",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "a7b19d72-3cc9-4210-9145-d6bb2b57534f",
+          "document_id": "remote-work-policy",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        }
+      ],
+      "top5_document_ids": [
+        "data-retention-standard",
+        "project-atlas-api",
+        "data-retention-standard",
+        "project-atlas-api",
+        "remote-work-policy"
+      ],
+      "diagnostic_only": true
+    },
+    {
+      "query_id": "p5k_three_document_035",
+      "category": "three_document",
+      "required_fact_ids": [
+        "ENG-DEP-17",
+        "four hours",
+        "two days per week"
+      ],
+      "required_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "568f5013-fc88-403d-b549-dfeb8b36abe7",
+        "ad94946f-9f88-4186-989a-71e0cd9287f1",
+        "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+        "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+        "a7b19d72-3cc9-4210-9145-d6bb2b57534f"
+      ],
+      "evidence_exists_in_corpus": true,
+      "passed_acl": true,
+      "passed_tenant": true,
+      "passed_version": true,
+      "passed_region": true,
+      "candidate_pool_complete": true,
+      "top_k_complete": false,
+      "judge_input_complete": false,
+      "judge_decision": "NO",
+      "generator_status": "INCORRECT_ABSTENTION",
+      "final_root_cause": "RANKING_TOPK_INCOMPLETE",
+      "evidence": "required docs ['engineering-deployment-handbook', 'remote-work-policy'] missing from Top-5 after CE",
+      "ranks": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": 3,
+          "bm25_rank": 3,
+          "rrf_rank": 3,
+          "ce_rank": 11,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": 2,
+          "bm25_rank": 2,
+          "rrf_rank": 1,
+          "ce_rank": 5,
+          "in_pool": true,
+          "in_top5": true
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "dense_rank": 8,
+          "bm25_rank": 8,
+          "rrf_rank": 7,
+          "ce_rank": 12,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "568f5013-fc88-403d-b549-dfeb8b36abe7",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "ad94946f-9f88-4186-989a-71e0cd9287f1",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "a7b19d72-3cc9-4210-9145-d6bb2b57534f",
+          "document_id": "remote-work-policy",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        }
+      ],
+      "top5_document_ids": [
+        "data-retention-standard",
+        "project-atlas-api",
+        "data-retention-standard",
+        "project-atlas-api",
+        "operations-continuity-plan"
+      ],
+      "diagnostic_only": true
+    },
+    {
+      "query_id": "p5k_three_document_036",
+      "category": "three_document",
+      "required_fact_ids": [
+        "ENG-DEP-17",
+        "four hours",
+        "two days per week"
+      ],
+      "required_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "568f5013-fc88-403d-b549-dfeb8b36abe7",
+        "ad94946f-9f88-4186-989a-71e0cd9287f1",
+        "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+        "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+        "a7b19d72-3cc9-4210-9145-d6bb2b57534f"
+      ],
+      "evidence_exists_in_corpus": true,
+      "passed_acl": true,
+      "passed_tenant": true,
+      "passed_version": true,
+      "passed_region": true,
+      "candidate_pool_complete": true,
+      "top_k_complete": false,
+      "judge_input_complete": false,
+      "judge_decision": "NO",
+      "generator_status": "INCORRECT_ABSTENTION",
+      "final_root_cause": "RANKING_TOPK_INCOMPLETE",
+      "evidence": "required docs ['engineering-deployment-handbook', 'remote-work-policy'] missing from Top-5 after CE",
+      "ranks": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": 3,
+          "bm25_rank": 3,
+          "rrf_rank": 3,
+          "ce_rank": 11,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": 2,
+          "bm25_rank": 2,
+          "rrf_rank": 1,
+          "ce_rank": 5,
+          "in_pool": true,
+          "in_top5": true
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "dense_rank": 8,
+          "bm25_rank": 8,
+          "rrf_rank": 7,
+          "ce_rank": 13,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "568f5013-fc88-403d-b549-dfeb8b36abe7",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "ad94946f-9f88-4186-989a-71e0cd9287f1",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "a7b19d72-3cc9-4210-9145-d6bb2b57534f",
+          "document_id": "remote-work-policy",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        }
+      ],
+      "top5_document_ids": [
+        "data-retention-standard",
+        "project-atlas-api",
+        "data-retention-standard",
+        "project-atlas-api",
+        "operations-continuity-plan"
+      ],
+      "diagnostic_only": true
+    },
+    {
+      "query_id": "p5k_three_document_037",
+      "category": "three_document",
+      "required_fact_ids": [
+        "ENG-DEP-17",
+        "four hours",
+        "two days per week"
+      ],
+      "required_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "568f5013-fc88-403d-b549-dfeb8b36abe7",
+        "ad94946f-9f88-4186-989a-71e0cd9287f1",
+        "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+        "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+        "a7b19d72-3cc9-4210-9145-d6bb2b57534f"
+      ],
+      "evidence_exists_in_corpus": true,
+      "passed_acl": true,
+      "passed_tenant": true,
+      "passed_version": true,
+      "passed_region": true,
+      "candidate_pool_complete": true,
+      "top_k_complete": false,
+      "judge_input_complete": false,
+      "judge_decision": "NO",
+      "generator_status": "INCORRECT_ABSTENTION",
+      "final_root_cause": "RANKING_TOPK_INCOMPLETE",
+      "evidence": "required docs ['engineering-deployment-handbook', 'remote-work-policy'] missing from Top-5 after CE",
+      "ranks": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": 3,
+          "bm25_rank": 3,
+          "rrf_rank": 3,
+          "ce_rank": 11,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": 2,
+          "bm25_rank": 2,
+          "rrf_rank": 1,
+          "ce_rank": 5,
+          "in_pool": true,
+          "in_top5": true
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "dense_rank": 9,
+          "bm25_rank": 8,
+          "rrf_rank": 7,
+          "ce_rank": 12,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "568f5013-fc88-403d-b549-dfeb8b36abe7",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "ad94946f-9f88-4186-989a-71e0cd9287f1",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "a7b19d72-3cc9-4210-9145-d6bb2b57534f",
+          "document_id": "remote-work-policy",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        }
+      ],
+      "top5_document_ids": [
+        "data-retention-standard",
+        "project-atlas-api",
+        "data-retention-standard",
+        "project-atlas-api",
+        "operations-continuity-plan"
+      ],
+      "diagnostic_only": true
+    },
+    {
+      "query_id": "p5k_three_document_038",
+      "category": "three_document",
+      "required_fact_ids": [
+        "ENG-DEP-17",
+        "four hours",
+        "two days per week"
+      ],
+      "required_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "568f5013-fc88-403d-b549-dfeb8b36abe7",
+        "ad94946f-9f88-4186-989a-71e0cd9287f1",
+        "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+        "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+        "a7b19d72-3cc9-4210-9145-d6bb2b57534f"
+      ],
+      "evidence_exists_in_corpus": true,
+      "passed_acl": true,
+      "passed_tenant": true,
+      "passed_version": true,
+      "passed_region": true,
+      "candidate_pool_complete": true,
+      "top_k_complete": false,
+      "judge_input_complete": false,
+      "judge_decision": "NO",
+      "generator_status": "INCORRECT_ABSTENTION",
+      "final_root_cause": "RANKING_TOPK_INCOMPLETE",
+      "evidence": "required docs ['engineering-deployment-handbook', 'remote-work-policy'] missing from Top-5 after CE",
+      "ranks": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": 3,
+          "bm25_rank": 3,
+          "rrf_rank": 3,
+          "ce_rank": 11,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": 2,
+          "bm25_rank": 2,
+          "rrf_rank": 1,
+          "ce_rank": 5,
+          "in_pool": true,
+          "in_top5": true
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "dense_rank": 7,
+          "bm25_rank": 8,
+          "rrf_rank": 6,
+          "ce_rank": 12,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "568f5013-fc88-403d-b549-dfeb8b36abe7",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "ad94946f-9f88-4186-989a-71e0cd9287f1",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "a7b19d72-3cc9-4210-9145-d6bb2b57534f",
+          "document_id": "remote-work-policy",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        }
+      ],
+      "top5_document_ids": [
+        "data-retention-standard",
+        "project-atlas-api",
+        "data-retention-standard",
+        "project-atlas-api",
+        "operations-continuity-plan"
+      ],
+      "diagnostic_only": true
+    },
+    {
+      "query_id": "p5k_three_document_039",
+      "category": "three_document",
+      "required_fact_ids": [
+        "ENG-DEP-17",
+        "four hours",
+        "two days per week"
+      ],
+      "required_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "568f5013-fc88-403d-b549-dfeb8b36abe7",
+        "ad94946f-9f88-4186-989a-71e0cd9287f1",
+        "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+        "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+        "a7b19d72-3cc9-4210-9145-d6bb2b57534f"
+      ],
+      "evidence_exists_in_corpus": true,
+      "passed_acl": true,
+      "passed_tenant": true,
+      "passed_version": true,
+      "passed_region": true,
+      "candidate_pool_complete": true,
+      "top_k_complete": false,
+      "judge_input_complete": false,
+      "judge_decision": "NO",
+      "generator_status": "INCORRECT_ABSTENTION",
+      "final_root_cause": "RANKING_TOPK_INCOMPLETE",
+      "evidence": "required docs ['engineering-deployment-handbook', 'remote-work-policy'] missing from Top-5 after CE",
+      "ranks": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": 3,
+          "bm25_rank": 3,
+          "rrf_rank": 3,
+          "ce_rank": 10,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": 2,
+          "bm25_rank": 2,
+          "rrf_rank": 1,
+          "ce_rank": 5,
+          "in_pool": true,
+          "in_top5": true
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "dense_rank": 8,
+          "bm25_rank": 8,
+          "rrf_rank": 7,
+          "ce_rank": 11,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "568f5013-fc88-403d-b549-dfeb8b36abe7",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "ad94946f-9f88-4186-989a-71e0cd9287f1",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "a7b19d72-3cc9-4210-9145-d6bb2b57534f",
+          "document_id": "remote-work-policy",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        }
+      ],
+      "top5_document_ids": [
+        "data-retention-standard",
+        "project-atlas-api",
+        "data-retention-standard",
+        "project-atlas-api",
+        "operations-continuity-plan"
+      ],
+      "diagnostic_only": true
+    },
+    {
+      "query_id": "p5k_three_document_040",
+      "category": "three_document",
+      "required_fact_ids": [
+        "ENG-DEP-17",
+        "four hours",
+        "two days per week"
+      ],
+      "required_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "568f5013-fc88-403d-b549-dfeb8b36abe7",
+        "ad94946f-9f88-4186-989a-71e0cd9287f1",
+        "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+        "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+        "a7b19d72-3cc9-4210-9145-d6bb2b57534f"
+      ],
+      "evidence_exists_in_corpus": true,
+      "passed_acl": true,
+      "passed_tenant": true,
+      "passed_version": true,
+      "passed_region": true,
+      "candidate_pool_complete": true,
+      "top_k_complete": false,
+      "judge_input_complete": false,
+      "judge_decision": "NO",
+      "generator_status": "INCORRECT_ABSTENTION",
+      "final_root_cause": "RANKING_TOPK_INCOMPLETE",
+      "evidence": "required docs ['engineering-deployment-handbook', 'remote-work-policy'] missing from Top-5 after CE",
+      "ranks": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": 3,
+          "bm25_rank": 3,
+          "rrf_rank": 3,
+          "ce_rank": 10,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": 2,
+          "bm25_rank": 2,
+          "rrf_rank": 1,
+          "ce_rank": 5,
+          "in_pool": true,
+          "in_top5": true
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "dense_rank": 7,
+          "bm25_rank": 8,
+          "rrf_rank": 6,
+          "ce_rank": 11,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "568f5013-fc88-403d-b549-dfeb8b36abe7",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "ad94946f-9f88-4186-989a-71e0cd9287f1",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "a7b19d72-3cc9-4210-9145-d6bb2b57534f",
+          "document_id": "remote-work-policy",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        }
+      ],
+      "top5_document_ids": [
+        "data-retention-standard",
+        "data-retention-standard",
+        "project-atlas-api",
+        "project-atlas-api",
+        "operations-continuity-plan"
+      ],
+      "diagnostic_only": true
+    },
+    {
+      "query_id": "p5k_three_document_041",
+      "category": "three_document",
+      "required_fact_ids": [
+        "ENG-DEP-17",
+        "four hours",
+        "two days per week"
+      ],
+      "required_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "568f5013-fc88-403d-b549-dfeb8b36abe7",
+        "ad94946f-9f88-4186-989a-71e0cd9287f1",
+        "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+        "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+        "a7b19d72-3cc9-4210-9145-d6bb2b57534f"
+      ],
+      "evidence_exists_in_corpus": true,
+      "passed_acl": true,
+      "passed_tenant": true,
+      "passed_version": true,
+      "passed_region": true,
+      "candidate_pool_complete": true,
+      "top_k_complete": false,
+      "judge_input_complete": false,
+      "judge_decision": "NO",
+      "generator_status": "INCORRECT_ABSTENTION",
+      "final_root_cause": "RANKING_TOPK_INCOMPLETE",
+      "evidence": "required docs ['engineering-deployment-handbook', 'remote-work-policy'] missing from Top-5 after CE",
+      "ranks": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": 3,
+          "bm25_rank": 3,
+          "rrf_rank": 3,
+          "ce_rank": 10,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": 2,
+          "bm25_rank": 2,
+          "rrf_rank": 1,
+          "ce_rank": 5,
+          "in_pool": true,
+          "in_top5": true
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "dense_rank": 7,
+          "bm25_rank": 8,
+          "rrf_rank": 6,
+          "ce_rank": 11,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "568f5013-fc88-403d-b549-dfeb8b36abe7",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "ad94946f-9f88-4186-989a-71e0cd9287f1",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "a7b19d72-3cc9-4210-9145-d6bb2b57534f",
+          "document_id": "remote-work-policy",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        }
+      ],
+      "top5_document_ids": [
+        "data-retention-standard",
+        "data-retention-standard",
+        "project-atlas-api",
+        "project-atlas-api",
+        "operations-continuity-plan"
+      ],
+      "diagnostic_only": true
+    },
+    {
+      "query_id": "p5k_three_document_042",
+      "category": "three_document",
+      "required_fact_ids": [
+        "ENG-DEP-17",
+        "four hours",
+        "two days per week"
+      ],
+      "required_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "568f5013-fc88-403d-b549-dfeb8b36abe7",
+        "ad94946f-9f88-4186-989a-71e0cd9287f1",
+        "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+        "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+        "a7b19d72-3cc9-4210-9145-d6bb2b57534f"
+      ],
+      "evidence_exists_in_corpus": true,
+      "passed_acl": true,
+      "passed_tenant": true,
+      "passed_version": true,
+      "passed_region": true,
+      "candidate_pool_complete": true,
+      "top_k_complete": false,
+      "judge_input_complete": false,
+      "judge_decision": "NO",
+      "generator_status": "INCORRECT_ABSTENTION",
+      "final_root_cause": "RANKING_TOPK_INCOMPLETE",
+      "evidence": "required docs ['engineering-deployment-handbook', 'remote-work-policy'] missing from Top-5 after CE",
+      "ranks": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": 3,
+          "bm25_rank": 3,
+          "rrf_rank": 3,
+          "ce_rank": 10,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": 2,
+          "bm25_rank": 2,
+          "rrf_rank": 1,
+          "ce_rank": 5,
+          "in_pool": true,
+          "in_top5": true
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "dense_rank": 8,
+          "bm25_rank": 8,
+          "rrf_rank": 7,
+          "ce_rank": 11,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "568f5013-fc88-403d-b549-dfeb8b36abe7",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "ad94946f-9f88-4186-989a-71e0cd9287f1",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "680771c4-18c3-4bb3-8131-c35ed32b6b20",
+          "document_id": "engineering-deployment-handbook",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "eb2b0021-b7a3-4dae-83d0-86c1c35b667f",
+          "document_id": "operations-continuity-plan",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "a7b19d72-3cc9-4210-9145-d6bb2b57534f",
+          "document_id": "remote-work-policy",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        }
+      ],
+      "top5_document_ids": [
+        "data-retention-standard",
+        "data-retention-standard",
+        "project-atlas-api",
+        "project-atlas-api",
+        "operations-continuity-plan"
+      ],
+      "diagnostic_only": true
+    },
+    {
+      "query_id": "p5k_version_sensitive_079",
+      "category": "version_sensitive",
+      "required_fact_ids": [
+        "OPS-REC-E17"
+      ],
+      "required_chunk_ids": [
+        "7e6c9c91-51ec-4146-8463-ee975a64232a",
+        "12138c02-3bc9-456a-83c5-68c47377d78b"
+      ],
+      "evidence_exists_in_corpus": true,
+      "passed_acl": true,
+      "passed_tenant": true,
+      "passed_version": true,
+      "passed_region": true,
+      "candidate_pool_complete": true,
+      "top_k_complete": false,
+      "judge_input_complete": false,
+      "judge_decision": "NO",
+      "generator_status": "INCORRECT_ABSTENTION",
+      "final_root_cause": "RANKING_TOPK_INCOMPLETE",
+      "evidence": "required docs ['recovery-runbook-east'] missing from Top-5 after CE",
+      "ranks": [
+        {
+          "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+          "document_id": "recovery-runbook-east",
+          "dense_rank": 3,
+          "bm25_rank": 1,
+          "rrf_rank": 1,
+          "ce_rank": 6,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "12138c02-3bc9-456a-83c5-68c47377d78b",
+          "document_id": "recovery-runbook-east",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        }
+      ],
+      "top5_document_ids": [
+        "data-retention-standard",
+        "data-retention-standard",
+        "project-atlas-api",
+        "project-atlas-api",
+        "security-incident-policy"
+      ],
+      "diagnostic_only": true
+    },
+    {
+      "query_id": "p5k_version_sensitive_081",
+      "category": "version_sensitive",
+      "required_fact_ids": [
+        "OPS-REC-E17"
+      ],
+      "required_chunk_ids": [
+        "7e6c9c91-51ec-4146-8463-ee975a64232a",
+        "12138c02-3bc9-456a-83c5-68c47377d78b"
+      ],
+      "evidence_exists_in_corpus": true,
+      "passed_acl": true,
+      "passed_tenant": true,
+      "passed_version": true,
+      "passed_region": true,
+      "candidate_pool_complete": true,
+      "top_k_complete": false,
+      "judge_input_complete": false,
+      "judge_decision": "NO",
+      "generator_status": "INCORRECT_ABSTENTION",
+      "final_root_cause": "RANKING_TOPK_INCOMPLETE",
+      "evidence": "required docs ['recovery-runbook-east'] missing from Top-5 after CE",
+      "ranks": [
+        {
+          "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+          "document_id": "recovery-runbook-east",
+          "dense_rank": 4,
+          "bm25_rank": 1,
+          "rrf_rank": 1,
+          "ce_rank": 6,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "12138c02-3bc9-456a-83c5-68c47377d78b",
+          "document_id": "recovery-runbook-east",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        }
+      ],
+      "top5_document_ids": [
+        "data-retention-standard",
+        "data-retention-standard",
+        "project-atlas-api",
+        "project-atlas-api",
+        "security-incident-policy"
+      ],
+      "diagnostic_only": true
+    },
+    {
+      "query_id": "p5k_version_sensitive_083",
+      "category": "version_sensitive",
+      "required_fact_ids": [
+        "OPS-REC-E17"
+      ],
+      "required_chunk_ids": [
+        "7e6c9c91-51ec-4146-8463-ee975a64232a",
+        "12138c02-3bc9-456a-83c5-68c47377d78b"
+      ],
+      "evidence_exists_in_corpus": true,
+      "passed_acl": true,
+      "passed_tenant": true,
+      "passed_version": true,
+      "passed_region": true,
+      "candidate_pool_complete": true,
+      "top_k_complete": false,
+      "judge_input_complete": false,
+      "judge_decision": "NO",
+      "generator_status": "INCORRECT_ABSTENTION",
+      "final_root_cause": "RANKING_TOPK_INCOMPLETE",
+      "evidence": "required docs ['recovery-runbook-east'] missing from Top-5 after CE",
+      "ranks": [
+        {
+          "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+          "document_id": "recovery-runbook-east",
+          "dense_rank": 4,
+          "bm25_rank": 1,
+          "rrf_rank": 1,
+          "ce_rank": 6,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "12138c02-3bc9-456a-83c5-68c47377d78b",
+          "document_id": "recovery-runbook-east",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        }
+      ],
+      "top5_document_ids": [
+        "data-retention-standard",
+        "data-retention-standard",
+        "project-atlas-api",
+        "project-atlas-api",
+        "security-incident-policy"
+      ],
+      "diagnostic_only": true
+    },
+    {
+      "query_id": "p5k_version_sensitive_085",
+      "category": "version_sensitive",
+      "required_fact_ids": [
+        "OPS-REC-E17"
+      ],
+      "required_chunk_ids": [
+        "7e6c9c91-51ec-4146-8463-ee975a64232a",
+        "12138c02-3bc9-456a-83c5-68c47377d78b"
+      ],
+      "evidence_exists_in_corpus": true,
+      "passed_acl": true,
+      "passed_tenant": true,
+      "passed_version": true,
+      "passed_region": true,
+      "candidate_pool_complete": true,
+      "top_k_complete": false,
+      "judge_input_complete": false,
+      "judge_decision": "NO",
+      "generator_status": "INCORRECT_ABSTENTION",
+      "final_root_cause": "RANKING_TOPK_INCOMPLETE",
+      "evidence": "required docs ['recovery-runbook-east'] missing from Top-5 after CE",
+      "ranks": [
+        {
+          "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+          "document_id": "recovery-runbook-east",
+          "dense_rank": 4,
+          "bm25_rank": 1,
+          "rrf_rank": 1,
+          "ce_rank": 6,
+          "in_pool": true,
+          "in_top5": false
+        },
+        {
+          "chunk_id": "12138c02-3bc9-456a-83c5-68c47377d78b",
+          "document_id": "recovery-runbook-east",
+          "dense_rank": null,
+          "bm25_rank": null,
+          "rrf_rank": null,
+          "ce_rank": null,
+          "in_pool": false,
+          "in_top5": false
+        }
+      ],
+      "top5_document_ids": [
+        "data-retention-standard",
+        "data-retention-standard",
+        "project-atlas-api",
+        "project-atlas-api",
+        "security-incident-policy"
+      ],
+      "diagnostic_only": true
+    }
+  ]
+}

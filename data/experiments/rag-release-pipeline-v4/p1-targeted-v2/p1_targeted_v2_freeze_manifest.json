@@ -1,0 +1,6 @@
+{
+  "canonical_manifest": "freeze_manifest.json",
+  "experiment_id": "P1_VERSION_TEMPORAL_TARGETED_REAL_API_CONFIRMATION_V2",
+  "frozen": true,
+  "note": "The complete source/config/model/prompt/scorer/safety hashes are in the canonical manifest beside this pointer."
+}

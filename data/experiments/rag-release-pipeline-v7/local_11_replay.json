@@ -1,0 +1,538 @@
+{
+  "api_calls": 0,
+  "case_count": 11,
+  "cases": [
+    {
+      "all_requirement_packets_nonempty": true,
+      "case_id": "fresh_v2_003",
+      "classification": "STRUCTURALLY_FIXED_REAL_API_REQUIRED",
+      "new_qualifiers": [],
+      "new_requirements": [
+        "the group that keeps the Atlas interface guide operational"
+      ],
+      "new_temporal_scope": {
+        "document_scope": [],
+        "requested_versions": [],
+        "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT"
+      },
+      "new_version_resolution": {
+        "reason": "explicit version set resolved per document",
+        "selected_version_ids": [
+          "cf5dfd1d-b744-48f1-bfde-41a198d86f35",
+          "e431da5b-ef31-440f-a5a4-80a35fb97e24"
+        ],
+        "selections_by_document": {
+          "project-atlas-api": [
+            "3.0"
+          ],
+          "project-atlas-launch": [
+            "1.0"
+          ]
+        },
+        "status": "VERSION_SET_RESOLVED"
+      },
+      "packet_candidate_counts": {
+        "R1": 4
+      },
+      "plan_changed": false,
+      "required_evidence_complete_in_top15": true,
+      "required_marker_ranks": {
+        "Platform Interfaces": [
+          1
+        ]
+      }
+    },
+    {
+      "all_requirement_packets_nonempty": true,
+      "case_id": "fresh_v2_011",
+      "classification": "STRUCTURALLY_FIXED_REAL_API_REQUIRED",
+      "new_qualifiers": [],
+      "new_requirements": [
+        "Create an ownership pair for the Atlas launch",
+        "the business-continuity plan"
+      ],
+      "new_temporal_scope": {
+        "document_scope": [],
+        "requested_versions": [],
+        "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT"
+      },
+      "new_version_resolution": {
+        "reason": "explicit version set resolved per document",
+        "selected_version_ids": [
+          "2e316085-67fe-4606-97aa-55577ff89186",
+          "e431da5b-ef31-440f-a5a4-80a35fb97e24"
+        ],
+        "selections_by_document": {
+          "operations-continuity-plan": [
+            "4.0"
+          ],
+          "project-atlas-launch": [
+            "1.0"
+          ]
+        },
+        "status": "VERSION_SET_RESOLVED"
+      },
+      "packet_candidate_counts": {
+        "R1": 5,
+        "R2": 2
+      },
+      "plan_changed": false,
+      "required_evidence_complete_in_top15": true,
+      "required_marker_ranks": {
+        "Operations": [
+          1,
+          2,
+          6,
+          7,
+          14
+        ],
+        "Product Operations": [
+          1
+        ]
+      }
+    },
+    {
+      "all_requirement_packets_nonempty": true,
+      "case_id": "fresh_v2_013",
+      "classification": "STRUCTURALLY_FIXED_REAL_API_REQUIRED",
+      "new_qualifiers": [],
+      "new_requirements": [
+        "the expense exception reviewer",
+        "the team paged after an outage item opens"
+      ],
+      "new_temporal_scope": {
+        "document_scope": [],
+        "requested_versions": [],
+        "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT"
+      },
+      "new_version_resolution": {
+        "reason": "unique valid candidate",
+        "selected_version_ids": [
+          "4c469613-1997-4632-9a1e-81c37f786041"
+        ],
+        "selections_by_document": {
+          "finance-expense-policy": [
+            "5.1"
+          ]
+        },
+        "status": "VERSION_RESOLVED"
+      },
+      "packet_candidate_counts": {
+        "R1": 2,
+        "R2": 2
+      },
+      "plan_changed": true,
+      "required_evidence_complete_in_top15": true,
+      "required_marker_ranks": {
+        "Finance Operations": [
+          2
+        ],
+        "Operations": [
+          1,
+          2,
+          4,
+          10
+        ]
+      }
+    },
+    {
+      "all_requirement_packets_nonempty": true,
+      "case_id": "fresh_v2_017",
+      "classification": "STRUCTURALLY_FIXED_REAL_API_REQUIRED",
+      "new_qualifiers": [],
+      "new_requirements": [
+        "Make an audit row from the deletion workflow code",
+        "expense filing window",
+        "Atlas API maintainer"
+      ],
+      "new_temporal_scope": {
+        "document_scope": [],
+        "requested_versions": [],
+        "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT"
+      },
+      "new_version_resolution": {
+        "reason": "unique valid candidate",
+        "selected_version_ids": [
+          "cf5dfd1d-b744-48f1-bfde-41a198d86f35"
+        ],
+        "selections_by_document": {
+          "project-atlas-api": [
+            "3.0"
+          ]
+        },
+        "status": "VERSION_RESOLVED"
+      },
+      "packet_candidate_counts": {
+        "R1": 5,
+        "R2": 1,
+        "R3": 5
+      },
+      "plan_changed": false,
+      "required_evidence_complete_in_top15": true,
+      "required_marker_ranks": {
+        "LEGAL-DEL-08": [
+          1
+        ],
+        "Platform Interfaces": [
+          2
+        ],
+        "within ten business days": [
+          10
+        ]
+      }
+    },
+    {
+      "all_requirement_packets_nonempty": true,
+      "case_id": "fresh_v2_019",
+      "classification": "STRUCTURALLY_FIXED_REAL_API_REQUIRED",
+      "new_qualifiers": [],
+      "new_requirements": [
+        "Compose a schedule line with the western rehearsal position",
+        "customer update interval",
+        "benefits-review weekday"
+      ],
+      "new_temporal_scope": {
+        "document_scope": [],
+        "requested_versions": [],
+        "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT"
+      },
+      "new_version_resolution": {
+        "reason": "explicit version set resolved per document",
+        "selected_version_ids": [
+          "7be9eb6b-b1db-46b9-8ef3-ae30257098c7",
+          "63e72e6d-5ac6-48ff-b55d-72247bfaed32"
+        ],
+        "selections_by_document": {
+          "customer-support-escalation": [
+            "3.2"
+          ],
+          "hr-benefits-private": [
+            "2026"
+          ]
+        },
+        "status": "VERSION_SET_RESOLVED"
+      },
+      "packet_candidate_counts": {
+        "R1": 2,
+        "R2": 5,
+        "R3": 4
+      },
+      "plan_changed": false,
+      "required_evidence_complete_in_top15": true,
+      "required_marker_ranks": {
+        "Fridays": [
+          2
+        ],
+        "every thirty minutes": [
+          5
+        ],
+        "second Wednesday": [
+          1
+        ]
+      }
+    },
+    {
+      "all_requirement_packets_nonempty": true,
+      "case_id": "fresh_v2_020",
+      "classification": "STRUCTURALLY_FIXED_REAL_API_REQUIRED",
+      "new_qualifiers": [],
+      "new_requirements": [
+        "Produce a control bundle containing the training reference",
+        "receipt rule",
+        "eastern failover destination"
+      ],
+      "new_temporal_scope": {
+        "document_scope": [],
+        "requested_versions": [],
+        "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT"
+      },
+      "new_version_resolution": {
+        "reason": "unique valid candidate",
+        "selected_version_ids": [
+          "f522ba37-fc14-4476-9246-0405ca653aa3"
+        ],
+        "selections_by_document": {
+          "security-training-example": [
+            "1"
+          ]
+        },
+        "status": "VERSION_RESOLVED"
+      },
+      "packet_candidate_counts": {
+        "R1": 1,
+        "R2": 1,
+        "R3": 2
+      },
+      "plan_changed": false,
+      "required_evidence_complete_in_top15": true,
+      "required_marker_ranks": {
+        "SEC-TRAIN-44": [
+          3
+        ],
+        "above 25 euros": [
+          5
+        ],
+        "eu-central": [
+          1
+        ]
+      }
+    },
+    {
+      "all_requirement_packets_nonempty": true,
+      "case_id": "fresh_v2_024",
+      "classification": "STRUCTURALLY_FIXED_REAL_API_REQUIRED",
+      "new_qualifiers": [
+        {
+          "text": "From the effective incident revision",
+          "type": "version"
+        }
+      ],
+      "new_requirements": [
+        "the command role for coordination"
+      ],
+      "new_temporal_scope": {
+        "document_scope": [],
+        "requested_versions": [],
+        "temporal_mode": "CURRENT_ONLY"
+      },
+      "new_version_resolution": {
+        "reason": "unique valid candidate",
+        "selected_version_ids": [
+          "c4d49578-2eec-4051-a54b-addc12af0efa"
+        ],
+        "selections_by_document": {
+          "security-incident-policy": [
+            "2026"
+          ]
+        },
+        "status": "VERSION_RESOLVED"
+      },
+      "packet_candidate_counts": {
+        "R1": 5
+      },
+      "plan_changed": true,
+      "required_evidence_complete_in_top15": true,
+      "required_marker_ranks": {
+        "Incident Commander": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "all_requirement_packets_nonempty": true,
+      "case_id": "fresh_v2_025",
+      "classification": "STRUCTURALLY_FIXED_REAL_API_REQUIRED",
+      "new_qualifiers": [
+        {
+          "text": "Use current versions",
+          "type": "version"
+        }
+      ],
+      "new_requirements": [
+        "the remote weekly allowance",
+        "the severity-one reporting window"
+      ],
+      "new_temporal_scope": {
+        "document_scope": [],
+        "requested_versions": [],
+        "temporal_mode": "CURRENT_ONLY"
+      },
+      "new_version_resolution": {
+        "reason": "unique valid candidate",
+        "selected_version_ids": [
+          "e131a2f3-b35e-4d18-8990-650cf48e1c8c"
+        ],
+        "selections_by_document": {
+          "remote-work-policy": [
+            "2026"
+          ]
+        },
+        "status": "VERSION_RESOLVED"
+      },
+      "packet_candidate_counts": {
+        "R1": 1,
+        "R2": 4
+      },
+      "plan_changed": false,
+      "required_evidence_complete_in_top15": true,
+      "required_marker_ranks": {
+        "two days per week": [
+          4
+        ],
+        "within 15 minutes": [
+          1
+        ]
+      }
+    },
+    {
+      "all_requirement_packets_nonempty": true,
+      "case_id": "fresh_v2_034",
+      "classification": "STRUCTURALLY_FIXED_REAL_API_REQUIRED",
+      "new_qualifiers": [],
+      "new_requirements": [
+        "Make a cross-year note with the 2025 remote allowance",
+        "the active 2026 incident coordination role"
+      ],
+      "new_temporal_scope": {
+        "document_scope": [],
+        "requested_versions": [
+          "2025",
+          "2026"
+        ],
+        "temporal_mode": "CROSS_VERSION"
+      },
+      "new_version_resolution": {
+        "reason": "explicit version set resolved per document",
+        "selected_version_ids": [
+          "82e742b7-92c3-417a-b3f0-a350037b0bac",
+          "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+          "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588",
+          "c4d49578-2eec-4051-a54b-addc12af0efa"
+        ],
+        "selections_by_document": {
+          "remote-work-policy": [
+            "2025",
+            "2026"
+          ],
+          "security-incident-policy": [
+            "2025",
+            "2026"
+          ]
+        },
+        "status": "VERSION_SET_RESOLVED"
+      },
+      "packet_candidate_counts": {
+        "R1": 4,
+        "R2": 4
+      },
+      "plan_changed": false,
+      "required_evidence_complete_in_top15": true,
+      "required_marker_ranks": {
+        "incident commander": [
+          5
+        ],
+        "three days per week": [
+          1
+        ]
+      }
+    },
+    {
+      "all_requirement_packets_nonempty": true,
+      "case_id": "fresh_v2_035",
+      "classification": "STRUCTURALLY_FIXED_REAL_API_REQUIRED",
+      "new_qualifiers": [
+        {
+          "text": "2025",
+          "type": "time"
+        },
+        {
+          "text": "2026",
+          "type": "time"
+        }
+      ],
+      "new_requirements": [
+        "Create a two-year change card: remote allowance",
+        "incident reporting deadline"
+      ],
+      "new_temporal_scope": {
+        "document_scope": [],
+        "requested_versions": [
+          "2025",
+          "2026"
+        ],
+        "temporal_mode": "CROSS_VERSION"
+      },
+      "new_version_resolution": {
+        "reason": "explicit version set resolved per document",
+        "selected_version_ids": [
+          "82e742b7-92c3-417a-b3f0-a350037b0bac",
+          "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+          "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588",
+          "c4d49578-2eec-4051-a54b-addc12af0efa"
+        ],
+        "selections_by_document": {
+          "remote-work-policy": [
+            "2025",
+            "2026"
+          ],
+          "security-incident-policy": [
+            "2025",
+            "2026"
+          ]
+        },
+        "status": "VERSION_SET_RESOLVED"
+      },
+      "packet_candidate_counts": {
+        "R1": 3,
+        "R2": 3
+      },
+      "plan_changed": true,
+      "required_evidence_complete_in_top15": true,
+      "required_marker_ranks": {
+        "three days per week": [
+          4
+        ],
+        "two days per week": [
+          3
+        ],
+        "within 15 minutes": [
+          1
+        ],
+        "within 60 minutes": [
+          2
+        ]
+      }
+    },
+    {
+      "all_requirement_packets_nonempty": true,
+      "case_id": "fresh_v2_048",
+      "classification": "STRUCTURALLY_FIXED_REAL_API_REQUIRED",
+      "new_qualifiers": [
+        {
+          "text": "In the archived remote-work revision",
+          "type": "version"
+        }
+      ],
+      "new_requirements": [
+        "what was the schedule-review rhythm"
+      ],
+      "new_temporal_scope": {
+        "document_scope": [],
+        "requested_versions": [],
+        "temporal_mode": "HISTORICAL_ONLY"
+      },
+      "new_version_resolution": {
+        "reason": "unique valid candidate",
+        "selected_version_ids": [
+          "82e742b7-92c3-417a-b3f0-a350037b0bac"
+        ],
+        "selections_by_document": {
+          "remote-work-policy": [
+            "2025"
+          ]
+        },
+        "status": "VERSION_RESOLVED"
+      },
+      "packet_candidate_counts": {
+        "R1": 1
+      },
+      "plan_changed": true,
+      "required_evidence_complete_in_top15": true,
+      "required_marker_ranks": {
+        "every quarter": [
+          1
+        ]
+      }
+    }
+  ],
+  "counts": {
+    "FIXED_LOCALLY": 0,
+    "STILL_FAILING": 0,
+    "STRUCTURALLY_FIXED_REAL_API_REQUIRED": 11,
+    "TRACE_INSUFFICIENT": 0
+  },
+  "passed": true,
+  "still_failing": 0
+}

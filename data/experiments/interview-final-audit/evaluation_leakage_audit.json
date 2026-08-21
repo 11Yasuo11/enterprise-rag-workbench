@@ -1,0 +1,44 @@
+{
+  "audit_id": "interview-final-audit-evaluation-leakage",
+  "timestamp": "2026-08-21T10:05:00+00:00",
+  "scope": {
+    "production_runtime_paths": [
+      "src/rag_workbench/runtime/",
+      "src/rag_workbench/api/app.py"
+    ],
+    "legitimate_eval_paths_excluded_from_fail": [
+      "src/rag_workbench/evaluation/",
+      "src/rag_workbench/experiments/",
+      "tests/",
+      "scripts/",
+      "data/eval/",
+      "data/experiments/"
+    ]
+  },
+  "patterns": [
+    "fresh_v",
+    "case_id",
+    "gold",
+    "expected_answer",
+    "expected_route",
+    "should_abstain"
+  ],
+  "runtime_matches": {
+    "src/rag_workbench/runtime": {
+      "fresh_v": 0,
+      "case_id": 0,
+      "gold": 0,
+      "expected_answer": 0,
+      "expected_route": 0,
+      "should_abstain": 0
+    }
+  },
+  "notes": [
+    "CanonicalRagRuntime does not branch on eval case IDs or gold answers.",
+    "atomic_requirement_contract_v1 documents that gold/case IDs are not serving inputs.",
+    "Evaluator/scorer modules legitimately consume expected_* fields for scoring only."
+  ],
+  "PRODUCTION_GOLD_LEAKAGE": 0,
+  "CASE_ID_RUNTIME_HARDCODING": 0,
+  "verdict": "PASS"
+}

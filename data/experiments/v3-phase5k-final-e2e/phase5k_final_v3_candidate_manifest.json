@@ -1,0 +1,29 @@
+{
+  "phase": "V3_PHASE5K_FRESH_FINAL_E2E",
+  "final_candidate_id": "v3-final-candidate-post-5h5i5j",
+  "selection_logic": {
+    "phase5h_injection": "REJECTED_QUESTION_INJECTION_GUARD_V3_USE_V2",
+    "phase5i_ranking": "REJECTED_VERSION_AWARE_RANKING_V1_USE_POINTWISE",
+    "phase5j_generator": "REJECTED_GENERATOR_COMPLETENESS_V3_USE_V2"
+  },
+  "components": {
+    "embedding": "text-embedding-3-small",
+    "retrieval": "dense+bm25+rrf",
+    "ranking": "POINTWISE_CROSS_ENCODER_TOP5",
+    "cross_encoder_model": "cross-encoder/ms-marco-MiniLM-L6-v2",
+    "cross_encoder_revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+    "judge": "GPT_5_6_SOL_EVIDENCE_SUFFICIENCY_V1",
+    "generator": "GENERATOR_COMPLETENESS_V2",
+    "generator_hash": "1ffd72c587f8df330944e8a1e8d5914b4440f1d3fafed9bd74a5ff03ccd43f16",
+    "question_injection_guard": "QUESTION_INJECTION_GUARD_V2",
+    "question_injection_guard_hash": "09c0e0df9188544071cb85675b2b477a0cf443e5d90e202a2a1167192809259b",
+    "constraint_guard": "ANSWERABILITY_CONSTRAINT_GUARD_V2",
+    "safe_boundary": "SAFE_RECOVERY_BOUNDARY_V3",
+    "authorization_controls": "enabled",
+    "tenant_controls": "enabled",
+    "version_controls": "enabled",
+    "citation_validation": "enabled"
+  },
+  "frozen": true
+}
+

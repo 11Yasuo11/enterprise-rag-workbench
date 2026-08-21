@@ -1,0 +1,23 @@
+{
+  "api_calls": 0,
+  "case_count": 11,
+  "case_ids": [
+    "fresh_v2_003",
+    "fresh_v2_011",
+    "fresh_v2_013",
+    "fresh_v2_017",
+    "fresh_v2_019",
+    "fresh_v2_020",
+    "fresh_v2_024",
+    "fresh_v2_025",
+    "fresh_v2_034",
+    "fresh_v2_035",
+    "fresh_v2_048"
+  ],
+  "derived_from_scoring_behavior": "INCORRECT_ABSTENTION",
+  "expected_frozen_sha256": "c60df294c0ece9cd1fdb06b2fde219904ae3edeeb8fbf4e08cc9776da387f3e4",
+  "experiment_id": "RAG_RELEASE_PIPELINE_V7_FAILURE_CENSUS",
+  "source_prediction_sha256": "c60df294c0ece9cd1fdb06b2fde219904ae3edeeb8fbf4e08cc9776da387f3e4",
+  "timestamp": "2026-08-20T23:30:23.605930+00:00",
+  "v6_result_modified": false
+}

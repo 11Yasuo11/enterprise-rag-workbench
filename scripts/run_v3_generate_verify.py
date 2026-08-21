@@ -15,6 +15,7 @@ def main() -> None:
             "initialize",
             "diagnostic-preflight",
             "diagnostic",
+            "finalize-diagnostic",
             "freeze-dataset",
             "embedding-preflight",
             "retrieve",
@@ -32,6 +33,8 @@ def main() -> None:
             payload = benchmark.diagnostic_preflight()
         elif phase == "diagnostic":
             payload = benchmark.execute_diagnostic()
+        elif phase == "finalize-diagnostic":
+            payload = benchmark.finalize_diagnostic_artifacts()
         elif phase == "freeze-dataset":
             payload = benchmark.freeze_unseen_dataset()
         elif phase == "embedding-preflight":

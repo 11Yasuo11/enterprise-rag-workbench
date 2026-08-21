@@ -1,0 +1,158 @@
+{
+  "query": "What is the remote work review cadence for managers?",
+  "index_identity": "e598d9fb91b13a8c6bd6be94b1bc0a54bbce27dd4e98dc158669d7198bc6f466",
+  "dense_top_k": 20,
+  "bm25_top_k": 20,
+  "rrf_k": 60,
+  "fused_candidate_cap": 30,
+  "cross_encoder_top_k": 15,
+  "dense_count": 6,
+  "bm25_count": 19,
+  "rrf_count": 19,
+  "ce_top15_count": 15,
+  "dense_ranks": {
+    "49679d97-020f-4418-9430-4c296bc824b1": 1,
+    "803b1d29-ee55-4c31-abc8-13e9e5be6485": 2,
+    "c19243d4-0a12-4d2b-b727-de35e742516f": 3,
+    "37bffe4a-9e5d-419a-a687-12d90a031de7": 4,
+    "7bdffe91-3861-44db-8be2-d6c7328997e8": 5,
+    "bd832158-c74b-4f03-8f53-60a2d30e69e8": 6
+  },
+  "bm25_ranks": {
+    "49679d97-020f-4418-9430-4c296bc824b1": 1,
+    "2798f984-b356-4e40-9ed2-574ffbe26e86": 2,
+    "803b1d29-ee55-4c31-abc8-13e9e5be6485": 3,
+    "9e94a1f1-355f-4482-a8d8-8c6f6f089e36": 4,
+    "2aafc123-32cd-4c8b-ad3e-845392de29e6": 5,
+    "c19243d4-0a12-4d2b-b727-de35e742516f": 6,
+    "ab9cf7c9-3671-43d6-90fd-12630f084203": 7,
+    "054089a4-d1c8-4628-aed2-03dbd8b4e8e9": 8,
+    "3f2b1506-ee1e-4728-8fbe-35947c82c3b4": 9,
+    "c91ee2ff-af75-461a-9372-0c562e46051d": 10,
+    "7bdffe91-3861-44db-8be2-d6c7328997e8": 11,
+    "826df8a1-5461-4515-95f7-1998a4d3c205": 12,
+    "01423f11-8d28-418b-bd8f-b548fa0491ef": 13,
+    "39622c27-169e-4a3f-bbbd-f69996af8e01": 14,
+    "7e6c9c91-51ec-4146-8463-ee975a64232a": 15,
+    "d60d3666-be70-4f64-b83e-7fe72c86f426": 16,
+    "bd832158-c74b-4f03-8f53-60a2d30e69e8": 17,
+    "12b0a957-4a2f-4c06-a8aa-55067b120c4b": 18,
+    "37bffe4a-9e5d-419a-a687-12d90a031de7": 19
+  },
+  "rrf_ranks": {
+    "49679d97-020f-4418-9430-4c296bc824b1": 1,
+    "803b1d29-ee55-4c31-abc8-13e9e5be6485": 2,
+    "c19243d4-0a12-4d2b-b727-de35e742516f": 3,
+    "7bdffe91-3861-44db-8be2-d6c7328997e8": 4,
+    "37bffe4a-9e5d-419a-a687-12d90a031de7": 5,
+    "bd832158-c74b-4f03-8f53-60a2d30e69e8": 6,
+    "2798f984-b356-4e40-9ed2-574ffbe26e86": 7,
+    "9e94a1f1-355f-4482-a8d8-8c6f6f089e36": 8,
+    "2aafc123-32cd-4c8b-ad3e-845392de29e6": 9,
+    "ab9cf7c9-3671-43d6-90fd-12630f084203": 10,
+    "054089a4-d1c8-4628-aed2-03dbd8b4e8e9": 11,
+    "3f2b1506-ee1e-4728-8fbe-35947c82c3b4": 12,
+    "c91ee2ff-af75-461a-9372-0c562e46051d": 13,
+    "826df8a1-5461-4515-95f7-1998a4d3c205": 14,
+    "01423f11-8d28-418b-bd8f-b548fa0491ef": 15,
+    "39622c27-169e-4a3f-bbbd-f69996af8e01": 16,
+    "7e6c9c91-51ec-4146-8463-ee975a64232a": 17,
+    "d60d3666-be70-4f64-b83e-7fe72c86f426": 18,
+    "12b0a957-4a2f-4c06-a8aa-55067b120c4b": 19
+  },
+  "ce_top15": [
+    {
+      "chunk_id": "49679d97-020f-4418-9430-4c296bc824b1",
+      "document_id": "remote-work-policy",
+      "rank": 1,
+      "score": 4.009608268737793
+    },
+    {
+      "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+      "document_id": "remote-work-policy",
+      "rank": 2,
+      "score": -4.044329643249512
+    },
+    {
+      "chunk_id": "c91ee2ff-af75-461a-9372-0c562e46051d",
+      "document_id": "data-retention-standard",
+      "rank": 3,
+      "score": -11.004475593566895
+    },
+    {
+      "chunk_id": "c19243d4-0a12-4d2b-b727-de35e742516f",
+      "document_id": "security-training-example",
+      "rank": 4,
+      "score": -11.124216079711914
+    },
+    {
+      "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+      "document_id": "operations-continuity-plan",
+      "rank": 5,
+      "score": -11.141168594360352
+    },
+    {
+      "chunk_id": "2798f984-b356-4e40-9ed2-574ffbe26e86",
+      "document_id": "finance-expense-policy",
+      "rank": 6,
+      "score": -11.155119895935059
+    },
+    {
+      "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+      "document_id": "engineering-deployment-handbook",
+      "rank": 7,
+      "score": -11.28682804107666
+    },
+    {
+      "chunk_id": "ab9cf7c9-3671-43d6-90fd-12630f084203",
+      "document_id": "customer-support-escalation",
+      "rank": 8,
+      "score": -11.306940078735352
+    },
+    {
+      "chunk_id": "bd832158-c74b-4f03-8f53-60a2d30e69e8",
+      "document_id": "security-incident-policy",
+      "rank": 9,
+      "score": -11.322247505187988
+    },
+    {
+      "chunk_id": "3f2b1506-ee1e-4728-8fbe-35947c82c3b4",
+      "document_id": "project-atlas-api",
+      "rank": 10,
+      "score": -11.343219757080078
+    },
+    {
+      "chunk_id": "12b0a957-4a2f-4c06-a8aa-55067b120c4b",
+      "document_id": "security-incident-policy",
+      "rank": 11,
+      "score": -11.361021995544434
+    },
+    {
+      "chunk_id": "37bffe4a-9e5d-419a-a687-12d90a031de7",
+      "document_id": "operations-continuity-plan",
+      "rank": 12,
+      "score": -11.381866455078125
+    },
+    {
+      "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+      "document_id": "recovery-runbook-east",
+      "rank": 13,
+      "score": -11.389464378356934
+    },
+    {
+      "chunk_id": "054089a4-d1c8-4628-aed2-03dbd8b4e8e9",
+      "document_id": "data-retention-standard",
+      "rank": 14,
+      "score": -11.41568374633789
+    },
+    {
+      "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+      "document_id": "recovery-runbook-west",
+      "rank": 15,
+      "score": -11.418913841247559
+    }
+  ],
+  "known_evidence_present": true,
+  "embedding_external_calls": 0,
+  "pass": true
+}

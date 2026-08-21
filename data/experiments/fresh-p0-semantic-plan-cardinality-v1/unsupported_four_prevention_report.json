@@ -1,0 +1,343 @@
+{
+  "all_deterministically_prevented": true,
+  "case_count": 4,
+  "cases": [
+    {
+      "assembly": {
+        "answer": "R1: The launch owner is the Product Operations team . [C1]\nR2: The Atlas API is maintained by the Platform Interfaces team . [C2]",
+        "assembled_output_fact_count": 2,
+        "atomic_requirement_count": 2,
+        "citations": [
+          "826df8a1-5461-4515-95f7-1998a4d3c205",
+          "3f2b1506-ee1e-4728-8fbe-35947c82c3b4"
+        ],
+        "detected_output_unit_count": 2,
+        "failure_code": null,
+        "status": "answered",
+        "validated_mapping_subset_assembled": true,
+        "validated_output_fact_count": 2
+      },
+      "case_id": "fresh_v1_011",
+      "classification": "P0_FIXED_LOCALLY",
+      "local_validation": {
+        "failure_code": null,
+        "valid": true
+      },
+      "new": {
+        "assembly_preservation": true,
+        "cardinality_match": true,
+        "local_replay_result": "COMPLETE_ANSWER",
+        "output_unit_count": 2,
+        "qualifier_count": 0,
+        "requirement_count": 2
+      },
+      "new_api_calls": 0,
+      "old": {
+        "final_result": "UNSUPPORTED_ANSWER",
+        "output_unit_count": 2,
+        "qualifier_count": 0,
+        "requirement_count": 1
+      },
+      "question": "Pair the Atlas launch owner with the team that maintains the Atlas API.",
+      "saved_mapping_reuse": {
+        "adapted_mappings": [
+          {
+            "chunk_id": "826df8a1-5461-4515-95f7-1998a4d3c205",
+            "document_id": "project-atlas-launch",
+            "document_version_id": "e431da5b-ef31-440f-a5a4-80a35fb97e24",
+            "requirement_id": "R1",
+            "requirement_text": "the Atlas launch owner",
+            "reuse_score": 10,
+            "supporting_span": "The launch owner is the Product Operations team .",
+            "version": "1.0"
+          },
+          {
+            "chunk_id": "3f2b1506-ee1e-4728-8fbe-35947c82c3b4",
+            "document_id": "project-atlas-api",
+            "document_version_id": "cf5dfd1d-b744-48f1-bfde-41a198d86f35",
+            "requirement_id": "R2",
+            "requirement_text": "the team that maintains the Atlas API",
+            "reuse_score": 16,
+            "supporting_span": "The Atlas API is maintained by the Platform Interfaces team .",
+            "version": "3.0"
+          }
+        ],
+        "source_decision": "GO",
+        "status": "REUSABLE"
+      },
+      "scorer": {
+        "behavior": "CORRECT_COMPLETE_ANSWER",
+        "citation_completeness_pass": true,
+        "citation_correctness_pass": true,
+        "citation_validity_pass": true,
+        "fact_completeness_pass": true,
+        "facts_missing": [],
+        "facts_satisfied": [
+          "Product Operations",
+          "Platform Interfaces"
+        ],
+        "required_documents_satisfied": true
+      },
+      "structural_p0_assembly_without_out_of_scope_version_gate": {
+        "failure_code": null,
+        "status": "answered"
+      }
+    },
+    {
+      "assembly": {
+        "answer": "R1: The recovery drill runs on the second Wednesday of each quarter . [C1]\nR2: Routine production releases occur on Tuesdays and Thursdays . [C2]",
+        "assembled_output_fact_count": 2,
+        "atomic_requirement_count": 2,
+        "citations": [
+          "d60d3666-be70-4f64-b83e-7fe72c86f426",
+          "01423f11-8d28-418b-bd8f-b548fa0491ef"
+        ],
+        "detected_output_unit_count": 2,
+        "failure_code": null,
+        "status": "answered",
+        "validated_mapping_subset_assembled": true,
+        "validated_output_fact_count": 2
+      },
+      "case_id": "fresh_v1_013",
+      "classification": "P0_FIXED_LOCALLY",
+      "local_validation": {
+        "failure_code": null,
+        "valid": true
+      },
+      "new": {
+        "assembly_preservation": true,
+        "cardinality_match": true,
+        "local_replay_result": "COMPLETE_ANSWER",
+        "output_unit_count": 2,
+        "qualifier_count": 0,
+        "requirement_count": 2
+      },
+      "new_api_calls": 0,
+      "old": {
+        "final_result": "UNSUPPORTED_ANSWER",
+        "output_unit_count": 2,
+        "qualifier_count": 0,
+        "requirement_count": 1
+      },
+      "question": "How often is the west recovery drill held within a quarter, and on which weekdays do routine production releases occur?",
+      "saved_mapping_reuse": {
+        "adapted_mappings": [
+          {
+            "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+            "document_id": "recovery-runbook-west",
+            "document_version_id": "687b9971-bd2b-44c9-ba4a-83f68eb86ac2",
+            "requirement_id": "R1",
+            "requirement_text": "How often is the west recovery drill held within a quarter",
+            "reuse_score": 13,
+            "supporting_span": "The recovery drill runs on the second Wednesday of each quarter .",
+            "version": "1.0"
+          },
+          {
+            "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+            "document_id": "engineering-deployment-handbook",
+            "document_version_id": "49d30c7e-9187-4311-b664-57a8d6029380",
+            "requirement_id": "R2",
+            "requirement_text": "on which weekdays do routine production releases occur",
+            "reuse_score": 12,
+            "supporting_span": "Routine production releases occur on Tuesdays and Thursdays .",
+            "version": "2026.1"
+          }
+        ],
+        "source_decision": "GO",
+        "status": "REUSABLE"
+      },
+      "scorer": {
+        "behavior": "CORRECT_COMPLETE_ANSWER",
+        "citation_completeness_pass": true,
+        "citation_correctness_pass": true,
+        "citation_validity_pass": true,
+        "fact_completeness_pass": true,
+        "facts_missing": [],
+        "facts_satisfied": [
+          "second Wednesday",
+          "Tuesdays and Thursdays"
+        ],
+        "required_documents_satisfied": true
+      },
+      "structural_p0_assembly_without_out_of_scope_version_gate": {
+        "failure_code": null,
+        "status": "answered"
+      }
+    },
+    {
+      "assembly": {
+        "answer": "R1: The launch owner is the Product Operations team . [C1]\nR2: The Atlas API is maintained by the Platform Interfaces team . [C2]\nR3: Finance Operations owns exception review . [C3]",
+        "assembled_output_fact_count": 3,
+        "atomic_requirement_count": 3,
+        "citations": [
+          "826df8a1-5461-4515-95f7-1998a4d3c205",
+          "3f2b1506-ee1e-4728-8fbe-35947c82c3b4",
+          "2798f984-b356-4e40-9ed2-574ffbe26e86"
+        ],
+        "detected_output_unit_count": 3,
+        "failure_code": null,
+        "status": "answered",
+        "validated_mapping_subset_assembled": true,
+        "validated_output_fact_count": 3
+      },
+      "case_id": "fresh_v1_028",
+      "classification": "P0_FIXED_LOCALLY",
+      "local_validation": {
+        "failure_code": null,
+        "valid": true
+      },
+      "new": {
+        "assembly_preservation": true,
+        "cardinality_match": true,
+        "local_replay_result": "COMPLETE_ANSWER",
+        "output_unit_count": 3,
+        "qualifier_count": 0,
+        "requirement_count": 3
+      },
+      "new_api_calls": 0,
+      "old": {
+        "final_result": "UNSUPPORTED_ANSWER",
+        "output_unit_count": 3,
+        "qualifier_count": 0,
+        "requirement_count": 1
+      },
+      "question": "State who owns the Atlas launch, who maintains the Atlas API, and who owns finance exception review.",
+      "saved_mapping_reuse": {
+        "adapted_mappings": [
+          {
+            "chunk_id": "826df8a1-5461-4515-95f7-1998a4d3c205",
+            "document_id": "project-atlas-launch",
+            "document_version_id": "e431da5b-ef31-440f-a5a4-80a35fb97e24",
+            "requirement_id": "R1",
+            "requirement_text": "who owns the Atlas launch",
+            "reuse_score": 7,
+            "supporting_span": "The launch owner is the Product Operations team .",
+            "version": "1.0"
+          },
+          {
+            "chunk_id": "3f2b1506-ee1e-4728-8fbe-35947c82c3b4",
+            "document_id": "project-atlas-api",
+            "document_version_id": "cf5dfd1d-b744-48f1-bfde-41a198d86f35",
+            "requirement_id": "R2",
+            "requirement_text": "who maintains the Atlas API",
+            "reuse_score": 13,
+            "supporting_span": "The Atlas API is maintained by the Platform Interfaces team .",
+            "version": "3.0"
+          },
+          {
+            "chunk_id": "2798f984-b356-4e40-9ed2-574ffbe26e86",
+            "document_id": "finance-expense-policy",
+            "document_version_id": "4c469613-1997-4632-9a1e-81c37f786041",
+            "requirement_id": "R3",
+            "requirement_text": "who owns finance exception review",
+            "reuse_score": 14,
+            "supporting_span": "Finance Operations owns exception review .",
+            "version": "5.1"
+          }
+        ],
+        "source_decision": "GO",
+        "status": "REUSABLE"
+      },
+      "scorer": {
+        "behavior": "CORRECT_COMPLETE_ANSWER",
+        "citation_completeness_pass": true,
+        "citation_correctness_pass": true,
+        "citation_validity_pass": true,
+        "fact_completeness_pass": true,
+        "facts_missing": [],
+        "facts_satisfied": [
+          "Product Operations",
+          "Platform Interfaces",
+          "Finance Operations"
+        ],
+        "required_documents_satisfied": true
+      },
+      "structural_p0_assembly_without_out_of_scope_version_gate": {
+        "failure_code": null,
+        "status": "answered"
+      }
+    },
+    {
+      "assembly": {
+        "answer": "R1: Under the current 2026 policy , employees may work remotely two days per week . [C1]\nR2: Managers review remote-work schedules every month . [C2]",
+        "assembled_output_fact_count": 2,
+        "atomic_requirement_count": 2,
+        "citations": [
+          "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "49679d97-020f-4418-9430-4c296bc824b1"
+        ],
+        "detected_output_unit_count": 2,
+        "failure_code": null,
+        "status": "answered",
+        "validated_mapping_subset_assembled": true,
+        "validated_output_fact_count": 2
+      },
+      "case_id": "fresh_v1_030",
+      "classification": "P0_FIXED_LOCALLY",
+      "local_validation": {
+        "failure_code": null,
+        "valid": true
+      },
+      "new": {
+        "assembly_preservation": true,
+        "cardinality_match": true,
+        "local_replay_result": "COMPLETE_ANSWER",
+        "output_unit_count": 2,
+        "qualifier_count": 1,
+        "requirement_count": 2
+      },
+      "new_api_calls": 0,
+      "old": {
+        "final_result": "UNSUPPORTED_ANSWER",
+        "output_unit_count": 2,
+        "qualifier_count": 1,
+        "requirement_count": 1
+      },
+      "question": "Under the current 2026 remote-work policy, how many remote days are allowed and how often are schedules reviewed?",
+      "saved_mapping_reuse": {
+        "adapted_mappings": [
+          {
+            "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+            "document_id": "remote-work-policy",
+            "document_version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+            "requirement_id": "R1",
+            "requirement_text": "how many remote days are allowed",
+            "reuse_score": 5,
+            "supporting_span": "Under the current 2026 policy , employees may work remotely two days per week .",
+            "version": "2026"
+          },
+          {
+            "chunk_id": "49679d97-020f-4418-9430-4c296bc824b1",
+            "document_id": "remote-work-policy",
+            "document_version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+            "requirement_id": "R2",
+            "requirement_text": "how often are schedules reviewed",
+            "reuse_score": 6,
+            "supporting_span": "Managers review remote-work schedules every month .",
+            "version": "2026"
+          }
+        ],
+        "source_decision": "GO",
+        "status": "REUSABLE"
+      },
+      "scorer": {
+        "behavior": "CORRECT_COMPLETE_ANSWER",
+        "citation_completeness_pass": true,
+        "citation_correctness_pass": true,
+        "citation_validity_pass": true,
+        "fact_completeness_pass": true,
+        "facts_missing": [],
+        "facts_satisfied": [
+          "two days per week",
+          "every month"
+        ],
+        "required_documents_satisfied": true
+      },
+      "structural_p0_assembly_without_out_of_scope_version_gate": {
+        "failure_code": null,
+        "status": "answered"
+      }
+    }
+  ],
+  "invariant": "detected output units = atomic requirements = validated output facts = assembled output facts; validated mappings subset assembled mappings"
+}

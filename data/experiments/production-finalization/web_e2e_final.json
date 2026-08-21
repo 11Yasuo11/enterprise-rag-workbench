@@ -1,0 +1,125 @@
+{
+  "cases": [
+    {
+      "name": "single_document",
+      "http": 200,
+      "status": "answer",
+      "route": "deterministic",
+      "error_class": null,
+      "has_keys": true,
+      "debug_leaked": false,
+      "unsupported_answer": false
+    },
+    {
+      "name": "two_document",
+      "http": 200,
+      "status": "abstain",
+      "route": "abstain",
+      "error_class": "LUNA_VERIFIER_UNAVAILABLE",
+      "has_keys": true,
+      "debug_leaked": false,
+      "unsupported_answer": false
+    },
+    {
+      "name": "current_version",
+      "http": 200,
+      "status": "abstain",
+      "route": "abstain",
+      "error_class": "LUNA_VERIFIER_UNAVAILABLE",
+      "has_keys": true,
+      "debug_leaked": false,
+      "unsupported_answer": false
+    },
+    {
+      "name": "historical",
+      "http": 200,
+      "status": "answer",
+      "route": "deterministic",
+      "error_class": null,
+      "has_keys": true,
+      "debug_leaked": false,
+      "unsupported_answer": false
+    },
+    {
+      "name": "cross_version",
+      "http": 200,
+      "status": "abstain",
+      "route": "abstain",
+      "error_class": "LUNA_VERIFIER_UNAVAILABLE",
+      "has_keys": true,
+      "debug_leaked": false,
+      "unsupported_answer": false
+    },
+    {
+      "name": "deterministic_candidate",
+      "http": 200,
+      "status": "answer",
+      "route": "deterministic",
+      "error_class": null,
+      "has_keys": true,
+      "debug_leaked": false,
+      "unsupported_answer": false
+    },
+    {
+      "name": "acl_allow",
+      "http": 200,
+      "status": "answer",
+      "route": "deterministic",
+      "error_class": null,
+      "has_keys": true,
+      "debug_leaked": false,
+      "unsupported_answer": false
+    },
+    {
+      "name": "acl_deny",
+      "http": 200,
+      "status": "abstain",
+      "route": "abstain",
+      "error_class": "LUNA_VERIFIER_UNAVAILABLE",
+      "has_keys": true,
+      "debug_leaked": false,
+      "unsupported_answer": false
+    },
+    {
+      "name": "wrong_tenant",
+      "http": 200,
+      "status": "abstain",
+      "route": "abstain",
+      "error_class": "LUNA_VERIFIER_UNAVAILABLE",
+      "has_keys": true,
+      "debug_leaked": false,
+      "unsupported_answer": false
+    },
+    {
+      "name": "wrong_region",
+      "http": 200,
+      "status": "abstain",
+      "route": "abstain",
+      "error_class": "LUNA_VERIFIER_UNAVAILABLE",
+      "has_keys": true,
+      "debug_leaked": false,
+      "unsupported_answer": false
+    },
+    {
+      "name": "prompt_injection",
+      "http": 200,
+      "status": "abstain",
+      "route": "abstain",
+      "error_class": "PROMPT_INJECTION",
+      "has_keys": true,
+      "debug_leaked": false,
+      "unsupported_answer": false
+    },
+    {
+      "name": "unanswerable",
+      "http": 200,
+      "status": "abstain",
+      "route": "abstain",
+      "error_class": "LUNA_VERIFIER_UNAVAILABLE",
+      "has_keys": true,
+      "debug_leaked": false,
+      "unsupported_answer": false
+    }
+  ],
+  "pass": true
+}

@@ -1,0 +1,29 @@
+{
+  "captured_at": "2026-08-21T08:42:00+00:00",
+  "git_sha": "6e9741f55dc0436963ea1c0ba30b9a30bccbd207",
+  "branch": "chore/repository-hygiene-cleanup",
+  "serving_entry": {
+    "ui": "apps/web/app/chat/page.tsx",
+    "http": "POST /rag/query",
+    "handler": "src/rag_workbench/api/app.py::rag_query",
+    "orchestrator": "rag_workbench.generation.generator.RagService",
+    "retriever": "rag_workbench.retrieval.retriever.Retriever",
+    "retrieval_mode": "DENSE_ONLY"
+  },
+  "defaults": {
+    "embedding_provider": "hashing",
+    "embedding_model": "local-hashing-64",
+    "top_k": 5,
+    "score_threshold": 0.2,
+    "llm_provider": "extractive",
+    "bm25": false,
+    "rrf": false,
+    "cross_encoder": false,
+    "question_plan": false,
+    "luna": false,
+    "sol_selective": false,
+    "assembler_v3": false,
+    "injection_guard_on_query": false
+  },
+  "notes": "Baseline before CanonicalRagRuntime promotion. See docs/CURRENT_SERVING_RAG_ARCHITECTURE.md."
+}

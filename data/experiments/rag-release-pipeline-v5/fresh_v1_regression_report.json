@@ -1,0 +1,41 @@
+{
+  "api_calls_before_stop": {
+    "embedding": 0,
+    "luna": 4,
+    "sol": 0
+  },
+  "cost": {
+    "actual_usd": 0.0031391500000000003,
+    "hard_cap_usd": 0.3,
+    "within_cap": true
+  },
+  "dataset": "FRESH_V1_1_REGRESSION_RERUN",
+  "first_causal_failure": {
+    "case_id": "fresh_v1_005",
+    "error": "AttributeError: deterministic mapping exposes supporting_spans while the frozen deterministic adapter requires supporting_span",
+    "mapping_fields": [
+      "chunk_id",
+      "document_id",
+      "requirement",
+      "requirement_id",
+      "supporting_spans"
+    ],
+    "phase": "DETERMINISTIC_MAPPING_ADAPTATION"
+  },
+  "fresh_unseen_claim": false,
+  "gate_evaluated": false,
+  "gold_loaded": false,
+  "implementation_changed_after_rc": false,
+  "prediction_freeze_created": false,
+  "predictions_completed": 0,
+  "predictions_persisted": false,
+  "provider_calls_completed_before_failure_case": [
+    "fresh_v1_001",
+    "fresh_v1_002",
+    "fresh_v1_003",
+    "fresh_v1_004"
+  ],
+  "rerun_performed": false,
+  "status": "INCOMPLETE_FROZEN_RUNTIME_FAILURE",
+  "verdict": "PIPELINE_V5_FAILED_REGRESSION"
+}

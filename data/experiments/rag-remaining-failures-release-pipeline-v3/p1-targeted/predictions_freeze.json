@@ -1,0 +1,15 @@
+{
+  "case_count": 5,
+  "case_ids": [
+    "fresh_v1_029",
+    "fresh_v1_031",
+    "fresh_v1_032",
+    "fresh_v1_033",
+    "fresh_v1_035"
+  ],
+  "experiment_id": "RAG_REMAINING_FAILURES_RELEASE_PIPELINE_V3_P1_TARGETED",
+  "gold_loaded_before_freeze": false,
+  "predictions_immutable": true,
+  "predictions_sha256": "131205b3a16476b446c4141a8005fea865f5716d6a463c720dc5766e0644a94e",
+  "timestamp": "2026-08-20T18:12:31.216392+00:00"
+}

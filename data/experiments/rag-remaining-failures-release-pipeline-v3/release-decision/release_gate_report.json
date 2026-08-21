@@ -1,0 +1,20 @@
+{
+  "all60_plan_audit": "PASSED_60_OF_60",
+  "downstream_phases": "NOT_RUN_BLOCKED_BY_P1_CONFIRMATION",
+  "experiment_id": "RAG_REMAINING_FAILURES_RELEASE_PIPELINE_V3_RELEASE_GATES",
+  "first_causal_failure": {
+    "authorized_with_complete_metadata": 8,
+    "code": "P1_SCORER_TEMPORAL_AUTHORIZATION_METADATA_OMISSION",
+    "component": "scripts/run_p1_version_temporal_targeted_real_api_confirmation_v1.py:score_and_finalize",
+    "formal_results_reclassified": false,
+    "frozen_citations_checked": 8,
+    "mechanism": "Citation authorization was evaluated without version/is_active metadata and without the question temporal scope, so version_is_eligible used the current-only default and rejected historical citations."
+  },
+  "p0_generalization": "PASSED",
+  "p1_targeted": "FAILED_FORMAL_GATE",
+  "plan_hash_rebase": "PASSED_60_OF_60",
+  "production_action_taken": false,
+  "release_decision": "NOT_READY_FOR_PRODUCTION",
+  "timestamp": "2026-08-20T18:15:14.013453+00:00",
+  "verdict": "PIPELINE_FAILED_P1_CONFIRMATION"
+}

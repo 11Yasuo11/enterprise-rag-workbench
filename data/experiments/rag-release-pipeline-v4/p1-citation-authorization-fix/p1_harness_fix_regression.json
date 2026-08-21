@@ -1,0 +1,16 @@
+{
+  "api_calls": 0,
+  "atomic_requirement_contract": "ATOMIC_REQUIREMENT_CONTRACT_PASSED",
+  "citation_authorization_tests": "10/10",
+  "frozen_p1_rescore": "5/5",
+  "frozen_p1_rescore_authorized_citations": "8/8",
+  "full_unit_suite": "PASS",
+  "git_diff_check": "PASS",
+  "p0_planner": "60/60",
+  "p1_temporal": "P1_VERSION_TEMPORAL_PASSED",
+  "ruff_scope": "src tests scripts",
+  "ruff": "PASS",
+  "safety_regression": "PASS",
+  "scorer_unsupported_after_fix": 0,
+  "passed": true
+}

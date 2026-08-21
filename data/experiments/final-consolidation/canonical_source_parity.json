@@ -1,0 +1,92 @@
+{
+  "experiment_id": "FINAL_RAG_CONSOLIDATION_AND_GITHUB_INTERVIEW_READY_V1",
+  "timestamp": "2026-08-21T09:31:43.402275+00:00",
+  "method": "symbol_presence_plus_shared_file_hash",
+  "v14_eval_entrypoint": "scripts/run_rag_release_pipeline_v4_evaluation.py (used by V14 runner)",
+  "canonical_runtime_entrypoint": "src/rag_workbench/runtime/canonical_runtime.py",
+  "web_entrypoint": "POST /rag/query -> CanonicalRagRuntime",
+  "eval_api_entrypoint": "POST /eval/run -> EvaluationRunner(CanonicalRagRuntime)",
+  "shared_file_hashes": {
+    "src/rag_workbench/experiments/atomic_requirement_contract_v1/verifier.py": "2c65cf4e7b629ecac0c13d04a58feae41bc876c0804d5e2a412dfe772713f923",
+    "src/rag_workbench/experiments/atomic_requirement_contract_v1/deterministic_support.py": "0af068393aaf739db98755c7aa9f8c7d6ff137ac98cd48bf76832c0179a3f0d1",
+    "src/rag_workbench/experiments/atomic_requirement_contract_v1/evidence_mapping.py": "56a927128b01117bc9536742241044accb33a137544c68cfb0e139779a5b770d",
+    "src/rag_workbench/experiments/atomic_requirement_contract_v1/contract.py": "9b116dbfee8e385ad6bef69f7ac618605ed516eb28aaa5c52ff5fb09b6ebddbf",
+    "src/rag_workbench/safety/question_injection_guard_v2.py": "9306ace46b69e1aacaa60f8fb4258192c0c179430d267451d6d3c8c91910dcdd"
+  },
+  "capability_parity": [
+    {
+      "symbol": "requirement_scoped_evidence_packets",
+      "v14_eval_runner": true,
+      "canonical_runtime": true,
+      "parity": true,
+      "note": "direct_symbol"
+    },
+    {
+      "symbol": "deterministic_support_complete",
+      "v14_eval_runner": true,
+      "canonical_runtime": true,
+      "parity": true,
+      "note": "direct_symbol"
+    },
+    {
+      "symbol": "is_question_injection_v2",
+      "v14_eval_runner": true,
+      "canonical_runtime": true,
+      "parity": true,
+      "note": "direct_symbol"
+    },
+    {
+      "symbol": "SelectiveRiskRouter",
+      "v14_eval_runner": true,
+      "canonical_runtime": true,
+      "parity": true,
+      "note": "direct_symbol"
+    },
+    {
+      "symbol": "DeterministicVersionResolver",
+      "v14_eval_runner": true,
+      "canonical_runtime": true,
+      "parity": true,
+      "note": "direct_symbol"
+    },
+    {
+      "symbol": "assemble_frozen_plan",
+      "v14_eval_runner": true,
+      "canonical_runtime": true,
+      "parity": true,
+      "note": "direct_symbol"
+    },
+    {
+      "symbol": "decompose_question",
+      "v14_eval_runner": true,
+      "canonical_runtime": true,
+      "parity": true,
+      "note": "direct_symbol"
+    },
+    {
+      "symbol": "validate_verifier_result",
+      "v14_eval_runner": true,
+      "canonical_runtime": true,
+      "parity": true,
+      "note": "direct_symbol"
+    },
+    {
+      "symbol": "extract_direct_support_mappings",
+      "v14_eval_runner": true,
+      "canonical_runtime": true,
+      "parity": true,
+      "note": "direct_symbol"
+    },
+    {
+      "symbol": "requirement_packet_terms",
+      "v14_eval_runner": true,
+      "canonical_runtime": true,
+      "parity": true,
+      "note": "indirect_via_packets_same_verifier_module"
+    }
+  ],
+  "year_token_runtime_check": {
+    "retains_2025": true
+  },
+  "UNEXPLAINED_IMPLEMENTATION_SKEW": 0
+}

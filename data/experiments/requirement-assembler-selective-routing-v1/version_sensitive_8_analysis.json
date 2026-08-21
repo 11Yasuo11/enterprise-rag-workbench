@@ -1,0 +1,722 @@
+{
+  "cases": [
+    {
+      "candidate_versions": [
+        {
+          "authorized": true,
+          "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+          "document_id": "recovery-runbook-east",
+          "document_version_id": "7df73739-827d-45b9-92fc-392ca40af088",
+          "effective_from": "2026-03-05T00:00:00+00:00",
+          "effective_to": null,
+          "is_active": true,
+          "region": "east",
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "The east-region customer API recovery sequence uses runbook code OPS-REC-E17 . Failover targets the eu-central standby cluster . The recovery drill runs on the first Wednesday of each quarter .",
+          "version": "1.0"
+        },
+        {
+          "authorized": true,
+          "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+          "document_id": "recovery-runbook-west",
+          "document_version_id": "687b9971-bd2b-44c9-ba4a-83f68eb86ac2",
+          "effective_from": "2026-03-05T00:00:00+00:00",
+          "effective_to": null,
+          "is_active": true,
+          "region": "west",
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29 . Failover targets the us-east standby cluster . The recovery drill runs on the second Wednesday of each quarter .",
+          "version": "1.0"
+        }
+      ],
+      "classification": "DETERMINISTICALLY_RESOLVABLE",
+      "expected_active_evidence_evaluation_only": [
+        {
+          "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+          "document_id": "recovery-runbook-east",
+          "span": "OPS-REC-E17"
+        }
+      ],
+      "luna_historical_decision": "ABSTAIN",
+      "luna_historical_requirements": [
+        {
+          "chunk_id": null,
+          "cross_encoder_rank": null,
+          "document_id": null,
+          "requirement": "When release control selects the currently active operational handbook revision",
+          "requirement_id": "R1",
+          "supported": false,
+          "supporting_span": null
+        },
+        {
+          "chunk_id": null,
+          "cross_encoder_rank": null,
+          "document_id": null,
+          "requirement": "report the east-failover recovery token",
+          "requirement_id": "R2",
+          "supported": false,
+          "supporting_span": null
+        }
+      ],
+      "query_id": "p5k_version_sensitive_079",
+      "question": "PhaseK audit token version_sensitive-079 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. When release control selects the currently active operational handbook revision, report the east-failover recovery token.",
+      "requested_region": "east",
+      "requested_temporal_semantics": "CURRENT",
+      "resolution": {
+        "candidate": {
+          "authorized": true,
+          "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+          "document_id": "recovery-runbook-east",
+          "document_version_id": "7df73739-827d-45b9-92fc-392ca40af088",
+          "effective_from": "2026-03-05 00:00:00+00:00",
+          "effective_to": null,
+          "is_active": true,
+          "region": "east",
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "The east-region customer API recovery sequence uses runbook code OPS-REC-E17 . Failover targets the eu-central standby cluster . The recovery drill runs on the first Wednesday of each quarter .",
+          "version": "1.0"
+        },
+        "considered_count": 2,
+        "reason": "unique valid candidate",
+        "requested_region": "east",
+        "requested_version": null,
+        "status": "VERSION_RESOLVED",
+        "temporal_semantics": "CURRENT",
+        "valid_count": 1
+      },
+      "sol_historical_decision": "ABSTAIN"
+    },
+    {
+      "candidate_versions": [
+        {
+          "authorized": true,
+          "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+          "document_id": "recovery-runbook-east",
+          "document_version_id": "7df73739-827d-45b9-92fc-392ca40af088",
+          "effective_from": "2026-03-05T00:00:00+00:00",
+          "effective_to": null,
+          "is_active": true,
+          "region": "east",
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "The east-region customer API recovery sequence uses runbook code OPS-REC-E17 . Failover targets the eu-central standby cluster . The recovery drill runs on the first Wednesday of each quarter .",
+          "version": "1.0"
+        },
+        {
+          "authorized": true,
+          "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+          "document_id": "recovery-runbook-west",
+          "document_version_id": "687b9971-bd2b-44c9-ba4a-83f68eb86ac2",
+          "effective_from": "2026-03-05T00:00:00+00:00",
+          "effective_to": null,
+          "is_active": true,
+          "region": "west",
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29 . Failover targets the us-east standby cluster . The recovery drill runs on the second Wednesday of each quarter .",
+          "version": "1.0"
+        }
+      ],
+      "classification": "DETERMINISTICALLY_RESOLVABLE",
+      "expected_active_evidence_evaluation_only": [
+        {
+          "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+          "document_id": "recovery-runbook-west",
+          "span": "OPS-REC-W29"
+        }
+      ],
+      "luna_historical_decision": "ABSTAIN",
+      "luna_historical_requirements": [
+        {
+          "chunk_id": null,
+          "cross_encoder_rank": null,
+          "document_id": null,
+          "requirement": "When release control selects the currently active operational handbook revision",
+          "requirement_id": "R1",
+          "supported": false,
+          "supporting_span": null
+        },
+        {
+          "chunk_id": null,
+          "cross_encoder_rank": null,
+          "document_id": null,
+          "requirement": "report the west-failover recovery token",
+          "requirement_id": "R2",
+          "supported": false,
+          "supporting_span": null
+        }
+      ],
+      "query_id": "p5k_version_sensitive_080",
+      "question": "PhaseK audit token version_sensitive-080 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. When release control selects the currently active operational handbook revision, report the west-failover recovery token.",
+      "requested_region": "west",
+      "requested_temporal_semantics": "CURRENT",
+      "resolution": {
+        "candidate": {
+          "authorized": true,
+          "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+          "document_id": "recovery-runbook-west",
+          "document_version_id": "687b9971-bd2b-44c9-ba4a-83f68eb86ac2",
+          "effective_from": "2026-03-05 00:00:00+00:00",
+          "effective_to": null,
+          "is_active": true,
+          "region": "west",
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29 . Failover targets the us-east standby cluster . The recovery drill runs on the second Wednesday of each quarter .",
+          "version": "1.0"
+        },
+        "considered_count": 2,
+        "reason": "unique valid candidate",
+        "requested_region": "west",
+        "requested_version": null,
+        "status": "VERSION_RESOLVED",
+        "temporal_semantics": "CURRENT",
+        "valid_count": 1
+      },
+      "sol_historical_decision": "ABSTAIN"
+    },
+    {
+      "candidate_versions": [
+        {
+          "authorized": true,
+          "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+          "document_id": "recovery-runbook-east",
+          "document_version_id": "7df73739-827d-45b9-92fc-392ca40af088",
+          "effective_from": "2026-03-05T00:00:00+00:00",
+          "effective_to": null,
+          "is_active": true,
+          "region": "east",
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "The east-region customer API recovery sequence uses runbook code OPS-REC-E17 . Failover targets the eu-central standby cluster . The recovery drill runs on the first Wednesday of each quarter .",
+          "version": "1.0"
+        },
+        {
+          "authorized": true,
+          "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+          "document_id": "recovery-runbook-west",
+          "document_version_id": "687b9971-bd2b-44c9-ba4a-83f68eb86ac2",
+          "effective_from": "2026-03-05T00:00:00+00:00",
+          "effective_to": null,
+          "is_active": true,
+          "region": "west",
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29 . Failover targets the us-east standby cluster . The recovery drill runs on the second Wednesday of each quarter .",
+          "version": "1.0"
+        }
+      ],
+      "classification": "DETERMINISTICALLY_RESOLVABLE",
+      "expected_active_evidence_evaluation_only": [
+        {
+          "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+          "document_id": "recovery-runbook-east",
+          "span": "OPS-REC-E17"
+        }
+      ],
+      "luna_historical_decision": "ABSTAIN",
+      "luna_historical_requirements": [
+        {
+          "chunk_id": null,
+          "cross_encoder_rank": null,
+          "document_id": null,
+          "requirement": "When release control selects the currently active operational handbook revision",
+          "requirement_id": "R1",
+          "supported": false,
+          "supporting_span": null
+        },
+        {
+          "chunk_id": null,
+          "cross_encoder_rank": null,
+          "document_id": null,
+          "requirement": "report the east-failover recovery token",
+          "requirement_id": "R2",
+          "supported": false,
+          "supporting_span": null
+        }
+      ],
+      "query_id": "p5k_version_sensitive_081",
+      "question": "PhaseK audit token version_sensitive-081 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. When release control selects the currently active operational handbook revision, report the east-failover recovery token.",
+      "requested_region": "east",
+      "requested_temporal_semantics": "CURRENT",
+      "resolution": {
+        "candidate": {
+          "authorized": true,
+          "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+          "document_id": "recovery-runbook-east",
+          "document_version_id": "7df73739-827d-45b9-92fc-392ca40af088",
+          "effective_from": "2026-03-05 00:00:00+00:00",
+          "effective_to": null,
+          "is_active": true,
+          "region": "east",
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "The east-region customer API recovery sequence uses runbook code OPS-REC-E17 . Failover targets the eu-central standby cluster . The recovery drill runs on the first Wednesday of each quarter .",
+          "version": "1.0"
+        },
+        "considered_count": 2,
+        "reason": "unique valid candidate",
+        "requested_region": "east",
+        "requested_version": null,
+        "status": "VERSION_RESOLVED",
+        "temporal_semantics": "CURRENT",
+        "valid_count": 1
+      },
+      "sol_historical_decision": "ABSTAIN"
+    },
+    {
+      "candidate_versions": [
+        {
+          "authorized": true,
+          "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+          "document_id": "recovery-runbook-east",
+          "document_version_id": "7df73739-827d-45b9-92fc-392ca40af088",
+          "effective_from": "2026-03-05T00:00:00+00:00",
+          "effective_to": null,
+          "is_active": true,
+          "region": "east",
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "The east-region customer API recovery sequence uses runbook code OPS-REC-E17 . Failover targets the eu-central standby cluster . The recovery drill runs on the first Wednesday of each quarter .",
+          "version": "1.0"
+        },
+        {
+          "authorized": true,
+          "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+          "document_id": "recovery-runbook-west",
+          "document_version_id": "687b9971-bd2b-44c9-ba4a-83f68eb86ac2",
+          "effective_from": "2026-03-05T00:00:00+00:00",
+          "effective_to": null,
+          "is_active": true,
+          "region": "west",
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29 . Failover targets the us-east standby cluster . The recovery drill runs on the second Wednesday of each quarter .",
+          "version": "1.0"
+        }
+      ],
+      "classification": "DETERMINISTICALLY_RESOLVABLE",
+      "expected_active_evidence_evaluation_only": [
+        {
+          "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+          "document_id": "recovery-runbook-west",
+          "span": "OPS-REC-W29"
+        }
+      ],
+      "luna_historical_decision": "ABSTAIN",
+      "luna_historical_requirements": [
+        {
+          "chunk_id": null,
+          "cross_encoder_rank": null,
+          "document_id": null,
+          "requirement": "When release control selects the currently active operational handbook revision",
+          "requirement_id": "R1",
+          "supported": false,
+          "supporting_span": null
+        },
+        {
+          "chunk_id": null,
+          "cross_encoder_rank": null,
+          "document_id": null,
+          "requirement": "report the west-failover recovery token",
+          "requirement_id": "R2",
+          "supported": false,
+          "supporting_span": null
+        }
+      ],
+      "query_id": "p5k_version_sensitive_082",
+      "question": "PhaseK audit token version_sensitive-082 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. When release control selects the currently active operational handbook revision, report the west-failover recovery token.",
+      "requested_region": "west",
+      "requested_temporal_semantics": "CURRENT",
+      "resolution": {
+        "candidate": {
+          "authorized": true,
+          "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+          "document_id": "recovery-runbook-west",
+          "document_version_id": "687b9971-bd2b-44c9-ba4a-83f68eb86ac2",
+          "effective_from": "2026-03-05 00:00:00+00:00",
+          "effective_to": null,
+          "is_active": true,
+          "region": "west",
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29 . Failover targets the us-east standby cluster . The recovery drill runs on the second Wednesday of each quarter .",
+          "version": "1.0"
+        },
+        "considered_count": 2,
+        "reason": "unique valid candidate",
+        "requested_region": "west",
+        "requested_version": null,
+        "status": "VERSION_RESOLVED",
+        "temporal_semantics": "CURRENT",
+        "valid_count": 1
+      },
+      "sol_historical_decision": "ABSTAIN"
+    },
+    {
+      "candidate_versions": [
+        {
+          "authorized": true,
+          "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+          "document_id": "recovery-runbook-east",
+          "document_version_id": "7df73739-827d-45b9-92fc-392ca40af088",
+          "effective_from": "2026-03-05T00:00:00+00:00",
+          "effective_to": null,
+          "is_active": true,
+          "region": "east",
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "The east-region customer API recovery sequence uses runbook code OPS-REC-E17 . Failover targets the eu-central standby cluster . The recovery drill runs on the first Wednesday of each quarter .",
+          "version": "1.0"
+        },
+        {
+          "authorized": true,
+          "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+          "document_id": "recovery-runbook-west",
+          "document_version_id": "687b9971-bd2b-44c9-ba4a-83f68eb86ac2",
+          "effective_from": "2026-03-05T00:00:00+00:00",
+          "effective_to": null,
+          "is_active": true,
+          "region": "west",
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29 . Failover targets the us-east standby cluster . The recovery drill runs on the second Wednesday of each quarter .",
+          "version": "1.0"
+        }
+      ],
+      "classification": "DETERMINISTICALLY_RESOLVABLE",
+      "expected_active_evidence_evaluation_only": [
+        {
+          "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+          "document_id": "recovery-runbook-east",
+          "span": "OPS-REC-E17"
+        }
+      ],
+      "luna_historical_decision": "ABSTAIN",
+      "luna_historical_requirements": [
+        {
+          "chunk_id": null,
+          "cross_encoder_rank": null,
+          "document_id": null,
+          "requirement": "When release control selects the currently active operational handbook revision",
+          "requirement_id": "R1",
+          "supported": false,
+          "supporting_span": null
+        },
+        {
+          "chunk_id": null,
+          "cross_encoder_rank": null,
+          "document_id": null,
+          "requirement": "report the east-failover recovery token",
+          "requirement_id": "R2",
+          "supported": false,
+          "supporting_span": null
+        }
+      ],
+      "query_id": "p5k_version_sensitive_083",
+      "question": "PhaseK audit token version_sensitive-083 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. When release control selects the currently active operational handbook revision, report the east-failover recovery token.",
+      "requested_region": "east",
+      "requested_temporal_semantics": "CURRENT",
+      "resolution": {
+        "candidate": {
+          "authorized": true,
+          "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+          "document_id": "recovery-runbook-east",
+          "document_version_id": "7df73739-827d-45b9-92fc-392ca40af088",
+          "effective_from": "2026-03-05 00:00:00+00:00",
+          "effective_to": null,
+          "is_active": true,
+          "region": "east",
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "The east-region customer API recovery sequence uses runbook code OPS-REC-E17 . Failover targets the eu-central standby cluster . The recovery drill runs on the first Wednesday of each quarter .",
+          "version": "1.0"
+        },
+        "considered_count": 2,
+        "reason": "unique valid candidate",
+        "requested_region": "east",
+        "requested_version": null,
+        "status": "VERSION_RESOLVED",
+        "temporal_semantics": "CURRENT",
+        "valid_count": 1
+      },
+      "sol_historical_decision": "ABSTAIN"
+    },
+    {
+      "candidate_versions": [
+        {
+          "authorized": true,
+          "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+          "document_id": "recovery-runbook-east",
+          "document_version_id": "7df73739-827d-45b9-92fc-392ca40af088",
+          "effective_from": "2026-03-05T00:00:00+00:00",
+          "effective_to": null,
+          "is_active": true,
+          "region": "east",
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "The east-region customer API recovery sequence uses runbook code OPS-REC-E17 . Failover targets the eu-central standby cluster . The recovery drill runs on the first Wednesday of each quarter .",
+          "version": "1.0"
+        },
+        {
+          "authorized": true,
+          "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+          "document_id": "recovery-runbook-west",
+          "document_version_id": "687b9971-bd2b-44c9-ba4a-83f68eb86ac2",
+          "effective_from": "2026-03-05T00:00:00+00:00",
+          "effective_to": null,
+          "is_active": true,
+          "region": "west",
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29 . Failover targets the us-east standby cluster . The recovery drill runs on the second Wednesday of each quarter .",
+          "version": "1.0"
+        }
+      ],
+      "classification": "DETERMINISTICALLY_RESOLVABLE",
+      "expected_active_evidence_evaluation_only": [
+        {
+          "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+          "document_id": "recovery-runbook-west",
+          "span": "OPS-REC-W29"
+        }
+      ],
+      "luna_historical_decision": "ABSTAIN",
+      "luna_historical_requirements": [
+        {
+          "chunk_id": null,
+          "cross_encoder_rank": null,
+          "document_id": null,
+          "requirement": "When release control selects the currently active operational handbook revision",
+          "requirement_id": "R1",
+          "supported": false,
+          "supporting_span": null
+        },
+        {
+          "chunk_id": null,
+          "cross_encoder_rank": null,
+          "document_id": null,
+          "requirement": "report the west-failover recovery token",
+          "requirement_id": "R2",
+          "supported": false,
+          "supporting_span": null
+        }
+      ],
+      "query_id": "p5k_version_sensitive_084",
+      "question": "PhaseK audit token version_sensitive-084 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. When release control selects the currently active operational handbook revision, report the west-failover recovery token.",
+      "requested_region": "west",
+      "requested_temporal_semantics": "CURRENT",
+      "resolution": {
+        "candidate": {
+          "authorized": true,
+          "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+          "document_id": "recovery-runbook-west",
+          "document_version_id": "687b9971-bd2b-44c9-ba4a-83f68eb86ac2",
+          "effective_from": "2026-03-05 00:00:00+00:00",
+          "effective_to": null,
+          "is_active": true,
+          "region": "west",
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29 . Failover targets the us-east standby cluster . The recovery drill runs on the second Wednesday of each quarter .",
+          "version": "1.0"
+        },
+        "considered_count": 2,
+        "reason": "unique valid candidate",
+        "requested_region": "west",
+        "requested_version": null,
+        "status": "VERSION_RESOLVED",
+        "temporal_semantics": "CURRENT",
+        "valid_count": 1
+      },
+      "sol_historical_decision": "ABSTAIN"
+    },
+    {
+      "candidate_versions": [
+        {
+          "authorized": true,
+          "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+          "document_id": "recovery-runbook-east",
+          "document_version_id": "7df73739-827d-45b9-92fc-392ca40af088",
+          "effective_from": "2026-03-05T00:00:00+00:00",
+          "effective_to": null,
+          "is_active": true,
+          "region": "east",
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "The east-region customer API recovery sequence uses runbook code OPS-REC-E17 . Failover targets the eu-central standby cluster . The recovery drill runs on the first Wednesday of each quarter .",
+          "version": "1.0"
+        },
+        {
+          "authorized": true,
+          "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+          "document_id": "recovery-runbook-west",
+          "document_version_id": "687b9971-bd2b-44c9-ba4a-83f68eb86ac2",
+          "effective_from": "2026-03-05T00:00:00+00:00",
+          "effective_to": null,
+          "is_active": true,
+          "region": "west",
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29 . Failover targets the us-east standby cluster . The recovery drill runs on the second Wednesday of each quarter .",
+          "version": "1.0"
+        }
+      ],
+      "classification": "DETERMINISTICALLY_RESOLVABLE",
+      "expected_active_evidence_evaluation_only": [
+        {
+          "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+          "document_id": "recovery-runbook-east",
+          "span": "OPS-REC-E17"
+        }
+      ],
+      "luna_historical_decision": "ABSTAIN",
+      "luna_historical_requirements": [
+        {
+          "chunk_id": null,
+          "cross_encoder_rank": null,
+          "document_id": null,
+          "requirement": "When release control selects the currently active operational handbook revision",
+          "requirement_id": "R1",
+          "supported": false,
+          "supporting_span": null
+        },
+        {
+          "chunk_id": null,
+          "cross_encoder_rank": null,
+          "document_id": null,
+          "requirement": "report the east-failover recovery token",
+          "requirement_id": "R2",
+          "supported": false,
+          "supporting_span": null
+        }
+      ],
+      "query_id": "p5k_version_sensitive_085",
+      "question": "PhaseK audit token version_sensitive-085 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. When release control selects the currently active operational handbook revision, report the east-failover recovery token.",
+      "requested_region": "east",
+      "requested_temporal_semantics": "CURRENT",
+      "resolution": {
+        "candidate": {
+          "authorized": true,
+          "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+          "document_id": "recovery-runbook-east",
+          "document_version_id": "7df73739-827d-45b9-92fc-392ca40af088",
+          "effective_from": "2026-03-05 00:00:00+00:00",
+          "effective_to": null,
+          "is_active": true,
+          "region": "east",
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "The east-region customer API recovery sequence uses runbook code OPS-REC-E17 . Failover targets the eu-central standby cluster . The recovery drill runs on the first Wednesday of each quarter .",
+          "version": "1.0"
+        },
+        "considered_count": 2,
+        "reason": "unique valid candidate",
+        "requested_region": "east",
+        "requested_version": null,
+        "status": "VERSION_RESOLVED",
+        "temporal_semantics": "CURRENT",
+        "valid_count": 1
+      },
+      "sol_historical_decision": "ABSTAIN"
+    },
+    {
+      "candidate_versions": [
+        {
+          "authorized": true,
+          "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+          "document_id": "recovery-runbook-east",
+          "document_version_id": "7df73739-827d-45b9-92fc-392ca40af088",
+          "effective_from": "2026-03-05T00:00:00+00:00",
+          "effective_to": null,
+          "is_active": true,
+          "region": "east",
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "The east-region customer API recovery sequence uses runbook code OPS-REC-E17 . Failover targets the eu-central standby cluster . The recovery drill runs on the first Wednesday of each quarter .",
+          "version": "1.0"
+        },
+        {
+          "authorized": true,
+          "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+          "document_id": "recovery-runbook-west",
+          "document_version_id": "687b9971-bd2b-44c9-ba4a-83f68eb86ac2",
+          "effective_from": "2026-03-05T00:00:00+00:00",
+          "effective_to": null,
+          "is_active": true,
+          "region": "west",
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29 . Failover targets the us-east standby cluster . The recovery drill runs on the second Wednesday of each quarter .",
+          "version": "1.0"
+        }
+      ],
+      "classification": "DETERMINISTICALLY_RESOLVABLE",
+      "expected_active_evidence_evaluation_only": [
+        {
+          "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+          "document_id": "recovery-runbook-west",
+          "span": "OPS-REC-W29"
+        }
+      ],
+      "luna_historical_decision": "ABSTAIN",
+      "luna_historical_requirements": [
+        {
+          "chunk_id": null,
+          "cross_encoder_rank": null,
+          "document_id": null,
+          "requirement": "When release control selects the currently active operational handbook revision",
+          "requirement_id": "R1",
+          "supported": false,
+          "supporting_span": null
+        },
+        {
+          "chunk_id": null,
+          "cross_encoder_rank": null,
+          "document_id": null,
+          "requirement": "report the west-failover recovery token",
+          "requirement_id": "R2",
+          "supported": false,
+          "supporting_span": null
+        }
+      ],
+      "query_id": "p5k_version_sensitive_086",
+      "question": "PhaseK audit token version_sensitive-086 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. When release control selects the currently active operational handbook revision, report the west-failover recovery token.",
+      "requested_region": "west",
+      "requested_temporal_semantics": "CURRENT",
+      "resolution": {
+        "candidate": {
+          "authorized": true,
+          "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+          "document_id": "recovery-runbook-west",
+          "document_version_id": "687b9971-bd2b-44c9-ba4a-83f68eb86ac2",
+          "effective_from": "2026-03-05 00:00:00+00:00",
+          "effective_to": null,
+          "is_active": true,
+          "region": "west",
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29 . Failover targets the us-east standby cluster . The recovery drill runs on the second Wednesday of each quarter .",
+          "version": "1.0"
+        },
+        "considered_count": 2,
+        "reason": "unique valid candidate",
+        "requested_region": "west",
+        "requested_version": null,
+        "status": "VERSION_RESOLVED",
+        "temporal_semantics": "CURRENT",
+        "valid_count": 1
+      },
+      "sol_historical_decision": "ABSTAIN"
+    }
+  ],
+  "classification_counts": {
+    "DETERMINISTICALLY_RESOLVABLE": 8
+  },
+  "experiment_id": "REQUIREMENT_ASSEMBLER_SELECTIVE_ROUTING_V1",
+  "n": 8,
+  "new_openai_calls": 0
+}

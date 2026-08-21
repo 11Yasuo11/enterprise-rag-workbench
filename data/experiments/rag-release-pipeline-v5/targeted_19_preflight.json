@@ -1,0 +1,37 @@
+{
+  "all_embedding_cache_hits": true,
+  "all_plans_match_canonical_baseline": true,
+  "api_calls": 0,
+  "budget": {
+    "hard_cap_usd": 0.2,
+    "initial_model_cost_usd": 0.02011,
+    "passed": true,
+    "projected_max_usd": 0.16410999999999998,
+    "sol_reserve_calls": 4,
+    "sol_reserve_cost_usd": 0.144
+  },
+  "case_count": 19,
+  "case_ids": [
+    "fresh_v1_009",
+    "fresh_v1_011",
+    "fresh_v1_013",
+    "fresh_v1_015",
+    "fresh_v1_016",
+    "fresh_v1_017",
+    "fresh_v1_022",
+    "fresh_v1_023",
+    "fresh_v1_025",
+    "fresh_v1_028",
+    "fresh_v1_029",
+    "fresh_v1_030",
+    "fresh_v1_031",
+    "fresh_v1_032",
+    "fresh_v1_033",
+    "fresh_v1_035",
+    "fresh_v1_036",
+    "fresh_v1_040",
+    "fresh_v1_044"
+  ],
+  "experiment_id": "RAG_RELEASE_PIPELINE_V5_TARGETED_19_REAL_API",
+  "timestamp": "2026-08-20T19:21:47.046284+00:00"
+}

@@ -1,0 +1,2 @@
+{"calls":{"embedding":0,"luna":5,"sol":0},"cost_usd":0.0017676200000000001,"experiment_id":"P1_VERSION_TEMPORAL_TARGETED_REAL_API_CONFIRMATION_V2","final_generation_llm_calls":0,"status":"PASS","tokens":{"cached_input":3391,"input":4888,"output":1167}}
+{"calls":{"embedding":0,"luna":17,"sol":0},"cost_usd":0.0148298,"detailed_ledger":"targeted-19/total_api_cost_ledger.jsonl","experiment_id":"RAG_RELEASE_PIPELINE_V4_TARGETED_19_REAL_API","final_generation_llm_calls":0,"provider_retries":0,"status":"FAILED_GATE_18_OF_19","tokens":{"cached_input":0,"input":37132,"output":4703}}

@@ -1,0 +1,43 @@
+{
+  "cost": {
+    "actual_usd": 0,
+    "hard_cap_usd": 0.1,
+    "passed": true
+  },
+  "experiment_id": "RAG_RELEASE_PIPELINE_V8_TARGETED_FOUR_REAL_API",
+  "final_generation_llm_calls": 0,
+  "first_causal_failure": null,
+  "latency": {
+    "median_ms": 0.2913749995059334,
+    "p95_ms": 4.11970799905248
+  },
+  "luna_calls": 0,
+  "passed": true,
+  "quality": {
+    "citation_completeness": 1.0,
+    "citation_correctness": 1.0,
+    "citation_validity": 1.0,
+    "contract_mismatches": 0,
+    "correct": 4,
+    "incorrect_abstentions": 0,
+    "requirement_completeness": 1.0,
+    "total": 4,
+    "unsupported_answers": 0,
+    "version_correctness": 1.0
+  },
+  "routing": {
+    "DETERMINISTIC": 4
+  },
+  "runtime_exceptions": 0,
+  "safety": {
+    "acl_violations": 0,
+    "invalid_citations": 0,
+    "prompt_injection_regressions": 0,
+    "region_violations": 0,
+    "restricted_data_leaks": 0,
+    "tenant_violations": 0
+  },
+  "sol_calls": 0,
+  "timestamp": "2026-08-21T00:11:49.745369+00:00",
+  "verdict": "TARGETED_FOUR_PASSED"
+}

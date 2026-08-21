@@ -1,0 +1,21 @@
+{
+  "valid": true,
+  "count": 120,
+  "distribution": {
+    "single_document": 10,
+    "two_document": 16,
+    "three_document": 16,
+    "same_document_multi_chunk": 10,
+    "semantic_paraphrase": 10,
+    "exact_identifier": 8,
+    "near_duplicate": 8,
+    "version_sensitive": 8,
+    "region_sensitive": 6,
+    "numeric_date_constraint": 8,
+    "acl_should_abstain": 5,
+    "tenant_isolation": 5,
+    "prompt_injection": 5,
+    "unsupported_no_answer": 5
+  },
+  "errors": []
+}

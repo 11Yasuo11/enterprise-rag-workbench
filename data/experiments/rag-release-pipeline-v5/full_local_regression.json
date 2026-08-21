@@ -1,0 +1,45 @@
+{
+  "api_calls": {
+    "embedding": 0,
+    "luna": 0,
+    "openai": 0,
+    "sol": 0
+  },
+  "checks": {
+    "atomic_requirement_contract": "PASS",
+    "citation_authorization": "PASS",
+    "focused_p0_p5": "PASS",
+    "full_unit_suite": "PASS",
+    "git_diff_check": "PASS",
+    "p0_planner": "PASS_60_OF_60",
+    "packet_matcher": "PASS",
+    "p1_temporal_version": "PASS",
+    "p2_per_document_versions": "PASS",
+    "p3_canonical_decision": "PASS",
+    "p4_constraint_inference": "PASS",
+    "p5_suspicious_abstain": "PASS",
+    "router": "PASS",
+    "ruff": "PASS"
+  },
+  "cost_usd": 0.0,
+  "passed": true,
+  "protected_groups": {
+    "acl_allow": "3/3",
+    "acl_deny": "3/3",
+    "correct_abstentions": "20/20",
+    "prompt_injection": "4/4",
+    "scorer_normalization": "4/4",
+    "single_semantic": "8/8",
+    "three_document": "16/16",
+    "unanswerable": "6/6",
+    "version_sensitive": "8/8"
+  },
+  "targeted_19_preflight": {
+    "all_embedding_cache_hits": true,
+    "all_plans_match_canonical_baseline": true,
+    "case_count": 19,
+    "hard_cap_usd": 0.2,
+    "projected_max_usd": 0.16410999999999998
+  },
+  "verdict": "FULL_ZERO_API_LOCAL_REGRESSION_PASSED"
+}

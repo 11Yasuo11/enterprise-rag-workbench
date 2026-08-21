@@ -1,0 +1,44 @@
+{
+  "cost": {
+    "fresh_v2_regression_usd": 0.1341727,
+    "fresh_v3_usd": 0.0,
+    "targeted_four_usd": 0.0,
+    "total_v8_cap_usd": 0.6,
+    "total_v8_usd": 0.1341727
+  },
+  "final_status": "NOT_READY_FOR_PRODUCTION",
+  "fresh_v2_regression": {
+    "failure_code": "TARGETED_FOUR_SOL_CALL_LIMIT",
+    "gold_loaded": false,
+    "metrics_computed": false,
+    "prediction_freeze_created": false,
+    "predictions_persisted": false,
+    "runtime_exceptions": 1,
+    "status": "FAILED"
+  },
+  "fresh_v3": "NOT_CREATED_OR_RUN_AFTER_MANDATORY_V2_GATE_FAILURE",
+  "local": {
+    "full_regression": "PASS_549_OF_549",
+    "local_four": "PASS_4_OF_4",
+    "original_19": "PASS_19_OF_19",
+    "v2_11": "PASS_11_OF_11",
+    "v2_runtime_preflight": "PASS_60_OF_60"
+  },
+  "rc": {
+    "dirty_diff_hash": "d279171a35245e20fd55591a6e633888fa01a2d8e6c0e522dc1c6b590f634299",
+    "freeze_id": "RC_FINAL_PRE_API_V8",
+    "git_sha": "6e9741f55dc0436963ea1c0ba30b9a30bccbd207"
+  },
+  "targeted_four": {
+    "citation_completeness": 1.0,
+    "citation_correctness": 1.0,
+    "citation_validity": 1.0,
+    "correct": 4,
+    "luna_calls": 0,
+    "passed": true,
+    "predictions_sha256": "d1871ae5cd81de288fe028631ac8cf6dd605366c0c805c4dcdfbfd9871bb5782",
+    "sol_calls": 0,
+    "total": 4
+  },
+  "verdict": "PIPELINE_V8_FAILED_V2_REGRESSION"
+}

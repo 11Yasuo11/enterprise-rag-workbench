@@ -1,0 +1,24 @@
+{
+  "experiment_id": "FINAL_RAG_CONSOLIDATION_AND_GITHUB_INTERVIEW_READY_V1",
+  "timestamp": "2026-08-21T09:29:50.331420+00:00",
+  "mechanism": "NO_GIT_MERGE_REQUIRED",
+  "rationale": "Both agents already coexist in one dirty worktree. Consolidation = prove shared modules, revalidate, update docs, hygiene, commit.",
+  "steps": [
+    "Keep verifier.py V14 year-token fix unchanged",
+    "Keep CanonicalRagRuntime + ProductionRagConfig unchanged unless tests fail",
+    "Prove source parity hashes between V14 eval runner imports and CanonicalRagRuntime imports",
+    "Run V14 unit/local regression (zero-API first)",
+    "Run production revalidation minimum suite",
+    "Rewrite README interview-first; mark historical vs current",
+    "gitignore .local/artifacts/zips as needed; do not delete research artifacts",
+    "Commit on chore/repository-hygiene-cleanup; push only if safe"
+  ],
+  "do_not": [
+    "Blind file overwrite",
+    "Restore blanket single-version zero-overlap fill",
+    "Re-embed if index valid",
+    "Spend >$0.10",
+    "Merge to main",
+    "Deploy"
+  ]
+}

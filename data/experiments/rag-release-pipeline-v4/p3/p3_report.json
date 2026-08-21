@@ -1,0 +1,11 @@
+{
+  "all_statuses_supported": true,
+  "api_calls": 0,
+  "canonical_decision": "GO",
+  "case_id": "fresh_v1_025",
+  "experiment": "P3_VERIFIER_CONSISTENCY",
+  "local_validation_pass": true,
+  "passed": true,
+  "raw_decision": "ABSTAIN",
+  "safety_gates_weakened": false
+}

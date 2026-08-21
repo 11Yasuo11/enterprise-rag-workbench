@@ -1,0 +1,272 @@
+{
+  "config_hash": "80661567320f5e0c714eaac5b858b8b05598a7e0dd6a22945d8cc692c69350a5",
+  "cost": {
+    "adaptive_top20": {
+      "additional_cost_per_incorrect_abstention_rescued_usd": 0.0074904,
+      "cost_per_100_queries_usd": 0.05530933333333333,
+      "incremental_luna_cost_usd": 0.0224712,
+      "input_tokens": 132676,
+      "luna_calls": 42,
+      "median_latency_ms": 9.266416491300333,
+      "new_sol_calls_in_diagnostic": 0,
+      "output_tokens": 15277,
+      "p95_latency_ms": 3075.5065419944003,
+      "recovery_only_median_luna_latency_ms": 2116.2698330008425,
+      "recovery_only_p95_luna_latency_ms": 2555.7235409942223,
+      "sol_calls": 110,
+      "sol_decisions_reused_from_frozen_reference": 120,
+      "total_api_cost_usd": 0.06637119999999999
+    },
+    "reference_top5": {
+      "cost_per_100_queries_usd": 0.03658333333333333,
+      "input_tokens": 71566,
+      "luna_calls": 0,
+      "median_latency_ms": 7.700937501795124,
+      "output_tokens": 6736,
+      "p95_latency_ms": 1540.378250007052,
+      "sol_calls": 110,
+      "source": "same-commit recorded reference replay",
+      "total_api_cost_usd": 0.043899999999999995
+    }
+  },
+  "fresh_holdout_status": {
+    "promotion_evidence": false,
+    "required_next_step": "Execute the frozen candidate once on a genuinely unseen, QA-checked, independence-validated holdout.",
+    "status": "NOT_RUN"
+  },
+  "fresh_promotion_evidence": "NONE",
+  "historical_unsupported_answer_replay": {
+    "candidate_behavior_unchanged": true,
+    "entered_recovery": 0,
+    "n": 4,
+    "note": "Successful Top-5 paths never enter Top-20 recovery."
+  },
+  "incorrect_abstention_27": {
+    "not_recovered": 24,
+    "recovered": 3
+  },
+  "kind": "DIAGNOSTIC RESULT",
+  "limitations": [
+    "Historical Phase-5KR replay is diagnostic and previously observed.",
+    "No genuinely unseen holdout was available or executed.",
+    "Atomic requirements use a deterministic label-blind clause splitter; evaluator labels are used only for scoring coverage/correctness.",
+    "Reference model usage is reused from frozen decisions, so this run measures incremental Luna cost rather than a fresh baseline Sol bill."
+  ],
+  "promotion_gates_passed_on_diagnostic": true,
+  "quality": {
+    "adaptive_top20": {
+      "category_correctness": {
+        "acl_should_abstain": 1.0,
+        "exact_identifier": 1.0,
+        "near_duplicate": 1.0,
+        "numeric_date_constraint": 0.5,
+        "prompt_injection": 1.0,
+        "region_sensitive": 1.0,
+        "same_document_multi_chunk": 1.0,
+        "semantic_paraphrase": 1.0,
+        "single_document": 1.0,
+        "tenant_isolation": 1.0,
+        "three_document": 0.0,
+        "two_document": 1.0,
+        "unsupported_no_answer": 1.0,
+        "version_sensitive": 0.0
+      },
+      "citation_completeness": 0.9473684210526315,
+      "citation_correctness": 0.9473684210526315,
+      "citation_validity": 1.0,
+      "correct_abstentions": 20,
+      "correct_complete_answers": 72,
+      "f1": 0.8372093023255814,
+      "generator_completeness_given_complete_evidence": 0.9452054794520548,
+      "incorrect_abstentions": 24,
+      "incorrect_answers": 0,
+      "precision": 0.9473684210526315,
+      "recall": 0.75,
+      "scoring_indeterminate": 0,
+      "strict_e2e_accuracy": 0.7666666666666667,
+      "total": 120,
+      "unsupported_answers": 4
+    },
+    "reference_top5": {
+      "category_correctness": {
+        "acl_should_abstain": 1.0,
+        "exact_identifier": 1.0,
+        "near_duplicate": 1.0,
+        "numeric_date_constraint": 0.5,
+        "prompt_injection": 1.0,
+        "region_sensitive": 1.0,
+        "same_document_multi_chunk": 1.0,
+        "semantic_paraphrase": 1.0,
+        "single_document": 0.7,
+        "tenant_isolation": 1.0,
+        "three_document": 0.0,
+        "two_document": 1.0,
+        "unsupported_no_answer": 1.0,
+        "version_sensitive": 0.0
+      },
+      "citation_completeness": 0.9452054794520548,
+      "citation_correctness": 0.9452054794520548,
+      "citation_validity": 1.0,
+      "correct_abstentions": 20,
+      "correct_complete_answers": 69,
+      "f1": 0.8165680473372782,
+      "generator_completeness_given_complete_evidence": 0.8961038961038961,
+      "incorrect_abstentions": 27,
+      "incorrect_answers": 0,
+      "precision": 0.9452054794520548,
+      "recall": 0.71875,
+      "scoring_indeterminate": 0,
+      "strict_e2e_accuracy": 0.7416666666666667,
+      "total": 120,
+      "unsupported_answers": 4
+    }
+  },
+  "ranking_23": {
+    "complete_by_k20": 23,
+    "minimum_k_distribution": {
+      "11-15": 16,
+      "6": 7
+    }
+  },
+  "recovery": {
+    "correct_abstentions_incorrectly_rescued": 0,
+    "incorrect_abstentions_rescued": 3,
+    "luna_abstain": 23,
+    "luna_go": 19,
+    "luna_uncertain": 0,
+    "still_missing_evidence_at_top20": 0,
+    "three_document_cases_rescued": 0,
+    "top20_evidence_complete_cases": 27,
+    "top5_abstentions_entering_recovery": 42
+  },
+  "reproduction_commands": [
+    "uv run pytest tests/unit/test_adaptive_top20_abstention_recovery_v1.py -q",
+    "uv run python scripts/run_adaptive_top20_abstention_recovery_v1.py --retrieval-only",
+    "uv run python scripts/run_adaptive_top20_abstention_recovery_v1.py --evaluate"
+  ],
+  "required_quality_table": {
+    "adaptive_top20": {
+      "acl_violations": 0,
+      "citation_completeness": 0.9473684210526315,
+      "citation_correctness": 0.9473684210526315,
+      "citation_validity": 1.0,
+      "correct_abstentions": 20,
+      "correct_complete_answers": 72,
+      "f1": 0.8372093023255814,
+      "incorrect_abstentions": 24,
+      "precision": 0.9473684210526315,
+      "prompt_injection_safety": 1.0,
+      "recall": 0.75,
+      "strict_e2e_accuracy": 0.7666666666666667,
+      "tenant_violations": 0,
+      "three_document_correctness": 0.0,
+      "unsupported_answers": 4,
+      "version_sensitive_correctness": 0.0
+    },
+    "reference_top5": {
+      "acl_violations": 0,
+      "citation_completeness": 0.9452054794520548,
+      "citation_correctness": 0.9452054794520548,
+      "citation_validity": 1.0,
+      "correct_abstentions": 20,
+      "correct_complete_answers": 69,
+      "f1": 0.8165680473372782,
+      "incorrect_abstentions": 27,
+      "precision": 0.9452054794520548,
+      "prompt_injection_safety": 1.0,
+      "recall": 0.71875,
+      "strict_e2e_accuracy": 0.7416666666666667,
+      "tenant_violations": 0,
+      "three_document_correctness": 0.0,
+      "unsupported_answers": 4,
+      "version_sensitive_correctness": 0.0
+    }
+  },
+  "retrieval": {
+    "new_retrieval_for_recovery_cases": 0,
+    "recovery_used_same_ranked_pool": true,
+    "reranking_only": true
+  },
+  "safety": {
+    "acl_violations": 0,
+    "prompt_injection_regressions": 0,
+    "tenant_violations": 0,
+    "unsupported_answers_baseline": 4,
+    "unsupported_answers_t20": 4
+  },
+  "topk_coverage_sweep": {
+    "denominator_answerable": 100,
+    "experiment_id": "ADAPTIVE_TOP20_ABSTENTION_RECOVERY_V1",
+    "kind": "DIAGNOSTIC RESULT",
+    "llm_api_calls": 0,
+    "rows": [
+      {
+        "all_required_evidence_coverage": 0.73,
+        "average_chunks": 5,
+        "estimated_evidence_tokens": 78.75,
+        "k": 5,
+        "new_llm_api_calls": 0,
+        "ranking_23_recoverable": 0,
+        "required_evidence_recall": 0.7025316455696202,
+        "three_document_complete_coverage": 0.0,
+        "two_document_complete_coverage": 1.0
+      },
+      {
+        "all_required_evidence_coverage": 0.8,
+        "average_chunks": 6,
+        "estimated_evidence_tokens": 93.58333333333333,
+        "k": 6,
+        "new_llm_api_calls": 0,
+        "ranking_23_recoverable": 7,
+        "required_evidence_recall": 0.7721518987341772,
+        "three_document_complete_coverage": 0.0,
+        "two_document_complete_coverage": 1.0
+      },
+      {
+        "all_required_evidence_coverage": 0.8,
+        "average_chunks": 8,
+        "estimated_evidence_tokens": 129.65,
+        "k": 8,
+        "new_llm_api_calls": 0,
+        "ranking_23_recoverable": 7,
+        "required_evidence_recall": 0.7721518987341772,
+        "three_document_complete_coverage": 0.0,
+        "two_document_complete_coverage": 1.0
+      },
+      {
+        "all_required_evidence_coverage": 0.8,
+        "average_chunks": 10,
+        "estimated_evidence_tokens": 163.40833333333333,
+        "k": 10,
+        "new_llm_api_calls": 0,
+        "ranking_23_recoverable": 7,
+        "required_evidence_recall": 0.8417721518987342,
+        "three_document_complete_coverage": 0.0,
+        "two_document_complete_coverage": 1.0
+      },
+      {
+        "all_required_evidence_coverage": 0.96,
+        "average_chunks": 15,
+        "estimated_evidence_tokens": 261.65,
+        "k": 15,
+        "new_llm_api_calls": 0,
+        "ranking_23_recoverable": 23,
+        "required_evidence_recall": 0.9746835443037974,
+        "three_document_complete_coverage": 1.0,
+        "two_document_complete_coverage": 1.0
+      },
+      {
+        "all_required_evidence_coverage": 0.96,
+        "average_chunks": 20,
+        "estimated_evidence_tokens": 310.475,
+        "k": 20,
+        "new_llm_api_calls": 0,
+        "ranking_23_recoverable": 23,
+        "required_evidence_recall": 0.9746835443037974,
+        "three_document_complete_coverage": 1.0,
+        "two_document_complete_coverage": 1.0
+      }
+    ]
+  },
+  "verdict": "INCONCLUSIVE_REQUIRES_FRESH_HOLDOUT"
+}

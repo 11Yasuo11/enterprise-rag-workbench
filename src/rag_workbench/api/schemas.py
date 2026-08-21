@@ -68,10 +68,6 @@ class DocumentResponse(BaseModel):
     updated_at: datetime
 
 
-class RagQueryRequest(RetrieveRequest):
-    include_debug: bool = False
-
-
 class CitationResponse(BaseModel):
     document_id: str
     chunk_id: str
@@ -83,16 +79,28 @@ class CitationResponse(BaseModel):
 
 
 class RagQueryResponse(BaseModel):
+    request_id: str
     run_id: str
-    status: Literal["answered", "abstained"]
+    status: Literal["answer", "abstain", "unavailable", "answered", "abstained"]
     answer: str | None
     citations: list[CitationResponse]
-    retrieval_results: list[RetrievalResultResponse]
+    requirements: list[dict[str, Any]] = Field(default_factory=list)
+    route: Literal["deterministic", "luna", "sol", "abstain"] = "abstain"
+    error_class: str | None = None
+    retrieval_results: list[RetrievalResultResponse] = Field(default_factory=list)
     final_context: str | None = None
     answerability_result: dict[str, Any] | None = None
     supporting_chunk_ids: list[str] = Field(default_factory=list)
     generation_context_chunk_ids: list[str] = Field(default_factory=list)
     answerability_operational_error: str | None = None
+    question_plan: dict[str, Any] | None = None
+    trace: dict[str, Any] | None = None
+
+
+class RagQueryRequest(RetrieveRequest):
+    include_debug: bool = False
+    # Legacy top_k is ignored by CanonicalRagRuntime (explicit stage depths apply).
+    top_k: int = Field(default=15, ge=1, le=100)
 
 
 class EvalRunRequest(BaseModel):

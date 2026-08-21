@@ -1,0 +1,60 @@
+{
+  "cost": {
+    "fresh_v2_regression_usd": 0.0,
+    "fresh_v3_usd": 0.0,
+    "targeted_11_cap_usd": 0.15,
+    "targeted_11_usd": 0.12409575,
+    "total_v7_cap_usd": 0.75,
+    "total_v7_usd": 0.12409575
+  },
+  "final_status": "NOT_READY_FOR_PRODUCTION",
+  "first_causal_failure": {
+    "case_id": "fresh_v2_003",
+    "category": "LUNA_FALSE_NEGATIVE",
+    "dependency_chain": [
+      "Authorized current-version evidence was rank 1 and present in the R1 packet",
+      "Luna returned ABSTAIN with R1 UNSUPPORTED",
+      "The suspicious-abstain policy legitimately escalated to Sol",
+      "Sol returned UNCERTAIN with R1 UNCERTAIN",
+      "The fail-closed router produced SAFE_ABSTAIN"
+    ],
+    "explanation": "The relevant Atlas maintainer span was available and authorized, so retrieval, ranking, packet construction, version selection, and authorization were not the first failure. The first causal failure is Luna's false negative; legitimate Sol escalation then failed to rescue it by returning UNCERTAIN.",
+    "luna_decision": "ABSTAIN",
+    "sol_decision": "UNCERTAIN"
+  },
+  "fresh_v2_regression": "NOT_RUN_AFTER_MANDATORY_GATE_FAILURE",
+  "fresh_v3": "NOT_CREATED_OR_RUN_AFTER_MANDATORY_GATE_FAILURE",
+  "local": {
+    "full_regression_passed": true,
+    "local_11_still_failing": 0,
+    "original_19_preserved": "19/19",
+    "unit_tests": "530/530",
+    "v2_deterministic_runtime": "60/60",
+    "zero_api_cost_usd": 0.0
+  },
+  "rc": {
+    "dirty_diff_hash": "a5b802f1d7b880bd6bfff4ab7cf0a53f86b73d06f96c837d57a0d5194debddf0",
+    "freeze_id": "RC_FINAL_PRE_API_V7",
+    "git_sha": "6e9741f55dc0436963ea1c0ba30b9a30bccbd207"
+  },
+  "safety": {
+    "acl_violations": 0,
+    "invalid_citations": 0,
+    "prompt_injection_regressions": 0,
+    "region_violations": 0,
+    "restricted_data_leaks": 0,
+    "tenant_violations": 0
+  },
+  "targeted_11": {
+    "correct": 7,
+    "incorrect_abstentions": 4,
+    "luna_calls": 11,
+    "passed": false,
+    "predictions_sha256": "2de4cded87612b391abe4f9a7fab119ab623199287cc250e5ac6b0483ba72c47",
+    "runtime_exceptions": 0,
+    "sol_calls": 5,
+    "total": 11,
+    "unsupported_answers": 0
+  },
+  "verdict": "PIPELINE_V7_FAILED_TARGETED_11"
+}

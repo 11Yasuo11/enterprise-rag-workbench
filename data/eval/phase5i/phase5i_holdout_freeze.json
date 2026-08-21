@@ -1,0 +1,12 @@
+{
+  "dataset_id": "acmeai-enterprise-rag-v3-phase5i-version-ranking-holdout-40",
+  "dataset_path": "data/eval/phase5i/v3_phase5i_version_ranking_holdout_40_cases.jsonl",
+  "dataset_hash": "db8f9a77636bc2bddf48f9e089686b918d022b2bdf6504aac2403281e4a5b5fb",
+  "distribution": {
+    "version_sensitive": 16,
+    "region_sensitive": 8,
+    "version_region": 8,
+    "ordinary_qa": 8
+  },
+  "case_count": 40
+}

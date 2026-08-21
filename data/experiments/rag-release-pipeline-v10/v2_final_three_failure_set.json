@@ -1,0 +1,42 @@
+{
+  "aggregate": {
+    "incorrect_abstentions": 2,
+    "top15_evidence_complete": "3/3",
+    "total_failures": 3,
+    "unsupported_answers": 1
+  },
+  "api_calls": 0,
+  "case_ids": [
+    "fresh_v2_010",
+    "fresh_v2_021",
+    "fresh_v2_023"
+  ],
+  "cases": [
+    {
+      "FIRST_FAILURE_STAGE": "QUESTION_PLAN",
+      "PRIMARY_ROOT_CAUSE": "QUESTION_PLAN_ERROR",
+      "case_id": "fresh_v2_010",
+      "failure_type": "UNSUPPORTED_OR_INCOMPLETE_ANSWER"
+    },
+    {
+      "FIRST_FAILURE_STAGE": "QUESTION_PLAN",
+      "PRIMARY_ROOT_CAUSE": "QUALIFIER_REQUIREMENT_ERROR",
+      "case_id": "fresh_v2_021",
+      "failure_type": "INCORRECT_ABSTENTION"
+    },
+    {
+      "FIRST_FAILURE_STAGE": "QUESTION_PLAN",
+      "PRIMARY_ROOT_CAUSE": "QUALIFIER_REQUIREMENT_ERROR",
+      "case_id": "fresh_v2_023",
+      "failure_type": "INCORRECT_ABSTENTION"
+    }
+  ],
+  "diagnosis_cost_usd": 0.0,
+  "source": {
+    "experiment": "rag-release-pipeline-v9",
+    "predictions_sha256": "36760635baf04a80e10c5cd53dd6a21c2cf4353fdd884b50a48e56186f1f2d47",
+    "rc": "RC_FINAL_PRE_API_V9",
+    "verdict": "PIPELINE_V9_FAILED_V2_REGRESSION"
+  },
+  "timestamp": "2026-08-21T00:44:32.626888+00:00"
+}

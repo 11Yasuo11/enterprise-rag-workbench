@@ -1,0 +1,11 @@
+{
+  "valid": true,
+  "count": 30,
+  "distribution": {
+    "multi_fact_answers": 10,
+    "multiple_document_facts": 8,
+    "date_range_endpoints": 6,
+    "same_document_multi_chunk": 6
+  },
+  "errors": []
+}

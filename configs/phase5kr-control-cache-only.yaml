@@ -1,0 +1,29 @@
+experiment_id: phase5kr-control-trace-enabled-v1
+identity:
+  index_identity: e598d9fb91b13a8c6bd6be94b1bc0a54bbce27dd4e98dc158669d7198bc6f466
+  phase5kr_results: data/experiments/v3-phase5k-final-e2e/phase5kr_corrected_per_case_results.jsonl
+dataset:
+  path: data/eval/phase5k/acmeai_enterprise_rag_v3_final_unseen_e2e_120.jsonl
+  sha256: 12851a9915ad51eccf2629e6765a8dc9a1731eb308987b0e53ac56468274f404
+retrieval:
+  dense_k: 20
+  bm25_k: 20
+  union_k: 30
+  dense_threshold: 0.28
+  rrf_k: 60
+reranking:
+  model: cross-encoder/ms-marco-MiniLM-L6-v2
+  model_revision: 233902d25c440f23af6f7d6e94d2946bac0bee0a
+  top_k: 5
+  selection_strategy: pointwise
+generation:
+  revision: deterministic-extractive-v1.1
+semantic_judge:
+  enabled: false
+hypothesis:
+  observation: Reproduce the frozen control while adding complete stage provenance.
+  root_cause: Instrumentation was missing between authorized corpus, candidates, and Top-5.
+  change: Trace capture only; no RAG quality behavior change.
+  expected_effect: Identical quality metrics and concrete attribution for prior OTHER cases.
+  metrics_to_watch: All baseline quality, safety, retrieval, and slice metrics.
+  regression_risks: Trace mismatch with the frozen Phase-5KR evidence order.

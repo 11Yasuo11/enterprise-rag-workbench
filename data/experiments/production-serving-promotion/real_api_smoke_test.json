@@ -1,0 +1,7 @@
+{
+  "timestamp": "2026-08-21T09:00:17.335671+00:00",
+  "budget_cap_usd": 0.1,
+  "executed": false,
+  "reason": "Local hashing / ALLOW_EXTERNAL_CALLS=false \u2014 real-API smoke deferred to deployment review",
+  "status": "SKIPPED_ZERO_API_POLICY"
+}

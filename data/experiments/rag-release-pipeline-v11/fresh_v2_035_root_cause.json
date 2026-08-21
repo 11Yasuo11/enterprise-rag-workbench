@@ -1,0 +1,113 @@
+{
+  "FIRST_FAILURE_STAGE": "REQUIREMENT_PACKET",
+  "PRIMARY_ROOT_CAUSE": "EVIDENCE_PACKET_MISS",
+  "SECONDARY_CAUSE": "UNIVERSAL_COMPLETENESS_GATE_ERROR",
+  "api_calls": 0,
+  "case_id": "fresh_v2_035",
+  "cross_version_cardinality": {
+    "failure_mode": "packet excluded correct 2025 allowance evidence; verifier mapped alternate 2025 span; completeness ignored version-scoped unit omission",
+    "requirement_identity_ok": true,
+    "version_identity_resolved": true,
+    "version_scoped_output_units_assembled_for_R1": [
+      "2026 allowance",
+      "2025 schedule",
+      "2026 schedule"
+    ],
+    "version_scoped_output_units_required_for_R1": [
+      "2025 allowance",
+      "2026 allowance"
+    ]
+  },
+  "not_primary": [
+    "ASSEMBLER_REQUIREMENT_OMISSION \u2014 assembler faithfully emitted validated mappings",
+    "RETRIEVAL_MISS \u2014 three-days present at Top-15 rank 4",
+    "VERSION_RESOLVER_ERROR \u2014 both 2025 and 2026 selected"
+  ],
+  "source": {
+    "experiment": "rag-release-pipeline-v10",
+    "predictions_sha256": "c87312a6ad8e87440bb8c43e5a18a84cc2f0cdf2673b1eeb8ca480cdd8d920f8",
+    "rc": "RC_FINAL_PRE_API_V10"
+  },
+  "symptom": {
+    "behavior": "UNSUPPORTED_ANSWER",
+    "facts_missing": [
+      "three days per week"
+    ],
+    "facts_satisfied": [
+      "two days per week",
+      "within 60 minutes",
+      "within 15 minutes"
+    ],
+    "requirement_completeness_pass": true,
+    "version_correctness_pass": true
+  },
+  "timestamp": "2026-08-21T01:03:33.654382+00:00",
+  "trace_answers": {
+    "A_own_requirement_id": {
+      "answer": "NO \u2014 'three days per week' is a version-scoped output unit under semantic R1 (remote allowance), not a separate requirement ID. R1 must emit both 2025 and 2026 allowance values.",
+      "plan_requirements": [
+        "R1 remote allowance",
+        "R2 incident reporting deadline"
+      ],
+      "requested_versions": [
+        "2025",
+        "2026"
+      ]
+    },
+    "B_in_top15": {
+      "answer": true,
+      "chunk_id": "0f876e88-1c3a-403f-83aa-ac66033ed246",
+      "document_id": "remote-work-policy",
+      "rank": 4,
+      "text": "Under the 2025 policy , employees could work remotely three days per week .",
+      "version": "2025"
+    },
+    "C_in_canonical_mapping_pre_luna": {
+      "answer": false,
+      "note": "deterministic_mappings empty; no pre-Luna canonical mapping for the 2025 allowance span."
+    },
+    "D_in_requirement_packet": {
+      "answer": false,
+      "mechanism": "Packet lexical overlap for R1 terms {allowance,card,change,create,remote,two,year}: 2026 two-days matches spurious token 'two' from 'two-year'; schedule chunks match 'remote' from 'remote-work'; 2025 three-days has overlap 0 because 'remotely' does not normalize to 'remote'.",
+      "r1_packet_chunk_ids": [
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "a6256f87-3055-4592-bbe0-9299878475b1",
+        "49679d97-020f-4418-9430-4c296bc824b1"
+      ],
+      "three_days_chunk_in_r1_packet": false
+    },
+    "E_luna_mapped_correctly": {
+      "answer": false,
+      "luna_decision": "GO",
+      "note": "Luna attached a 2025 version row to R1 but chose schedule-review span instead of allowance. Full Top-15 evidence still contained three-days; packet omission biased selection.",
+      "r1_spans": [
+        "Under the current 2026 policy , employees may work remotely two days per week .",
+        "Managers reviewed remote-work schedules every quarter .",
+        "Managers review remote-work schedules every month ."
+      ]
+    },
+    "F_local_validator_preserved": {
+      "answer": "Validator accepted Luna GO (VERSION metadata aligned) and preserved the incorrect 2025 schedule mapping; it does not check version-scoped semantic output units."
+    },
+    "G_assembler_received": {
+      "answer": true,
+      "received_r1_spans": [
+        "Under the current 2026 policy , employees may work remotely two days per week .",
+        "Managers reviewed remote-work schedules every quarter .",
+        "Managers review remote-work schedules every month ."
+      ]
+    },
+    "H_assembler_emitted": {
+      "answer": "Assembler emitted every validated mapping it received, including the wrong 2025 schedule spans; it did not drop three-days \u2014 three-days never arrived."
+    },
+    "I_citations": {
+      "answer": "Citations preserved document/version identity for emitted spans; missing fact had no citation because it was never mapped."
+    },
+    "J_completeness_gate": {
+      "answer": "Completeness counted requirement IDs R1/R2 only (2=2=2) and PASSED despite omitting the 2025 allowance output unit under R1.",
+      "assembled_output_fact_count": 2,
+      "detected_output_unit_count": 2,
+      "validated_output_fact_count": 2
+    }
+  }
+}

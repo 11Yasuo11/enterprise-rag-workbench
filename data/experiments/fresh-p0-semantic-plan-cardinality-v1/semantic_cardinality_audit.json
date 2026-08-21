@@ -1,0 +1,323 @@
+{
+  "all_match": true,
+  "cases": [
+    {
+      "atomic_requirement_count": 2,
+      "cardinality_match": true,
+      "case_id": "fresh_v1_009",
+      "detected_output_units": [
+        "the west-region recovery code",
+        "the cadence of customer-facing status updates while mitigation is underway"
+      ],
+      "qualifiers": [
+        {
+          "qualifier_id": "Q1",
+          "qualifier_type": "scope",
+          "text": "For an outage runbook card"
+        }
+      ],
+      "question": "For an outage runbook card, give the west-region recovery code and the cadence of customer-facing status updates while mitigation is underway.",
+      "requested_output_count": 2,
+      "requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "the west-region recovery code",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R2",
+          "requirement_text": "the cadence of customer-facing status updates while mitigation is underway",
+          "requirement_type": "fact"
+        }
+      ]
+    },
+    {
+      "atomic_requirement_count": 2,
+      "cardinality_match": true,
+      "case_id": "fresh_v1_011",
+      "detected_output_units": [
+        "the Atlas launch owner",
+        "the team that maintains the Atlas API"
+      ],
+      "qualifiers": [],
+      "question": "Pair the Atlas launch owner with the team that maintains the Atlas API.",
+      "requested_output_count": 2,
+      "requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "the Atlas launch owner",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R2",
+          "requirement_text": "the team that maintains the Atlas API",
+          "requirement_type": "fact"
+        }
+      ]
+    },
+    {
+      "atomic_requirement_count": 2,
+      "cardinality_match": true,
+      "case_id": "fresh_v1_013",
+      "detected_output_units": [
+        "How often is the west recovery drill held within a quarter",
+        "on which weekdays do routine production releases occur"
+      ],
+      "qualifiers": [],
+      "question": "How often is the west recovery drill held within a quarter, and on which weekdays do routine production releases occur?",
+      "requested_output_count": 2,
+      "requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "How often is the west recovery drill held within a quarter",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R2",
+          "requirement_text": "on which weekdays do routine production releases occur",
+          "requirement_type": "fact"
+        }
+      ]
+    },
+    {
+      "atomic_requirement_count": 2,
+      "cardinality_match": true,
+      "case_id": "fresh_v1_015",
+      "detected_output_units": [
+        "who coordinates Engineering and Support",
+        "which department joins that incident commander"
+      ],
+      "qualifiers": [
+        {
+          "qualifier_id": "Q1",
+          "qualifier_type": "time",
+          "text": "During a current severity-one incident affecting customer availability"
+        }
+      ],
+      "question": "During a current severity-one incident affecting customer availability, who coordinates Engineering and Support, and which department joins that incident commander?",
+      "requested_output_count": 2,
+      "requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "who coordinates Engineering and Support",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R2",
+          "requirement_text": "which department joins that incident commander",
+          "requirement_type": "fact"
+        }
+      ]
+    },
+    {
+      "atomic_requirement_count": 2,
+      "cardinality_match": true,
+      "case_id": "fresh_v1_016",
+      "detected_output_units": [
+        "How long are security audit logs retained",
+        "how quickly must a current severity-one incident be reported after discovery"
+      ],
+      "qualifiers": [],
+      "question": "How long are security audit logs retained, and how quickly must a current severity-one incident be reported after discovery?",
+      "requested_output_count": 2,
+      "requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "How long are security audit logs retained",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R2",
+          "requirement_text": "how quickly must a current severity-one incident be reported after discovery",
+          "requirement_type": "fact"
+        }
+      ]
+    },
+    {
+      "atomic_requirement_count": 3,
+      "cardinality_match": true,
+      "case_id": "fresh_v1_023",
+      "detected_output_units": [
+        "the remote-work allowance",
+        "manager review frequency",
+        "expense-report filing deadline"
+      ],
+      "qualifiers": [
+        {
+          "qualifier_id": "Q1",
+          "qualifier_type": "scope",
+          "text": "For a current workforce-and-finance checklist"
+        }
+      ],
+      "question": "For a current workforce-and-finance checklist, state the remote-work allowance, manager review frequency, and expense-report filing deadline.",
+      "requested_output_count": 3,
+      "requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "the remote-work allowance",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R2",
+          "requirement_text": "manager review frequency",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R3",
+          "requirement_text": "expense-report filing deadline",
+          "requirement_type": "fact"
+        }
+      ]
+    },
+    {
+      "atomic_requirement_count": 3,
+      "cardinality_match": true,
+      "case_id": "fresh_v1_025",
+      "detected_output_units": [
+        "the standby cluster",
+        "the quarterly drill slot",
+        "the continuity-plan owner"
+      ],
+      "qualifiers": [
+        {
+          "qualifier_id": "Q1",
+          "qualifier_type": "region",
+          "text": "For east-region resilience"
+        }
+      ],
+      "question": "For east-region resilience, name the standby cluster, the quarterly drill slot, and the continuity-plan owner.",
+      "requested_output_count": 3,
+      "requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "the standby cluster",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R2",
+          "requirement_text": "the quarterly drill slot",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R3",
+          "requirement_text": "the continuity-plan owner",
+          "requirement_type": "fact"
+        }
+      ]
+    },
+    {
+      "atomic_requirement_count": 3,
+      "cardinality_match": true,
+      "case_id": "fresh_v1_028",
+      "detected_output_units": [
+        "who owns the Atlas launch",
+        "who maintains the Atlas API",
+        "who owns finance exception review"
+      ],
+      "qualifiers": [],
+      "question": "State who owns the Atlas launch, who maintains the Atlas API, and who owns finance exception review.",
+      "requested_output_count": 3,
+      "requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "who owns the Atlas launch",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R2",
+          "requirement_text": "who maintains the Atlas API",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R3",
+          "requirement_text": "who owns finance exception review",
+          "requirement_type": "fact"
+        }
+      ]
+    },
+    {
+      "atomic_requirement_count": 2,
+      "cardinality_match": true,
+      "case_id": "fresh_v1_030",
+      "detected_output_units": [
+        "how many remote days are allowed",
+        "how often are schedules reviewed"
+      ],
+      "qualifiers": [
+        {
+          "qualifier_id": "Q1",
+          "qualifier_type": "version",
+          "text": "Under the current 2026 remote-work policy"
+        }
+      ],
+      "question": "Under the current 2026 remote-work policy, how many remote days are allowed and how often are schedules reviewed?",
+      "requested_output_count": 2,
+      "requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "how many remote days are allowed",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R2",
+          "requirement_text": "how often are schedules reviewed",
+          "requirement_type": "fact"
+        }
+      ]
+    },
+    {
+      "atomic_requirement_count": 2,
+      "cardinality_match": true,
+      "case_id": "fresh_v1_036",
+      "detected_output_units": [
+        "the remote-work allowance",
+        "the severity-one notification deadline"
+      ],
+      "qualifiers": [
+        {
+          "qualifier_id": "Q1",
+          "qualifier_type": "time",
+          "text": "As of the current 2026 editions"
+        }
+      ],
+      "question": "As of the current 2026 editions, combine the remote-work allowance with the severity-one notification deadline.",
+      "requested_output_count": 2,
+      "requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "the remote-work allowance",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R2",
+          "requirement_text": "the severity-one notification deadline",
+          "requirement_type": "fact"
+        }
+      ]
+    },
+    {
+      "atomic_requirement_count": 1,
+      "cardinality_match": true,
+      "case_id": "fresh_v1_044",
+      "detected_output_units": [
+        "would a forty-five-minute cadence match the support guide"
+      ],
+      "qualifiers": [
+        {
+          "qualifier_id": "Q1",
+          "qualifier_type": "scope",
+          "text": "If customer-facing outage updates are sent every thirty minutes"
+        }
+      ],
+      "question": "If customer-facing outage updates are sent every thirty minutes, would a forty-five-minute cadence match the support guide?",
+      "requested_output_count": 1,
+      "requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "would a forty-five-minute cadence match the support guide",
+          "requirement_type": "fact"
+        }
+      ]
+    }
+  ]
+}

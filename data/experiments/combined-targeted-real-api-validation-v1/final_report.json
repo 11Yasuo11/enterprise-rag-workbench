@@ -1,0 +1,109 @@
+{
+  "budget_preflight": {
+    "budget_cap_usd": 0.25,
+    "expected_luna_calls": 6,
+    "passes": true,
+    "prior_consumed_call_estimated_cost_usd": 0.0036736,
+    "prior_consumed_calls": 4,
+    "projected_luna_cost_usd": 0.0064108,
+    "projected_sol_reserve_cost_usd": 0.134,
+    "projected_total_cost_usd": 0.1440844,
+    "reserved_sol_calls": 4
+  },
+  "candidate_promoted": false,
+  "experiment_id": "COMBINED_TARGETED_REAL_API_VALIDATION_V1",
+  "failure_details": [
+    {
+      "failure": "INCORRECT_ABSTENTION",
+      "query_id": "p5k_three_document_027",
+      "validation_failure": "LUNA_NOT_GO"
+    },
+    {
+      "failure": "INCORRECT_ABSTENTION",
+      "query_id": "p5k_three_document_033",
+      "validation_failure": "LUNA_NOT_GO"
+    },
+    {
+      "failure": "INCORRECT_ABSTENTION",
+      "query_id": "p5k_three_document_041",
+      "validation_failure": "LUNA_NOT_GO"
+    },
+    {
+      "failure": "INCORRECT_ABSTENTION",
+      "query_id": "judge_near_05",
+      "validation_failure": "LUNA_REQUIREMENT_COUNT_MISMATCH"
+    },
+    {
+      "failure": "INCORRECT_ABSTENTION",
+      "query_id": "p5k_semantic_paraphrase_054",
+      "validation_failure": "LUNA_REQUIREMENT_COUNT_MISMATCH"
+    }
+  ],
+  "fresh_unseen_evaluation_executed": false,
+  "historical_version_case_available": false,
+  "historical_version_note": "No exact historical-version query had a frozen cached embedding; dry-run rules prohibited creating one via an OpenAI call before preflight.",
+  "next_step": "ANOTHER_TARGETED_CORRECTION",
+  "quality": {
+    "answered_requirement_completeness": 1.0,
+    "api_usage_complete_calls": 8,
+    "api_usage_unavailable_calls": 4,
+    "cached_input_tokens": 3615,
+    "citation_validity": 1.0,
+    "correct_abstentions": 1,
+    "correct_cases": 7,
+    "correct_complete_answers": 6,
+    "cost_per_tested_query_usd": 0.0025079625,
+    "deterministic_routed": 6,
+    "failure_counts": {
+      "INCORRECT_ABSTENTION": 5
+    },
+    "incorrect_abstentions": 5,
+    "input_tokens": 10172,
+    "luna_calls": 10,
+    "luna_routed": 6,
+    "median_latency_ms": 989.5143750036368,
+    "output_tokens": 1308,
+    "p95_latency_ms": 8229.200250003487,
+    "requirement_completeness": 0.5833333333333334,
+    "scoring_breakdown": {
+      "ANSWER_CORRECT": 6,
+      "CORRECT_ABSTENTION": 1,
+      "INCORRECT_ABSTENTION": 5,
+      "REQUIREMENT_COMPLETENESS_FAILURE": 0,
+      "ROUTING_FAILURE": 0,
+      "SCORER_FAILURE": 0,
+      "UNSUPPORTED_ANSWER": 0,
+      "VERSION_FAILURE": 0
+    },
+    "sol_calls": 2,
+    "sol_calls_per_luna_api_call": 0.2,
+    "sol_escalation_rate": 0.3333333333333333,
+    "sol_routed": 0,
+    "strict_e2e_accuracy": 0.5833333333333334,
+    "total_actual_or_estimated_api_cost_usd": 0.030095550000000002,
+    "total_cases": 12,
+    "unsupported_answers": 0,
+    "version_correctness": 1.0
+  },
+  "root_cause": {
+    "explanation": "The real verifier contract consumes the raw question instead of the label-blind atomic requirement list. Audit prefixes and scope/discourse clauses therefore disagree with local requirement counting; Luna also false-abstained on three complete Top-15 multi-document pools.",
+    "multi_document_false_abstentions": 3,
+    "requirement_count_mismatch_after_luna_go": 2,
+    "sol_go_still_failed_same_local_requirement_count_check": 2
+  },
+  "safety": {
+    "acl_violations": 0,
+    "experiment_id": "COMBINED_TARGETED_REAL_API_VALIDATION_V1",
+    "final_generator_openai_calls": 0,
+    "invalid_citations": 0,
+    "passed": true,
+    "prompt_injection_regressions": 0,
+    "region_violations": 0,
+    "tenant_violations": 0,
+    "unsupported_answers": 0
+  },
+  "scope": "targeted production-like real-API validation; not fresh generalization evidence",
+  "sol_escalation_note": null,
+  "timestamp": "2026-08-20T14:30:35.054135+00:00",
+  "verdict": "TARGETED_REAL_API_VALIDATION_FAILED"
+}

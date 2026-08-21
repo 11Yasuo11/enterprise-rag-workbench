@@ -1,0 +1,130 @@
+{
+  "api_calls": 0,
+  "cases": [
+    {
+      "answer": "R1: Failover targets the eu-central standby cluster . [C1]\nR2: Routine production releases occur on Tuesdays and Thursdays . [C2]",
+      "assembly_status": "answered",
+      "case_id": "fresh_v2_010",
+      "citations": [
+        "7e6c9c91-51ec-4146-8463-ee975a64232a",
+        "01423f11-8d28-418b-bd8f-b548fa0491ef"
+      ],
+      "correct": true,
+      "deterministic_complete": true,
+      "deterministic_failure_code": null,
+      "facts_missing": [],
+      "facts_satisfied": [
+        "eu-central",
+        "Tuesdays and Thursdays"
+      ],
+      "mapping_count": 2,
+      "output_requirement_ids": [
+        "R1",
+        "R2"
+      ],
+      "plan_qualifiers": [],
+      "plan_requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "the eastern failover destination"
+        },
+        {
+          "requirement_id": "R2",
+          "requirement_text": "the ordinary production-release weekdays"
+        }
+      ],
+      "requirement_complete": true,
+      "scorer_behavior": "CORRECT_COMPLETE_ANSWER",
+      "status": "FIXED_LOCALLY",
+      "verified_requirement_ids": [
+        "R1",
+        "R2"
+      ],
+      "version_ok": true
+    },
+    {
+      "answer": "R1: Under the current 2026 policy , employees may work remotely two days per week . [C1]",
+      "assembly_status": "answered",
+      "case_id": "fresh_v2_021",
+      "citations": [
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+      ],
+      "correct": true,
+      "deterministic_complete": true,
+      "deterministic_failure_code": null,
+      "facts_missing": [],
+      "facts_satisfied": [
+        "two days per week"
+      ],
+      "mapping_count": 1,
+      "output_requirement_ids": [
+        "R1"
+      ],
+      "plan_qualifiers": [
+        {
+          "qualifier_type": "version",
+          "text": "Using only the presently enforceable remote-work revision"
+        }
+      ],
+      "plan_requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "the weekly off-site allowance"
+        }
+      ],
+      "requirement_complete": true,
+      "scorer_behavior": "CORRECT_COMPLETE_ANSWER",
+      "status": "FIXED_LOCALLY",
+      "verified_requirement_ids": [
+        "R1"
+      ],
+      "version_ok": true
+    },
+    {
+      "answer": "R1: Managers review remote-work schedules every month . [C1]",
+      "assembly_status": "answered",
+      "case_id": "fresh_v2_023",
+      "citations": [
+        "49679d97-020f-4418-9430-4c296bc824b1"
+      ],
+      "correct": true,
+      "deterministic_complete": true,
+      "deterministic_failure_code": null,
+      "facts_missing": [],
+      "facts_satisfied": [
+        "every month"
+      ],
+      "mapping_count": 1,
+      "output_requirement_ids": [
+        "R1"
+      ],
+      "plan_qualifiers": [
+        {
+          "qualifier_type": "version",
+          "text": "Read the current remote-work text"
+        }
+      ],
+      "plan_requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "its manager review interval"
+        }
+      ],
+      "requirement_complete": true,
+      "scorer_behavior": "CORRECT_COMPLETE_ANSWER",
+      "status": "FIXED_LOCALLY",
+      "verified_requirement_ids": [
+        "R1"
+      ],
+      "version_ok": true
+    }
+  ],
+  "counts": {
+    "FIXED_LOCALLY": 3,
+    "STILL_FAILING": 0,
+    "STRUCTURALLY_FIXED_REAL_API_REQUIRED": 0,
+    "TRACE_INSUFFICIENT": 0
+  },
+  "gate_pass": true,
+  "timestamp": "2026-08-21T00:48:42.748221+00:00"
+}

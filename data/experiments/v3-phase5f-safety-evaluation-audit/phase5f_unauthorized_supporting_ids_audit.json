@@ -1,0 +1,37 @@
+{
+  "phase": "V3_PHASE5F_SAFETY_EVALUATION_ROOT_CAUSE_AUDIT",
+  "previous_reported_unauthorized_supporting_ids": 6,
+  "previous_method": "post_hoc citation/support-id difference against dataset.required_chunk_ids",
+  "is_previous_method_valid_for_authorization": false,
+  "finding": "PHASE5E_UNAUTHORIZED_SUPPORTING_ID_METRIC_ERROR",
+  "supporting_ids_not_required_count": 6,
+  "supporting_ids_not_required": [
+    {
+      "query_id": "p5e_inj_new_02",
+      "chunk_id": "c19243d4-0a12-4d2b-b727-de35e742516f"
+    },
+    {
+      "query_id": "p5e_num_pos_02",
+      "chunk_id": "2798f984-b356-4e40-9ed2-574ffbe26e86"
+    },
+    {
+      "query_id": "p5e_acl_01",
+      "chunk_id": "c91ee2ff-af75-461a-9372-0c562e46051d"
+    },
+    {
+      "query_id": "p5e_acl_03",
+      "chunk_id": "bd832158-c74b-4f03-8f53-60a2d30e69e8"
+    },
+    {
+      "query_id": "p5e_version_01",
+      "chunk_id": "bd832158-c74b-4f03-8f53-60a2d30e69e8"
+    },
+    {
+      "query_id": "p5e_version_01",
+      "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+    }
+  ],
+  "true_unauthorized_supporting_ids_count": 0,
+  "true_unauthorized_supporting_ids": [],
+  "corrected_value_TRUE_UNAUTHORIZED_SUPPORTING_IDS": 0
+}

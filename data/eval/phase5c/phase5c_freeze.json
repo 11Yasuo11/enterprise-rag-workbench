@@ -1,0 +1,872 @@
+{
+  "dataset_id": "acmeai-enterprise-rag-v3-clean-e2e-final-120",
+  "dataset_sha256": "595d8033ab059ce110696b938109afcf8a4c4716c0ae9ab23df1637464352d64",
+  "case_count": 120,
+  "answerable": 102,
+  "should_abstain": 18,
+  "dataset_qa": "120/120 PASS",
+  "independence_status": "CONTROLLED_COMPARATIVE_EVALUATION",
+  "independence_note": "Dataset independence gate relaxed for Phase-5C; overlap strata persisted for stratified reporting.",
+  "label": "PHASE5C_AUDIT_CORRECTED_PAIRED_BENCHMARK",
+  "maximum_prior_overlap": 0.727273,
+  "strata_counts": {
+    "LOW_OVERLAP": 100,
+    "MODERATE_OVERLAP": 19,
+    "HIGH_OVERLAP": 1
+  },
+  "overlap_per_query": [
+    {
+      "query_id": "clean_single_001",
+      "maximum_prior_overlap": 0.333333,
+      "most_similar_prior_query_id": "single_02",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_single_002",
+      "maximum_prior_overlap": 0.263158,
+      "most_similar_prior_query_id": "s80_leg_22",
+      "most_similar_prior_dataset": "acmeai_v3_recovery_safety_validation_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_single_003",
+      "maximum_prior_overlap": 0.6,
+      "most_similar_prior_query_id": "single_08",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "MODERATE_OVERLAP"
+    },
+    {
+      "query_id": "clean_single_004",
+      "maximum_prior_overlap": 0.421053,
+      "most_similar_prior_query_id": "single-document-fact",
+      "most_similar_prior_dataset": "initial.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_two_001",
+      "maximum_prior_overlap": 0.481481,
+      "most_similar_prior_query_id": "s80_multi_01",
+      "most_similar_prior_dataset": "acmeai_v3_recovery_safety_validation_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_two_002",
+      "maximum_prior_overlap": 0.444444,
+      "most_similar_prior_query_id": "exact-identifier",
+      "most_similar_prior_dataset": "initial.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_two_003",
+      "maximum_prior_overlap": 0.411765,
+      "most_similar_prior_query_id": "multi_02",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_two_004",
+      "maximum_prior_overlap": 0.384615,
+      "most_similar_prior_query_id": "s80_multi_04",
+      "most_similar_prior_dataset": "acmeai_v3_recovery_safety_validation_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_two_005",
+      "maximum_prior_overlap": 0.533333,
+      "most_similar_prior_query_id": "single_03",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "MODERATE_OVERLAP"
+    },
+    {
+      "query_id": "clean_two_006",
+      "maximum_prior_overlap": 0.380952,
+      "most_similar_prior_query_id": "e2e_three_02",
+      "most_similar_prior_dataset": "acmeai_reranker_e2e_eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_two_007",
+      "maximum_prior_overlap": 0.470588,
+      "most_similar_prior_query_id": "judge_two_07",
+      "most_similar_prior_dataset": "acmeai_evidence_judge_e2e_eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_two_008",
+      "maximum_prior_overlap": 0.380952,
+      "most_similar_prior_query_id": "exact-identifier",
+      "most_similar_prior_dataset": "initial.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_two_009",
+      "maximum_prior_overlap": 0.346154,
+      "most_similar_prior_query_id": "current-version",
+      "most_similar_prior_dataset": "initial.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_two_010",
+      "maximum_prior_overlap": 0.411765,
+      "most_similar_prior_query_id": "judge_three_13",
+      "most_similar_prior_dataset": "acmeai_evidence_judge_e2e_eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_two_011",
+      "maximum_prior_overlap": 0.428571,
+      "most_similar_prior_query_id": "multi_02",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_two_012",
+      "maximum_prior_overlap": 0.388889,
+      "most_similar_prior_query_id": "e2e_no_02",
+      "most_similar_prior_dataset": "acmeai_reranker_e2e_eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_two_013",
+      "maximum_prior_overlap": 0.380952,
+      "most_similar_prior_query_id": "v2_version_02",
+      "most_similar_prior_dataset": "acmeai_multidoc_eval_v2.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_two_014",
+      "maximum_prior_overlap": 0.380952,
+      "most_similar_prior_query_id": "judge_three_14",
+      "most_similar_prior_dataset": "acmeai_evidence_judge_e2e_eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_two_015",
+      "maximum_prior_overlap": 0.37037,
+      "most_similar_prior_query_id": "hyb_two_06",
+      "most_similar_prior_dataset": "acmeai_hybrid_retrieval_eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_two_016",
+      "maximum_prior_overlap": 0.32,
+      "most_similar_prior_query_id": "v2_two_20",
+      "most_similar_prior_dataset": "acmeai_multidoc_eval_v2.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_two_017",
+      "maximum_prior_overlap": 0.384615,
+      "most_similar_prior_query_id": "identifier_06",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_two_018",
+      "maximum_prior_overlap": 0.384615,
+      "most_similar_prior_query_id": "multi_09",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_two_019",
+      "maximum_prior_overlap": 0.380952,
+      "most_similar_prior_query_id": "single-document-fact",
+      "most_similar_prior_dataset": "initial.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_two_020",
+      "maximum_prior_overlap": 0.333333,
+      "most_similar_prior_query_id": "identifier_02",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_three_001",
+      "maximum_prior_overlap": 0.424242,
+      "most_similar_prior_query_id": "s80_multi_05",
+      "most_similar_prior_dataset": "acmeai_v3_recovery_safety_validation_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_three_002",
+      "maximum_prior_overlap": 0.307692,
+      "most_similar_prior_query_id": "fv3_two_02",
+      "most_similar_prior_dataset": "acmeai_enterprise_rag_v3_final_eval.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_three_003",
+      "maximum_prior_overlap": 0.333333,
+      "most_similar_prior_query_id": "v2_two_20",
+      "most_similar_prior_dataset": "acmeai_multidoc_eval_v2.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_three_004",
+      "maximum_prior_overlap": 0.3125,
+      "most_similar_prior_query_id": "s80_multi_04",
+      "most_similar_prior_dataset": "acmeai_v3_recovery_safety_validation_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_three_005",
+      "maximum_prior_overlap": 0.4,
+      "most_similar_prior_query_id": "fv3_two_06",
+      "most_similar_prior_dataset": "acmeai_enterprise_rag_v3_final_eval.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_three_006",
+      "maximum_prior_overlap": 0.533333,
+      "most_similar_prior_query_id": "judge_three_13",
+      "most_similar_prior_dataset": "acmeai_evidence_judge_e2e_eval_v1.json",
+      "stratum": "MODERATE_OVERLAP"
+    },
+    {
+      "query_id": "clean_three_007",
+      "maximum_prior_overlap": 0.384615,
+      "most_similar_prior_query_id": "multi_08",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_three_008",
+      "maximum_prior_overlap": 0.333333,
+      "most_similar_prior_query_id": "p5b_three_10",
+      "most_similar_prior_dataset": "acmeai_enterprise_rag_v3_ranking_e2e_final_v2.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_three_009",
+      "maximum_prior_overlap": 0.346154,
+      "most_similar_prior_query_id": "v3rk_three_11",
+      "most_similar_prior_dataset": "acmeai_v3_ranking_validation_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_three_010",
+      "maximum_prior_overlap": 0.428571,
+      "most_similar_prior_query_id": "multi_06",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_three_011",
+      "maximum_prior_overlap": 0.4,
+      "most_similar_prior_query_id": "multi_04",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_three_012",
+      "maximum_prior_overlap": 0.368421,
+      "most_similar_prior_query_id": "v2_version_05",
+      "most_similar_prior_dataset": "acmeai_multidoc_eval_v2.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_three_013",
+      "maximum_prior_overlap": 0.241379,
+      "most_similar_prior_query_id": "sol_three_20",
+      "most_similar_prior_dataset": "acmeai_sol_judge_e2e_eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_three_014",
+      "maximum_prior_overlap": 0.4375,
+      "most_similar_prior_query_id": "multi_16",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_three_015",
+      "maximum_prior_overlap": 0.416667,
+      "most_similar_prior_query_id": "v2_three_07",
+      "most_similar_prior_dataset": "acmeai_multidoc_eval_v2.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_three_016",
+      "maximum_prior_overlap": 0.526316,
+      "most_similar_prior_query_id": "judge_three_13",
+      "most_similar_prior_dataset": "acmeai_evidence_judge_e2e_eval_v1.json",
+      "stratum": "MODERATE_OVERLAP"
+    },
+    {
+      "query_id": "clean_three_017",
+      "maximum_prior_overlap": 0.318182,
+      "most_similar_prior_query_id": "multi-document",
+      "most_similar_prior_dataset": "initial.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_three_018",
+      "maximum_prior_overlap": 0.375,
+      "most_similar_prior_query_id": "multi_02",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_three_019",
+      "maximum_prior_overlap": 0.347826,
+      "most_similar_prior_query_id": "v3rk_two_07",
+      "most_similar_prior_dataset": "acmeai_v3_ranking_validation_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_three_020",
+      "maximum_prior_overlap": 0.347826,
+      "most_similar_prior_query_id": "v3rk_three_22",
+      "most_similar_prior_dataset": "acmeai_v3_ranking_validation_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_three_021",
+      "maximum_prior_overlap": 0.380952,
+      "most_similar_prior_query_id": "v3rk_two_08",
+      "most_similar_prior_dataset": "acmeai_v3_ranking_validation_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_three_022",
+      "maximum_prior_overlap": 0.578947,
+      "most_similar_prior_query_id": "v2_version_02",
+      "most_similar_prior_dataset": "acmeai_multidoc_eval_v2.json",
+      "stratum": "MODERATE_OVERLAP"
+    },
+    {
+      "query_id": "clean_three_023",
+      "maximum_prior_overlap": 0.35,
+      "most_similar_prior_query_id": "multi_15",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_three_024",
+      "maximum_prior_overlap": 0.315789,
+      "most_similar_prior_query_id": "multi_17",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_three_025",
+      "maximum_prior_overlap": 0.380952,
+      "most_similar_prior_query_id": "v2_version_04",
+      "most_similar_prior_dataset": "acmeai_multidoc_eval_v2.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_three_026",
+      "maximum_prior_overlap": 0.32,
+      "most_similar_prior_query_id": "rer_three_13",
+      "most_similar_prior_dataset": "acmeai_reranking_eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_three_027",
+      "maximum_prior_overlap": 0.416667,
+      "most_similar_prior_query_id": "v3rk_three_32",
+      "most_similar_prior_dataset": "acmeai_v3_ranking_validation_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_three_028",
+      "maximum_prior_overlap": 0.5,
+      "most_similar_prior_query_id": "v2_three_10",
+      "most_similar_prior_dataset": "acmeai_multidoc_eval_v2.json",
+      "stratum": "MODERATE_OVERLAP"
+    },
+    {
+      "query_id": "clean_three_029",
+      "maximum_prior_overlap": 0.291667,
+      "most_similar_prior_query_id": "hyb_three_06",
+      "most_similar_prior_dataset": "acmeai_hybrid_retrieval_eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_three_030",
+      "maximum_prior_overlap": 0.304348,
+      "most_similar_prior_query_id": "v2_three_03",
+      "most_similar_prior_dataset": "acmeai_multidoc_eval_v2.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_dup_001",
+      "maximum_prior_overlap": 0.3125,
+      "most_similar_prior_query_id": "duplicate_01",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_dup_002",
+      "maximum_prior_overlap": 0.3125,
+      "most_similar_prior_query_id": "duplicate_01",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_dup_003",
+      "maximum_prior_overlap": 0.428571,
+      "most_similar_prior_query_id": "duplicate_03",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_dup_004",
+      "maximum_prior_overlap": 0.428571,
+      "most_similar_prior_query_id": "duplicate_04",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_dup_005",
+      "maximum_prior_overlap": 0.545455,
+      "most_similar_prior_query_id": "single_14",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "MODERATE_OVERLAP"
+    },
+    {
+      "query_id": "clean_dup_006",
+      "maximum_prior_overlap": 0.545455,
+      "most_similar_prior_query_id": "single_16",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "MODERATE_OVERLAP"
+    },
+    {
+      "query_id": "clean_dup_007",
+      "maximum_prior_overlap": 0.333333,
+      "most_similar_prior_query_id": "multi_08",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_dup_008",
+      "maximum_prior_overlap": 0.428571,
+      "most_similar_prior_query_id": "multi_08",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_dup_009",
+      "maximum_prior_overlap": 0.352941,
+      "most_similar_prior_query_id": "multi_13",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_dup_010",
+      "maximum_prior_overlap": 0.4,
+      "most_similar_prior_query_id": "single_19",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_dup_011",
+      "maximum_prior_overlap": 0.4375,
+      "most_similar_prior_query_id": "identifier_04",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_dup_012",
+      "maximum_prior_overlap": 0.333333,
+      "most_similar_prior_query_id": "v3rk_samedoc_10",
+      "most_similar_prior_dataset": "acmeai_v3_ranking_validation_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_dup_013",
+      "maximum_prior_overlap": 0.380952,
+      "most_similar_prior_query_id": "single_03",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_dup_014",
+      "maximum_prior_overlap": 0.230769,
+      "most_similar_prior_query_id": "multi_07",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_dup_015",
+      "maximum_prior_overlap": 0.357143,
+      "most_similar_prior_query_id": "sfn_one_04",
+      "most_similar_prior_dataset": "acmeai_v2_sufficiency_fn_eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_dup_016",
+      "maximum_prior_overlap": 0.272727,
+      "most_similar_prior_query_id": "multi_12",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_same_001",
+      "maximum_prior_overlap": 0.5,
+      "most_similar_prior_query_id": "v3rk_samedoc_09",
+      "most_similar_prior_dataset": "acmeai_v3_ranking_validation_v1.json",
+      "stratum": "MODERATE_OVERLAP"
+    },
+    {
+      "query_id": "clean_same_002",
+      "maximum_prior_overlap": 0.333333,
+      "most_similar_prior_query_id": "v2_partial_07",
+      "most_similar_prior_dataset": "acmeai_multidoc_eval_v2.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_same_003",
+      "maximum_prior_overlap": 0.5,
+      "most_similar_prior_query_id": "multi_02",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "MODERATE_OVERLAP"
+    },
+    {
+      "query_id": "clean_same_004",
+      "maximum_prior_overlap": 0.578947,
+      "most_similar_prior_query_id": "v3rk_samedoc_10",
+      "most_similar_prior_dataset": "acmeai_v3_ranking_validation_v1.json",
+      "stratum": "MODERATE_OVERLAP"
+    },
+    {
+      "query_id": "clean_same_005",
+      "maximum_prior_overlap": 0.368421,
+      "most_similar_prior_query_id": "multi_15",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_same_006",
+      "maximum_prior_overlap": 0.35,
+      "most_similar_prior_query_id": "v2_partial_06",
+      "most_similar_prior_dataset": "acmeai_multidoc_eval_v2.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_same_007",
+      "maximum_prior_overlap": 0.529412,
+      "most_similar_prior_query_id": "v2_partial_03",
+      "most_similar_prior_dataset": "acmeai_multidoc_eval_v2.json",
+      "stratum": "MODERATE_OVERLAP"
+    },
+    {
+      "query_id": "clean_same_008",
+      "maximum_prior_overlap": 0.310345,
+      "most_similar_prior_query_id": "fv3_single_03",
+      "most_similar_prior_dataset": "acmeai_enterprise_rag_v3_final_eval.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_same_009",
+      "maximum_prior_overlap": 0.4,
+      "most_similar_prior_query_id": "v2_version_02",
+      "most_similar_prior_dataset": "acmeai_multidoc_eval_v2.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_same_010",
+      "maximum_prior_overlap": 0.333333,
+      "most_similar_prior_query_id": "e2e_ver_03",
+      "most_similar_prior_dataset": "acmeai_reranker_e2e_eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_id_001",
+      "maximum_prior_overlap": 0.363636,
+      "most_similar_prior_query_id": "fv3_sem_02",
+      "most_similar_prior_dataset": "acmeai_enterprise_rag_v3_final_eval.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_id_002",
+      "maximum_prior_overlap": 0.642857,
+      "most_similar_prior_query_id": "exact-identifier",
+      "most_similar_prior_dataset": "initial.json",
+      "stratum": "MODERATE_OVERLAP"
+    },
+    {
+      "query_id": "clean_id_003",
+      "maximum_prior_overlap": 0.727273,
+      "most_similar_prior_query_id": "identifier_04",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "HIGH_OVERLAP"
+    },
+    {
+      "query_id": "clean_id_004",
+      "maximum_prior_overlap": 0.461538,
+      "most_similar_prior_query_id": "duplicate_01",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_id_005",
+      "maximum_prior_overlap": 0.461538,
+      "most_similar_prior_query_id": "duplicate_02",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_id_006",
+      "maximum_prior_overlap": 0.466667,
+      "most_similar_prior_query_id": "identifier_05",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_id_007",
+      "maximum_prior_overlap": 0.5,
+      "most_similar_prior_query_id": "identifier_06",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "MODERATE_OVERLAP"
+    },
+    {
+      "query_id": "clean_id_008",
+      "maximum_prior_overlap": 0.538462,
+      "most_similar_prior_query_id": "identifier_03",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "MODERATE_OVERLAP"
+    },
+    {
+      "query_id": "clean_vr_001",
+      "maximum_prior_overlap": 0.45,
+      "most_similar_prior_query_id": "version_remote_01",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_vr_002",
+      "maximum_prior_overlap": 0.333333,
+      "most_similar_prior_query_id": "s80_leg_26",
+      "most_similar_prior_dataset": "acmeai_v3_recovery_safety_validation_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_vr_003",
+      "maximum_prior_overlap": 0.545455,
+      "most_similar_prior_query_id": "current-version",
+      "most_similar_prior_dataset": "initial.json",
+      "stratum": "MODERATE_OVERLAP"
+    },
+    {
+      "query_id": "clean_vr_004",
+      "maximum_prior_overlap": 0.333333,
+      "most_similar_prior_query_id": "duplicate_01",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_vr_005",
+      "maximum_prior_overlap": 0.333333,
+      "most_similar_prior_query_id": "duplicate_02",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_vr_006",
+      "maximum_prior_overlap": 0.5,
+      "most_similar_prior_query_id": "duplicate_01",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "MODERATE_OVERLAP"
+    },
+    {
+      "query_id": "clean_vr_007",
+      "maximum_prior_overlap": 0.5,
+      "most_similar_prior_query_id": "duplicate_02",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "MODERATE_OVERLAP"
+    },
+    {
+      "query_id": "clean_vr_008",
+      "maximum_prior_overlap": 0.277778,
+      "most_similar_prior_query_id": "multi_09",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_sem_001",
+      "maximum_prior_overlap": 0.25,
+      "most_similar_prior_query_id": "rer_three_01",
+      "most_similar_prior_dataset": "acmeai_reranking_eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_sem_002",
+      "maximum_prior_overlap": 0.375,
+      "most_similar_prior_query_id": "sol_two_08",
+      "most_similar_prior_dataset": "acmeai_sol_judge_e2e_eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_sem_003",
+      "maximum_prior_overlap": 0.318182,
+      "most_similar_prior_query_id": "e2e_sem_04",
+      "most_similar_prior_dataset": "acmeai_reranker_e2e_eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_sem_004",
+      "maximum_prior_overlap": 0.4,
+      "most_similar_prior_query_id": "e2e_near_07",
+      "most_similar_prior_dataset": "acmeai_reranker_e2e_eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_sem_005",
+      "maximum_prior_overlap": 0.2,
+      "most_similar_prior_query_id": "fv1_two_06",
+      "most_similar_prior_dataset": "acmeai_enterprise_rag_v1_final_eval.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_sem_006",
+      "maximum_prior_overlap": 0.315789,
+      "most_similar_prior_query_id": "judge_two_07",
+      "most_similar_prior_dataset": "acmeai_evidence_judge_e2e_eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_acl_001",
+      "maximum_prior_overlap": 0.275862,
+      "most_similar_prior_query_id": "hrp_acl_02",
+      "most_similar_prior_dataset": "acmeai_hybrid_reranker_replication_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_acl_002",
+      "maximum_prior_overlap": 0.428571,
+      "most_similar_prior_query_id": "restricted-document",
+      "most_similar_prior_dataset": "initial.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_acl_003",
+      "maximum_prior_overlap": 0.266667,
+      "most_similar_prior_query_id": "fv2_acl_03",
+      "most_similar_prior_dataset": "acmeai_enterprise_rag_v2_final_eval.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_acl_004",
+      "maximum_prior_overlap": 0.25,
+      "most_similar_prior_query_id": "p5b_acl_04",
+      "most_similar_prior_dataset": "acmeai_enterprise_rag_v3_ranking_e2e_final_v2.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_none_001",
+      "maximum_prior_overlap": 0.411765,
+      "most_similar_prior_query_id": "single_03",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_none_002",
+      "maximum_prior_overlap": 0.384615,
+      "most_similar_prior_query_id": "identifier_04",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_none_003",
+      "maximum_prior_overlap": 0.2,
+      "most_similar_prior_query_id": "sol_sem_02",
+      "most_similar_prior_dataset": "acmeai_sol_judge_e2e_eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_none_004",
+      "maximum_prior_overlap": 0.578947,
+      "most_similar_prior_query_id": "current-version",
+      "most_similar_prior_dataset": "initial.json",
+      "stratum": "MODERATE_OVERLAP"
+    },
+    {
+      "query_id": "clean_inj_001",
+      "maximum_prior_overlap": 0.40625,
+      "most_similar_prior_query_id": "fv1_inj_02",
+      "most_similar_prior_dataset": "acmeai_enterprise_rag_v1_final_eval.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_inj_002",
+      "maximum_prior_overlap": 0.387097,
+      "most_similar_prior_query_id": "fv1_inj_02",
+      "most_similar_prior_dataset": "acmeai_enterprise_rag_v1_final_eval.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_inj_003",
+      "maximum_prior_overlap": 0.185185,
+      "most_similar_prior_query_id": "v2_two_15",
+      "most_similar_prior_dataset": "acmeai_multidoc_eval_v2.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_inj_004",
+      "maximum_prior_overlap": 0.322581,
+      "most_similar_prior_query_id": "fv1_inj_02",
+      "most_similar_prior_dataset": "acmeai_enterprise_rag_v1_final_eval.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_inj_005",
+      "maximum_prior_overlap": 0.25,
+      "most_similar_prior_query_id": "injection_02",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_inj_006",
+      "maximum_prior_overlap": 0.181818,
+      "most_similar_prior_query_id": "injection_08",
+      "most_similar_prior_dataset": "eval_v1.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_inj_007",
+      "maximum_prior_overlap": 0.3125,
+      "most_similar_prior_query_id": "fv1_inj_02",
+      "most_similar_prior_dataset": "acmeai_enterprise_rag_v1_final_eval.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_inj_008",
+      "maximum_prior_overlap": 0.181818,
+      "most_similar_prior_query_id": "fv1_inj_04",
+      "most_similar_prior_dataset": "acmeai_enterprise_rag_v1_final_eval.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_inj_009",
+      "maximum_prior_overlap": 0.153846,
+      "most_similar_prior_query_id": "v2_two_15",
+      "most_similar_prior_dataset": "acmeai_multidoc_eval_v2.json",
+      "stratum": "LOW_OVERLAP"
+    },
+    {
+      "query_id": "clean_inj_010",
+      "maximum_prior_overlap": 0.242424,
+      "most_similar_prior_query_id": "fv2_inj_02",
+      "most_similar_prior_dataset": "acmeai_enterprise_rag_v2_final_eval.json",
+      "stratum": "LOW_OVERLAP"
+    }
+  ],
+  "frozen_fields": [
+    "dataset_id",
+    "dataset_sha256",
+    "questions",
+    "ground_truth",
+    "required_facts",
+    "required_chunks",
+    "required_documents",
+    "ACL_labels",
+    "version_labels",
+    "security_labels"
+  ],
+  "no_changes_after_freeze": true
+}

@@ -1,0 +1,33 @@
+{
+  "api_calls": 0,
+  "case_id": "fresh_v1_005",
+  "citations_input_or_derived": [
+    "39622c27-169e-4a3f-bbbd-f69996af8e01"
+  ],
+  "new_failure_code": null,
+  "new_validation_valid": true,
+  "normalized_mapping": {
+    "authorized": true,
+    "chunk_id": "39622c27-169e-4a3f-bbbd-f69996af8e01",
+    "citations": [
+      "39622c27-169e-4a3f-bbbd-f69996af8e01"
+    ],
+    "document_id": "project-atlas-api",
+    "document_version_id": "cf5dfd1d-b744-48f1-bfde-41a198d86f35",
+    "permission_groups": [],
+    "region": null,
+    "requirement_id": "R1",
+    "supporting_spans": [
+      "Its production endpoint identifier is ATLAS-API-301 ."
+    ],
+    "tenant": null,
+    "version": "3.0"
+  },
+  "old_attribute_error_reproduced": true,
+  "requirements_input_count": 1,
+  "requirements_output_count": 1,
+  "runtime_status": "REAL_API_CONFIRMATION_REQUIRED",
+  "supporting_spans_input_count": 1,
+  "supporting_spans_output_count": 1,
+  "timestamp": "2026-08-20T19:49:55.657224+00:00"
+}

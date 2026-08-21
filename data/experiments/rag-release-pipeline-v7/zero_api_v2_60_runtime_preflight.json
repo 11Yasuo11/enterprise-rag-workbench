@@ -1,0 +1,646 @@
+{
+  "case_count": 60,
+  "cases": [
+    {
+      "case_id": "fresh_v2_001",
+      "packet_counts": {
+        "R1": 1,
+        "R2": 5
+      },
+      "requirement_count": 2,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_002",
+      "packet_counts": {
+        "R1": 5
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_003",
+      "packet_counts": {
+        "R1": 4
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_004",
+      "packet_counts": {
+        "R1": 4
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_005",
+      "packet_counts": {
+        "R1": 5
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_006",
+      "packet_counts": {
+        "R1": 1
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_007",
+      "packet_counts": {
+        "R1": 5,
+        "R2": 5
+      },
+      "requirement_count": 2,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_008",
+      "packet_counts": {
+        "R1": 5
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_009",
+      "packet_counts": {
+        "R1": 5,
+        "R2": 4
+      },
+      "requirement_count": 2,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_010",
+      "packet_counts": {
+        "R1": 4
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_011",
+      "packet_counts": {
+        "R1": 5,
+        "R2": 2
+      },
+      "requirement_count": 2,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_012",
+      "packet_counts": {
+        "R1": 3,
+        "R2": 5
+      },
+      "requirement_count": 2,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_013",
+      "packet_counts": {
+        "R1": 2,
+        "R2": 2
+      },
+      "requirement_count": 2,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_014",
+      "packet_counts": {
+        "R1": 4,
+        "R2": 3
+      },
+      "requirement_count": 2,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_015",
+      "packet_counts": {
+        "R1": 4,
+        "R2": 5,
+        "R3": 4
+      },
+      "requirement_count": 3,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_016",
+      "packet_counts": {
+        "R1": 2,
+        "R2": 2,
+        "R3": 1
+      },
+      "requirement_count": 3,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_017",
+      "packet_counts": {
+        "R1": 5,
+        "R2": 1,
+        "R3": 5
+      },
+      "requirement_count": 3,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_018",
+      "packet_counts": {
+        "R1": 4,
+        "R2": 2,
+        "R3": 5
+      },
+      "requirement_count": 3,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_019",
+      "packet_counts": {
+        "R1": 2,
+        "R2": 5,
+        "R3": 4
+      },
+      "requirement_count": 3,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_020",
+      "packet_counts": {
+        "R1": 1,
+        "R2": 1,
+        "R3": 2
+      },
+      "requirement_count": 3,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_021",
+      "packet_counts": {
+        "R1": 2,
+        "R2": 1
+      },
+      "requirement_count": 2,
+      "status": "PASS",
+      "temporal_mode": "CURRENT_ONLY",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_022",
+      "packet_counts": {
+        "R1": 5
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "CURRENT_ONLY",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_023",
+      "packet_counts": {
+        "R1": 4,
+        "R2": 3
+      },
+      "requirement_count": 2,
+      "status": "PASS",
+      "temporal_mode": "CURRENT_ONLY",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_024",
+      "packet_counts": {
+        "R1": 5
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "CURRENT_ONLY",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_025",
+      "packet_counts": {
+        "R1": 1,
+        "R2": 4
+      },
+      "requirement_count": 2,
+      "status": "PASS",
+      "temporal_mode": "CURRENT_ONLY",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_026",
+      "packet_counts": {
+        "R1": 3
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "HISTORICAL_ONLY",
+      "top15_count": 3
+    },
+    {
+      "case_id": "fresh_v2_027",
+      "packet_counts": {
+        "R1": 1
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "HISTORICAL_ONLY",
+      "top15_count": 2
+    },
+    {
+      "case_id": "fresh_v2_028",
+      "packet_counts": {
+        "R1": 1
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "HISTORICAL_ONLY",
+      "top15_count": 3
+    },
+    {
+      "case_id": "fresh_v2_029",
+      "packet_counts": {
+        "R1": 1
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "HISTORICAL_ONLY",
+      "top15_count": 2
+    },
+    {
+      "case_id": "fresh_v2_030",
+      "packet_counts": {
+        "R1": 2,
+        "R2": 2
+      },
+      "requirement_count": 2,
+      "status": "PASS",
+      "temporal_mode": "HISTORICAL_ONLY",
+      "top15_count": 3
+    },
+    {
+      "case_id": "fresh_v2_031",
+      "packet_counts": {
+        "R1": 4,
+        "R2": 4
+      },
+      "requirement_count": 2,
+      "status": "PASS",
+      "temporal_mode": "CROSS_VERSION",
+      "top15_count": 7
+    },
+    {
+      "case_id": "fresh_v2_032",
+      "packet_counts": {
+        "R1": 2,
+        "R2": 4
+      },
+      "requirement_count": 2,
+      "status": "PASS",
+      "temporal_mode": "CROSS_VERSION",
+      "top15_count": 5
+    },
+    {
+      "case_id": "fresh_v2_033",
+      "packet_counts": {
+        "R1": 5,
+        "R2": 2
+      },
+      "requirement_count": 2,
+      "status": "PASS",
+      "temporal_mode": "CROSS_VERSION",
+      "top15_count": 7
+    },
+    {
+      "case_id": "fresh_v2_034",
+      "packet_counts": {
+        "R1": 4,
+        "R2": 4
+      },
+      "requirement_count": 2,
+      "status": "PASS",
+      "temporal_mode": "CROSS_VERSION",
+      "top15_count": 7
+    },
+    {
+      "case_id": "fresh_v2_035",
+      "packet_counts": {
+        "R1": 3,
+        "R2": 3
+      },
+      "requirement_count": 2,
+      "status": "PASS",
+      "temporal_mode": "CROSS_VERSION",
+      "top15_count": 7
+    },
+    {
+      "case_id": "fresh_v2_036",
+      "packet_counts": {
+        "R1": 1
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_037",
+      "packet_counts": {
+        "R1": 1
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 14
+    },
+    {
+      "case_id": "fresh_v2_038",
+      "packet_counts": {
+        "R1": 5
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "CURRENT_ONLY",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_039",
+      "packet_counts": {
+        "R1": 1
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "HISTORICAL_ONLY",
+      "top15_count": 3
+    },
+    {
+      "case_id": "fresh_v2_040",
+      "packet_counts": {
+        "R1": 5
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_041",
+      "packet_counts": {
+        "R1": 4
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 13
+    },
+    {
+      "case_id": "fresh_v2_042",
+      "packet_counts": {
+        "R1": 4
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 12
+    },
+    {
+      "case_id": "fresh_v2_043",
+      "packet_counts": {
+        "R1": 5
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_044",
+      "packet_counts": {
+        "R1": 5
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "CURRENT_ONLY",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_045",
+      "packet_counts": {
+        "R1": 5
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_046",
+      "packet_counts": {
+        "R1": 2
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_047",
+      "packet_counts": {
+        "R1": 3
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "CURRENT_ONLY",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_048",
+      "packet_counts": {
+        "R1": 1
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "HISTORICAL_ONLY",
+      "top15_count": 3
+    },
+    {
+      "case_id": "fresh_v2_049",
+      "packet_counts": {
+        "R1": 3
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_050",
+      "packet_counts": {
+        "R1": 3,
+        "R2": 5
+      },
+      "requirement_count": 2,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_051",
+      "packet_counts": {
+        "R1": 4
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_052",
+      "packet_counts": {
+        "R1": 2
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_053",
+      "packet_counts": {
+        "R1": 1,
+        "R2": 2
+      },
+      "requirement_count": 2,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_054",
+      "packet_counts": {
+        "R1": 3,
+        "R2": 5
+      },
+      "requirement_count": 2,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_055",
+      "packet_counts": {
+        "R1": 1,
+        "R2": 1,
+        "R3": 0
+      },
+      "requirement_count": 3,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_056",
+      "packet_counts": {
+        "R1": 3,
+        "R2": 1
+      },
+      "requirement_count": 2,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_057",
+      "packet_counts": {
+        "R1": 1,
+        "R2": 5
+      },
+      "requirement_count": 2,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_058",
+      "packet_counts": {
+        "R1": 5
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 14
+    },
+    {
+      "case_id": "fresh_v2_059",
+      "packet_counts": {
+        "R1": 5
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    },
+    {
+      "case_id": "fresh_v2_060",
+      "packet_counts": {
+        "R1": 1
+      },
+      "requirement_count": 1,
+      "status": "PASS",
+      "temporal_mode": "UNSPECIFIED_CURRENT_DEFAULT",
+      "top15_count": 15
+    }
+  ],
+  "external_api_calls": 0,
+  "failed_case_ids": [],
+  "passed": true,
+  "passed_count": 60,
+  "runtime_exceptions": 0,
+  "top_k": 15
+}

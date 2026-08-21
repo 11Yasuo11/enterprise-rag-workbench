@@ -106,6 +106,13 @@ from rag_workbench.experiments.v3_generate_verify_cases import (
     GENERATION_METHOD,
     write_dataset,
 )
+from rag_workbench.experiments.v3_phase1_rollup import (
+    NO_GO,
+    NO_GO_ALIASES,
+    classify_recovery_failure,
+    diagnostic_is_go,
+    diagnostic_rollup,
+)
 from rag_workbench.generation.context_builder import ContextBuilder
 from rag_workbench.generation.generator import RagService
 from rag_workbench.providers.embeddings.openai_compatible import (
@@ -114,10 +121,12 @@ from rag_workbench.providers.embeddings.openai_compatible import (
 from rag_workbench.providers.llm.extractive import ExtractiveGenerationProvider
 from rag_workbench.recovery.contracts import (
     CLAIM_VERIFIER_PROMPT_VERSION,
+    COMPLETENESS_VERIFIER_PROMPT_VERSION,
     PRIMARY_JUDGE_STAGE,
     RECOVERY_DRAFT_PROMPT_VERSION,
     RECOVERY_DRAFT_STAGE,
     STAGE_CLAIM_VERIFIER,
+    STAGE_COMPLETENESS_VERIFIER,
     recovery_draft_schema_identity,
     recovery_draft_template_hash,
     recovery_verifier_schema_identity,
@@ -148,8 +157,10 @@ DIAGNOSIS_ONLY_NOTICE = (
 GO_POLICY = {
     "historical_judge_fn_rescues_min": 6,
     "historical_should_abstain_false_positive_recoveries": 0,
+    "unsupported_recovered_answers": 0,
     "unauthorized_evidence_used": 0,
     "invalid_citation_ids": 0,
+    "version_violations": 0,
     "frozen_before_diagnostic": True,
     "not_promotion_evidence": True,
 }
@@ -259,6 +270,7 @@ def v3_candidate_configuration() -> dict[str, Any]:
             "verifier_model": SOL_MODEL,
             "draft_prompt_version": RECOVERY_DRAFT_PROMPT_VERSION,
             "verifier_prompt_version": CLAIM_VERIFIER_PROMPT_VERSION,
+            "completeness_prompt_version": COMPLETENESS_VERIFIER_PROMPT_VERSION,
             "draft_prompt_hash": recovery_draft_template_hash(),
             "verifier_prompt_hash": recovery_verifier_template_hash(),
             "draft_schema_identity": recovery_draft_schema_identity(),
@@ -266,6 +278,8 @@ def v3_candidate_configuration() -> dict[str, Any]:
             "stage_primary": PRIMARY_JUDGE_STAGE,
             "stage_draft": RECOVERY_DRAFT_STAGE,
             "stage_verifier": STAGE_CLAIM_VERIFIER,
+            "stage_completeness": STAGE_COMPLETENESS_VERIFIER,
+            "completeness_logical_check": "COMPLETE required after all claims SUPPORTED",
             "no_recovery_after_primary_positive": True,
             "no_corrective_retrieval": True,
             "quality_retries": False,
@@ -839,11 +853,19 @@ class V3GenerateVerifyBenchmark:
         fps = [item["case_id"] for item in safety_rows if item["false_positive_recovery"]]
         unauthorized = sum(item["unauthorized_evidence_used"] for item in rows)
         invalid_ids = sum(item["invalid_citation_ids"] for item in rows)
+        unsupported_recovered = sum(1 for item in rows if item["behavior"] == "UNSUPPORTED_ANSWER")
+        version_violations = sum(
+            1
+            for item in rows
+            if classify_recovery_failure(item.get("typed_failure")) == "VERSION_FAILURE"
+        )
         go = (
             len(rescues) >= GO_POLICY["historical_judge_fn_rescues_min"]
             and len(fps) == GO_POLICY["historical_should_abstain_false_positive_recoveries"]
+            and unsupported_recovered == GO_POLICY["unsupported_recovered_answers"]
             and unauthorized == GO_POLICY["unauthorized_evidence_used"]
             and invalid_ids == GO_POLICY["invalid_citation_ids"]
+            and version_violations == GO_POLICY["version_violations"]
         )
         diagnostic = {
             "notice": DIAGNOSIS_ONLY_NOTICE,
@@ -856,7 +878,9 @@ class V3GenerateVerifyBenchmark:
             "false_positive_count": len(fps),
             "unauthorized_evidence_used": unauthorized,
             "invalid_citation_ids": invalid_ids,
-            "go_nogo": "GO" if go else "NO_GO_FOR_UNSEEN_EXPERIMENT",
+            "unsupported_recovered_answers": unsupported_recovered,
+            "version_violations": version_violations,
+            "go_nogo": "GO" if go else NO_GO,
             "cases": rows,
             "go_policy": GO_POLICY,
         }
@@ -864,6 +888,7 @@ class V3GenerateVerifyBenchmark:
         record.go_nogo = diagnostic["go_nogo"]
         record.diagnostic_completed_at = datetime.now(UTC)
         record.diagnosis_only = True
+        self._store_diagnostic_rollup(record)
         self.session.commit()
         verify_persisted_v2(self.session)
         self._persist_markdown()
@@ -871,8 +896,8 @@ class V3GenerateVerifyBenchmark:
 
     def freeze_unseen_dataset(self) -> dict[str, Any]:
         record = self.initialize()
-        if record.go_nogo != "GO":
-            raise ValueError("NO_GO_FOR_UNSEEN_EXPERIMENT")
+        if not diagnostic_is_go(record.go_nogo):
+            raise ValueError(NO_GO)
         if record.dataset_frozen_at is not None and record.dataset_hash:
             return {
                 "dataset_id": record.dataset_id,
@@ -903,8 +928,8 @@ class V3GenerateVerifyBenchmark:
 
     def embedding_preflight(self, *, persist: bool = True) -> dict[str, Any]:
         record = self.initialize()
-        if record.go_nogo != "GO":
-            raise ValueError("NO_GO_FOR_UNSEEN_EXPERIMENT")
+        if not diagnostic_is_go(record.go_nogo):
+            raise ValueError(NO_GO)
         if record.dataset_frozen_at is None:
             self.freeze_unseen_dataset()
             record = self.initialize()
@@ -945,8 +970,8 @@ class V3GenerateVerifyBenchmark:
         record = self.initialize()
         if record.retrieval_frozen_at is not None:
             return self.status()
-        if record.go_nogo != "GO":
-            raise ValueError("NO_GO_FOR_UNSEEN_EXPERIMENT")
+        if not diagnostic_is_go(record.go_nogo):
+            raise ValueError(NO_GO)
         preflight = self.embedding_preflight()
         if (
             not self.settings.allow_external_calls
@@ -1028,11 +1053,11 @@ class V3GenerateVerifyBenchmark:
         if record.diagnostic_completed_at is None:
             self.execute_diagnostic()
             record = self.initialize()
-        if record.go_nogo != "GO":
+        if not diagnostic_is_go(record.go_nogo):
             record.selected_strategy = CONTROL_STRATEGY
             record.selection = {
                 "selected_strategy": CONTROL_STRATEGY,
-                "reason": "NO_GO_FOR_UNSEEN_EXPERIMENT",
+                "reason": NO_GO,
             }
             record.completed_at = datetime.now(UTC)
             research = self.session.get(ResearchArchitectureRecord, V3_ARCHITECTURE_ID)
@@ -1671,6 +1696,55 @@ class V3GenerateVerifyBenchmark:
             "regressions": regressions,
         }
 
+    def _store_diagnostic_rollup(self, record: V3Phase1ExperimentRecord) -> dict[str, Any]:
+        rollup = diagnostic_rollup(record.diagnostic or {})
+        diagnostic = dict(record.diagnostic or {})
+        diagnostic["rollup"] = rollup
+        diagnostic["unsupported_recovered_answers"] = rollup["unsupported_recovery_count"]
+        diagnostic["version_violations"] = rollup["version_violations"]
+        record.diagnostic = diagnostic
+        record.recovery_funnel = rollup["recovery_funnel"]
+        record.valid_rescues = {
+            "count": rollup["valid_rescue_count"],
+            "case_ids": (diagnostic.get("rescues") or []),
+        }
+        record.false_positive_recoveries = {
+            "count": rollup["safety_control_false_positives"],
+            "case_ids": (diagnostic.get("false_positives") or []),
+        }
+        record.usage = {**(record.usage or {}), **rollup["usage"]}
+        record.cost = {**(record.cost or {}), **rollup["cost"]}
+        record.latency = {**(record.latency or {}), **rollup["latency"]}
+        if rollup["safety_control_false_positives"]:
+            record.primary_remaining_bottleneck = "PROMPT_INJECTION_FALSE_POSITIVE_RECOVERY"
+        return rollup
+
+    def finalize_diagnostic_artifacts(self) -> dict[str, Any]:
+        record = self.initialize()
+        if record.diagnostic_completed_at is None:
+            raise ValueError("diagnostic has not completed")
+        verify_persisted_v2(self.session)
+        rollup = self._store_diagnostic_rollup(record)
+        if record.go_nogo in NO_GO_ALIASES:
+            record.go_nogo = NO_GO
+            record.selection = {
+                **(record.selection or {}),
+                "selected_strategy": CONTROL_STRATEGY,
+                "reason": NO_GO,
+            }
+            record.selected_strategy = CONTROL_STRATEGY
+        research = self.session.get(ResearchArchitectureRecord, V3_ARCHITECTURE_ID)
+        if research is not None:
+            research.production_status = False
+            if not diagnostic_is_go(record.go_nogo):
+                research.selected_v3_strategy = CONTROL_STRATEGY
+        self.session.commit()
+        verify_persisted_v2(self.session)
+        self._persist_markdown()
+        payload = self.status()
+        payload["rollup"] = rollup
+        return payload
+
     def status(self, *, include_cases: bool = False) -> dict[str, Any]:
         record = self.session.get(V3Phase1ExperimentRecord, LOCK_ID)
         research = self.session.get(ResearchArchitectureRecord, V3_ARCHITECTURE_ID)
@@ -1696,8 +1770,13 @@ class V3GenerateVerifyBenchmark:
         if not record:
             return payload
         diagnostic = record.diagnostic or {}
+        rollup = diagnostic.get("rollup") or (
+            diagnostic_rollup(diagnostic) if diagnostic.get("cases") else {}
+        )
         if not include_cases:
             diagnostic = {key: value for key, value in diagnostic.items() if key != "cases"}
+        if rollup:
+            diagnostic = {**diagnostic, "rollup": rollup}
         payload.update(
             {
                 "dataset_id": record.dataset_id,
@@ -1709,7 +1788,9 @@ class V3GenerateVerifyBenchmark:
                 "closest_previous_case": record.closest_previous_case,
                 "overlap_report": record.overlap_report,
                 "selection_policy": record.selection_policy,
-                "go_nogo": record.go_nogo,
+                "go_nogo": (
+                    NO_GO if record.go_nogo in NO_GO_ALIASES else record.go_nogo
+                ),
                 "diagnostic": diagnostic,
                 "control_metrics": record.control_metrics,
                 "candidate_metrics": record.candidate_metrics,

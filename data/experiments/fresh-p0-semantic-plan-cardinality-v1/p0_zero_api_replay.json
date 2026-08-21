@@ -1,0 +1,873 @@
+{
+  "case_count": 11,
+  "cases": [
+    {
+      "assembly": {
+        "answer": null,
+        "assembled_output_fact_count": 0,
+        "atomic_requirement_count": 2,
+        "citations": [],
+        "detected_output_unit_count": 2,
+        "failure_code": "WRONG_VERSION",
+        "status": "abstained",
+        "validated_mapping_subset_assembled": true,
+        "validated_output_fact_count": 0
+      },
+      "case_id": "fresh_v1_009",
+      "classification": "P2_REQUIRED",
+      "local_validation": {
+        "failure_code": "WRONG_VERSION",
+        "valid": false
+      },
+      "new": {
+        "assembly_preservation": true,
+        "cardinality_match": true,
+        "local_replay_result": "SAFE_ABSTENTION",
+        "output_unit_count": 2,
+        "qualifier_count": 1,
+        "requirement_count": 2
+      },
+      "new_api_calls": 0,
+      "old": {
+        "final_result": "INCORRECT_ABSTENTION",
+        "output_unit_count": 2,
+        "qualifier_count": 0,
+        "requirement_count": 3
+      },
+      "question": "For an outage runbook card, give the west-region recovery code and the cadence of customer-facing status updates while mitigation is underway.",
+      "saved_mapping_reuse": {
+        "adapted_mappings": [
+          {
+            "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+            "document_id": "recovery-runbook-west",
+            "document_version_id": "687b9971-bd2b-44c9-ba4a-83f68eb86ac2",
+            "requirement_id": "R1",
+            "requirement_text": "the west-region recovery code",
+            "reuse_score": 16,
+            "supporting_span": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29 .",
+            "version": "1.0"
+          },
+          {
+            "chunk_id": "ab9cf7c9-3671-43d6-90fd-12630f084203",
+            "document_id": "customer-support-escalation",
+            "document_version_id": "7be9eb6b-b1db-46b9-8ef3-ae30257098c7",
+            "requirement_id": "R2",
+            "requirement_text": "the cadence of customer-facing status updates while mitigation is underway",
+            "reuse_score": 17,
+            "supporting_span": "Customer-facing status updates are published every thirty minutes until mitigation .",
+            "version": "3.2"
+          }
+        ],
+        "source_decision": "GO",
+        "status": "REUSABLE"
+      },
+      "scorer": {
+        "behavior": "INCORRECT_ABSTENTION",
+        "citation_completeness_pass": null,
+        "citation_correctness_pass": null,
+        "citation_validity_pass": null,
+        "fact_completeness_pass": false,
+        "facts_missing": [],
+        "facts_satisfied": [],
+        "required_documents_satisfied": false
+      },
+      "structural_p0_assembly_without_out_of_scope_version_gate": {
+        "failure_code": null,
+        "status": "answered"
+      }
+    },
+    {
+      "assembly": {
+        "answer": "R1: The launch owner is the Product Operations team . [C1]\nR2: The Atlas API is maintained by the Platform Interfaces team . [C2]",
+        "assembled_output_fact_count": 2,
+        "atomic_requirement_count": 2,
+        "citations": [
+          "826df8a1-5461-4515-95f7-1998a4d3c205",
+          "3f2b1506-ee1e-4728-8fbe-35947c82c3b4"
+        ],
+        "detected_output_unit_count": 2,
+        "failure_code": null,
+        "status": "answered",
+        "validated_mapping_subset_assembled": true,
+        "validated_output_fact_count": 2
+      },
+      "case_id": "fresh_v1_011",
+      "classification": "P0_FIXED_LOCALLY",
+      "local_validation": {
+        "failure_code": null,
+        "valid": true
+      },
+      "new": {
+        "assembly_preservation": true,
+        "cardinality_match": true,
+        "local_replay_result": "COMPLETE_ANSWER",
+        "output_unit_count": 2,
+        "qualifier_count": 0,
+        "requirement_count": 2
+      },
+      "new_api_calls": 0,
+      "old": {
+        "final_result": "UNSUPPORTED_ANSWER",
+        "output_unit_count": 2,
+        "qualifier_count": 0,
+        "requirement_count": 1
+      },
+      "question": "Pair the Atlas launch owner with the team that maintains the Atlas API.",
+      "saved_mapping_reuse": {
+        "adapted_mappings": [
+          {
+            "chunk_id": "826df8a1-5461-4515-95f7-1998a4d3c205",
+            "document_id": "project-atlas-launch",
+            "document_version_id": "e431da5b-ef31-440f-a5a4-80a35fb97e24",
+            "requirement_id": "R1",
+            "requirement_text": "the Atlas launch owner",
+            "reuse_score": 10,
+            "supporting_span": "The launch owner is the Product Operations team .",
+            "version": "1.0"
+          },
+          {
+            "chunk_id": "3f2b1506-ee1e-4728-8fbe-35947c82c3b4",
+            "document_id": "project-atlas-api",
+            "document_version_id": "cf5dfd1d-b744-48f1-bfde-41a198d86f35",
+            "requirement_id": "R2",
+            "requirement_text": "the team that maintains the Atlas API",
+            "reuse_score": 16,
+            "supporting_span": "The Atlas API is maintained by the Platform Interfaces team .",
+            "version": "3.0"
+          }
+        ],
+        "source_decision": "GO",
+        "status": "REUSABLE"
+      },
+      "scorer": {
+        "behavior": "CORRECT_COMPLETE_ANSWER",
+        "citation_completeness_pass": true,
+        "citation_correctness_pass": true,
+        "citation_validity_pass": true,
+        "fact_completeness_pass": true,
+        "facts_missing": [],
+        "facts_satisfied": [
+          "Product Operations",
+          "Platform Interfaces"
+        ],
+        "required_documents_satisfied": true
+      },
+      "structural_p0_assembly_without_out_of_scope_version_gate": {
+        "failure_code": null,
+        "status": "answered"
+      }
+    },
+    {
+      "assembly": {
+        "answer": "R1: The recovery drill runs on the second Wednesday of each quarter . [C1]\nR2: Routine production releases occur on Tuesdays and Thursdays . [C2]",
+        "assembled_output_fact_count": 2,
+        "atomic_requirement_count": 2,
+        "citations": [
+          "d60d3666-be70-4f64-b83e-7fe72c86f426",
+          "01423f11-8d28-418b-bd8f-b548fa0491ef"
+        ],
+        "detected_output_unit_count": 2,
+        "failure_code": null,
+        "status": "answered",
+        "validated_mapping_subset_assembled": true,
+        "validated_output_fact_count": 2
+      },
+      "case_id": "fresh_v1_013",
+      "classification": "P0_FIXED_LOCALLY",
+      "local_validation": {
+        "failure_code": null,
+        "valid": true
+      },
+      "new": {
+        "assembly_preservation": true,
+        "cardinality_match": true,
+        "local_replay_result": "COMPLETE_ANSWER",
+        "output_unit_count": 2,
+        "qualifier_count": 0,
+        "requirement_count": 2
+      },
+      "new_api_calls": 0,
+      "old": {
+        "final_result": "UNSUPPORTED_ANSWER",
+        "output_unit_count": 2,
+        "qualifier_count": 0,
+        "requirement_count": 1
+      },
+      "question": "How often is the west recovery drill held within a quarter, and on which weekdays do routine production releases occur?",
+      "saved_mapping_reuse": {
+        "adapted_mappings": [
+          {
+            "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+            "document_id": "recovery-runbook-west",
+            "document_version_id": "687b9971-bd2b-44c9-ba4a-83f68eb86ac2",
+            "requirement_id": "R1",
+            "requirement_text": "How often is the west recovery drill held within a quarter",
+            "reuse_score": 13,
+            "supporting_span": "The recovery drill runs on the second Wednesday of each quarter .",
+            "version": "1.0"
+          },
+          {
+            "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+            "document_id": "engineering-deployment-handbook",
+            "document_version_id": "49d30c7e-9187-4311-b664-57a8d6029380",
+            "requirement_id": "R2",
+            "requirement_text": "on which weekdays do routine production releases occur",
+            "reuse_score": 12,
+            "supporting_span": "Routine production releases occur on Tuesdays and Thursdays .",
+            "version": "2026.1"
+          }
+        ],
+        "source_decision": "GO",
+        "status": "REUSABLE"
+      },
+      "scorer": {
+        "behavior": "CORRECT_COMPLETE_ANSWER",
+        "citation_completeness_pass": true,
+        "citation_correctness_pass": true,
+        "citation_validity_pass": true,
+        "fact_completeness_pass": true,
+        "facts_missing": [],
+        "facts_satisfied": [
+          "second Wednesday",
+          "Tuesdays and Thursdays"
+        ],
+        "required_documents_satisfied": true
+      },
+      "structural_p0_assembly_without_out_of_scope_version_gate": {
+        "failure_code": null,
+        "status": "answered"
+      }
+    },
+    {
+      "assembly": {
+        "answer": null,
+        "assembled_output_fact_count": 0,
+        "atomic_requirement_count": 2,
+        "citations": [],
+        "detected_output_unit_count": 2,
+        "failure_code": "WRONG_VERSION",
+        "status": "abstained",
+        "validated_mapping_subset_assembled": true,
+        "validated_output_fact_count": 0
+      },
+      "case_id": "fresh_v1_015",
+      "classification": "P2_REQUIRED",
+      "local_validation": {
+        "failure_code": "WRONG_VERSION",
+        "valid": false
+      },
+      "new": {
+        "assembly_preservation": true,
+        "cardinality_match": true,
+        "local_replay_result": "SAFE_ABSTENTION",
+        "output_unit_count": 2,
+        "qualifier_count": 1,
+        "requirement_count": 2
+      },
+      "new_api_calls": 0,
+      "old": {
+        "final_result": "INCORRECT_ABSTENTION",
+        "output_unit_count": 2,
+        "qualifier_count": 0,
+        "requirement_count": 4
+      },
+      "question": "During a current severity-one incident affecting customer availability, who coordinates Engineering and Support, and which department joins that incident commander?",
+      "saved_mapping_reuse": {
+        "adapted_mappings": [
+          {
+            "chunk_id": "12b0a957-4a2f-4c06-a8aa-55067b120c4b",
+            "document_id": "security-incident-policy",
+            "document_version_id": "c4d49578-2eec-4051-a54b-addc12af0efa",
+            "requirement_id": "R1",
+            "requirement_text": "who coordinates Engineering and Support",
+            "reuse_score": 9,
+            "supporting_span": "The incident commander coordinates Engineering and Customer Support during an active severity-one incident .",
+            "version": "2026"
+          },
+          {
+            "chunk_id": "37bffe4a-9e5d-419a-a687-12d90a031de7",
+            "document_id": "operations-continuity-plan",
+            "document_version_id": "2e316085-67fe-4606-97aa-55577ff89186",
+            "requirement_id": "R2",
+            "requirement_text": "which department joins that incident commander",
+            "reuse_score": 9,
+            "supporting_span": "Operations joins the Security incident commander when a severity-one incident affects customer availability .",
+            "version": "4.0"
+          }
+        ],
+        "source_decision": "GO",
+        "status": "REUSABLE"
+      },
+      "scorer": {
+        "behavior": "INCORRECT_ABSTENTION",
+        "citation_completeness_pass": null,
+        "citation_correctness_pass": null,
+        "citation_validity_pass": null,
+        "fact_completeness_pass": false,
+        "facts_missing": [],
+        "facts_satisfied": [],
+        "required_documents_satisfied": false
+      },
+      "structural_p0_assembly_without_out_of_scope_version_gate": {
+        "failure_code": null,
+        "status": "answered"
+      }
+    },
+    {
+      "assembly": {
+        "answer": null,
+        "assembled_output_fact_count": 0,
+        "atomic_requirement_count": 2,
+        "citations": [],
+        "detected_output_unit_count": 2,
+        "failure_code": "WRONG_VERSION",
+        "status": "abstained",
+        "validated_mapping_subset_assembled": true,
+        "validated_output_fact_count": 0
+      },
+      "case_id": "fresh_v1_016",
+      "classification": "P2_REQUIRED",
+      "local_validation": {
+        "failure_code": "WRONG_VERSION",
+        "valid": false
+      },
+      "new": {
+        "assembly_preservation": true,
+        "cardinality_match": true,
+        "local_replay_result": "SAFE_ABSTENTION",
+        "output_unit_count": 2,
+        "qualifier_count": 0,
+        "requirement_count": 2
+      },
+      "new_api_calls": 0,
+      "old": {
+        "final_result": "INCORRECT_ABSTENTION",
+        "output_unit_count": 2,
+        "qualifier_count": 0,
+        "requirement_count": 1
+      },
+      "question": "How long are security audit logs retained, and how quickly must a current severity-one incident be reported after discovery?",
+      "saved_mapping_reuse": {
+        "adapted_mappings": [
+          {
+            "chunk_id": "054089a4-d1c8-4628-aed2-03dbd8b4e8e9",
+            "document_id": "data-retention-standard",
+            "document_version_id": "b1ea5f93-df0b-42ee-9e4d-18b297d2877e",
+            "requirement_id": "R1",
+            "requirement_text": "How long are security audit logs retained",
+            "reuse_score": 12,
+            "supporting_span": "Security audit logs are retained for seven years .",
+            "version": "2.0"
+          },
+          {
+            "chunk_id": "bd832158-c74b-4f03-8f53-60a2d30e69e8",
+            "document_id": "security-incident-policy",
+            "document_version_id": "c4d49578-2eec-4051-a54b-addc12af0efa",
+            "requirement_id": "R2",
+            "requirement_text": "how quickly must a current severity-one incident be reported after discovery",
+            "reuse_score": 23,
+            "supporting_span": "Under the current 2026 policy , suspected severity-one incidents must be reported to the security duty officer within 15 minutes of discovery .",
+            "version": "2026"
+          }
+        ],
+        "source_decision": "GO",
+        "status": "REUSABLE"
+      },
+      "scorer": {
+        "behavior": "INCORRECT_ABSTENTION",
+        "citation_completeness_pass": null,
+        "citation_correctness_pass": null,
+        "citation_validity_pass": null,
+        "fact_completeness_pass": false,
+        "facts_missing": [],
+        "facts_satisfied": [],
+        "required_documents_satisfied": false
+      },
+      "structural_p0_assembly_without_out_of_scope_version_gate": {
+        "failure_code": null,
+        "status": "answered"
+      }
+    },
+    {
+      "assembly": {
+        "answer": null,
+        "assembled_output_fact_count": 0,
+        "atomic_requirement_count": 3,
+        "citations": [],
+        "detected_output_unit_count": 3,
+        "failure_code": "WRONG_VERSION",
+        "status": "abstained",
+        "validated_mapping_subset_assembled": true,
+        "validated_output_fact_count": 0
+      },
+      "case_id": "fresh_v1_023",
+      "classification": "P2_REQUIRED",
+      "local_validation": {
+        "failure_code": "WRONG_VERSION",
+        "valid": false
+      },
+      "new": {
+        "assembly_preservation": true,
+        "cardinality_match": true,
+        "local_replay_result": "SAFE_ABSTENTION",
+        "output_unit_count": 3,
+        "qualifier_count": 1,
+        "requirement_count": 3
+      },
+      "new_api_calls": 0,
+      "old": {
+        "final_result": "INCORRECT_ABSTENTION",
+        "output_unit_count": 3,
+        "qualifier_count": 0,
+        "requirement_count": 4
+      },
+      "question": "For a current workforce-and-finance checklist, state the remote-work allowance, manager review frequency, and expense-report filing deadline.",
+      "saved_mapping_reuse": {
+        "adapted_mappings": [
+          {
+            "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+            "document_id": "remote-work-policy",
+            "document_version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+            "requirement_id": "R1",
+            "requirement_text": "the remote-work allowance",
+            "reuse_score": 7,
+            "supporting_span": "employees may work remotely two days per week",
+            "version": "2026"
+          },
+          {
+            "chunk_id": "49679d97-020f-4418-9430-4c296bc824b1",
+            "document_id": "remote-work-policy",
+            "document_version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+            "requirement_id": "R2",
+            "requirement_text": "manager review frequency",
+            "reuse_score": 6,
+            "supporting_span": "Managers review remote-work schedules every month",
+            "version": "2026"
+          },
+          {
+            "chunk_id": "7bdffe91-3861-44db-8be2-d6c7328997e8",
+            "document_id": "finance-expense-policy",
+            "document_version_id": "4c469613-1997-4632-9a1e-81c37f786041",
+            "requirement_id": "R3",
+            "requirement_text": "expense-report filing deadline",
+            "reuse_score": 8,
+            "supporting_span": "Expense reports are due within ten business days",
+            "version": "5.1"
+          }
+        ],
+        "source_decision": "GO",
+        "status": "REUSABLE"
+      },
+      "scorer": {
+        "behavior": "INCORRECT_ABSTENTION",
+        "citation_completeness_pass": null,
+        "citation_correctness_pass": null,
+        "citation_validity_pass": null,
+        "fact_completeness_pass": false,
+        "facts_missing": [],
+        "facts_satisfied": [],
+        "required_documents_satisfied": false
+      },
+      "structural_p0_assembly_without_out_of_scope_version_gate": {
+        "failure_code": null,
+        "status": "answered"
+      }
+    },
+    {
+      "assembly": {
+        "answer": null,
+        "assembled_output_fact_count": 0,
+        "atomic_requirement_count": 3,
+        "citations": [],
+        "detected_output_unit_count": 3,
+        "failure_code": "DECISION_STATUS_MISMATCH",
+        "status": "abstained",
+        "validated_mapping_subset_assembled": true,
+        "validated_output_fact_count": 0
+      },
+      "case_id": "fresh_v1_025",
+      "classification": "OTHER_REMAINING_CAUSE",
+      "local_validation": {
+        "failure_code": "DECISION_STATUS_MISMATCH",
+        "valid": false
+      },
+      "new": {
+        "assembly_preservation": true,
+        "cardinality_match": true,
+        "local_replay_result": "SAFE_ABSTENTION_DECISION_STATUS_MISMATCH",
+        "output_unit_count": 3,
+        "qualifier_count": 1,
+        "requirement_count": 3
+      },
+      "new_api_calls": 0,
+      "old": {
+        "final_result": "INCORRECT_ABSTENTION",
+        "output_unit_count": 3,
+        "qualifier_count": 0,
+        "requirement_count": 4
+      },
+      "question": "For east-region resilience, name the standby cluster, the quarterly drill slot, and the continuity-plan owner.",
+      "saved_mapping_reuse": {
+        "adapted_mappings": [
+          {
+            "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+            "document_id": "recovery-runbook-east",
+            "document_version_id": "7df73739-827d-45b9-92fc-392ca40af088",
+            "requirement_id": "R1",
+            "requirement_text": "the standby cluster",
+            "reuse_score": 6,
+            "supporting_span": "The east-region customer API recovery sequence uses runbook code OPS-REC-E17 . Failover targets the eu-central standby cluster . The recovery drill runs on the first Wednesday of each quarter .",
+            "version": "1.0"
+          },
+          {
+            "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+            "document_id": "recovery-runbook-east",
+            "document_version_id": "7df73739-827d-45b9-92fc-392ca40af088",
+            "requirement_id": "R2",
+            "requirement_text": "the quarterly drill slot",
+            "reuse_score": 3,
+            "supporting_span": "The recovery drill runs on the first Wednesday of each quarter .",
+            "version": "1.0"
+          },
+          {
+            "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+            "document_id": "operations-continuity-plan",
+            "document_version_id": "2e316085-67fe-4606-97aa-55577ff89186",
+            "requirement_id": "R3",
+            "requirement_text": "the continuity-plan owner",
+            "reuse_score": 10,
+            "supporting_span": "Operations owns the business continuity plan .",
+            "version": "4.0"
+          }
+        ],
+        "source_decision": "ABSTAIN",
+        "status": "REUSABLE"
+      },
+      "scorer": {
+        "behavior": "INCORRECT_ABSTENTION",
+        "citation_completeness_pass": null,
+        "citation_correctness_pass": null,
+        "citation_validity_pass": null,
+        "fact_completeness_pass": false,
+        "facts_missing": [],
+        "facts_satisfied": [],
+        "required_documents_satisfied": false
+      },
+      "structural_p0_assembly_without_out_of_scope_version_gate": {
+        "failure_code": null,
+        "status": "answered"
+      }
+    },
+    {
+      "assembly": {
+        "answer": "R1: The launch owner is the Product Operations team . [C1]\nR2: The Atlas API is maintained by the Platform Interfaces team . [C2]\nR3: Finance Operations owns exception review . [C3]",
+        "assembled_output_fact_count": 3,
+        "atomic_requirement_count": 3,
+        "citations": [
+          "826df8a1-5461-4515-95f7-1998a4d3c205",
+          "3f2b1506-ee1e-4728-8fbe-35947c82c3b4",
+          "2798f984-b356-4e40-9ed2-574ffbe26e86"
+        ],
+        "detected_output_unit_count": 3,
+        "failure_code": null,
+        "status": "answered",
+        "validated_mapping_subset_assembled": true,
+        "validated_output_fact_count": 3
+      },
+      "case_id": "fresh_v1_028",
+      "classification": "P0_FIXED_LOCALLY",
+      "local_validation": {
+        "failure_code": null,
+        "valid": true
+      },
+      "new": {
+        "assembly_preservation": true,
+        "cardinality_match": true,
+        "local_replay_result": "COMPLETE_ANSWER",
+        "output_unit_count": 3,
+        "qualifier_count": 0,
+        "requirement_count": 3
+      },
+      "new_api_calls": 0,
+      "old": {
+        "final_result": "UNSUPPORTED_ANSWER",
+        "output_unit_count": 3,
+        "qualifier_count": 0,
+        "requirement_count": 1
+      },
+      "question": "State who owns the Atlas launch, who maintains the Atlas API, and who owns finance exception review.",
+      "saved_mapping_reuse": {
+        "adapted_mappings": [
+          {
+            "chunk_id": "826df8a1-5461-4515-95f7-1998a4d3c205",
+            "document_id": "project-atlas-launch",
+            "document_version_id": "e431da5b-ef31-440f-a5a4-80a35fb97e24",
+            "requirement_id": "R1",
+            "requirement_text": "who owns the Atlas launch",
+            "reuse_score": 7,
+            "supporting_span": "The launch owner is the Product Operations team .",
+            "version": "1.0"
+          },
+          {
+            "chunk_id": "3f2b1506-ee1e-4728-8fbe-35947c82c3b4",
+            "document_id": "project-atlas-api",
+            "document_version_id": "cf5dfd1d-b744-48f1-bfde-41a198d86f35",
+            "requirement_id": "R2",
+            "requirement_text": "who maintains the Atlas API",
+            "reuse_score": 13,
+            "supporting_span": "The Atlas API is maintained by the Platform Interfaces team .",
+            "version": "3.0"
+          },
+          {
+            "chunk_id": "2798f984-b356-4e40-9ed2-574ffbe26e86",
+            "document_id": "finance-expense-policy",
+            "document_version_id": "4c469613-1997-4632-9a1e-81c37f786041",
+            "requirement_id": "R3",
+            "requirement_text": "who owns finance exception review",
+            "reuse_score": 14,
+            "supporting_span": "Finance Operations owns exception review .",
+            "version": "5.1"
+          }
+        ],
+        "source_decision": "GO",
+        "status": "REUSABLE"
+      },
+      "scorer": {
+        "behavior": "CORRECT_COMPLETE_ANSWER",
+        "citation_completeness_pass": true,
+        "citation_correctness_pass": true,
+        "citation_validity_pass": true,
+        "fact_completeness_pass": true,
+        "facts_missing": [],
+        "facts_satisfied": [
+          "Product Operations",
+          "Platform Interfaces",
+          "Finance Operations"
+        ],
+        "required_documents_satisfied": true
+      },
+      "structural_p0_assembly_without_out_of_scope_version_gate": {
+        "failure_code": null,
+        "status": "answered"
+      }
+    },
+    {
+      "assembly": {
+        "answer": "R1: Under the current 2026 policy , employees may work remotely two days per week . [C1]\nR2: Managers review remote-work schedules every month . [C2]",
+        "assembled_output_fact_count": 2,
+        "atomic_requirement_count": 2,
+        "citations": [
+          "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "49679d97-020f-4418-9430-4c296bc824b1"
+        ],
+        "detected_output_unit_count": 2,
+        "failure_code": null,
+        "status": "answered",
+        "validated_mapping_subset_assembled": true,
+        "validated_output_fact_count": 2
+      },
+      "case_id": "fresh_v1_030",
+      "classification": "P0_FIXED_LOCALLY",
+      "local_validation": {
+        "failure_code": null,
+        "valid": true
+      },
+      "new": {
+        "assembly_preservation": true,
+        "cardinality_match": true,
+        "local_replay_result": "COMPLETE_ANSWER",
+        "output_unit_count": 2,
+        "qualifier_count": 1,
+        "requirement_count": 2
+      },
+      "new_api_calls": 0,
+      "old": {
+        "final_result": "UNSUPPORTED_ANSWER",
+        "output_unit_count": 2,
+        "qualifier_count": 1,
+        "requirement_count": 1
+      },
+      "question": "Under the current 2026 remote-work policy, how many remote days are allowed and how often are schedules reviewed?",
+      "saved_mapping_reuse": {
+        "adapted_mappings": [
+          {
+            "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+            "document_id": "remote-work-policy",
+            "document_version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+            "requirement_id": "R1",
+            "requirement_text": "how many remote days are allowed",
+            "reuse_score": 5,
+            "supporting_span": "Under the current 2026 policy , employees may work remotely two days per week .",
+            "version": "2026"
+          },
+          {
+            "chunk_id": "49679d97-020f-4418-9430-4c296bc824b1",
+            "document_id": "remote-work-policy",
+            "document_version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+            "requirement_id": "R2",
+            "requirement_text": "how often are schedules reviewed",
+            "reuse_score": 6,
+            "supporting_span": "Managers review remote-work schedules every month .",
+            "version": "2026"
+          }
+        ],
+        "source_decision": "GO",
+        "status": "REUSABLE"
+      },
+      "scorer": {
+        "behavior": "CORRECT_COMPLETE_ANSWER",
+        "citation_completeness_pass": true,
+        "citation_correctness_pass": true,
+        "citation_validity_pass": true,
+        "fact_completeness_pass": true,
+        "facts_missing": [],
+        "facts_satisfied": [
+          "two days per week",
+          "every month"
+        ],
+        "required_documents_satisfied": true
+      },
+      "structural_p0_assembly_without_out_of_scope_version_gate": {
+        "failure_code": null,
+        "status": "answered"
+      }
+    },
+    {
+      "assembly": {
+        "answer": null,
+        "assembled_output_fact_count": 0,
+        "atomic_requirement_count": 2,
+        "citations": [],
+        "detected_output_unit_count": 2,
+        "failure_code": "WRONG_VERSION",
+        "status": "abstained",
+        "validated_mapping_subset_assembled": true,
+        "validated_output_fact_count": 0
+      },
+      "case_id": "fresh_v1_036",
+      "classification": "P2_REQUIRED",
+      "local_validation": {
+        "failure_code": "WRONG_VERSION",
+        "valid": false
+      },
+      "new": {
+        "assembly_preservation": true,
+        "cardinality_match": true,
+        "local_replay_result": "SAFE_ABSTENTION",
+        "output_unit_count": 2,
+        "qualifier_count": 1,
+        "requirement_count": 2
+      },
+      "new_api_calls": 0,
+      "old": {
+        "final_result": "INCORRECT_ABSTENTION",
+        "output_unit_count": 2,
+        "qualifier_count": 1,
+        "requirement_count": 1
+      },
+      "question": "As of the current 2026 editions, combine the remote-work allowance with the severity-one notification deadline.",
+      "saved_mapping_reuse": {
+        "adapted_mappings": [
+          {
+            "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+            "document_id": "remote-work-policy",
+            "document_version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+            "requirement_id": "R1",
+            "requirement_text": "the remote-work allowance",
+            "reuse_score": 7,
+            "supporting_span": "Under the current 2026 policy , employees may work remotely two days per week .",
+            "version": "2026"
+          },
+          {
+            "chunk_id": "bd832158-c74b-4f03-8f53-60a2d30e69e8",
+            "document_id": "security-incident-policy",
+            "document_version_id": "c4d49578-2eec-4051-a54b-addc12af0efa",
+            "requirement_id": "R2",
+            "requirement_text": "the severity-one notification deadline",
+            "reuse_score": 6,
+            "supporting_span": "Under the current 2026 policy , suspected severity-one incidents must be reported to the security duty officer within 15 minutes of discovery .",
+            "version": "2026"
+          }
+        ],
+        "source_decision": "GO",
+        "status": "REUSABLE"
+      },
+      "scorer": {
+        "behavior": "INCORRECT_ABSTENTION",
+        "citation_completeness_pass": null,
+        "citation_correctness_pass": null,
+        "citation_validity_pass": null,
+        "fact_completeness_pass": false,
+        "facts_missing": [],
+        "facts_satisfied": [],
+        "required_documents_satisfied": false
+      },
+      "structural_p0_assembly_without_out_of_scope_version_gate": {
+        "failure_code": null,
+        "status": "answered"
+      }
+    },
+    {
+      "assembly": {
+        "answer": null,
+        "assembled_output_fact_count": 0,
+        "atomic_requirement_count": 1,
+        "citations": [],
+        "detected_output_unit_count": 1,
+        "failure_code": "P4_REQUIRED",
+        "status": "abstained",
+        "validated_mapping_subset_assembled": true,
+        "validated_output_fact_count": 0
+      },
+      "case_id": "fresh_v1_044",
+      "classification": "P4_REQUIRED",
+      "local_validation": {
+        "failure_code": "P4_REQUIRED",
+        "valid": false
+      },
+      "new": {
+        "assembly_preservation": true,
+        "cardinality_match": true,
+        "local_replay_result": "SAFE_ABSTENTION",
+        "output_unit_count": 1,
+        "qualifier_count": 1,
+        "requirement_count": 1
+      },
+      "new_api_calls": 0,
+      "old": {
+        "final_result": "INCORRECT_ABSTENTION",
+        "output_unit_count": 1,
+        "qualifier_count": 0,
+        "requirement_count": 2
+      },
+      "question": "If customer-facing outage updates are sent every thirty minutes, would a forty-five-minute cadence match the support guide?",
+      "saved_mapping_reuse": {
+        "adapted_mappings": [],
+        "source_decision": "ABSTAIN",
+        "status": "P4_REQUIRED"
+      },
+      "scorer": {
+        "behavior": "INCORRECT_ABSTENTION",
+        "citation_completeness_pass": null,
+        "citation_correctness_pass": null,
+        "citation_validity_pass": null,
+        "fact_completeness_pass": false,
+        "facts_missing": [],
+        "facts_satisfied": [],
+        "required_documents_satisfied": false
+      },
+      "structural_p0_assembly_without_out_of_scope_version_gate": {
+        "failure_code": "P4_REQUIRED",
+        "status": "not_run"
+      }
+    }
+  ],
+  "classification_counts": {
+    "OTHER_REMAINING_CAUSE": 1,
+    "P0_FIXED_LOCALLY": 4,
+    "P2_REQUIRED": 5,
+    "P4_REQUIRED": 1
+  },
+  "new_api_calls": 0,
+  "new_cost_usd": 0.0
+}

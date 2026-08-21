@@ -1,0 +1,39 @@
+{
+  "api_calls": 0,
+  "fixes": [
+    {
+      "component": "BM25 tokenization",
+      "root_causes": ["RETRIEVAL_MISS"],
+      "behavior": "Preserve surface tokens and add conservative English singular forms during lexical indexing and querying.",
+      "safety_boundary": "No synonym expansion and no authorization changes."
+    },
+    {
+      "component": "Atomic Requirement Contract",
+      "root_causes": ["QUESTION_PLAN_ERROR", "QUALIFIER_REQUIREMENT_ERROR"],
+      "behavior": "Separate leading version qualifiers, strip trailing two-version scope from requested outputs, and split put/place-X-next-to-Y constructions into two output requirements.",
+      "safety_boundary": "Every requested output remains mandatory; qualifiers cannot satisfy output requirements."
+    },
+    {
+      "component": "Temporal planning and retrieval",
+      "root_causes": ["TEMPORAL_SCOPE_ERROR", "QUALIFIER_REQUIREMENT_ERROR"],
+      "behavior": "Give multiple explicit versions CROSS_VERSION precedence and retrieve inactive versions for authorized unnumbered HISTORICAL_ONLY scope.",
+      "safety_boundary": "Tenant, region, and ACL filters remain upstream and mandatory; historical scope admits only inactive versions."
+    },
+    {
+      "component": "Verifier mapping validation",
+      "root_causes": ["QUESTION_PLAN_ERROR", "MAPPING_SCHEMA_ERROR"],
+      "behavior": "Losslessly broadcast a singleton document identity only when every cited chunk validates to that same document.",
+      "safety_boundary": "Chunk, version, authorization, span, and document identity validation remain fail-closed."
+    },
+    {
+      "component": "Post-Luna routing",
+      "root_causes": ["LUNA_FALSE_NEGATIVE"],
+      "behavior": "Treat complete nonempty authorized requirement packets as evidence availability for suspicious-abstain routing through the existing Sol policy.",
+      "safety_boundary": "No answer is promoted directly; empty packets still safe-abstain and Sol output remains subject to all deterministic gates."
+    }
+  ],
+  "luna_prompt_changed": false,
+  "models_changed": false,
+  "top_k": 15,
+  "top_k_changed": false
+}

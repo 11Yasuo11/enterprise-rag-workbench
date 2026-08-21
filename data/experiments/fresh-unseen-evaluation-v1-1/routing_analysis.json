@@ -1,0 +1,12 @@
+{
+  "blocking_verdict": "FRESH_UNSEEN_EVALUATION_INCONCLUSIVE",
+  "experiment_id": "FRESH_UNSEEN_EVALUATION_V1_1",
+  "final_routes": null,
+  "paid_api_calls": 0,
+  "partial_zero_api_routes": {
+    "SAFE_ABSTAIN_PROMPT_INJECTION_PRECHECK": 3,
+    "UNRESOLVED_EMBEDDING_BOUNDARY": 57
+  },
+  "status": "NOT_RUN_MANDATORY_DRY_RUN_GATE_FAILED",
+  "timestamp": "2026-08-20T15:25:27.515779+00:00"
+}

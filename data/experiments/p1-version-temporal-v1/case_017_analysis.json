@@ -1,0 +1,36 @@
+{
+  "case_id": "fresh_v1_017",
+  "classification": "P2_REQUIRED",
+  "diagnosis": "Both active documents and facts remain in Top-15. The selected remote-work version was globally enforced against finance-expense-policy evidence; retrieval/version eligibility is already correct.",
+  "local_emission": "SAFE_ABSTENTION",
+  "new_embedding_calls": 0,
+  "new_luna_calls": 0,
+  "new_sol_calls": 0,
+  "new_top15_version_coverage": {
+    "finance-expense-policy": [
+      "5.1"
+    ],
+    "remote-work-policy": [
+      "2026"
+    ]
+  },
+  "old_top15_version_coverage": {
+    "finance-expense-policy": [
+      "5.1"
+    ],
+    "remote-work-policy": [
+      "2026"
+    ]
+  },
+  "p1_change_required": false,
+  "requested_versions": [],
+  "required_fact_presence_new_top15": {
+    "above 25 euros": true,
+    "two days per week": true
+  },
+  "requirement_version_mapping_possible": false,
+  "saved_verifier_mapping_status": "P2_REQUIRED",
+  "structural_pass": true,
+  "temporal_mode": "CURRENT_ONLY",
+  "version_resolution_status": "VERSION_RESOLVED"
+}

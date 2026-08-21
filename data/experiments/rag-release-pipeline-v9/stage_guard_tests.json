@@ -1,0 +1,19 @@
+{
+  "api_calls": 0,
+  "command": "uv run pytest -q tests/unit/test_stage_guard_v9.py",
+  "passed": 9,
+  "failed": 0,
+  "checks": [
+    "targeted-four with zero Sol calls",
+    "targeted-four bounded escalation",
+    "60-case regression with six Sol calls",
+    "60-case regression with more than five Sol calls",
+    "second Sol escalation for one case rejected",
+    "stage budget rejection occurs before provider call",
+    "new stage resets Luna/Sol counters and stage spend",
+    "global lifetime spend accumulates",
+    "wrong-stage configuration fails before execution",
+    "V2 sixth Sol request does not emit a targeted-four error"
+  ],
+  "result": "PASS"
+}

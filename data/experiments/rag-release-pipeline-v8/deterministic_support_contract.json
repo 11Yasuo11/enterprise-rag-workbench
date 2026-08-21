@@ -1,0 +1,36 @@
+{
+  "answer_path": "DETERMINISTIC_VERIFIED_ANSWER",
+  "assembler": "deterministic-requirement-assembler-v3",
+  "conditions": [
+    "Every frozen requirement ID has one or more mappings",
+    "Every mapping normalizes to the canonical evidence mapping schema",
+    "Every mapped chunk is authorized by ACL, tenant, and region",
+    "Document, document-version, version, and chunk identities validate",
+    "Every supporting span is a literal substring of its cited chunk",
+    "Every citation is known and authorized",
+    "No equally grounded contradictory direct fact exists",
+    "No temporal ambiguity or unresolved version conflict exists",
+    "No unsupported semantic inference is required",
+    "Prompt-injection precheck passes",
+    "Universal Completeness Gate and deterministic assembler pass"
+  ],
+  "direct_extraction": {
+    "ambiguity_policy": "Equally grounded facts fail closed; retrieval rank never breaks a semantic tie",
+    "method": "Recognized literal relation grammar plus normalized subject anchors",
+    "recognized_relation_families": [
+      "maintenance",
+      "coordination",
+      "allowance",
+      "deadline",
+      "cadence"
+    ],
+    "unsupported_behavior": "Requirements outside recognized direct-extractive structures continue through Luna/Sol routing"
+  },
+  "final_generation_llm_calls": 0,
+  "model_roles": {
+    "A": "Complete deterministic direct support -> deterministic answer",
+    "B": "Plausible but incomplete or ambiguous evidence -> Luna",
+    "C": "Genuinely ambiguous Luna result eligible under frozen policy -> Sol"
+  },
+  "security": "The deterministic path does not bypass authorization, temporal validity, injection protection, citation validation, contradiction checks, or completeness."
+}

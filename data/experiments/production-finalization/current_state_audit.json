@@ -1,0 +1,64 @@
+{
+  "experiment_id": "PRODUCTION_RAG_FINALIZATION_V1",
+  "timestamp": "2026-08-21T09:07:59.711845+00:00",
+  "git": {
+    "branch": "chore/repository-hygiene-cleanup",
+    "head": "6e9741f55dc0436963ea1c0ba30b9a30bccbd207",
+    "dirty": true,
+    "note": "Uncommitted promotion + hygiene work present; finalization continues on this tree"
+  },
+  "LATEST_CANONICAL_RAG_RUNTIME": "src/rag_workbench/runtime/canonical_runtime.py::CanonicalRagRuntime",
+  "LATEST_VALIDATED_CONFIG": {
+    "source": "src/rag_workbench/runtime/config.py::ProductionRagConfig",
+    "dense_top_k": 20,
+    "bm25_top_k": 20,
+    "rrf_k": 60,
+    "fused_candidate_cap": 30,
+    "cross_encoder_top_k": 15,
+    "embedding_model": "text-embedding-3-small",
+    "cross_encoder_model": "cross-encoder/ms-marco-MiniLM-L6-v2",
+    "final_generation_llm": "disabled",
+    "luna_model": "gpt-5.6-luna",
+    "sol_model": "gpt-5.6-sol",
+    "semantic_index_identity": "e598d9fb91b13a8c6bd6be94b1bc0a54bbce27dd4e98dc158669d7198bc6f466"
+  },
+  "LATEST_EVALUATION_RUNTIME": {
+    "research": "V4\u2013V13 release pipelines + CanonicalRagRuntime modules",
+    "api_eval_run": "LEGACY RagService (to migrate)",
+    "latest_research_pipeline": "rag-release-pipeline-v13",
+    "v14": null
+  },
+  "LATEST_SERVING_RUNTIME": {
+    "http": "POST /rag/query",
+    "orchestrator": "CanonicalRagRuntime",
+    "promotion_verdict": "PRODUCTION_RAG_PROMOTION_COMPLETE",
+    "current_env_embedding_provider": "hashing"
+  },
+  "components_in_serving_path": {
+    "dense": true,
+    "bm25": true,
+    "rrf": true,
+    "cross_encoder": "conditional (IdentityReranker when hashing)",
+    "top15": true,
+    "temporal": true,
+    "version_resolver": true,
+    "question_plan": true,
+    "canonical_mapping": true,
+    "evidence_packets": true,
+    "deterministic_support": true,
+    "luna": "when ALLOW_EXTERNAL_JUDGE_CALLS + key",
+    "sol_escalation": "when Luna suspicious + Sol configured",
+    "local_validation": true,
+    "completeness": true,
+    "assembler_v3": true,
+    "safe_abstention": true,
+    "injection_guard_v2": true
+  },
+  "remaining_from_promotion": [
+    "Real OpenAI smoke",
+    "Semantic corpus promotion for serving",
+    "Real Cross-Encoder when not hashing",
+    "POST /eval/run still on RagService",
+    "Web/eval/direct parity proof"
+  ]
+}

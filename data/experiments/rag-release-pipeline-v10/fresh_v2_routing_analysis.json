@@ -1,0 +1,33 @@
+{
+  "cost_per_sol_rescue": 0.016273875,
+  "deterministic_answers": 50,
+  "final_route_counts": {
+    "DETERMINISTIC": 50,
+    "SAFE_ABSTAIN": 9,
+    "SOL": 1
+  },
+  "luna_ABSTAIN": 9,
+  "luna_GO": 35,
+  "luna_calls": 45,
+  "luna_cost_usd": 0.01521702,
+  "new_regression": {
+    "behavior": "UNSUPPORTED_ANSWER",
+    "case_id": "fresh_v2_035",
+    "facts_missing": [
+      "three days per week"
+    ],
+    "facts_satisfied": [
+      "two days per week",
+      "within 60 minutes",
+      "within 15 minutes"
+    ]
+  },
+  "safe_abstentions": 9,
+  "sol_ABSTAIN": 6,
+  "sol_GO": 4,
+  "sol_calls": 10,
+  "sol_cost_usd": 0.0650955,
+  "sol_non_rescues": 6,
+  "sol_rescues": 4,
+  "stage_cost_usd": 0.08031252
+}

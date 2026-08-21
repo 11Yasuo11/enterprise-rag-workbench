@@ -1,0 +1,12 @@
+{
+  "acl_violations": null,
+  "anti_leakage_assertion_passed": true,
+  "blocking_verdict": "FRESH_UNSEEN_EVALUATION_INCONCLUSIVE",
+  "candidate_runtime_started": false,
+  "experiment_id": "FRESH_UNSEEN_EVALUATION_V1_1",
+  "gold_received_by_prediction_runtime": false,
+  "paid_api_calls": 0,
+  "prompt_injection_regressions": null,
+  "status": "NOT_RUN_MANDATORY_DRY_RUN_GATE_FAILED",
+  "timestamp": "2026-08-20T15:25:27.515779+00:00"
+}

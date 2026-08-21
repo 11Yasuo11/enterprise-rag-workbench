@@ -1,0 +1,64 @@
+{
+  "case_id": "fresh_v2_030",
+  "timestamp": "2026-08-21T09:05:42.699147+00:00",
+  "api_calls": 0,
+  "last_passing_version": "V12",
+  "failing_version": "V13",
+  "identical_stages": [
+    "question",
+    "question_plan_hash",
+    "temporal_scope",
+    "top15_chunk_ids",
+    "selected_versions_by_document",
+    "version_resolution",
+    "deterministic_mappings_empty",
+    "deterministic_support_incomplete",
+    "initial_route_LUNA"
+  ],
+  "first_divergence": {
+    "stage": "REQUIREMENT_SCOPED_EVIDENCE_PACKETS",
+    "field": "candidate_packet_chunk_ids.R1",
+    "v12": [
+      "0f876e88-1c3a-403f-83aa-ac66033ed246"
+    ],
+    "v13": [],
+    "cause": "V13 packet_zero_overlap_only_multi_version removed single-version zero-overlap fill that previously populated R1"
+  },
+  "subsequent_divergences": [
+    {
+      "stage": "LUNA_PAYLOAD",
+      "field": "verifier_payload_sha256",
+      "v12": "4f9ab6462a0465ace70008fde0f35c44bc1b8f089094931867d47cc852c52dad",
+      "v13": "325d2ab7400f1c38a1f8532864e2378144e33555fc306156f8dbaf094a5f8b20"
+    },
+    {
+      "stage": "LUNA",
+      "field": "decision",
+      "v12": "GO",
+      "v13": "ABSTAIN",
+      "r1_status_v13": "UNSUPPORTED"
+    },
+    {
+      "stage": "ROUTER_FINAL",
+      "field": "final_route",
+      "v12": "DETERMINISTIC/validated_luna_go",
+      "v13": "SAFE_ABSTAIN/required_evidence_absent"
+    },
+    {
+      "stage": "FINAL",
+      "field": "final_outcome",
+      "v12": "ANSWERED",
+      "v13": "ABSTAINED"
+    }
+  ],
+  "non_causes": {
+    "plan_changed": false,
+    "temporal_scope_changed": false,
+    "version_candidates_changed": false,
+    "top15_changed": false,
+    "injection_precheck_fired": false,
+    "sol_involved": false
+  },
+  "v12_answer_preview": "R1: Under the 2025 policy , employees could work remotely three days per week . [C1]\nR2: Under the 2025 policy , suspected severity-one incidents had to be reported to the security duty officer within",
+  "v13_answer": null
+}

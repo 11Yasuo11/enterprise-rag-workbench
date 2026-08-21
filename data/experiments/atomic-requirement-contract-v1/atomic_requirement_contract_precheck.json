@@ -1,0 +1,387 @@
+{
+  "api_calls": 0,
+  "budget_projection": {
+    "budget_cap_usd": 0.1,
+    "max_luna_calls": 5,
+    "max_sol_calls": 2,
+    "max_total_model_calls": 7,
+    "passes": true,
+    "projected_input_tokens": 10759,
+    "projected_luna_cost_usd": 0.005731399999999999,
+    "projected_output_tokens": 4900,
+    "projected_sol_reserve_cost_usd": 0.05751,
+    "projected_total_cost_usd": 0.0632414,
+    "structured_output_token_cap": 700,
+    "target_cases": 5
+  },
+  "case_count": 5,
+  "case_ids": [
+    "p5k_three_document_027",
+    "p5k_three_document_033",
+    "p5k_three_document_041",
+    "judge_near_05",
+    "p5k_semantic_paraphrase_054"
+  ],
+  "experiment_id": "ATOMIC_REQUIREMENT_CONTRACT_V1",
+  "previous_experiment_id": "COMBINED_TARGETED_REAL_API_VALIDATION_V1",
+  "rows": [
+    {
+      "context_qualifiers": [
+        {
+          "qualifier_id": "Q1",
+          "qualifier_type": "audit",
+          "text": "PhaseK audit token three_document-027 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra."
+        }
+      ],
+      "decomposition_obviously_correct": true,
+      "embedding_external_calls": 0,
+      "frozen_requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "deployment approval ID",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R2",
+          "requirement_text": "API recovery time objective",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R3",
+          "requirement_text": "remote-work weekly allowance",
+          "requirement_type": "fact"
+        }
+      ],
+      "new_requirement_count": 3,
+      "previous_local_requirement_count": 3,
+      "previous_local_requirements": [
+        "deployment approval ID",
+        "API recovery time objective",
+        "remote-work weekly allowance"
+      ],
+      "previous_luna_sol_mapping_count": 3,
+      "previous_mapping_count_provenance": "persisted verifier behavior and count-mismatch trace; raw model JSON was not retained",
+      "previous_mismatch_structurally_eliminated": true,
+      "previous_validation_failure": "LUNA_NOT_GO",
+      "query_id": "p5k_three_document_027",
+      "question_plan_hash": "deed0ad4b07e75d207d6b6237ed7b57771289602e0661cc725bcaccc84efe921",
+      "raw_question": "PhaseK audit token three_document-027 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. Provide deployment approval ID, API recovery time objective, and remote-work weekly allowance.",
+      "top15_chunk_ids": [
+        "054089a4-d1c8-4628-aed2-03dbd8b4e8e9",
+        "c91ee2ff-af75-461a-9372-0c562e46051d",
+        "3f2b1506-ee1e-4728-8fbe-35947c82c3b4",
+        "39622c27-169e-4a3f-bbbd-f69996af8e01",
+        "49679d97-020f-4418-9430-4c296bc824b1",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "7e6c9c91-51ec-4146-8463-ee975a64232a",
+        "d60d3666-be70-4f64-b83e-7fe72c86f426",
+        "12b0a957-4a2f-4c06-a8aa-55067b120c4b",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2798f984-b356-4e40-9ed2-574ffbe26e86",
+        "c19243d4-0a12-4d2b-b727-de35e742516f"
+      ],
+      "top15_document_ids": [
+        "data-retention-standard",
+        "data-retention-standard",
+        "project-atlas-api",
+        "project-atlas-api",
+        "remote-work-policy",
+        "operations-continuity-plan",
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "security-incident-policy",
+        "remote-work-policy",
+        "engineering-deployment-handbook",
+        "finance-expense-policy",
+        "security-training-example"
+      ]
+    },
+    {
+      "context_qualifiers": [
+        {
+          "qualifier_id": "Q1",
+          "qualifier_type": "audit",
+          "text": "PhaseK audit token three_document-033 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra."
+        }
+      ],
+      "decomposition_obviously_correct": true,
+      "embedding_external_calls": 0,
+      "frozen_requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "deployment approval ID",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R2",
+          "requirement_text": "API recovery time objective",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R3",
+          "requirement_text": "remote-work weekly allowance",
+          "requirement_type": "fact"
+        }
+      ],
+      "new_requirement_count": 3,
+      "previous_local_requirement_count": 3,
+      "previous_local_requirements": [
+        "deployment approval ID",
+        "API recovery time objective",
+        "remote-work weekly allowance"
+      ],
+      "previous_luna_sol_mapping_count": 3,
+      "previous_mapping_count_provenance": "persisted verifier behavior and count-mismatch trace; raw model JSON was not retained",
+      "previous_mismatch_structurally_eliminated": true,
+      "previous_validation_failure": "LUNA_NOT_GO",
+      "query_id": "p5k_three_document_033",
+      "question_plan_hash": "0593f6425824ae2a660641fae3ef1dae2c55f9fc0f4b15402f19ca7f53647f3b",
+      "raw_question": "PhaseK audit token three_document-033 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. Provide deployment approval ID, API recovery time objective, and remote-work weekly allowance.",
+      "top15_chunk_ids": [
+        "054089a4-d1c8-4628-aed2-03dbd8b4e8e9",
+        "39622c27-169e-4a3f-bbbd-f69996af8e01",
+        "c91ee2ff-af75-461a-9372-0c562e46051d",
+        "3f2b1506-ee1e-4728-8fbe-35947c82c3b4",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "49679d97-020f-4418-9430-4c296bc824b1",
+        "7e6c9c91-51ec-4146-8463-ee975a64232a",
+        "d60d3666-be70-4f64-b83e-7fe72c86f426",
+        "12b0a957-4a2f-4c06-a8aa-55067b120c4b",
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "2798f984-b356-4e40-9ed2-574ffbe26e86",
+        "c19243d4-0a12-4d2b-b727-de35e742516f"
+      ],
+      "top15_document_ids": [
+        "data-retention-standard",
+        "project-atlas-api",
+        "data-retention-standard",
+        "project-atlas-api",
+        "operations-continuity-plan",
+        "remote-work-policy",
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "security-incident-policy",
+        "engineering-deployment-handbook",
+        "remote-work-policy",
+        "finance-expense-policy",
+        "security-training-example"
+      ]
+    },
+    {
+      "context_qualifiers": [
+        {
+          "qualifier_id": "Q1",
+          "qualifier_type": "audit",
+          "text": "PhaseK audit token three_document-041 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra."
+        }
+      ],
+      "decomposition_obviously_correct": true,
+      "embedding_external_calls": 0,
+      "frozen_requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "deployment approval ID",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R2",
+          "requirement_text": "API recovery time objective",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R3",
+          "requirement_text": "remote-work weekly allowance",
+          "requirement_type": "fact"
+        }
+      ],
+      "new_requirement_count": 3,
+      "previous_local_requirement_count": 3,
+      "previous_local_requirements": [
+        "deployment approval ID",
+        "API recovery time objective",
+        "remote-work weekly allowance"
+      ],
+      "previous_luna_sol_mapping_count": 3,
+      "previous_mapping_count_provenance": "persisted verifier behavior and count-mismatch trace; raw model JSON was not retained",
+      "previous_mismatch_structurally_eliminated": true,
+      "previous_validation_failure": "LUNA_NOT_GO",
+      "query_id": "p5k_three_document_041",
+      "question_plan_hash": "e39d508ea7ced40efcae4c8fce340d9c0fdebf2cb702afe5d8f5fb2c94bbc062",
+      "raw_question": "PhaseK audit token three_document-041 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. Provide deployment approval ID, API recovery time objective, and remote-work weekly allowance.",
+      "top15_chunk_ids": [
+        "054089a4-d1c8-4628-aed2-03dbd8b4e8e9",
+        "c91ee2ff-af75-461a-9372-0c562e46051d",
+        "3f2b1506-ee1e-4728-8fbe-35947c82c3b4",
+        "39622c27-169e-4a3f-bbbd-f69996af8e01",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "49679d97-020f-4418-9430-4c296bc824b1",
+        "7e6c9c91-51ec-4146-8463-ee975a64232a",
+        "d60d3666-be70-4f64-b83e-7fe72c86f426",
+        "12b0a957-4a2f-4c06-a8aa-55067b120c4b",
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "2798f984-b356-4e40-9ed2-574ffbe26e86",
+        "c19243d4-0a12-4d2b-b727-de35e742516f"
+      ],
+      "top15_document_ids": [
+        "data-retention-standard",
+        "data-retention-standard",
+        "project-atlas-api",
+        "project-atlas-api",
+        "operations-continuity-plan",
+        "remote-work-policy",
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "security-incident-policy",
+        "engineering-deployment-handbook",
+        "remote-work-policy",
+        "finance-expense-policy",
+        "security-training-example"
+      ]
+    },
+    {
+      "context_qualifiers": [
+        {
+          "qualifier_id": "Q1",
+          "qualifier_type": "version",
+          "text": "Use the currently enforceable distributed-work text, not its superseded edition"
+        }
+      ],
+      "decomposition_obviously_correct": true,
+      "embedding_external_calls": 0,
+      "frozen_requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "allowance",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R2",
+          "requirement_text": "review interval",
+          "requirement_type": "fact"
+        }
+      ],
+      "new_requirement_count": 2,
+      "previous_local_requirement_count": 3,
+      "previous_local_requirements": [
+        "Use the currently enforceable distributed-work text",
+        "not its superseded edition: give allowance",
+        "review interval"
+      ],
+      "previous_luna_sol_mapping_count": 2,
+      "previous_mapping_count_provenance": "persisted verifier behavior and count-mismatch trace; raw model JSON was not retained",
+      "previous_mismatch_structurally_eliminated": true,
+      "previous_validation_failure": "LUNA_REQUIREMENT_COUNT_MISMATCH",
+      "query_id": "judge_near_05",
+      "question_plan_hash": "b88edf1c100272390bcf1500bf4f8fc528416787097fd9d403ee65c56d31b223",
+      "raw_question": "Use the currently enforceable distributed-work text, not its superseded edition: give allowance and review interval.",
+      "top15_chunk_ids": [
+        "49679d97-020f-4418-9430-4c296bc824b1",
+        "c91ee2ff-af75-461a-9372-0c562e46051d",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "2798f984-b356-4e40-9ed2-574ffbe26e86",
+        "bd832158-c74b-4f03-8f53-60a2d30e69e8",
+        "c19243d4-0a12-4d2b-b727-de35e742516f",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "37bffe4a-9e5d-419a-a687-12d90a031de7",
+        "3f2b1506-ee1e-4728-8fbe-35947c82c3b4",
+        "39622c27-169e-4a3f-bbbd-f69996af8e01",
+        "12b0a957-4a2f-4c06-a8aa-55067b120c4b",
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "826df8a1-5461-4515-95f7-1998a4d3c205",
+        "9e94a1f1-355f-4482-a8d8-8c6f6f089e36",
+        "ab9cf7c9-3671-43d6-90fd-12630f084203"
+      ],
+      "top15_document_ids": [
+        "remote-work-policy",
+        "data-retention-standard",
+        "remote-work-policy",
+        "finance-expense-policy",
+        "security-incident-policy",
+        "security-training-example",
+        "operations-continuity-plan",
+        "operations-continuity-plan",
+        "project-atlas-api",
+        "project-atlas-api",
+        "security-incident-policy",
+        "engineering-deployment-handbook",
+        "project-atlas-launch",
+        "project-atlas-launch",
+        "customer-support-escalation"
+      ]
+    },
+    {
+      "context_qualifiers": [
+        {
+          "qualifier_id": "Q1",
+          "qualifier_type": "audit",
+          "text": "PhaseK audit token semantic_paraphrase-054 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra."
+        },
+        {
+          "qualifier_id": "Q2",
+          "qualifier_type": "other",
+          "text": "In plain language"
+        }
+      ],
+      "decomposition_obviously_correct": true,
+      "embedding_external_calls": 0,
+      "frozen_requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "who maintains the Atlas API",
+          "requirement_type": "fact"
+        }
+      ],
+      "new_requirement_count": 1,
+      "previous_local_requirement_count": 2,
+      "previous_local_requirements": [
+        "In plain language",
+        "who maintains the Atlas API"
+      ],
+      "previous_luna_sol_mapping_count": 1,
+      "previous_mapping_count_provenance": "persisted verifier behavior and count-mismatch trace; raw model JSON was not retained",
+      "previous_mismatch_structurally_eliminated": true,
+      "previous_validation_failure": "LUNA_REQUIREMENT_COUNT_MISMATCH",
+      "query_id": "p5k_semantic_paraphrase_054",
+      "question_plan_hash": "ce8f2117e97699bc8dd9e930abad7c79e59e4e3f21db02ae09bc1009f6de0194",
+      "raw_question": "PhaseK audit token semantic_paraphrase-054 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. In plain language, who maintains the Atlas API?",
+      "top15_chunk_ids": [
+        "054089a4-d1c8-4628-aed2-03dbd8b4e8e9",
+        "3f2b1506-ee1e-4728-8fbe-35947c82c3b4",
+        "c91ee2ff-af75-461a-9372-0c562e46051d",
+        "39622c27-169e-4a3f-bbbd-f69996af8e01",
+        "bd832158-c74b-4f03-8f53-60a2d30e69e8",
+        "37bffe4a-9e5d-419a-a687-12d90a031de7",
+        "12b0a957-4a2f-4c06-a8aa-55067b120c4b",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "9e94a1f1-355f-4482-a8d8-8c6f6f089e36",
+        "826df8a1-5461-4515-95f7-1998a4d3c205",
+        "2798f984-b356-4e40-9ed2-574ffbe26e86",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "ab9cf7c9-3671-43d6-90fd-12630f084203",
+        "7e6c9c91-51ec-4146-8463-ee975a64232a",
+        "d60d3666-be70-4f64-b83e-7fe72c86f426"
+      ],
+      "top15_document_ids": [
+        "data-retention-standard",
+        "project-atlas-api",
+        "data-retention-standard",
+        "project-atlas-api",
+        "security-incident-policy",
+        "operations-continuity-plan",
+        "security-incident-policy",
+        "operations-continuity-plan",
+        "project-atlas-launch",
+        "project-atlas-launch",
+        "finance-expense-policy",
+        "remote-work-policy",
+        "customer-support-escalation",
+        "recovery-runbook-east",
+        "recovery-runbook-west"
+      ]
+    }
+  ],
+  "verdict": "PRECHECK_PASSED"
+}

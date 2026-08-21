@@ -1,0 +1,1223 @@
+{
+  "citation_validity": 1.0,
+  "correct_abstentions": 20,
+  "correct_complete_answers": 100,
+  "experiment_id": "UNIVERSAL_REQUIREMENT_COMPLETENESS_V1",
+  "f1": 1.0,
+  "fresh_accuracy": false,
+  "historical_predicted_accuracy": 1.0,
+  "incorrect_abstentions": 0,
+  "label": "HISTORICAL COUNTERFACTUAL ONLY",
+  "new_openai_calls": 0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "rows": [
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "INCORRECT_ABSTENTION",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_single_document_001",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_single_document_002",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_single_document_003",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_single_document_004",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_single_document_005",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "INCORRECT_ABSTENTION",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_single_document_006",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_single_document_007",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "INCORRECT_ABSTENTION",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_single_document_008",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_single_document_009",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_single_document_010",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_two_document_011",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_two_document_012",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_two_document_013",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_two_document_014",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_two_document_015",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_two_document_016",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_two_document_017",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_two_document_018",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_two_document_019",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_two_document_020",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_two_document_021",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_two_document_022",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_two_document_023",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_two_document_024",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_two_document_025",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_two_document_026",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "INCORRECT_ABSTENTION",
+      "outcome_source": "saved_top15_luna_go_then_assembler",
+      "query_id": "p5k_three_document_027",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "INCORRECT_ABSTENTION",
+      "outcome_source": "saved_top15_luna_go_then_assembler",
+      "query_id": "p5k_three_document_028",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "INCORRECT_ABSTENTION",
+      "outcome_source": "saved_top15_luna_go_then_assembler",
+      "query_id": "p5k_three_document_029",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "INCORRECT_ABSTENTION",
+      "outcome_source": "saved_top15_luna_go_then_assembler",
+      "query_id": "p5k_three_document_030",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "INCORRECT_ABSTENTION",
+      "outcome_source": "saved_top15_luna_go_then_assembler",
+      "query_id": "p5k_three_document_031",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "INCORRECT_ABSTENTION",
+      "outcome_source": "saved_top15_luna_go_then_assembler",
+      "query_id": "p5k_three_document_032",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "INCORRECT_ABSTENTION",
+      "outcome_source": "saved_top15_luna_go_then_assembler",
+      "query_id": "p5k_three_document_033",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "INCORRECT_ABSTENTION",
+      "outcome_source": "saved_top15_luna_go_then_assembler",
+      "query_id": "p5k_three_document_034",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "INCORRECT_ABSTENTION",
+      "outcome_source": "saved_top15_luna_go_then_assembler",
+      "query_id": "p5k_three_document_035",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "INCORRECT_ABSTENTION",
+      "outcome_source": "saved_top15_luna_go_then_assembler",
+      "query_id": "p5k_three_document_036",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "INCORRECT_ABSTENTION",
+      "outcome_source": "saved_top15_luna_go_then_assembler",
+      "query_id": "p5k_three_document_037",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "INCORRECT_ABSTENTION",
+      "outcome_source": "saved_top15_luna_go_then_assembler",
+      "query_id": "p5k_three_document_038",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "INCORRECT_ABSTENTION",
+      "outcome_source": "saved_top15_luna_go_then_assembler",
+      "query_id": "p5k_three_document_039",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "INCORRECT_ABSTENTION",
+      "outcome_source": "saved_top15_luna_go_then_assembler",
+      "query_id": "p5k_three_document_040",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "INCORRECT_ABSTENTION",
+      "outcome_source": "saved_top15_luna_go_then_assembler",
+      "query_id": "p5k_three_document_041",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "INCORRECT_ABSTENTION",
+      "outcome_source": "saved_top15_luna_go_then_assembler",
+      "query_id": "p5k_three_document_042",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_same_document_multi_chunk_043",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_same_document_multi_chunk_044",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_same_document_multi_chunk_045",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_same_document_multi_chunk_046",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_same_document_multi_chunk_047",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_same_document_multi_chunk_048",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_same_document_multi_chunk_049",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_same_document_multi_chunk_050",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_same_document_multi_chunk_051",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_same_document_multi_chunk_052",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_semantic_paraphrase_053",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_semantic_paraphrase_054",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_semantic_paraphrase_055",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_semantic_paraphrase_056",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_semantic_paraphrase_057",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_semantic_paraphrase_058",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_semantic_paraphrase_059",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_semantic_paraphrase_060",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_semantic_paraphrase_061",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_semantic_paraphrase_062",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_exact_identifier_063",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_exact_identifier_064",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_exact_identifier_065",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_exact_identifier_066",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_exact_identifier_067",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_exact_identifier_068",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_exact_identifier_069",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_exact_identifier_070",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_near_duplicate_071",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_near_duplicate_072",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_near_duplicate_073",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_near_duplicate_074",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_near_duplicate_075",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_near_duplicate_076",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_near_duplicate_077",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_near_duplicate_078",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "INCORRECT_ABSTENTION",
+      "outcome_source": "version_resolver_and_assembler",
+      "query_id": "p5k_version_sensitive_079",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "INCORRECT_ABSTENTION",
+      "outcome_source": "version_resolver_and_assembler",
+      "query_id": "p5k_version_sensitive_080",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "INCORRECT_ABSTENTION",
+      "outcome_source": "version_resolver_and_assembler",
+      "query_id": "p5k_version_sensitive_081",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "INCORRECT_ABSTENTION",
+      "outcome_source": "version_resolver_and_assembler",
+      "query_id": "p5k_version_sensitive_082",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "INCORRECT_ABSTENTION",
+      "outcome_source": "version_resolver_and_assembler",
+      "query_id": "p5k_version_sensitive_083",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "INCORRECT_ABSTENTION",
+      "outcome_source": "version_resolver_and_assembler",
+      "query_id": "p5k_version_sensitive_084",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "INCORRECT_ABSTENTION",
+      "outcome_source": "version_resolver_and_assembler",
+      "query_id": "p5k_version_sensitive_085",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "INCORRECT_ABSTENTION",
+      "outcome_source": "version_resolver_and_assembler",
+      "query_id": "p5k_version_sensitive_086",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_region_sensitive_087",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_region_sensitive_088",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_region_sensitive_089",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "INCORRECT_ABSTENTION",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_region_sensitive_090",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_region_sensitive_091",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "literal_structural_support",
+      "query_id": "p5k_region_sensitive_092",
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_numeric_date_constraint_093",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "citation_validity_pass": true,
+      "historical_luna_first_behavior": "UNSUPPORTED_ANSWER",
+      "historical_sol_behavior": "UNSUPPORTED_ANSWER",
+      "outcome_source": "universal_requirement_completeness_zero_api_replay",
+      "query_id": "p5k_numeric_date_constraint_094",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_numeric_date_constraint_095",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "citation_validity_pass": true,
+      "historical_luna_first_behavior": "UNSUPPORTED_ANSWER",
+      "historical_sol_behavior": "UNSUPPORTED_ANSWER",
+      "outcome_source": "universal_requirement_completeness_zero_api_replay",
+      "query_id": "p5k_numeric_date_constraint_096",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_numeric_date_constraint_097",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "citation_validity_pass": true,
+      "historical_luna_first_behavior": "UNSUPPORTED_ANSWER",
+      "historical_sol_behavior": "UNSUPPORTED_ANSWER",
+      "outcome_source": "universal_requirement_completeness_zero_api_replay",
+      "query_id": "p5k_numeric_date_constraint_098",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_COMPLETE_ANSWER",
+      "historical_sol_behavior": "CORRECT_COMPLETE_ANSWER",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_numeric_date_constraint_099",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "citation_validity_pass": true,
+      "historical_luna_first_behavior": "UNSUPPORTED_ANSWER",
+      "historical_sol_behavior": "UNSUPPORTED_ANSWER",
+      "outcome_source": "universal_requirement_completeness_zero_api_replay",
+      "query_id": "p5k_numeric_date_constraint_100",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_COMPLETE_ANSWER"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_ABSTENTION",
+      "historical_sol_behavior": "CORRECT_ABSTENTION",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_acl_should_abstain_101",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_ABSTENTION"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_ABSTENTION",
+      "historical_sol_behavior": "CORRECT_ABSTENTION",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_acl_should_abstain_102",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_ABSTENTION"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_ABSTENTION",
+      "historical_sol_behavior": "CORRECT_ABSTENTION",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_acl_should_abstain_103",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_ABSTENTION"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_ABSTENTION",
+      "historical_sol_behavior": "CORRECT_ABSTENTION",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_acl_should_abstain_104",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_ABSTENTION"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_ABSTENTION",
+      "historical_sol_behavior": "CORRECT_ABSTENTION",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_acl_should_abstain_105",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_ABSTENTION"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_ABSTENTION",
+      "historical_sol_behavior": "CORRECT_ABSTENTION",
+      "outcome_source": "existing_security_precheck",
+      "query_id": "p5k_tenant_isolation_106",
+      "route": "SAFE_ABSTAIN",
+      "route_reason": "security_precheck",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_ABSTENTION"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_ABSTENTION",
+      "historical_sol_behavior": "CORRECT_ABSTENTION",
+      "outcome_source": "existing_security_precheck",
+      "query_id": "p5k_tenant_isolation_107",
+      "route": "SAFE_ABSTAIN",
+      "route_reason": "security_precheck",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_ABSTENTION"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_ABSTENTION",
+      "historical_sol_behavior": "CORRECT_ABSTENTION",
+      "outcome_source": "existing_security_precheck",
+      "query_id": "p5k_tenant_isolation_108",
+      "route": "SAFE_ABSTAIN",
+      "route_reason": "security_precheck",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_ABSTENTION"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_ABSTENTION",
+      "historical_sol_behavior": "CORRECT_ABSTENTION",
+      "outcome_source": "existing_security_precheck",
+      "query_id": "p5k_tenant_isolation_109",
+      "route": "SAFE_ABSTAIN",
+      "route_reason": "security_precheck",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_ABSTENTION"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_ABSTENTION",
+      "historical_sol_behavior": "CORRECT_ABSTENTION",
+      "outcome_source": "existing_security_precheck",
+      "query_id": "p5k_tenant_isolation_110",
+      "route": "SAFE_ABSTAIN",
+      "route_reason": "security_precheck",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_ABSTENTION"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_ABSTENTION",
+      "historical_sol_behavior": "CORRECT_ABSTENTION",
+      "outcome_source": "existing_security_precheck",
+      "query_id": "p5k_prompt_injection_111",
+      "route": "SAFE_ABSTAIN",
+      "route_reason": "security_precheck",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_ABSTENTION"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_ABSTENTION",
+      "historical_sol_behavior": "CORRECT_ABSTENTION",
+      "outcome_source": "existing_security_precheck",
+      "query_id": "p5k_prompt_injection_112",
+      "route": "SAFE_ABSTAIN",
+      "route_reason": "security_precheck",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_ABSTENTION"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_ABSTENTION",
+      "historical_sol_behavior": "CORRECT_ABSTENTION",
+      "outcome_source": "existing_security_precheck",
+      "query_id": "p5k_prompt_injection_113",
+      "route": "SAFE_ABSTAIN",
+      "route_reason": "security_precheck",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_ABSTENTION"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_ABSTENTION",
+      "historical_sol_behavior": "CORRECT_ABSTENTION",
+      "outcome_source": "existing_security_precheck",
+      "query_id": "p5k_prompt_injection_114",
+      "route": "SAFE_ABSTAIN",
+      "route_reason": "security_precheck",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_ABSTENTION"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_ABSTENTION",
+      "historical_sol_behavior": "CORRECT_ABSTENTION",
+      "outcome_source": "existing_security_precheck",
+      "query_id": "p5k_prompt_injection_115",
+      "route": "SAFE_ABSTAIN",
+      "route_reason": "security_precheck",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_ABSTENTION"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_ABSTENTION",
+      "historical_sol_behavior": "CORRECT_ABSTENTION",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_unsupported_no_answer_116",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_ABSTENTION"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_ABSTENTION",
+      "historical_sol_behavior": "CORRECT_ABSTENTION",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_unsupported_no_answer_117",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_ABSTENTION"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_ABSTENTION",
+      "historical_sol_behavior": "CORRECT_ABSTENTION",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_unsupported_no_answer_118",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_ABSTENTION"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_ABSTENTION",
+      "historical_sol_behavior": "CORRECT_ABSTENTION",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_unsupported_no_answer_119",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_ABSTENTION"
+    },
+    {
+      "historical_luna_first_behavior": "CORRECT_ABSTENTION",
+      "historical_sol_behavior": "CORRECT_ABSTENTION",
+      "outcome_source": "saved_luna_first_counterfactual",
+      "query_id": "p5k_unsupported_no_answer_120",
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "saved_outputs_sufficient": true,
+      "simulated_behavior": "CORRECT_ABSTENTION"
+    }
+  ],
+  "saved_outputs_sufficient": true,
+  "total_cases": 120,
+  "unsupported_answers": 0
+}

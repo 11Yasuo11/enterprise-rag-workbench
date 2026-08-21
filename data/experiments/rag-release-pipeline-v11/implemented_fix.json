@@ -1,0 +1,34 @@
+{
+  "api_calls": 0,
+  "case_id_branches": false,
+  "fixes": [
+    {
+      "file": "verifier.py",
+      "id": "packet_token_and_cross_version_coverage"
+    },
+    {
+      "file": "deterministic_support.py",
+      "id": "cross_version_deterministic_extraction"
+    },
+    {
+      "file": "contract.py",
+      "id": "cross_version_completeness_gate"
+    },
+    {
+      "file": "scripts/run_rag_release_pipeline_v4_evaluation.py",
+      "id": "analyze_case_multi_mapping_preservation"
+    },
+    {
+      "file": "evidence_mapping.py",
+      "id": "canonical_mappings_multi_year_grouping"
+    }
+  ],
+  "hardcoded_gold": false,
+  "primary_root_cause": "EVIDENCE_PACKET_MISS",
+  "secondary_causes": [
+    "UNIVERSAL_COMPLETENESS_GATE_ERROR",
+    "ANALYZE_CASE_MULTI_MAPPING_TRUNCATION",
+    "CANONICAL_VALIDATION_SINGLE_MAPPING_ASSUMPTION"
+  ],
+  "timestamp": "2026-08-21T01:14:45.585791+00:00"
+}

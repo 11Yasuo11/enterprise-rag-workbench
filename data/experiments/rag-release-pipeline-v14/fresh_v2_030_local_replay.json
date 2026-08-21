@@ -1,0 +1,35 @@
+{
+  "api_calls": 0,
+  "case_id": "fresh_v2_030",
+  "status": "STRUCTURALLY_FIXED_REAL_API_REQUIRED",
+  "still_failing": 0,
+  "trace_insufficient": 0,
+  "r1_packet_chunk_ids": [
+    "18bfa499-1726-4b23-9988-e5805e744db4",
+    "0f876e88-1c3a-403f-83aa-ac66033ed246"
+  ],
+  "r1_was_empty_under_v13": true,
+  "r1_year_token_in_packet_terms": true,
+  "candidate_packet_chunk_ids": {
+    "R1": [
+      "18bfa499-1726-4b23-9988-e5805e744db4",
+      "0f876e88-1c3a-403f-83aa-ac66033ed246"
+    ],
+    "R2": [
+      "18bfa499-1726-4b23-9988-e5805e744db4",
+      "0f876e88-1c3a-403f-83aa-ac66033ed246",
+      "a6256f87-3055-4592-bbe0-9299878475b1"
+    ]
+  },
+  "deterministic_support": {
+    "complete": false,
+    "failure_code": "MISSING_REQUIREMENT_MAPPING"
+  },
+  "initial_route": {
+    "reason": "low_risk_semantic_verification",
+    "route": "LUNA"
+  },
+  "note": "Year-token packet terms restore non-empty R1 under single-version scope without zero-overlap fill. Deterministic support remains incomplete; formal answer still requires Luna (same as V12).",
+  "injection_guard_still_blocks_055": true,
+  "timestamp": "2026-08-21T09:06:55.904842+00:00"
+}

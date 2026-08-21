@@ -1,0 +1,6 @@
+{
+  "freeze_created": false,
+  "predictions_created": false,
+  "reason": "Fresh Holdout V2 was not executed because the preceding regression failed.",
+  "status": "NOT_RUN"
+}

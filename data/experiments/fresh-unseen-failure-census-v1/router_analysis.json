@@ -1,0 +1,9 @@
+{
+  "note": "For ABSTAIN plus all-SUPPORTED/invalid decision consistency, the post-Luna router safe-abstained instead of escalating; the upstream Luna inconsistency remains primary.",
+  "router_caused_failures": 0,
+  "secondary_missed_escalation_cases": [
+    "fresh_v1_025",
+    "fresh_v1_040"
+  ],
+  "statement": "Router was not the primary cause of any fresh failure."
+}

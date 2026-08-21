@@ -1,0 +1,110 @@
+{
+  "cases": [
+    {
+      "actual_answer": "R1: The launch owner is the Product Operations team . [C1]",
+      "assembler_altered_meaning": false,
+      "assembler_dropped_additional_validated_mappings": true,
+      "case_id": "fresh_v1_011",
+      "cited_sources": [
+        {
+          "chunk_id": "826df8a1-5461-4515-95f7-1998a4d3c205",
+          "document_id": "project-atlas-launch",
+          "text": "Project Atlas launched on April 12 , 2026 . The launch owner is the Product Operations team .",
+          "version": "1.0"
+        }
+      ],
+      "correct_facts": [
+        "Product Operations"
+      ],
+      "local_validator_accepted_mapping": true,
+      "luna_marked_all_source_evidence_supported": true,
+      "missing_facts": [
+        "Platform Interfaces"
+      ],
+      "missing_invariant": "A GO emission must preserve every independently mapped span/document for a requirement, or reject a one-requirement plan that contains multiple requested output facts.",
+      "preventable_deterministically": true,
+      "scorer_correct": true,
+      "wrong_version": false
+    },
+    {
+      "actual_answer": "R1: The recovery drill runs on the second Wednesday of each quarter . [C1]",
+      "assembler_altered_meaning": false,
+      "assembler_dropped_additional_validated_mappings": true,
+      "case_id": "fresh_v1_013",
+      "cited_sources": [
+        {
+          "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+          "document_id": "recovery-runbook-west",
+          "text": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29 . Failover targets the us-east standby cluster . The recovery drill runs on the second Wednesday of each quarter .",
+          "version": "1.0"
+        }
+      ],
+      "correct_facts": [
+        "second Wednesday"
+      ],
+      "local_validator_accepted_mapping": true,
+      "luna_marked_all_source_evidence_supported": true,
+      "missing_facts": [
+        "Tuesdays and Thursdays"
+      ],
+      "missing_invariant": "A GO emission must preserve every independently mapped span/document for a requirement, or reject a one-requirement plan that contains multiple requested output facts.",
+      "preventable_deterministically": true,
+      "scorer_correct": true,
+      "wrong_version": false
+    },
+    {
+      "actual_answer": "R1: The launch owner is the Product Operations team . [C1]",
+      "assembler_altered_meaning": false,
+      "assembler_dropped_additional_validated_mappings": true,
+      "case_id": "fresh_v1_028",
+      "cited_sources": [
+        {
+          "chunk_id": "826df8a1-5461-4515-95f7-1998a4d3c205",
+          "document_id": "project-atlas-launch",
+          "text": "Project Atlas launched on April 12 , 2026 . The launch owner is the Product Operations team .",
+          "version": "1.0"
+        }
+      ],
+      "correct_facts": [
+        "Product Operations"
+      ],
+      "local_validator_accepted_mapping": true,
+      "luna_marked_all_source_evidence_supported": true,
+      "missing_facts": [
+        "Platform Interfaces",
+        "Finance Operations"
+      ],
+      "missing_invariant": "A GO emission must preserve every independently mapped span/document for a requirement, or reject a one-requirement plan that contains multiple requested output facts.",
+      "preventable_deterministically": true,
+      "scorer_correct": true,
+      "wrong_version": false
+    },
+    {
+      "actual_answer": "R1: Under the current 2026 policy , employees may work remotely two days per week . [C1]",
+      "assembler_altered_meaning": false,
+      "assembler_dropped_additional_validated_mappings": true,
+      "case_id": "fresh_v1_030",
+      "cited_sources": [
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "text": "Under the current 2026 policy , employees may work remotely two days per week .",
+          "version": "2026"
+        }
+      ],
+      "correct_facts": [
+        "two days per week"
+      ],
+      "local_validator_accepted_mapping": true,
+      "luna_marked_all_source_evidence_supported": true,
+      "missing_facts": [
+        "every month"
+      ],
+      "missing_invariant": "A GO emission must preserve every independently mapped span/document for a requirement, or reject a one-requirement plan that contains multiple requested output facts.",
+      "preventable_deterministically": true,
+      "scorer_correct": true,
+      "wrong_version": false
+    }
+  ],
+  "count": 4
+}

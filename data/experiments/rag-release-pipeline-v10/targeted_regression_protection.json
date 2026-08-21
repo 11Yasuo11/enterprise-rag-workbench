@@ -1,0 +1,36 @@
+{
+  "api_calls": 0,
+  "final4": {
+    "failed": [],
+    "pass": true,
+    "total": 4
+  },
+  "local_three": {
+    "FIXED_LOCALLY": 3,
+    "STILL_FAILING": 0,
+    "STRUCTURALLY_FIXED_REAL_API_REQUIRED": 0,
+    "TRACE_INSUFFICIENT": 0
+  },
+  "local_three_pass": true,
+  "new_deterministic_no_unsupported": {
+    "failed": [],
+    "pass": true
+  },
+  "pass": true,
+  "prior11": {
+    "failed": [],
+    "pass": true,
+    "total": 11
+  },
+  "prior_direct_complete_preserved": {
+    "failed": [],
+    "pass": true,
+    "total": 8
+  },
+  "timestamp": "2026-08-21T00:50:25.107821+00:00",
+  "v2_plan_traversal_60": {
+    "fail": [],
+    "ok": 60,
+    "pass": true
+  }
+}

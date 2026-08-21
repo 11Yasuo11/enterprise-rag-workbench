@@ -1,0 +1,62 @@
+{
+  "api_calls": 0,
+  "do_not_blame_first": {
+    "fresh_v2_010": [
+      "ASSEMBLER",
+      "CITATIONS",
+      "SCORER"
+    ],
+    "fresh_v2_021": [
+      "LUNA",
+      "SOL",
+      "ROUTER"
+    ],
+    "fresh_v2_023": [
+      "LOCAL_VALIDATOR",
+      "SOL",
+      "VERSION_RESOLVER"
+    ]
+  },
+  "edges": [
+    {
+      "case_id": "fresh_v2_010",
+      "from": "QUESTION_PLAN fused R1 on 'alongside'",
+      "to": "DETERMINISTIC_SUPPORT false-complete on cadence only"
+    },
+    {
+      "case_id": "fresh_v2_010",
+      "from": "DETERMINISTIC_SUPPORT incomplete fact set",
+      "to": "ASSEMBLER omits eu-central"
+    },
+    {
+      "case_id": "fresh_v2_021",
+      "from": "QUESTION_PLAN promotes version clause to R1",
+      "to": "R2 packet miss / wrong document"
+    },
+    {
+      "case_id": "fresh_v2_021",
+      "from": "R2 packet miss",
+      "to": "LUNA/SOL R2 UNSUPPORTED"
+    },
+    {
+      "case_id": "fresh_v2_021",
+      "from": "LUNA/SOL ABSTAIN",
+      "to": "SAFE_ABSTAIN"
+    },
+    {
+      "case_id": "fresh_v2_023",
+      "from": "QUESTION_PLAN promotes evidence-access preamble to R1",
+      "to": "verifier multi-chunk R1 with uneven version arrays"
+    },
+    {
+      "case_id": "fresh_v2_023",
+      "from": "uneven version arrays",
+      "to": "VERSION_METADATA_MISMATCH local reject"
+    },
+    {
+      "case_id": "fresh_v2_023",
+      "from": "local reject after Sol GO",
+      "to": "SAFE_ABSTAIN"
+    }
+  ]
+}

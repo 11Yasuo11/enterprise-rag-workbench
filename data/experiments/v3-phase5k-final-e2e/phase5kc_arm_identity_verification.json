@@ -1,0 +1,76 @@
+{
+  "phase": "v3-phase5kc-corrected-final-execution",
+  "run_label": "CORRECTED_EXECUTION_OF_SAME_FROZEN_FINAL_BENCHMARK",
+  "dataset_hash": "12851a9915ad51eccf2629e6765a8dc9a1731eb308987b0e53ac56468274f404",
+  "manifest_hash": "58128b81ebafbf7be6320b507684a88253485c1a10bc6d4f95ab33eb967387a0",
+  "expected": {
+    "FINAL_R": {
+      "embedding_provider": "openai-compatible/text-embedding-3-small",
+      "ranking": "POINTWISE_CROSS_ENCODER_TOP5",
+      "judge": "GPT_5_6_SOL_EVIDENCE_SUFFICIENCY_V1",
+      "recovery": "disabled",
+      "generator": "GENERATOR_COMPLETENESS_V2",
+      "question_injection_guard": "QUESTION_INJECTION_GUARD_V2",
+      "constraint_guard": "ANSWERABILITY_CONSTRAINT_GUARD_V2"
+    },
+    "FINAL_A": {
+      "embedding_provider": "openai-compatible/text-embedding-3-small",
+      "ranking": "POINTWISE_CROSS_ENCODER_TOP5",
+      "judge": "GPT_5_6_SOL_EVIDENCE_SUFFICIENCY_V1",
+      "recovery": "Generate→Verify + SAFE_RECOVERY_BOUNDARY_V3",
+      "generator": "GENERATOR_COMPLETENESS_V2",
+      "question_injection_guard": "QUESTION_INJECTION_GUARD_V2",
+      "constraint_guard": "ANSWERABILITY_CONSTRAINT_GUARD_V2"
+    },
+    "FINAL_B": {
+      "embedding_provider": "openai-compatible/text-embedding-3-small",
+      "ranking": "POINTWISE_CROSS_ENCODER_TOP5",
+      "judge": "GPT_5_6_SOL_EVIDENCE_SUFFICIENCY_V1",
+      "recovery": "Generate→Verify + SAFE_RECOVERY_BOUNDARY_V3",
+      "generator": "GENERATOR_COMPLETENESS_V2",
+      "question_injection_guard": "QUESTION_INJECTION_GUARD_V2",
+      "constraint_guard": "ANSWERABILITY_CONSTRAINT_GUARD_V2"
+    }
+  },
+  "actual_common_runtime": {
+    "embedding_provider": "openai-compatible/text-embedding-3-small",
+    "dense_config": {
+      "top_k": 20,
+      "threshold": 0.28
+    },
+    "bm25_config": {
+      "top_k": 20
+    },
+    "rrf_config": {
+      "rrf_k": 60,
+      "union_limit": 30
+    },
+    "cross_encoder": {
+      "model": "cross-encoder/ms-marco-MiniLM-L6-v2",
+      "revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+      "top_k": 5
+    },
+    "judge": "openai/gpt-5.6-sol/evidence-sufficiency-v1",
+    "recovery": "evaluate_recovery",
+    "generator": "deterministic-extractive-v2",
+    "question_injection_guard": "QUESTION_INJECTION_GUARD_V2",
+    "constraint_guard": "ANSWERABILITY_CONSTRAINT_GUARD_V2",
+    "authz": "security.permissions + active-version/tenant/visibility checks"
+  },
+  "arm_assertions": {
+    "FINAL_R": {
+      "match": true,
+      "notes": "independent runtime path with recovery disabled"
+    },
+    "FINAL_A": {
+      "match": true,
+      "notes": "canonical v3 path with recovery enabled"
+    },
+    "FINAL_B": {
+      "match": true,
+      "notes": "same as FINAL_A by frozen H/I/J rejection outcomes"
+    },
+    "FINAL_A_AND_FINAL_B_ARE_ARCHITECTURALLY_IDENTICAL_AFTER_H_I_J_REJECTIONS": true
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,151 @@
+{
+  "timestamp": "2026-08-21T09:33:21.677784+00:00",
+  "api_calls": 0,
+  "cost_usd": 0.0,
+  "cross_encoder": {
+    "REAL_CROSS_ENCODER_LOADED": true,
+    "model_id": "cross-encoder/ms-marco-MiniLM-L6-v2",
+    "device": "cpu",
+    "inference_ok": true,
+    "top15_count": 3,
+    "scores": [
+      1.1243973970413208,
+      -3.3242053985595703,
+      -11.437315940856934
+    ],
+    "order_chunk_ids": [
+      "c1",
+      "c3",
+      "c2"
+    ],
+    "schema_ok": true,
+    "identity_fallback": false,
+    "latency_ms": 3722.7899999998044
+  },
+  "config": {
+    "checks": [
+      {
+        "name": "frozen_depths",
+        "ok": true
+      },
+      {
+        "name": "semantic_index_pinned",
+        "ok": true
+      },
+      {
+        "name": "reject_silent_hashing",
+        "ok": true
+      },
+      {
+        "name": "reject_top_k_5",
+        "ok": true
+      },
+      {
+        "name": "reject_wrong_index",
+        "ok": true
+      }
+    ],
+    "config": {
+      "embedding_provider": "hashing",
+      "embedding_model": "local-hashing-64",
+      "embedding_dimension": 64,
+      "embedding_version": "1",
+      "dense_top_k": 20,
+      "bm25_top_k": 20,
+      "dense_score_threshold": 0.28,
+      "rrf_k": 60,
+      "fused_candidate_cap": 30,
+      "cross_encoder_model": "cross-encoder/ms-marco-MiniLM-L6-v2",
+      "cross_encoder_top_k": 15,
+      "luna_model": "gpt-5.6-luna",
+      "sol_model": "gpt-5.6-sol",
+      "final_generation_llm": "disabled",
+      "assembler_id": "deterministic-requirement-assembler-v3",
+      "max_luna_calls_per_request": 1,
+      "max_sol_calls_per_request": 1,
+      "allow_hashing_embeddings": true,
+      "require_cross_encoder": false,
+      "allow_identity_reranker": true,
+      "index_identity": null
+    },
+    "pass": true
+  },
+  "legacy": {
+    "active_web_inference": "CanonicalRagRuntime",
+    "active_eval_inference": "CanonicalRagRuntime",
+    "references": [
+      {
+        "file": "src/rag_workbench/cli.py",
+        "classification": "historical_test_or_research"
+      },
+      {
+        "file": "src/rag_workbench/experiments/reranker_e2e_benchmark.py",
+        "classification": "historical_test_or_research"
+      },
+      {
+        "file": "src/rag_workbench/experiments/runner.py",
+        "classification": "historical_test_or_research"
+      },
+      {
+        "file": "src/rag_workbench/experiments/v2_sufficiency_fn.py",
+        "classification": "historical_test_or_research"
+      },
+      {
+        "file": "src/rag_workbench/experiments/hybrid_reranker_benchmark.py",
+        "classification": "historical_test_or_research"
+      },
+      {
+        "file": "src/rag_workbench/experiments/hybrid_reranker_replication.py",
+        "classification": "historical_test_or_research"
+      },
+      {
+        "file": "src/rag_workbench/experiments/v3_generate_verify.py",
+        "classification": "historical_test_or_research"
+      },
+      {
+        "file": "src/rag_workbench/experiments/v2_final_benchmark.py",
+        "classification": "historical_test_or_research"
+      },
+      {
+        "file": "src/rag_workbench/experiments/sol_judge_e2e_benchmark.py",
+        "classification": "historical_test_or_research"
+      },
+      {
+        "file": "src/rag_workbench/experiments/judge_e2e_benchmark.py",
+        "classification": "historical_test_or_research"
+      },
+      {
+        "file": "src/rag_workbench/runtime/canonical_runtime.py",
+        "classification": "historical_test_or_research"
+      },
+      {
+        "file": "src/rag_workbench/api/app.py",
+        "classification": "compatibility_helper_not_on_eval_or_web_inference"
+      },
+      {
+        "file": "src/rag_workbench/evaluation/evaluator.py",
+        "classification": "legacy_accepted_for_historical_tests_only"
+      },
+      {
+        "file": "src/rag_workbench/generation/__init__.py",
+        "classification": "historical_test_or_research"
+      },
+      {
+        "file": "src/rag_workbench/generation/generator.py",
+        "classification": "LEGACY / NON-CANONICAL definition"
+      },
+      {
+        "file": "src/rag_workbench/experiments/safe_recovery_luna_v2/pipeline.py",
+        "classification": "historical_test_or_research"
+      }
+    ],
+    "active_bypass_count": 0
+  },
+  "github_readiness_snippet": {
+    "secrets_committed_scan": "clean",
+    "issues": [],
+    "deployed_language_check": "docs use READY_FOR_PRODUCTION_DEPLOYMENT_REVIEW wording",
+    "pass": true
+  },
+  "pass": true
+}

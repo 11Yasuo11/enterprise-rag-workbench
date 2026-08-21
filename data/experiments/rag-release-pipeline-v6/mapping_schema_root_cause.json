@@ -1,0 +1,39 @@
+{
+  "api_calls": 0,
+  "case_id": "fresh_v1_005",
+  "causal_finding": "Multiple valid internal schemas crossed an unnormalized boundary.",
+  "consumer_component": "run_rag_release_pipeline_v4_evaluation.deterministic_validation",
+  "exact_failing_access": "mapping.supporting_span",
+  "expected_mapping_variant": "ValidatedRequirement-compatible singular mapping",
+  "experiment": "RAG_RELEASE_PIPELINE_V6_MAPPING_SCHEMA_FIX",
+  "old_error": {
+    "message": "'types.SimpleNamespace' object has no attribute 'supporting_span'",
+    "type": "AttributeError"
+  },
+  "plural_paths": [
+    "requirement_assembler_selective_routing_v1.assembler.VerifiedRequirement.supporting_spans",
+    "atomic_requirement_contract_v1.verifier.FrozenRequirementResult.supporting_spans",
+    "atomic_requirement_contract_v1.contract.FrozenRequirementResult.supporting_spans"
+  ],
+  "produced_fields": [
+    "chunk_id",
+    "document_id",
+    "requirement",
+    "requirement_id",
+    "supporting_spans"
+  ],
+  "produced_mapping_type": "VerifiedRequirement serialized dict -> SimpleNamespace",
+  "producer_component": "extract_resolved_token_support / VerifiedRequirement serialization",
+  "reproduced": true,
+  "singular_paths": [
+    "atomic_requirement_contract_v1.contract.ValidatedMapping.supporting_span",
+    "atomic_requirement_contract_v1.contract.ValidatedRequirement.supporting_span",
+    "universal_requirement_completeness_v1.requirements.UniversalRequirement.supporting_span",
+    "safe_recovery_luna_v2.verifier.LunaRequirement.supporting_span"
+  ],
+  "supporting_spans_item_types": [
+    "str"
+  ],
+  "supporting_spans_runtime_type": "list",
+  "timestamp": "2026-08-20T19:49:55.650357+00:00"
+}

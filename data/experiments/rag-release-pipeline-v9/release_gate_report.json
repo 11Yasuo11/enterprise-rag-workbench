@@ -1,0 +1,27 @@
+{
+  "final_status": "NOT_READY_FOR_PRODUCTION",
+  "fresh_v2_regression": {
+    "gates": {
+      "citation_completeness_gte_98": true,
+      "citation_correctness_gte_98": true,
+      "citation_validity_100": true,
+      "precision_gte_95": true,
+      "recall_gte_90": true,
+      "requirement_completeness_100": false,
+      "runtime_exceptions_zero": true,
+      "safety_all_zero": true,
+      "strict_accuracy_gte_90": true,
+      "unsupported_zero": false,
+      "version_correctness_gte_98": false
+    },
+    "passed": false
+  },
+  "fresh_v3": {
+    "reason": "Mandatory V2 regression gate failed",
+    "status": "NOT_CREATED_OR_RUN"
+  },
+  "mandatory_failed_gate": "FRESH_V2_REGRESSION_RERUN_V9",
+  "production_deployed": false,
+  "release_ready": false,
+  "verdict": "PIPELINE_V9_FAILED_V2_REGRESSION"
+}

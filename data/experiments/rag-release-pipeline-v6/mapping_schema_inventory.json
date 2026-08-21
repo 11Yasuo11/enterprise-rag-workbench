@@ -1,0 +1,101 @@
+{
+  "api_calls": 0,
+  "schemas": [
+    {
+      "canonical_or_legacy": "current_plural",
+      "cardinality": {
+        "supporting_spans": "one_or_more"
+      },
+      "consumer": "release evaluation deterministic adapter",
+      "fields": [
+        "requirement_id",
+        "requirement",
+        "chunk_id",
+        "document_id",
+        "supporting_spans"
+      ],
+      "mapping_type": "VerifiedRequirement",
+      "producer": "extract_resolved_token_support",
+      "risk": "previously crashed singular consumer"
+    },
+    {
+      "canonical_or_legacy": "legacy_singular",
+      "cardinality": {
+        "supporting_span": "exactly_one"
+      },
+      "consumer": "release evaluation deterministic adapter",
+      "fields": [
+        "requirement_id",
+        "requirement",
+        "chunk_id",
+        "document_id",
+        "supporting_span"
+      ],
+      "mapping_type": "UniversalRequirement",
+      "producer": "deterministic_requirement_map",
+      "risk": "requires normalization and identity enrichment"
+    },
+    {
+      "canonical_or_legacy": "wire_plural_arrays",
+      "cardinality": {
+        "parallel_arrays": "zero_or_more_equal_length"
+      },
+      "consumer": "validate_verifier_result / requirement packets",
+      "fields": [
+        "requirement_id",
+        "chunk_ids",
+        "document_ids",
+        "document_version_ids",
+        "versions",
+        "supporting_spans"
+      ],
+      "mapping_type": "FrozenRequirementResult",
+      "producer": "FrozenEvidenceVerifier",
+      "risk": "must be zipped with strict equal cardinality before normalization"
+    },
+    {
+      "canonical_or_legacy": "validated_assembly_contract",
+      "cardinality": {
+        "mappings": "one_or_more",
+        "supporting_span_per_mapping": "one"
+      },
+      "consumer": "deterministic-requirement-assembler-v3",
+      "fields": [
+        "requirement_id",
+        "chunk_id",
+        "document_id",
+        "document_version_id",
+        "supporting_span",
+        "additional_mappings"
+      ],
+      "mapping_type": "ValidatedRequirement + ValidatedMapping",
+      "producer": "validate_verifier_result",
+      "risk": "safe after canonical plural mapping expands losslessly"
+    },
+    {
+      "canonical_or_legacy": "canonical",
+      "cardinality": {
+        "citations": "one_or_more",
+        "supporting_spans": "one_or_more"
+      },
+      "consumer": "packets / deterministic validation / assembler adapter",
+      "fields": [
+        "requirement_id",
+        "document_id",
+        "document_version_id",
+        "version",
+        "chunk_id",
+        "supporting_spans",
+        "citations",
+        "authorized",
+        "tenant",
+        "region",
+        "permission_groups"
+      ],
+      "mapping_type": "CanonicalEvidenceMapping",
+      "producer": "normalize_evidence_mapping",
+      "risk": "fail-closed structured validation"
+    }
+  ],
+  "timestamp": "2026-08-20T19:49:55.650580+00:00"
+}

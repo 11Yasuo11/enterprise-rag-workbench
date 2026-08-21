@@ -1,0 +1,25 @@
+{
+  "api_calls": 0,
+  "case_ids": [
+    "fresh_v2_003",
+    "fresh_v2_019",
+    "fresh_v2_024",
+    "fresh_v2_025"
+  ],
+  "counts": {
+    "DETERMINISTIC_SUPPORT_AVAILABLE_MODEL_FALSE_NEGATIVE": 1,
+    "PACKET_ERROR": 3
+  },
+  "deterministically_answerable": {
+    "fresh_v2_003": true,
+    "fresh_v2_019": true,
+    "fresh_v2_024": true,
+    "fresh_v2_025": true
+  },
+  "finding": "All four have complete authorized, version-valid, literal direct support in Top-15. V7 produced no deterministic mappings for them. Case 003 placed the correct span in its packet but both verifiers false-negatived. Cases 019, 024, and 025 omitted at least one correct direct span from its requirement packet before both verifiers abstained.",
+  "frozen_v7_predictions_sha256": "2de4cded87612b391abe4f9a7fab119ab623199287cc250e5ac6b0483ba72c47",
+  "model_calls": 0,
+  "top15_complete": 4,
+  "validated_mapping_complete_in_v7": 0,
+  "verdict": "FOUR_CASE_CENSUS_COMPLETE"
+}

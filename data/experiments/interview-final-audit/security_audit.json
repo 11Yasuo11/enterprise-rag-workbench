@@ -1,0 +1,72 @@
+{
+  "audit_id": "interview-final-audit-security",
+  "timestamp": "2026-08-21T10:05:00+00:00",
+  "branch": "chore/repository-hygiene-cleanup",
+  "tools": {
+    "gitleaks": true,
+    "trufflehog": false,
+    "manual_pattern_scan": true
+  },
+  "executive_gates": {
+    "TRACKED_REAL_SECRETS": 0,
+    "HISTORY_UNROTATED_REAL_SECRETS": 0,
+    "CLIENT_EXPOSED_SERVER_SECRETS": 0,
+    "PRODUCTION_GOLD_LEAKAGE": 0,
+    "CASE_ID_RUNTIME_HARDCODING": 0,
+    "UNAUTHORIZED_EVIDENCE_PATH": 0,
+    "DEBUG_SECRET_LEAK": 0
+  },
+  "working_tree": {
+    "tracked_env_files": [".env.example"],
+    "untracked_env_present": true,
+    "untracked_env_classification": "LOCAL_UNTRACKED",
+    "untracked_key_types_observed": [
+      {
+        "variable": "EMBEDDING_API_KEY",
+        "type": "OPENAI_STYLE_PROJECT_KEY",
+        "severity": "REVIEW",
+        "tracked": false,
+        "value_reproduced": false
+      },
+      {
+        "variable": "JUDGE_API_KEY",
+        "type": "OPENAI_STYLE_PROJECT_KEY",
+        "severity": "REVIEW",
+        "tracked": false,
+        "value_reproduced": false
+      },
+      {
+        "variable": "OPENAI_API_KEY",
+        "type": "EMPTY",
+        "severity": "SAFE",
+        "tracked": false,
+        "value_reproduced": false
+      }
+    ],
+    "local_external_calls_disabled": true
+  },
+  "git_history": {
+    "scanner": "gitleaks",
+    "commits_scanned": 20,
+    "raw_findings_count": 28,
+    "history_secret_findings_count": 0,
+    "classification": "FALSE_POSITIVES",
+    "false_positive_kinds": [
+      "sha256_integrity_hashes_in_freeze_manifests",
+      "freeze_id_strings",
+      "synthetic_eval_identifiers"
+    ],
+    "rotation_required": false
+  },
+  "frontend": {
+    "next_public_vars": ["NEXT_PUBLIC_API_URL"],
+    "provider_secrets_exposed": false
+  },
+  "high_risk_files": {
+    "tracked_pem_ssh_dumps": "SAFE",
+    "production_customer_data": "SAFE_SYNTHETIC_CORPUS",
+    "export_audit_py": "REVIEW_NON_SECRET"
+  },
+  "overall": "SECURITY_REVIEW_PASS",
+  "report_doc": "docs/SECURITY_REVIEW.md"
+}

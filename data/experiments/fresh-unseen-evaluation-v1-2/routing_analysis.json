@@ -1,0 +1,14 @@
+{
+  "final_routes": {
+    "DETERMINISTIC": 30,
+    "SAFE_ABSTAIN": 22,
+    "SOL": 8
+  },
+  "initial_routes": {
+    "LUNA": 57,
+    "SAFE_ABSTAIN": 3
+  },
+  "luna_calls": 57,
+  "sol_calls": 8,
+  "sol_escalation_rate": 0.13333333333333333
+}

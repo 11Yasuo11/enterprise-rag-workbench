@@ -1,0 +1,21 @@
+{
+  "case_count": 11,
+  "case_ids": [
+    "fresh_v2_003",
+    "fresh_v2_011",
+    "fresh_v2_013",
+    "fresh_v2_017",
+    "fresh_v2_019",
+    "fresh_v2_020",
+    "fresh_v2_024",
+    "fresh_v2_025",
+    "fresh_v2_034",
+    "fresh_v2_035",
+    "fresh_v2_048"
+  ],
+  "experiment_id": "RAG_RELEASE_PIPELINE_V7_TARGETED_11_REAL_API",
+  "gold_loaded_before_freeze": false,
+  "predictions_immutable": true,
+  "predictions_sha256": "2de4cded87612b391abe4f9a7fab119ab623199287cc250e5ac6b0483ba72c47",
+  "timestamp": "2026-08-20T23:46:50.253861+00:00"
+}

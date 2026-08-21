@@ -1,0 +1,240 @@
+{
+  "boundary_semantics_preserved_in_source": true,
+  "cases": [
+    {
+      "assembler": {
+        "actual_answer": null,
+        "all_requirements_present": true,
+        "emitted": false,
+        "unsupported_fact_present": false
+      },
+      "case_id": "fresh_v1_040",
+      "category": "numeric_date_boundary",
+      "citation": {
+        "cited_sources": [],
+        "complete": true,
+        "correct": true,
+        "valid": true
+      },
+      "evidence": "The ten-business-day rule ranked first and was marked SUPPORTED, but Luna's overall decision was ABSTAIN; no deterministic eleventh-day boundary inference was applied.",
+      "final_abstention_trigger": "LUNA_ABSTAIN",
+      "first_failure_stage": "LUNA",
+      "gold_answerability": true,
+      "gold_required_documents": [
+        "finance-expense-policy"
+      ],
+      "gold_required_facts": [
+        "within ten business days"
+      ],
+      "gold_required_versions": {
+        "finance-expense-policy": "5.1"
+      },
+      "local_validation": {
+        "passed": false,
+        "reason": "DECISION_STATUS_MISMATCH"
+      },
+      "luna": {
+        "called": true,
+        "correct_relative_to_top15": false,
+        "decision": "ABSTAIN",
+        "local_validation": {
+          "passed": false,
+          "reason": "DECISION_STATUS_MISMATCH"
+        },
+        "requirement_statuses": {
+          "R1": "SUPPORTED"
+        }
+      },
+      "outcome": "INCORRECT_ABSTENTION",
+      "primary_root_cause": "LUNA_FALSE_NEGATIVE",
+      "question": "Would filing an expense report on the eleventh business day satisfy the stated deadline?",
+      "question_plan": {
+        "qualifiers": [],
+        "question_plan_hash": "80d382f2e0f68feaa9c9d1e2b7eab5d1f6d23aa580a07e1a610a378b7e46cdf5",
+        "requirements": [
+          {
+            "requirement_id": "R1",
+            "requirement_text": "Would filing an expense report on the eleventh business day satisfy the stated deadline",
+            "requirement_type": "fact"
+          }
+        ]
+      },
+      "retrieval": {
+        "acl_tenant_region_survival": true,
+        "active_version_filter_survival": true,
+        "candidate_pool_trace_status": "TRACE_INSUFFICIENT: frozen dry-run persisted counts but not dense/BM25/RRF membership IDs",
+        "minimum_missing_facts": [],
+        "missing_corpus_facts": [],
+        "required_document_ranks": {
+          "finance-expense-policy": 1
+        },
+        "required_evidence_in_bm25_pool": null,
+        "required_evidence_in_corpus": true,
+        "required_evidence_in_dense_pool": null,
+        "required_evidence_in_rrf_pool": null,
+        "required_evidence_in_top15": true,
+        "required_fact_presence_top15": {
+          "within ten business days": true
+        }
+      },
+      "router": {
+        "appropriate": true,
+        "final_route": "SAFE_ABSTAIN",
+        "initial_route": "LUNA",
+        "reason": "non_suspicious_luna_abstention"
+      },
+      "scorer": {
+        "classification": "INCORRECT_ABSTENTION",
+        "correct": true
+      },
+      "secondary_root_causes": [
+        "CONSTRAINT_VALIDATION_ERROR",
+        "ROUTER_ERROR"
+      ],
+      "sol": {
+        "called": false,
+        "correct_relative_to_top15": null,
+        "decision": null,
+        "local_validation": null
+      },
+      "version": {
+        "comparison_required": false,
+        "correct": true,
+        "gold_versions": {
+          "finance-expense-policy": "5.1"
+        },
+        "versions_available": [
+          {
+            "active": true,
+            "document_id": "finance-expense-policy",
+            "version": "5.1",
+            "version_id": "4c469613-1997-4632-9a1e-81c37f786041"
+          }
+        ],
+        "versions_selected": []
+      }
+    },
+    {
+      "assembler": {
+        "actual_answer": null,
+        "all_requirements_present": true,
+        "emitted": false,
+        "unsupported_fact_present": false
+      },
+      "case_id": "fresh_v1_044",
+      "category": "numeric_date_boundary",
+      "citation": {
+        "cited_sources": [],
+        "complete": true,
+        "correct": true,
+        "valid": true
+      },
+      "evidence": "The thirty-minute rule ranked first; the conditional clause became R1 and the derived forty-five-minute comparison became unsupported R2.",
+      "final_abstention_trigger": "LUNA_ABSTAIN",
+      "first_failure_stage": "QUESTION_PLAN",
+      "gold_answerability": true,
+      "gold_required_documents": [
+        "customer-support-escalation"
+      ],
+      "gold_required_facts": [
+        "every thirty minutes"
+      ],
+      "gold_required_versions": {
+        "customer-support-escalation": "3.2"
+      },
+      "local_validation": {
+        "passed": true,
+        "reason": null
+      },
+      "luna": {
+        "called": true,
+        "correct_relative_to_top15": false,
+        "decision": "ABSTAIN",
+        "local_validation": {
+          "passed": true,
+          "reason": null
+        },
+        "requirement_statuses": {
+          "R1": "SUPPORTED",
+          "R2": "UNSUPPORTED"
+        }
+      },
+      "outcome": "INCORRECT_ABSTENTION",
+      "primary_root_cause": "QUALIFIER_REQUIREMENT_ERROR",
+      "question": "If customer-facing outage updates are sent every thirty minutes, would a forty-five-minute cadence match the support guide?",
+      "question_plan": {
+        "qualifiers": [],
+        "question_plan_hash": "2ac71185dcb28e49f29c6e2f5eae3440c587ed66908bda43c007b98f85180897",
+        "requirements": [
+          {
+            "requirement_id": "R1",
+            "requirement_text": "If customer-facing outage updates are sent every thirty minutes",
+            "requirement_type": "fact"
+          },
+          {
+            "requirement_id": "R2",
+            "requirement_text": "would a forty-five-minute cadence match the support guide",
+            "requirement_type": "fact"
+          }
+        ]
+      },
+      "retrieval": {
+        "acl_tenant_region_survival": true,
+        "active_version_filter_survival": true,
+        "candidate_pool_trace_status": "TRACE_INSUFFICIENT: frozen dry-run persisted counts but not dense/BM25/RRF membership IDs",
+        "minimum_missing_facts": [],
+        "missing_corpus_facts": [],
+        "required_document_ranks": {
+          "customer-support-escalation": 1
+        },
+        "required_evidence_in_bm25_pool": null,
+        "required_evidence_in_corpus": true,
+        "required_evidence_in_dense_pool": null,
+        "required_evidence_in_rrf_pool": null,
+        "required_evidence_in_top15": true,
+        "required_fact_presence_top15": {
+          "every thirty minutes": true
+        }
+      },
+      "router": {
+        "appropriate": true,
+        "final_route": "SAFE_ABSTAIN",
+        "initial_route": "LUNA",
+        "reason": "required_evidence_absent"
+      },
+      "scorer": {
+        "classification": "INCORRECT_ABSTENTION",
+        "correct": true
+      },
+      "secondary_root_causes": [
+        "CONSTRAINT_VALIDATION_ERROR",
+        "LUNA_FALSE_NEGATIVE"
+      ],
+      "sol": {
+        "called": false,
+        "correct_relative_to_top15": null,
+        "decision": null,
+        "local_validation": null
+      },
+      "version": {
+        "comparison_required": false,
+        "correct": true,
+        "gold_versions": {
+          "customer-support-escalation": "3.2"
+        },
+        "versions_available": [
+          {
+            "active": true,
+            "document_id": "customer-support-escalation",
+            "version": "3.2",
+            "version_id": "7be9eb6b-b1db-46b9-8ef3-ae30257098c7"
+          }
+        ],
+        "versions_selected": []
+      }
+    }
+  ],
+  "diagnosis": "The verifier/validator contract checks literal support but has no deterministic comparison of day 11 > day 10 or cadence 45 != 30. Case 040 also has an internally inconsistent Luna ABSTAIN with SUPPORTED status; case 044 promotes the conditional clause to an output requirement.",
+  "failure_count": 2,
+  "source_constraint_retrieved_count": 2
+}

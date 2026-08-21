@@ -1,0 +1,272 @@
+{
+  "all_primary_resolved": true,
+  "cases": [
+    {
+      "case_id": "fresh_v1_029",
+      "reason": "unique valid candidate",
+      "selected_version": {
+        "authorized": true,
+        "chunk_id": "0f876e88-1c3a-403f-83aa-ac66033ed246",
+        "document_id": "remote-work-policy",
+        "document_version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac",
+        "effective_from": "2025-01-01 00:00:00+00:00",
+        "effective_to": null,
+        "is_active": false,
+        "region": null,
+        "superseded_by": null,
+        "tenant_id": "acmeai",
+        "text": "Under the 2025 policy , employees could work remotely three days per week .",
+        "version": "2025"
+      },
+      "selected_version_ids": [
+        "82e742b7-92c3-417a-b3f0-a350037b0bac"
+      ],
+      "selected_version_set": [
+        {
+          "authorized": true,
+          "chunk_id": "0f876e88-1c3a-403f-83aa-ac66033ed246",
+          "document_id": "remote-work-policy",
+          "document_version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac",
+          "effective_from": "2025-01-01 00:00:00+00:00",
+          "effective_to": null,
+          "is_active": false,
+          "region": null,
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "Under the 2025 policy , employees could work remotely three days per week .",
+          "version": "2025"
+        }
+      ],
+      "selections_by_document": {
+        "remote-work-policy": [
+          "2025"
+        ]
+      },
+      "status": "VERSION_RESOLVED"
+    },
+    {
+      "case_id": "fresh_v1_031",
+      "reason": "explicit version set resolved per document",
+      "selected_version": null,
+      "selected_version_ids": [
+        "82e742b7-92c3-417a-b3f0-a350037b0bac",
+        "e131a2f3-b35e-4d18-8990-650cf48e1c8c"
+      ],
+      "selected_version_set": [
+        {
+          "authorized": true,
+          "chunk_id": "0f876e88-1c3a-403f-83aa-ac66033ed246",
+          "document_id": "remote-work-policy",
+          "document_version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac",
+          "effective_from": "2025-01-01 00:00:00+00:00",
+          "effective_to": null,
+          "is_active": false,
+          "region": null,
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "Under the 2025 policy , employees could work remotely three days per week .",
+          "version": "2025"
+        },
+        {
+          "authorized": true,
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "document_version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+          "effective_from": "2026-01-01 00:00:00+00:00",
+          "effective_to": null,
+          "is_active": true,
+          "region": null,
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "Under the current 2026 policy , employees may work remotely two days per week .",
+          "version": "2026"
+        }
+      ],
+      "selections_by_document": {
+        "remote-work-policy": [
+          "2025",
+          "2026"
+        ]
+      },
+      "status": "VERSION_SET_RESOLVED"
+    },
+    {
+      "case_id": "fresh_v1_032",
+      "reason": "explicit version set resolved per document",
+      "selected_version": null,
+      "selected_version_ids": [
+        "82e742b7-92c3-417a-b3f0-a350037b0bac",
+        "e131a2f3-b35e-4d18-8990-650cf48e1c8c"
+      ],
+      "selected_version_set": [
+        {
+          "authorized": true,
+          "chunk_id": "a6256f87-3055-4592-bbe0-9299878475b1",
+          "document_id": "remote-work-policy",
+          "document_version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac",
+          "effective_from": "2025-01-01 00:00:00+00:00",
+          "effective_to": null,
+          "is_active": false,
+          "region": null,
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "Managers reviewed remote-work schedules every quarter .",
+          "version": "2025"
+        },
+        {
+          "authorized": true,
+          "chunk_id": "49679d97-020f-4418-9430-4c296bc824b1",
+          "document_id": "remote-work-policy",
+          "document_version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+          "effective_from": "2026-01-01 00:00:00+00:00",
+          "effective_to": null,
+          "is_active": true,
+          "region": null,
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "Managers review remote-work schedules every month .",
+          "version": "2026"
+        }
+      ],
+      "selections_by_document": {
+        "remote-work-policy": [
+          "2025",
+          "2026"
+        ]
+      },
+      "status": "VERSION_SET_RESOLVED"
+    },
+    {
+      "case_id": "fresh_v1_033",
+      "reason": "unique valid candidate",
+      "selected_version": {
+        "authorized": true,
+        "chunk_id": "18bfa499-1726-4b23-9988-e5805e744db4",
+        "document_id": "security-incident-policy",
+        "document_version_id": "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588",
+        "effective_from": "2025-01-01 00:00:00+00:00",
+        "effective_to": null,
+        "is_active": false,
+        "region": null,
+        "superseded_by": null,
+        "tenant_id": "acmeai",
+        "text": "Under the 2025 policy , suspected severity-one incidents had to be reported to the security duty officer within 60 minutes of discovery .",
+        "version": "2025"
+      },
+      "selected_version_ids": [
+        "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588"
+      ],
+      "selected_version_set": [
+        {
+          "authorized": true,
+          "chunk_id": "18bfa499-1726-4b23-9988-e5805e744db4",
+          "document_id": "security-incident-policy",
+          "document_version_id": "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588",
+          "effective_from": "2025-01-01 00:00:00+00:00",
+          "effective_to": null,
+          "is_active": false,
+          "region": null,
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "Under the 2025 policy , suspected severity-one incidents had to be reported to the security duty officer within 60 minutes of discovery .",
+          "version": "2025"
+        }
+      ],
+      "selections_by_document": {
+        "security-incident-policy": [
+          "2025"
+        ]
+      },
+      "status": "VERSION_RESOLVED"
+    },
+    {
+      "case_id": "fresh_v1_035",
+      "reason": "explicit version set resolved per document",
+      "selected_version": null,
+      "selected_version_ids": [
+        "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588",
+        "c4d49578-2eec-4051-a54b-addc12af0efa"
+      ],
+      "selected_version_set": [
+        {
+          "authorized": true,
+          "chunk_id": "18bfa499-1726-4b23-9988-e5805e744db4",
+          "document_id": "security-incident-policy",
+          "document_version_id": "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588",
+          "effective_from": "2025-01-01 00:00:00+00:00",
+          "effective_to": null,
+          "is_active": false,
+          "region": null,
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "Under the 2025 policy , suspected severity-one incidents had to be reported to the security duty officer within 60 minutes of discovery .",
+          "version": "2025"
+        },
+        {
+          "authorized": true,
+          "chunk_id": "bd832158-c74b-4f03-8f53-60a2d30e69e8",
+          "document_id": "security-incident-policy",
+          "document_version_id": "c4d49578-2eec-4051-a54b-addc12af0efa",
+          "effective_from": "2026-01-01 00:00:00+00:00",
+          "effective_to": null,
+          "is_active": true,
+          "region": null,
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "Under the current 2026 policy , suspected severity-one incidents must be reported to the security duty officer within 15 minutes of discovery .",
+          "version": "2026"
+        }
+      ],
+      "selections_by_document": {
+        "security-incident-policy": [
+          "2025",
+          "2026"
+        ]
+      },
+      "status": "VERSION_SET_RESOLVED"
+    },
+    {
+      "case_id": "fresh_v1_017",
+      "reason": "unique valid candidate",
+      "selected_version": {
+        "authorized": true,
+        "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "document_id": "remote-work-policy",
+        "document_version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+        "effective_from": "2026-01-01 00:00:00+00:00",
+        "effective_to": null,
+        "is_active": true,
+        "region": null,
+        "superseded_by": null,
+        "tenant_id": "acmeai",
+        "text": "Under the current 2026 policy , employees may work remotely two days per week .",
+        "version": "2026"
+      },
+      "selected_version_ids": [
+        "e131a2f3-b35e-4d18-8990-650cf48e1c8c"
+      ],
+      "selected_version_set": [
+        {
+          "authorized": true,
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "document_version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+          "effective_from": "2026-01-01 00:00:00+00:00",
+          "effective_to": null,
+          "is_active": true,
+          "region": null,
+          "superseded_by": null,
+          "tenant_id": "acmeai",
+          "text": "Under the current 2026 policy , employees may work remotely two days per week .",
+          "version": "2026"
+        }
+      ],
+      "selections_by_document": {
+        "remote-work-policy": [
+          "2026"
+        ]
+      },
+      "status": "VERSION_RESOLVED"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "all_cached_after": true,
+  "cost_usd": 2.08e-05,
+  "dimension": 64,
+  "experiment_id": "FRESH_UNSEEN_EVALUATION_V1_2",
+  "gate_passed": true,
+  "gold_fields_in_payload": false,
+  "gold_file_loaded": false,
+  "initial_cache_hits": 0,
+  "input_tokens": 1040,
+  "latency_ms": {
+    "complete_measurement_available": false,
+    "initial_48_note": "Unavailable due orchestration command-window interruption after successful committed writes.",
+    "known_resume_segment_count": 0,
+    "resume_segment_max_per_query": null,
+    "resume_segment_median_per_query": null,
+    "resume_segment_total": 388.8373329973547
+  },
+  "model": "text-embedding-3-small",
+  "new_embedding_calls": 60,
+  "orchestration_interruptions": 1,
+  "provider": "openai-compatible",
+  "provider_retry_count": 0,
+  "query_count": 60,
+  "stage": "CONTROLLED_FRESH_QUERY_EMBEDDING_WARMUP",
+  "timestamp": "2026-08-20T15:32:55.406410+00:00",
+  "version": "1"
+}

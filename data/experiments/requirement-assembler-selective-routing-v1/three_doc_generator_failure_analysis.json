@@ -1,0 +1,1594 @@
+{
+  "cases": [
+    {
+      "atomic_requirements": [
+        "deployment approval ID",
+        "API recovery time objective",
+        "remote-work weekly allowance"
+      ],
+      "classification": "GENERATOR_REQUIREMENT_BLIND",
+      "deterministic_reason": "deterministic-extractive-v2 creates per-chunk candidates only for sentences with non-zero lexical query overlap; the verified remote-work sentence had zero overlap and never entered selection",
+      "generator_input": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "text": "The production deployment approval identifier is ENG-DEP-17 . Engineers must attach this identifier to the release ticket before requesting approval . Routine production releases occur on Tuesdays and Thursdays . Emergency changes follow the incident commander process ."
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "text": "Operations owns the business continuity plan . The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "text": "Under the current 2026 policy , employees may work remotely two days per week ."
+        }
+      ],
+      "generator_output": "The recovery time objective for the customer API is four hours . [C1] The production deployment approval identifier is ENG-DEP-17 . [C3]",
+      "generator_selected_spans": [
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "citation_label": "C1",
+          "span": "The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "citation_label": "C3",
+          "span": "The production deployment approval identifier is ENG-DEP-17 ."
+        }
+      ],
+      "generator_used_chunk_ids": [
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "01423f11-8d28-418b-bd8f-b548fa0491ef"
+      ],
+      "luna_supported_requirements": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "requirement": "deployment approval ID",
+          "requirement_id": "R1",
+          "supporting_spans": [
+            "The production deployment approval identifier is ENG-DEP-17 ."
+          ]
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "requirement": "API recovery time objective",
+          "requirement_id": "R2",
+          "supporting_spans": [
+            "The recovery time objective for the customer API is four hours ."
+          ]
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "omitted_requirements": [
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "query_id": "p5k_three_document_027",
+      "source_document_ids": [
+        "engineering-deployment-handbook",
+        "operations-continuity-plan",
+        "remote-work-policy"
+      ],
+      "supporting_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+      ],
+      "supporting_spans": [
+        "The production deployment approval identifier is ENG-DEP-17 .",
+        "The recovery time objective for the customer API is four hours .",
+        "Under the current 2026 policy , employees may work remotely two days per week ."
+      ]
+    },
+    {
+      "atomic_requirements": [
+        "deployment approval ID",
+        "API recovery time objective",
+        "remote-work weekly allowance"
+      ],
+      "classification": "GENERATOR_REQUIREMENT_BLIND",
+      "deterministic_reason": "deterministic-extractive-v2 creates per-chunk candidates only for sentences with non-zero lexical query overlap; the verified remote-work sentence had zero overlap and never entered selection",
+      "generator_input": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "text": "The production deployment approval identifier is ENG-DEP-17 . Engineers must attach this identifier to the release ticket before requesting approval . Routine production releases occur on Tuesdays and Thursdays . Emergency changes follow the incident commander process ."
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "text": "Operations owns the business continuity plan . The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "text": "Under the current 2026 policy , employees may work remotely two days per week ."
+        }
+      ],
+      "generator_output": "The recovery time objective for the customer API is four hours . [C1] The production deployment approval identifier is ENG-DEP-17 . [C3]",
+      "generator_selected_spans": [
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "citation_label": "C1",
+          "span": "The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "citation_label": "C3",
+          "span": "The production deployment approval identifier is ENG-DEP-17 ."
+        }
+      ],
+      "generator_used_chunk_ids": [
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "01423f11-8d28-418b-bd8f-b548fa0491ef"
+      ],
+      "luna_supported_requirements": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "requirement": "deployment approval ID",
+          "requirement_id": "R1",
+          "supporting_spans": [
+            "The production deployment approval identifier is ENG-DEP-17 ."
+          ]
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "requirement": "API recovery time objective",
+          "requirement_id": "R2",
+          "supporting_spans": [
+            "The recovery time objective for the customer API is four hours ."
+          ]
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "omitted_requirements": [
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "query_id": "p5k_three_document_028",
+      "source_document_ids": [
+        "engineering-deployment-handbook",
+        "operations-continuity-plan",
+        "remote-work-policy"
+      ],
+      "supporting_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+      ],
+      "supporting_spans": [
+        "The production deployment approval identifier is ENG-DEP-17 .",
+        "The recovery time objective for the customer API is four hours .",
+        "Under the current 2026 policy , employees may work remotely two days per week ."
+      ]
+    },
+    {
+      "atomic_requirements": [
+        "deployment approval ID",
+        "API recovery time objective",
+        "remote-work weekly allowance"
+      ],
+      "classification": "GENERATOR_REQUIREMENT_BLIND",
+      "deterministic_reason": "deterministic-extractive-v2 creates per-chunk candidates only for sentences with non-zero lexical query overlap; the verified remote-work sentence had zero overlap and never entered selection",
+      "generator_input": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "text": "The production deployment approval identifier is ENG-DEP-17 . Engineers must attach this identifier to the release ticket before requesting approval . Routine production releases occur on Tuesdays and Thursdays . Emergency changes follow the incident commander process ."
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "text": "Operations owns the business continuity plan . The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "text": "Under the current 2026 policy , employees may work remotely two days per week ."
+        }
+      ],
+      "generator_output": "The recovery time objective for the customer API is four hours . [C1] The production deployment approval identifier is ENG-DEP-17 . [C2]",
+      "generator_selected_spans": [
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "citation_label": "C1",
+          "span": "The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "citation_label": "C2",
+          "span": "The production deployment approval identifier is ENG-DEP-17 ."
+        }
+      ],
+      "generator_used_chunk_ids": [
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "01423f11-8d28-418b-bd8f-b548fa0491ef"
+      ],
+      "luna_supported_requirements": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "requirement": "deployment approval ID",
+          "requirement_id": "R1",
+          "supporting_spans": [
+            "The production deployment approval identifier is ENG-DEP-17 ."
+          ]
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "requirement": "API recovery time objective",
+          "requirement_id": "R2",
+          "supporting_spans": [
+            "The recovery time objective for the customer API is four hours ."
+          ]
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "omitted_requirements": [
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "query_id": "p5k_three_document_029",
+      "source_document_ids": [
+        "engineering-deployment-handbook",
+        "operations-continuity-plan",
+        "remote-work-policy"
+      ],
+      "supporting_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+      ],
+      "supporting_spans": [
+        "The production deployment approval identifier is ENG-DEP-17 .",
+        "The recovery time objective for the customer API is four hours .",
+        "Under the current 2026 policy , employees may work remotely two days per week ."
+      ]
+    },
+    {
+      "atomic_requirements": [
+        "deployment approval ID",
+        "API recovery time objective",
+        "remote-work weekly allowance"
+      ],
+      "classification": "GENERATOR_REQUIREMENT_BLIND",
+      "deterministic_reason": "deterministic-extractive-v2 creates per-chunk candidates only for sentences with non-zero lexical query overlap; the verified remote-work sentence had zero overlap and never entered selection",
+      "generator_input": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "text": "The production deployment approval identifier is ENG-DEP-17 . Engineers must attach this identifier to the release ticket before requesting approval . Routine production releases occur on Tuesdays and Thursdays . Emergency changes follow the incident commander process ."
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "text": "Operations owns the business continuity plan . The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "text": "Under the current 2026 policy , employees may work remotely two days per week ."
+        }
+      ],
+      "generator_output": "The recovery time objective for the customer API is four hours . [C1] The production deployment approval identifier is ENG-DEP-17 . [C2]",
+      "generator_selected_spans": [
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "citation_label": "C1",
+          "span": "The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "citation_label": "C2",
+          "span": "The production deployment approval identifier is ENG-DEP-17 ."
+        }
+      ],
+      "generator_used_chunk_ids": [
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "01423f11-8d28-418b-bd8f-b548fa0491ef"
+      ],
+      "luna_supported_requirements": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "requirement": "deployment approval ID",
+          "requirement_id": "R1",
+          "supporting_spans": [
+            "The production deployment approval identifier is ENG-DEP-17 ."
+          ]
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "requirement": "API recovery time objective",
+          "requirement_id": "R2",
+          "supporting_spans": [
+            "The recovery time objective for the customer API is four hours ."
+          ]
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "omitted_requirements": [
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "query_id": "p5k_three_document_030",
+      "source_document_ids": [
+        "engineering-deployment-handbook",
+        "operations-continuity-plan",
+        "remote-work-policy"
+      ],
+      "supporting_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+      ],
+      "supporting_spans": [
+        "The production deployment approval identifier is ENG-DEP-17 .",
+        "The recovery time objective for the customer API is four hours .",
+        "Under the current 2026 policy , employees may work remotely two days per week ."
+      ]
+    },
+    {
+      "atomic_requirements": [
+        "deployment approval ID",
+        "API recovery time objective",
+        "remote-work weekly allowance"
+      ],
+      "classification": "GENERATOR_REQUIREMENT_BLIND",
+      "deterministic_reason": "deterministic-extractive-v2 creates per-chunk candidates only for sentences with non-zero lexical query overlap; the verified remote-work sentence had zero overlap and never entered selection",
+      "generator_input": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "text": "The production deployment approval identifier is ENG-DEP-17 . Engineers must attach this identifier to the release ticket before requesting approval . Routine production releases occur on Tuesdays and Thursdays . Emergency changes follow the incident commander process ."
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "text": "Operations owns the business continuity plan . The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "text": "Under the current 2026 policy , employees may work remotely two days per week ."
+        }
+      ],
+      "generator_output": "The recovery time objective for the customer API is four hours . [C1] The production deployment approval identifier is ENG-DEP-17 . [C2]",
+      "generator_selected_spans": [
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "citation_label": "C1",
+          "span": "The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "citation_label": "C2",
+          "span": "The production deployment approval identifier is ENG-DEP-17 ."
+        }
+      ],
+      "generator_used_chunk_ids": [
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "01423f11-8d28-418b-bd8f-b548fa0491ef"
+      ],
+      "luna_supported_requirements": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "requirement": "deployment approval ID",
+          "requirement_id": "R1",
+          "supporting_spans": [
+            "The production deployment approval identifier is ENG-DEP-17 ."
+          ]
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "requirement": "API recovery time objective",
+          "requirement_id": "R2",
+          "supporting_spans": [
+            "The recovery time objective for the customer API is four hours ."
+          ]
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "omitted_requirements": [
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "query_id": "p5k_three_document_031",
+      "source_document_ids": [
+        "engineering-deployment-handbook",
+        "operations-continuity-plan",
+        "remote-work-policy"
+      ],
+      "supporting_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+      ],
+      "supporting_spans": [
+        "The production deployment approval identifier is ENG-DEP-17 .",
+        "The recovery time objective for the customer API is four hours .",
+        "Under the current 2026 policy , employees may work remotely two days per week ."
+      ]
+    },
+    {
+      "atomic_requirements": [
+        "deployment approval ID",
+        "API recovery time objective",
+        "remote-work weekly allowance"
+      ],
+      "classification": "GENERATOR_REQUIREMENT_BLIND",
+      "deterministic_reason": "deterministic-extractive-v2 creates per-chunk candidates only for sentences with non-zero lexical query overlap; the verified remote-work sentence had zero overlap and never entered selection",
+      "generator_input": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "text": "The production deployment approval identifier is ENG-DEP-17 . Engineers must attach this identifier to the release ticket before requesting approval . Routine production releases occur on Tuesdays and Thursdays . Emergency changes follow the incident commander process ."
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "text": "Operations owns the business continuity plan . The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "text": "Under the current 2026 policy , employees may work remotely two days per week ."
+        }
+      ],
+      "generator_output": "The recovery time objective for the customer API is four hours . [C1] The production deployment approval identifier is ENG-DEP-17 . [C2]",
+      "generator_selected_spans": [
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "citation_label": "C1",
+          "span": "The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "citation_label": "C2",
+          "span": "The production deployment approval identifier is ENG-DEP-17 ."
+        }
+      ],
+      "generator_used_chunk_ids": [
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "01423f11-8d28-418b-bd8f-b548fa0491ef"
+      ],
+      "luna_supported_requirements": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "requirement": "deployment approval ID",
+          "requirement_id": "R1",
+          "supporting_spans": [
+            "The production deployment approval identifier is ENG-DEP-17 ."
+          ]
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "requirement": "API recovery time objective",
+          "requirement_id": "R2",
+          "supporting_spans": [
+            "The recovery time objective for the customer API is four hours ."
+          ]
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "omitted_requirements": [
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "query_id": "p5k_three_document_032",
+      "source_document_ids": [
+        "engineering-deployment-handbook",
+        "operations-continuity-plan",
+        "remote-work-policy"
+      ],
+      "supporting_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+      ],
+      "supporting_spans": [
+        "The production deployment approval identifier is ENG-DEP-17 .",
+        "The recovery time objective for the customer API is four hours .",
+        "Under the current 2026 policy , employees may work remotely two days per week ."
+      ]
+    },
+    {
+      "atomic_requirements": [
+        "deployment approval ID",
+        "API recovery time objective",
+        "remote-work weekly allowance"
+      ],
+      "classification": "GENERATOR_REQUIREMENT_BLIND",
+      "deterministic_reason": "deterministic-extractive-v2 creates per-chunk candidates only for sentences with non-zero lexical query overlap; the verified remote-work sentence had zero overlap and never entered selection",
+      "generator_input": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "text": "The production deployment approval identifier is ENG-DEP-17 . Engineers must attach this identifier to the release ticket before requesting approval . Routine production releases occur on Tuesdays and Thursdays . Emergency changes follow the incident commander process ."
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "text": "Operations owns the business continuity plan . The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "text": "Under the current 2026 policy , employees may work remotely two days per week ."
+        }
+      ],
+      "generator_output": "The recovery time objective for the customer API is four hours . [C1] The production deployment approval identifier is ENG-DEP-17 . [C2]",
+      "generator_selected_spans": [
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "citation_label": "C1",
+          "span": "The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "citation_label": "C2",
+          "span": "The production deployment approval identifier is ENG-DEP-17 ."
+        }
+      ],
+      "generator_used_chunk_ids": [
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "01423f11-8d28-418b-bd8f-b548fa0491ef"
+      ],
+      "luna_supported_requirements": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "requirement": "deployment approval ID",
+          "requirement_id": "R1",
+          "supporting_spans": [
+            "The production deployment approval identifier is ENG-DEP-17 ."
+          ]
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "requirement": "API recovery time objective",
+          "requirement_id": "R2",
+          "supporting_spans": [
+            "The recovery time objective for the customer API is four hours ."
+          ]
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "omitted_requirements": [
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "query_id": "p5k_three_document_033",
+      "source_document_ids": [
+        "engineering-deployment-handbook",
+        "operations-continuity-plan",
+        "remote-work-policy"
+      ],
+      "supporting_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+      ],
+      "supporting_spans": [
+        "The production deployment approval identifier is ENG-DEP-17 .",
+        "The recovery time objective for the customer API is four hours .",
+        "Under the current 2026 policy , employees may work remotely two days per week ."
+      ]
+    },
+    {
+      "atomic_requirements": [
+        "deployment approval ID",
+        "API recovery time objective",
+        "remote-work weekly allowance"
+      ],
+      "classification": "GENERATOR_REQUIREMENT_BLIND",
+      "deterministic_reason": "deterministic-extractive-v2 creates per-chunk candidates only for sentences with non-zero lexical query overlap; the verified remote-work sentence had zero overlap and never entered selection",
+      "generator_input": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "text": "The production deployment approval identifier is ENG-DEP-17 . Engineers must attach this identifier to the release ticket before requesting approval . Routine production releases occur on Tuesdays and Thursdays . Emergency changes follow the incident commander process ."
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "text": "Operations owns the business continuity plan . The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "text": "Under the current 2026 policy , employees may work remotely two days per week ."
+        }
+      ],
+      "generator_output": "The recovery time objective for the customer API is four hours . [C1] The production deployment approval identifier is ENG-DEP-17 . [C2]",
+      "generator_selected_spans": [
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "citation_label": "C1",
+          "span": "The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "citation_label": "C2",
+          "span": "The production deployment approval identifier is ENG-DEP-17 ."
+        }
+      ],
+      "generator_used_chunk_ids": [
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "01423f11-8d28-418b-bd8f-b548fa0491ef"
+      ],
+      "luna_supported_requirements": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "requirement": "deployment approval ID",
+          "requirement_id": "R1",
+          "supporting_spans": [
+            "The production deployment approval identifier is ENG-DEP-17 ."
+          ]
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "requirement": "API recovery time objective",
+          "requirement_id": "R2",
+          "supporting_spans": [
+            "The recovery time objective for the customer API is four hours ."
+          ]
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "omitted_requirements": [
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "query_id": "p5k_three_document_034",
+      "source_document_ids": [
+        "engineering-deployment-handbook",
+        "operations-continuity-plan",
+        "remote-work-policy"
+      ],
+      "supporting_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+      ],
+      "supporting_spans": [
+        "The production deployment approval identifier is ENG-DEP-17 .",
+        "The recovery time objective for the customer API is four hours .",
+        "Under the current 2026 policy , employees may work remotely two days per week ."
+      ]
+    },
+    {
+      "atomic_requirements": [
+        "deployment approval ID",
+        "API recovery time objective",
+        "remote-work weekly allowance"
+      ],
+      "classification": "GENERATOR_REQUIREMENT_BLIND",
+      "deterministic_reason": "deterministic-extractive-v2 creates per-chunk candidates only for sentences with non-zero lexical query overlap; the verified remote-work sentence had zero overlap and never entered selection",
+      "generator_input": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "text": "The production deployment approval identifier is ENG-DEP-17 . Engineers must attach this identifier to the release ticket before requesting approval . Routine production releases occur on Tuesdays and Thursdays . Emergency changes follow the incident commander process ."
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "text": "Operations owns the business continuity plan . The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "text": "Under the current 2026 policy , employees may work remotely two days per week ."
+        }
+      ],
+      "generator_output": "The recovery time objective for the customer API is four hours . [C1] The production deployment approval identifier is ENG-DEP-17 . [C2]",
+      "generator_selected_spans": [
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "citation_label": "C1",
+          "span": "The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "citation_label": "C2",
+          "span": "The production deployment approval identifier is ENG-DEP-17 ."
+        }
+      ],
+      "generator_used_chunk_ids": [
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "01423f11-8d28-418b-bd8f-b548fa0491ef"
+      ],
+      "luna_supported_requirements": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "requirement": "deployment approval ID",
+          "requirement_id": "R1",
+          "supporting_spans": [
+            "The production deployment approval identifier is ENG-DEP-17 ."
+          ]
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "requirement": "API recovery time objective",
+          "requirement_id": "R2",
+          "supporting_spans": [
+            "The recovery time objective for the customer API is four hours ."
+          ]
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "omitted_requirements": [
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "query_id": "p5k_three_document_035",
+      "source_document_ids": [
+        "engineering-deployment-handbook",
+        "operations-continuity-plan",
+        "remote-work-policy"
+      ],
+      "supporting_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+      ],
+      "supporting_spans": [
+        "The production deployment approval identifier is ENG-DEP-17 .",
+        "The recovery time objective for the customer API is four hours .",
+        "Under the current 2026 policy , employees may work remotely two days per week ."
+      ]
+    },
+    {
+      "atomic_requirements": [
+        "deployment approval ID",
+        "API recovery time objective",
+        "remote-work weekly allowance"
+      ],
+      "classification": "GENERATOR_REQUIREMENT_BLIND",
+      "deterministic_reason": "deterministic-extractive-v2 creates per-chunk candidates only for sentences with non-zero lexical query overlap; the verified remote-work sentence had zero overlap and never entered selection",
+      "generator_input": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "text": "The production deployment approval identifier is ENG-DEP-17 . Engineers must attach this identifier to the release ticket before requesting approval . Routine production releases occur on Tuesdays and Thursdays . Emergency changes follow the incident commander process ."
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "text": "Operations owns the business continuity plan . The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "text": "Under the current 2026 policy , employees may work remotely two days per week ."
+        }
+      ],
+      "generator_output": "The recovery time objective for the customer API is four hours . [C1] The production deployment approval identifier is ENG-DEP-17 . [C2]",
+      "generator_selected_spans": [
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "citation_label": "C1",
+          "span": "The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "citation_label": "C2",
+          "span": "The production deployment approval identifier is ENG-DEP-17 ."
+        }
+      ],
+      "generator_used_chunk_ids": [
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "01423f11-8d28-418b-bd8f-b548fa0491ef"
+      ],
+      "luna_supported_requirements": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "requirement": "deployment approval ID",
+          "requirement_id": "R1",
+          "supporting_spans": [
+            "The production deployment approval identifier is ENG-DEP-17 ."
+          ]
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "requirement": "API recovery time objective",
+          "requirement_id": "R2",
+          "supporting_spans": [
+            "The recovery time objective for the customer API is four hours ."
+          ]
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "omitted_requirements": [
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "query_id": "p5k_three_document_036",
+      "source_document_ids": [
+        "engineering-deployment-handbook",
+        "operations-continuity-plan",
+        "remote-work-policy"
+      ],
+      "supporting_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+      ],
+      "supporting_spans": [
+        "The production deployment approval identifier is ENG-DEP-17 .",
+        "The recovery time objective for the customer API is four hours .",
+        "Under the current 2026 policy , employees may work remotely two days per week ."
+      ]
+    },
+    {
+      "atomic_requirements": [
+        "deployment approval ID",
+        "API recovery time objective",
+        "remote-work weekly allowance"
+      ],
+      "classification": "GENERATOR_REQUIREMENT_BLIND",
+      "deterministic_reason": "deterministic-extractive-v2 creates per-chunk candidates only for sentences with non-zero lexical query overlap; the verified remote-work sentence had zero overlap and never entered selection",
+      "generator_input": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "text": "The production deployment approval identifier is ENG-DEP-17 . Engineers must attach this identifier to the release ticket before requesting approval . Routine production releases occur on Tuesdays and Thursdays . Emergency changes follow the incident commander process ."
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "text": "Operations owns the business continuity plan . The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "text": "Under the current 2026 policy , employees may work remotely two days per week ."
+        }
+      ],
+      "generator_output": "The recovery time objective for the customer API is four hours . [C1] The production deployment approval identifier is ENG-DEP-17 . [C2]",
+      "generator_selected_spans": [
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "citation_label": "C1",
+          "span": "The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "citation_label": "C2",
+          "span": "The production deployment approval identifier is ENG-DEP-17 ."
+        }
+      ],
+      "generator_used_chunk_ids": [
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "01423f11-8d28-418b-bd8f-b548fa0491ef"
+      ],
+      "luna_supported_requirements": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "requirement": "deployment approval ID",
+          "requirement_id": "R1",
+          "supporting_spans": [
+            "The production deployment approval identifier is ENG-DEP-17 ."
+          ]
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "requirement": "API recovery time objective",
+          "requirement_id": "R2",
+          "supporting_spans": [
+            "The recovery time objective for the customer API is four hours ."
+          ]
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "omitted_requirements": [
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "query_id": "p5k_three_document_037",
+      "source_document_ids": [
+        "engineering-deployment-handbook",
+        "operations-continuity-plan",
+        "remote-work-policy"
+      ],
+      "supporting_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+      ],
+      "supporting_spans": [
+        "The production deployment approval identifier is ENG-DEP-17 .",
+        "The recovery time objective for the customer API is four hours .",
+        "Under the current 2026 policy , employees may work remotely two days per week ."
+      ]
+    },
+    {
+      "atomic_requirements": [
+        "deployment approval ID",
+        "API recovery time objective",
+        "remote-work weekly allowance"
+      ],
+      "classification": "GENERATOR_REQUIREMENT_BLIND",
+      "deterministic_reason": "deterministic-extractive-v2 creates per-chunk candidates only for sentences with non-zero lexical query overlap; the verified remote-work sentence had zero overlap and never entered selection",
+      "generator_input": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "text": "The production deployment approval identifier is ENG-DEP-17 . Engineers must attach this identifier to the release ticket before requesting approval . Routine production releases occur on Tuesdays and Thursdays . Emergency changes follow the incident commander process ."
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "text": "Operations owns the business continuity plan . The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "text": "Under the current 2026 policy , employees may work remotely two days per week ."
+        }
+      ],
+      "generator_output": "The recovery time objective for the customer API is four hours . [C1] The production deployment approval identifier is ENG-DEP-17 . [C2]",
+      "generator_selected_spans": [
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "citation_label": "C1",
+          "span": "The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "citation_label": "C2",
+          "span": "The production deployment approval identifier is ENG-DEP-17 ."
+        }
+      ],
+      "generator_used_chunk_ids": [
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "01423f11-8d28-418b-bd8f-b548fa0491ef"
+      ],
+      "luna_supported_requirements": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "requirement": "deployment approval ID",
+          "requirement_id": "R1",
+          "supporting_spans": [
+            "The production deployment approval identifier is ENG-DEP-17 ."
+          ]
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "requirement": "API recovery time objective",
+          "requirement_id": "R2",
+          "supporting_spans": [
+            "The recovery time objective for the customer API is four hours ."
+          ]
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "omitted_requirements": [
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "query_id": "p5k_three_document_038",
+      "source_document_ids": [
+        "engineering-deployment-handbook",
+        "operations-continuity-plan",
+        "remote-work-policy"
+      ],
+      "supporting_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+      ],
+      "supporting_spans": [
+        "The production deployment approval identifier is ENG-DEP-17 .",
+        "The recovery time objective for the customer API is four hours .",
+        "Under the current 2026 policy , employees may work remotely two days per week ."
+      ]
+    },
+    {
+      "atomic_requirements": [
+        "deployment approval ID",
+        "API recovery time objective",
+        "remote-work weekly allowance"
+      ],
+      "classification": "GENERATOR_REQUIREMENT_BLIND",
+      "deterministic_reason": "deterministic-extractive-v2 creates per-chunk candidates only for sentences with non-zero lexical query overlap; the verified remote-work sentence had zero overlap and never entered selection",
+      "generator_input": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "text": "The production deployment approval identifier is ENG-DEP-17 . Engineers must attach this identifier to the release ticket before requesting approval . Routine production releases occur on Tuesdays and Thursdays . Emergency changes follow the incident commander process ."
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "text": "Operations owns the business continuity plan . The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "text": "Under the current 2026 policy , employees may work remotely two days per week ."
+        }
+      ],
+      "generator_output": "The recovery time objective for the customer API is four hours . [C1] The production deployment approval identifier is ENG-DEP-17 . [C2]",
+      "generator_selected_spans": [
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "citation_label": "C1",
+          "span": "The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "citation_label": "C2",
+          "span": "The production deployment approval identifier is ENG-DEP-17 ."
+        }
+      ],
+      "generator_used_chunk_ids": [
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "01423f11-8d28-418b-bd8f-b548fa0491ef"
+      ],
+      "luna_supported_requirements": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "requirement": "deployment approval ID",
+          "requirement_id": "R1",
+          "supporting_spans": [
+            "The production deployment approval identifier is ENG-DEP-17 ."
+          ]
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "requirement": "API recovery time objective",
+          "requirement_id": "R2",
+          "supporting_spans": [
+            "The recovery time objective for the customer API is four hours ."
+          ]
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "omitted_requirements": [
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "query_id": "p5k_three_document_039",
+      "source_document_ids": [
+        "engineering-deployment-handbook",
+        "operations-continuity-plan",
+        "remote-work-policy"
+      ],
+      "supporting_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+      ],
+      "supporting_spans": [
+        "The production deployment approval identifier is ENG-DEP-17 .",
+        "The recovery time objective for the customer API is four hours .",
+        "Under the current 2026 policy , employees may work remotely two days per week ."
+      ]
+    },
+    {
+      "atomic_requirements": [
+        "deployment approval ID",
+        "API recovery time objective",
+        "remote-work weekly allowance"
+      ],
+      "classification": "GENERATOR_REQUIREMENT_BLIND",
+      "deterministic_reason": "deterministic-extractive-v2 creates per-chunk candidates only for sentences with non-zero lexical query overlap; the verified remote-work sentence had zero overlap and never entered selection",
+      "generator_input": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "text": "The production deployment approval identifier is ENG-DEP-17 . Engineers must attach this identifier to the release ticket before requesting approval . Routine production releases occur on Tuesdays and Thursdays . Emergency changes follow the incident commander process ."
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "text": "Operations owns the business continuity plan . The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "text": "Under the current 2026 policy , employees may work remotely two days per week ."
+        }
+      ],
+      "generator_output": "The recovery time objective for the customer API is four hours . [C1] The production deployment approval identifier is ENG-DEP-17 . [C2]",
+      "generator_selected_spans": [
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "citation_label": "C1",
+          "span": "The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "citation_label": "C2",
+          "span": "The production deployment approval identifier is ENG-DEP-17 ."
+        }
+      ],
+      "generator_used_chunk_ids": [
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "01423f11-8d28-418b-bd8f-b548fa0491ef"
+      ],
+      "luna_supported_requirements": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "requirement": "deployment approval ID",
+          "requirement_id": "R1",
+          "supporting_spans": [
+            "The production deployment approval identifier is ENG-DEP-17 ."
+          ]
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "requirement": "API recovery time objective",
+          "requirement_id": "R2",
+          "supporting_spans": [
+            "The recovery time objective for the customer API is four hours ."
+          ]
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "omitted_requirements": [
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "query_id": "p5k_three_document_040",
+      "source_document_ids": [
+        "engineering-deployment-handbook",
+        "operations-continuity-plan",
+        "remote-work-policy"
+      ],
+      "supporting_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+      ],
+      "supporting_spans": [
+        "The production deployment approval identifier is ENG-DEP-17 .",
+        "The recovery time objective for the customer API is four hours .",
+        "Under the current 2026 policy , employees may work remotely two days per week ."
+      ]
+    },
+    {
+      "atomic_requirements": [
+        "deployment approval ID",
+        "API recovery time objective",
+        "remote-work weekly allowance"
+      ],
+      "classification": "GENERATOR_REQUIREMENT_BLIND",
+      "deterministic_reason": "deterministic-extractive-v2 creates per-chunk candidates only for sentences with non-zero lexical query overlap; the verified remote-work sentence had zero overlap and never entered selection",
+      "generator_input": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "text": "The production deployment approval identifier is ENG-DEP-17 . Engineers must attach this identifier to the release ticket before requesting approval . Routine production releases occur on Tuesdays and Thursdays . Emergency changes follow the incident commander process ."
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "text": "Operations owns the business continuity plan . The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "text": "Under the current 2026 policy , employees may work remotely two days per week ."
+        }
+      ],
+      "generator_output": "The recovery time objective for the customer API is four hours . [C1] The production deployment approval identifier is ENG-DEP-17 . [C2]",
+      "generator_selected_spans": [
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "citation_label": "C1",
+          "span": "The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "citation_label": "C2",
+          "span": "The production deployment approval identifier is ENG-DEP-17 ."
+        }
+      ],
+      "generator_used_chunk_ids": [
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "01423f11-8d28-418b-bd8f-b548fa0491ef"
+      ],
+      "luna_supported_requirements": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "requirement": "deployment approval ID",
+          "requirement_id": "R1",
+          "supporting_spans": [
+            "The production deployment approval identifier is ENG-DEP-17 ."
+          ]
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "requirement": "API recovery time objective",
+          "requirement_id": "R2",
+          "supporting_spans": [
+            "The recovery time objective for the customer API is four hours ."
+          ]
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "omitted_requirements": [
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "query_id": "p5k_three_document_041",
+      "source_document_ids": [
+        "engineering-deployment-handbook",
+        "operations-continuity-plan",
+        "remote-work-policy"
+      ],
+      "supporting_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+      ],
+      "supporting_spans": [
+        "The production deployment approval identifier is ENG-DEP-17 .",
+        "The recovery time objective for the customer API is four hours .",
+        "Under the current 2026 policy , employees may work remotely two days per week ."
+      ]
+    },
+    {
+      "atomic_requirements": [
+        "deployment approval ID",
+        "API recovery time objective",
+        "remote-work weekly allowance"
+      ],
+      "classification": "GENERATOR_REQUIREMENT_BLIND",
+      "deterministic_reason": "deterministic-extractive-v2 creates per-chunk candidates only for sentences with non-zero lexical query overlap; the verified remote-work sentence had zero overlap and never entered selection",
+      "generator_input": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "text": "The production deployment approval identifier is ENG-DEP-17 . Engineers must attach this identifier to the release ticket before requesting approval . Routine production releases occur on Tuesdays and Thursdays . Emergency changes follow the incident commander process ."
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "text": "Operations owns the business continuity plan . The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "text": "Under the current 2026 policy , employees may work remotely two days per week ."
+        }
+      ],
+      "generator_output": "The recovery time objective for the customer API is four hours . [C1] The production deployment approval identifier is ENG-DEP-17 . [C2]",
+      "generator_selected_spans": [
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "citation_label": "C1",
+          "span": "The recovery time objective for the customer API is four hours ."
+        },
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "citation_label": "C2",
+          "span": "The production deployment approval identifier is ENG-DEP-17 ."
+        }
+      ],
+      "generator_used_chunk_ids": [
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "01423f11-8d28-418b-bd8f-b548fa0491ef"
+      ],
+      "luna_supported_requirements": [
+        {
+          "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "document_id": "engineering-deployment-handbook",
+          "requirement": "deployment approval ID",
+          "requirement_id": "R1",
+          "supporting_spans": [
+            "The production deployment approval identifier is ENG-DEP-17 ."
+          ]
+        },
+        {
+          "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "document_id": "operations-continuity-plan",
+          "requirement": "API recovery time objective",
+          "requirement_id": "R2",
+          "supporting_spans": [
+            "The recovery time objective for the customer API is four hours ."
+          ]
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "omitted_requirements": [
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "requirement": "remote-work weekly allowance",
+          "requirement_id": "R3",
+          "supporting_spans": [
+            "Under the current 2026 policy , employees may work remotely two days per week ."
+          ]
+        }
+      ],
+      "query_id": "p5k_three_document_042",
+      "source_document_ids": [
+        "engineering-deployment-handbook",
+        "operations-continuity-plan",
+        "remote-work-policy"
+      ],
+      "supporting_chunk_ids": [
+        "01423f11-8d28-418b-bd8f-b548fa0491ef",
+        "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+      ],
+      "supporting_spans": [
+        "The production deployment approval identifier is ENG-DEP-17 .",
+        "The recovery time objective for the customer API is four hours .",
+        "Under the current 2026 policy , employees may work remotely two days per week ."
+      ]
+    }
+  ],
+  "classification_counts": {
+    "GENERATOR_REQUIREMENT_BLIND": 16
+  },
+  "experiment_id": "REQUIREMENT_ASSEMBLER_SELECTIVE_ROUTING_V1",
+  "n": 16,
+  "new_openai_calls": 0
+}

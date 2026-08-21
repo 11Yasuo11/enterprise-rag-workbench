@@ -1,0 +1,35 @@
+{
+  "experiment_id": "PRODUCTION_SERVING_PROMOTION",
+  "timestamp": "2026-08-21T09:00:17.335828+00:00",
+  "verdict": "PRODUCTION_RAG_PROMOTION_COMPLETE",
+  "final_status": "READY_FOR_PRODUCTION_DEPLOYMENT_REVIEW",
+  "deployed": false,
+  "gates": {
+    "audit_docs": true,
+    "canonical_runtime": true,
+    "web_integration": true,
+    "zero_api_tests": true,
+    "research_serving_parity": true,
+    "web_e2e": true,
+    "real_api_smoke": "SKIPPED_ZERO_API_POLICY"
+  },
+  "artifacts": [
+    "docs/PRODUCTION_RAG_PROMOTION_AUDIT.md",
+    "docs/CURRENT_SERVING_RAG_ARCHITECTURE.md",
+    "docs/TARGET_PRODUCTION_RAG_ARCHITECTURE.md",
+    "docs/PRODUCTION_RAG_ARCHITECTURE.md",
+    "data/experiments/production-serving-promotion/serving_before.json",
+    "data/experiments/production-serving-promotion/serving_after.json",
+    "data/experiments/production-serving-promotion/research_serving_parity.json",
+    "data/experiments/production-serving-promotion/web_e2e_results.json",
+    "data/experiments/production-serving-promotion/real_api_smoke_test.json",
+    "data/experiments/production-serving-promotion/production_promotion_report.json"
+  ],
+  "remaining_risks": [
+    "Real-provider smoke (OpenAI embeddings + Luna/Sol) not executed in this run \u2014 deferred under $0.10 review",
+    "IdentityReranker used when EMBEDDING_PROVIDER=hashing; production must use real Cross-Encoder",
+    "Frozen research INDEX_IDENTITY / text-embedding-3-small corpus must be re-ingested for semantic production parity",
+    "POST /eval/run still uses legacy RagService \u2014 migrate in a follow-up if API eval must match Web",
+    "V12 freeze manifest text still mentions dense(50)/BM25(50); executing code is 20/20/30"
+  ]
+}

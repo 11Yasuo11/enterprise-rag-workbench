@@ -1,0 +1,14 @@
+{
+  "case_count": 4,
+  "case_ids": [
+    "fresh_v2_003",
+    "fresh_v2_019",
+    "fresh_v2_024",
+    "fresh_v2_025"
+  ],
+  "experiment_id": "RAG_RELEASE_PIPELINE_V8_TARGETED_FOUR_REAL_API",
+  "gold_loaded_before_freeze": false,
+  "predictions_immutable": true,
+  "predictions_sha256": "d1871ae5cd81de288fe028631ac8cf6dd605366c0c805c4dcdfbfd9871bb5782",
+  "timestamp": "2026-08-21T00:11:46.632937+00:00"
+}

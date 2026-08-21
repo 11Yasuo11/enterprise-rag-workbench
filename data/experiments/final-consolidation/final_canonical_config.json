@@ -1,0 +1,14 @@
+{
+  "embedding_model": "text-embedding-3-small",
+  "embedding_dimension": 64,
+  "dense_top_k": 20,
+  "bm25_top_k": 20,
+  "rrf_k": 60,
+  "fused_candidate_cap": 30,
+  "cross_encoder_model": "cross-encoder/ms-marco-MiniLM-L6-v2",
+  "cross_encoder_top_k": 15,
+  "final_generation_llm": "disabled",
+  "luna": "gpt-5.6-luna (evidence verifier only)",
+  "sol": "gpt-5.6-sol (escalation only)",
+  "source": "src/rag_workbench/runtime/config.py::ProductionRagConfig"
+}

@@ -1,0 +1,151 @@
+{
+  "assembler_hash": "1b1d4a68a510c8f23d16d0dcadcf8b47b675d370b4b8067d67f2af4b9774b20c",
+  "canonical_evidence_mapping_schema_hash": "56a927128b01117bc9536742241044accb33a137544c68cfb0e139779a5b770d",
+  "canonical_question_plan_baseline_sha256": "273a974ed3bd303c29235c898c6dd4d33b5b8779a7ec289e8a9ea9faca9ece25",
+  "citation_authorization_hash": "d6c39189eaad50d437d12606dcc9aeaf30560bce48c362cb93d56e021d776ae3",
+  "constraint_engine_hash": "f550af0e91ae18afd358df606e8f1aa30e1b3cb12b42e9401dcdefb4629845af",
+  "cross_encoder": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+  "deterministic_support_hash": "0af068393aaf739db98755c7aa9f8c7d6ff137ac98cd48bf76832c0179a3f0d1",
+  "dirty_worktree": true,
+  "dirty_worktree_diff_hash": "78e1a213dc75a292936c871c4fcdae312a18ee8496cb9561f93f045ddd1081bf",
+  "embedding_model": "text-embedding-3-small",
+  "freeze_id": "RC_FINAL_PRE_API_V13",
+  "frozen_runtime_inputs_sha256": "800e1c70062b54b0b623b91cc438c749efd4e00fd91cae59b60dcafe418941b8",
+  "git_sha": "6e9741f55dc0436963ea1c0ba30b9a30bccbd207",
+  "luna_model": "gpt-5.6-luna",
+  "normalization_adapter_hash": "56a927128b01117bc9536742241044accb33a137544c68cfb0e139779a5b770d",
+  "p0_hash": "3438d07942038763bd05b7469094236a6bfe45964413d21881382a66f97c9c96",
+  "p1_hash": "1f5311894b10e198528df2ac5c160a0a098763006eb0b7cfa8bc415b407aa2ca",
+  "p2_hash": "cdf9c17cefa517f66c0dfa0a7ee1cd2cec2616e176af2f718cb371b7e770ba49",
+  "p3_hash": "09d78e4fb67d611535d2d47060dd3d5775f77af6d1491b64820e5900eaa39f29",
+  "p4_hash": "f550af0e91ae18afd358df606e8f1aa30e1b3cb12b42e9401dcdefb4629845af",
+  "p5_hash": "11fe5a20a2afc57c2ccb8e6c231123fb5bc18cc76c86485af1749b58f7371a21",
+  "planner_hash": "9b116dbfee8e385ad6bef69f7ac618605ed516eb28aaa5c52ff5fb09b6ebddbf",
+  "post_freeze_changes_forbidden": [
+    "code",
+    "prompt",
+    "config"
+  ],
+  "preflight_sha256": "b1a332c58689e064c0d9b29cdc646b1f070d412a85de59a999fdcc23ed67a2df",
+  "pricing": {
+    "context": "short-context <=272K list prices",
+    "models": {
+      "gpt-5.6-luna": {
+        "cache_write_per_million": 0.25,
+        "cached_input_per_million": 0.02,
+        "input_per_million": 0.2,
+        "output_per_million": 1.2
+      },
+      "gpt-5.6-sol": {
+        "cache_write_per_million": 6.25,
+        "cached_input_per_million": 0.5,
+        "input_per_million": 5.0,
+        "output_per_million": 30.0
+      }
+    },
+    "source": {
+      "consulted_at": "2026-08-20",
+      "luna": "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+      "pricing": "https://developers.openai.com/api/docs/pricing",
+      "sol": "https://developers.openai.com/api/docs/models/gpt-5.6-sol"
+    }
+  },
+  "prompt_hashes": {
+    "schemas": "81e0529e5b8b03c4b28b1e48fa5f8d55997d3d157086975d63d8eb4ec4ad2664",
+    "verifier": "58634e34316c423a7c7df0794712f2255633e5fa5baa065d8d526a2c0dc21b85"
+  },
+  "prompt_injection_precheck_hash": "9306ace46b69e1aacaa60f8fb4258192c0c179430d267451d6d3c8c91910dcdd",
+  "retrieval_configuration": {
+    "architecture": "ACL/Tenant/Region -> temporal expansion -> dense(50)+BM25(50) -> RRF(k=60, union=100) -> Cross-Encoder -> Top-15",
+    "index_identity": "e598d9fb91b13a8c6bd6be94b1bc0a54bbce27dd4e98dc158669d7198bc6f466",
+    "top_k": 15
+  },
+  "router_hash": "5e1741a13b9ae8a7bf33347298b0c8844329339fa1e99532171cb2ddade17e22",
+  "safety_configuration_hash": "cd8d771d0a7f5b9e6613bd65f9d60b3bf29f204545fa5686748cd9150395a3c2",
+  "scorer": {
+    "hash": "f61e017702267a65ed509edad34e5bacc98c2652d50c46987655c52770c61a03",
+    "id": "FINAL_E2E_SCORER_V2"
+  },
+  "sol_model": "gpt-5.6-sol",
+  "source_hashes": {
+    "scripts/run_p1_version_temporal_targeted_real_api_confirmation_v1.py": "3066061b72430be99081166cc189924d5e1bf03d72c6e2feb77a5a8bcdca4267",
+    "scripts/run_p1_version_temporal_v1.py": "1721c557872b0d6eb130be6683fc38a4e998045b7e9610dafc48150194fad3e4",
+    "scripts/run_rag_release_pipeline_v13_targeted_055.py": "b389fd89e23e66818bcd9682dcf32d1bc867d95c2988f6440b5ca5bcf66554a1",
+    "scripts/run_rag_release_pipeline_v4_evaluation.py": "06a61354119302a4a1832a48c086fa701e349649b63d39610b32a26dfcd0c1b8",
+    "src/rag_workbench/config.py": "8aa630c3dcc4a86c3877fbc60a03347a4e6f59006c88b1a3fb7fb82057e9fda5",
+    "src/rag_workbench/evaluation/citation_authorization.py": "d6c39189eaad50d437d12606dcc9aeaf30560bce48c362cb93d56e021d776ae3",
+    "src/rag_workbench/evaluation/final_e2e_scorer_v2.py": "f61e017702267a65ed509edad34e5bacc98c2652d50c46987655c52770c61a03",
+    "src/rag_workbench/evaluation/stage_guard.py": "a91d3123e84be9fb4c986539706cd9f8bc8ec2b8dc6ce1cc0b070b00f2a1de4e",
+    "src/rag_workbench/experiments/atomic_requirement_contract_v1/contract.py": "9b116dbfee8e385ad6bef69f7ac618605ed516eb28aaa5c52ff5fb09b6ebddbf",
+    "src/rag_workbench/experiments/atomic_requirement_contract_v1/deterministic_support.py": "0af068393aaf739db98755c7aa9f8c7d6ff137ac98cd48bf76832c0179a3f0d1",
+    "src/rag_workbench/experiments/atomic_requirement_contract_v1/evidence_mapping.py": "56a927128b01117bc9536742241044accb33a137544c68cfb0e139779a5b770d",
+    "src/rag_workbench/experiments/atomic_requirement_contract_v1/verifier.py": "c4d6ea6748f555716480194c1bee758c3da6451b6a0cb8b9415032a31e35055e",
+    "src/rag_workbench/experiments/deterministic_constraint_inference.py": "f550af0e91ae18afd358df606e8f1aa30e1b3cb12b42e9401dcdefb4629845af",
+    "src/rag_workbench/experiments/requirement_assembler_selective_routing_v1/assembler.py": "1b1d4a68a510c8f23d16d0dcadcf8b47b675d370b4b8067d67f2af4b9774b20c",
+    "src/rag_workbench/experiments/requirement_assembler_selective_routing_v1/router.py": "5e1741a13b9ae8a7bf33347298b0c8844329339fa1e99532171cb2ddade17e22",
+    "src/rag_workbench/experiments/requirement_assembler_selective_routing_v1/versioning.py": "9111b661a05b8ba9871c364b073007d9dee30e751e91b970498dbfc17c861188",
+    "src/rag_workbench/experiments/safe_recovery_luna_v2/identities.py": "7351e3d36d3cceb88cbba73f14d31fa099c69a570aa339b96181560bb3af6d99",
+    "src/rag_workbench/experiments/safe_recovery_luna_v2/pipeline.py": "5742349259a080d85540f942dc89b161c831b3ab9129a49af5954de82a2ac05a",
+    "src/rag_workbench/experiments/safe_recovery_luna_v2/pricing.py": "4cb8598d295816aa13c20503e5f53208c9b69015fa3d77727cfe2a629ff9452e",
+    "src/rag_workbench/reranking/cross_encoder.py": "6233437a63950b62f5185cb5b74458b6771ae0059a54f100f863023c75af3546",
+    "src/rag_workbench/retrieval/bm25.py": "f434f79e1d33185aff46a9a577dc63668b61740089058cb1b1844f715c11c27f",
+    "src/rag_workbench/retrieval/filters.py": "f54ad923616b0f5958f9910b7804858145b178b5b3b59d10dbefdb3e0d3ca472",
+    "src/rag_workbench/retrieval/hybrid.py": "3cec7a36b922b75fc18bb7c19df89d28aa49bff8bffb6e4764cc551ec220c028",
+    "src/rag_workbench/retrieval/retriever.py": "db08ae036df08ee62add42af7317ae25d78ab002d6709d86a12c9efe7684e3c4",
+    "src/rag_workbench/retrieval/temporal.py": "1f5311894b10e198528df2ac5c160a0a098763006eb0b7cfa8bc415b407aa2ca",
+    "src/rag_workbench/safety/question_injection_guard_v2.py": "9306ace46b69e1aacaa60f8fb4258192c0c179430d267451d6d3c8c91910dcdd"
+  },
+  "stage_guard_configuration": {
+    "FRESH_HOLDOUT_V3": {
+      "case_count": 60,
+      "max_luna_calls_per_case": 1,
+      "max_sol_calls_per_case": 1,
+      "stage": "FRESH_HOLDOUT_V3",
+      "stage_cost_cap_usd": 0.3
+    },
+    "FRESH_V2_REGRESSION": {
+      "case_count": 60,
+      "max_luna_calls_per_case": 1,
+      "max_sol_calls_per_case": 1,
+      "stage": "FRESH_V2_REGRESSION",
+      "stage_cost_cap_usd": 0.3
+    },
+    "TARGETED_19": {
+      "case_count": 19,
+      "max_luna_calls_per_case": 1,
+      "max_sol_calls_per_case": 1,
+      "stage": "TARGETED_19",
+      "stage_cost_cap_usd": 0.2
+    },
+    "TARGETED_FOUR": {
+      "case_count": 4,
+      "max_luna_calls_per_case": 1,
+      "max_sol_calls_per_case": 1,
+      "stage": "TARGETED_FOUR",
+      "stage_cost_cap_usd": 0.1
+    },
+    "TARGETED_ONE": {
+      "case_count": 1,
+      "max_luna_calls_per_case": 1,
+      "max_sol_calls_per_case": 1,
+      "stage": "TARGETED_ONE",
+      "stage_cost_cap_usd": 0.03
+    },
+    "TARGETED_THREE": {
+      "case_count": 3,
+      "max_luna_calls_per_case": 1,
+      "max_sol_calls_per_case": 1,
+      "stage": "TARGETED_THREE",
+      "stage_cost_cap_usd": 0.08
+    }
+  },
+  "stage_guard_implementation_hash": "a91d3123e84be9fb4c986539706cd9f8bc8ec2b8dc6ce1cc0b070b00f2a1de4e",
+  "targeted_055_stage_cap_usd": 0.02,
+  "temporal_planner_hash": "1f5311894b10e198528df2ac5c160a0a098763006eb0b7cfa8bc415b407aa2ca",
+  "timestamp": "2026-08-21T08:55:48.664353+00:00",
+  "top_k": 15,
+  "total_v13_cap_usd": 0.32,
+  "v2_regression_stage_cap_usd": 0.3,
+  "verifier_hash": "c4d6ea6748f555716480194c1bee758c3da6451b6a0cb8b9415032a31e35055e",
+  "version_resolver_hash": "9111b661a05b8ba9871c364b073007d9dee30e751e91b970498dbfc17c861188"
+}

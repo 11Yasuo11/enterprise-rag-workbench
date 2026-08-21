@@ -1,0 +1,19 @@
+{
+  "final_status": "NOT_READY_FOR_PRODUCTION",
+  "pipeline_verdict": "PIPELINE_V4_FAILED_TARGETED",
+  "release_gates": {
+    "fresh_holdout_v2": "NOT_RUN_DUE_TO_TARGETED_GATE_FAILURE",
+    "full_local_regression": "PASS",
+    "old_60_regression": "NOT_RUN_DUE_TO_TARGETED_GATE_FAILURE",
+    "p1_targeted_v2": "PASS_5_OF_5",
+    "targeted_19": "FAIL_18_OF_19"
+  },
+  "stopped_at_first_mandatory_failure": true,
+  "targeted_failure": {
+    "case_id": "fresh_v1_017",
+    "classification": "INCORRECT_ABSTENTION",
+    "first_causal_failure": "Luna returned UNSUPPORTED for receipt threshold despite literal authorized Top-15 evidence; the requirement-scoped candidate packet missed the evidence because lexical matching did not normalize receipt/receipts and the evidence sentence did not contain the abstraction word threshold. The router consequently marked required_evidence_absent and did not legitimately escalate to Sol.",
+    "prediction_changed_after_freeze": false,
+    "tuning_or_rerun_performed": false
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "phase": "V3_PHASE5KQ_FINAL_QUALITY_SCORING_INTEGRITY_AUDIT",
+  "phase_identity": "v3-phase5kq-final-quality-scoring-audit",
+  "timestamp": "2026-08-19T18:56:31.707277+00:00",
+  "phase5kc_preserved": true,
+  "phase5kc_release_label": "PENDING_FINAL_SCORING_INTEGRITY_CONFIRMATION",
+  "primary_question_answer": "Recall@20=1.0 and zero correct answers coexist because retrieval metrics measure required-document presence in ranked lists, while Phase-5KC answer scoring independently forces citation_correctness=0.0 for every produced answer (expected_answer=None), converting otherwise-valid answers into UNSUPPORTED_ANSWER.",
+  "metric_definition_audit_path": "data/experiments/v3-phase5k-final-e2e/phase5kq_metric_definition_audit.json",
+  "citation_failure_audit_path": "data/experiments/v3-phase5k-final-e2e/phase5kq_citation_failure_audit.json",
+  "independent_recomputation_path": "data/experiments/v3-phase5k-final-e2e/phase5kq_independent_recomputation.json",
+  "citation_correctness_executable_rule": {
+    "function": "rag_workbench.evaluation.generation_metrics.deterministic_citation_support",
+    "code_path": "scripts/phase5kc_corrected_final_execution.py -> deterministic_citation_support(...)",
+    "inputs": {
+      "answer": "generated answer text",
+      "expected_answer": "HARDCODED None in phase5kc runner",
+      "cited_document_ids": "document ids of cited chunks from top5",
+      "expected_document_ids": "case.required_document_ids",
+      "should_abstain": "case.should_abstain"
+    },
+    "rule": "if not expected_answer -> return 0.0; else token subset of answer AND cited docs superset required docs",
+    "uses_required_chunk_ids": false,
+    "uses_exact_gt_chunk_match": false,
+    "uses_semantic_claim_support": false,
+    "critical_bug": "expected_answer is always None, so any non-abstain answer gets citation_correctness=0.0"
+  },
+  "exact_gt_vs_semantic": {
+    "present_in_dataset": "required_chunk_ids field absent in frozen dataset",
+    "present_in_phase5kc_scorer": false
+  },
+  "fifty_nine_citation_failure_audit": {
+    "ANSWER_CONTENT_FAILURE_NOT_CITATION_FAILURE": 19,
+    "SCORER_EXACT_MATCH_ERROR": 59
+  },
+  "zero_correct_answer_root_cause": {
+    "NO_ANSWER": 27,
+    "FAIL_CITATION_CORRECTNESS": 69,
+    "FAIL_REQUIRED_FACT": 4
+  },
+  "judge_false_negative_audit": {
+    "reported_in_phase5kc_census": 19,
+    "no_answer_persisted_rag_runs": 27,
+    "categories_no_answer": {
+      "single_document": 3,
+      "three_document": 16,
+      "version_sensitive": 8
+    },
+    "true_judge_false_negative": "NOT_PROVABLE_FROM_PERSISTED_PER_CASE_TRACES",
+    "misattributed_judge_false_negative": "LIKELY_ALL_19_REPORTED_JUDGE_FN_CASES_ARE_ENTANGLED_WITH_MISSING_PERSISTED_TRACES_OR_SCORER_FORCED_UNSUPPORTED",
+    "note": "Phase-5KC did not persist per-case top5/judge fields in JSON; RagRun table only captures generator-path answers (73/100 answerable)."
+  },
+  "version_region_constraint_audit": {
+    "reported_version_failure": 8,
+    "reported_region_failure": 6,
+    "reported_constraint_failure": 8,
+    "audit_finding": "Phase-5KC failure census assigns these labels from category name before pipeline stage analysis; this is attribution-by-category, not verified earliest causal component.",
+    "earliest_cause_proxy": {
+      "version_sensitive_no_answer": 8,
+      "region_sensitive_answered_with_scorer_bug": "included in 69 scorer-forced unsupported",
+      "numeric_date_constraint_answered_with_scorer_bug": "included in 69 scorer-forced unsupported"
+    }
+  },
+  "independent_score_recomputation": {
+    "FINAL_B_reported": {
+      "total": 120,
+      "correct_complete_answers": 0,
+      "correct_abstentions": 20,
+      "incorrect_answers": 0,
+      "incorrect_abstentions": 27,
+      "unsupported_answers": 73,
+      "strict_e2e_accuracy": 0.16666666666666666,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "answerable_retrieval_metrics": {
+        "recall_at_5": 0.8233333333333334,
+        "recall_at_10": 0.9766666666666667,
+        "recall_at_20": 1.0,
+        "mrr": 0.46316666666666667,
+        "ndcg_at_5": 0.6188888888888888,
+        "top5_complete_evidence_coverage": 0.77
+      },
+      "should_abstain_security_metrics": {
+        "prompt_injection_safety": "5/5",
+        "acl_safety": "5/5",
+        "tenant_isolation": "5/5"
+      },
+      "category_correctness": {
+        "single_document": 0.0,
+        "two_document": 0.0,
+        "three_document": 0.0,
+        "same_document_multi_chunk": 0.0,
+        "semantic_paraphrase": 0.0,
+        "exact_identifier": 0.0,
+        "near_duplicate": 0.0,
+        "version_sensitive": 0.0,
+        "region_sensitive": 0.0,
+        "numeric_date_constraint": 0.0,
+        "acl_should_abstain": 1.0,
+        "tenant_isolation": 1.0,
+        "prompt_injection": 1.0,
+        "unsupported_no_answer": 1.0
+      },
+      "generator_completeness_given_complete_evidence": 0.0,
+      "true_unauthorized_supporting_ids": 0,
+      "non_required_supporting_ids": 104,
+      "citation_validity": 1.0,
+      "citation_correctness": 0.0,
+      "p50_latency_ms": 5.958375000773231,
+      "p95_latency_ms": 9.396166002261452,
+      "judge_call_count": 0,
+      "judge_cache_hits": 120,
+      "judge_cache_misses": 0,
+      "recovery_call_count": 42,
+      "embedding_call_count": 0
+    },
+    "FINAL_B_recomputed_proxy": {
+      "correct_complete_answers": 69,
+      "correct_abstentions": 20,
+      "incorrect_abstentions": 27,
+      "unsupported_answers": 4,
+      "strict_e2e_accuracy": 0.7416666666666667
+    },
+    "reported_logic_rebuilt_from_persisted_ragruns": {
+      "correct_complete_answers": 0,
+      "correct_abstentions": 20,
+      "incorrect_abstentions": 27,
+      "unsupported_answers": 73,
+      "strict_e2e_accuracy": 0.16666666666666666
+    },
+    "rebuilt_matches_reported_exactly": true,
+    "FINAL_R_and_FINAL_A_note": "Identical scoring logic and identical aggregate metrics in Phase-5KC; recomputation applies equally."
+  },
+  "corrected_failure_census_answerable_proxy": {
+    "JUDGE_FALSE_NEGATIVE": 27,
+    "GENERATOR_INCOMPLETE": 4
+  },
+  "scorer_errors": [
+    "expected_answer hardcoded None in deterministic_citation_support call",
+    "citation_correctness mean treats forced 0.0 as genuine failure",
+    "behavior marks UNSUPPORTED_ANSWER whenever ccorr<1 even if facts_ok and cvalid pass",
+    "failure census priority uses category labels and citation scorer outputs"
+  ],
+  "ground_truth_errors": [],
+  "phase5kc_quality_result_validity": "PHASE5KC_QUALITY_RESULT_INVALID",
+  "quality_research_conclusion": "QUALITY_RESULT_CORRECTED: Corrected execution is valid, but reported Phase-5KC quality metrics (0 correct, citation correctness 0.0, failure census) are artifacts of scorer implementation defects, not faithful measurements of RAG quality.",
+  "cumulative_security_conclusion": "Phase-H targeted prompt-injection 14/20 (6 unsafe failures) remains unresolved and independent of this scoring audit.",
+  "release_decision_review": "RELEASE_REJECT_STILL_SUPPORTED",
+  "quality_decision": "QUALITY_RESULT_CORRECTED",
+  "release_safety_decision": "RELEASE_REJECT_STILL_SUPPORTED",
+  "final_v3_research_status": "STOP_FOR_USER_REVIEW"
+}

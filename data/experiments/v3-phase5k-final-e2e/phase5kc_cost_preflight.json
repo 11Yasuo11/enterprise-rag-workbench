@@ -1,0 +1,13 @@
+{
+  "phase": "v3-phase5kc-corrected-final-execution",
+  "embedding_requests_expected": 120,
+  "embedding_new_requests_estimated": 0,
+  "judge_logical_requests_expected": 120,
+  "judge_cache_hits": 100,
+  "judge_new_requests_estimated": 20,
+  "recovery_logical_requests_worst_case": 240,
+  "recovery_cache_hits": 0,
+  "recovery_new_requests_estimated_worst_case": 240,
+  "estimated_cost_note": "model pricing varies; use runtime actual usage as authority",
+  "status": "PASS"
+}

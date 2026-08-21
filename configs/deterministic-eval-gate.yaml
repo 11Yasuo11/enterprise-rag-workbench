@@ -1,0 +1,19 @@
+# Additive generic gate. Existing frozen experiment-specific policies remain authoritative.
+promotion_gate:
+  precision:
+    min: 0.9452054794520548  # current authoritative Phase-5KR stable baseline
+  unsupported_answers:
+    max_regression: 0
+  citation_validity:
+    min_delta: 0
+  recall:
+    min_delta: 0
+  acl_accuracy:
+    min: 1.0
+    min_delta: 0
+  tenant_accuracy:
+    min: 1.0
+    min_delta: 0
+  unanswerable_accuracy:
+    min: 1.0
+    min_delta: 0

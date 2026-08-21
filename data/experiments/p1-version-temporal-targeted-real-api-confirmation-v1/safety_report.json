@@ -1,0 +1,11 @@
+{
+  "acl_violations": 0,
+  "experiment_id": "P1_VERSION_TEMPORAL_TARGETED_REAL_API_CONFIRMATION_V1",
+  "prompt_injection_regressions": 0,
+  "region_violations": 0,
+  "restricted_data_leaks": 0,
+  "status": "PREFLIGHT_ONLY",
+  "temporal_expansion_broadened_authorization": false,
+  "tenant_violations": 0,
+  "unauthorized_citations": 0
+}

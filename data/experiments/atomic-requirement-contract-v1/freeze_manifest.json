@@ -1,0 +1,83 @@
+{
+  "budget_projection": {
+    "budget_cap_usd": 0.1,
+    "max_luna_calls": 5,
+    "max_sol_calls": 2,
+    "max_total_model_calls": 7,
+    "passes": true,
+    "projected_input_tokens": 10759,
+    "projected_luna_cost_usd": 0.005731399999999999,
+    "projected_output_tokens": 4900,
+    "projected_sol_reserve_cost_usd": 0.05751,
+    "projected_total_cost_usd": 0.0632414,
+    "structured_output_token_cap": 700,
+    "target_cases": 5
+  },
+  "case_count": 5,
+  "case_ids": [
+    "p5k_three_document_027",
+    "p5k_three_document_033",
+    "p5k_three_document_041",
+    "judge_near_05",
+    "p5k_semantic_paraphrase_054"
+  ],
+  "config_hashes": {
+    "scripts/run_atomic_requirement_contract_v1.py": "7622e4bd5e08f75dba649ddd3cde88cc800e79f5fc62c6d1e39ee091ce6cb422",
+    "src/rag_workbench/evaluation/final_e2e_scorer_v2.py": "f61e017702267a65ed509edad34e5bacc98c2652d50c46987655c52770c61a03",
+    "src/rag_workbench/experiments/atomic_requirement_contract_v1/contract.py": "a40debdbe9842790879cbda308cc9621a965390273aa39736c47ae83cc508e1c",
+    "src/rag_workbench/experiments/atomic_requirement_contract_v1/verifier.py": "775b031c53b723ce5e2fc83fb47470c790c8188587c43ba3f426074f5ef8e9f1",
+    "src/rag_workbench/experiments/requirement_assembler_selective_routing_v1/assembler.py": "1b1d4a68a510c8f23d16d0dcadcf8b47b675d370b4b8067d67f2af4b9774b20c",
+    "src/rag_workbench/experiments/universal_requirement_completeness_v1/requirements.py": "101991187d3bdafa0f7487205d4adb0b1353a825e06b98d3394f1c1e6761dc30"
+  },
+  "dataset_hash": "966a3f46fbbbbbffa8522069f936d776e05170ec9168578aa31cea218f819867",
+  "experiment_id": "ATOMIC_REQUIREMENT_CONTRACT_V1",
+  "git_commit_sha": "6e9741f55dc0436963ea1c0ba30b9a30bccbd207",
+  "limits": {
+    "cost_usd": 0.1,
+    "luna": 5,
+    "output_tokens": 700,
+    "sol": 2,
+    "total": 7
+  },
+  "models": {
+    "final_generator": "deterministic-requirement-assembler-v3",
+    "luna": "gpt-5.6-luna",
+    "sol": "gpt-5.6-sol"
+  },
+  "pricing": {
+    "context": "short-context <=272K list prices",
+    "models": {
+      "gpt-5.6-luna": {
+        "cache_write_per_million": 0.25,
+        "cached_input_per_million": 0.02,
+        "input_per_million": 0.2,
+        "output_per_million": 1.2
+      },
+      "gpt-5.6-sol": {
+        "cache_write_per_million": 6.25,
+        "cached_input_per_million": 0.5,
+        "input_per_million": 5.0,
+        "output_per_million": 30.0
+      }
+    },
+    "source": {
+      "consulted_at": "2026-08-20",
+      "luna": "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+      "pricing": "https://developers.openai.com/api/docs/pricing",
+      "sol": "https://developers.openai.com/api/docs/models/gpt-5.6-sol"
+    }
+  },
+  "question_plan_hashes": {
+    "judge_near_05": "b88edf1c100272390bcf1500bf4f8fc528416787097fd9d403ee65c56d31b223",
+    "p5k_semantic_paraphrase_054": "ce8f2117e97699bc8dd9e930abad7c79e59e4e3f21db02ae09bc1009f6de0194",
+    "p5k_three_document_027": "deed0ad4b07e75d207d6b6237ed7b57771289602e0661cc725bcaccc84efe921",
+    "p5k_three_document_033": "0593f6425824ae2a660641fae3ef1dae2c55f9fc0f4b15402f19ca7f53647f3b",
+    "p5k_three_document_041": "e39d508ea7ced40efcae4c8fce340d9c0fdebf2cb702afe5d8f5fb2c94bbc062"
+  },
+  "scope_guards": {
+    "fresh_unseen_evaluation": false,
+    "full_12_case_test": false,
+    "historical_120_evaluation": false
+  },
+  "timestamp": "2026-08-20T19:48:20.920974+00:00"
+}

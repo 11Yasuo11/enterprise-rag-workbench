@@ -1,0 +1,14 @@
+{
+  "name": "CROSS_VERSION_RESOLUTION_CONTRACT_V12",
+  "principle": "Explicit multi-version requests are VERSION_SET_RESOLVED, not ambiguity.",
+  "rules": [
+    "temporal_mode CROSS_VERSION when >=2 explicit years/versions are requested",
+    "semantic document scoping may use evidence/title tokens; empty overlap falls back to Top-15 docs",
+    "version candidates must not be wiped solely because document_id tokens miss question tokens",
+    "VERSION_SET_RESOLVED requires the full requested version set on at least one document when document_scope is auto-bound",
+    "explicit document_scope may assign different versions per document",
+    "different values across requested versions are expected and are not version_conflict",
+    "router must not emit unresolved_version when status is VERSION_SET_RESOLVED"
+  ],
+  "timestamp": "2026-08-21T08:33:52.395292+00:00"
+}

@@ -1,0 +1,78 @@
+{
+  "first_failure_stage_distribution": {
+    "ACTIVE_VERSION_RETRIEVAL_FILTER": 5,
+    "LOCAL_VALIDATION": 1,
+    "LUNA": 2,
+    "QUESTION_PLAN": 11
+  },
+  "primary_root_causes": [
+    {
+      "case_ids": [
+        "fresh_v1_011",
+        "fresh_v1_013",
+        "fresh_v1_016",
+        "fresh_v1_028",
+        "fresh_v1_030",
+        "fresh_v1_036"
+      ],
+      "failure_count": 6,
+      "incorrect_abstention": 2,
+      "root_cause": "QUESTION_PLAN_ERROR",
+      "unsupported_answer": 4
+    },
+    {
+      "case_ids": [
+        "fresh_v1_009",
+        "fresh_v1_015",
+        "fresh_v1_023",
+        "fresh_v1_025",
+        "fresh_v1_044"
+      ],
+      "failure_count": 5,
+      "incorrect_abstention": 5,
+      "root_cause": "QUALIFIER_REQUIREMENT_ERROR",
+      "unsupported_answer": 0
+    },
+    {
+      "case_ids": [
+        "fresh_v1_031",
+        "fresh_v1_032",
+        "fresh_v1_035"
+      ],
+      "failure_count": 3,
+      "incorrect_abstention": 3,
+      "root_cause": "VERSION_COMPARISON_UNSUPPORTED",
+      "unsupported_answer": 0
+    },
+    {
+      "case_ids": [
+        "fresh_v1_022",
+        "fresh_v1_040"
+      ],
+      "failure_count": 2,
+      "incorrect_abstention": 2,
+      "root_cause": "LUNA_FALSE_NEGATIVE",
+      "unsupported_answer": 0
+    },
+    {
+      "case_ids": [
+        "fresh_v1_029",
+        "fresh_v1_033"
+      ],
+      "failure_count": 2,
+      "incorrect_abstention": 2,
+      "root_cause": "TEMPORAL_SCOPE_ERROR",
+      "unsupported_answer": 0
+    },
+    {
+      "case_ids": [
+        "fresh_v1_017"
+      ],
+      "failure_count": 1,
+      "incorrect_abstention": 1,
+      "root_cause": "VERSION_RESOLVER_OVER_FILTER",
+      "unsupported_answer": 0
+    }
+  ],
+  "total_failures": 19
+}

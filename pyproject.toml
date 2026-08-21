@@ -37,12 +37,20 @@ packages = ["src/rag_workbench"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["."]
 addopts = "-q"
 markers = ["integration: requires the Docker PostgreSQL service"]
 
 [tool.ruff]
 line-length = 100
 target-version = "py312"
+# Frozen experiment utilities and one-off export scripts are not the serving package.
+# Product lint gate remains: src/, tests/, scripts/, apps/.
+extend-exclude = [
+  "export_audit.py",
+  "rag_evaluation_audit_export",
+  "data/experiments",
+]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B", "SIM"]

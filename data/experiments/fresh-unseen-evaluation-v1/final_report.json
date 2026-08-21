@@ -1,0 +1,123 @@
+{
+  "access_control_safety": {
+    "gold_leakage_detected": false,
+    "runtime_not_started": true
+  },
+  "category_results": null,
+  "cost": {
+    "new_openai_cost_usd": 0.0
+  },
+  "dataset": {
+    "case_count": 60,
+    "dataset_id": "acmeai-fresh-unseen-eval-v1-20260820",
+    "scope": "fresh question-level generalization over existing corpus"
+  },
+  "dry_run": {
+    "cases_executed": 0,
+    "status": "NOT_RUN_MANDATORY_PRIOR_GATE_FAILED"
+  },
+  "experiment_id": "FRESH_UNSEEN_EVALUATION_V1",
+  "failures": [
+    {
+      "case_id": "fresh_v1_048",
+      "failure": "NORMALIZED_EXACT_DUPLICATE",
+      "gate": "HISTORICAL_QUESTION_OVERLAP",
+      "matched_historical_case_id": "acl_benefit_denied_01"
+    }
+  ],
+  "files": {
+    "api_cost_ledger.jsonl": {
+      "exists": true,
+      "reason_if_absent": null
+    },
+    "category_metrics.json": {
+      "exists": true,
+      "reason_if_absent": null
+    },
+    "final_report.json": {
+      "exists": true,
+      "reason_if_absent": null
+    },
+    "freeze_manifest.json": {
+      "exists": true,
+      "reason_if_absent": null
+    },
+    "fresh_eval_dry_run.json": {
+      "exists": true,
+      "reason_if_absent": null
+    },
+    "fresh_predictions.jsonl": {
+      "exists": false,
+      "reason_if_absent": "Not created because mandatory historical-overlap gate required STOP before predictions/scoring."
+    },
+    "gold_grounding_audit.json": {
+      "exists": true,
+      "reason_if_absent": null
+    },
+    "historical_overlap_audit.json": {
+      "exists": true,
+      "reason_if_absent": null
+    },
+    "per_case_scoring.jsonl": {
+      "exists": false,
+      "reason_if_absent": "Not created because mandatory historical-overlap gate required STOP before predictions/scoring."
+    },
+    "predictions_freeze.json": {
+      "exists": false,
+      "reason_if_absent": "Not created because mandatory historical-overlap gate required STOP before predictions/scoring."
+    },
+    "routing_analysis.json": {
+      "exists": true,
+      "reason_if_absent": null
+    },
+    "safety_report.json": {
+      "exists": true,
+      "reason_if_absent": null
+    }
+  },
+  "freeze": {
+    "completed": true,
+    "manifest": "freeze_manifest.json"
+  },
+  "gold_grounding_audit": {
+    "gold_content_loaded": false,
+    "status": "NOT_RUN_MANDATORY_PRIOR_GATE_FAILED"
+  },
+  "historical_overlap_audit": {
+    "exact_duplicate_case_ids": [
+      "fresh_v1_048"
+    ],
+    "exact_duplicate_count": 1,
+    "historical_match": {
+      "case_id": "acl_benefit_denied_01",
+      "question": "What is the executive benefits exception identifier?",
+      "source": "data/eval/eval_v1.json"
+    },
+    "passed": false,
+    "required_action": "Replace supplied overlapping case(s); do not rewrite dataset during this run."
+  },
+  "latency": null,
+  "overall_quality": null,
+  "production_deployed": false,
+  "real_api_execution": {
+    "new_openai_cost_usd": 0.0,
+    "paid_api_calls": 0,
+    "status": "NOT_RUN"
+  },
+  "release_decision": "NOT_READY_FOR_RELEASE",
+  "release_gates": {
+    "evaluated": false,
+    "reason": "Dataset-overlap preflight failed"
+  },
+  "requirement_contract": null,
+  "routing": null,
+  "tests": [
+    "Package SHA-256 values matched supplied manifest during freeze",
+    "60 question plans decomposed and hashed during freeze",
+    "Historical overlap audit compared 60 fresh cases against 1,907 unique historical questions using zero API calls",
+    "Exact duplicate independently confirmed with jq"
+  ],
+  "timestamp": "2026-08-20T15:14:20.439205+00:00",
+  "verdict": "FRESH_EVAL_DATASET_OVERLAP_REQUIRES_REPLACEMENT",
+  "version_numeric_date": null
+}

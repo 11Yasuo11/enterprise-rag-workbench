@@ -1,0 +1,81 @@
+{
+  "api_cost": {
+    "assertion_passed": true,
+    "cached_embedding_hits": 8,
+    "external_transport_attempts": 0,
+    "new_cost_usd": 0.0,
+    "new_embedding_calls": 0,
+    "new_luna_calls": 0,
+    "new_openai_calls": 0,
+    "new_sol_calls": 0
+  },
+  "case_017": "P2_REQUIRED",
+  "cross_version_pass": true,
+  "current_version_regression_pass": true,
+  "experiment_id": "P1_VERSION_TEMPORAL_V1",
+  "files": [
+    "api_call_assertion.json",
+    "case_017_analysis.json",
+    "cross_version_replay.json",
+    "current_version_regression.json",
+    "final_report.json",
+    "full_regression_report.json",
+    "historical_only_replay.json",
+    "old_vs_new_version_eligibility.jsonl",
+    "p1_target_cases.json",
+    "requirement_version_mapping.json",
+    "safety_regression.json",
+    "temporal_scope_plans.jsonl",
+    "version_set_resolution.json"
+  ],
+  "historical_only_pass": true,
+  "next_step": "Run a small targeted real-API confirmation for 029/031/032/033/035 before P2_VERSION_VALIDATION_SCOPE; do not run the full 60-case evaluation.",
+  "p0_regression_pass": true,
+  "primary_structural_pass": true,
+  "real_api_confirmation_needed": {
+    "case_ids": [
+      "fresh_v1_029",
+      "fresh_v1_031",
+      "fresh_v1_032",
+      "fresh_v1_033",
+      "fresh_v1_035"
+    ],
+    "reason": "Frozen Luna/Sol never received 2025 evidence, so their old mappings cannot confirm the expanded evidence set.",
+    "required": true
+  },
+  "remaining": {
+    "P2_REQUIRED": [
+      "fresh_v1_009",
+      "fresh_v1_015",
+      "fresh_v1_016",
+      "fresh_v1_017",
+      "fresh_v1_023",
+      "fresh_v1_036"
+    ],
+    "P3_REQUIRED": [
+      "fresh_v1_025"
+    ],
+    "P4_REQUIRED": [
+      "fresh_v1_040",
+      "fresh_v1_044"
+    ],
+    "P5_REQUIRED": [
+      "fresh_v1_022"
+    ]
+  },
+  "root_cause": "Active-only predicates removed explicitly requested historical versions before ranking, and the resolver represented only one selected version.",
+  "safety_pass": true,
+  "source_artifact_hashes": {
+    "data/experiments/fresh-p0-semantic-plan-cardinality-v1/final_report.json": "b3c21f5c4168ad19dede38c0176aa04893bec147f5a24f750415a7e397addd3a",
+    "data/experiments/fresh-p0-semantic-plan-cardinality-v1/old_vs_new_question_plans.jsonl": "347e86bfee7e898b7fee471de826ea14cbce84d7acb497b6528c557ef336fc42",
+    "data/experiments/fresh-p0-semantic-plan-cardinality-v1/regression_report.json": "bda07315f49909354d069eefef1d4e0a0a90e1ac1168f84f46bdf5dbc838aac1",
+    "data/experiments/fresh-unseen-evaluation-v1-2/fresh_predictions.jsonl": "a6e44ddc85161b4494f15996ad75a80db90c1b7014d3f324c7538ceaabe42280",
+    "data/experiments/fresh-unseen-evaluation-v1-2/retrieval_dry_run.json": "f5ea33daa836c05c7104e96c60e260051af81921a90bd6731898d88f63124fc4",
+    "data/experiments/fresh-unseen-failure-census-v1/final_report.json": "a41c61ff1693b9ad5c7900713ac2dca0e0e977789f4275c718bf980c0ea8b6f5",
+    "data/experiments/fresh-unseen-failure-census-v1/per_case_failure_analysis.jsonl": "5284066c7011f96bfda6e488fca38abb958bd4ab6e6375cf063f212b2ceac6cc",
+    "data/experiments/fresh-unseen-failure-census-v1/prioritized_fix_plan.json": "b19a584b81867a2461aa77175d5a4cd3bf1051fe3ade0c7e5499cd4a15baeee3",
+    "data/experiments/fresh-unseen-failure-census-v1/root_cause_census.json": "093faf5373d31cdfbeb53a4989911316d3f88054ead502169bc8495d5dc1776d",
+    "data/experiments/fresh-unseen-failure-census-v1/version_temporal_analysis.json": "51fda8061c586a376dd1d5c96c65228e98e0786d4b7476e462c12b40b0ce55d8"
+  },
+  "verdict": "P1_VERSION_TEMPORAL_PASSED"
+}

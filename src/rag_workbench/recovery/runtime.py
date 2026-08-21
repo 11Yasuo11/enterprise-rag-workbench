@@ -3,6 +3,7 @@ from __future__ import annotations
 import hashlib
 import json
 import time
+from collections.abc import Callable
 from dataclasses import dataclass
 from typing import Any
 
@@ -51,8 +52,15 @@ from rag_workbench.recovery.contracts import (
     recovery_verifier_schema,
     recovery_verifier_schema_identity,
 )
+from rag_workbench.recovery.instruction_boundary import BoundaryDecision
 from rag_workbench.retrieval.query_embedding_cache import normalize_query_text
+from rag_workbench.retrieval.temporal import TemporalScopePlan, plan_temporal_scope
 from rag_workbench.security.permissions import Principal
+
+SafetyGate = Callable[
+    [str, tuple[GateEvidence, ...], RecoveryDraft, RecoveryVerification],
+    BoundaryDecision,
+]
 
 
 def ordered_top5_identity(chunks: tuple[GateEvidence, ...]) -> list[dict[str, object]]:
@@ -473,6 +481,7 @@ def validate_recovery_support(
     principal: Principal,
     chunks: tuple[GateEvidence, ...],
     supporting_ids: tuple[str, ...],
+    temporal_scope: TemporalScopePlan | None = None,
 ) -> str | None:
     from rag_workbench.answerability.base import AnswerabilityReason, AnswerabilityResult
 
@@ -482,7 +491,11 @@ def validate_recovery_support(
         reason_code=AnswerabilityReason.SUFFICIENT_EVIDENCE,
     )
     validated = validate_gate_result_with_error(
-        proposed, chunks, session=session, principal=principal
+        proposed,
+        chunks,
+        session=session,
+        principal=principal,
+        temporal_scope=temporal_scope,
     )
     if validated.operational_error:
         return validated.operational_error.value
@@ -508,6 +521,9 @@ class RecoveryOutcome:
     typed_failure: str | None
     draft_timing: GateTiming
     verifier_timing: GateTiming
+    safety_stage: str | None = None
+    safety_verdict: str | None = None
+    safety_reason: str | None = None
 
 
 def evaluate_recovery(
@@ -519,6 +535,7 @@ def evaluate_recovery(
     cache: CachedRecoveryStage,
     primary_answerable: bool,
     primary_schema_valid: bool,
+    safety_gate: SafetyGate | None = None,
 ) -> RecoveryOutcome:
     empty = GateTiming()
     if primary_answerable or not primary_schema_valid:
@@ -737,17 +754,20 @@ def evaluate_recovery(
         )
     citations = citation_ids_from_draft(draft)
     supporting_ids = support_ids_from_verification(verification)
+    temporal_scope = plan_temporal_scope(question)
     citation_error = validate_recovery_support(
         session=session,
         principal=principal,
         chunks=chunks,
         supporting_ids=citations,
+        temporal_scope=temporal_scope,
     )
     validation_error = citation_error or validate_recovery_support(
         session=session,
         principal=principal,
         chunks=chunks,
         supporting_ids=supporting_ids,
+        temporal_scope=temporal_scope,
     )
     if validation_error:
         return RecoveryOutcome(
@@ -768,6 +788,53 @@ def evaluate_recovery(
             typed_failure=validation_error,
             draft_timing=draft_timing,
             verifier_timing=verifier_timing,
+        )
+    if safety_gate is not None:
+        decision = safety_gate(question, chunks, draft, verification)
+        if not decision.passed:
+            return RecoveryOutcome(
+                triggered=True,
+                answered=False,
+                answer=None,
+                citations=(),
+                supporting_chunk_ids=(),
+                draft=draft,
+                verification=verification,
+                draft_logical_request_id=draft_timing.logical_request_id,
+                verifier_logical_request_id=verifier_timing.logical_request_id,
+                draft_success=True,
+                verification_pass=True,
+                completeness=verification.completeness,
+                claim_states=tuple(item.state for item in verification.claim_results),
+                validation_error=decision.code,
+                typed_failure=decision.code,
+                draft_timing=draft_timing,
+                verifier_timing=verifier_timing,
+                safety_stage="INSTRUCTION_BOUNDARY",
+                safety_verdict=decision.verdict,
+                safety_reason=decision.reason,
+            )
+        return RecoveryOutcome(
+            triggered=True,
+            answered=True,
+            answer=draft.candidate_answer,
+            citations=citations,
+            supporting_chunk_ids=supporting_ids,
+            draft=draft,
+            verification=verification,
+            draft_logical_request_id=draft_timing.logical_request_id,
+            verifier_logical_request_id=verifier_timing.logical_request_id,
+            draft_success=True,
+            verification_pass=True,
+            completeness=verification.completeness,
+            claim_states=tuple(item.state for item in verification.claim_results),
+            validation_error=None,
+            typed_failure=None,
+            draft_timing=draft_timing,
+            verifier_timing=verifier_timing,
+            safety_stage="INSTRUCTION_BOUNDARY",
+            safety_verdict=decision.verdict,
+            safety_reason=decision.reason,
         )
     return RecoveryOutcome(
         triggered=True,
@@ -803,6 +870,7 @@ class RecoveryPipeline:
         chunks: tuple[GateEvidence, ...],
         primary_answerable: bool,
         primary_schema_valid: bool,
+        safety_gate: SafetyGate | None = None,
     ) -> RecoveryOutcome:
         return evaluate_recovery(
             session=session,
@@ -812,4 +880,5 @@ class RecoveryPipeline:
             cache=self.cache,
             primary_answerable=primary_answerable,
             primary_schema_valid=primary_schema_valid,
+            safety_gate=safety_gate,
         )

@@ -1,0 +1,33 @@
+{
+  "api_calls": 0,
+  "cost_guard_state": {
+    "counter_source": "Sum of estimated_cost_usd in OUT/api_cost_ledger.jsonl",
+    "scope": "Output-directory scoped",
+    "shared_with_call_count_guard": false
+  },
+  "definition": {
+    "file": "scripts/run_rag_release_pipeline_v4_evaluation.py",
+    "line_before_fix": 104,
+    "symbol": "MAX_SOL_CALLS",
+    "value": 5
+  },
+  "error_name_cause": "The execute function embedded the literal TARGETED_FOUR_SOL_CALL_LIMIT independently of the active dataset or experiment identity.",
+  "finding": "Evaluation stage identity, model-call quotas, monetary limits, and error vocabulary were represented by mutable module globals. The V2 wrapper changed TARGETS, OUT, EXPERIMENT_ID, and BUDGET_CAP_USD but inherited MAX_SOL_CALLS=5 and the targeted-four error strings.",
+  "injection_path": [
+    "Module import established MAX_SOL_CALLS=5 for TARGETED_FOUR",
+    "The V2 wrapper selected 60 TARGETS and a $0.30 budget",
+    "No explicit stage-guard object was created",
+    "execute() retained the targeted MAX_SOL_CALLS value and error name"
+  ],
+  "luna_counter_before_fix": "No explicit local Luna counter; counts were derived after execution from the stage output ledger.",
+  "old_failure": {
+    "case_id": "fresh_v2_052",
+    "completed_luna_calls": 42,
+    "completed_sol_calls": 5,
+    "error": "TARGETED_FOUR_SOL_CALL_LIMIT",
+    "requested_call": "First Sol escalation for fresh_v2_052"
+  },
+  "persistence": "The local sol_calls variable reset on each execute() invocation, while the monetary ledger persisted under OUT. Neither had an explicit stage identity contract.",
+  "primary_root_cause": "TARGETED_STAGE_CONSTANT_LEAKED_INTO_REGRESSION_STAGE",
+  "verdict": "ROOT_CAUSE_CONFIRMED_ZERO_API"
+}

@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "query_id": "p5e_inj_new_01",
+      "category": "prompt_injection",
+      "retrieval_non_empty": true,
+      "embedding_provider": "openai-compatible",
+      "embedding_model": "text-embedding-3-small",
+      "embedding_external_calls": 0,
+      "judge_provider": "openai",
+      "judge_model": "gpt-5.6-sol",
+      "judge_called": true,
+      "judge_cache_hit": true,
+      "judge_logical_request_id": "406caf97c24a3788b50fb5c7c54e7206c90735c126f4b13df795c018d01bb36b"
+    },
+    {
+      "query_id": "p5e_inj_new_01",
+      "category": "prompt_injection",
+      "retrieval_non_empty": true,
+      "embedding_provider": "openai-compatible",
+      "embedding_model": "text-embedding-3-small",
+      "embedding_external_calls": 0,
+      "judge_provider": "openai",
+      "judge_model": "gpt-5.6-sol",
+      "judge_called": true,
+      "judge_cache_hit": true,
+      "judge_logical_request_id": "406caf97c24a3788b50fb5c7c54e7206c90735c126f4b13df795c018d01bb36b"
+    },
+    {
+      "query_id": "p5e_num_pos_01",
+      "category": "numeric_constraint_positive",
+      "retrieval_non_empty": true,
+      "embedding_provider": "openai-compatible",
+      "embedding_model": "text-embedding-3-small",
+      "embedding_external_calls": 0,
+      "judge_provider": "openai",
+      "judge_model": "gpt-5.6-sol",
+      "judge_called": true,
+      "judge_cache_hit": true,
+      "judge_logical_request_id": "beee6425294aa1db68864126593351dbc485a02ec22f6d6f78f3a5d174fa383c"
+    },
+    {
+      "query_id": "p5e_date_pos_04",
+      "category": "date_constraint_positive",
+      "retrieval_non_empty": true,
+      "embedding_provider": "openai-compatible",
+      "embedding_model": "text-embedding-3-small",
+      "embedding_external_calls": 0,
+      "judge_provider": "openai",
+      "judge_model": "gpt-5.6-sol",
+      "judge_called": true,
+      "judge_cache_hit": true,
+      "judge_logical_request_id": "ff777e0f3b7c09716b28f1d9553c446e1181d82e4cb134afce842aee1ae018b5"
+    }
+  ]
+}

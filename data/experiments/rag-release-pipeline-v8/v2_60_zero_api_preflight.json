@@ -1,0 +1,737 @@
+{
+  "api_calls": 0,
+  "case_count": 60,
+  "cases": [
+    {
+      "case_id": "fresh_v2_001",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 2,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_002",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 1,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_003",
+      "deterministic_support": {
+        "complete": true,
+        "failure_code": null
+      },
+      "mapping_count": 1,
+      "requirement_count": 1,
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_004",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 1,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_005",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 1,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_006",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 1,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_007",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 2,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_008",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 1,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_009",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "REQUIREMENT_COVERAGE_INCOMPLETE"
+      },
+      "mapping_count": 1,
+      "requirement_count": 2,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_010",
+      "deterministic_support": {
+        "complete": true,
+        "failure_code": null
+      },
+      "mapping_count": 1,
+      "requirement_count": 1,
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_011",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 2,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_012",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "REQUIREMENT_COVERAGE_INCOMPLETE"
+      },
+      "mapping_count": 0,
+      "requirement_count": 2,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_013",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 2,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_014",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 2,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_015",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 3,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_016",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "REQUIREMENT_COVERAGE_INCOMPLETE"
+      },
+      "mapping_count": 0,
+      "requirement_count": 3,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_017",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "REQUIREMENT_COVERAGE_INCOMPLETE"
+      },
+      "mapping_count": 0,
+      "requirement_count": 3,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_018",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 3,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_019",
+      "deterministic_support": {
+        "complete": true,
+        "failure_code": null
+      },
+      "mapping_count": 3,
+      "requirement_count": 3,
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_020",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 3,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_021",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "REQUIREMENT_COVERAGE_INCOMPLETE"
+      },
+      "mapping_count": 0,
+      "requirement_count": 2,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_022",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 1,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_023",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "REQUIREMENT_COVERAGE_INCOMPLETE"
+      },
+      "mapping_count": 0,
+      "requirement_count": 2,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_024",
+      "deterministic_support": {
+        "complete": true,
+        "failure_code": null
+      },
+      "mapping_count": 1,
+      "requirement_count": 1,
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_025",
+      "deterministic_support": {
+        "complete": true,
+        "failure_code": null
+      },
+      "mapping_count": 2,
+      "requirement_count": 2,
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_026",
+      "deterministic_support": {
+        "complete": true,
+        "failure_code": null
+      },
+      "mapping_count": 1,
+      "requirement_count": 1,
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_027",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 1,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_028",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 1,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_029",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 1,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_030",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "REQUIREMENT_COVERAGE_INCOMPLETE"
+      },
+      "mapping_count": 0,
+      "requirement_count": 2,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_031",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 2,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_032",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "UNRESOLVED_VERSION_CONFLICT"
+      },
+      "mapping_count": 0,
+      "requirement_count": 2,
+      "route": "SOL",
+      "route_reason": "unresolved_version",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_033",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "REQUIREMENT_COVERAGE_INCOMPLETE"
+      },
+      "mapping_count": 0,
+      "requirement_count": 2,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_034",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "REQUIREMENT_COVERAGE_INCOMPLETE"
+      },
+      "mapping_count": 0,
+      "requirement_count": 2,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_035",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "REQUIREMENT_COVERAGE_INCOMPLETE"
+      },
+      "mapping_count": 0,
+      "requirement_count": 2,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_036",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 1,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_037",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 1,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_038",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 1,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_039",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 1,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_040",
+      "deterministic_support": {
+        "complete": true,
+        "failure_code": null
+      },
+      "mapping_count": 1,
+      "requirement_count": 1,
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_041",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 1,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_042",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 1,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_043",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 1,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_044",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 1,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_045",
+      "deterministic_support": {
+        "complete": true,
+        "failure_code": null
+      },
+      "mapping_count": 1,
+      "requirement_count": 1,
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_046",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 1,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_047",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 1,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_048",
+      "deterministic_support": {
+        "complete": true,
+        "failure_code": null
+      },
+      "mapping_count": 1,
+      "requirement_count": 1,
+      "route": "DETERMINISTIC",
+      "route_reason": "complete_literal_support",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_049",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 1,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_050",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "REQUIREMENT_COVERAGE_INCOMPLETE"
+      },
+      "mapping_count": 0,
+      "requirement_count": 2,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_051",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 1,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_052",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 1,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_053",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 2,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_054",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 2,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_055",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 3,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_056",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "SECURITY_PRECHECK_FAILED"
+      },
+      "mapping_count": 0,
+      "requirement_count": 2,
+      "route": "SAFE_ABSTAIN",
+      "route_reason": "security_precheck",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_057",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "SECURITY_PRECHECK_FAILED"
+      },
+      "mapping_count": 0,
+      "requirement_count": 2,
+      "route": "SAFE_ABSTAIN",
+      "route_reason": "security_precheck",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_058",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 1,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_059",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 1,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v2_060",
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "MISSING_REQUIREMENT_MAPPING"
+      },
+      "mapping_count": 0,
+      "requirement_count": 1,
+      "route": "LUNA",
+      "route_reason": "low_risk_semantic_verification",
+      "status": "PASS"
+    }
+  ],
+  "deterministic_support_complete": 9,
+  "failed_case_ids": [],
+  "passed": true,
+  "passed_count": 60,
+  "route_counts": {
+    "DETERMINISTIC": 9,
+    "LUNA": 48,
+    "SAFE_ABSTAIN": 2,
+    "SOL": 1
+  },
+  "runtime_exceptions": 0
+}

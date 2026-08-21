@@ -1,0 +1,114 @@
+{
+  "experiment_id": "FINAL_RAG_CONSOLIDATION_AND_GITHUB_INTERVIEW_READY_V1",
+  "timestamp": "2026-08-21T09:29:10.089212+00:00",
+  "current_HEAD": "6e9741f55dc0436963ea1c0ba30b9a30bccbd207",
+  "current_branch": "chore/repository-hygiene-cleanup",
+  "branch_tracking": "origin/chore/repository-hygiene-cleanup",
+  "all_local_branches": [
+    "chore/repository-hygiene-cleanup",
+    "cursor/cloud-agent-1787090489110-v9i0k",
+    "cursor/rag-knowledge-base-reorg-51c3",
+    "main",
+    "v3-phase5c-audit-corrected",
+    "v3-research"
+  ],
+  "relevant_commit_SHAs": {
+    "HEAD": "6e9741f55dc0436963ea1c0ba30b9a30bccbd207",
+    "main": "defaf49eff57e8f79c51708663dac10a418f6dce",
+    "v3-phase5c-audit-corrected": "c4730fbd2dcfbfeb824b65cb65e231d35ecf5935"
+  },
+  "worktrees": [
+    "/Users/basho/Enterprise RAG Workbench  6e9741f [chore/repository-hygiene-cleanup]"
+  ],
+  "agent_work_location": {
+    "same_branch": true,
+    "same_worktree": true,
+    "separate_branches": false,
+    "separate_worktrees": false,
+    "detached_HEAD": false,
+    "dirty_working_tree": true,
+    "committed": false,
+    "note": "Both Agent A (V14) and Agent B (Production Finalization) landed uncommitted changes in the single worktree on chore/repository-hygiene-cleanup. Neither set is present on any committed branch tip."
+  },
+  "dirty_diff_sha256": "d7c625a1544ec6f5628a321cc968bd1f00868a61f9908d1010e40b5c4c35d06e",
+  "dirty_diff_bytes": 68360,
+  "modified_tracked_files": [
+    "env.example",
+    "README.md",
+    "apps/web/app/chat/page.tsx",
+    "docs/REPOSITORY_QUALITY_STATUS.md",
+    "src/rag_workbench/answerability/validation.py",
+    "src/rag_workbench/api/app.py",
+    "src/rag_workbench/api/dependencies.py",
+    "src/rag_workbench/api/schemas.py",
+    "src/rag_workbench/evaluation/evaluator.py",
+    "src/rag_workbench/evaluation/final_e2e_scorer_v2.py",
+    "src/rag_workbench/generation/generator.py",
+    "src/rag_workbench/recovery/runtime.py",
+    "src/rag_workbench/retrieval/bm25.py",
+    "src/rag_workbench/retrieval/filters.py",
+    "src/rag_workbench/retrieval/hybrid.py",
+    "src/rag_workbench/retrieval/retriever.py",
+    "src/rag_workbench/safety/question_injection_guard_v2.py",
+    "tests/unit/test_question_injection_guard_v2.py"
+  ],
+  "V14_PRESENT_IN_CURRENT_WORKTREE": true,
+  "PRODUCTION_FINALIZATION_PRESENT_IN_CURRENT_WORKTREE": true,
+  "v14_artifact_presence": {
+    "dir": "data/experiments/rag-release-pipeline-v14",
+    "final_report": true,
+    "implemented_fix": true,
+    "full_local_regression": true,
+    "fresh_v2_regression_report": true,
+    "file_count": 27
+  },
+  "production_finalization_artifact_presence": {
+    "dir": "data/experiments/production-finalization",
+    "final_report": true,
+    "parity": true,
+    "file_count": 21
+  },
+  "v14_source_changes": {
+    "src/rag_workbench/experiments/atomic_requirement_contract_v1/verifier.py": "2c65cf4e7b629ecac0c13d04a58feae41bc876c0804d5e2a412dfe772713f923",
+    "src/rag_workbench/experiments/atomic_requirement_contract_v1/deterministic_support.py": "0af068393aaf739db98755c7aa9f8c7d6ff137ac98cd48bf76832c0179a3f0d1",
+    "src/rag_workbench/experiments/atomic_requirement_contract_v1/evidence_mapping.py": "56a927128b01117bc9536742241044accb33a137544c68cfb0e139779a5b770d",
+    "src/rag_workbench/experiments/atomic_requirement_contract_v1/contract.py": "9b116dbfee8e385ad6bef69f7ac618605ed516eb28aaa5c52ff5fb09b6ebddbf",
+    "tests/unit/test_prompt_injection_safety_v13.py": "0251ea91ce880d13928bab0378e6167a0bfe5083835227a62165e545abd6ef18",
+    "scripts/run_rag_release_pipeline_v14_targeted_030.py": "be9b8a1239c27cc88867271e3801e35be6e204d0f15376e3cbba4dffea8ad7ba"
+  },
+  "production_source_changes": {
+    "src/rag_workbench/runtime/canonical_runtime.py": "43e1932c8578111b851b2eb13d169535d11584c55d2f48fe95a906417c1226e5",
+    "src/rag_workbench/runtime/config.py": "fcb4a31fc61f6cdbd81e5f49886c363722f461f4e1536c700f0181cee86fa72b",
+    "src/rag_workbench/runtime/retrieval.py": "1724a56879b2a4e5eb259967396db39f55c2655b35428494a8a5748f74dcdd14",
+    "src/rag_workbench/runtime/guards.py": "7a9228f33f09e87501bd2b7af5f60f39131107dee7c083f9b8ee83778065a977",
+    "src/rag_workbench/api/app.py": "b018def1b266c03dbc6a240d8b84da4bd91321a819fd200f2016339fe154ecc1",
+    "src/rag_workbench/api/dependencies.py": "008c53c9fc494ddbf2848fe2113152c0e5d33d22788f4a5863d05cc33465bc96",
+    "src/rag_workbench/evaluation/evaluator.py": "56bcea816738a4bcfae0d7e1ebb6ea6347502ed08b279207f88f8fed946bb5e8",
+    "scripts/run_production_finalization_v1.py": "53995c28ae0aaa7a41eb102fa2516e773b6ce32b2e59a9aeb6fe3d9a030e1570",
+    "tests/unit/test_canonical_runtime_promotion.py": "9de708e441ce2ee35316ae8b0572ca718c2d67d91ee7e63e4746d0263ac147b8",
+    "tests/unit/test_eval_canonical_runtime.py": "79df18d5538c16ebcfbb8f8e557d01f7fce0cd8679bd2394d9ff8d1e29216c23"
+  },
+  "overlapping_modified_files": [],
+  "shared_dependency_files": [
+    "src/rag_workbench/experiments/atomic_requirement_contract_v1/verifier.py",
+    "src/rag_workbench/experiments/atomic_requirement_contract_v1/deterministic_support.py",
+    "src/rag_workbench/experiments/atomic_requirement_contract_v1/evidence_mapping.py",
+    "src/rag_workbench/experiments/atomic_requirement_contract_v1/contract.py",
+    "src/rag_workbench/safety/question_injection_guard_v2.py",
+    "src/rag_workbench/experiments/requirement_assembler_selective_routing_v1/router.py",
+    "src/rag_workbench/experiments/requirement_assembler_selective_routing_v1/versioning.py"
+  ],
+  "conflict_risk": "LOW",
+  "conflict_risk_rationale": "Agents edited complementary surfaces in one dirty tree: V14 owns packet/year-token logic in verifier.py; Production owns CanonicalRagRuntime + Web/Eval wiring. CanonicalRagRuntime imports the V14 verifier modules. No overlapping file edits between V14-only and production-only sets. Early production audit text claiming 'no V14' is stale relative to final tree.",
+  "source_proofs": {
+    "v14_year_token_fix_in_verifier": true,
+    "v13_single_version_zero_overlap_guard_in_verifier": true,
+    "canonical_runtime_imports_atomic_verifier": true,
+    "canonical_runtime_injection_precheck": true,
+    "production_config_20_20_60_30_15": true,
+    "web_uses_canonical": true,
+    "eval_uses_canonical": true
+  },
+  "v14_freeze_manifest_present": true,
+  "branches_vv_excerpt": "* chore/repository-hygiene-cleanup       6e9741f [origin/chore/repository-hygiene-cleanup] chore: clean repository lint without behavior changes\n  cursor/cloud-agent-1787090489110-v9i0k 5c6ab07 [origin/cursor/cloud-agent-1787090489110-v9i0k] Cursor: Apply local changes for cloud agent\n  cursor/rag-knowledge-base-reorg-51c3   16dd567 [origin/cursor/rag-knowledge-base-reorg-51c3] Add Obsidian-compatible RAG knowledge hub under 02_WIKI/RAG\n  main                                   defaf49 [origin/main] feat: release Enterprise RAG Workbench v2\n  v3-phase5c-audit-corrected             c4730fb [origin/v3-phase5c-audit-corrected] docs: close V3 RAG research and prepare interview repository\n  v3-research                            5582542 [origin/v3-research] research: close V3 cycle after final ranking E2E"
+}

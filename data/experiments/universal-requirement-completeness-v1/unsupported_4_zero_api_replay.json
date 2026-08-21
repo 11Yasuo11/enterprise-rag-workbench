@@ -1,0 +1,200 @@
+{
+  "cases": [
+    {
+      "api_calls": 0,
+      "assembly": {
+        "answer": "R1: Project Atlas launched on April 12 , 2026 . [C1]",
+        "citations": [
+          "826df8a1-5461-4515-95f7-1998a4d3c205"
+        ],
+        "failure_code": null,
+        "final_generator_openai_calls": 0,
+        "output_requirement_count": 1,
+        "required_constraint_count": 1,
+        "required_requirement_count": 1,
+        "status": "answered",
+        "validated_output_constraint_count": 1,
+        "verified_requirement_count": 1
+      },
+      "citation_valid": true,
+      "complete": true,
+      "historical_result": "UNSUPPORTED_ANSWER",
+      "new_local_result": "CORRECT_COMPLETE_ANSWER",
+      "query_id": "p5k_numeric_date_constraint_094",
+      "score": {
+        "behavior": "CORRECT_COMPLETE_ANSWER",
+        "citation_completeness_pass": true,
+        "citation_completeness_rate": 1.0,
+        "citation_correctness_pass": true,
+        "citation_correctness_rate": 1.0,
+        "citation_validity_pass": true,
+        "citation_validity_rate": 1.0,
+        "fact_completeness_pass": true,
+        "fact_support_records": [
+          {
+            "required_fact": "April 12, 2026",
+            "support_status": "SUPPORTED",
+            "supporting_citation_ids": [
+              "826df8a1-5461-4515-95f7-1998a4d3c205"
+            ]
+          }
+        ],
+        "facts_missing": [],
+        "facts_satisfied": [
+          "April 12, 2026"
+        ],
+        "indeterminate_reason": null,
+        "required_documents_satisfied": true
+      },
+      "supported": true
+    },
+    {
+      "api_calls": 0,
+      "assembly": {
+        "answer": "R1: Project Atlas launched on April 12 , 2026 . [C1]",
+        "citations": [
+          "826df8a1-5461-4515-95f7-1998a4d3c205"
+        ],
+        "failure_code": null,
+        "final_generator_openai_calls": 0,
+        "output_requirement_count": 1,
+        "required_constraint_count": 1,
+        "required_requirement_count": 1,
+        "status": "answered",
+        "validated_output_constraint_count": 1,
+        "verified_requirement_count": 1
+      },
+      "citation_valid": true,
+      "complete": true,
+      "historical_result": "UNSUPPORTED_ANSWER",
+      "new_local_result": "CORRECT_COMPLETE_ANSWER",
+      "query_id": "p5k_numeric_date_constraint_096",
+      "score": {
+        "behavior": "CORRECT_COMPLETE_ANSWER",
+        "citation_completeness_pass": true,
+        "citation_completeness_rate": 1.0,
+        "citation_correctness_pass": true,
+        "citation_correctness_rate": 1.0,
+        "citation_validity_pass": true,
+        "citation_validity_rate": 1.0,
+        "fact_completeness_pass": true,
+        "fact_support_records": [
+          {
+            "required_fact": "April 12, 2026",
+            "support_status": "SUPPORTED",
+            "supporting_citation_ids": [
+              "826df8a1-5461-4515-95f7-1998a4d3c205"
+            ]
+          }
+        ],
+        "facts_missing": [],
+        "facts_satisfied": [
+          "April 12, 2026"
+        ],
+        "indeterminate_reason": null,
+        "required_documents_satisfied": true
+      },
+      "supported": true
+    },
+    {
+      "api_calls": 0,
+      "assembly": {
+        "answer": "R1: Project Atlas launched on April 12 , 2026 . [C1]",
+        "citations": [
+          "826df8a1-5461-4515-95f7-1998a4d3c205"
+        ],
+        "failure_code": null,
+        "final_generator_openai_calls": 0,
+        "output_requirement_count": 1,
+        "required_constraint_count": 1,
+        "required_requirement_count": 1,
+        "status": "answered",
+        "validated_output_constraint_count": 1,
+        "verified_requirement_count": 1
+      },
+      "citation_valid": true,
+      "complete": true,
+      "historical_result": "UNSUPPORTED_ANSWER",
+      "new_local_result": "CORRECT_COMPLETE_ANSWER",
+      "query_id": "p5k_numeric_date_constraint_098",
+      "score": {
+        "behavior": "CORRECT_COMPLETE_ANSWER",
+        "citation_completeness_pass": true,
+        "citation_completeness_rate": 1.0,
+        "citation_correctness_pass": true,
+        "citation_correctness_rate": 1.0,
+        "citation_validity_pass": true,
+        "citation_validity_rate": 1.0,
+        "fact_completeness_pass": true,
+        "fact_support_records": [
+          {
+            "required_fact": "April 12, 2026",
+            "support_status": "SUPPORTED",
+            "supporting_citation_ids": [
+              "826df8a1-5461-4515-95f7-1998a4d3c205"
+            ]
+          }
+        ],
+        "facts_missing": [],
+        "facts_satisfied": [
+          "April 12, 2026"
+        ],
+        "indeterminate_reason": null,
+        "required_documents_satisfied": true
+      },
+      "supported": true
+    },
+    {
+      "api_calls": 0,
+      "assembly": {
+        "answer": "R1: Project Atlas launched on April 12 , 2026 . [C1]",
+        "citations": [
+          "826df8a1-5461-4515-95f7-1998a4d3c205"
+        ],
+        "failure_code": null,
+        "final_generator_openai_calls": 0,
+        "output_requirement_count": 1,
+        "required_constraint_count": 1,
+        "required_requirement_count": 1,
+        "status": "answered",
+        "validated_output_constraint_count": 1,
+        "verified_requirement_count": 1
+      },
+      "citation_valid": true,
+      "complete": true,
+      "historical_result": "UNSUPPORTED_ANSWER",
+      "new_local_result": "CORRECT_COMPLETE_ANSWER",
+      "query_id": "p5k_numeric_date_constraint_100",
+      "score": {
+        "behavior": "CORRECT_COMPLETE_ANSWER",
+        "citation_completeness_pass": true,
+        "citation_completeness_rate": 1.0,
+        "citation_correctness_pass": true,
+        "citation_correctness_rate": 1.0,
+        "citation_validity_pass": true,
+        "citation_validity_rate": 1.0,
+        "fact_completeness_pass": true,
+        "fact_support_records": [
+          {
+            "required_fact": "April 12, 2026",
+            "support_status": "SUPPORTED",
+            "supporting_citation_ids": [
+              "826df8a1-5461-4515-95f7-1998a4d3c205"
+            ]
+          }
+        ],
+        "facts_missing": [],
+        "facts_satisfied": [
+          "April 12, 2026"
+        ],
+        "indeterminate_reason": null,
+        "required_documents_satisfied": true
+      },
+      "supported": true
+    }
+  ],
+  "experiment_id": "UNIVERSAL_REQUIREMENT_COMPLETENESS_V1",
+  "fixed": 4,
+  "n": 4,
+  "new_openai_calls": 0
+}

@@ -1,0 +1,346 @@
+{
+  "api_calls": 0,
+  "original_19": {
+    "case_count": 19,
+    "cases": [
+      {
+        "case_id": "fresh_v1_009",
+        "classification": "PRESERVED_FROZEN_PASS",
+        "deterministic_support": {
+          "complete": false,
+          "failure_code": "REQUIREMENT_COVERAGE_INCOMPLETE"
+        },
+        "failure": null,
+        "local_answer": false,
+        "route": "LUNA"
+      },
+      {
+        "case_id": "fresh_v1_011",
+        "classification": "PRESERVED_FROZEN_PASS",
+        "deterministic_support": {
+          "complete": false,
+          "failure_code": "REQUIREMENT_COVERAGE_INCOMPLETE"
+        },
+        "failure": null,
+        "local_answer": false,
+        "route": "LUNA"
+      },
+      {
+        "case_id": "fresh_v1_013",
+        "classification": "FIXED_LOCALLY",
+        "deterministic_support": {
+          "complete": true,
+          "failure_code": null
+        },
+        "failure": null,
+        "local_answer": true,
+        "route": "DETERMINISTIC"
+      },
+      {
+        "case_id": "fresh_v1_015",
+        "classification": "FIXED_LOCALLY",
+        "deterministic_support": {
+          "complete": true,
+          "failure_code": null
+        },
+        "failure": null,
+        "local_answer": true,
+        "route": "DETERMINISTIC"
+      },
+      {
+        "case_id": "fresh_v1_016",
+        "classification": "PRESERVED_FROZEN_PASS",
+        "deterministic_support": {
+          "complete": false,
+          "failure_code": "MISSING_REQUIREMENT_MAPPING"
+        },
+        "failure": null,
+        "local_answer": false,
+        "route": "LUNA"
+      },
+      {
+        "case_id": "fresh_v1_017",
+        "classification": "FIXED_LOCALLY",
+        "deterministic_support": {
+          "complete": true,
+          "failure_code": null
+        },
+        "failure": null,
+        "local_answer": true,
+        "route": "DETERMINISTIC"
+      },
+      {
+        "case_id": "fresh_v1_022",
+        "classification": "PRESERVED_FROZEN_PASS",
+        "deterministic_support": {
+          "complete": false,
+          "failure_code": "MISSING_REQUIREMENT_MAPPING"
+        },
+        "failure": null,
+        "local_answer": false,
+        "route": "LUNA"
+      },
+      {
+        "case_id": "fresh_v1_023",
+        "classification": "PRESERVED_FROZEN_PASS",
+        "deterministic_support": {
+          "complete": false,
+          "failure_code": "REQUIREMENT_COVERAGE_INCOMPLETE"
+        },
+        "failure": null,
+        "local_answer": false,
+        "route": "LUNA"
+      },
+      {
+        "case_id": "fresh_v1_025",
+        "classification": "PRESERVED_FROZEN_PASS",
+        "deterministic_support": {
+          "complete": false,
+          "failure_code": "MISSING_REQUIREMENT_MAPPING"
+        },
+        "failure": null,
+        "local_answer": false,
+        "route": "LUNA"
+      },
+      {
+        "case_id": "fresh_v1_028",
+        "classification": "PRESERVED_FROZEN_PASS",
+        "deterministic_support": {
+          "complete": false,
+          "failure_code": "REQUIREMENT_COVERAGE_INCOMPLETE"
+        },
+        "failure": null,
+        "local_answer": false,
+        "route": "LUNA"
+      },
+      {
+        "case_id": "fresh_v1_029",
+        "classification": "PRESERVED_FROZEN_PASS",
+        "deterministic_support": {
+          "complete": false,
+          "failure_code": "MISSING_REQUIREMENT_MAPPING"
+        },
+        "failure": null,
+        "local_answer": false,
+        "route": "LUNA"
+      },
+      {
+        "case_id": "fresh_v1_030",
+        "classification": "PRESERVED_FROZEN_PASS",
+        "deterministic_support": {
+          "complete": false,
+          "failure_code": "MISSING_REQUIREMENT_MAPPING"
+        },
+        "failure": null,
+        "local_answer": false,
+        "route": "LUNA"
+      },
+      {
+        "case_id": "fresh_v1_031",
+        "classification": "PRESERVED_FROZEN_PASS",
+        "deterministic_support": {
+          "complete": false,
+          "failure_code": "MISSING_REQUIREMENT_MAPPING"
+        },
+        "failure": null,
+        "local_answer": false,
+        "route": "LUNA"
+      },
+      {
+        "case_id": "fresh_v1_032",
+        "classification": "PRESERVED_FROZEN_PASS",
+        "deterministic_support": {
+          "complete": false,
+          "failure_code": "MISSING_REQUIREMENT_MAPPING"
+        },
+        "failure": null,
+        "local_answer": false,
+        "route": "LUNA"
+      },
+      {
+        "case_id": "fresh_v1_033",
+        "classification": "FIXED_LOCALLY",
+        "deterministic_support": {
+          "complete": true,
+          "failure_code": null
+        },
+        "failure": null,
+        "local_answer": true,
+        "route": "DETERMINISTIC"
+      },
+      {
+        "case_id": "fresh_v1_035",
+        "classification": "PRESERVED_FROZEN_PASS",
+        "deterministic_support": {
+          "complete": false,
+          "failure_code": "MISSING_REQUIREMENT_MAPPING"
+        },
+        "failure": null,
+        "local_answer": false,
+        "route": "LUNA"
+      },
+      {
+        "case_id": "fresh_v1_036",
+        "classification": "FIXED_LOCALLY",
+        "deterministic_support": {
+          "complete": true,
+          "failure_code": null
+        },
+        "failure": null,
+        "local_answer": true,
+        "route": "DETERMINISTIC"
+      },
+      {
+        "case_id": "fresh_v1_040",
+        "classification": "FIXED_LOCALLY",
+        "deterministic_support": {
+          "complete": true,
+          "failure_code": null
+        },
+        "failure": null,
+        "local_answer": true,
+        "route": "DETERMINISTIC"
+      },
+      {
+        "case_id": "fresh_v1_044",
+        "classification": "FIXED_LOCALLY",
+        "deterministic_support": {
+          "complete": true,
+          "failure_code": null
+        },
+        "failure": null,
+        "local_answer": true,
+        "route": "DETERMINISTIC"
+      }
+    ],
+    "still_failing": 0
+  },
+  "passed": true,
+  "v2_11": {
+    "case_count": 11,
+    "cases": [
+      {
+        "case_id": "fresh_v2_003",
+        "classification": "FIXED_LOCALLY",
+        "deterministic_support": {
+          "complete": true,
+          "failure_code": null
+        },
+        "failure": null,
+        "local_answer": true,
+        "route": "DETERMINISTIC"
+      },
+      {
+        "case_id": "fresh_v2_011",
+        "classification": "PRESERVED_FROZEN_PASS",
+        "deterministic_support": {
+          "complete": false,
+          "failure_code": "MISSING_REQUIREMENT_MAPPING"
+        },
+        "failure": null,
+        "local_answer": false,
+        "route": "LUNA"
+      },
+      {
+        "case_id": "fresh_v2_013",
+        "classification": "PRESERVED_FROZEN_PASS",
+        "deterministic_support": {
+          "complete": false,
+          "failure_code": "MISSING_REQUIREMENT_MAPPING"
+        },
+        "failure": null,
+        "local_answer": false,
+        "route": "LUNA"
+      },
+      {
+        "case_id": "fresh_v2_017",
+        "classification": "PRESERVED_FROZEN_PASS",
+        "deterministic_support": {
+          "complete": false,
+          "failure_code": "REQUIREMENT_COVERAGE_INCOMPLETE"
+        },
+        "failure": null,
+        "local_answer": false,
+        "route": "LUNA"
+      },
+      {
+        "case_id": "fresh_v2_019",
+        "classification": "FIXED_LOCALLY",
+        "deterministic_support": {
+          "complete": true,
+          "failure_code": null
+        },
+        "failure": null,
+        "local_answer": true,
+        "route": "DETERMINISTIC"
+      },
+      {
+        "case_id": "fresh_v2_020",
+        "classification": "PRESERVED_FROZEN_PASS",
+        "deterministic_support": {
+          "complete": false,
+          "failure_code": "MISSING_REQUIREMENT_MAPPING"
+        },
+        "failure": null,
+        "local_answer": false,
+        "route": "LUNA"
+      },
+      {
+        "case_id": "fresh_v2_024",
+        "classification": "FIXED_LOCALLY",
+        "deterministic_support": {
+          "complete": true,
+          "failure_code": null
+        },
+        "failure": null,
+        "local_answer": true,
+        "route": "DETERMINISTIC"
+      },
+      {
+        "case_id": "fresh_v2_025",
+        "classification": "FIXED_LOCALLY",
+        "deterministic_support": {
+          "complete": true,
+          "failure_code": null
+        },
+        "failure": null,
+        "local_answer": true,
+        "route": "DETERMINISTIC"
+      },
+      {
+        "case_id": "fresh_v2_034",
+        "classification": "PRESERVED_FROZEN_PASS",
+        "deterministic_support": {
+          "complete": false,
+          "failure_code": "REQUIREMENT_COVERAGE_INCOMPLETE"
+        },
+        "failure": null,
+        "local_answer": false,
+        "route": "LUNA"
+      },
+      {
+        "case_id": "fresh_v2_035",
+        "classification": "PRESERVED_FROZEN_PASS",
+        "deterministic_support": {
+          "complete": false,
+          "failure_code": "REQUIREMENT_COVERAGE_INCOMPLETE"
+        },
+        "failure": null,
+        "local_answer": false,
+        "route": "LUNA"
+      },
+      {
+        "case_id": "fresh_v2_048",
+        "classification": "FIXED_LOCALLY",
+        "deterministic_support": {
+          "complete": true,
+          "failure_code": null
+        },
+        "failure": null,
+        "local_answer": true,
+        "route": "DETERMINISTIC"
+      }
+    ],
+    "still_failing": 0
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "case_count": 19,
+  "case_ids": [
+    "fresh_v1_009",
+    "fresh_v1_011",
+    "fresh_v1_013",
+    "fresh_v1_015",
+    "fresh_v1_016",
+    "fresh_v1_017",
+    "fresh_v1_022",
+    "fresh_v1_023",
+    "fresh_v1_025",
+    "fresh_v1_028",
+    "fresh_v1_029",
+    "fresh_v1_030",
+    "fresh_v1_031",
+    "fresh_v1_032",
+    "fresh_v1_033",
+    "fresh_v1_035",
+    "fresh_v1_036",
+    "fresh_v1_040",
+    "fresh_v1_044"
+  ],
+  "experiment_id": "RAG_RELEASE_PIPELINE_V4_TARGETED_19_REAL_API",
+  "gold_loaded_before_freeze": false,
+  "predictions_immutable": true,
+  "predictions_sha256": "8d9405dba0b3aa052c60764ecd050c9d9f7b68b638d1582734fb5c740fec4a49",
+  "timestamp": "2026-08-20T19:11:06.032956+00:00"
+}

@@ -1,0 +1,1303 @@
+{
+  "api_calls": 0,
+  "case_count": 60,
+  "cases": [
+    {
+      "case_id": "fresh_v2_001",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "operations-continuity-plan",
+          "document_version_id": "2e316085-67fe-4606-97aa-55577ff89186",
+          "version": "4.0"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_002",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "customer-support-escalation",
+          "document_version_id": "7be9eb6b-b1db-46b9-8ef3-ae30257098c7",
+          "version": "3.2"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_003",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "project-atlas-api",
+          "document_version_id": "cf5dfd1d-b744-48f1-bfde-41a198d86f35",
+          "version": "3.0"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_004",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "recovery-runbook-west",
+          "document_version_id": "687b9971-bd2b-44c9-ba4a-83f68eb86ac2",
+          "version": "1.0"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_005",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "data-retention-standard",
+          "document_version_id": "b1ea5f93-df0b-42ee-9e4d-18b297d2877e",
+          "version": "2.0"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_006",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "security-training-example",
+          "document_version_id": "f522ba37-fc14-4476-9246-0405ca653aa3",
+          "version": "1"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_007",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "project-atlas-launch",
+          "document_version_id": "e431da5b-ef31-440f-a5a4-80a35fb97e24",
+          "version": "1.0"
+        },
+        {
+          "document_id": "operations-continuity-plan",
+          "document_version_id": "2e316085-67fe-4606-97aa-55577ff89186",
+          "version": "4.0"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_008",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "engineering-deployment-handbook",
+          "document_version_id": "49d30c7e-9187-4311-b664-57a8d6029380",
+          "version": "2026.1"
+        },
+        {
+          "document_id": "project-atlas-api",
+          "document_version_id": "cf5dfd1d-b744-48f1-bfde-41a198d86f35",
+          "version": "3.0"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_009",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "data-retention-standard",
+          "document_version_id": "b1ea5f93-df0b-42ee-9e4d-18b297d2877e",
+          "version": "2.0"
+        },
+        {
+          "document_id": "customer-support-escalation",
+          "document_version_id": "7be9eb6b-b1db-46b9-8ef3-ae30257098c7",
+          "version": "3.2"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_010",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "recovery-runbook-east",
+          "document_version_id": "7df73739-827d-45b9-92fc-392ca40af088",
+          "version": "1.0"
+        },
+        {
+          "document_id": "engineering-deployment-handbook",
+          "document_version_id": "49d30c7e-9187-4311-b664-57a8d6029380",
+          "version": "2026.1"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_011",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "project-atlas-launch",
+          "document_version_id": "e431da5b-ef31-440f-a5a4-80a35fb97e24",
+          "version": "1.0"
+        },
+        {
+          "document_id": "operations-continuity-plan",
+          "document_version_id": "2e316085-67fe-4606-97aa-55577ff89186",
+          "version": "4.0"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_012",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "recovery-runbook-west",
+          "document_version_id": "687b9971-bd2b-44c9-ba4a-83f68eb86ac2",
+          "version": "1.0"
+        },
+        {
+          "document_id": "customer-support-escalation",
+          "document_version_id": "7be9eb6b-b1db-46b9-8ef3-ae30257098c7",
+          "version": "3.2"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_013",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "finance-expense-policy",
+          "document_version_id": "4c469613-1997-4632-9a1e-81c37f786041",
+          "version": "5.1"
+        },
+        {
+          "document_id": "customer-support-escalation",
+          "document_version_id": "7be9eb6b-b1db-46b9-8ef3-ae30257098c7",
+          "version": "3.2"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_014",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "project-atlas-launch",
+          "document_version_id": "e431da5b-ef31-440f-a5a4-80a35fb97e24",
+          "version": "1.0"
+        },
+        {
+          "document_id": "recovery-runbook-east",
+          "document_version_id": "7df73739-827d-45b9-92fc-392ca40af088",
+          "version": "1.0"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_015",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "project-atlas-api",
+          "document_version_id": "cf5dfd1d-b744-48f1-bfde-41a198d86f35",
+          "version": "3.0"
+        },
+        {
+          "document_id": "operations-continuity-plan",
+          "document_version_id": "2e316085-67fe-4606-97aa-55577ff89186",
+          "version": "4.0"
+        },
+        {
+          "document_id": "customer-support-escalation",
+          "document_version_id": "7be9eb6b-b1db-46b9-8ef3-ae30257098c7",
+          "version": "3.2"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_016",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "recovery-runbook-east",
+          "document_version_id": "7df73739-827d-45b9-92fc-392ca40af088",
+          "version": "1.0"
+        },
+        {
+          "document_id": "recovery-runbook-west",
+          "document_version_id": "687b9971-bd2b-44c9-ba4a-83f68eb86ac2",
+          "version": "1.0"
+        },
+        {
+          "document_id": "engineering-deployment-handbook",
+          "document_version_id": "49d30c7e-9187-4311-b664-57a8d6029380",
+          "version": "2026.1"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_017",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "data-retention-standard",
+          "document_version_id": "b1ea5f93-df0b-42ee-9e4d-18b297d2877e",
+          "version": "2.0"
+        },
+        {
+          "document_id": "finance-expense-policy",
+          "document_version_id": "4c469613-1997-4632-9a1e-81c37f786041",
+          "version": "5.1"
+        },
+        {
+          "document_id": "project-atlas-api",
+          "document_version_id": "cf5dfd1d-b744-48f1-bfde-41a198d86f35",
+          "version": "3.0"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_018",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "project-atlas-launch",
+          "document_version_id": "e431da5b-ef31-440f-a5a4-80a35fb97e24",
+          "version": "1.0"
+        },
+        {
+          "document_id": "operations-continuity-plan",
+          "document_version_id": "2e316085-67fe-4606-97aa-55577ff89186",
+          "version": "4.0"
+        },
+        {
+          "document_id": "customer-support-escalation",
+          "document_version_id": "7be9eb6b-b1db-46b9-8ef3-ae30257098c7",
+          "version": "3.2"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_019",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "recovery-runbook-west",
+          "document_version_id": "687b9971-bd2b-44c9-ba4a-83f68eb86ac2",
+          "version": "1.0"
+        },
+        {
+          "document_id": "customer-support-escalation",
+          "document_version_id": "7be9eb6b-b1db-46b9-8ef3-ae30257098c7",
+          "version": "3.2"
+        },
+        {
+          "document_id": "hr-benefits-private",
+          "document_version_id": "63e72e6d-5ac6-48ff-b55d-72247bfaed32",
+          "version": "2026"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_020",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "security-training-example",
+          "document_version_id": "f522ba37-fc14-4476-9246-0405ca653aa3",
+          "version": "1"
+        },
+        {
+          "document_id": "finance-expense-policy",
+          "document_version_id": "4c469613-1997-4632-9a1e-81c37f786041",
+          "version": "5.1"
+        },
+        {
+          "document_id": "recovery-runbook-east",
+          "document_version_id": "7df73739-827d-45b9-92fc-392ca40af088",
+          "version": "1.0"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_021",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "remote-work-policy",
+          "document_version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+          "version": "2026"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_022",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "security-incident-policy",
+          "document_version_id": "c4d49578-2eec-4051-a54b-addc12af0efa",
+          "version": "2026"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_023",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "remote-work-policy",
+          "document_version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+          "version": "2026"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_024",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "security-incident-policy",
+          "document_version_id": "c4d49578-2eec-4051-a54b-addc12af0efa",
+          "version": "2026"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_025",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "remote-work-policy",
+          "document_version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+          "version": "2026"
+        },
+        {
+          "document_id": "security-incident-policy",
+          "document_version_id": "c4d49578-2eec-4051-a54b-addc12af0efa",
+          "version": "2026"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_026",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "remote-work-policy",
+          "document_version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac",
+          "version": "2025"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_027",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "security-incident-policy",
+          "document_version_id": "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588",
+          "version": "2025"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_028",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "remote-work-policy",
+          "document_version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac",
+          "version": "2025"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_029",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "security-incident-policy",
+          "document_version_id": "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588",
+          "version": "2025"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_030",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "remote-work-policy",
+          "document_version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac",
+          "version": "2025"
+        },
+        {
+          "document_id": "security-incident-policy",
+          "document_version_id": "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588",
+          "version": "2025"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_031",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "remote-work-policy",
+          "document_version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac",
+          "version": "2025"
+        },
+        {
+          "document_id": "remote-work-policy",
+          "document_version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+          "version": "2026"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_032",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "security-incident-policy",
+          "document_version_id": "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588",
+          "version": "2025"
+        },
+        {
+          "document_id": "security-incident-policy",
+          "document_version_id": "c4d49578-2eec-4051-a54b-addc12af0efa",
+          "version": "2026"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_033",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "remote-work-policy",
+          "document_version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac",
+          "version": "2025"
+        },
+        {
+          "document_id": "remote-work-policy",
+          "document_version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+          "version": "2026"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_034",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "remote-work-policy",
+          "document_version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac",
+          "version": "2025"
+        },
+        {
+          "document_id": "security-incident-policy",
+          "document_version_id": "c4d49578-2eec-4051-a54b-addc12af0efa",
+          "version": "2026"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_035",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "remote-work-policy",
+          "document_version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac",
+          "version": "2025"
+        },
+        {
+          "document_id": "remote-work-policy",
+          "document_version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+          "version": "2026"
+        },
+        {
+          "document_id": "security-incident-policy",
+          "document_version_id": "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588",
+          "version": "2025"
+        },
+        {
+          "document_id": "security-incident-policy",
+          "document_version_id": "c4d49578-2eec-4051-a54b-addc12af0efa",
+          "version": "2026"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_036",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "finance-expense-policy",
+          "document_version_id": "4c469613-1997-4632-9a1e-81c37f786041",
+          "version": "5.1"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_037",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "finance-expense-policy",
+          "document_version_id": "4c469613-1997-4632-9a1e-81c37f786041",
+          "version": "5.1"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_038",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "security-incident-policy",
+          "document_version_id": "c4d49578-2eec-4051-a54b-addc12af0efa",
+          "version": "2026"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_039",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "security-incident-policy",
+          "document_version_id": "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588",
+          "version": "2025"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_040",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "customer-support-escalation",
+          "document_version_id": "7be9eb6b-b1db-46b9-8ef3-ae30257098c7",
+          "version": "3.2"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_041",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "finance-expense-policy",
+          "document_version_id": "4c469613-1997-4632-9a1e-81c37f786041",
+          "version": "5.1"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_042",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "finance-expense-policy",
+          "document_version_id": "4c469613-1997-4632-9a1e-81c37f786041",
+          "version": "5.1"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_043",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "project-atlas-launch",
+          "document_version_id": "e431da5b-ef31-440f-a5a4-80a35fb97e24",
+          "version": "1.0"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_044",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "security-incident-policy",
+          "document_version_id": "c4d49578-2eec-4051-a54b-addc12af0efa",
+          "version": "2026"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_045",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "customer-support-escalation",
+          "document_version_id": "7be9eb6b-b1db-46b9-8ef3-ae30257098c7",
+          "version": "3.2"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_046",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "customer-support-escalation",
+          "document_version_id": "7be9eb6b-b1db-46b9-8ef3-ae30257098c7",
+          "version": "3.2"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_047",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "remote-work-policy",
+          "document_version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+          "version": "2026"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_048",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "remote-work-policy",
+          "document_version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac",
+          "version": "2025"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_049",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "hr-benefits-private",
+          "document_version_id": "63e72e6d-5ac6-48ff-b55d-72247bfaed32",
+          "version": "2026"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_050",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "hr-benefits-private",
+          "document_version_id": "63e72e6d-5ac6-48ff-b55d-72247bfaed32",
+          "version": "2026"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_051",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": [
+        {
+          "document_id": "hr-compensation-bands",
+          "document_version_id": "aee894d2-0747-4e34-9bda-d7de3aba0f27",
+          "version": "2026"
+        }
+      ]
+    },
+    {
+      "case_id": "fresh_v2_052",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": []
+    },
+    {
+      "case_id": "fresh_v2_053",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": []
+    },
+    {
+      "case_id": "fresh_v2_054",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": []
+    },
+    {
+      "case_id": "fresh_v2_055",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": []
+    },
+    {
+      "case_id": "fresh_v2_056",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": []
+    },
+    {
+      "case_id": "fresh_v2_057",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": []
+    },
+    {
+      "case_id": "fresh_v2_058",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": []
+    },
+    {
+      "case_id": "fresh_v2_059",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": []
+    },
+    {
+      "case_id": "fresh_v2_060",
+      "checks": {
+        "acl_expectation_valid": true,
+        "answerability_shape_valid": true,
+        "markers_grounded_in_required_versions": true,
+        "question_gold_identity_match": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true,
+        "unanswerable_lacks_requested_fact": true
+      },
+      "passed": true,
+      "sources": []
+    }
+  ],
+  "dataset_id": "FRESH_UNSEEN_HOLDOUT_V2",
+  "failed_case_ids": [],
+  "failed_count": 0,
+  "passed": true,
+  "passed_count": 60,
+  "timestamp": "2026-08-20T20:02:05.613383+00:00"
+}

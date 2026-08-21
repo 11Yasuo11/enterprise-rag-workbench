@@ -1,0 +1,53 @@
+{
+  "documents": 14,
+  "document_versions": 16,
+  "chunk_rows_all_indexes": 57,
+  "indexes": [
+    {
+      "embedding_provider": "openai-compatible",
+      "embedding_model": "text-embedding-3-small",
+      "embedding_dimension": 64,
+      "embedding_version": "1",
+      "index_identity": "e598d9fb91b13a8c6bd6be94b1bc0a54bbce27dd4e98dc158669d7198bc6f466",
+      "n": 24
+    },
+    {
+      "embedding_provider": "hashing",
+      "embedding_model": "local-hashing-64",
+      "embedding_dimension": 64,
+      "embedding_version": "1",
+      "index_identity": "41cfe34cc2691d18b2d900fb9088860f6ea763f732dbccced090f4d5e01d87f4",
+      "n": 24
+    },
+    {
+      "embedding_provider": "hashing",
+      "embedding_model": "local-hashing-64",
+      "embedding_dimension": 64,
+      "embedding_version": "1",
+      "index_identity": "df3d4228ba2b0dcb30c58d2b2a2034752f51cb325c019ce919acc96811800ce0",
+      "n": 9
+    }
+  ],
+  "canonical_semantic_index": {
+    "index_identity": "e598d9fb91b13a8c6bd6be94b1bc0a54bbce27dd4e98dc158669d7198bc6f466",
+    "chunk_count": 24,
+    "token_count": 459,
+    "char_count": 2945,
+    "embedding_model": "text-embedding-3-small",
+    "vector_dimension": 64,
+    "null_embeddings": 0,
+    "storage": "postgresql.chunks.embedding (pgvector)"
+  },
+  "bm25_identity_match_index": {
+    "index_identity": "41cfe34cc2691d18b2d900fb9088860f6ea763f732dbccced090f4d5e01d87f4",
+    "chunk_count": 24,
+    "matching_text_with_semantic": 24,
+    "sem_n": 24,
+    "hash_n": 24
+  },
+  "hashing_vectors_present_in_db": true,
+  "semantic_openai_vectors_present": true,
+  "mixed_models_in_active_semantic_index": false,
+  "reembedding_required": false,
+  "decision": "REEMBED_NOT_REQUIRED_EXISTING_SEMANTIC_INDEX_VALID"
+}

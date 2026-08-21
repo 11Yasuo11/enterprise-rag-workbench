@@ -1,0 +1,30 @@
+{
+  "correct_abstain": 5,
+  "correct_go": 10,
+  "correct_uncertain": 0,
+  "failed_case_luna_calls": 19,
+  "false_negative_count_relative_to_top15": 4,
+  "false_negatives": [
+    {
+      "case_id": "fresh_v1_022",
+      "evidence_type": "exact supporting span + multiple documents"
+    },
+    {
+      "case_id": "fresh_v1_025",
+      "evidence_type": "exact supporting spans + multiple documents; decision/status inconsistency"
+    },
+    {
+      "case_id": "fresh_v1_040",
+      "evidence_type": "exact rule + derived numeric inference"
+    },
+    {
+      "case_id": "fresh_v1_044",
+      "evidence_type": "exact rule + derived numeric comparison"
+    }
+  ],
+  "false_positive_count_among_unsupported_answers": 0,
+  "incorrect_abstain": 4,
+  "incorrect_go": 0,
+  "incorrect_uncertain": 0,
+  "note": "Unsupported outputs had complete Luna mappings; downstream plan cardinality/assembler truncation, not Luna GO, caused them."
+}

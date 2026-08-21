@@ -1,0 +1,33 @@
+{
+  "all_requirements_have_authorized_candidate_packets": true,
+  "api_calls": 0,
+  "case_id": "fresh_v1_022",
+  "classification": "SUSPICIOUS_ABSTAIN",
+  "diagnosis": "ACTUAL_LUNA_FALSE_NEGATIVE_WITH_UNSCOPED_PACKAGING",
+  "experiment": "P5_REMAINING_LUNA_FALSE_NEGATIVE",
+  "legitimate_route": "SOL",
+  "passed": true,
+  "requirement_packet_chunk_ids": {
+    "R1": [
+      "d60d3666-be70-4f64-b83e-7fe72c86f426",
+      "7e6c9c91-51ec-4146-8463-ee975a64232a",
+      "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+      "2798f984-b356-4e40-9ed2-574ffbe26e86"
+    ],
+    "R2": [
+      "d60d3666-be70-4f64-b83e-7fe72c86f426",
+      "7e6c9c91-51ec-4146-8463-ee975a64232a",
+      "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+      "9e94a1f1-355f-4482-a8d8-8c6f6f089e36",
+      "2798f984-b356-4e40-9ed2-574ffbe26e86"
+    ],
+    "R3": [
+      "d60d3666-be70-4f64-b83e-7fe72c86f426",
+      "7e6c9c91-51ec-4146-8463-ee975a64232a",
+      "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+      "9e94a1f1-355f-4482-a8d8-8c6f6f089e36",
+      "3f2b1506-ee1e-4728-8fbe-35947c82c3b4"
+    ]
+  },
+  "routing_reason": "suspicious_luna_abstention"
+}

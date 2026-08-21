@@ -1,0 +1,8 @@
+{
+  "case_count": 0,
+  "experiment_id": "P1_VERSION_TEMPORAL_TARGETED_REAL_API_CONFIRMATION_V1",
+  "gold_loaded_before_freeze": false,
+  "predictions_created": false,
+  "reason": "P1_TARGETED_LOCAL_PREFLIGHT_FAILED",
+  "status": "NOT_APPLICABLE"
+}

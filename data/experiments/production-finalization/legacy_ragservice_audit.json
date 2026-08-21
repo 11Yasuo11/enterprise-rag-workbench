@@ -1,0 +1,71 @@
+{
+  "active_web_inference": "CanonicalRagRuntime",
+  "active_eval_inference": "CanonicalRagRuntime",
+  "references": [
+    {
+      "file": "src/rag_workbench/cli.py",
+      "classification": "historical_test_or_research"
+    },
+    {
+      "file": "src/rag_workbench/experiments/reranker_e2e_benchmark.py",
+      "classification": "historical_test_or_research"
+    },
+    {
+      "file": "src/rag_workbench/experiments/runner.py",
+      "classification": "historical_test_or_research"
+    },
+    {
+      "file": "src/rag_workbench/experiments/v2_sufficiency_fn.py",
+      "classification": "historical_test_or_research"
+    },
+    {
+      "file": "src/rag_workbench/experiments/hybrid_reranker_benchmark.py",
+      "classification": "historical_test_or_research"
+    },
+    {
+      "file": "src/rag_workbench/experiments/hybrid_reranker_replication.py",
+      "classification": "historical_test_or_research"
+    },
+    {
+      "file": "src/rag_workbench/experiments/v3_generate_verify.py",
+      "classification": "historical_test_or_research"
+    },
+    {
+      "file": "src/rag_workbench/experiments/v2_final_benchmark.py",
+      "classification": "historical_test_or_research"
+    },
+    {
+      "file": "src/rag_workbench/experiments/sol_judge_e2e_benchmark.py",
+      "classification": "historical_test_or_research"
+    },
+    {
+      "file": "src/rag_workbench/experiments/judge_e2e_benchmark.py",
+      "classification": "historical_test_or_research"
+    },
+    {
+      "file": "src/rag_workbench/runtime/canonical_runtime.py",
+      "classification": "historical_test_or_research"
+    },
+    {
+      "file": "src/rag_workbench/api/app.py",
+      "classification": "compatibility_helper_not_on_eval_or_web_inference"
+    },
+    {
+      "file": "src/rag_workbench/evaluation/evaluator.py",
+      "classification": "legacy_accepted_for_historical_tests_only"
+    },
+    {
+      "file": "src/rag_workbench/generation/__init__.py",
+      "classification": "historical_test_or_research"
+    },
+    {
+      "file": "src/rag_workbench/generation/generator.py",
+      "classification": "LEGACY / NON-CANONICAL definition"
+    },
+    {
+      "file": "src/rag_workbench/experiments/safe_recovery_luna_v2/pipeline.py",
+      "classification": "historical_test_or_research"
+    }
+  ],
+  "active_bypass_count": 0
+}

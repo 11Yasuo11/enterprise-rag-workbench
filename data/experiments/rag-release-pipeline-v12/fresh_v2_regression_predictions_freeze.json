@@ -1,0 +1,256 @@
+{
+  "case_count": 60,
+  "case_ids": [
+    "fresh_v2_001",
+    "fresh_v2_002",
+    "fresh_v2_003",
+    "fresh_v2_004",
+    "fresh_v2_005",
+    "fresh_v2_006",
+    "fresh_v2_007",
+    "fresh_v2_008",
+    "fresh_v2_009",
+    "fresh_v2_010",
+    "fresh_v2_011",
+    "fresh_v2_012",
+    "fresh_v2_013",
+    "fresh_v2_014",
+    "fresh_v2_015",
+    "fresh_v2_016",
+    "fresh_v2_017",
+    "fresh_v2_018",
+    "fresh_v2_019",
+    "fresh_v2_020",
+    "fresh_v2_021",
+    "fresh_v2_022",
+    "fresh_v2_023",
+    "fresh_v2_024",
+    "fresh_v2_025",
+    "fresh_v2_026",
+    "fresh_v2_027",
+    "fresh_v2_028",
+    "fresh_v2_029",
+    "fresh_v2_030",
+    "fresh_v2_031",
+    "fresh_v2_032",
+    "fresh_v2_033",
+    "fresh_v2_034",
+    "fresh_v2_035",
+    "fresh_v2_036",
+    "fresh_v2_037",
+    "fresh_v2_038",
+    "fresh_v2_039",
+    "fresh_v2_040",
+    "fresh_v2_041",
+    "fresh_v2_042",
+    "fresh_v2_043",
+    "fresh_v2_044",
+    "fresh_v2_045",
+    "fresh_v2_046",
+    "fresh_v2_047",
+    "fresh_v2_048",
+    "fresh_v2_049",
+    "fresh_v2_050",
+    "fresh_v2_051",
+    "fresh_v2_052",
+    "fresh_v2_053",
+    "fresh_v2_054",
+    "fresh_v2_055",
+    "fresh_v2_056",
+    "fresh_v2_057",
+    "fresh_v2_058",
+    "fresh_v2_059",
+    "fresh_v2_060"
+  ],
+  "experiment_id": "FRESH_V2_REGRESSION_RERUN_V12",
+  "gold_loaded_before_freeze": false,
+  "predictions_immutable": true,
+  "predictions_sha256": "7ed34cc35a4f8ae2298741e8e24417bbee5eee02291be123c9dd9538775d3304",
+  "stage_guard": {
+    "case_count": 60,
+    "luna_calls": 44,
+    "per_case_counts": {
+      "fresh_v2_001": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_002": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_005": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_006": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_007": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_008": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_009": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_011": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_012": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_013": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_014": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_015": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_016": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_018": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_020": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_022": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_027": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_028": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_029": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_030": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_031": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_032": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_033": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_034": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_036": {
+        "LUNA": 1,
+        "SOL": 1
+      },
+      "fresh_v2_037": {
+        "LUNA": 1,
+        "SOL": 1
+      },
+      "fresh_v2_038": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_039": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_041": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_042": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_043": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_044": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_046": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_047": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_049": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_050": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_051": {
+        "LUNA": 1,
+        "SOL": 0
+      },
+      "fresh_v2_052": {
+        "LUNA": 1,
+        "SOL": 1
+      },
+      "fresh_v2_053": {
+        "LUNA": 1,
+        "SOL": 1
+      },
+      "fresh_v2_054": {
+        "LUNA": 1,
+        "SOL": 1
+      },
+      "fresh_v2_055": {
+        "LUNA": 1,
+        "SOL": 1
+      },
+      "fresh_v2_058": {
+        "LUNA": 1,
+        "SOL": 1
+      },
+      "fresh_v2_059": {
+        "LUNA": 1,
+        "SOL": 1
+      },
+      "fresh_v2_060": {
+        "LUNA": 1,
+        "SOL": 1
+      }
+    },
+    "sol_calls": 9,
+    "stage": "FRESH_V2_REGRESSION",
+    "stage_cost_cap_usd": 0.3,
+    "stage_spend_usd": 0.20131046
+  },
+  "timestamp": "2026-08-21T08:41:44.884303+00:00"
+}

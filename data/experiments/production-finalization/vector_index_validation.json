@@ -1,0 +1,8 @@
+{
+  "same_embedding_model": true,
+  "dimension": 64,
+  "vector_count": 24,
+  "chunk_identity_match_bm25": true,
+  "hashing_not_queried_in_semantic_mode": true,
+  "pass": true
+}

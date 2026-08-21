@@ -1,0 +1,25 @@
+{
+  "assembler_same_plan_count": 19,
+  "contract_mismatch_case_ids": [],
+  "contract_mismatch_count": 0,
+  "downstream_redecomposition_count": 0,
+  "failure_case_count": 19,
+  "identity_contract_successful": true,
+  "interpretation": "ATOMIC_REQUIREMENT_CONTRACT identity propagation remains successful and should not be weakened. Several label-blind plans are semantically mis-decomposed, which is distinct from hash/ID contract mismatch.",
+  "plan_hash_stable_count": 19,
+  "requirement_ids_stable_count": 19,
+  "semantic_plan_errors": [
+    "fresh_v1_009",
+    "fresh_v1_011",
+    "fresh_v1_013",
+    "fresh_v1_015",
+    "fresh_v1_016",
+    "fresh_v1_023",
+    "fresh_v1_025",
+    "fresh_v1_028",
+    "fresh_v1_030",
+    "fresh_v1_036",
+    "fresh_v1_044"
+  ],
+  "verifier_schema_match_count": 19
+}

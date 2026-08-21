@@ -1,0 +1,77 @@
+{
+  "candidate_architecture_modified": false,
+  "cost": {
+    "embedding": {
+      "cost_usd": 0.0,
+      "new_calls": 0,
+      "tokens": 0
+    },
+    "luna": {
+      "cached_tokens": 0,
+      "calls": 0,
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    "sol": {
+      "cached_tokens": 0,
+      "calls": 0,
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    "total_targeted_cost_usd": 0.0
+  },
+  "experiment_id": "P1_VERSION_TEMPORAL_TARGETED_REAL_API_CONFIRMATION_V1",
+  "failure_classification": "LOCAL_VALIDATION_ERROR",
+  "failures": [
+    {
+      "actual_current_question_plan_hash": "b4e00f6e96ee4826e6469cf694cd80b93d77e7ab57f8f15e0b0d7a8d7a3b0f3b",
+      "case_id": "fresh_v1_029",
+      "failure": "QUESTION_PLAN_HASH_BASELINE_MISMATCH",
+      "fresh_v1_2_question_plan_hash": "972cb008734a13cd9baa941af150fb6c33ed48ee77ff8a942fb9359ff7eedc47"
+    },
+    {
+      "actual_current_question_plan_hash": "860544a05d05d72075bb0254e927fee03013e6ba91865ec12df1c087d271c528",
+      "case_id": "fresh_v1_031",
+      "failure": "QUESTION_PLAN_HASH_BASELINE_MISMATCH",
+      "fresh_v1_2_question_plan_hash": "06c0809c5908cb4716912e0c2692bc27001e0d6b40f95db211729cffc95f38c3"
+    },
+    {
+      "actual_current_question_plan_hash": "ea19fe5a61d39c012fc114cc145e53df9da4cad2b08eca6cdad551867d6f6c23",
+      "case_id": "fresh_v1_032",
+      "failure": "QUESTION_PLAN_HASH_BASELINE_MISMATCH",
+      "fresh_v1_2_question_plan_hash": "0ae848baf3c03ae4e6637d162e3c9abb1013e3c6e3840817b2a9b5f113a5b135"
+    },
+    {
+      "actual_current_question_plan_hash": "a1cae724c4ff4683b4dba1a3f77aabc145d1194dc900e9aa827557e5cc781d6d",
+      "case_id": "fresh_v1_033",
+      "failure": "QUESTION_PLAN_HASH_BASELINE_MISMATCH",
+      "fresh_v1_2_question_plan_hash": "2978b848056117f7f8dd544bc54566c54a759f81149e43a0ba526e6ff89bf962"
+    },
+    {
+      "actual_current_question_plan_hash": "aac9eb51fd23d3d8452dbf1482f7545d050962ae13b09e5d6d61f71e7a3d626c",
+      "case_id": "fresh_v1_035",
+      "failure": "QUESTION_PLAN_HASH_BASELINE_MISMATCH",
+      "fresh_v1_2_question_plan_hash": "98d06f47a7c1314c08b5b04e698de17f717cd4b0e2c88cc32981aa13d8aecaf3"
+    }
+  ],
+  "final_generation_llm_calls": 0,
+  "full_60_case_evaluation_executed": false,
+  "local_temporal_checks_passed": true,
+  "next_step": "Reconcile and validate the current P0 question-plan hash baseline against the validated v1.1 questions, then start a new targeted confirmation freeze.",
+  "paid_api_calls_started": false,
+  "quality": {
+    "citation_completeness": null,
+    "citation_correctness": null,
+    "citation_validity": null,
+    "correct": 0,
+    "incorrect_abstentions": 0,
+    "requirement_completeness": null,
+    "scored": false,
+    "total": 5,
+    "unsupported_answers": 0,
+    "version_correctness": null
+  },
+  "verdict": "P1_TARGETED_LOCAL_PREFLIGHT_FAILED"
+}

@@ -1,0 +1,17 @@
+{
+  "api_calls": 0,
+  "final_abstention_triggers": {
+    "LUNA_ABSTAIN": 10,
+    "SOL_ABSTAIN": 1
+  },
+  "final_routes": {
+    "SAFE_ABSTAIN": 11
+  },
+  "finding": "required_evidence_absent was inferred from absence of validated deterministic mappings even when authorized requirement packets contained the required evidence; escalation eligibility was therefore too narrow.",
+  "route_reasons": {
+    "ABSTAIN": 1,
+    "required_evidence_absent": 10
+  },
+  "security_precheck": 0,
+  "timestamp": "2026-08-20T23:30:23.607854+00:00"
+}

@@ -1,0 +1,38 @@
+{
+  "api_calls": 0,
+  "fallback_contract": {
+    "abstract_terms_need_not_be_literal": true,
+    "morphological_normalization": [
+      "unicode_nfkc",
+      "casefold",
+      "punctuation",
+      "whitespace",
+      "simple_english_singular_plural"
+    ],
+    "weak_lexical_candidate_is_not_grounded_automatically": true
+  },
+  "negative_tests": {
+    "morphologically_similar_unrelated_claim": "PASS_NOT_GROUNDED",
+    "no_mapping_weak_lexical_only": "PASS_NOT_PROMOTED",
+    "unauthorized_acl": "PASS_REJECTED",
+    "wrong_document": "PASS_REJECTED",
+    "wrong_document_version": "PASS_REJECTED",
+    "wrong_region": "PASS_REJECTED",
+    "wrong_tenant": "PASS_REJECTED"
+  },
+  "passed": true,
+  "positive_tests": {
+    "cadence_every_30_minutes": "PASS",
+    "deadline_within_10_business_days": "PASS",
+    "maintainer_maintains_api": "PASS",
+    "owner_owns_plan": "PASS",
+    "receipt_receipts": "PASS",
+    "threshold_above_25_euros": "PASS"
+  },
+  "priority": [
+    "validated_deterministic_mappings",
+    "authorized_requirement_scoped_candidates",
+    "normalized_lexical_fallback"
+  ],
+  "test_file": "tests/unit/test_requirement_packet_grounding_v5.py"
+}

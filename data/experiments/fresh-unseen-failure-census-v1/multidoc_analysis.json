@@ -1,0 +1,1469 @@
+{
+  "all_required_evidence_complete_top15": 10,
+  "cases": [
+    {
+      "assembler": {
+        "actual_answer": null,
+        "all_requirements_present": true,
+        "emitted": false,
+        "unsupported_fact_present": false
+      },
+      "case_id": "fresh_v1_009",
+      "category": "multidoc_two",
+      "citation": {
+        "cited_sources": [],
+        "complete": true,
+        "correct": true,
+        "valid": true
+      },
+      "evidence": "Both required documents ranked 1/3 and Luna mapped both; a scope clause became R1, then global selected-version validation rejected the unrelated support document and Sol incorrectly marked R3 unsupported.",
+      "final_abstention_trigger": "SOL_ABSTAIN",
+      "first_failure_stage": "QUESTION_PLAN",
+      "gold_answerability": true,
+      "gold_required_documents": [
+        "recovery-runbook-west",
+        "customer-support-escalation"
+      ],
+      "gold_required_facts": [
+        "OPS-REC-W29",
+        "every thirty minutes"
+      ],
+      "gold_required_versions": {
+        "customer-support-escalation": "3.2",
+        "recovery-runbook-west": "1.0"
+      },
+      "local_validation": {
+        "passed": true,
+        "reason": null
+      },
+      "luna": {
+        "called": true,
+        "correct_relative_to_top15": true,
+        "decision": "GO",
+        "local_validation": {
+          "passed": false,
+          "reason": "WRONG_VERSION"
+        },
+        "requirement_statuses": {
+          "R1": "SUPPORTED",
+          "R2": "SUPPORTED",
+          "R3": "SUPPORTED"
+        }
+      },
+      "outcome": "INCORRECT_ABSTENTION",
+      "primary_root_cause": "QUALIFIER_REQUIREMENT_ERROR",
+      "question": "For an outage runbook card, give the west-region recovery code and the cadence of customer-facing status updates while mitigation is underway.",
+      "question_plan": {
+        "qualifiers": [],
+        "question_plan_hash": "458989b46807510bcb0ce7264e58eebbb83054a65aeac40d69df94b2fc2a973d",
+        "requirements": [
+          {
+            "requirement_id": "R1",
+            "requirement_text": "For an outage runbook card",
+            "requirement_type": "fact"
+          },
+          {
+            "requirement_id": "R2",
+            "requirement_text": "give the west-region recovery code",
+            "requirement_type": "fact"
+          },
+          {
+            "requirement_id": "R3",
+            "requirement_text": "the cadence of customer-facing status updates while mitigation is underway",
+            "requirement_type": "fact"
+          }
+        ]
+      },
+      "retrieval": {
+        "acl_tenant_region_survival": true,
+        "active_version_filter_survival": true,
+        "candidate_pool_trace_status": "TRACE_INSUFFICIENT: frozen dry-run persisted counts but not dense/BM25/RRF membership IDs",
+        "minimum_missing_facts": [],
+        "missing_corpus_facts": [],
+        "required_document_ranks": {
+          "customer-support-escalation": 3,
+          "recovery-runbook-west": 1
+        },
+        "required_evidence_in_bm25_pool": null,
+        "required_evidence_in_corpus": true,
+        "required_evidence_in_dense_pool": null,
+        "required_evidence_in_rrf_pool": null,
+        "required_evidence_in_top15": true,
+        "required_fact_presence_top15": {
+          "OPS-REC-W29": true,
+          "every thirty minutes": true
+        }
+      },
+      "router": {
+        "appropriate": true,
+        "final_route": "SOL",
+        "initial_route": "LUNA",
+        "reason": "luna_go_failed_local_validation"
+      },
+      "scorer": {
+        "classification": "INCORRECT_ABSTENTION",
+        "correct": true
+      },
+      "secondary_root_causes": [
+        "VERSION_RESOLVER_OVER_FILTER",
+        "SOL_FALSE_NEGATIVE",
+        "LOCAL_VALIDATOR_FALSE_REJECT"
+      ],
+      "sol": {
+        "called": true,
+        "correct_relative_to_top15": false,
+        "decision": "ABSTAIN",
+        "local_validation": {
+          "passed": true,
+          "reason": null
+        }
+      },
+      "version": {
+        "comparison_required": false,
+        "correct": true,
+        "gold_versions": {
+          "customer-support-escalation": "3.2",
+          "recovery-runbook-west": "1.0"
+        },
+        "versions_available": [
+          {
+            "active": true,
+            "document_id": "recovery-runbook-west",
+            "version": "1.0",
+            "version_id": "687b9971-bd2b-44c9-ba4a-83f68eb86ac2"
+          },
+          {
+            "active": true,
+            "document_id": "customer-support-escalation",
+            "version": "3.2",
+            "version_id": "7be9eb6b-b1db-46b9-8ef3-ae30257098c7"
+          }
+        ],
+        "versions_selected": [
+          {
+            "document_id": "recovery-runbook-west",
+            "version": "1.0",
+            "version_id": "687b9971-bd2b-44c9-ba4a-83f68eb86ac2"
+          }
+        ]
+      }
+    },
+    {
+      "assembler": {
+        "actual_answer": "R1: The launch owner is the Product Operations team . [C1]",
+        "all_requirements_present": false,
+        "emitted": true,
+        "unsupported_fact_present": false
+      },
+      "case_id": "fresh_v1_011",
+      "category": "multidoc_two",
+      "citation": {
+        "cited_sources": [
+          {
+            "chunk_id": "826df8a1-5461-4515-95f7-1998a4d3c205",
+            "document_id": "project-atlas-launch",
+            "text": "Project Atlas launched on April 12 , 2026 . The launch owner is the Product Operations team .",
+            "version": "1.0"
+          }
+        ],
+        "complete": false,
+        "correct": false,
+        "valid": true
+      },
+      "evidence": "Both facts were in Top-15 and Luna mapped both to one R1; validation retained only the first mapping and assembly emitted only Product Operations.",
+      "final_abstention_trigger": null,
+      "first_failure_stage": "QUESTION_PLAN",
+      "gold_answerability": true,
+      "gold_required_documents": [
+        "project-atlas-launch",
+        "project-atlas-api"
+      ],
+      "gold_required_facts": [
+        "Product Operations",
+        "Platform Interfaces"
+      ],
+      "gold_required_versions": {
+        "project-atlas-api": "3.0",
+        "project-atlas-launch": "1.0"
+      },
+      "local_validation": {
+        "passed": true,
+        "reason": null
+      },
+      "luna": {
+        "called": true,
+        "correct_relative_to_top15": true,
+        "decision": "GO",
+        "local_validation": {
+          "passed": true,
+          "reason": null
+        },
+        "requirement_statuses": {
+          "R1": "SUPPORTED"
+        }
+      },
+      "outcome": "UNSUPPORTED_ANSWER",
+      "primary_root_cause": "QUESTION_PLAN_ERROR",
+      "question": "Pair the Atlas launch owner with the team that maintains the Atlas API.",
+      "question_plan": {
+        "qualifiers": [],
+        "question_plan_hash": "729bc0eba622557af476e28df08e1fcd170b64d77c6fdf5230f67f9f749584fb",
+        "requirements": [
+          {
+            "requirement_id": "R1",
+            "requirement_text": "Pair the Atlas launch owner with the team that maintains the Atlas API",
+            "requirement_type": "fact"
+          }
+        ]
+      },
+      "retrieval": {
+        "acl_tenant_region_survival": true,
+        "active_version_filter_survival": true,
+        "candidate_pool_trace_status": "TRACE_INSUFFICIENT: frozen dry-run persisted counts but not dense/BM25/RRF membership IDs",
+        "minimum_missing_facts": [],
+        "missing_corpus_facts": [],
+        "required_document_ranks": {
+          "project-atlas-api": 1,
+          "project-atlas-launch": 2
+        },
+        "required_evidence_in_bm25_pool": null,
+        "required_evidence_in_corpus": true,
+        "required_evidence_in_dense_pool": null,
+        "required_evidence_in_rrf_pool": null,
+        "required_evidence_in_top15": true,
+        "required_fact_presence_top15": {
+          "Platform Interfaces": true,
+          "Product Operations": true
+        }
+      },
+      "router": {
+        "appropriate": true,
+        "final_route": "DETERMINISTIC",
+        "initial_route": "LUNA",
+        "reason": "validated_luna_go"
+      },
+      "scorer": {
+        "classification": "UNSUPPORTED_ANSWER",
+        "correct": true
+      },
+      "secondary_root_causes": [
+        "DETERMINISTIC_ASSEMBLER_ERROR",
+        "CITATION_MAPPING_ERROR",
+        "LOCAL_VALIDATOR_FALSE_ACCEPT"
+      ],
+      "sol": {
+        "called": false,
+        "correct_relative_to_top15": null,
+        "decision": null,
+        "local_validation": null
+      },
+      "version": {
+        "comparison_required": false,
+        "correct": true,
+        "gold_versions": {
+          "project-atlas-api": "3.0",
+          "project-atlas-launch": "1.0"
+        },
+        "versions_available": [
+          {
+            "active": true,
+            "document_id": "project-atlas-launch",
+            "version": "1.0",
+            "version_id": "e431da5b-ef31-440f-a5a4-80a35fb97e24"
+          },
+          {
+            "active": true,
+            "document_id": "project-atlas-api",
+            "version": "3.0",
+            "version_id": "cf5dfd1d-b744-48f1-bfde-41a198d86f35"
+          }
+        ],
+        "versions_selected": []
+      }
+    },
+    {
+      "assembler": {
+        "actual_answer": "R1: The recovery drill runs on the second Wednesday of each quarter . [C1]",
+        "all_requirements_present": false,
+        "emitted": true,
+        "unsupported_fact_present": false
+      },
+      "case_id": "fresh_v1_013",
+      "category": "multidoc_two",
+      "citation": {
+        "cited_sources": [
+          {
+            "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+            "document_id": "recovery-runbook-west",
+            "text": "The west-region customer API recovery sequence uses runbook code OPS-REC-W29 . Failover targets the us-east standby cluster . The recovery drill runs on the second Wednesday of each quarter .",
+            "version": "1.0"
+          }
+        ],
+        "complete": false,
+        "correct": false,
+        "valid": true
+      },
+      "evidence": "Both facts were in Top-15 and Luna mapped both to one R1; assembly retained the recovery-drill span and dropped the release-weekday span.",
+      "final_abstention_trigger": null,
+      "first_failure_stage": "QUESTION_PLAN",
+      "gold_answerability": true,
+      "gold_required_documents": [
+        "recovery-runbook-west",
+        "engineering-deployment-handbook"
+      ],
+      "gold_required_facts": [
+        "second Wednesday",
+        "Tuesdays and Thursdays"
+      ],
+      "gold_required_versions": {
+        "engineering-deployment-handbook": "2026.1",
+        "recovery-runbook-west": "1.0"
+      },
+      "local_validation": {
+        "passed": true,
+        "reason": null
+      },
+      "luna": {
+        "called": true,
+        "correct_relative_to_top15": true,
+        "decision": "GO",
+        "local_validation": {
+          "passed": true,
+          "reason": null
+        },
+        "requirement_statuses": {
+          "R1": "SUPPORTED"
+        }
+      },
+      "outcome": "UNSUPPORTED_ANSWER",
+      "primary_root_cause": "QUESTION_PLAN_ERROR",
+      "question": "How often is the west recovery drill held within a quarter, and on which weekdays do routine production releases occur?",
+      "question_plan": {
+        "qualifiers": [],
+        "question_plan_hash": "4413fa31501ae4491e169131f8eaea51d17a447779198c030a1793143ad1dbd6",
+        "requirements": [
+          {
+            "requirement_id": "R1",
+            "requirement_text": "How often is the west recovery drill held within a quarter, and on which weekdays do routine production releases occur",
+            "requirement_type": "fact"
+          }
+        ]
+      },
+      "retrieval": {
+        "acl_tenant_region_survival": true,
+        "active_version_filter_survival": true,
+        "candidate_pool_trace_status": "TRACE_INSUFFICIENT: frozen dry-run persisted counts but not dense/BM25/RRF membership IDs",
+        "minimum_missing_facts": [],
+        "missing_corpus_facts": [],
+        "required_document_ranks": {
+          "engineering-deployment-handbook": 3,
+          "recovery-runbook-west": 1
+        },
+        "required_evidence_in_bm25_pool": null,
+        "required_evidence_in_corpus": true,
+        "required_evidence_in_dense_pool": null,
+        "required_evidence_in_rrf_pool": null,
+        "required_evidence_in_top15": true,
+        "required_fact_presence_top15": {
+          "Tuesdays and Thursdays": true,
+          "second Wednesday": true
+        }
+      },
+      "router": {
+        "appropriate": true,
+        "final_route": "DETERMINISTIC",
+        "initial_route": "LUNA",
+        "reason": "validated_luna_go"
+      },
+      "scorer": {
+        "classification": "UNSUPPORTED_ANSWER",
+        "correct": true
+      },
+      "secondary_root_causes": [
+        "DETERMINISTIC_ASSEMBLER_ERROR",
+        "CITATION_MAPPING_ERROR",
+        "LOCAL_VALIDATOR_FALSE_ACCEPT"
+      ],
+      "sol": {
+        "called": false,
+        "correct_relative_to_top15": null,
+        "decision": null,
+        "local_validation": null
+      },
+      "version": {
+        "comparison_required": false,
+        "correct": true,
+        "gold_versions": {
+          "engineering-deployment-handbook": "2026.1",
+          "recovery-runbook-west": "1.0"
+        },
+        "versions_available": [
+          {
+            "active": true,
+            "document_id": "recovery-runbook-west",
+            "version": "1.0",
+            "version_id": "687b9971-bd2b-44c9-ba4a-83f68eb86ac2"
+          },
+          {
+            "active": true,
+            "document_id": "engineering-deployment-handbook",
+            "version": "2026.1",
+            "version_id": "49d30c7e-9187-4311-b664-57a8d6029380"
+          }
+        ],
+        "versions_selected": []
+      }
+    },
+    {
+      "assembler": {
+        "actual_answer": null,
+        "all_requirements_present": true,
+        "emitted": false,
+        "unsupported_fact_present": false
+      },
+      "case_id": "fresh_v1_015",
+      "category": "multidoc_two",
+      "citation": {
+        "cited_sources": [],
+        "complete": true,
+        "correct": true,
+        "valid": true
+      },
+      "evidence": "Both documents were Top-2 and Luna/Sol returned GO; the scope clause and conjunction were over-decomposed, and global selected-version validation rejected Operations evidence from an unrelated document.",
+      "final_abstention_trigger": "POST_SOL_VALIDATION_REJECT",
+      "first_failure_stage": "QUESTION_PLAN",
+      "gold_answerability": true,
+      "gold_required_documents": [
+        "security-incident-policy",
+        "operations-continuity-plan"
+      ],
+      "gold_required_facts": [
+        "incident commander",
+        "Operations"
+      ],
+      "gold_required_versions": {
+        "operations-continuity-plan": "4.0",
+        "security-incident-policy": "2026"
+      },
+      "local_validation": {
+        "passed": false,
+        "reason": "WRONG_VERSION"
+      },
+      "luna": {
+        "called": true,
+        "correct_relative_to_top15": true,
+        "decision": "GO",
+        "local_validation": {
+          "passed": false,
+          "reason": "WRONG_VERSION"
+        },
+        "requirement_statuses": {
+          "R1": "SUPPORTED",
+          "R2": "SUPPORTED",
+          "R3": "SUPPORTED",
+          "R4": "SUPPORTED"
+        }
+      },
+      "outcome": "INCORRECT_ABSTENTION",
+      "primary_root_cause": "QUALIFIER_REQUIREMENT_ERROR",
+      "question": "During a current severity-one incident affecting customer availability, who coordinates Engineering and Support, and which department joins that incident commander?",
+      "question_plan": {
+        "qualifiers": [],
+        "question_plan_hash": "d940aa51ece899fed14995c8cd68678850e8f308f860f2c86ad2cd2bc9f25f22",
+        "requirements": [
+          {
+            "requirement_id": "R1",
+            "requirement_text": "During a current severity-one incident affecting customer availability",
+            "requirement_type": "fact"
+          },
+          {
+            "requirement_id": "R2",
+            "requirement_text": "who coordinates Engineering",
+            "requirement_type": "fact"
+          },
+          {
+            "requirement_id": "R3",
+            "requirement_text": "Support",
+            "requirement_type": "fact"
+          },
+          {
+            "requirement_id": "R4",
+            "requirement_text": "which department joins that incident commander",
+            "requirement_type": "fact"
+          }
+        ]
+      },
+      "retrieval": {
+        "acl_tenant_region_survival": true,
+        "active_version_filter_survival": true,
+        "candidate_pool_trace_status": "TRACE_INSUFFICIENT: frozen dry-run persisted counts but not dense/BM25/RRF membership IDs",
+        "minimum_missing_facts": [],
+        "missing_corpus_facts": [],
+        "required_document_ranks": {
+          "operations-continuity-plan": 1,
+          "security-incident-policy": 2
+        },
+        "required_evidence_in_bm25_pool": null,
+        "required_evidence_in_corpus": true,
+        "required_evidence_in_dense_pool": null,
+        "required_evidence_in_rrf_pool": null,
+        "required_evidence_in_top15": true,
+        "required_fact_presence_top15": {
+          "Operations": true,
+          "incident commander": true
+        }
+      },
+      "router": {
+        "appropriate": true,
+        "final_route": "SOL",
+        "initial_route": "LUNA",
+        "reason": "luna_go_failed_local_validation"
+      },
+      "scorer": {
+        "classification": "INCORRECT_ABSTENTION",
+        "correct": true
+      },
+      "secondary_root_causes": [
+        "VERSION_RESOLVER_OVER_FILTER",
+        "LOCAL_VALIDATOR_FALSE_REJECT",
+        "SOL_DID_NOT_RESOLVE"
+      ],
+      "sol": {
+        "called": true,
+        "correct_relative_to_top15": true,
+        "decision": "GO",
+        "local_validation": {
+          "passed": false,
+          "reason": "WRONG_VERSION"
+        }
+      },
+      "version": {
+        "comparison_required": false,
+        "correct": true,
+        "gold_versions": {
+          "operations-continuity-plan": "4.0",
+          "security-incident-policy": "2026"
+        },
+        "versions_available": [
+          {
+            "active": false,
+            "document_id": "security-incident-policy",
+            "version": "2025",
+            "version_id": "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588"
+          },
+          {
+            "active": true,
+            "document_id": "security-incident-policy",
+            "version": "2026",
+            "version_id": "c4d49578-2eec-4051-a54b-addc12af0efa"
+          },
+          {
+            "active": true,
+            "document_id": "operations-continuity-plan",
+            "version": "4.0",
+            "version_id": "2e316085-67fe-4606-97aa-55577ff89186"
+          }
+        ],
+        "versions_selected": [
+          {
+            "document_id": "security-incident-policy",
+            "version": "2026",
+            "version_id": "c4d49578-2eec-4051-a54b-addc12af0efa"
+          }
+        ]
+      }
+    },
+    {
+      "assembler": {
+        "actual_answer": null,
+        "all_requirements_present": true,
+        "emitted": false,
+        "unsupported_fact_present": false
+      },
+      "case_id": "fresh_v1_016",
+      "category": "multidoc_two",
+      "citation": {
+        "cited_sources": [],
+        "complete": true,
+        "correct": true,
+        "valid": true
+      },
+      "evidence": "Both exact facts were Top-2 and Luna/Sol returned GO; one R1 covered two facts, while global version validation rejected the retention document.",
+      "final_abstention_trigger": "POST_SOL_VALIDATION_REJECT",
+      "first_failure_stage": "QUESTION_PLAN",
+      "gold_answerability": true,
+      "gold_required_documents": [
+        "data-retention-standard",
+        "security-incident-policy"
+      ],
+      "gold_required_facts": [
+        "seven years",
+        "15 minutes"
+      ],
+      "gold_required_versions": {
+        "data-retention-standard": "2.0",
+        "security-incident-policy": "2026"
+      },
+      "local_validation": {
+        "passed": false,
+        "reason": "WRONG_VERSION"
+      },
+      "luna": {
+        "called": true,
+        "correct_relative_to_top15": true,
+        "decision": "GO",
+        "local_validation": {
+          "passed": false,
+          "reason": "WRONG_VERSION"
+        },
+        "requirement_statuses": {
+          "R1": "SUPPORTED"
+        }
+      },
+      "outcome": "INCORRECT_ABSTENTION",
+      "primary_root_cause": "QUESTION_PLAN_ERROR",
+      "question": "How long are security audit logs retained, and how quickly must a current severity-one incident be reported after discovery?",
+      "question_plan": {
+        "qualifiers": [],
+        "question_plan_hash": "b055fb0baa7ae410f8d302682bb4d12e344da50c81471cc378fde5124c126872",
+        "requirements": [
+          {
+            "requirement_id": "R1",
+            "requirement_text": "How long are security audit logs retained, and how quickly must a current severity-one incident be reported after discovery",
+            "requirement_type": "fact"
+          }
+        ]
+      },
+      "retrieval": {
+        "acl_tenant_region_survival": true,
+        "active_version_filter_survival": true,
+        "candidate_pool_trace_status": "TRACE_INSUFFICIENT: frozen dry-run persisted counts but not dense/BM25/RRF membership IDs",
+        "minimum_missing_facts": [],
+        "missing_corpus_facts": [],
+        "required_document_ranks": {
+          "data-retention-standard": 2,
+          "security-incident-policy": 1
+        },
+        "required_evidence_in_bm25_pool": null,
+        "required_evidence_in_corpus": true,
+        "required_evidence_in_dense_pool": null,
+        "required_evidence_in_rrf_pool": null,
+        "required_evidence_in_top15": true,
+        "required_fact_presence_top15": {
+          "15 minutes": true,
+          "seven years": true
+        }
+      },
+      "router": {
+        "appropriate": true,
+        "final_route": "SOL",
+        "initial_route": "LUNA",
+        "reason": "luna_go_failed_local_validation"
+      },
+      "scorer": {
+        "classification": "INCORRECT_ABSTENTION",
+        "correct": true
+      },
+      "secondary_root_causes": [
+        "VERSION_RESOLVER_OVER_FILTER",
+        "LOCAL_VALIDATOR_FALSE_REJECT",
+        "DETERMINISTIC_ASSEMBLER_ERROR"
+      ],
+      "sol": {
+        "called": true,
+        "correct_relative_to_top15": true,
+        "decision": "GO",
+        "local_validation": {
+          "passed": false,
+          "reason": "WRONG_VERSION"
+        }
+      },
+      "version": {
+        "comparison_required": false,
+        "correct": true,
+        "gold_versions": {
+          "data-retention-standard": "2.0",
+          "security-incident-policy": "2026"
+        },
+        "versions_available": [
+          {
+            "active": true,
+            "document_id": "data-retention-standard",
+            "version": "2.0",
+            "version_id": "b1ea5f93-df0b-42ee-9e4d-18b297d2877e"
+          },
+          {
+            "active": false,
+            "document_id": "security-incident-policy",
+            "version": "2025",
+            "version_id": "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588"
+          },
+          {
+            "active": true,
+            "document_id": "security-incident-policy",
+            "version": "2026",
+            "version_id": "c4d49578-2eec-4051-a54b-addc12af0efa"
+          }
+        ],
+        "versions_selected": [
+          {
+            "document_id": "security-incident-policy",
+            "version": "2026",
+            "version_id": "c4d49578-2eec-4051-a54b-addc12af0efa"
+          }
+        ]
+      }
+    },
+    {
+      "assembler": {
+        "actual_answer": null,
+        "all_requirements_present": true,
+        "emitted": false,
+        "unsupported_fact_present": false
+      },
+      "case_id": "fresh_v1_017",
+      "category": "multidoc_two",
+      "citation": {
+        "cited_sources": [],
+        "complete": true,
+        "correct": true,
+        "valid": true
+      },
+      "evidence": "Both exact facts were Top-3 and Luna/Sol returned GO; selected remote-work version was incorrectly enforced against the finance-policy chunk.",
+      "final_abstention_trigger": "POST_SOL_VALIDATION_REJECT",
+      "first_failure_stage": "LOCAL_VALIDATION",
+      "gold_answerability": true,
+      "gold_required_documents": [
+        "finance-expense-policy",
+        "remote-work-policy"
+      ],
+      "gold_required_facts": [
+        "above 25 euros",
+        "two days per week"
+      ],
+      "gold_required_versions": {
+        "finance-expense-policy": "5.1",
+        "remote-work-policy": "2026"
+      },
+      "local_validation": {
+        "passed": false,
+        "reason": "WRONG_VERSION"
+      },
+      "luna": {
+        "called": true,
+        "correct_relative_to_top15": true,
+        "decision": "GO",
+        "local_validation": {
+          "passed": false,
+          "reason": "WRONG_VERSION"
+        },
+        "requirement_statuses": {
+          "R1": "SUPPORTED",
+          "R2": "SUPPORTED"
+        }
+      },
+      "outcome": "INCORRECT_ABSTENTION",
+      "primary_root_cause": "VERSION_RESOLVER_OVER_FILTER",
+      "question": "State the receipt threshold and the current weekly remote-work allowance.",
+      "question_plan": {
+        "qualifiers": [],
+        "question_plan_hash": "c7162957a972d15109b8537b6050450a8f840de97b0abbc3062aa28b88ba5559",
+        "requirements": [
+          {
+            "requirement_id": "R1",
+            "requirement_text": "the receipt threshold",
+            "requirement_type": "fact"
+          },
+          {
+            "requirement_id": "R2",
+            "requirement_text": "the current weekly remote-work allowance",
+            "requirement_type": "fact"
+          }
+        ]
+      },
+      "retrieval": {
+        "acl_tenant_region_survival": true,
+        "active_version_filter_survival": true,
+        "candidate_pool_trace_status": "TRACE_INSUFFICIENT: frozen dry-run persisted counts but not dense/BM25/RRF membership IDs",
+        "minimum_missing_facts": [],
+        "missing_corpus_facts": [],
+        "required_document_ranks": {
+          "finance-expense-policy": 3,
+          "remote-work-policy": 1
+        },
+        "required_evidence_in_bm25_pool": null,
+        "required_evidence_in_corpus": true,
+        "required_evidence_in_dense_pool": null,
+        "required_evidence_in_rrf_pool": null,
+        "required_evidence_in_top15": true,
+        "required_fact_presence_top15": {
+          "above 25 euros": true,
+          "two days per week": true
+        }
+      },
+      "router": {
+        "appropriate": true,
+        "final_route": "SOL",
+        "initial_route": "LUNA",
+        "reason": "luna_go_failed_local_validation"
+      },
+      "scorer": {
+        "classification": "INCORRECT_ABSTENTION",
+        "correct": true
+      },
+      "secondary_root_causes": [
+        "LOCAL_VALIDATOR_FALSE_REJECT",
+        "SOL_DID_NOT_RESOLVE"
+      ],
+      "sol": {
+        "called": true,
+        "correct_relative_to_top15": true,
+        "decision": "GO",
+        "local_validation": {
+          "passed": false,
+          "reason": "WRONG_VERSION"
+        }
+      },
+      "version": {
+        "comparison_required": false,
+        "correct": true,
+        "gold_versions": {
+          "finance-expense-policy": "5.1",
+          "remote-work-policy": "2026"
+        },
+        "versions_available": [
+          {
+            "active": true,
+            "document_id": "finance-expense-policy",
+            "version": "5.1",
+            "version_id": "4c469613-1997-4632-9a1e-81c37f786041"
+          },
+          {
+            "active": false,
+            "document_id": "remote-work-policy",
+            "version": "2025",
+            "version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac"
+          },
+          {
+            "active": true,
+            "document_id": "remote-work-policy",
+            "version": "2026",
+            "version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c"
+          }
+        ],
+        "versions_selected": [
+          {
+            "document_id": "remote-work-policy",
+            "version": "2026",
+            "version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c"
+          }
+        ]
+      }
+    },
+    {
+      "assembler": {
+        "actual_answer": null,
+        "all_requirements_present": true,
+        "emitted": false,
+        "unsupported_fact_present": false
+      },
+      "case_id": "fresh_v1_022",
+      "category": "multidoc_three",
+      "citation": {
+        "cited_sources": [],
+        "complete": true,
+        "correct": true,
+        "valid": true
+      },
+      "evidence": "All three exact facts were in documents ranked 1/2/3, but Luna marked the four-hour R3 unsupported.",
+      "final_abstention_trigger": "LUNA_ABSTAIN",
+      "first_failure_stage": "LUNA",
+      "gold_answerability": true,
+      "gold_required_documents": [
+        "recovery-runbook-east",
+        "recovery-runbook-west",
+        "operations-continuity-plan"
+      ],
+      "gold_required_facts": [
+        "OPS-REC-E17",
+        "OPS-REC-W29",
+        "four hours"
+      ],
+      "gold_required_versions": {
+        "operations-continuity-plan": "4.0",
+        "recovery-runbook-east": "1.0",
+        "recovery-runbook-west": "1.0"
+      },
+      "local_validation": {
+        "passed": true,
+        "reason": null
+      },
+      "luna": {
+        "called": true,
+        "correct_relative_to_top15": false,
+        "decision": "ABSTAIN",
+        "local_validation": {
+          "passed": true,
+          "reason": null
+        },
+        "requirement_statuses": {
+          "R1": "SUPPORTED",
+          "R2": "SUPPORTED",
+          "R3": "UNSUPPORTED"
+        }
+      },
+      "outcome": "INCORRECT_ABSTENTION",
+      "primary_root_cause": "LUNA_FALSE_NEGATIVE",
+      "question": "Give the east and west recovery codes and the maximum customer API recovery window.",
+      "question_plan": {
+        "qualifiers": [],
+        "question_plan_hash": "16b67d52ff8352cb4247308daa6fa70ae45179ea0aa16ab116f83521b5f32d53",
+        "requirements": [
+          {
+            "requirement_id": "R1",
+            "requirement_text": "the east",
+            "requirement_type": "fact"
+          },
+          {
+            "requirement_id": "R2",
+            "requirement_text": "west recovery codes",
+            "requirement_type": "fact"
+          },
+          {
+            "requirement_id": "R3",
+            "requirement_text": "the maximum customer API recovery window",
+            "requirement_type": "fact"
+          }
+        ]
+      },
+      "retrieval": {
+        "acl_tenant_region_survival": true,
+        "active_version_filter_survival": true,
+        "candidate_pool_trace_status": "TRACE_INSUFFICIENT: frozen dry-run persisted counts but not dense/BM25/RRF membership IDs",
+        "minimum_missing_facts": [],
+        "missing_corpus_facts": [],
+        "required_document_ranks": {
+          "operations-continuity-plan": 3,
+          "recovery-runbook-east": 2,
+          "recovery-runbook-west": 1
+        },
+        "required_evidence_in_bm25_pool": null,
+        "required_evidence_in_corpus": true,
+        "required_evidence_in_dense_pool": null,
+        "required_evidence_in_rrf_pool": null,
+        "required_evidence_in_top15": true,
+        "required_fact_presence_top15": {
+          "OPS-REC-E17": true,
+          "OPS-REC-W29": true,
+          "four hours": true
+        }
+      },
+      "router": {
+        "appropriate": true,
+        "final_route": "SAFE_ABSTAIN",
+        "initial_route": "LUNA",
+        "reason": "required_evidence_absent"
+      },
+      "scorer": {
+        "classification": "INCORRECT_ABSTENTION",
+        "correct": true
+      },
+      "secondary_root_causes": [],
+      "sol": {
+        "called": false,
+        "correct_relative_to_top15": null,
+        "decision": null,
+        "local_validation": null
+      },
+      "version": {
+        "comparison_required": false,
+        "correct": true,
+        "gold_versions": {
+          "operations-continuity-plan": "4.0",
+          "recovery-runbook-east": "1.0",
+          "recovery-runbook-west": "1.0"
+        },
+        "versions_available": [
+          {
+            "active": true,
+            "document_id": "recovery-runbook-east",
+            "version": "1.0",
+            "version_id": "7df73739-827d-45b9-92fc-392ca40af088"
+          },
+          {
+            "active": true,
+            "document_id": "recovery-runbook-west",
+            "version": "1.0",
+            "version_id": "687b9971-bd2b-44c9-ba4a-83f68eb86ac2"
+          },
+          {
+            "active": true,
+            "document_id": "operations-continuity-plan",
+            "version": "4.0",
+            "version_id": "2e316085-67fe-4606-97aa-55577ff89186"
+          }
+        ],
+        "versions_selected": []
+      }
+    },
+    {
+      "assembler": {
+        "actual_answer": null,
+        "all_requirements_present": true,
+        "emitted": false,
+        "unsupported_fact_present": false
+      },
+      "case_id": "fresh_v1_023",
+      "category": "multidoc_three",
+      "citation": {
+        "cited_sources": [],
+        "complete": true,
+        "correct": true,
+        "valid": true
+      },
+      "evidence": "All three exact facts were Top-3 and Luna/Sol returned GO; a checklist scope became an extra requirement and global version validation rejected finance evidence.",
+      "final_abstention_trigger": "POST_SOL_VALIDATION_REJECT",
+      "first_failure_stage": "QUESTION_PLAN",
+      "gold_answerability": true,
+      "gold_required_documents": [
+        "remote-work-policy",
+        "finance-expense-policy"
+      ],
+      "gold_required_facts": [
+        "two days per week",
+        "every month",
+        "ten business days"
+      ],
+      "gold_required_versions": {
+        "finance-expense-policy": "5.1",
+        "remote-work-policy": "2026"
+      },
+      "local_validation": {
+        "passed": false,
+        "reason": "WRONG_VERSION"
+      },
+      "luna": {
+        "called": true,
+        "correct_relative_to_top15": true,
+        "decision": "GO",
+        "local_validation": {
+          "passed": false,
+          "reason": "WRONG_VERSION"
+        },
+        "requirement_statuses": {
+          "R1": "SUPPORTED",
+          "R2": "SUPPORTED",
+          "R3": "SUPPORTED",
+          "R4": "SUPPORTED"
+        }
+      },
+      "outcome": "INCORRECT_ABSTENTION",
+      "primary_root_cause": "QUALIFIER_REQUIREMENT_ERROR",
+      "question": "For a current workforce-and-finance checklist, state the remote-work allowance, manager review frequency, and expense-report filing deadline.",
+      "question_plan": {
+        "qualifiers": [],
+        "question_plan_hash": "d735e367c4b2958f266c4917f9207f497288e4cd1473401f5b98348b7e22d8b1",
+        "requirements": [
+          {
+            "requirement_id": "R1",
+            "requirement_text": "For a current workforce-and-finance checklist",
+            "requirement_type": "fact"
+          },
+          {
+            "requirement_id": "R2",
+            "requirement_text": "state the remote-work allowance",
+            "requirement_type": "fact"
+          },
+          {
+            "requirement_id": "R3",
+            "requirement_text": "manager review frequency",
+            "requirement_type": "fact"
+          },
+          {
+            "requirement_id": "R4",
+            "requirement_text": "expense-report filing deadline",
+            "requirement_type": "fact"
+          }
+        ]
+      },
+      "retrieval": {
+        "acl_tenant_region_survival": true,
+        "active_version_filter_survival": true,
+        "candidate_pool_trace_status": "TRACE_INSUFFICIENT: frozen dry-run persisted counts but not dense/BM25/RRF membership IDs",
+        "minimum_missing_facts": [],
+        "missing_corpus_facts": [],
+        "required_document_ranks": {
+          "finance-expense-policy": 3,
+          "remote-work-policy": 1
+        },
+        "required_evidence_in_bm25_pool": null,
+        "required_evidence_in_corpus": true,
+        "required_evidence_in_dense_pool": null,
+        "required_evidence_in_rrf_pool": null,
+        "required_evidence_in_top15": true,
+        "required_fact_presence_top15": {
+          "every month": true,
+          "ten business days": true,
+          "two days per week": true
+        }
+      },
+      "router": {
+        "appropriate": true,
+        "final_route": "SOL",
+        "initial_route": "LUNA",
+        "reason": "luna_go_failed_local_validation"
+      },
+      "scorer": {
+        "classification": "INCORRECT_ABSTENTION",
+        "correct": true
+      },
+      "secondary_root_causes": [
+        "VERSION_RESOLVER_OVER_FILTER",
+        "LOCAL_VALIDATOR_FALSE_REJECT",
+        "SOL_DID_NOT_RESOLVE"
+      ],
+      "sol": {
+        "called": true,
+        "correct_relative_to_top15": true,
+        "decision": "GO",
+        "local_validation": {
+          "passed": false,
+          "reason": "WRONG_VERSION"
+        }
+      },
+      "version": {
+        "comparison_required": false,
+        "correct": true,
+        "gold_versions": {
+          "finance-expense-policy": "5.1",
+          "remote-work-policy": "2026"
+        },
+        "versions_available": [
+          {
+            "active": false,
+            "document_id": "remote-work-policy",
+            "version": "2025",
+            "version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac"
+          },
+          {
+            "active": true,
+            "document_id": "remote-work-policy",
+            "version": "2026",
+            "version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c"
+          },
+          {
+            "active": true,
+            "document_id": "finance-expense-policy",
+            "version": "5.1",
+            "version_id": "4c469613-1997-4632-9a1e-81c37f786041"
+          }
+        ],
+        "versions_selected": [
+          {
+            "document_id": "remote-work-policy",
+            "version": "2026",
+            "version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c"
+          }
+        ]
+      }
+    },
+    {
+      "assembler": {
+        "actual_answer": null,
+        "all_requirements_present": true,
+        "emitted": false,
+        "unsupported_fact_present": false
+      },
+      "case_id": "fresh_v1_025",
+      "category": "multidoc_three",
+      "citation": {
+        "cited_sources": [],
+        "complete": true,
+        "correct": true,
+        "valid": true
+      },
+      "evidence": "All exact facts were in ranks 1/3; the scope phrase became R1 and Luna returned ABSTAIN despite every saved requirement status being SUPPORTED.",
+      "final_abstention_trigger": "LUNA_ABSTAIN",
+      "first_failure_stage": "QUESTION_PLAN",
+      "gold_answerability": true,
+      "gold_required_documents": [
+        "recovery-runbook-east",
+        "operations-continuity-plan"
+      ],
+      "gold_required_facts": [
+        "eu-central",
+        "first Wednesday",
+        "Operations"
+      ],
+      "gold_required_versions": {
+        "operations-continuity-plan": "4.0",
+        "recovery-runbook-east": "1.0"
+      },
+      "local_validation": {
+        "passed": false,
+        "reason": "DECISION_STATUS_MISMATCH"
+      },
+      "luna": {
+        "called": true,
+        "correct_relative_to_top15": false,
+        "decision": "ABSTAIN",
+        "local_validation": {
+          "passed": false,
+          "reason": "DECISION_STATUS_MISMATCH"
+        },
+        "requirement_statuses": {
+          "R1": "SUPPORTED",
+          "R2": "SUPPORTED",
+          "R3": "SUPPORTED",
+          "R4": "SUPPORTED"
+        }
+      },
+      "outcome": "INCORRECT_ABSTENTION",
+      "primary_root_cause": "QUALIFIER_REQUIREMENT_ERROR",
+      "question": "For east-region resilience, name the standby cluster, the quarterly drill slot, and the continuity-plan owner.",
+      "question_plan": {
+        "qualifiers": [],
+        "question_plan_hash": "ab60c3adde1aef8a2416bcb4f08be3ab7c0f84ce0488463ff339e3bd27955a16",
+        "requirements": [
+          {
+            "requirement_id": "R1",
+            "requirement_text": "For east-region resilience",
+            "requirement_type": "fact"
+          },
+          {
+            "requirement_id": "R2",
+            "requirement_text": "name the standby cluster",
+            "requirement_type": "fact"
+          },
+          {
+            "requirement_id": "R3",
+            "requirement_text": "the quarterly drill slot",
+            "requirement_type": "fact"
+          },
+          {
+            "requirement_id": "R4",
+            "requirement_text": "the continuity-plan owner",
+            "requirement_type": "fact"
+          }
+        ]
+      },
+      "retrieval": {
+        "acl_tenant_region_survival": true,
+        "active_version_filter_survival": true,
+        "candidate_pool_trace_status": "TRACE_INSUFFICIENT: frozen dry-run persisted counts but not dense/BM25/RRF membership IDs",
+        "minimum_missing_facts": [],
+        "missing_corpus_facts": [],
+        "required_document_ranks": {
+          "operations-continuity-plan": 3,
+          "recovery-runbook-east": 1
+        },
+        "required_evidence_in_bm25_pool": null,
+        "required_evidence_in_corpus": true,
+        "required_evidence_in_dense_pool": null,
+        "required_evidence_in_rrf_pool": null,
+        "required_evidence_in_top15": true,
+        "required_fact_presence_top15": {
+          "Operations": true,
+          "eu-central": true,
+          "first Wednesday": true
+        }
+      },
+      "router": {
+        "appropriate": true,
+        "final_route": "SAFE_ABSTAIN",
+        "initial_route": "LUNA",
+        "reason": "non_suspicious_luna_abstention"
+      },
+      "scorer": {
+        "classification": "INCORRECT_ABSTENTION",
+        "correct": true
+      },
+      "secondary_root_causes": [
+        "LUNA_FALSE_NEGATIVE",
+        "ROUTER_ERROR"
+      ],
+      "sol": {
+        "called": false,
+        "correct_relative_to_top15": null,
+        "decision": null,
+        "local_validation": null
+      },
+      "version": {
+        "comparison_required": false,
+        "correct": true,
+        "gold_versions": {
+          "operations-continuity-plan": "4.0",
+          "recovery-runbook-east": "1.0"
+        },
+        "versions_available": [
+          {
+            "active": true,
+            "document_id": "recovery-runbook-east",
+            "version": "1.0",
+            "version_id": "7df73739-827d-45b9-92fc-392ca40af088"
+          },
+          {
+            "active": true,
+            "document_id": "operations-continuity-plan",
+            "version": "4.0",
+            "version_id": "2e316085-67fe-4606-97aa-55577ff89186"
+          }
+        ],
+        "versions_selected": []
+      }
+    },
+    {
+      "assembler": {
+        "actual_answer": "R1: The launch owner is the Product Operations team . [C1]",
+        "all_requirements_present": false,
+        "emitted": true,
+        "unsupported_fact_present": false
+      },
+      "case_id": "fresh_v1_028",
+      "category": "multidoc_three",
+      "citation": {
+        "cited_sources": [
+          {
+            "chunk_id": "826df8a1-5461-4515-95f7-1998a4d3c205",
+            "document_id": "project-atlas-launch",
+            "text": "Project Atlas launched on April 12 , 2026 . The launch owner is the Product Operations team .",
+            "version": "1.0"
+          }
+        ],
+        "complete": false,
+        "correct": false,
+        "valid": true
+      },
+      "evidence": "All three facts were in ranks 1/2/3 and mapped to one R1; assembly emitted only the first span and citation.",
+      "final_abstention_trigger": null,
+      "first_failure_stage": "QUESTION_PLAN",
+      "gold_answerability": true,
+      "gold_required_documents": [
+        "project-atlas-launch",
+        "project-atlas-api",
+        "finance-expense-policy"
+      ],
+      "gold_required_facts": [
+        "Product Operations",
+        "Platform Interfaces",
+        "Finance Operations"
+      ],
+      "gold_required_versions": {
+        "finance-expense-policy": "5.1",
+        "project-atlas-api": "3.0",
+        "project-atlas-launch": "1.0"
+      },
+      "local_validation": {
+        "passed": true,
+        "reason": null
+      },
+      "luna": {
+        "called": true,
+        "correct_relative_to_top15": true,
+        "decision": "GO",
+        "local_validation": {
+          "passed": true,
+          "reason": null
+        },
+        "requirement_statuses": {
+          "R1": "SUPPORTED"
+        }
+      },
+      "outcome": "UNSUPPORTED_ANSWER",
+      "primary_root_cause": "QUESTION_PLAN_ERROR",
+      "question": "State who owns the Atlas launch, who maintains the Atlas API, and who owns finance exception review.",
+      "question_plan": {
+        "qualifiers": [],
+        "question_plan_hash": "1ebaf7548c25733eda973ac334c6dd26b587d57149f4eca8c568b715219363de",
+        "requirements": [
+          {
+            "requirement_id": "R1",
+            "requirement_text": "who owns the Atlas launch, who maintains the Atlas API, and who owns finance exception review",
+            "requirement_type": "fact"
+          }
+        ]
+      },
+      "retrieval": {
+        "acl_tenant_region_survival": true,
+        "active_version_filter_survival": true,
+        "candidate_pool_trace_status": "TRACE_INSUFFICIENT: frozen dry-run persisted counts but not dense/BM25/RRF membership IDs",
+        "minimum_missing_facts": [],
+        "missing_corpus_facts": [],
+        "required_document_ranks": {
+          "finance-expense-policy": 2,
+          "project-atlas-api": 1,
+          "project-atlas-launch": 3
+        },
+        "required_evidence_in_bm25_pool": null,
+        "required_evidence_in_corpus": true,
+        "required_evidence_in_dense_pool": null,
+        "required_evidence_in_rrf_pool": null,
+        "required_evidence_in_top15": true,
+        "required_fact_presence_top15": {
+          "Finance Operations": true,
+          "Platform Interfaces": true,
+          "Product Operations": true
+        }
+      },
+      "router": {
+        "appropriate": true,
+        "final_route": "DETERMINISTIC",
+        "initial_route": "LUNA",
+        "reason": "validated_luna_go"
+      },
+      "scorer": {
+        "classification": "UNSUPPORTED_ANSWER",
+        "correct": true
+      },
+      "secondary_root_causes": [
+        "DETERMINISTIC_ASSEMBLER_ERROR",
+        "CITATION_MAPPING_ERROR",
+        "LOCAL_VALIDATOR_FALSE_ACCEPT"
+      ],
+      "sol": {
+        "called": false,
+        "correct_relative_to_top15": null,
+        "decision": null,
+        "local_validation": null
+      },
+      "version": {
+        "comparison_required": false,
+        "correct": true,
+        "gold_versions": {
+          "finance-expense-policy": "5.1",
+          "project-atlas-api": "3.0",
+          "project-atlas-launch": "1.0"
+        },
+        "versions_available": [
+          {
+            "active": true,
+            "document_id": "project-atlas-launch",
+            "version": "1.0",
+            "version_id": "e431da5b-ef31-440f-a5a4-80a35fb97e24"
+          },
+          {
+            "active": true,
+            "document_id": "project-atlas-api",
+            "version": "3.0",
+            "version_id": "cf5dfd1d-b744-48f1-bfde-41a198d86f35"
+          },
+          {
+            "active": true,
+            "document_id": "finance-expense-policy",
+            "version": "5.1",
+            "version_id": "4c469613-1997-4632-9a1e-81c37f786041"
+          }
+        ],
+        "versions_selected": []
+      }
+    }
+  ],
+  "failure_count": 10,
+  "nonexclusive_secondary_version_involvement": 4,
+  "primary_bucket_counts": {
+    "downstream_or_question_plan": 8,
+    "luna": 1,
+    "retrieval_ranking": 0,
+    "version_handling": 1
+  }
+}

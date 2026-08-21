@@ -1,0 +1,89 @@
+{
+  "api_calls": 0,
+  "cases": [
+    {
+      "case_id": "fresh_v1_009",
+      "classification": "STRUCTURALLY_FIXED_REAL_API_REQUIRED"
+    },
+    {
+      "case_id": "fresh_v1_011",
+      "classification": "FIXED_LOCALLY"
+    },
+    {
+      "case_id": "fresh_v1_013",
+      "classification": "FIXED_LOCALLY"
+    },
+    {
+      "case_id": "fresh_v1_015",
+      "classification": "STRUCTURALLY_FIXED_REAL_API_REQUIRED"
+    },
+    {
+      "case_id": "fresh_v1_016",
+      "classification": "STRUCTURALLY_FIXED_REAL_API_REQUIRED"
+    },
+    {
+      "case_id": "fresh_v1_017",
+      "classification": "STRUCTURALLY_FIXED_REAL_API_REQUIRED"
+    },
+    {
+      "case_id": "fresh_v1_022",
+      "classification": "STRUCTURALLY_FIXED_REAL_API_REQUIRED"
+    },
+    {
+      "case_id": "fresh_v1_023",
+      "classification": "STRUCTURALLY_FIXED_REAL_API_REQUIRED"
+    },
+    {
+      "case_id": "fresh_v1_025",
+      "classification": "STRUCTURALLY_FIXED_REAL_API_REQUIRED"
+    },
+    {
+      "case_id": "fresh_v1_028",
+      "classification": "FIXED_LOCALLY"
+    },
+    {
+      "case_id": "fresh_v1_029",
+      "classification": "FIXED_LOCALLY"
+    },
+    {
+      "case_id": "fresh_v1_030",
+      "classification": "FIXED_LOCALLY"
+    },
+    {
+      "case_id": "fresh_v1_031",
+      "classification": "FIXED_LOCALLY"
+    },
+    {
+      "case_id": "fresh_v1_032",
+      "classification": "FIXED_LOCALLY"
+    },
+    {
+      "case_id": "fresh_v1_033",
+      "classification": "FIXED_LOCALLY"
+    },
+    {
+      "case_id": "fresh_v1_035",
+      "classification": "FIXED_LOCALLY"
+    },
+    {
+      "case_id": "fresh_v1_036",
+      "classification": "STRUCTURALLY_FIXED_REAL_API_REQUIRED"
+    },
+    {
+      "case_id": "fresh_v1_040",
+      "classification": "FIXED_LOCALLY"
+    },
+    {
+      "case_id": "fresh_v1_044",
+      "classification": "FIXED_LOCALLY"
+    }
+  ],
+  "counts": {
+    "FIXED_LOCALLY": 11,
+    "STILL_FAILING": 0,
+    "STRUCTURALLY_FIXED_REAL_API_REQUIRED": 8,
+    "TRACE_INSUFFICIENT": 0
+  },
+  "passed": true,
+  "still_failing": 0
+}

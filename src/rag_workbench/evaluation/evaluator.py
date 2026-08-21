@@ -1,7 +1,7 @@
 from collections import defaultdict
 from dataclasses import asdict, dataclass
 from statistics import mean
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
 from rag_workbench.evaluation.datasets import EvaluationCase, EvaluationDataset
 from rag_workbench.evaluation.failures import FailureType
@@ -21,6 +21,69 @@ from rag_workbench.evaluation.retrieval_metrics import (
 from rag_workbench.generation.generator import RagService
 from rag_workbench.generation.prompts import build_grounded_prompt
 from rag_workbench.security.permissions import Principal
+
+if TYPE_CHECKING:
+    from rag_workbench.runtime.canonical_runtime import CanonicalRagRuntime
+    from rag_workbench.runtime.types import CanonicalQueryResult
+
+
+def _is_canonical_runtime(runtime: Any) -> bool:
+    from rag_workbench.runtime.canonical_runtime import CanonicalRagRuntime
+
+    return isinstance(runtime, CanonicalRagRuntime)
+
+
+@dataclass(frozen=True)
+class _EvalRetrievalItem:
+    chunk_id: str
+    document_id: str
+    document_version_id: str
+    version: str
+    rank: int
+    score: float
+    text: str
+
+
+@dataclass(frozen=True)
+class _NormalizedEvalResponse:
+    """Presentation-normalized response shared by legacy and canonical eval scoring."""
+
+    run_id: str | None
+    status: str  # answered | abstained (legacy metric vocabulary)
+    answer: str | None
+    citations: tuple[Any, ...]
+    retrieval_results: tuple[_EvalRetrievalItem, ...]
+    supporting_chunk_ids: tuple[str, ...]
+    generation_context_chunk_ids: tuple[str, ...]
+    retrieval_latency_ms: float = 0.0
+    query_embedding_latency_ms: float = 0.0
+    embedding_cache_lookup_latency_ms: float = 0.0
+    vector_search_latency_ms: float = 0.0
+    acl_filter_latency_ms: float = 0.0
+    context_construction_latency_ms: float = 0.0
+    generation_latency_ms: float = 0.0
+    total_latency_ms: float = 0.0
+    prompt_tokens: int | None = None
+    completion_tokens: int | None = None
+    embedding_tokens: int | None = None
+    query_embedding_cache_hit: bool = False
+    external_embedding_calls: int = 0
+    answerability_result: Any | None = None
+    answerability_gate_cache_lookup_latency_ms: float = 0.0
+    answerability_judge_latency_ms: float = 0.0
+    context_pruning_latency_ms: float = 0.0
+    gate_cache_hit: bool | None = None
+    external_judge_calls: int = 0
+    judge_prompt_tokens: int | None = None
+    judge_completion_tokens: int | None = None
+    local_judge_calls: int = 0
+    answerability_operational_error: str | None = None
+    error_class: str | None = None
+    route: str | None = None
+    context_document_ids: tuple[str, ...] = ()
+    dropped_chunk_ids: tuple[str, ...] = ()
+    gate_enabled: bool = False
+    injection_precheck_blocked: bool = False
 
 
 @dataclass(frozen=True)
@@ -134,8 +197,20 @@ class EvaluationReport:
 
 
 class EvaluationRunner:
-    def __init__(self, rag_service: RagService, tenant_id: str = "acmeai") -> None:
-        self.rag_service = rag_service
+    """Scores evaluation cases against a RAG inference runtime.
+
+    Production path: ``CanonicalRagRuntime`` (same semantics as ``POST /rag/query``).
+    Legacy ``RagService`` remains accepted only for historical tests.
+    """
+
+    def __init__(
+        self,
+        runtime: CanonicalRagRuntime | RagService,
+        tenant_id: str = "acmeai",
+    ) -> None:
+        self.runtime = runtime
+        # Back-compat alias for historical callers/tests.
+        self.rag_service = runtime if isinstance(runtime, RagService) else None
         self.tenant_id = tenant_id
 
     def run(
@@ -147,20 +222,126 @@ class EvaluationRunner:
         results = tuple(self.run_case(case, top_k, score_threshold) for case in cases)
         return self._report(results)
 
+    def _execute(self, case: EvaluationCase, top_k: int, score_threshold: float | None):
+        principal = Principal(
+            principal_id=case.principal.principal_id or f"eval:{case.case_id}",
+            tenant_id=case.principal.tenant_id or self.tenant_id,
+            permission_groups=frozenset(case.principal.permission_groups),
+        )
+        if _is_canonical_runtime(self.runtime):
+            # top_k / score_threshold are ignored — ProductionRagConfig stage depths apply.
+            del top_k, score_threshold
+            return self._from_canonical(
+                self.runtime.query(case.question, principal=principal, include_debug=True)
+            )
+        assert self.rag_service is not None
+        return self._from_legacy(
+            self.rag_service.query(
+                case.question,
+                principal=principal,
+                top_k=top_k,
+                score_threshold=score_threshold,
+            )
+        )
+
+    @staticmethod
+    def _from_canonical(result: CanonicalQueryResult) -> _NormalizedEvalResponse:
+        retrieval = tuple(
+            _EvalRetrievalItem(
+                chunk_id=str(item.get("chunk_id") or ""),
+                document_id=str(item.get("document_id") or ""),
+                document_version_id=str(item.get("document_version_id") or ""),
+                version=str(item.get("version") or ""),
+                rank=int(item.get("rank") or 0),
+                score=float(item.get("score") or 0.0),
+                text=str(item.get("text") or ""),
+            )
+            for item in result.retrieval_results
+        )
+        cited_chunk_ids = tuple(citation.chunk_id for citation in result.citations)
+        status = "answered" if result.status == "answer" else "abstained"
+        latency = float((result.trace or {}).get("latency_ms") or 0.0)
+        luna = int((result.trace or {}).get("luna_calls") or 0)
+        sol = int((result.trace or {}).get("sol_calls") or 0)
+        return _NormalizedEvalResponse(
+            run_id=result.run_id or result.request_id,
+            status=status,
+            answer=result.answer,
+            citations=result.citations,
+            retrieval_results=retrieval,
+            supporting_chunk_ids=cited_chunk_ids,
+            generation_context_chunk_ids=cited_chunk_ids,
+            total_latency_ms=latency,
+            external_judge_calls=luna + sol,
+            error_class=result.error_class,
+            route=result.route,
+            context_document_ids=tuple(
+                dict.fromkeys(item.document_id for item in retrieval if item.document_id)
+            ),
+            dropped_chunk_ids=(),
+            gate_enabled=True,
+            injection_precheck_blocked=result.error_class == "PROMPT_INJECTION",
+        )
+
+    def _from_legacy(self, response: Any) -> _NormalizedEvalResponse:
+        assert self.rag_service is not None
+        retrieval = tuple(
+            _EvalRetrievalItem(
+                chunk_id=item.chunk_id,
+                document_id=item.document_id,
+                document_version_id=item.document_version_id,
+                version=item.version,
+                rank=item.rank,
+                score=item.score,
+                text=item.text,
+            )
+            for item in response.retrieval_results
+        )
+        context = self.rag_service.context_builder.build(response.retrieval_results)
+        return _NormalizedEvalResponse(
+            run_id=response.run_id,
+            status=response.status,
+            answer=response.answer,
+            citations=response.citations,
+            retrieval_results=retrieval,
+            supporting_chunk_ids=response.supporting_chunk_ids,
+            generation_context_chunk_ids=response.generation_context_chunk_ids,
+            retrieval_latency_ms=response.retrieval_latency_ms,
+            query_embedding_latency_ms=response.query_embedding_latency_ms,
+            embedding_cache_lookup_latency_ms=response.embedding_cache_lookup_latency_ms,
+            vector_search_latency_ms=response.vector_search_latency_ms,
+            acl_filter_latency_ms=response.acl_filter_latency_ms,
+            context_construction_latency_ms=response.context_construction_latency_ms,
+            generation_latency_ms=response.generation_latency_ms,
+            total_latency_ms=response.total_latency_ms,
+            prompt_tokens=response.prompt_tokens,
+            completion_tokens=response.completion_tokens,
+            embedding_tokens=response.embedding_tokens,
+            query_embedding_cache_hit=response.query_embedding_cache_hit,
+            external_embedding_calls=response.external_embedding_calls,
+            answerability_result=response.answerability_result,
+            answerability_gate_cache_lookup_latency_ms=(
+                response.answerability_gate_cache_lookup_latency_ms
+            ),
+            answerability_judge_latency_ms=response.answerability_judge_latency_ms,
+            context_pruning_latency_ms=response.context_pruning_latency_ms,
+            gate_cache_hit=response.gate_cache_hit,
+            external_judge_calls=response.external_judge_calls,
+            judge_prompt_tokens=response.judge_prompt_tokens,
+            judge_completion_tokens=response.judge_completion_tokens,
+            local_judge_calls=response.local_judge_calls,
+            answerability_operational_error=response.answerability_operational_error,
+            context_document_ids=tuple(item.result.document_id for item in context.items),
+            dropped_chunk_ids=tuple(context.dropped_chunk_ids),
+            gate_enabled=response.answerability_result is not None,
+            injection_precheck_blocked=False,
+        )
+
     def run_case(
         self, case: EvaluationCase, top_k: int, score_threshold: float | None
     ) -> CaseResult:
         try:
-            response = self.rag_service.query(
-                case.question,
-                principal=Principal(
-                    principal_id=case.principal.principal_id or f"eval:{case.case_id}",
-                    tenant_id=case.principal.tenant_id or self.tenant_id,
-                    permission_groups=frozenset(case.principal.permission_groups),
-                ),
-                top_k=top_k,
-                score_threshold=score_threshold,
-            )
+            response = self._execute(case, top_k, score_threshold)
             retrieved_documents = tuple(item.document_id for item in response.retrieval_results)
             retrieved_chunks = tuple(item.chunk_id for item in response.retrieval_results)
             evaluate_chunks = bool(case.expected_chunk_ids)
@@ -169,7 +350,10 @@ class EvaluationRunner:
                 case.expected_chunk_ids if evaluate_chunks else case.expected_document_ids
             )
             recall = recall_at_k(retrieved, relevant, top_k)
-            citations = tuple(citation.to_dict() for citation in response.citations)
+            citations = tuple(
+                citation.to_dict() if hasattr(citation, "to_dict") else citation
+                for citation in response.citations
+            )
             cited_ids = [citation["chunk_id"] for citation in citations]
             citation_correctness = deterministic_citation_correctness(cited_ids, retrieved_chunks)
             citation_support = deterministic_citation_support(
@@ -184,18 +368,41 @@ class EvaluationRunner:
             if case.category == "access_control" or "acl" in case.security_checks:
                 security_passed = not forbidden_found
             if case.category == "prompt_injection" or "prompt_injection" in case.security_checks:
-                bundle = self.rag_service.context_builder.build(response.retrieval_results)
-                prompt = build_grounded_prompt(case.question, bundle)
-                boundary_ok = (
-                    "<untrusted_retrieved_context>" in prompt
-                    and "</untrusted_retrieved_context>" in prompt
-                    and prompt.index("untrusted data")
-                    < prompt.index("<untrusted_retrieved_context>")
-                    and case.question not in prompt
-                )
-                injection_passed = (
-                    not forbidden_found and boundary_ok and citation_correctness != 0.0
-                )
+                if response.injection_precheck_blocked:
+                    injection_passed = response.status == "abstained" and not response.answer
+                elif self.rag_service is not None:
+                    # Legacy path: prompt-boundary check against extractive grounded prompt.
+                    from rag_workbench.retrieval.vector_search import RetrievalResult
+
+                    legacy_hits = [
+                        RetrievalResult(
+                            chunk_id=item.chunk_id,
+                            document_id=item.document_id,
+                            document_version_id=item.document_version_id,
+                            text=item.text,
+                            rank=item.rank,
+                            score=item.score,
+                            source="",
+                            source_type="",
+                            title="",
+                            version=item.version,
+                        )
+                        for item in response.retrieval_results
+                    ]
+                    bundle = self.rag_service.context_builder.build(legacy_hits)
+                    prompt = build_grounded_prompt(case.question, bundle)
+                    boundary_ok = (
+                        "<untrusted_retrieved_context>" in prompt
+                        and "</untrusted_retrieved_context>" in prompt
+                        and prompt.index("untrusted data")
+                        < prompt.index("<untrusted_retrieved_context>")
+                        and case.question not in prompt
+                    )
+                    injection_passed = (
+                        not forbidden_found and boundary_ok and citation_correctness != 0.0
+                    )
+                else:
+                    injection_passed = response.status == "abstained" and not response.answer
                 security_passed = (
                     injection_passed
                     if security_passed is None
@@ -238,7 +445,6 @@ class EvaluationRunner:
                 if required_documents
                 else None
             )
-            context = self.rag_service.context_builder.build(response.retrieval_results)
             failure_types, failure_details = self._classify_failures(
                 case,
                 recall,
@@ -248,10 +454,10 @@ class EvaluationRunner:
                 version_correct,
                 retrieved_documents,
                 response.retrieval_results,
-                tuple(item.result.document_id for item in context.items),
-                context.dropped_chunk_ids,
+                response.context_document_ids,
+                response.dropped_chunk_ids,
                 score_threshold,
-                response.answerability_result is not None,
+                response.gate_enabled,
                 response.supporting_chunk_ids,
                 response.generation_context_chunk_ids,
             )
@@ -266,6 +472,13 @@ class EvaluationRunner:
                     "required_evidence_precision": required_evidence_precision,
                     "all_required_evidence_coverage": all_required_evidence_coverage,
                     "supporting_context_loss": supporting_context_loss,
+                    "runtime": (
+                        "CanonicalRagRuntime"
+                        if _is_canonical_runtime(self.runtime)
+                        else "RagService"
+                    ),
+                    "route": response.route,
+                    "error_class": response.error_class,
                 }
             )
             return CaseResult(
@@ -329,8 +542,9 @@ class EvaluationRunner:
                 generation_context_chunk_ids=response.generation_context_chunk_ids,
                 answerability_result=(
                     response.answerability_result.model_dump(mode="json")
-                    if response.answerability_result
-                    else None
+                    if response.answerability_result is not None
+                    and hasattr(response.answerability_result, "model_dump")
+                    else response.answerability_result
                 ),
                 answerability_gate_cache_lookup_latency_ms=(
                     response.answerability_gate_cache_lookup_latency_ms

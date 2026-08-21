@@ -1,0 +1,46 @@
+{
+  "experiment_id": "PRODUCTION_SERVING_PROMOTION",
+  "timestamp": "2026-08-21T09:00:17.333083+00:00",
+  "principle": "Evaluation and Web Serving share CanonicalRagRuntime / retrieve_evidence_pool",
+  "retrieval_parity": {
+    "dense_top_k": {
+      "research": 20,
+      "serving": 20,
+      "match": true
+    },
+    "bm25_top_k": {
+      "research": 20,
+      "serving": 20,
+      "match": true
+    },
+    "rrf_k": {
+      "research": 60,
+      "serving": 60,
+      "match": true
+    },
+    "fused_candidate_cap": {
+      "research": 30,
+      "serving": 30,
+      "match": true
+    },
+    "cross_encoder_top_k": {
+      "research": 15,
+      "serving": 15,
+      "match": true
+    },
+    "legacy_final_top_k_note": 5
+  },
+  "shared_modules": [
+    "src/rag_workbench/runtime/canonical_runtime.py",
+    "src/rag_workbench/runtime/retrieval.py",
+    "src/rag_workbench/retrieval/hybrid.py",
+    "src/rag_workbench/retrieval/bm25.py",
+    "src/rag_workbench/reranking/cross_encoder.py",
+    "src/rag_workbench/experiments/atomic_requirement_contract_v1",
+    "src/rag_workbench/experiments/requirement_assembler_selective_routing_v1"
+  ],
+  "web_entry": "POST /rag/query \u2192 CanonicalRagRuntime.query",
+  "research_entry": "evaluate scripts \u2192 same modules / retrieve_evidence_pool depths",
+  "unexplained_skew": [],
+  "parity_status": "PASSED_CONFIG_AND_MODULE_IDENTITY"
+}

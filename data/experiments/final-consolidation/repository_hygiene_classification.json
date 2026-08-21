@@ -1,0 +1,25 @@
+{
+  "KEEP": [
+    "data/experiments/rag-release-pipeline-v14/",
+    "data/experiments/production-finalization/",
+    "data/experiments/final-consolidation/",
+    "src/rag_workbench/runtime/",
+    "src/rag_workbench/experiments/atomic_requirement_contract_v1/"
+  ],
+  "IGNORE": [
+    ".venv/",
+    "__pycache__/",
+    ".env",
+    "node_modules/",
+    ".next/",
+    ".local/",
+    "artifacts/",
+    "*.zip"
+  ],
+  "REMOVE": [],
+  "ARCHIVE": [
+    "enterprise-rag-interview-private-2026-08-19.zip",
+    "rag_evaluation_audit_export.zip"
+  ],
+  "note": "Zips and .local/artifacts ignored via .gitignore; not deleted to avoid irreversible loss."
+}

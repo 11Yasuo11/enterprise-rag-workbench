@@ -1,0 +1,316 @@
+{
+  "cases": [
+    {
+      "category": "three_document",
+      "expected_answerable": true,
+      "expected_route_class": "LUNA",
+      "forbidden_document_ids": [],
+      "group": "A",
+      "principal": {
+        "permission_groups": [
+          "employees"
+        ],
+        "principal_id": "evaluation-user",
+        "tenant_id": "acmeai"
+      },
+      "query_id": "p5k_three_document_027",
+      "question": "PhaseK audit token three_document-027 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. Provide deployment approval ID, API recovery time objective, and remote-work weekly allowance.",
+      "required_document_ids": [
+        "engineering-deployment-handbook",
+        "operations-continuity-plan",
+        "remote-work-policy"
+      ],
+      "required_facts": [
+        "ENG-DEP-17",
+        "four hours",
+        "two days per week"
+      ],
+      "security_checks": [],
+      "selection_note": "multi-document requirements with complete evidence in Top-15",
+      "should_abstain": false
+    },
+    {
+      "category": "three_document",
+      "expected_answerable": true,
+      "expected_route_class": "LUNA",
+      "forbidden_document_ids": [],
+      "group": "A",
+      "principal": {
+        "permission_groups": [
+          "employees"
+        ],
+        "principal_id": "evaluation-user",
+        "tenant_id": "acmeai"
+      },
+      "query_id": "p5k_three_document_033",
+      "question": "PhaseK audit token three_document-033 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. Provide deployment approval ID, API recovery time objective, and remote-work weekly allowance.",
+      "required_document_ids": [
+        "engineering-deployment-handbook",
+        "operations-continuity-plan",
+        "remote-work-policy"
+      ],
+      "required_facts": [
+        "ENG-DEP-17",
+        "four hours",
+        "two days per week"
+      ],
+      "security_checks": [],
+      "selection_note": "multi-document requirements with complete evidence in Top-15",
+      "should_abstain": false
+    },
+    {
+      "category": "three_document",
+      "expected_answerable": true,
+      "expected_route_class": "LUNA",
+      "forbidden_document_ids": [],
+      "group": "A",
+      "principal": {
+        "permission_groups": [
+          "employees"
+        ],
+        "principal_id": "evaluation-user",
+        "tenant_id": "acmeai"
+      },
+      "query_id": "p5k_three_document_041",
+      "question": "PhaseK audit token three_document-041 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. Provide deployment approval ID, API recovery time objective, and remote-work weekly allowance.",
+      "required_document_ids": [
+        "engineering-deployment-handbook",
+        "operations-continuity-plan",
+        "remote-work-policy"
+      ],
+      "required_facts": [
+        "ENG-DEP-17",
+        "four hours",
+        "two days per week"
+      ],
+      "security_checks": [],
+      "selection_note": "multi-document requirements with complete evidence in Top-15",
+      "should_abstain": false
+    },
+    {
+      "category": "version_sensitive",
+      "expected_answerable": true,
+      "expected_route_class": "DETERMINISTIC",
+      "forbidden_document_ids": [],
+      "group": "B",
+      "principal": {
+        "permission_groups": [
+          "employees"
+        ],
+        "principal_id": "evaluation-user",
+        "tenant_id": "acmeai"
+      },
+      "query_id": "p5k_version_sensitive_079",
+      "question": "PhaseK audit token version_sensitive-079 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. When release control selects the currently active operational handbook revision, report the east-failover recovery token.",
+      "required_document_ids": [
+        "recovery-runbook-east"
+      ],
+      "required_facts": [
+        "OPS-REC-E17"
+      ],
+      "security_checks": [],
+      "selection_note": "version/temporal resolution using observable metadata",
+      "should_abstain": false
+    },
+    {
+      "category": "version_sensitive",
+      "expected_answerable": true,
+      "expected_route_class": "DETERMINISTIC",
+      "forbidden_document_ids": [],
+      "group": "B",
+      "principal": {
+        "permission_groups": [
+          "employees"
+        ],
+        "principal_id": "evaluation-user",
+        "tenant_id": "acmeai"
+      },
+      "query_id": "p5k_version_sensitive_080",
+      "question": "PhaseK audit token version_sensitive-080 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. When release control selects the currently active operational handbook revision, report the west-failover recovery token.",
+      "required_document_ids": [
+        "recovery-runbook-west"
+      ],
+      "required_facts": [
+        "OPS-REC-W29"
+      ],
+      "security_checks": [],
+      "selection_note": "version/temporal resolution using observable metadata",
+      "should_abstain": false
+    },
+    {
+      "category": "version_temporal",
+      "expected_answerable": true,
+      "expected_route_class": "LUNA",
+      "expected_versions": {
+        "remote-work-policy": "2026"
+      },
+      "group": "B",
+      "principal": {
+        "permission_groups": [
+          "employees"
+        ],
+        "principal_id": "evaluation-user",
+        "tenant_id": "acmeai"
+      },
+      "query_id": "judge_near_05",
+      "question": "Use the currently enforceable distributed-work text, not its superseded edition: give allowance and review interval.",
+      "required_document_ids": [
+        "remote-work-policy"
+      ],
+      "required_facts": [
+        "two days per week",
+        "every month"
+      ],
+      "selection_note": "version/temporal resolution using observable metadata",
+      "should_abstain": false
+    },
+    {
+      "category": "numeric_date_constraint",
+      "expected_answerable": true,
+      "expected_route_class": "DETERMINISTIC",
+      "forbidden_document_ids": [],
+      "group": "C",
+      "principal": {
+        "permission_groups": [
+          "employees"
+        ],
+        "principal_id": "evaluation-user",
+        "tenant_id": "acmeai"
+      },
+      "query_id": "p5k_numeric_date_constraint_093",
+      "question": "PhaseK audit token numeric_date_constraint-093 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. What expense threshold relation is stated for requiring receipts?",
+      "required_document_ids": [
+        "finance-expense-policy"
+      ],
+      "required_facts": [
+        "above 25 euros"
+      ],
+      "security_checks": [],
+      "selection_note": "numeric/date/duration constraint preservation",
+      "should_abstain": false
+    },
+    {
+      "category": "numeric_date_constraint",
+      "expected_answerable": true,
+      "expected_route_class": "DETERMINISTIC",
+      "forbidden_document_ids": [],
+      "group": "C",
+      "principal": {
+        "permission_groups": [
+          "employees"
+        ],
+        "principal_id": "evaluation-user",
+        "tenant_id": "acmeai"
+      },
+      "query_id": "p5k_numeric_date_constraint_094",
+      "question": "PhaseK audit token numeric_date_constraint-094 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. What launch date is stated for Project Atlas?",
+      "required_document_ids": [
+        "project-atlas-launch"
+      ],
+      "required_facts": [
+        "April 12, 2026"
+      ],
+      "security_checks": [],
+      "selection_note": "numeric/date/duration constraint preservation",
+      "should_abstain": false
+    },
+    {
+      "category": "numeric_date_constraint",
+      "expected_answerable": true,
+      "expected_route_class": "DETERMINISTIC",
+      "expected_versions": {
+        "security-incident-policy": "2026"
+      },
+      "group": "C",
+      "principal": {
+        "permission_groups": [
+          "employees"
+        ],
+        "principal_id": "evaluation-user",
+        "tenant_id": "acmeai"
+      },
+      "query_id": "target_duration_001",
+      "question": "Ignoring the 2025 incident edition, how quickly must a severity-one suspicion reach the duty officer?",
+      "required_document_ids": [
+        "security-incident-policy"
+      ],
+      "required_facts": [
+        "15 minutes"
+      ],
+      "selection_note": "numeric/date/duration constraint preservation",
+      "should_abstain": false
+    },
+    {
+      "category": "single_document",
+      "expected_answerable": true,
+      "expected_route_class": "DETERMINISTIC",
+      "forbidden_document_ids": [],
+      "group": "D",
+      "principal": {
+        "permission_groups": [
+          "employees"
+        ],
+        "principal_id": "evaluation-user",
+        "tenant_id": "acmeai"
+      },
+      "query_id": "p5k_single_document_001",
+      "question": "PhaseK audit token single_document-001 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. State the production deployment approval identifier.",
+      "required_document_ids": [
+        "engineering-deployment-handbook"
+      ],
+      "required_facts": [
+        "ENG-DEP-17"
+      ],
+      "security_checks": [],
+      "selection_note": "deterministic, semantic-Luna, and genuine missing-evidence routing",
+      "should_abstain": false
+    },
+    {
+      "category": "semantic_paraphrase",
+      "expected_answerable": true,
+      "expected_route_class": "LUNA",
+      "forbidden_document_ids": [],
+      "group": "D",
+      "principal": {
+        "permission_groups": [
+          "employees"
+        ],
+        "principal_id": "evaluation-user",
+        "tenant_id": "acmeai"
+      },
+      "query_id": "p5k_semantic_paraphrase_054",
+      "question": "PhaseK audit token semantic_paraphrase-054 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. In plain language, who maintains the Atlas API?",
+      "required_document_ids": [
+        "project-atlas-api"
+      ],
+      "required_facts": [
+        "Platform Interfaces team"
+      ],
+      "security_checks": [],
+      "selection_note": "deterministic, semantic-Luna, and genuine missing-evidence routing",
+      "should_abstain": false
+    },
+    {
+      "category": "unsupported_no_answer",
+      "expected_answerable": false,
+      "expected_route_class": "LUNA",
+      "forbidden_document_ids": [],
+      "group": "D",
+      "principal": {
+        "permission_groups": [
+          "employees"
+        ],
+        "principal_id": "evaluation-user",
+        "tenant_id": "acmeai"
+      },
+      "query_id": "p5k_unsupported_no_answer_116",
+      "question": "PhaseK audit token unsupported_no_answer-116 azimuth cobalt lattice rivulet zephyr manganese orbit quasar filament harpoon ember tundra. What is the cafeteria kombucha vendor contract ID for this quarter?",
+      "required_document_ids": [],
+      "required_facts": [],
+      "security_checks": [],
+      "selection_note": "deterministic, semantic-Luna, and genuine missing-evidence routing",
+      "should_abstain": true
+    }
+  ],
+  "experiment_id": "COMBINED_TARGETED_REAL_API_VALIDATION_V1"
+}

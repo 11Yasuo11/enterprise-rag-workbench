@@ -1,0 +1,325 @@
+{
+  "api_cost": {
+    "new_cost_usd": 0.0,
+    "new_embedding_calls": 0,
+    "new_luna_calls": 0,
+    "new_openai_calls": 0,
+    "new_sol_calls": 0
+  },
+  "contract": {
+    "assembler_same_plan_count": 19,
+    "contract_mismatch_case_ids": [],
+    "contract_mismatch_count": 0,
+    "downstream_redecomposition_count": 0,
+    "failure_case_count": 19,
+    "identity_contract_successful": true,
+    "interpretation": "ATOMIC_REQUIREMENT_CONTRACT identity propagation remains successful and should not be weakened. Several label-blind plans are semantically mis-decomposed, which is distinct from hash/ID contract mismatch.",
+    "plan_hash_stable_count": 19,
+    "requirement_ids_stable_count": 19,
+    "semantic_plan_errors": [
+      "fresh_v1_009",
+      "fresh_v1_011",
+      "fresh_v1_013",
+      "fresh_v1_015",
+      "fresh_v1_016",
+      "fresh_v1_023",
+      "fresh_v1_025",
+      "fresh_v1_028",
+      "fresh_v1_030",
+      "fresh_v1_036",
+      "fresh_v1_044"
+    ],
+    "verifier_schema_match_count": 19
+  },
+  "experiment_id": "FRESH_UNSEEN_FAILURE_CENSUS_V1",
+  "failure_summary": {
+    "artifact_failure_count": 19,
+    "case_ids": [
+      "fresh_v1_009",
+      "fresh_v1_011",
+      "fresh_v1_013",
+      "fresh_v1_015",
+      "fresh_v1_016",
+      "fresh_v1_017",
+      "fresh_v1_022",
+      "fresh_v1_023",
+      "fresh_v1_025",
+      "fresh_v1_028",
+      "fresh_v1_029",
+      "fresh_v1_030",
+      "fresh_v1_031",
+      "fresh_v1_032",
+      "fresh_v1_033",
+      "fresh_v1_035",
+      "fresh_v1_036",
+      "fresh_v1_040",
+      "fresh_v1_044"
+    ],
+    "experiment_id": "FRESH_UNSEEN_FAILURE_CENSUS_V1",
+    "matches_user_known_failure_set": true,
+    "new_api_calls": 0,
+    "outcome_counts": {
+      "INCORRECT_ABSTENTION": 15,
+      "UNSUPPORTED_ANSWER": 4
+    },
+    "prediction_sha256_verified": "a6e44ddc85161b4494f15996ad75a80db90c1b7014d3f324c7538ceaabe42280",
+    "source_experiment": "FRESH_UNSEEN_EVALUATION_V1_2"
+  },
+  "first_failure_stage_distribution": {
+    "ACTIVE_VERSION_RETRIEVAL_FILTER": 5,
+    "LOCAL_VALIDATION": 1,
+    "LUNA": 2,
+    "QUESTION_PLAN": 11
+  },
+  "incorrect_abstentions": {
+    "complete_top15": 10,
+    "count": 15,
+    "trigger_counts": {
+      "LUNA_ABSTAIN": 9,
+      "POST_SOL_VALIDATION_REJECT": 5,
+      "SOL_ABSTAIN": 1
+    }
+  },
+  "luna": {
+    "correct_abstain": 5,
+    "correct_go": 10,
+    "correct_uncertain": 0,
+    "failed_case_luna_calls": 19,
+    "false_negative_count_relative_to_top15": 4,
+    "false_negatives": [
+      {
+        "case_id": "fresh_v1_022",
+        "evidence_type": "exact supporting span + multiple documents"
+      },
+      {
+        "case_id": "fresh_v1_025",
+        "evidence_type": "exact supporting spans + multiple documents; decision/status inconsistency"
+      },
+      {
+        "case_id": "fresh_v1_040",
+        "evidence_type": "exact rule + derived numeric inference"
+      },
+      {
+        "case_id": "fresh_v1_044",
+        "evidence_type": "exact rule + derived numeric comparison"
+      }
+    ],
+    "false_positive_count_among_unsupported_answers": 0,
+    "incorrect_abstain": 4,
+    "incorrect_go": 0,
+    "incorrect_uncertain": 0,
+    "note": "Unsupported outputs had complete Luna mappings; downstream plan cardinality/assembler truncation, not Luna GO, caused them."
+  },
+  "multidoc": {
+    "all_required_evidence_complete_top15": 10,
+    "failure_count": 10,
+    "nonexclusive_secondary_version_involvement": 4,
+    "primary_bucket_counts": {
+      "downstream_or_question_plan": 8,
+      "luna": 1,
+      "retrieval_ranking": 0,
+      "version_handling": 1
+    }
+  },
+  "next_step": "Implement P0 semantic output-cardinality/qualifier invariant locally; do not run another paid evaluation.",
+  "preserved_success_categories": {
+    "access_control_allow": 1.0,
+    "access_control_deny": 1.0,
+    "prompt_injection": 1.0,
+    "single_semantic": 1.0,
+    "unanswerable": 1.0
+  },
+  "retrieval_coverage": {
+    "bm25_membership": "TRACE_INSUFFICIENT",
+    "complete_case_ids": [
+      "fresh_v1_009",
+      "fresh_v1_011",
+      "fresh_v1_013",
+      "fresh_v1_015",
+      "fresh_v1_016",
+      "fresh_v1_017",
+      "fresh_v1_022",
+      "fresh_v1_023",
+      "fresh_v1_025",
+      "fresh_v1_028",
+      "fresh_v1_030",
+      "fresh_v1_036",
+      "fresh_v1_040",
+      "fresh_v1_044"
+    ],
+    "dense_membership": "TRACE_INSUFFICIENT",
+    "incomplete_cases": [
+      {
+        "case_id": "fresh_v1_029",
+        "cause": "inactive historical version excluded by frozen active-only retrieval",
+        "missing_facts": [
+          "three days per week"
+        ]
+      },
+      {
+        "case_id": "fresh_v1_031",
+        "cause": "inactive historical version excluded by frozen active-only retrieval",
+        "missing_facts": [
+          "three days per week"
+        ]
+      },
+      {
+        "case_id": "fresh_v1_032",
+        "cause": "inactive historical version excluded by frozen active-only retrieval",
+        "missing_facts": [
+          "every quarter"
+        ]
+      },
+      {
+        "case_id": "fresh_v1_033",
+        "cause": "inactive historical version excluded by frozen active-only retrieval",
+        "missing_facts": [
+          "60 minutes"
+        ]
+      },
+      {
+        "case_id": "fresh_v1_035",
+        "cause": "inactive historical version excluded by frozen active-only retrieval",
+        "missing_facts": [
+          "60 minutes"
+        ]
+      }
+    ],
+    "required_evidence_complete_in_top15": 14,
+    "required_evidence_incomplete_in_top15": 5,
+    "required_evidence_present_in_corpus": 19,
+    "rrf_membership": "TRACE_INSUFFICIENT",
+    "trace_note": "The frozen dry-run saved branch counts and Top-15 IDs, not dense/BM25/RRF membership IDs. Frozen source code proves both branches filter DocumentVersion.is_active=true."
+  },
+  "root_cause_census": [
+    {
+      "case_ids": [
+        "fresh_v1_011",
+        "fresh_v1_013",
+        "fresh_v1_016",
+        "fresh_v1_028",
+        "fresh_v1_030",
+        "fresh_v1_036"
+      ],
+      "failure_count": 6,
+      "incorrect_abstention": 2,
+      "root_cause": "QUESTION_PLAN_ERROR",
+      "unsupported_answer": 4
+    },
+    {
+      "case_ids": [
+        "fresh_v1_009",
+        "fresh_v1_015",
+        "fresh_v1_023",
+        "fresh_v1_025",
+        "fresh_v1_044"
+      ],
+      "failure_count": 5,
+      "incorrect_abstention": 5,
+      "root_cause": "QUALIFIER_REQUIREMENT_ERROR",
+      "unsupported_answer": 0
+    },
+    {
+      "case_ids": [
+        "fresh_v1_031",
+        "fresh_v1_032",
+        "fresh_v1_035"
+      ],
+      "failure_count": 3,
+      "incorrect_abstention": 3,
+      "root_cause": "VERSION_COMPARISON_UNSUPPORTED",
+      "unsupported_answer": 0
+    },
+    {
+      "case_ids": [
+        "fresh_v1_022",
+        "fresh_v1_040"
+      ],
+      "failure_count": 2,
+      "incorrect_abstention": 2,
+      "root_cause": "LUNA_FALSE_NEGATIVE",
+      "unsupported_answer": 0
+    },
+    {
+      "case_ids": [
+        "fresh_v1_029",
+        "fresh_v1_033"
+      ],
+      "failure_count": 2,
+      "incorrect_abstention": 2,
+      "root_cause": "TEMPORAL_SCOPE_ERROR",
+      "unsupported_answer": 0
+    },
+    {
+      "case_ids": [
+        "fresh_v1_017"
+      ],
+      "failure_count": 1,
+      "incorrect_abstention": 1,
+      "root_cause": "VERSION_RESOLVER_OVER_FILTER",
+      "unsupported_answer": 0
+    }
+  ],
+  "router": {
+    "note": "For ABSTAIN plus all-SUPPORTED/invalid decision consistency, the post-Luna router safe-abstained instead of escalating; the upstream Luna inconsistency remains primary.",
+    "router_caused_failures": 0,
+    "secondary_missed_escalation_cases": [
+      "fresh_v1_025",
+      "fresh_v1_040"
+    ],
+    "statement": "Router was not the primary cause of any fresh failure."
+  },
+  "scorer": {
+    "audited_failure_count": 19,
+    "correct_classification_count": 19,
+    "scorer_false_negative_count": 0,
+    "scorer_false_positive_count": 0
+  },
+  "sol": {
+    "call_count": 8,
+    "cost_per_actual_rescue_usd": 0.083255,
+    "non_rescues": 6,
+    "regressions": 0,
+    "rescues": 2,
+    "total_sol_cost_usd": 0.16651
+  },
+  "timestamp": "2026-08-20T16:03:29.149143+00:00",
+  "trace_insufficiency": [
+    "Dense candidate membership IDs not persisted",
+    "BM25 candidate membership IDs not persisted",
+    "RRF candidate membership IDs not persisted"
+  ],
+  "unsupported_answers": {
+    "all_deterministically_preventable": true,
+    "count": 4
+  },
+  "verdict": "FRESH_FAILURE_CENSUS_PARTIAL_TRACE_INSUFFICIENT",
+  "version_temporal": {
+    "category_total": 8,
+    "comparison_failures": [
+      "fresh_v1_031",
+      "fresh_v1_032",
+      "fresh_v1_035"
+    ],
+    "evidence": "Dense and BM25 frozen SQL require is_active=true, excluding 2025. The resolver returns one candidate and predictions contain at most one selected version ID.",
+    "failed_case_ids": [
+      "fresh_v1_029",
+      "fresh_v1_030",
+      "fresh_v1_031",
+      "fresh_v1_032",
+      "fresh_v1_033",
+      "fresh_v1_035",
+      "fresh_v1_036"
+    ],
+    "failed_count": 7,
+    "historical_only_failures": [
+      "fresh_v1_029",
+      "fresh_v1_033"
+    ],
+    "other_version_failures": [
+      "fresh_v1_030",
+      "fresh_v1_036"
+    ],
+    "version_resolver_supports_both_historical_and_current_simultaneously": "NO"
+  }
+}

@@ -1,0 +1,233 @@
+{
+  "experiment_id": "FINAL_RAG_CONSOLIDATION_AND_GITHUB_INTERVIEW_READY_V1",
+  "timestamp": "2026-08-21T09:29:50.330983+00:00",
+  "summary": {
+    "A_V14_ONLY": 4,
+    "B_PRODUCTION_ONLY": 10,
+    "C_SHARED_IDENTICAL": 7,
+    "D_OVERLAPPING_COMPATIBLE": 6,
+    "E_CONFLICT": 0,
+    "F_STALE_DEPRECATED": 2
+  },
+  "verdict": "NO_SOURCE_CONFLICT_COMPOSITIONAL_MERGE_ALREADY_PRESENT",
+  "files": [
+    {
+      "path": "scripts/run_rag_release_pipeline_v14_targeted_030.py",
+      "class": "A_V14_ONLY",
+      "exists": true,
+      "sha256": "be9b8a1239c27cc88867271e3801e35be6e204d0f15376e3cbba4dffea8ad7ba",
+      "note": "V14 targeted runner"
+    },
+    {
+      "path": "data/experiments/rag-release-pipeline-v14/final_report.json",
+      "class": "A_V14_ONLY",
+      "exists": true,
+      "sha256": "3ab7375252aa7333db616b455aec47d00d648242c20a30c523c602652b75ea06",
+      "note": "V14 formal report"
+    },
+    {
+      "path": "data/experiments/rag-release-pipeline-v14/implemented_fix.json",
+      "class": "A_V14_ONLY",
+      "exists": true,
+      "sha256": "d1b2121cd9baff212406c1561414a4c0c6b36c876f8a1f511b64dcb9ac351c78",
+      "note": "V14 fix manifest"
+    },
+    {
+      "path": "tests/unit/test_prompt_injection_safety_v13.py",
+      "class": "A_V14_ONLY",
+      "exists": true,
+      "sha256": "0251ea91ce880d13928bab0378e6167a0bfe5083835227a62165e545abd6ef18",
+      "note": "V13+V14 packet/injection unit tests"
+    },
+    {
+      "path": "src/rag_workbench/runtime/canonical_runtime.py",
+      "class": "B_PRODUCTION_ONLY",
+      "exists": true,
+      "sha256": "43e1932c8578111b851b2eb13d169535d11584c55d2f48fe95a906417c1226e5",
+      "note": "Canonical serving/eval orchestrator"
+    },
+    {
+      "path": "src/rag_workbench/runtime/config.py",
+      "class": "B_PRODUCTION_ONLY",
+      "exists": true,
+      "sha256": "fcb4a31fc61f6cdbd81e5f49886c363722f461f4e1536c700f0181cee86fa72b",
+      "note": "ProductionRagConfig 20/20/60/30/15"
+    },
+    {
+      "path": "src/rag_workbench/runtime/retrieval.py",
+      "class": "B_PRODUCTION_ONLY",
+      "exists": true,
+      "sha256": "1724a56879b2a4e5eb259967396db39f55c2655b35428494a8a5748f74dcdd14",
+      "note": "Hybrid Dense20/BM2520/RRF60/CE15"
+    },
+    {
+      "path": "src/rag_workbench/runtime/guards.py",
+      "class": "B_PRODUCTION_ONLY",
+      "exists": true,
+      "sha256": "7a9228f33f09e87501bd2b7af5f60f39131107dee7c083f9b8ee83778065a977",
+      "note": "Request guards"
+    },
+    {
+      "path": "src/rag_workbench/runtime/types.py",
+      "class": "B_PRODUCTION_ONLY",
+      "exists": true,
+      "sha256": "400ae1f9c350111ad352fcc1bb7188580c307177b7027dfc1dbf6e393fcdd209",
+      "note": "Shared types"
+    },
+    {
+      "path": "src/rag_workbench/runtime/identity_reranker.py",
+      "class": "B_PRODUCTION_ONLY",
+      "exists": true,
+      "sha256": "52464d62e92cbd801e6d37303f1ca48ee913d9741103ca4a0c10b905ae2ba3f1",
+      "note": "LOCAL-only identity fallback"
+    },
+    {
+      "path": "scripts/run_production_finalization_v1.py",
+      "class": "B_PRODUCTION_ONLY",
+      "exists": true,
+      "sha256": "53995c28ae0aaa7a41eb102fa2516e773b6ce32b2e59a9aeb6fe3d9a030e1570",
+      "note": "Production finalization runner"
+    },
+    {
+      "path": "data/experiments/production-finalization/final_production_readiness_report.json",
+      "class": "B_PRODUCTION_ONLY",
+      "exists": true,
+      "sha256": "546b86684607ad2ea86608891bc5955fe83fba76b63ba16b8db43bd4a15999c9",
+      "note": "Prod readiness report"
+    },
+    {
+      "path": "tests/unit/test_canonical_runtime_promotion.py",
+      "class": "B_PRODUCTION_ONLY",
+      "exists": true,
+      "sha256": "9de708e441ce2ee35316ae8b0572ca718c2d67d91ee7e63e4746d0263ac147b8",
+      "note": "Promotion tests"
+    },
+    {
+      "path": "tests/unit/test_eval_canonical_runtime.py",
+      "class": "B_PRODUCTION_ONLY",
+      "exists": true,
+      "sha256": "79df18d5538c16ebcfbb8f8e557d01f7fce0cd8679bd2394d9ff8d1e29216c23",
+      "note": "Eval canonical tests"
+    },
+    {
+      "path": "src/rag_workbench/experiments/atomic_requirement_contract_v1/verifier.py",
+      "class": "C_SHARED_IDENTICAL",
+      "exists": true,
+      "sha256": "2c65cf4e7b629ecac0c13d04a58feae41bc876c0804d5e2a412dfe772713f923",
+      "note": "V14 year-token + V13 zero-overlap; imported by V14 eval and CanonicalRagRuntime"
+    },
+    {
+      "path": "src/rag_workbench/experiments/atomic_requirement_contract_v1/deterministic_support.py",
+      "class": "C_SHARED_IDENTICAL",
+      "exists": true,
+      "sha256": "0af068393aaf739db98755c7aa9f8c7d6ff137ac98cd48bf76832c0179a3f0d1",
+      "note": "Shared deterministic support"
+    },
+    {
+      "path": "src/rag_workbench/experiments/atomic_requirement_contract_v1/evidence_mapping.py",
+      "class": "C_SHARED_IDENTICAL",
+      "exists": true,
+      "sha256": "56a927128b01117bc9536742241044accb33a137544c68cfb0e139779a5b770d",
+      "note": "CanonicalEvidenceMapping"
+    },
+    {
+      "path": "src/rag_workbench/experiments/atomic_requirement_contract_v1/contract.py",
+      "class": "C_SHARED_IDENTICAL",
+      "exists": true,
+      "sha256": "9b116dbfee8e385ad6bef69f7ac618605ed516eb28aaa5c52ff5fb09b6ebddbf",
+      "note": "Question plan contract"
+    },
+    {
+      "path": "src/rag_workbench/safety/question_injection_guard_v2.py",
+      "class": "C_SHARED_IDENTICAL",
+      "exists": true,
+      "sha256": "9306ace46b69e1aacaa60f8fb4258192c0c179430d267451d6d3c8c91910dcdd",
+      "note": "Prompt-injection hard gate (also has production-touched unstaged edits)"
+    },
+    {
+      "path": "src/rag_workbench/experiments/requirement_assembler_selective_routing_v1/router.py",
+      "class": "C_SHARED_IDENTICAL",
+      "exists": true,
+      "sha256": "5e1741a13b9ae8a7bf33347298b0c8844329339fa1e99532171cb2ddade17e22",
+      "note": "SelectiveRiskRouter"
+    },
+    {
+      "path": "src/rag_workbench/experiments/requirement_assembler_selective_routing_v1/versioning.py",
+      "class": "C_SHARED_IDENTICAL",
+      "exists": true,
+      "sha256": "9111b661a05b8ba9871c364b073007d9dee30e751e91b970498dbfc17c861188",
+      "note": "Version resolver"
+    },
+    {
+      "path": "src/rag_workbench/api/app.py",
+      "class": "D_OVERLAPPING_COMPATIBLE",
+      "exists": true,
+      "sha256": "b018def1b266c03dbc6a240d8b84da4bd91321a819fd200f2016339fe154ecc1",
+      "note": "Production migrated /rag/query and /eval/run to CanonicalRagRuntime; no V14 packet rewrite"
+    },
+    {
+      "path": "src/rag_workbench/api/dependencies.py",
+      "class": "D_OVERLAPPING_COMPATIBLE",
+      "exists": true,
+      "sha256": "008c53c9fc494ddbf2848fe2113152c0e5d33d22788f4a5863d05cc33465bc96",
+      "note": "Canonical runtime wiring"
+    },
+    {
+      "path": "src/rag_workbench/api/schemas.py",
+      "class": "D_OVERLAPPING_COMPATIBLE",
+      "exists": true,
+      "sha256": "ec0e42150c6a7f949ec8079c48e059778a26fa57c57d377e27511d144bf12682",
+      "note": "Response schema for canonical traces"
+    },
+    {
+      "path": "src/rag_workbench/evaluation/evaluator.py",
+      "class": "D_OVERLAPPING_COMPATIBLE",
+      "exists": true,
+      "sha256": "56bcea816738a4bcfae0d7e1ebb6ea6347502ed08b279207f88f8fed946bb5e8",
+      "note": "Accepts CanonicalRagRuntime as primary path"
+    },
+    {
+      "path": "src/rag_workbench/retrieval/hybrid.py",
+      "class": "D_OVERLAPPING_COMPATIBLE",
+      "exists": true,
+      "sha256": "3cec7a36b922b75fc18bb7c19df89d28aa49bff8bffb6e4764cc551ec220c028",
+      "note": "Hybrid helpers used by both"
+    },
+    {
+      "path": "src/rag_workbench/retrieval/filters.py",
+      "class": "D_OVERLAPPING_COMPATIBLE",
+      "exists": true,
+      "sha256": "f54ad923616b0f5958f9910b7804858145b178b5b3b59d10dbefdb3e0d3ca472",
+      "note": "ACL/tenant/region filters"
+    },
+    {
+      "path": "data/experiments/production-finalization/current_state_audit.json",
+      "class": "F_STALE_DEPRECATED",
+      "note": "Says latest research pipeline is V13 / v14=null; historical snapshot from before V14 completed. Do not treat as current."
+    },
+    {
+      "path": "README.md (pre-consolidation leading V3 metrics block)",
+      "class": "F_STALE_DEPRECATED",
+      "note": "Leads with V3 74.17% as status; needs interview-first rewrite separating HISTORICAL V3 from CURRENT executing architecture + V14 regression."
+    }
+  ],
+  "attention_files": {
+    "verifier.py": "V14_AUTHORITATIVE_year_token_fix_present_V13_guard_preserved",
+    "requirement packet construction": "compatible_shared_or_production_wiring",
+    "prompt injection guard": "shared_v2_guard_plus_V13_zero_overlap_in_packets",
+    "deterministic support": "compatible_shared_or_production_wiring",
+    "CanonicalEvidenceMapping": "compatible_shared_or_production_wiring",
+    "version resolver": "compatible_shared_or_production_wiring",
+    "router": "compatible_shared_or_production_wiring",
+    "canonical_runtime.py": "production_orchestrator_imports_V14_verifier_modules",
+    "evaluation/evaluator.py": "compatible_shared_or_production_wiring",
+    "api/app.py": "compatible_shared_or_production_wiring",
+    "api/dependencies.py": "compatible_shared_or_production_wiring",
+    "runtime/config.py": "compatible_shared_or_production_wiring"
+  },
+  "semantic_conflict_check": {
+    "v14_year_tokens_vs_v13_zero_overlap": "COMPATIBLE \u2014 years enable lexical match; single-version still refuses zero-overlap fill",
+    "canonical_runtime_vs_v14_eval_runner": "COMPATIBLE \u2014 both call requirement_scoped_evidence_packets from same verifier.py",
+    "production_config_vs_historical_v12_50_50": "STALE_PROSE_ONLY \u2014 executing config is 20/20/60/30/15"
+  }
+}

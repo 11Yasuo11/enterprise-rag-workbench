@@ -1,0 +1,40 @@
+{
+  "api_calls": {
+    "embedding": 0,
+    "luna": 0,
+    "openai": 0,
+    "sol": 0
+  },
+  "checks": {
+    "atomic_requirement_contract": "PASS",
+    "canonical_mapping_contract": "PASS",
+    "citation_authorization": "PASS",
+    "deterministic_support": "PASS",
+    "full_unit_suite": "PASS_558_OF_558",
+    "git_diff_check": "PASS",
+    "original_19_local_preservation": "PASS_19_OF_19",
+    "p0_through_p5": "PASS",
+    "packet_matcher": "PASS",
+    "router": "PASS",
+    "ruff_src_scripts_tests": "PASS",
+    "safety": "PASS",
+    "scorer": "PASS",
+    "stage_guard": "PASS_9_OF_9",
+    "v2_11_local_preservation": "PASS_11_OF_11",
+    "v2_four_deterministic_path": "PASS_4_OF_4",
+    "v2_zero_api_runtime_traversal": "PASS_60_OF_60",
+    "version_validation": "PASS"
+  },
+  "cost_usd": 0.0,
+  "inference_hashes_unchanged_from_v8": true,
+  "passed": true,
+  "protected_groups": {
+    "acl_allow": "3/3",
+    "acl_deny": "3/3",
+    "correct_abstentions": "20/20",
+    "prompt_injection": "4/4",
+    "single_semantic": "8/8",
+    "unanswerable": "6/6"
+  },
+  "verdict": "FULL_ZERO_API_LOCAL_REGRESSION_PASSED"
+}

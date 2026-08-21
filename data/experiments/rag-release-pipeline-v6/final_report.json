@@ -1,0 +1,61 @@
+{
+  "cost": {
+    "actual_total_usd": 0.17573674,
+    "additional_v6_cap_usd": 0.8,
+    "fresh_v2_cap_usd": 0.3,
+    "old60_cap_usd": 0.3,
+    "phase_actual_usd": {
+      "fresh_v2": 0.13709846,
+      "old60_v6": 0.0317839,
+      "targeted_19_v6": 0.006854379999999999
+    },
+    "targeted_19_cap_usd": 0.2,
+    "within_all_caps": true
+  },
+  "final_status": "NOT_READY_FOR_PRODUCTION",
+  "fresh_v2": {
+    "cost_usd": 0.13709846,
+    "failed_gates": [
+      "strict_accuracy_gte_90",
+      "recall_gte_90"
+    ],
+    "incorrect_abstentions": 11,
+    "passed": false,
+    "precision": 1.0,
+    "recall": 0.7843137254901961,
+    "runtime_exceptions": 0,
+    "strict_accuracy": 0.8166666666666667,
+    "unsupported_answers": 0
+  },
+  "local_regression": "PASS",
+  "mapping_contract": {
+    "all60_schema_audit": "60/60",
+    "fresh_005_replay": "PASS",
+    "unhandled_mapping_schema": 0
+  },
+  "old60_regression": {
+    "cost_usd": 0.0317839,
+    "passed": true,
+    "precision": 1.0,
+    "recall": 0.9574468085106383,
+    "strict_accuracy": 0.9666666666666667
+  },
+  "production_deployed": false,
+  "rc_freeze": "RC_FINAL_PRE_API_V6",
+  "safety": {
+    "acl_violations": 0,
+    "invalid_citations": 0,
+    "passed": true,
+    "prompt_injection_regressions": 0,
+    "region_violations": 0,
+    "restricted_data_leaks": 0,
+    "tenant_violations": 0
+  },
+  "targeted_19": {
+    "correct": "19/19",
+    "cost_usd": 0.006854379999999999,
+    "passed": true
+  },
+  "timestamp": "2026-08-20T20:14:16.289222+00:00",
+  "verdict": "PIPELINE_V6_FAILED_FRESH_HOLDOUT"
+}

@@ -1,0 +1,236 @@
+{
+  "cases": [
+    {
+      "case_id": "fresh_v2_030",
+      "category": "historical_temporal",
+      "constraint_inference": null,
+      "deterministic_mappings": [],
+      "deterministic_support": {
+        "complete": false,
+        "failure_code": "REQUIREMENT_COVERAGE_INCOMPLETE"
+      },
+      "evidence_rows": [
+        {
+          "chunk_id": "18bfa499-1726-4b23-9988-e5805e744db4",
+          "dense_score": 0.518214,
+          "document_id": "security-incident-policy",
+          "document_version_id": "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588",
+          "found_by_bm25": true,
+          "found_by_dense": true,
+          "fusion_score": 0.032786885,
+          "lexical_score": 2.316742,
+          "metadata": {
+            "chunk_overlap": 30,
+            "chunk_size": 180,
+            "chunk_strategy": "fixed_token",
+            "chunker_version": "1"
+          },
+          "page": null,
+          "rank": 1,
+          "retrieval_source": "hybrid_rrf",
+          "score": -2.6092305183410645,
+          "section": "Initial notification",
+          "source": "data/synthetic_company/security-incident-policy-2026.md",
+          "source_type": "markdown",
+          "text": "Under the 2025 policy , suspected severity-one incidents had to be reported to the security duty officer within 60 minutes of discovery .",
+          "title": "Security Incident Response Policy",
+          "version": "2025"
+        },
+        {
+          "chunk_id": "0f876e88-1c3a-403f-83aa-ac66033ed246",
+          "dense_score": null,
+          "document_id": "remote-work-policy",
+          "document_version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac",
+          "found_by_bm25": true,
+          "found_by_dense": false,
+          "fusion_score": 0.016129032,
+          "lexical_score": 1.497529,
+          "metadata": {
+            "chunk_overlap": 30,
+            "chunk_size": 180,
+            "chunk_strategy": "fixed_token",
+            "chunker_version": "1"
+          },
+          "page": null,
+          "rank": 2,
+          "retrieval_source": "hybrid_rrf",
+          "score": -5.181384086608887,
+          "section": "Weekly allowance",
+          "source": "data/synthetic_company/remote-work-policy-2026.md",
+          "source_type": "markdown",
+          "text": "Under the 2025 policy , employees could work remotely three days per week .",
+          "title": "Remote Work Policy",
+          "version": "2025"
+        },
+        {
+          "chunk_id": "a6256f87-3055-4592-bbe0-9299878475b1",
+          "dense_score": 0.345045,
+          "document_id": "remote-work-policy",
+          "document_version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac",
+          "found_by_bm25": true,
+          "found_by_dense": true,
+          "fusion_score": 0.032002048,
+          "lexical_score": 1.165749,
+          "metadata": {
+            "chunk_overlap": 30,
+            "chunk_size": 180,
+            "chunk_strategy": "fixed_token",
+            "chunker_version": "1"
+          },
+          "page": null,
+          "rank": 3,
+          "retrieval_source": "hybrid_rrf",
+          "score": -6.957646369934082,
+          "section": "Review",
+          "source": "data/synthetic_company/remote-work-policy-2026.md",
+          "source_type": "markdown",
+          "text": "Managers reviewed remote-work schedules every quarter .",
+          "title": "Remote Work Policy",
+          "version": "2025"
+        }
+      ],
+      "gold_fields_received": false,
+      "initial_route": {
+        "reason": "low_risk_semantic_verification",
+        "route": "LUNA"
+      },
+      "principal": {
+        "permission_groups": [
+          "employees"
+        ],
+        "principal_id": "fresh-v2-employee",
+        "tenant_id": "acmeai"
+      },
+      "question": "Using only 2025 editions, pair the remote review interval with the incident-reporting limit.",
+      "question_plan": {
+        "cardinality_match": true,
+        "context_qualifiers": [],
+        "detected_output_units": [
+          "Using only 2025 editions",
+          "pair the remote review interval with the incident-reporting limit"
+        ],
+        "question": "Using only 2025 editions, pair the remote review interval with the incident-reporting limit.",
+        "question_plan_hash": "9d4990108163b6266a0347ef8aeaa87b8827b26ea890890ec0cf38f821d5cdb7",
+        "requirements": [
+          {
+            "requirement_id": "R1",
+            "requirement_text": "Using only 2025 editions",
+            "requirement_type": "fact"
+          },
+          {
+            "requirement_id": "R2",
+            "requirement_text": "pair the remote review interval with the incident-reporting limit",
+            "requirement_type": "fact"
+          }
+        ]
+      },
+      "selected_versions_by_document": {
+        "remote-work-policy": [
+          "82e742b7-92c3-417a-b3f0-a350037b0bac"
+        ]
+      },
+      "temporal_scope": {
+        "document_scope": [],
+        "requested_versions": [
+          "2025"
+        ],
+        "temporal_mode": "HISTORICAL_ONLY"
+      },
+      "top15": [
+        {
+          "chunk_id": "18bfa499-1726-4b23-9988-e5805e744db4",
+          "dense_score": 0.518214,
+          "document_id": "security-incident-policy",
+          "document_version_id": "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588",
+          "found_by_bm25": true,
+          "found_by_dense": true,
+          "fusion_score": 0.032786885,
+          "lexical_score": 2.316742,
+          "metadata": {
+            "chunk_overlap": 30,
+            "chunk_size": 180,
+            "chunk_strategy": "fixed_token",
+            "chunker_version": "1"
+          },
+          "page": null,
+          "rank": 1,
+          "retrieval_source": "hybrid_rrf",
+          "score": -2.6092305183410645,
+          "section": "Initial notification",
+          "source": "data/synthetic_company/security-incident-policy-2026.md",
+          "source_type": "markdown",
+          "text": "Under the 2025 policy , suspected severity-one incidents had to be reported to the security duty officer within 60 minutes of discovery .",
+          "title": "Security Incident Response Policy",
+          "version": "2025"
+        },
+        {
+          "chunk_id": "0f876e88-1c3a-403f-83aa-ac66033ed246",
+          "dense_score": null,
+          "document_id": "remote-work-policy",
+          "document_version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac",
+          "found_by_bm25": true,
+          "found_by_dense": false,
+          "fusion_score": 0.016129032,
+          "lexical_score": 1.497529,
+          "metadata": {
+            "chunk_overlap": 30,
+            "chunk_size": 180,
+            "chunk_strategy": "fixed_token",
+            "chunker_version": "1"
+          },
+          "page": null,
+          "rank": 2,
+          "retrieval_source": "hybrid_rrf",
+          "score": -5.181384086608887,
+          "section": "Weekly allowance",
+          "source": "data/synthetic_company/remote-work-policy-2026.md",
+          "source_type": "markdown",
+          "text": "Under the 2025 policy , employees could work remotely three days per week .",
+          "title": "Remote Work Policy",
+          "version": "2025"
+        },
+        {
+          "chunk_id": "a6256f87-3055-4592-bbe0-9299878475b1",
+          "dense_score": 0.345045,
+          "document_id": "remote-work-policy",
+          "document_version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac",
+          "found_by_bm25": true,
+          "found_by_dense": true,
+          "fusion_score": 0.032002048,
+          "lexical_score": 1.165749,
+          "metadata": {
+            "chunk_overlap": 30,
+            "chunk_size": 180,
+            "chunk_strategy": "fixed_token",
+            "chunker_version": "1"
+          },
+          "page": null,
+          "rank": 3,
+          "retrieval_source": "hybrid_rrf",
+          "score": -6.957646369934082,
+          "section": "Review",
+          "source": "data/synthetic_company/remote-work-policy-2026.md",
+          "source_type": "markdown",
+          "text": "Managers reviewed remote-work schedules every quarter .",
+          "title": "Remote Work Policy",
+          "version": "2025"
+        }
+      ],
+      "verifier_payload_sha256": "d9bbe6b1b478bf1961b73bda465a6f2d32c55c2c9d85ce736ef1479e9cc16799",
+      "version_resolution": {
+        "reason": "unique valid candidate",
+        "selected_version_ids": [
+          "82e742b7-92c3-417a-b3f0-a350037b0bac"
+        ],
+        "selections_by_document": {
+          "remote-work-policy": [
+            "2025"
+          ]
+        },
+        "status": "VERSION_RESOLVED"
+      }
+    }
+  ],
+  "experiment_id": "TARGETED_FRESH_V2_030_V14",
+  "stage": "TARGETED_ONE"
+}

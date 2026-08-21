@@ -1,0 +1,30 @@
+{
+  "cases_reproduced": [
+    "fresh_v1_029",
+    "fresh_v1_031",
+    "fresh_v1_032",
+    "fresh_v1_033",
+    "fresh_v1_035"
+  ],
+  "cited_chunks": 8,
+  "complete_metadata_authorized_citations": 8,
+  "experiment": "RAG_RELEASE_PIPELINE_V4",
+  "formal_authorized_citations": 0,
+  "frozen_predictions_immutable": true,
+  "frozen_predictions_sha256": "131205b3a16476b446c4141a8005fea865f5716d6a463c720dc5766e0644a94e",
+  "frozen_source": "/Users/basho/Enterprise RAG Workbench/data/experiments/rag-remaining-failures-release-pipeline-v3/p1-targeted",
+  "generated_answer_defect": false,
+  "harness_defect_confirmed": true,
+  "old_fallback": "UNSPECIFIED_CURRENT_DEFAULT/CURRENT_ONLY semantics applied to incomplete evidence identity",
+  "omitted_fields": [
+    "document_version_id",
+    "version",
+    "is_active",
+    "tenant",
+    "region",
+    "visibility",
+    "permission_groups",
+    "frozen_temporal_scope"
+  ],
+  "timestamp": "2026-08-20T18:32:06.418698+00:00"
+}

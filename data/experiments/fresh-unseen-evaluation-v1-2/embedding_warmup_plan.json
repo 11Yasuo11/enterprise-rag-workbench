@@ -1,0 +1,44 @@
+{
+  "cache_hits_before": 0,
+  "cost_projection": {
+    "embedding_stage_cap_usd": 0.1,
+    "method": "UTF-8 byte count as rigorous conservative upper bound on BPE token count; actual provider usage recorded after calls",
+    "passes": true,
+    "projected_max_embedding_cost_usd": 0.00011365999999999999,
+    "question_utf8_bytes_upper_bound_tokens": 5683
+  },
+  "embedding_identity": {
+    "api_provider": "OpenAI",
+    "base_url_host": "api.openai.com",
+    "canonical_candidate_identity": true,
+    "dimension": 64,
+    "model": "text-embedding-3-small",
+    "provider": "openai-compatible",
+    "version": "1"
+  },
+  "experiment_id": "FRESH_UNSEEN_EVALUATION_V1_2",
+  "gate_passed": true,
+  "gates": {
+    "candidate_freeze": true,
+    "dataset_independence": true,
+    "deterministic_preflight": true,
+    "gold_grounding": true,
+    "historical_overlap": true
+  },
+  "missing_before": 60,
+  "payload_scope": {
+    "gold_fields_present": false,
+    "query_count": 60,
+    "questions_only": true,
+    "runtime_input": ".local/evaluation-input/fresh_unseen_eval_v1_1_20260820/fresh_unseen_questions_v1_1.json"
+  },
+  "planned_new_embedding_calls": 60,
+  "pricing": {
+    "consulted_at": "2026-08-20",
+    "input_usd_per_million_tokens": 0.02,
+    "source": "https://developers.openai.com/api/docs/models/text-embedding-3-small"
+  },
+  "stage": "CONTROLLED_FRESH_QUERY_EMBEDDING_WARMUP",
+  "timestamp": "2026-08-20T15:31:14.622243+00:00",
+  "total_fresh_evaluation_cap_usd": 0.5
+}

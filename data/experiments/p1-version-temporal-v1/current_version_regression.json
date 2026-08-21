@@ -1,0 +1,73 @@
+{
+  "cases": [
+    {
+      "case_id": "fresh_v1_030",
+      "historical_contamination": {
+        "60 minutes": false,
+        "every quarter": false,
+        "three days per week": false
+      },
+      "passed": true,
+      "required_current_facts_present": {
+        "every month": true,
+        "two days per week": true
+      },
+      "temporal_mode": "CURRENT_ONLY",
+      "versions": [
+        [
+          "remote-work-policy",
+          "2026"
+        ]
+      ]
+    },
+    {
+      "case_id": "fresh_v1_036",
+      "historical_contamination": {
+        "60 minutes": false,
+        "every quarter": false,
+        "three days per week": false
+      },
+      "passed": true,
+      "required_current_facts_present": {
+        "15 minutes": true,
+        "two days per week": true
+      },
+      "temporal_mode": "CURRENT_ONLY",
+      "versions": [
+        [
+          "remote-work-policy",
+          "2026"
+        ],
+        [
+          "security-incident-policy",
+          "2026"
+        ]
+      ]
+    },
+    {
+      "case_id": "fresh_v1_017",
+      "historical_contamination": {
+        "60 minutes": false,
+        "every quarter": false,
+        "three days per week": false
+      },
+      "passed": true,
+      "required_current_facts_present": {
+        "above 25 euros": true,
+        "two days per week": true
+      },
+      "temporal_mode": "CURRENT_ONLY",
+      "versions": [
+        [
+          "finance-expense-policy",
+          "5.1"
+        ],
+        [
+          "remote-work-policy",
+          "2026"
+        ]
+      ]
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,114 @@
+{
+  "FIRST_FAILURE_STAGE": "VERSION_CANDIDATE_SCOPING",
+  "PRIMARY_ROOT_CAUSE": "SEMANTIC_DOCUMENT_SCOPE_EMPTY",
+  "SECONDARY_SYMPTOM": "UNRESOLVED_VERSION_FALSE_POSITIVE",
+  "api_calls": 0,
+  "case_id": "fresh_v2_032",
+  "mechanism": "candidates_from_top15() filters Top-15 through semantic_document_ids(), which scores only document_id tokens against the question. For 'severity-one reporting windows', neither security-incident-policy nor remote-work-policy shares document_id tokens, so semantic_document_ids returns {}. candidates becomes empty, DeterministicVersionResolver never runs (version_resolution=null), analyze_case marks unresolved_version_conflict, and the router emits SOL/unresolved_version despite Top-15 containing both requested version identities with the severity-one reporting-window spans.",
+  "not_primary": [
+    "TEMPORAL_MODE_ERROR \u2014 temporal_mode is correctly CROSS_VERSION with requested_versions [2025, 2026]",
+    "RETRIEVAL_MISS \u2014 both 2025 (60 minutes) and 2026 (15 minutes) spans are in Top-15 ranks 1-2",
+    "VERSION_RESOLVER_COLLAPSE \u2014 resolver never received candidates",
+    "VALIDATOR_FALSE_CONFLICT \u2014 conflict flag is derived from null resolution, not competing same-scope values",
+    "QUESTION_PLAN_SPLIT \u2014 imperfect R1/R2 split is secondary; sibling cases with similar splits succeed once VERSION_SET_RESOLVED"
+  ],
+  "source": {
+    "experiment": "rag-release-pipeline-v11",
+    "frozen_runtime_inputs": "fresh_v2_regression_frozen_runtime_inputs.json",
+    "predictions": "fresh_v2_regression_predictions.jsonl",
+    "rc": "RC_FINAL_PRE_API_V11"
+  },
+  "symptom": {
+    "behavior": "INCORRECT_ABSTENTION",
+    "deterministic_support_failure_code": "UNRESOLVED_VERSION_CONFLICT",
+    "final_route": "SOL",
+    "final_route_reason": "unresolved_version",
+    "selected_versions_by_document": {},
+    "version_resolution": null
+  },
+  "timestamp": "2026-08-21T08:27:06.733112+00:00",
+  "trace_answers": {
+    "A_cross_version_recognized": {
+      "answer": true,
+      "category": "cross_version",
+      "note": "Planner category and temporal planner both treat this as multi-version; requirement texts are awkwardly split on 'and' but years are still present in the question."
+    },
+    "B_temporal_mode": {
+      "answer": "CROSS_VERSION"
+    },
+    "C_requested_versions_preserved": {
+      "answer": true,
+      "requested_versions": [
+        "2025",
+        "2026"
+      ]
+    },
+    "D_each_version_in_top15": {
+      "answer": true,
+      "evidence": [
+        {
+          "chunk_id": "bd832158-c74b-4f03-8f53-60a2d30e69e8",
+          "document_id": "security-incident-policy",
+          "rank": 1,
+          "version": "2026"
+        },
+        {
+          "chunk_id": "18bfa499-1726-4b23-9988-e5805e744db4",
+          "document_id": "security-incident-policy",
+          "rank": 2,
+          "version": "2025"
+        }
+      ]
+    },
+    "E_resolver_received_both_versions": {
+      "answer": false,
+      "document_id_token_overlap": {
+        "remote-work-policy": [],
+        "security-incident-policy": []
+      },
+      "reason": "semantic_document_ids returned empty set \u2192 candidates_from_top15 returned () \u2192 resolve() skipped",
+      "semantic_document_ids": []
+    },
+    "F_collapsed_two_into_one": {
+      "answer": false,
+      "note": "No selection occurred"
+    },
+    "G_preferred_only_active": {
+      "answer": false,
+      "note": "No selection occurred"
+    },
+    "H_canonical_mappings_preserve_both": {
+      "answer": false,
+      "deterministic_mappings": [],
+      "note": "Mappings empty because unresolved_version_conflict short-circuited deterministic support"
+    },
+    "I_requirement_packet_both_years": {
+      "answer": "N/A_BEFORE_PACKET \u2014 failure precedes packet assembly; Sol later saw both year spans on R2 only under forced SOL path",
+      "sol_r2_versions": [
+        "2026",
+        "2025"
+      ]
+    },
+    "J_deterministic_support_unique_version": {
+      "answer": "Indirect \u2014 unresolved_version_conflict=True because resolution was null, not because multi-version evidence was treated as conflict",
+      "failure_code": "UNRESOLVED_VERSION_CONFLICT"
+    },
+    "K_local_validation_conflict": {
+      "answer": false,
+      "note": "Did not reach multi-version validation of competing same-scope values"
+    },
+    "L_completeness_gate_cardinality": {
+      "answer": "Not reached with assembled outputs \u2014 verified_requirement_ids=[] output_requirement_ids=[]"
+    },
+    "M_who_produced_unresolved_version": {
+      "code_path": [
+        "scripts/run_p1_version_temporal_v1.py::semantic_document_ids",
+        "scripts/run_p1_version_temporal_v1.py::candidates_from_top15",
+        "scripts/run_rag_release_pipeline_v4_evaluation.py::analyze_case",
+        "src/.../router.py::SelectiveRiskRouter.initial"
+      ],
+      "component": "SelectiveRiskRouter.initial via analyze_case unresolved_version_conflict",
+      "why": "version_sensitive CROSS_VERSION with resolution is None (empty semantic document scope) \u21d2 version_resolved=False \u21d2 route reason unresolved_version"
+    }
+  }
+}

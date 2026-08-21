@@ -7,6 +7,7 @@ from rag_workbench.retrieval.base import RetrievalMode
 from rag_workbench.retrieval.bm25 import BM25Retriever
 from rag_workbench.retrieval.filters import RetrievalFilters
 from rag_workbench.retrieval.retriever import Retriever
+from rag_workbench.retrieval.temporal import plan_temporal_scope
 from rag_workbench.retrieval.vector_search import RetrievalResult
 from rag_workbench.security.permissions import Principal
 
@@ -122,6 +123,10 @@ class HybridRetriever:
             raise ValueError(f"hybrid final top_k is frozen at {self.final_top_k}")
         if principal is None:
             raise ValueError("A principal is required; retrieval is never authorization-free")
+        if filters is None:
+            filters = RetrievalFilters(temporal_scope=plan_temporal_scope(query))
+        elif filters.temporal_scope is None:
+            filters = replace(filters, temporal_scope=plan_temporal_scope(query))
         total_started = time.perf_counter()
         embedding = self.dense.query_embedding_cache.get_or_embed(query)
         dense_started = time.perf_counter()

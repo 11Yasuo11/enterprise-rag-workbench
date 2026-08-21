@@ -1,0 +1,126 @@
+{
+  "api_calls": 0,
+  "chains": [
+    {
+      "case_id": "fresh_v2_003",
+      "dependency_chain": [
+        "authorized required evidence complete in Top-15",
+        "required evidence present in requirement packet",
+        "Luna marks required requirement UNSUPPORTED",
+        "router accepts required_evidence_absent",
+        "incorrect abstention"
+      ],
+      "primary_root_cause": "LUNA_FALSE_NEGATIVE"
+    },
+    {
+      "case_id": "fresh_v2_011",
+      "dependency_chain": [
+        "authorized required evidence complete in Top-15",
+        "required evidence present in requirement packet",
+        "Luna marks required requirement UNSUPPORTED",
+        "router accepts required_evidence_absent",
+        "incorrect abstention"
+      ],
+      "primary_root_cause": "LUNA_FALSE_NEGATIVE"
+    },
+    {
+      "case_id": "fresh_v2_013",
+      "dependency_chain": [
+        "raw question contains multiple requested facts",
+        "atomic planner emits malformed requirement contract",
+        "verifier evaluates corrupted plan",
+        "local validation/router cannot recover",
+        "incorrect abstention"
+      ],
+      "primary_root_cause": "QUESTION_PLAN_ERROR"
+    },
+    {
+      "case_id": "fresh_v2_017",
+      "dependency_chain": [
+        "authorized required evidence complete in Top-15",
+        "required evidence present in requirement packet",
+        "Luna marks required requirement UNSUPPORTED",
+        "router accepts required_evidence_absent",
+        "incorrect abstention"
+      ],
+      "primary_root_cause": "LUNA_FALSE_NEGATIVE"
+    },
+    {
+      "case_id": "fresh_v2_019",
+      "dependency_chain": [
+        "authorized required evidence complete in Top-15",
+        "required evidence present in requirement packet",
+        "Luna marks required requirement UNSUPPORTED",
+        "router accepts required_evidence_absent",
+        "incorrect abstention"
+      ],
+      "primary_root_cause": "LUNA_FALSE_NEGATIVE"
+    },
+    {
+      "case_id": "fresh_v2_020",
+      "dependency_chain": [
+        "required fact exists in authorized corpus",
+        "singular/plural lexical mismatch removes it from retrieval union",
+        "required span absent from Top-15",
+        "requirement packet empty",
+        "Luna correctly abstains",
+        "incorrect final abstention"
+      ],
+      "primary_root_cause": "RETRIEVAL_MISS"
+    },
+    {
+      "case_id": "fresh_v2_024",
+      "dependency_chain": [
+        "scope phrase promoted to answer requirement",
+        "evidence packet assignment corrupted",
+        "Luna abstains",
+        "incorrect abstention"
+      ],
+      "primary_root_cause": "QUALIFIER_REQUIREMENT_ERROR"
+    },
+    {
+      "case_id": "fresh_v2_025",
+      "dependency_chain": [
+        "authorized required evidence complete in Top-15",
+        "required evidence present in requirement packet",
+        "Luna marks required requirement UNSUPPORTED",
+        "router accepts required_evidence_absent",
+        "incorrect abstention"
+      ],
+      "primary_root_cause": "LUNA_FALSE_NEGATIVE"
+    },
+    {
+      "case_id": "fresh_v2_034",
+      "dependency_chain": [
+        "question requests historical and current evidence",
+        "temporal planner applies CURRENT_ONLY",
+        "historical evidence filtered before ranking",
+        "Luna correctly abstains",
+        "incorrect final abstention"
+      ],
+      "primary_root_cause": "TEMPORAL_SCOPE_ERROR"
+    },
+    {
+      "case_id": "fresh_v2_035",
+      "dependency_chain": [
+        "raw question contains multiple requested facts",
+        "atomic planner emits malformed requirement contract",
+        "verifier evaluates corrupted plan",
+        "local validation/router cannot recover",
+        "incorrect abstention"
+      ],
+      "primary_root_cause": "QUESTION_PLAN_ERROR"
+    },
+    {
+      "case_id": "fresh_v2_048",
+      "dependency_chain": [
+        "scope phrase promoted to answer requirement",
+        "evidence packet assignment corrupted",
+        "Luna abstains",
+        "incorrect abstention"
+      ],
+      "primary_root_cause": "QUALIFIER_REQUIREMENT_ERROR"
+    }
+  ],
+  "timestamp": "2026-08-20T23:30:23.607473+00:00"
+}

@@ -1,0 +1,82 @@
+{
+  "api_calls": 0,
+  "cases": [
+    {
+      "case_id": "fresh_v1_009",
+      "corrected_failure": null,
+      "corrected_valid": true,
+      "old_failure": "WRONG_VERSION",
+      "selected_versions_by_document": {
+        "recovery-runbook-west": [
+          "687b9971-bd2b-44c9-ba4a-83f68eb86ac2"
+        ]
+      },
+      "unrelated_document_versions_rejected": false
+    },
+    {
+      "case_id": "fresh_v1_015",
+      "corrected_failure": null,
+      "corrected_valid": true,
+      "old_failure": "WRONG_VERSION",
+      "selected_versions_by_document": {
+        "security-incident-policy": [
+          "c4d49578-2eec-4051-a54b-addc12af0efa"
+        ]
+      },
+      "unrelated_document_versions_rejected": false
+    },
+    {
+      "case_id": "fresh_v1_016",
+      "corrected_failure": null,
+      "corrected_valid": true,
+      "old_failure": "WRONG_VERSION",
+      "selected_versions_by_document": {
+        "security-incident-policy": [
+          "c4d49578-2eec-4051-a54b-addc12af0efa"
+        ]
+      },
+      "unrelated_document_versions_rejected": false
+    },
+    {
+      "case_id": "fresh_v1_017",
+      "corrected_failure": null,
+      "corrected_valid": true,
+      "old_failure": "WRONG_VERSION",
+      "selected_versions_by_document": {
+        "remote-work-policy": [
+          "e131a2f3-b35e-4d18-8990-650cf48e1c8c"
+        ]
+      },
+      "unrelated_document_versions_rejected": false
+    },
+    {
+      "case_id": "fresh_v1_023",
+      "corrected_failure": null,
+      "corrected_valid": true,
+      "old_failure": "WRONG_VERSION",
+      "selected_versions_by_document": {
+        "remote-work-policy": [
+          "e131a2f3-b35e-4d18-8990-650cf48e1c8c"
+        ]
+      },
+      "unrelated_document_versions_rejected": false
+    },
+    {
+      "case_id": "fresh_v1_036",
+      "corrected_failure": null,
+      "corrected_valid": true,
+      "old_failure": "WRONG_VERSION",
+      "selected_versions_by_document": {
+        "remote-work-policy": [
+          "e131a2f3-b35e-4d18-8990-650cf48e1c8c"
+        ]
+      },
+      "unrelated_document_versions_rejected": false
+    }
+  ],
+  "experiment": "P2_VERSION_VALIDATION_SCOPE",
+  "p0_preserved": true,
+  "p1_preserved": true,
+  "passed": true,
+  "security_preserved": true
+}

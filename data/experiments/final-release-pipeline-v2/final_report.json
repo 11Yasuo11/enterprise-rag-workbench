@@ -1,0 +1,45 @@
+{
+  "experiment_id": "RAG_FINAL_RELEASE_PIPELINE_V2",
+  "verdict": "FINAL_RELEASE_PIPELINE_FAILED_PLAN_HASH_REBASE",
+  "final_status": "NOT_READY_FOR_PRODUCTION",
+  "plan_hash_rebase": {
+    "deterministically_stable": 60,
+    "structurally_valid": 50,
+    "required": 60,
+    "old_fresh_v1_2_hash_equality_required": false,
+    "failed_case_ids": [
+      "fresh_v1_006",
+      "fresh_v1_012",
+      "fresh_v1_018",
+      "fresh_v1_020",
+      "fresh_v1_022",
+      "fresh_v1_024",
+      "fresh_v1_045",
+      "fresh_v1_046",
+      "fresh_v1_047",
+      "fresh_v1_053"
+    ],
+    "first_causal_failure": {
+      "case_id": "fresh_v1_006",
+      "failure": "CONTEXT_CLAUSE_PROMOTED_TO_REQUIREMENT"
+    }
+  },
+  "p1_targeted_confirmation": "NOT_RUN",
+  "p2": "NOT_RUN",
+  "p3": "NOT_RUN",
+  "p4": "NOT_RUN",
+  "p5": "NOT_RUN",
+  "local_regression": "NOT_RUN",
+  "targeted_19": "NOT_RUN",
+  "existing_60_regression": "NOT_RUN",
+  "fresh_holdout_v2": "NOT_CREATED",
+  "api_usage": {
+    "embedding_calls": 0,
+    "luna_calls": 0,
+    "sol_calls": 0,
+    "other_openai_calls": 0,
+    "total_cost_usd": 0.0
+  },
+  "production_action_taken": false,
+  "next_fix": "Extend the general P0 decomposer to separate context/principal framing and coordinated shared-head outputs, beginning with fresh_v1_006; then restart the pipeline from a new plan-hash rebase."
+}

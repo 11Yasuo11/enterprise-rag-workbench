@@ -1,0 +1,7 @@
+{
+  "provider": "openai",
+  "model": "text-embedding-3-small",
+  "successful_request": true,
+  "vector_dimension": 64,
+  "error": null
+}

@@ -1,0 +1,285 @@
+{
+  "all_correct": true,
+  "cases": [
+    {
+      "case_id": "fresh_v1_009",
+      "new_qualifiers": [
+        {
+          "qualifier_id": "Q1",
+          "qualifier_type": "scope",
+          "text": "For an outage runbook card"
+        }
+      ],
+      "new_requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "the west-region recovery code",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R2",
+          "requirement_text": "the cadence of customer-facing status updates while mitigation is underway",
+          "requirement_type": "fact"
+        }
+      ],
+      "old_false_requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "For an outage runbook card",
+          "requirement_type": "fact"
+        }
+      ],
+      "separation_correct": true
+    },
+    {
+      "case_id": "fresh_v1_011",
+      "new_qualifiers": [],
+      "new_requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "the Atlas launch owner",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R2",
+          "requirement_text": "the team that maintains the Atlas API",
+          "requirement_type": "fact"
+        }
+      ],
+      "old_false_requirements": [],
+      "separation_correct": true
+    },
+    {
+      "case_id": "fresh_v1_013",
+      "new_qualifiers": [],
+      "new_requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "How often is the west recovery drill held within a quarter",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R2",
+          "requirement_text": "on which weekdays do routine production releases occur",
+          "requirement_type": "fact"
+        }
+      ],
+      "old_false_requirements": [],
+      "separation_correct": true
+    },
+    {
+      "case_id": "fresh_v1_015",
+      "new_qualifiers": [
+        {
+          "qualifier_id": "Q1",
+          "qualifier_type": "time",
+          "text": "During a current severity-one incident affecting customer availability"
+        }
+      ],
+      "new_requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "who coordinates Engineering and Support",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R2",
+          "requirement_text": "which department joins that incident commander",
+          "requirement_type": "fact"
+        }
+      ],
+      "old_false_requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "During a current severity-one incident affecting customer availability",
+          "requirement_type": "fact"
+        }
+      ],
+      "separation_correct": true
+    },
+    {
+      "case_id": "fresh_v1_016",
+      "new_qualifiers": [],
+      "new_requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "How long are security audit logs retained",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R2",
+          "requirement_text": "how quickly must a current severity-one incident be reported after discovery",
+          "requirement_type": "fact"
+        }
+      ],
+      "old_false_requirements": [],
+      "separation_correct": true
+    },
+    {
+      "case_id": "fresh_v1_023",
+      "new_qualifiers": [
+        {
+          "qualifier_id": "Q1",
+          "qualifier_type": "scope",
+          "text": "For a current workforce-and-finance checklist"
+        }
+      ],
+      "new_requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "the remote-work allowance",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R2",
+          "requirement_text": "manager review frequency",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R3",
+          "requirement_text": "expense-report filing deadline",
+          "requirement_type": "fact"
+        }
+      ],
+      "old_false_requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "For a current workforce-and-finance checklist",
+          "requirement_type": "fact"
+        }
+      ],
+      "separation_correct": true
+    },
+    {
+      "case_id": "fresh_v1_025",
+      "new_qualifiers": [
+        {
+          "qualifier_id": "Q1",
+          "qualifier_type": "region",
+          "text": "For east-region resilience"
+        }
+      ],
+      "new_requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "the standby cluster",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R2",
+          "requirement_text": "the quarterly drill slot",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R3",
+          "requirement_text": "the continuity-plan owner",
+          "requirement_type": "fact"
+        }
+      ],
+      "old_false_requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "For east-region resilience",
+          "requirement_type": "fact"
+        }
+      ],
+      "separation_correct": true
+    },
+    {
+      "case_id": "fresh_v1_028",
+      "new_qualifiers": [],
+      "new_requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "who owns the Atlas launch",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R2",
+          "requirement_text": "who maintains the Atlas API",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R3",
+          "requirement_text": "who owns finance exception review",
+          "requirement_type": "fact"
+        }
+      ],
+      "old_false_requirements": [],
+      "separation_correct": true
+    },
+    {
+      "case_id": "fresh_v1_030",
+      "new_qualifiers": [
+        {
+          "qualifier_id": "Q1",
+          "qualifier_type": "version",
+          "text": "Under the current 2026 remote-work policy"
+        }
+      ],
+      "new_requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "how many remote days are allowed",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R2",
+          "requirement_text": "how often are schedules reviewed",
+          "requirement_type": "fact"
+        }
+      ],
+      "old_false_requirements": [],
+      "separation_correct": true
+    },
+    {
+      "case_id": "fresh_v1_036",
+      "new_qualifiers": [
+        {
+          "qualifier_id": "Q1",
+          "qualifier_type": "time",
+          "text": "As of the current 2026 editions"
+        }
+      ],
+      "new_requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "the remote-work allowance",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R2",
+          "requirement_text": "the severity-one notification deadline",
+          "requirement_type": "fact"
+        }
+      ],
+      "old_false_requirements": [],
+      "separation_correct": true
+    },
+    {
+      "case_id": "fresh_v1_044",
+      "new_qualifiers": [
+        {
+          "qualifier_id": "Q1",
+          "qualifier_type": "scope",
+          "text": "If customer-facing outage updates are sent every thirty minutes"
+        }
+      ],
+      "new_requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "would a forty-five-minute cadence match the support guide",
+          "requirement_type": "fact"
+        }
+      ],
+      "old_false_requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "If customer-facing outage updates are sent every thirty minutes",
+          "requirement_type": "fact"
+        }
+      ],
+      "separation_correct": true
+    }
+  ]
+}

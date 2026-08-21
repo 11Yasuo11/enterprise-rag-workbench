@@ -1,0 +1,6 @@
+{
+  "before": "POST /eval/run \u2192 EvaluationRunner(RagService)",
+  "after": "POST /eval/run \u2192 EvaluationRunner(CanonicalRagRuntime)",
+  "shared_with_web": true,
+  "pass": true
+}

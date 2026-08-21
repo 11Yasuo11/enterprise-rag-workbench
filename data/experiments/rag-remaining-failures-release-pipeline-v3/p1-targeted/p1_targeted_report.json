@@ -1,0 +1,496 @@
+{
+  "candidate_architecture_modified": false,
+  "cost": {
+    "cost_per_corrected_or_confirmed_case_usd": null,
+    "embedding": {
+      "cost_usd": 0.0,
+      "new_calls": 0,
+      "tokens": 0
+    },
+    "hard_cap_usd": 0.1,
+    "luna": {
+      "cached_tokens": 0,
+      "calls": 5,
+      "cost_usd": 0.00254755,
+      "input_tokens": 4888,
+      "output_tokens": 1167
+    },
+    "sol": {
+      "cached_tokens": 0,
+      "calls": 0,
+      "cost_usd": 0,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    "total_targeted_cost_usd": 0.00254755
+  },
+  "diagnostic_cases": [
+    {
+      "all_mapped_versions_present": true,
+      "assembler_plan_hash": "b4e00f6e96ee4826e6469cf694cd80b93d77e7ab57f8f15e0b0d7a8d7a3b0f3b",
+      "case_id": "fresh_v1_029",
+      "citation_count": 1,
+      "diagnostic_authorized_with_version_and_temporal_scope": 1,
+      "document_ids": [
+        "remote-work-policy",
+        "security-incident-policy"
+      ],
+      "document_version_ids": [
+        "82e742b7-92c3-417a-b3f0-a350037b0bac",
+        "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588"
+      ],
+      "formal_scorer_authorized_citations": 0,
+      "frozen_answer_present": true,
+      "luna_decision": "GO",
+      "luna_payload_hash": "0e3eff5603ad00125931c8c4784f6a7fa734b5e4437d526ff03d3cacd3ff98cf",
+      "question_plan_hash": "b4e00f6e96ee4826e6469cf694cd80b93d77e7ab57f8f15e0b0d7a8d7a3b0f3b",
+      "requirement_version_mapping_count": 1,
+      "requirement_version_mappings": [
+        {
+          "mappings": [
+            {
+              "chunk_id": "0f876e88-1c3a-403f-83aa-ac66033ed246",
+              "document_id": "remote-work-policy",
+              "document_version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac",
+              "supporting_span": "Under the 2025 policy , employees could work remotely three days per week .",
+              "version": "2025"
+            }
+          ],
+          "requirement_id": "R1",
+          "requirement_text": "how many remote days per week were allowed"
+        }
+      ],
+      "selected_evidence_ids": [
+        "0f876e88-1c3a-403f-83aa-ac66033ed246",
+        "a6256f87-3055-4592-bbe0-9299878475b1",
+        "18bfa499-1726-4b23-9988-e5805e744db4"
+      ],
+      "top15_ids": [
+        "0f876e88-1c3a-403f-83aa-ac66033ed246",
+        "a6256f87-3055-4592-bbe0-9299878475b1",
+        "18bfa499-1726-4b23-9988-e5805e744db4"
+      ],
+      "validator_plan_hash": "b4e00f6e96ee4826e6469cf694cd80b93d77e7ab57f8f15e0b0d7a8d7a3b0f3b"
+    },
+    {
+      "all_mapped_versions_present": true,
+      "assembler_plan_hash": "860544a05d05d72075bb0254e927fee03013e6ba91865ec12df1c087d271c528",
+      "case_id": "fresh_v1_031",
+      "citation_count": 2,
+      "diagnostic_authorized_with_version_and_temporal_scope": 2,
+      "document_ids": [
+        "remote-work-policy",
+        "security-incident-policy"
+      ],
+      "document_version_ids": [
+        "82e742b7-92c3-417a-b3f0-a350037b0bac",
+        "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588",
+        "c4d49578-2eec-4051-a54b-addc12af0efa",
+        "e131a2f3-b35e-4d18-8990-650cf48e1c8c"
+      ],
+      "formal_scorer_authorized_citations": 0,
+      "frozen_answer_present": true,
+      "luna_decision": "GO",
+      "luna_payload_hash": "737fbbdcc9edcc2a6fb6c84705c85940465add41da6c5076738f4d456890bfa5",
+      "question_plan_hash": "860544a05d05d72075bb0254e927fee03013e6ba91865ec12df1c087d271c528",
+      "requirement_version_mapping_count": 2,
+      "requirement_version_mappings": [
+        {
+          "mappings": [
+            {
+              "chunk_id": "0f876e88-1c3a-403f-83aa-ac66033ed246",
+              "document_id": "remote-work-policy",
+              "document_version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac",
+              "supporting_span": "Under the 2025 policy , employees could work remotely three days per week .",
+              "version": "2025"
+            }
+          ],
+          "requirement_id": "R1",
+          "requirement_text": "2025 the remote-work allowance"
+        },
+        {
+          "mappings": [
+            {
+              "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+              "document_id": "remote-work-policy",
+              "document_version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+              "supporting_span": "Under the current 2026 policy , employees may work remotely two days per week .",
+              "version": "2026"
+            }
+          ],
+          "requirement_id": "R2",
+          "requirement_text": "2026 the remote-work allowance"
+        }
+      ],
+      "selected_evidence_ids": [
+        "0f876e88-1c3a-403f-83aa-ac66033ed246",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "18bfa499-1726-4b23-9988-e5805e744db4",
+        "bd832158-c74b-4f03-8f53-60a2d30e69e8",
+        "a6256f87-3055-4592-bbe0-9299878475b1",
+        "49679d97-020f-4418-9430-4c296bc824b1",
+        "12b0a957-4a2f-4c06-a8aa-55067b120c4b"
+      ],
+      "top15_ids": [
+        "0f876e88-1c3a-403f-83aa-ac66033ed246",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "18bfa499-1726-4b23-9988-e5805e744db4",
+        "bd832158-c74b-4f03-8f53-60a2d30e69e8",
+        "a6256f87-3055-4592-bbe0-9299878475b1",
+        "49679d97-020f-4418-9430-4c296bc824b1",
+        "12b0a957-4a2f-4c06-a8aa-55067b120c4b"
+      ],
+      "validator_plan_hash": "860544a05d05d72075bb0254e927fee03013e6ba91865ec12df1c087d271c528"
+    },
+    {
+      "all_mapped_versions_present": true,
+      "assembler_plan_hash": "ea19fe5a61d39c012fc114cc145e53df9da4cad2b08eca6cdad551867d6f6c23",
+      "case_id": "fresh_v1_032",
+      "citation_count": 2,
+      "diagnostic_authorized_with_version_and_temporal_scope": 2,
+      "document_ids": [
+        "remote-work-policy",
+        "security-incident-policy"
+      ],
+      "document_version_ids": [
+        "82e742b7-92c3-417a-b3f0-a350037b0bac",
+        "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588",
+        "c4d49578-2eec-4051-a54b-addc12af0efa",
+        "e131a2f3-b35e-4d18-8990-650cf48e1c8c"
+      ],
+      "formal_scorer_authorized_citations": 0,
+      "frozen_answer_present": true,
+      "luna_decision": "GO",
+      "luna_payload_hash": "e96fc6ed0833a202171c7ba0a1e51685bd101ddd1db32a5f9ee675a0e4333409",
+      "question_plan_hash": "ea19fe5a61d39c012fc114cc145e53df9da4cad2b08eca6cdad551867d6f6c23",
+      "requirement_version_mapping_count": 2,
+      "requirement_version_mappings": [
+        {
+          "mappings": [
+            {
+              "chunk_id": "a6256f87-3055-4592-bbe0-9299878475b1",
+              "document_id": "remote-work-policy",
+              "document_version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac",
+              "supporting_span": "Managers reviewed remote-work schedules every quarter .",
+              "version": "2025"
+            }
+          ],
+          "requirement_id": "R1",
+          "requirement_text": "2025 manager review frequency for remote-work schedules"
+        },
+        {
+          "mappings": [
+            {
+              "chunk_id": "49679d97-020f-4418-9430-4c296bc824b1",
+              "document_id": "remote-work-policy",
+              "document_version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+              "supporting_span": "Managers review remote-work schedules every month .",
+              "version": "2026"
+            }
+          ],
+          "requirement_id": "R2",
+          "requirement_text": "2026 manager review frequency for remote-work schedules"
+        }
+      ],
+      "selected_evidence_ids": [
+        "49679d97-020f-4418-9430-4c296bc824b1",
+        "a6256f87-3055-4592-bbe0-9299878475b1",
+        "0f876e88-1c3a-403f-83aa-ac66033ed246",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "18bfa499-1726-4b23-9988-e5805e744db4",
+        "bd832158-c74b-4f03-8f53-60a2d30e69e8",
+        "12b0a957-4a2f-4c06-a8aa-55067b120c4b"
+      ],
+      "top15_ids": [
+        "49679d97-020f-4418-9430-4c296bc824b1",
+        "a6256f87-3055-4592-bbe0-9299878475b1",
+        "0f876e88-1c3a-403f-83aa-ac66033ed246",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "18bfa499-1726-4b23-9988-e5805e744db4",
+        "bd832158-c74b-4f03-8f53-60a2d30e69e8",
+        "12b0a957-4a2f-4c06-a8aa-55067b120c4b"
+      ],
+      "validator_plan_hash": "ea19fe5a61d39c012fc114cc145e53df9da4cad2b08eca6cdad551867d6f6c23"
+    },
+    {
+      "all_mapped_versions_present": true,
+      "assembler_plan_hash": "a1cae724c4ff4683b4dba1a3f77aabc145d1194dc900e9aa827557e5cc781d6d",
+      "case_id": "fresh_v1_033",
+      "citation_count": 1,
+      "diagnostic_authorized_with_version_and_temporal_scope": 1,
+      "document_ids": [
+        "remote-work-policy",
+        "security-incident-policy"
+      ],
+      "document_version_ids": [
+        "82e742b7-92c3-417a-b3f0-a350037b0bac",
+        "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588"
+      ],
+      "formal_scorer_authorized_citations": 0,
+      "frozen_answer_present": true,
+      "luna_decision": "GO",
+      "luna_payload_hash": "fd20905c5471a97b77d73d36a694f1c0fa0419d099e5085992426aae83c42a49",
+      "question_plan_hash": "a1cae724c4ff4683b4dba1a3f77aabc145d1194dc900e9aa827557e5cc781d6d",
+      "requirement_version_mapping_count": 1,
+      "requirement_version_mappings": [
+        {
+          "mappings": [
+            {
+              "chunk_id": "18bfa499-1726-4b23-9988-e5805e744db4",
+              "document_id": "security-incident-policy",
+              "document_version_id": "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588",
+              "supporting_span": "Under the 2025 policy , suspected severity-one incidents had to be reported to the security duty officer within 60 minutes of discovery .",
+              "version": "2025"
+            }
+          ],
+          "requirement_id": "R1",
+          "requirement_text": "What was the severity-one reporting window under the 2025 security policy"
+        }
+      ],
+      "selected_evidence_ids": [
+        "18bfa499-1726-4b23-9988-e5805e744db4",
+        "0f876e88-1c3a-403f-83aa-ac66033ed246"
+      ],
+      "top15_ids": [
+        "18bfa499-1726-4b23-9988-e5805e744db4",
+        "0f876e88-1c3a-403f-83aa-ac66033ed246"
+      ],
+      "validator_plan_hash": "a1cae724c4ff4683b4dba1a3f77aabc145d1194dc900e9aa827557e5cc781d6d"
+    },
+    {
+      "all_mapped_versions_present": true,
+      "assembler_plan_hash": "aac9eb51fd23d3d8452dbf1482f7545d050962ae13b09e5d6d61f71e7a3d626c",
+      "case_id": "fresh_v1_035",
+      "citation_count": 2,
+      "diagnostic_authorized_with_version_and_temporal_scope": 2,
+      "document_ids": [
+        "remote-work-policy",
+        "security-incident-policy"
+      ],
+      "document_version_ids": [
+        "82e742b7-92c3-417a-b3f0-a350037b0bac",
+        "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588",
+        "c4d49578-2eec-4051-a54b-addc12af0efa",
+        "e131a2f3-b35e-4d18-8990-650cf48e1c8c"
+      ],
+      "formal_scorer_authorized_citations": 0,
+      "frozen_answer_present": true,
+      "luna_decision": "GO",
+      "luna_payload_hash": "5bae79d2bd3709280a38ea6861f6a34b0699acd31b71916b66e9d9d063fe753d",
+      "question_plan_hash": "aac9eb51fd23d3d8452dbf1482f7545d050962ae13b09e5d6d61f71e7a3d626c",
+      "requirement_version_mapping_count": 2,
+      "requirement_version_mappings": [
+        {
+          "mappings": [
+            {
+              "chunk_id": "18bfa499-1726-4b23-9988-e5805e744db4",
+              "document_id": "security-incident-policy",
+              "document_version_id": "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588",
+              "supporting_span": "Under the 2025 policy , suspected severity-one incidents had to be reported to the security duty officer within 60 minutes of discovery .",
+              "version": "2025"
+            }
+          ],
+          "requirement_id": "R1",
+          "requirement_text": "2025 the severity-one reporting deadline security policies"
+        },
+        {
+          "mappings": [
+            {
+              "chunk_id": "bd832158-c74b-4f03-8f53-60a2d30e69e8",
+              "document_id": "security-incident-policy",
+              "document_version_id": "c4d49578-2eec-4051-a54b-addc12af0efa",
+              "supporting_span": "Under the current 2026 policy , suspected severity-one incidents must be reported to the security duty officer within 15 minutes of discovery .",
+              "version": "2026"
+            }
+          ],
+          "requirement_id": "R2",
+          "requirement_text": "2026 the severity-one reporting deadline security policies"
+        }
+      ],
+      "selected_evidence_ids": [
+        "bd832158-c74b-4f03-8f53-60a2d30e69e8",
+        "18bfa499-1726-4b23-9988-e5805e744db4",
+        "0f876e88-1c3a-403f-83aa-ac66033ed246",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "12b0a957-4a2f-4c06-a8aa-55067b120c4b"
+      ],
+      "top15_ids": [
+        "bd832158-c74b-4f03-8f53-60a2d30e69e8",
+        "18bfa499-1726-4b23-9988-e5805e744db4",
+        "0f876e88-1c3a-403f-83aa-ac66033ed246",
+        "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+        "12b0a957-4a2f-4c06-a8aa-55067b120c4b"
+      ],
+      "validator_plan_hash": "aac9eb51fd23d3d8452dbf1482f7545d050962ae13b09e5d6d61f71e7a3d626c"
+    }
+  ],
+  "experiment_id": "RAG_REMAINING_FAILURES_RELEASE_PIPELINE_V3_P1_TARGETED",
+  "failures": [
+    {
+      "case_id": "fresh_v1_029",
+      "classification": "P3_REQUIRED"
+    },
+    {
+      "case_id": "fresh_v1_031",
+      "classification": "P3_REQUIRED"
+    },
+    {
+      "case_id": "fresh_v1_032",
+      "classification": "P3_REQUIRED"
+    },
+    {
+      "case_id": "fresh_v1_033",
+      "classification": "P3_REQUIRED"
+    },
+    {
+      "case_id": "fresh_v1_035",
+      "classification": "P3_REQUIRED"
+    }
+  ],
+  "final_generation_llm_calls": 0,
+  "first_causal_failure": {
+    "authorized_with_complete_metadata": 8,
+    "code": "P1_SCORER_TEMPORAL_AUTHORIZATION_METADATA_OMISSION",
+    "component": "scripts/run_p1_version_temporal_targeted_real_api_confirmation_v1.py:score_and_finalize",
+    "formal_results_reclassified": false,
+    "frozen_citations_checked": 8,
+    "mechanism": "Citation authorization was evaluated without version/is_active metadata and without the question temporal scope, so version_is_eligible used the current-only default and rejected historical citations."
+  },
+  "formal_gate_passed": false,
+  "full_60_case_evaluation_executed": false,
+  "latency": {
+    "median_ms": 3286.0877080092905,
+    "p95_ms": 5642.425500001991,
+    "per_case_ms": {
+      "fresh_v1_029": 5642.425500001991,
+      "fresh_v1_031": 3286.0877080092905,
+      "fresh_v1_032": 2987.4744590051705,
+      "fresh_v1_033": 2475.4712090070825,
+      "fresh_v1_035": 4006.7317919892957
+    }
+  },
+  "next_step": "P3_REQUIRED",
+  "p0_contract": {
+    "contract_mismatches": 0,
+    "cross_version_requirements_unmerged": true,
+    "one_output_per_atomic_requirement": true
+  },
+  "per_case": [
+    {
+      "behavior": "UNSUPPORTED_ANSWER",
+      "case_id": "fresh_v1_029",
+      "correct": false,
+      "failure_class": "P3_REQUIRED"
+    },
+    {
+      "behavior": "UNSUPPORTED_ANSWER",
+      "case_id": "fresh_v1_031",
+      "correct": false,
+      "failure_class": "P3_REQUIRED"
+    },
+    {
+      "behavior": "UNSUPPORTED_ANSWER",
+      "case_id": "fresh_v1_032",
+      "correct": false,
+      "failure_class": "P3_REQUIRED"
+    },
+    {
+      "behavior": "UNSUPPORTED_ANSWER",
+      "case_id": "fresh_v1_033",
+      "correct": false,
+      "failure_class": "P3_REQUIRED"
+    },
+    {
+      "behavior": "UNSUPPORTED_ANSWER",
+      "case_id": "fresh_v1_035",
+      "correct": false,
+      "failure_class": "P3_REQUIRED"
+    }
+  ],
+  "pipeline_action": "STOP_PAID_PIPELINE",
+  "quality": {
+    "citation_completeness": 1.0,
+    "citation_correctness": 1.0,
+    "citation_validity": 0.0,
+    "contract_mismatches": 0,
+    "correct": 0,
+    "incorrect_abstentions": 0,
+    "requirement_completeness": 1.0,
+    "total": 5,
+    "unsupported_answers": 5,
+    "version_correctness": 1.0
+  },
+  "safety": {
+    "acl_violations": 5,
+    "cases": [
+      {
+        "acl_violation": true,
+        "case_id": "fresh_v1_029",
+        "prompt_injection_regression": false,
+        "region_violation": false,
+        "restricted_data_leak": false,
+        "tenant_violation": true,
+        "unauthorized_citations": [
+          "0f876e88-1c3a-403f-83aa-ac66033ed246"
+        ]
+      },
+      {
+        "acl_violation": true,
+        "case_id": "fresh_v1_031",
+        "prompt_injection_regression": false,
+        "region_violation": false,
+        "restricted_data_leak": false,
+        "tenant_violation": true,
+        "unauthorized_citations": [
+          "0f876e88-1c3a-403f-83aa-ac66033ed246",
+          "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+        ]
+      },
+      {
+        "acl_violation": true,
+        "case_id": "fresh_v1_032",
+        "prompt_injection_regression": false,
+        "region_violation": false,
+        "restricted_data_leak": false,
+        "tenant_violation": true,
+        "unauthorized_citations": [
+          "49679d97-020f-4418-9430-4c296bc824b1",
+          "a6256f87-3055-4592-bbe0-9299878475b1"
+        ]
+      },
+      {
+        "acl_violation": true,
+        "case_id": "fresh_v1_033",
+        "prompt_injection_regression": false,
+        "region_violation": false,
+        "restricted_data_leak": false,
+        "tenant_violation": true,
+        "unauthorized_citations": [
+          "18bfa499-1726-4b23-9988-e5805e744db4"
+        ]
+      },
+      {
+        "acl_violation": true,
+        "case_id": "fresh_v1_035",
+        "prompt_injection_regression": false,
+        "region_violation": false,
+        "restricted_data_leak": false,
+        "tenant_violation": true,
+        "unauthorized_citations": [
+          "18bfa499-1726-4b23-9988-e5805e744db4",
+          "bd832158-c74b-4f03-8f53-60a2d30e69e8"
+        ]
+      }
+    ],
+    "experiment_id": "RAG_REMAINING_FAILURES_RELEASE_PIPELINE_V3_P1_TARGETED",
+    "passed": false,
+    "prompt_injection_regressions": 0,
+    "region_violations": 0,
+    "restricted_data_leaks": 0,
+    "temporal_expansion_broadened_authorization": false,
+    "tenant_violations": 5,
+    "unauthorized_citations": 8
+  },
+  "timestamp": "2026-08-20T18:12:31.387686+00:00",
+  "verdict": "P1_TARGETED_REAL_API_FAILED"
+}

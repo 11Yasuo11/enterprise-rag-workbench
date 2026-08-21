@@ -1,0 +1,868 @@
+{
+  "assembler": "deterministic-requirement-assembler-v3",
+  "cases": [
+    {
+      "api_calls": 0,
+      "assembly": {
+        "answer": "R1: The production deployment approval identifier is ENG-DEP-17 . [C1]\nR2: The recovery time objective for the customer API is four hours . [C2]\nR3: Under the current 2026 policy , employees may work remotely two days per week . [C3]",
+        "citations": [
+          "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+        ],
+        "failure_code": null,
+        "final_generator_openai_calls": 0,
+        "requirements": [
+          {
+            "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+            "citation_label": "C1",
+            "document_id": "engineering-deployment-handbook",
+            "requirement_id": "R1",
+            "supporting_spans": [
+              "The production deployment approval identifier is ENG-DEP-17 ."
+            ]
+          },
+          {
+            "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+            "citation_label": "C2",
+            "document_id": "operations-continuity-plan",
+            "requirement_id": "R2",
+            "supporting_spans": [
+              "The recovery time objective for the customer API is four hours ."
+            ]
+          },
+          {
+            "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+            "citation_label": "C3",
+            "document_id": "remote-work-policy",
+            "requirement_id": "R3",
+            "supporting_spans": [
+              "Under the current 2026 policy , employees may work remotely two days per week ."
+            ]
+          }
+        ],
+        "status": "answered"
+      },
+      "behavior": "CORRECT_COMPLETE_ANSWER",
+      "citation_completeness_pass": true,
+      "citation_correctness_pass": true,
+      "citation_validity_pass": true,
+      "fact_completeness_pass": true,
+      "output_requirement_count": 3,
+      "query_id": "p5k_three_document_027",
+      "required_count": 3,
+      "requirement_complete": true,
+      "saved_luna_reused": true
+    },
+    {
+      "api_calls": 0,
+      "assembly": {
+        "answer": "R1: The production deployment approval identifier is ENG-DEP-17 . [C1]\nR2: The recovery time objective for the customer API is four hours . [C2]\nR3: Under the current 2026 policy , employees may work remotely two days per week . [C3]",
+        "citations": [
+          "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+        ],
+        "failure_code": null,
+        "final_generator_openai_calls": 0,
+        "requirements": [
+          {
+            "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+            "citation_label": "C1",
+            "document_id": "engineering-deployment-handbook",
+            "requirement_id": "R1",
+            "supporting_spans": [
+              "The production deployment approval identifier is ENG-DEP-17 ."
+            ]
+          },
+          {
+            "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+            "citation_label": "C2",
+            "document_id": "operations-continuity-plan",
+            "requirement_id": "R2",
+            "supporting_spans": [
+              "The recovery time objective for the customer API is four hours ."
+            ]
+          },
+          {
+            "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+            "citation_label": "C3",
+            "document_id": "remote-work-policy",
+            "requirement_id": "R3",
+            "supporting_spans": [
+              "Under the current 2026 policy , employees may work remotely two days per week ."
+            ]
+          }
+        ],
+        "status": "answered"
+      },
+      "behavior": "CORRECT_COMPLETE_ANSWER",
+      "citation_completeness_pass": true,
+      "citation_correctness_pass": true,
+      "citation_validity_pass": true,
+      "fact_completeness_pass": true,
+      "output_requirement_count": 3,
+      "query_id": "p5k_three_document_028",
+      "required_count": 3,
+      "requirement_complete": true,
+      "saved_luna_reused": true
+    },
+    {
+      "api_calls": 0,
+      "assembly": {
+        "answer": "R1: The production deployment approval identifier is ENG-DEP-17 . [C1]\nR2: The recovery time objective for the customer API is four hours . [C2]\nR3: Under the current 2026 policy , employees may work remotely two days per week . [C3]",
+        "citations": [
+          "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+        ],
+        "failure_code": null,
+        "final_generator_openai_calls": 0,
+        "requirements": [
+          {
+            "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+            "citation_label": "C1",
+            "document_id": "engineering-deployment-handbook",
+            "requirement_id": "R1",
+            "supporting_spans": [
+              "The production deployment approval identifier is ENG-DEP-17 ."
+            ]
+          },
+          {
+            "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+            "citation_label": "C2",
+            "document_id": "operations-continuity-plan",
+            "requirement_id": "R2",
+            "supporting_spans": [
+              "The recovery time objective for the customer API is four hours ."
+            ]
+          },
+          {
+            "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+            "citation_label": "C3",
+            "document_id": "remote-work-policy",
+            "requirement_id": "R3",
+            "supporting_spans": [
+              "Under the current 2026 policy , employees may work remotely two days per week ."
+            ]
+          }
+        ],
+        "status": "answered"
+      },
+      "behavior": "CORRECT_COMPLETE_ANSWER",
+      "citation_completeness_pass": true,
+      "citation_correctness_pass": true,
+      "citation_validity_pass": true,
+      "fact_completeness_pass": true,
+      "output_requirement_count": 3,
+      "query_id": "p5k_three_document_029",
+      "required_count": 3,
+      "requirement_complete": true,
+      "saved_luna_reused": true
+    },
+    {
+      "api_calls": 0,
+      "assembly": {
+        "answer": "R1: The production deployment approval identifier is ENG-DEP-17 . [C1]\nR2: The recovery time objective for the customer API is four hours . [C2]\nR3: Under the current 2026 policy , employees may work remotely two days per week . [C3]",
+        "citations": [
+          "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+        ],
+        "failure_code": null,
+        "final_generator_openai_calls": 0,
+        "requirements": [
+          {
+            "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+            "citation_label": "C1",
+            "document_id": "engineering-deployment-handbook",
+            "requirement_id": "R1",
+            "supporting_spans": [
+              "The production deployment approval identifier is ENG-DEP-17 ."
+            ]
+          },
+          {
+            "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+            "citation_label": "C2",
+            "document_id": "operations-continuity-plan",
+            "requirement_id": "R2",
+            "supporting_spans": [
+              "The recovery time objective for the customer API is four hours ."
+            ]
+          },
+          {
+            "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+            "citation_label": "C3",
+            "document_id": "remote-work-policy",
+            "requirement_id": "R3",
+            "supporting_spans": [
+              "Under the current 2026 policy , employees may work remotely two days per week ."
+            ]
+          }
+        ],
+        "status": "answered"
+      },
+      "behavior": "CORRECT_COMPLETE_ANSWER",
+      "citation_completeness_pass": true,
+      "citation_correctness_pass": true,
+      "citation_validity_pass": true,
+      "fact_completeness_pass": true,
+      "output_requirement_count": 3,
+      "query_id": "p5k_three_document_030",
+      "required_count": 3,
+      "requirement_complete": true,
+      "saved_luna_reused": true
+    },
+    {
+      "api_calls": 0,
+      "assembly": {
+        "answer": "R1: The production deployment approval identifier is ENG-DEP-17 . [C1]\nR2: The recovery time objective for the customer API is four hours . [C2]\nR3: Under the current 2026 policy , employees may work remotely two days per week . [C3]",
+        "citations": [
+          "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+        ],
+        "failure_code": null,
+        "final_generator_openai_calls": 0,
+        "requirements": [
+          {
+            "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+            "citation_label": "C1",
+            "document_id": "engineering-deployment-handbook",
+            "requirement_id": "R1",
+            "supporting_spans": [
+              "The production deployment approval identifier is ENG-DEP-17 ."
+            ]
+          },
+          {
+            "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+            "citation_label": "C2",
+            "document_id": "operations-continuity-plan",
+            "requirement_id": "R2",
+            "supporting_spans": [
+              "The recovery time objective for the customer API is four hours ."
+            ]
+          },
+          {
+            "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+            "citation_label": "C3",
+            "document_id": "remote-work-policy",
+            "requirement_id": "R3",
+            "supporting_spans": [
+              "Under the current 2026 policy , employees may work remotely two days per week ."
+            ]
+          }
+        ],
+        "status": "answered"
+      },
+      "behavior": "CORRECT_COMPLETE_ANSWER",
+      "citation_completeness_pass": true,
+      "citation_correctness_pass": true,
+      "citation_validity_pass": true,
+      "fact_completeness_pass": true,
+      "output_requirement_count": 3,
+      "query_id": "p5k_three_document_031",
+      "required_count": 3,
+      "requirement_complete": true,
+      "saved_luna_reused": true
+    },
+    {
+      "api_calls": 0,
+      "assembly": {
+        "answer": "R1: The production deployment approval identifier is ENG-DEP-17 . [C1]\nR2: The recovery time objective for the customer API is four hours . [C2]\nR3: Under the current 2026 policy , employees may work remotely two days per week . [C3]",
+        "citations": [
+          "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+        ],
+        "failure_code": null,
+        "final_generator_openai_calls": 0,
+        "requirements": [
+          {
+            "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+            "citation_label": "C1",
+            "document_id": "engineering-deployment-handbook",
+            "requirement_id": "R1",
+            "supporting_spans": [
+              "The production deployment approval identifier is ENG-DEP-17 ."
+            ]
+          },
+          {
+            "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+            "citation_label": "C2",
+            "document_id": "operations-continuity-plan",
+            "requirement_id": "R2",
+            "supporting_spans": [
+              "The recovery time objective for the customer API is four hours ."
+            ]
+          },
+          {
+            "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+            "citation_label": "C3",
+            "document_id": "remote-work-policy",
+            "requirement_id": "R3",
+            "supporting_spans": [
+              "Under the current 2026 policy , employees may work remotely two days per week ."
+            ]
+          }
+        ],
+        "status": "answered"
+      },
+      "behavior": "CORRECT_COMPLETE_ANSWER",
+      "citation_completeness_pass": true,
+      "citation_correctness_pass": true,
+      "citation_validity_pass": true,
+      "fact_completeness_pass": true,
+      "output_requirement_count": 3,
+      "query_id": "p5k_three_document_032",
+      "required_count": 3,
+      "requirement_complete": true,
+      "saved_luna_reused": true
+    },
+    {
+      "api_calls": 0,
+      "assembly": {
+        "answer": "R1: The production deployment approval identifier is ENG-DEP-17 . [C1]\nR2: The recovery time objective for the customer API is four hours . [C2]\nR3: Under the current 2026 policy , employees may work remotely two days per week . [C3]",
+        "citations": [
+          "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+        ],
+        "failure_code": null,
+        "final_generator_openai_calls": 0,
+        "requirements": [
+          {
+            "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+            "citation_label": "C1",
+            "document_id": "engineering-deployment-handbook",
+            "requirement_id": "R1",
+            "supporting_spans": [
+              "The production deployment approval identifier is ENG-DEP-17 ."
+            ]
+          },
+          {
+            "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+            "citation_label": "C2",
+            "document_id": "operations-continuity-plan",
+            "requirement_id": "R2",
+            "supporting_spans": [
+              "The recovery time objective for the customer API is four hours ."
+            ]
+          },
+          {
+            "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+            "citation_label": "C3",
+            "document_id": "remote-work-policy",
+            "requirement_id": "R3",
+            "supporting_spans": [
+              "Under the current 2026 policy , employees may work remotely two days per week ."
+            ]
+          }
+        ],
+        "status": "answered"
+      },
+      "behavior": "CORRECT_COMPLETE_ANSWER",
+      "citation_completeness_pass": true,
+      "citation_correctness_pass": true,
+      "citation_validity_pass": true,
+      "fact_completeness_pass": true,
+      "output_requirement_count": 3,
+      "query_id": "p5k_three_document_033",
+      "required_count": 3,
+      "requirement_complete": true,
+      "saved_luna_reused": true
+    },
+    {
+      "api_calls": 0,
+      "assembly": {
+        "answer": "R1: The production deployment approval identifier is ENG-DEP-17 . [C1]\nR2: The recovery time objective for the customer API is four hours . [C2]\nR3: Under the current 2026 policy , employees may work remotely two days per week . [C3]",
+        "citations": [
+          "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+        ],
+        "failure_code": null,
+        "final_generator_openai_calls": 0,
+        "requirements": [
+          {
+            "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+            "citation_label": "C1",
+            "document_id": "engineering-deployment-handbook",
+            "requirement_id": "R1",
+            "supporting_spans": [
+              "The production deployment approval identifier is ENG-DEP-17 ."
+            ]
+          },
+          {
+            "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+            "citation_label": "C2",
+            "document_id": "operations-continuity-plan",
+            "requirement_id": "R2",
+            "supporting_spans": [
+              "The recovery time objective for the customer API is four hours ."
+            ]
+          },
+          {
+            "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+            "citation_label": "C3",
+            "document_id": "remote-work-policy",
+            "requirement_id": "R3",
+            "supporting_spans": [
+              "Under the current 2026 policy , employees may work remotely two days per week ."
+            ]
+          }
+        ],
+        "status": "answered"
+      },
+      "behavior": "CORRECT_COMPLETE_ANSWER",
+      "citation_completeness_pass": true,
+      "citation_correctness_pass": true,
+      "citation_validity_pass": true,
+      "fact_completeness_pass": true,
+      "output_requirement_count": 3,
+      "query_id": "p5k_three_document_034",
+      "required_count": 3,
+      "requirement_complete": true,
+      "saved_luna_reused": true
+    },
+    {
+      "api_calls": 0,
+      "assembly": {
+        "answer": "R1: The production deployment approval identifier is ENG-DEP-17 . [C1]\nR2: The recovery time objective for the customer API is four hours . [C2]\nR3: Under the current 2026 policy , employees may work remotely two days per week . [C3]",
+        "citations": [
+          "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+        ],
+        "failure_code": null,
+        "final_generator_openai_calls": 0,
+        "requirements": [
+          {
+            "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+            "citation_label": "C1",
+            "document_id": "engineering-deployment-handbook",
+            "requirement_id": "R1",
+            "supporting_spans": [
+              "The production deployment approval identifier is ENG-DEP-17 ."
+            ]
+          },
+          {
+            "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+            "citation_label": "C2",
+            "document_id": "operations-continuity-plan",
+            "requirement_id": "R2",
+            "supporting_spans": [
+              "The recovery time objective for the customer API is four hours ."
+            ]
+          },
+          {
+            "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+            "citation_label": "C3",
+            "document_id": "remote-work-policy",
+            "requirement_id": "R3",
+            "supporting_spans": [
+              "Under the current 2026 policy , employees may work remotely two days per week ."
+            ]
+          }
+        ],
+        "status": "answered"
+      },
+      "behavior": "CORRECT_COMPLETE_ANSWER",
+      "citation_completeness_pass": true,
+      "citation_correctness_pass": true,
+      "citation_validity_pass": true,
+      "fact_completeness_pass": true,
+      "output_requirement_count": 3,
+      "query_id": "p5k_three_document_035",
+      "required_count": 3,
+      "requirement_complete": true,
+      "saved_luna_reused": true
+    },
+    {
+      "api_calls": 0,
+      "assembly": {
+        "answer": "R1: The production deployment approval identifier is ENG-DEP-17 . [C1]\nR2: The recovery time objective for the customer API is four hours . [C2]\nR3: Under the current 2026 policy , employees may work remotely two days per week . [C3]",
+        "citations": [
+          "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+        ],
+        "failure_code": null,
+        "final_generator_openai_calls": 0,
+        "requirements": [
+          {
+            "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+            "citation_label": "C1",
+            "document_id": "engineering-deployment-handbook",
+            "requirement_id": "R1",
+            "supporting_spans": [
+              "The production deployment approval identifier is ENG-DEP-17 ."
+            ]
+          },
+          {
+            "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+            "citation_label": "C2",
+            "document_id": "operations-continuity-plan",
+            "requirement_id": "R2",
+            "supporting_spans": [
+              "The recovery time objective for the customer API is four hours ."
+            ]
+          },
+          {
+            "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+            "citation_label": "C3",
+            "document_id": "remote-work-policy",
+            "requirement_id": "R3",
+            "supporting_spans": [
+              "Under the current 2026 policy , employees may work remotely two days per week ."
+            ]
+          }
+        ],
+        "status": "answered"
+      },
+      "behavior": "CORRECT_COMPLETE_ANSWER",
+      "citation_completeness_pass": true,
+      "citation_correctness_pass": true,
+      "citation_validity_pass": true,
+      "fact_completeness_pass": true,
+      "output_requirement_count": 3,
+      "query_id": "p5k_three_document_036",
+      "required_count": 3,
+      "requirement_complete": true,
+      "saved_luna_reused": true
+    },
+    {
+      "api_calls": 0,
+      "assembly": {
+        "answer": "R1: The production deployment approval identifier is ENG-DEP-17 . [C1]\nR2: The recovery time objective for the customer API is four hours . [C2]\nR3: Under the current 2026 policy , employees may work remotely two days per week . [C3]",
+        "citations": [
+          "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+        ],
+        "failure_code": null,
+        "final_generator_openai_calls": 0,
+        "requirements": [
+          {
+            "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+            "citation_label": "C1",
+            "document_id": "engineering-deployment-handbook",
+            "requirement_id": "R1",
+            "supporting_spans": [
+              "The production deployment approval identifier is ENG-DEP-17 ."
+            ]
+          },
+          {
+            "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+            "citation_label": "C2",
+            "document_id": "operations-continuity-plan",
+            "requirement_id": "R2",
+            "supporting_spans": [
+              "The recovery time objective for the customer API is four hours ."
+            ]
+          },
+          {
+            "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+            "citation_label": "C3",
+            "document_id": "remote-work-policy",
+            "requirement_id": "R3",
+            "supporting_spans": [
+              "Under the current 2026 policy , employees may work remotely two days per week ."
+            ]
+          }
+        ],
+        "status": "answered"
+      },
+      "behavior": "CORRECT_COMPLETE_ANSWER",
+      "citation_completeness_pass": true,
+      "citation_correctness_pass": true,
+      "citation_validity_pass": true,
+      "fact_completeness_pass": true,
+      "output_requirement_count": 3,
+      "query_id": "p5k_three_document_037",
+      "required_count": 3,
+      "requirement_complete": true,
+      "saved_luna_reused": true
+    },
+    {
+      "api_calls": 0,
+      "assembly": {
+        "answer": "R1: The production deployment approval identifier is ENG-DEP-17 . [C1]\nR2: The recovery time objective for the customer API is four hours . [C2]\nR3: Under the current 2026 policy , employees may work remotely two days per week . [C3]",
+        "citations": [
+          "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+        ],
+        "failure_code": null,
+        "final_generator_openai_calls": 0,
+        "requirements": [
+          {
+            "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+            "citation_label": "C1",
+            "document_id": "engineering-deployment-handbook",
+            "requirement_id": "R1",
+            "supporting_spans": [
+              "The production deployment approval identifier is ENG-DEP-17 ."
+            ]
+          },
+          {
+            "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+            "citation_label": "C2",
+            "document_id": "operations-continuity-plan",
+            "requirement_id": "R2",
+            "supporting_spans": [
+              "The recovery time objective for the customer API is four hours ."
+            ]
+          },
+          {
+            "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+            "citation_label": "C3",
+            "document_id": "remote-work-policy",
+            "requirement_id": "R3",
+            "supporting_spans": [
+              "Under the current 2026 policy , employees may work remotely two days per week ."
+            ]
+          }
+        ],
+        "status": "answered"
+      },
+      "behavior": "CORRECT_COMPLETE_ANSWER",
+      "citation_completeness_pass": true,
+      "citation_correctness_pass": true,
+      "citation_validity_pass": true,
+      "fact_completeness_pass": true,
+      "output_requirement_count": 3,
+      "query_id": "p5k_three_document_038",
+      "required_count": 3,
+      "requirement_complete": true,
+      "saved_luna_reused": true
+    },
+    {
+      "api_calls": 0,
+      "assembly": {
+        "answer": "R1: The production deployment approval identifier is ENG-DEP-17 . [C1]\nR2: The recovery time objective for the customer API is four hours . [C2]\nR3: Under the current 2026 policy , employees may work remotely two days per week . [C3]",
+        "citations": [
+          "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+        ],
+        "failure_code": null,
+        "final_generator_openai_calls": 0,
+        "requirements": [
+          {
+            "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+            "citation_label": "C1",
+            "document_id": "engineering-deployment-handbook",
+            "requirement_id": "R1",
+            "supporting_spans": [
+              "The production deployment approval identifier is ENG-DEP-17 ."
+            ]
+          },
+          {
+            "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+            "citation_label": "C2",
+            "document_id": "operations-continuity-plan",
+            "requirement_id": "R2",
+            "supporting_spans": [
+              "The recovery time objective for the customer API is four hours ."
+            ]
+          },
+          {
+            "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+            "citation_label": "C3",
+            "document_id": "remote-work-policy",
+            "requirement_id": "R3",
+            "supporting_spans": [
+              "Under the current 2026 policy , employees may work remotely two days per week ."
+            ]
+          }
+        ],
+        "status": "answered"
+      },
+      "behavior": "CORRECT_COMPLETE_ANSWER",
+      "citation_completeness_pass": true,
+      "citation_correctness_pass": true,
+      "citation_validity_pass": true,
+      "fact_completeness_pass": true,
+      "output_requirement_count": 3,
+      "query_id": "p5k_three_document_039",
+      "required_count": 3,
+      "requirement_complete": true,
+      "saved_luna_reused": true
+    },
+    {
+      "api_calls": 0,
+      "assembly": {
+        "answer": "R1: The production deployment approval identifier is ENG-DEP-17 . [C1]\nR2: The recovery time objective for the customer API is four hours . [C2]\nR3: Under the current 2026 policy , employees may work remotely two days per week . [C3]",
+        "citations": [
+          "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+        ],
+        "failure_code": null,
+        "final_generator_openai_calls": 0,
+        "requirements": [
+          {
+            "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+            "citation_label": "C1",
+            "document_id": "engineering-deployment-handbook",
+            "requirement_id": "R1",
+            "supporting_spans": [
+              "The production deployment approval identifier is ENG-DEP-17 ."
+            ]
+          },
+          {
+            "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+            "citation_label": "C2",
+            "document_id": "operations-continuity-plan",
+            "requirement_id": "R2",
+            "supporting_spans": [
+              "The recovery time objective for the customer API is four hours ."
+            ]
+          },
+          {
+            "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+            "citation_label": "C3",
+            "document_id": "remote-work-policy",
+            "requirement_id": "R3",
+            "supporting_spans": [
+              "Under the current 2026 policy , employees may work remotely two days per week ."
+            ]
+          }
+        ],
+        "status": "answered"
+      },
+      "behavior": "CORRECT_COMPLETE_ANSWER",
+      "citation_completeness_pass": true,
+      "citation_correctness_pass": true,
+      "citation_validity_pass": true,
+      "fact_completeness_pass": true,
+      "output_requirement_count": 3,
+      "query_id": "p5k_three_document_040",
+      "required_count": 3,
+      "requirement_complete": true,
+      "saved_luna_reused": true
+    },
+    {
+      "api_calls": 0,
+      "assembly": {
+        "answer": "R1: The production deployment approval identifier is ENG-DEP-17 . [C1]\nR2: The recovery time objective for the customer API is four hours . [C2]\nR3: Under the current 2026 policy , employees may work remotely two days per week . [C3]",
+        "citations": [
+          "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+        ],
+        "failure_code": null,
+        "final_generator_openai_calls": 0,
+        "requirements": [
+          {
+            "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+            "citation_label": "C1",
+            "document_id": "engineering-deployment-handbook",
+            "requirement_id": "R1",
+            "supporting_spans": [
+              "The production deployment approval identifier is ENG-DEP-17 ."
+            ]
+          },
+          {
+            "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+            "citation_label": "C2",
+            "document_id": "operations-continuity-plan",
+            "requirement_id": "R2",
+            "supporting_spans": [
+              "The recovery time objective for the customer API is four hours ."
+            ]
+          },
+          {
+            "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+            "citation_label": "C3",
+            "document_id": "remote-work-policy",
+            "requirement_id": "R3",
+            "supporting_spans": [
+              "Under the current 2026 policy , employees may work remotely two days per week ."
+            ]
+          }
+        ],
+        "status": "answered"
+      },
+      "behavior": "CORRECT_COMPLETE_ANSWER",
+      "citation_completeness_pass": true,
+      "citation_correctness_pass": true,
+      "citation_validity_pass": true,
+      "fact_completeness_pass": true,
+      "output_requirement_count": 3,
+      "query_id": "p5k_three_document_041",
+      "required_count": 3,
+      "requirement_complete": true,
+      "saved_luna_reused": true
+    },
+    {
+      "api_calls": 0,
+      "assembly": {
+        "answer": "R1: The production deployment approval identifier is ENG-DEP-17 . [C1]\nR2: The recovery time objective for the customer API is four hours . [C2]\nR3: Under the current 2026 policy , employees may work remotely two days per week . [C3]",
+        "citations": [
+          "01423f11-8d28-418b-bd8f-b548fa0491ef",
+          "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+          "803b1d29-ee55-4c31-abc8-13e9e5be6485"
+        ],
+        "failure_code": null,
+        "final_generator_openai_calls": 0,
+        "requirements": [
+          {
+            "chunk_id": "01423f11-8d28-418b-bd8f-b548fa0491ef",
+            "citation_label": "C1",
+            "document_id": "engineering-deployment-handbook",
+            "requirement_id": "R1",
+            "supporting_spans": [
+              "The production deployment approval identifier is ENG-DEP-17 ."
+            ]
+          },
+          {
+            "chunk_id": "2aafc123-32cd-4c8b-ad3e-845392de29e6",
+            "citation_label": "C2",
+            "document_id": "operations-continuity-plan",
+            "requirement_id": "R2",
+            "supporting_spans": [
+              "The recovery time objective for the customer API is four hours ."
+            ]
+          },
+          {
+            "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+            "citation_label": "C3",
+            "document_id": "remote-work-policy",
+            "requirement_id": "R3",
+            "supporting_spans": [
+              "Under the current 2026 policy , employees may work remotely two days per week ."
+            ]
+          }
+        ],
+        "status": "answered"
+      },
+      "behavior": "CORRECT_COMPLETE_ANSWER",
+      "citation_completeness_pass": true,
+      "citation_correctness_pass": true,
+      "citation_validity_pass": true,
+      "fact_completeness_pass": true,
+      "output_requirement_count": 3,
+      "query_id": "p5k_three_document_042",
+      "required_count": 3,
+      "requirement_complete": true,
+      "saved_luna_reused": true
+    }
+  ],
+  "experiment_id": "REQUIREMENT_ASSEMBLER_SELECTIVE_ROUTING_V1",
+  "metrics": {
+    "final_generator_openai_calls": 0,
+    "new_api_calls": 0,
+    "new_assembler_complete_answers": 16,
+    "new_assembler_incomplete_answers": 0,
+    "new_assembler_safe_abstentions": 0,
+    "new_assembler_unsupported_answers": 0,
+    "old_api_calls": 0,
+    "old_generator_complete_answers": 0,
+    "old_generator_incomplete_answers": 16,
+    "old_generator_safe_abstentions": 16,
+    "old_generator_unsupported_answers": 0,
+    "three_document_cases": 16
+  }
+}

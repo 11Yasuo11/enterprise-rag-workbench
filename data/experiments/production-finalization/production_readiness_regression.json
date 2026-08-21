@@ -1,0 +1,19 @@
+{
+  "pass": true,
+  "gates": {
+    "canonical_web": true,
+    "canonical_eval": true,
+    "parity": true,
+    "semantic_corpus": true,
+    "mixed_vector_spaces_in_active_index": 0,
+    "real_ce": true,
+    "identity_fallback": 0,
+    "embedding_smoke": true,
+    "luna": true,
+    "sol": true,
+    "deterministic": true,
+    "injection_safety": true,
+    "abstention": true,
+    "secrets": true
+  }
+}

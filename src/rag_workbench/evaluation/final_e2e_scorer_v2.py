@@ -3,20 +3,28 @@
 from __future__ import annotations
 
 import hashlib
+import re
+import unicodedata
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
 SCORER_ID = "FINAL_E2E_SCORER_V2"
-SCORER_VERSION = "v2.0.0"
+SCORER_VERSION = "v2.1.0"
 
 
 def normalize_fact(text: str) -> str:
-    return text.casefold().strip()
+    normalized = unicodedata.normalize("NFKC", text).casefold().strip()
+    normalized = re.sub(r"\s+", " ", normalized)
+    # Corpus ingestion tokenizes punctuation with surrounding spaces. Normalize only
+    # typographic spacing; operators such as > and >= remain distinct.
+    normalized = re.sub(r"\s+([,.;:!?%\)])", r"\1", normalized)
+    normalized = re.sub(r"([\(€$£])\s+", r"\1", normalized)
+    return normalized
 
 
 def fact_in_text(fact: str, text: str) -> bool:
-    return normalize_fact(fact) in text.casefold()
+    return normalize_fact(fact) in normalize_fact(text)
 
 
 @dataclass(frozen=True)
@@ -207,7 +215,8 @@ def scorer_definition_payload() -> dict[str, Any]:
         "implementation_hash": impl_hash,
         "configuration": {
             "fact_matching_rule": (
-                "Unicode casefold substring: normalize_fact(f) in answer.casefold()"
+                "Unicode NFKC/casefold substring with whitespace and punctuation-tokenization "
+                "normalization; comparison operators remain distinct"
             ),
             "citation_validity_rule": (
                 "Each citation chunk_id exists in retrieved top-k AND is authorized for principal"

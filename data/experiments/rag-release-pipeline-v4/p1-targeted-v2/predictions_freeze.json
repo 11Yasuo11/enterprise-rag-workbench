@@ -1,0 +1,15 @@
+{
+  "case_count": 5,
+  "case_ids": [
+    "fresh_v1_029",
+    "fresh_v1_031",
+    "fresh_v1_032",
+    "fresh_v1_033",
+    "fresh_v1_035"
+  ],
+  "experiment_id": "P1_VERSION_TEMPORAL_TARGETED_REAL_API_CONFIRMATION_V2",
+  "gold_loaded_before_freeze": false,
+  "predictions_immutable": true,
+  "predictions_sha256": "4a97ee776bee31814cc46f1e8cdb95730c5308ac3c0707e99bc1b841713549c5",
+  "timestamp": "2026-08-20T18:40:05.025254+00:00"
+}

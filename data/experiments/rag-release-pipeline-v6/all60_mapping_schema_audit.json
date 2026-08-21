@@ -1,0 +1,35 @@
+{
+  "api_calls": 0,
+  "case_count": 60,
+  "mapping_count": 6,
+  "mapping_shapes": [
+    {
+      "count": 1,
+      "fields": [
+        "chunk_id",
+        "constraints",
+        "document_id",
+        "expected_version_id",
+        "normalized_value",
+        "requirement",
+        "requirement_id",
+        "requirement_type",
+        "supporting_span"
+      ]
+    },
+    {
+      "count": 5,
+      "fields": [
+        "chunk_id",
+        "document_id",
+        "requirement",
+        "requirement_id",
+        "supporting_spans"
+      ]
+    }
+  ],
+  "passed": true,
+  "timestamp": "2026-08-20T19:49:55.657321+00:00",
+  "unhandled": [],
+  "unhandled_mapping_schema": 0
+}

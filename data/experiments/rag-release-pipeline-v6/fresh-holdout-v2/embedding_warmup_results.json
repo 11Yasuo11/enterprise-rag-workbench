@@ -1,0 +1,13 @@
+{
+  "attempts": 2,
+  "cache_hits_before_committed_warmup": 0,
+  "case_count": 60,
+  "committed_external_calls": 60,
+  "cost_usd": 5.0560000000000004e-05,
+  "external_calls": 120,
+  "first_attempt_rolled_back": true,
+  "gold_accessed": false,
+  "passed": true,
+  "questions_only": true,
+  "timestamp": "2026-08-20T20:07:26.793496+00:00"
+}

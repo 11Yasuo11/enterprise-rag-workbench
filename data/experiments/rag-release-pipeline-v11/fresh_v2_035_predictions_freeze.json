@@ -1,0 +1,20 @@
+{
+  "case_count": 1,
+  "case_ids": [
+    "fresh_v2_035"
+  ],
+  "experiment_id": "TARGETED_FRESH_V2_035_V11",
+  "gold_loaded_before_freeze": false,
+  "predictions_immutable": true,
+  "predictions_sha256": "4768b8ea5745fe6d5bbd78b9d4028cb7617e5bfc70f4e4f8896947f35035db90",
+  "stage_guard": {
+    "case_count": 1,
+    "luna_calls": 0,
+    "per_case_counts": {},
+    "sol_calls": 0,
+    "stage": "TARGETED_ONE",
+    "stage_cost_cap_usd": 0.03,
+    "stage_spend_usd": 0.0
+  },
+  "timestamp": "2026-08-21T01:14:37.017992+00:00"
+}

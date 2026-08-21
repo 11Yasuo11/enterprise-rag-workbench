@@ -24,6 +24,7 @@ from rag_workbench.providers.llm.base import GenerationContext, GenerationReques
 from rag_workbench.providers.llm.extractive import EXTRACTIVE_REVISION, EXTRACTIVE_V1_1_MODEL
 from rag_workbench.retrieval.filters import RetrievalFilters
 from rag_workbench.retrieval.retriever import Retriever
+from rag_workbench.retrieval.temporal import plan_temporal_scope
 from rag_workbench.retrieval.vector_search import RetrievalResult
 from rag_workbench.security.permissions import Principal
 
@@ -70,6 +71,13 @@ class RagResponse:
 
 
 class RagService:
+    """LEGACY serving orchestrator (dense Top-5 + optional gate + extractive/LLM).
+
+    Active Web and evaluation inference must use
+    ``rag_workbench.runtime.CanonicalRagRuntime`` instead. Kept for historical
+    integration tests and experiment runners that have not migrated.
+    """
+
     def __init__(
         self,
         session: Session,
@@ -126,7 +134,11 @@ class RagService:
             try:
                 proposed = self.answerability_gate.evaluate(question, evidence)
                 validated = validate_gate_result_with_error(
-                    proposed, evidence, session=self.session, principal=principal
+                    proposed,
+                    evidence,
+                    session=self.session,
+                    principal=principal,
+                    temporal_scope=plan_temporal_scope(question),
                 )
                 gate_result = validated.result
                 operational_error = (

@@ -1,0 +1,44 @@
+{
+  "cost": {
+    "cumulative_historical_plus_v10_usd": 0.08031252,
+    "prior_cumulative_usd": 0.0,
+    "timestamp": "2026-08-21T00:58:13.904409+00:00",
+    "v10_cap_usd": 0.68,
+    "v10_fresh_v2_regression_usd": 0.08031252,
+    "v10_fresh_v3_usd": 0.0,
+    "v10_targeted_three_usd": 0,
+    "v10_total_usd": 0.08031252
+  },
+  "fresh_v2_regression_passed": false,
+  "fresh_v3_run": false,
+  "known_v2_three_failures_resolved": true,
+  "mandatory_gate_failures": [
+    "unsupported_answers=1 (fresh_v2_035)"
+  ],
+  "quality": {
+    "citation_completeness": 0.9833333333333333,
+    "citation_correctness": 0.9833333333333333,
+    "citation_validity": 1.0,
+    "contract_mismatches": 0,
+    "correct": 59,
+    "incorrect_abstentions": 0,
+    "precision": 0.9803921568627451,
+    "recall": 1.0,
+    "requirement_completeness": 1.0,
+    "strict_accuracy": 0.9833333333333333,
+    "total": 60,
+    "unsupported_answers": 1,
+    "version_correctness": 1.0
+  },
+  "safety": {
+    "acl_violations": 0,
+    "invalid_citations": 0,
+    "prompt_injection_regressions": 0,
+    "region_violations": 0,
+    "restricted_data_leaks": 0,
+    "tenant_violations": 0
+  },
+  "targeted_three_passed": true,
+  "timestamp": "2026-08-21T00:58:13.909822+00:00",
+  "verdict": "PIPELINE_V10_FAILED_V2_REGRESSION"
+}

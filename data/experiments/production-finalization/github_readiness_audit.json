@@ -1,0 +1,6 @@
+{
+  "secrets_committed_scan": "clean",
+  "issues": [],
+  "deployed_language_check": "docs use READY_FOR_PRODUCTION_DEPLOYMENT_REVIEW wording",
+  "pass": true
+}

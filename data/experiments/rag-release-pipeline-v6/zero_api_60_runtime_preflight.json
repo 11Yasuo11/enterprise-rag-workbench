@@ -1,0 +1,317 @@
+{
+  "api_calls": 0,
+  "case_count": 60,
+  "cases": [
+    {
+      "case_id": "fresh_v1_001",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_002",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_003",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_004",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_005",
+      "deterministic_validation": "PASS",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_006",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_007",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_008",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_009",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_010",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_011",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_012",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_013",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_014",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_015",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_016",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_017",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_018",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_019",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_020",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_021",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_022",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_023",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_024",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_025",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_026",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_027",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_028",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_029",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_030",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_031",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_032",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_033",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_034",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_035",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_036",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_037",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_038",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_039",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_040",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_041",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_042",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_043",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_044",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_045",
+      "deterministic_validation": "PASS",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_046",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_047",
+      "deterministic_validation": "PASS",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_048",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_049",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_050",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_051",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_052",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_053",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_054",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_055",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_056",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_057",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_058",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_059",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "fresh_v1_060",
+      "deterministic_validation": "NOT_APPLICABLE",
+      "status": "PASS"
+    }
+  ],
+  "failed_count": 0,
+  "forbidden_exceptions": {
+    "AttributeError": 0,
+    "KeyError": 0,
+    "TypeError": 0,
+    "schema_cardinality_failure": 0,
+    "silent_mapping_truncation": 0
+  },
+  "passed": true,
+  "passed_count": 60,
+  "timestamp": "2026-08-20T19:49:55.657440+00:00"
+}

@@ -1,0 +1,7 @@
+{
+  "api_calls": 0,
+  "artifact": "FRESH_V1_1_REGRESSION_RERUN",
+  "blocked_by": "P1_TARGETED_REAL_API_FAILED",
+  "cost_usd": 0.0,
+  "status": "NOT_RUN_BLOCKED_BY_P1_CONFIRMATION"
+}

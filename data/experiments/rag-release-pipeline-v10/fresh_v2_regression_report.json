@@ -1,0 +1,67 @@
+{
+  "cost": {
+    "actual_usd": 0.08031252,
+    "hard_cap_usd": 0.3,
+    "passed": true
+  },
+  "experiment_id": "FRESH_V2_REGRESSION_RERUN_V10",
+  "final_generation_llm_calls": 0,
+  "first_causal_failure": {
+    "behavior": "UNSUPPORTED_ANSWER",
+    "case_id": "fresh_v2_035",
+    "citation_completeness_pass": false,
+    "citation_correctness_pass": false,
+    "citation_validity_pass": true,
+    "correct": false,
+    "facts_missing": [
+      "three days per week"
+    ],
+    "facts_satisfied": [
+      "two days per week",
+      "within 60 minutes",
+      "within 15 minutes"
+    ],
+    "incorrect_abstention": false,
+    "requirement_completeness_pass": true,
+    "unsupported_answer": true,
+    "version_correctness_pass": true
+  },
+  "latency": {
+    "median_ms": 2017.6857914993889,
+    "p95_ms": 4667.519709008047
+  },
+  "luna_calls": 45,
+  "passed": false,
+  "quality": {
+    "citation_completeness": 0.9833333333333333,
+    "citation_correctness": 0.9833333333333333,
+    "citation_validity": 1.0,
+    "contract_mismatches": 0,
+    "correct": 59,
+    "incorrect_abstentions": 0,
+    "precision": 0.9803921568627451,
+    "recall": 1.0,
+    "requirement_completeness": 1.0,
+    "strict_accuracy": 0.9833333333333333,
+    "total": 60,
+    "unsupported_answers": 1,
+    "version_correctness": 1.0
+  },
+  "routing": {
+    "DETERMINISTIC": 50,
+    "SAFE_ABSTAIN": 9,
+    "SOL": 1
+  },
+  "runtime_exceptions": 0,
+  "safety": {
+    "acl_violations": 0,
+    "invalid_citations": 0,
+    "prompt_injection_regressions": 0,
+    "region_violations": 0,
+    "restricted_data_leaks": 0,
+    "tenant_violations": 0
+  },
+  "sol_calls": 10,
+  "timestamp": "2026-08-21T00:57:42.173844+00:00",
+  "verdict": "PIPELINE_V10_FAILED_V2_REGRESSION"
+}

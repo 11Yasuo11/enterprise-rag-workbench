@@ -1,0 +1,29 @@
+experiment_id: phase5kr-one-doc-diversity-candidate-v1
+identity:
+  index_identity: e598d9fb91b13a8c6bd6be94b1bc0a54bbce27dd4e98dc158669d7198bc6f466
+  phase5kr_results: data/experiments/v3-phase5k-final-e2e/phase5kr_corrected_per_case_results.jsonl
+dataset:
+  path: data/eval/phase5k/acmeai_enterprise_rag_v3_final_unseen_e2e_120.jsonl
+  sha256: 12851a9915ad51eccf2629e6765a8dc9a1731eb308987b0e53ac56468274f404
+retrieval:
+  dense_k: 20
+  bm25_k: 20
+  union_k: 30
+  dense_threshold: 0.28
+  rrf_k: 60
+reranking:
+  model: cross-encoder/ms-marco-MiniLM-L6-v2
+  model_revision: 233902d25c440f23af6f7d6e94d2946bac0bee0a
+  top_k: 5
+  selection_strategy: one_chunk_per_document
+generation:
+  revision: deterministic-extractive-v1.1
+semantic_judge:
+  enabled: false
+hypothesis:
+  observation: All prior OTHER=23 have complete RRF document pools but incomplete CE Top-5; 16 are three-document cases.
+  root_cause: Pointwise Cross-Encoder selection allows redundant documents to occupy Top-5 slots.
+  change: Change only final Top-5 selection to the existing one-chunk-per-document selector; do not rescore candidates or change retrieval, Judge, generator, prompt, or K.
+  expected_effect: Improve three-document and version-sensitive evidence coverage.
+  metrics_to_watch: Three-document coverage/accuracy, version-sensitive accuracy, precision, unsupported answers, same-document multi-chunk regression, ACL and tenant safety.
+  regression_risks: Same-document multi-chunk evidence can be removed; prior V2 research rejected this policy, so the gate must not auto-promote it.

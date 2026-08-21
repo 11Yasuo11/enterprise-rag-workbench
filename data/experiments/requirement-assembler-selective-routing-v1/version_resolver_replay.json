@@ -1,0 +1,349 @@
+{
+  "ambiguous": 0,
+  "api_calls": 0,
+  "cases": [
+    {
+      "api_calls": 0,
+      "assembly": {
+        "answer": "R1: The east-region customer API recovery sequence uses runbook code OPS-REC-E17 . [C1]",
+        "citations": [
+          "7e6c9c91-51ec-4146-8463-ee975a64232a"
+        ],
+        "failure_code": null,
+        "final_generator_openai_calls": 0,
+        "requirements": [
+          {
+            "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+            "citation_label": "C1",
+            "document_id": "recovery-runbook-east",
+            "requirement_id": "R1",
+            "supporting_spans": [
+              "The east-region customer API recovery sequence uses runbook code OPS-REC-E17 ."
+            ]
+          }
+        ],
+        "status": "answered"
+      },
+      "behavior": "CORRECT_COMPLETE_ANSWER",
+      "citation_completeness_pass": true,
+      "citation_correctness_pass": true,
+      "citation_validity_pass": true,
+      "fact_completeness_pass": true,
+      "query_id": "p5k_version_sensitive_079",
+      "resolution_reason": "unique valid candidate",
+      "resolution_status": "VERSION_RESOLVED",
+      "support_mapping": [
+        {
+          "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+          "document_id": "recovery-runbook-east",
+          "requirement": "report the east-failover recovery token",
+          "requirement_id": "R1",
+          "supporting_spans": [
+            "The east-region customer API recovery sequence uses runbook code OPS-REC-E17 ."
+          ]
+        }
+      ]
+    },
+    {
+      "api_calls": 0,
+      "assembly": {
+        "answer": "R1: The west-region customer API recovery sequence uses runbook code OPS-REC-W29 . [C1]",
+        "citations": [
+          "d60d3666-be70-4f64-b83e-7fe72c86f426"
+        ],
+        "failure_code": null,
+        "final_generator_openai_calls": 0,
+        "requirements": [
+          {
+            "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+            "citation_label": "C1",
+            "document_id": "recovery-runbook-west",
+            "requirement_id": "R1",
+            "supporting_spans": [
+              "The west-region customer API recovery sequence uses runbook code OPS-REC-W29 ."
+            ]
+          }
+        ],
+        "status": "answered"
+      },
+      "behavior": "CORRECT_COMPLETE_ANSWER",
+      "citation_completeness_pass": true,
+      "citation_correctness_pass": true,
+      "citation_validity_pass": true,
+      "fact_completeness_pass": true,
+      "query_id": "p5k_version_sensitive_080",
+      "resolution_reason": "unique valid candidate",
+      "resolution_status": "VERSION_RESOLVED",
+      "support_mapping": [
+        {
+          "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+          "document_id": "recovery-runbook-west",
+          "requirement": "report the west-failover recovery token",
+          "requirement_id": "R1",
+          "supporting_spans": [
+            "The west-region customer API recovery sequence uses runbook code OPS-REC-W29 ."
+          ]
+        }
+      ]
+    },
+    {
+      "api_calls": 0,
+      "assembly": {
+        "answer": "R1: The east-region customer API recovery sequence uses runbook code OPS-REC-E17 . [C1]",
+        "citations": [
+          "7e6c9c91-51ec-4146-8463-ee975a64232a"
+        ],
+        "failure_code": null,
+        "final_generator_openai_calls": 0,
+        "requirements": [
+          {
+            "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+            "citation_label": "C1",
+            "document_id": "recovery-runbook-east",
+            "requirement_id": "R1",
+            "supporting_spans": [
+              "The east-region customer API recovery sequence uses runbook code OPS-REC-E17 ."
+            ]
+          }
+        ],
+        "status": "answered"
+      },
+      "behavior": "CORRECT_COMPLETE_ANSWER",
+      "citation_completeness_pass": true,
+      "citation_correctness_pass": true,
+      "citation_validity_pass": true,
+      "fact_completeness_pass": true,
+      "query_id": "p5k_version_sensitive_081",
+      "resolution_reason": "unique valid candidate",
+      "resolution_status": "VERSION_RESOLVED",
+      "support_mapping": [
+        {
+          "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+          "document_id": "recovery-runbook-east",
+          "requirement": "report the east-failover recovery token",
+          "requirement_id": "R1",
+          "supporting_spans": [
+            "The east-region customer API recovery sequence uses runbook code OPS-REC-E17 ."
+          ]
+        }
+      ]
+    },
+    {
+      "api_calls": 0,
+      "assembly": {
+        "answer": "R1: The west-region customer API recovery sequence uses runbook code OPS-REC-W29 . [C1]",
+        "citations": [
+          "d60d3666-be70-4f64-b83e-7fe72c86f426"
+        ],
+        "failure_code": null,
+        "final_generator_openai_calls": 0,
+        "requirements": [
+          {
+            "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+            "citation_label": "C1",
+            "document_id": "recovery-runbook-west",
+            "requirement_id": "R1",
+            "supporting_spans": [
+              "The west-region customer API recovery sequence uses runbook code OPS-REC-W29 ."
+            ]
+          }
+        ],
+        "status": "answered"
+      },
+      "behavior": "CORRECT_COMPLETE_ANSWER",
+      "citation_completeness_pass": true,
+      "citation_correctness_pass": true,
+      "citation_validity_pass": true,
+      "fact_completeness_pass": true,
+      "query_id": "p5k_version_sensitive_082",
+      "resolution_reason": "unique valid candidate",
+      "resolution_status": "VERSION_RESOLVED",
+      "support_mapping": [
+        {
+          "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+          "document_id": "recovery-runbook-west",
+          "requirement": "report the west-failover recovery token",
+          "requirement_id": "R1",
+          "supporting_spans": [
+            "The west-region customer API recovery sequence uses runbook code OPS-REC-W29 ."
+          ]
+        }
+      ]
+    },
+    {
+      "api_calls": 0,
+      "assembly": {
+        "answer": "R1: The east-region customer API recovery sequence uses runbook code OPS-REC-E17 . [C1]",
+        "citations": [
+          "7e6c9c91-51ec-4146-8463-ee975a64232a"
+        ],
+        "failure_code": null,
+        "final_generator_openai_calls": 0,
+        "requirements": [
+          {
+            "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+            "citation_label": "C1",
+            "document_id": "recovery-runbook-east",
+            "requirement_id": "R1",
+            "supporting_spans": [
+              "The east-region customer API recovery sequence uses runbook code OPS-REC-E17 ."
+            ]
+          }
+        ],
+        "status": "answered"
+      },
+      "behavior": "CORRECT_COMPLETE_ANSWER",
+      "citation_completeness_pass": true,
+      "citation_correctness_pass": true,
+      "citation_validity_pass": true,
+      "fact_completeness_pass": true,
+      "query_id": "p5k_version_sensitive_083",
+      "resolution_reason": "unique valid candidate",
+      "resolution_status": "VERSION_RESOLVED",
+      "support_mapping": [
+        {
+          "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+          "document_id": "recovery-runbook-east",
+          "requirement": "report the east-failover recovery token",
+          "requirement_id": "R1",
+          "supporting_spans": [
+            "The east-region customer API recovery sequence uses runbook code OPS-REC-E17 ."
+          ]
+        }
+      ]
+    },
+    {
+      "api_calls": 0,
+      "assembly": {
+        "answer": "R1: The west-region customer API recovery sequence uses runbook code OPS-REC-W29 . [C1]",
+        "citations": [
+          "d60d3666-be70-4f64-b83e-7fe72c86f426"
+        ],
+        "failure_code": null,
+        "final_generator_openai_calls": 0,
+        "requirements": [
+          {
+            "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+            "citation_label": "C1",
+            "document_id": "recovery-runbook-west",
+            "requirement_id": "R1",
+            "supporting_spans": [
+              "The west-region customer API recovery sequence uses runbook code OPS-REC-W29 ."
+            ]
+          }
+        ],
+        "status": "answered"
+      },
+      "behavior": "CORRECT_COMPLETE_ANSWER",
+      "citation_completeness_pass": true,
+      "citation_correctness_pass": true,
+      "citation_validity_pass": true,
+      "fact_completeness_pass": true,
+      "query_id": "p5k_version_sensitive_084",
+      "resolution_reason": "unique valid candidate",
+      "resolution_status": "VERSION_RESOLVED",
+      "support_mapping": [
+        {
+          "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+          "document_id": "recovery-runbook-west",
+          "requirement": "report the west-failover recovery token",
+          "requirement_id": "R1",
+          "supporting_spans": [
+            "The west-region customer API recovery sequence uses runbook code OPS-REC-W29 ."
+          ]
+        }
+      ]
+    },
+    {
+      "api_calls": 0,
+      "assembly": {
+        "answer": "R1: The east-region customer API recovery sequence uses runbook code OPS-REC-E17 . [C1]",
+        "citations": [
+          "7e6c9c91-51ec-4146-8463-ee975a64232a"
+        ],
+        "failure_code": null,
+        "final_generator_openai_calls": 0,
+        "requirements": [
+          {
+            "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+            "citation_label": "C1",
+            "document_id": "recovery-runbook-east",
+            "requirement_id": "R1",
+            "supporting_spans": [
+              "The east-region customer API recovery sequence uses runbook code OPS-REC-E17 ."
+            ]
+          }
+        ],
+        "status": "answered"
+      },
+      "behavior": "CORRECT_COMPLETE_ANSWER",
+      "citation_completeness_pass": true,
+      "citation_correctness_pass": true,
+      "citation_validity_pass": true,
+      "fact_completeness_pass": true,
+      "query_id": "p5k_version_sensitive_085",
+      "resolution_reason": "unique valid candidate",
+      "resolution_status": "VERSION_RESOLVED",
+      "support_mapping": [
+        {
+          "chunk_id": "7e6c9c91-51ec-4146-8463-ee975a64232a",
+          "document_id": "recovery-runbook-east",
+          "requirement": "report the east-failover recovery token",
+          "requirement_id": "R1",
+          "supporting_spans": [
+            "The east-region customer API recovery sequence uses runbook code OPS-REC-E17 ."
+          ]
+        }
+      ]
+    },
+    {
+      "api_calls": 0,
+      "assembly": {
+        "answer": "R1: The west-region customer API recovery sequence uses runbook code OPS-REC-W29 . [C1]",
+        "citations": [
+          "d60d3666-be70-4f64-b83e-7fe72c86f426"
+        ],
+        "failure_code": null,
+        "final_generator_openai_calls": 0,
+        "requirements": [
+          {
+            "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+            "citation_label": "C1",
+            "document_id": "recovery-runbook-west",
+            "requirement_id": "R1",
+            "supporting_spans": [
+              "The west-region customer API recovery sequence uses runbook code OPS-REC-W29 ."
+            ]
+          }
+        ],
+        "status": "answered"
+      },
+      "behavior": "CORRECT_COMPLETE_ANSWER",
+      "citation_completeness_pass": true,
+      "citation_correctness_pass": true,
+      "citation_validity_pass": true,
+      "fact_completeness_pass": true,
+      "query_id": "p5k_version_sensitive_086",
+      "resolution_reason": "unique valid candidate",
+      "resolution_status": "VERSION_RESOLVED",
+      "support_mapping": [
+        {
+          "chunk_id": "d60d3666-be70-4f64-b83e-7fe72c86f426",
+          "document_id": "recovery-runbook-west",
+          "requirement": "report the west-failover recovery token",
+          "requirement_id": "R1",
+          "supporting_spans": [
+            "The west-region customer API recovery sequence uses runbook code OPS-REC-W29 ."
+          ]
+        }
+      ]
+    }
+  ],
+  "correct_complete_answers": 8,
+  "deterministically_resolved": 8,
+  "experiment_id": "REQUIREMENT_ASSEMBLER_SELECTIVE_ROUTING_V1",
+  "metadata_insufficient": 0,
+  "n": 8,
+  "safe_abstentions": 0,
+  "unsupported_answers": 0
+}

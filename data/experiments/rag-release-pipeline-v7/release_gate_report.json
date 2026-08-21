@@ -1,0 +1,29 @@
+{
+  "final_status": "NOT_READY_FOR_PRODUCTION",
+  "fresh_v2_regression": {
+    "reason": "Mandatory targeted-11 gate failed",
+    "status": "NOT_RUN"
+  },
+  "fresh_v3": {
+    "reason": "Mandatory targeted-11 gate failed",
+    "status": "NOT_CREATED_OR_RUN"
+  },
+  "mandatory_gate": "TARGETED_11",
+  "release_ready": false,
+  "targeted_11": {
+    "citation_completeness": 1.0,
+    "citation_correctness": 1.0,
+    "citation_validity": 1.0,
+    "contract_mismatches": 4,
+    "correct": 7,
+    "incorrect_abstentions": 4,
+    "passed": false,
+    "requirement_completeness": 0.6363636363636364,
+    "runtime_exceptions": 0,
+    "safety_violations": 0,
+    "total": 11,
+    "unsupported_answers": 0,
+    "version_correctness": 0.6363636363636364
+  },
+  "verdict": "PIPELINE_V7_FAILED_TARGETED_11"
+}

@@ -1,0 +1,23 @@
+{
+  "actual_cost_usd": 0.1341727,
+  "attempted_case_id": "fresh_v2_052",
+  "budget_cap_usd": 0.3,
+  "completed_provider_calls": {
+    "luna": 42,
+    "sol": 5,
+    "total": 47
+  },
+  "dataset_id": "FRESH_V2_REGRESSION_RERUN_V8",
+  "first_causal_failure": {
+    "code": "TARGETED_FOUR_SOL_CALL_LIMIT",
+    "explanation": "After five legitimate Sol escalations, fresh_v2_052 produced another Luna abstention eligible for Sol. The frozen MAX_SOL_CALLS=5 guard raised before the sixth Sol call and before predictions were persisted.",
+    "stage": "POST_LUNA_ROUTING"
+  },
+  "gold_loaded": false,
+  "metrics_computed": false,
+  "passed": false,
+  "prediction_freeze_created": false,
+  "predictions_persisted": false,
+  "runtime_exceptions": 1,
+  "verdict": "PIPELINE_V8_FAILED_V2_REGRESSION"
+}

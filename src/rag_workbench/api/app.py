@@ -15,6 +15,7 @@ from rag_workbench.api.dependencies import (
     context_builder,
     embedding_provider,
     llm_provider,
+    production_reranker,
 )
 from rag_workbench.api.schemas import (
     DocumentResponse,
@@ -73,6 +74,11 @@ from rag_workbench.ingestion.pipeline import IngestionConflictError, IngestionPi
 from rag_workbench.logging import configure_logging
 from rag_workbench.retrieval.filters import RetrievalFilters
 from rag_workbench.retrieval.retriever import Retriever
+from rag_workbench.runtime import (
+    CanonicalRagRuntime,
+    build_canonical_runtime,
+    production_config_from_settings,
+)
 from rag_workbench.security.permissions import Principal
 
 logger = structlog.get_logger(__name__)
@@ -82,6 +88,12 @@ SessionDependency = Annotated[Session, Depends(get_db)]
 @asynccontextmanager
 async def lifespan(_: FastAPI):
     configure_logging(get_settings().log_level)
+    try:
+        production_config_from_settings(get_settings()).validate_for_serving()
+        logger.info("canonical_rag_config_validated")
+    except RuntimeError as exc:
+        logger.error("canonical_rag_config_invalid", error=str(exc))
+        raise
     logger.info("api_started")
     yield
 
@@ -121,6 +133,7 @@ def _retriever(session: Session) -> Retriever:
 
 
 def _rag_service(session: Session) -> RagService:
+    """Legacy dense Top-5 service. Active /rag/query uses CanonicalRagRuntime."""
     return RagService(
         session,
         _retriever(session),
@@ -128,6 +141,30 @@ def _rag_service(session: Session) -> RagService:
         llm_provider(),
         answerability_gate(session),
         supporting_context_only=True,
+    )
+
+
+def _canonical_runtime(session: Session) -> CanonicalRagRuntime:
+    settings = get_settings()
+    config = production_config_from_settings(settings)
+    luna = None
+    sol = None
+    if settings.allow_external_judge_calls and settings.effective_judge_api_key:
+        from rag_workbench.experiments.atomic_requirement_contract_v1.verifier import (
+            FrozenEvidenceVerifier,
+        )
+
+        key = settings.effective_judge_api_key
+        base = settings.judge_base_url or settings.openai_base_url
+        luna = FrozenEvidenceVerifier(api_key=key, base_url=base, model=config.luna_model)
+        sol = FrozenEvidenceVerifier(api_key=key, base_url=base, model=config.sol_model)
+    return build_canonical_runtime(
+        session,
+        config=config,
+        embedding_provider=embedding_provider(),
+        reranker=production_reranker(),
+        luna_verifier=luna,
+        sol_verifier=sol,
     )
 
 
@@ -230,30 +267,25 @@ def retrieve(request: RetrieveRequest, session: SessionDependency) -> list[Any]:
 def rag_query(request: RagQueryRequest, session: SessionDependency) -> dict[str, Any]:
     if request.include_debug and not get_settings().rag_admin_debug:
         raise HTTPException(status_code=403, detail="RAG debug mode is disabled")
-    response = _rag_service(session).query(
-        request.query,
-        principal=_principal(request),
-        top_k=request.top_k,
-        score_threshold=request.score_threshold,
-        filters=_filters(request),
-        include_debug=request.include_debug,
+    try:
+        result = _canonical_runtime(session).query(
+            request.query,
+            principal=_principal(request),
+            include_debug=request.include_debug,
+        )
+    except RuntimeError as exc:
+        logger.error("canonical_runtime_config_error", error=str(exc))
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
+    payload = result.to_api_dict(include_debug=request.include_debug)
+    logger.info(
+        "canonical_rag_query",
+        request_id=result.request_id,
+        route=result.route,
+        status=result.status,
+        error_class=result.error_class,
+        latency_ms=result.trace.get("latency_ms") if result.trace else None,
     )
-    return {
-        "run_id": response.run_id,
-        "status": response.status,
-        "answer": response.answer,
-        "citations": [citation.to_dict() for citation in response.citations],
-        "retrieval_results": [asdict(result) for result in response.retrieval_results],
-        "final_context": response.final_context,
-        "answerability_result": (
-            response.answerability_result.model_dump(mode="json")
-            if response.answerability_result
-            else None
-        ),
-        "supporting_chunk_ids": response.supporting_chunk_ids,
-        "generation_context_chunk_ids": response.generation_context_chunk_ids,
-        "answerability_operational_error": response.answerability_operational_error,
-    }
+    return payload
 
 
 @app.get("/runs/{run_id}")
@@ -318,8 +350,11 @@ def get_run(run_id: str, session: SessionDependency) -> dict[str, Any]:
 
 @app.post("/eval/run")
 def run_evaluation(request: EvalRunRequest, session: SessionDependency) -> dict[str, object]:
+    """Run evaluation cases through CanonicalRagRuntime (same inference as /rag/query)."""
     cases = load_evaluation_dataset(_safe_eval_path(request.dataset))
-    report = EvaluationRunner(_rag_service(session)).run(
+    # top_k / score_threshold retained on the request schema for API compatibility;
+    # CanonicalRagRuntime ignores them and uses ProductionRagConfig stage depths.
+    report = EvaluationRunner(_canonical_runtime(session)).run(
         cases, top_k=request.top_k, score_threshold=request.score_threshold
     )
     return report.to_dict()

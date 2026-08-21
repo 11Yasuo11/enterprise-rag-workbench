@@ -54,6 +54,7 @@ from rag_workbench.recovery.contracts import (
 )
 from rag_workbench.recovery.instruction_boundary import BoundaryDecision
 from rag_workbench.retrieval.query_embedding_cache import normalize_query_text
+from rag_workbench.retrieval.temporal import TemporalScopePlan, plan_temporal_scope
 from rag_workbench.security.permissions import Principal
 
 SafetyGate = Callable[
@@ -480,6 +481,7 @@ def validate_recovery_support(
     principal: Principal,
     chunks: tuple[GateEvidence, ...],
     supporting_ids: tuple[str, ...],
+    temporal_scope: TemporalScopePlan | None = None,
 ) -> str | None:
     from rag_workbench.answerability.base import AnswerabilityReason, AnswerabilityResult
 
@@ -489,7 +491,11 @@ def validate_recovery_support(
         reason_code=AnswerabilityReason.SUFFICIENT_EVIDENCE,
     )
     validated = validate_gate_result_with_error(
-        proposed, chunks, session=session, principal=principal
+        proposed,
+        chunks,
+        session=session,
+        principal=principal,
+        temporal_scope=temporal_scope,
     )
     if validated.operational_error:
         return validated.operational_error.value
@@ -748,17 +754,20 @@ def evaluate_recovery(
         )
     citations = citation_ids_from_draft(draft)
     supporting_ids = support_ids_from_verification(verification)
+    temporal_scope = plan_temporal_scope(question)
     citation_error = validate_recovery_support(
         session=session,
         principal=principal,
         chunks=chunks,
         supporting_ids=citations,
+        temporal_scope=temporal_scope,
     )
     validation_error = citation_error or validate_recovery_support(
         session=session,
         principal=principal,
         chunks=chunks,
         supporting_ids=supporting_ids,
+        temporal_scope=temporal_scope,
     )
     if validation_error:
         return RecoveryOutcome(

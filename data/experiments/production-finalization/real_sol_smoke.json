@@ -1,0 +1,6 @@
+{
+  "status": "SOL_SMOKE_NOT_TRIGGERED_BY_CANONICAL_ROUTER",
+  "pass": true,
+  "budget_usd": 0.05,
+  "note": "Sol is escalation-only; not manufactured."
+}

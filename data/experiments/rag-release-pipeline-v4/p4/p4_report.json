@@ -1,0 +1,46 @@
+{
+  "api_calls": 0,
+  "cases": [
+    {
+      "answer": "NO",
+      "case_id": "fresh_v1_040",
+      "chunk_id": "7bdffe91-3861-44db-8be2-d6c7328997e8",
+      "conclusion": false,
+      "policy": {
+        "operator": "within",
+        "raw_text": "within ten business days",
+        "unit": "business day",
+        "value": "10"
+      },
+      "scenario": {
+        "operator": "=",
+        "raw_text": "eleventh business day",
+        "unit": "business day",
+        "value": "11"
+      },
+      "units_compatible": true
+    },
+    {
+      "answer": "NO",
+      "case_id": "fresh_v1_044",
+      "chunk_id": "ab9cf7c9-3671-43d6-90fd-12630f084203",
+      "conclusion": false,
+      "policy": {
+        "operator": "=",
+        "raw_text": "every thirty minutes",
+        "unit": "minute",
+        "value": "30"
+      },
+      "scenario": {
+        "operator": "=",
+        "raw_text": "forty-five-minute",
+        "unit": "minute",
+        "value": "45"
+      },
+      "units_compatible": true
+    }
+  ],
+  "experiment": "P4_DETERMINISTIC_CONSTRAINT_INFERENCE",
+  "passed": true,
+  "unsupported_guessing": false
+}

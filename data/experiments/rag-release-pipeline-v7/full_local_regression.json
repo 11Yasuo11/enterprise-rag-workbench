@@ -1,0 +1,53 @@
+{
+  "api_calls": {
+    "embedding": 0,
+    "luna": 0,
+    "openai": 0,
+    "sol": 0
+  },
+  "checks": {
+    "atomic_requirement_contract": "PASS",
+    "canonical_mapping_contract": "PASS",
+    "citation_authorization": "PASS",
+    "full_unit_suite_530_of_530": "PASS",
+    "git_diff_check": "PASS",
+    "local_original_19": "PASS_19_OF_19",
+    "local_v2_failures": "PASS_11_OF_11",
+    "old60_schema_paths": "PASS_60_OF_60",
+    "p0": "PASS",
+    "p0_generalization": "PASS_60_OF_60",
+    "p1_temporal_version": "PASS",
+    "p2_per_document_version": "PASS",
+    "p3_verifier_consistency": "PASS",
+    "p4_constraint_inference": "PASS",
+    "p5_packet_grounding": "PASS",
+    "packet_matcher": "PASS",
+    "router": "PASS",
+    "ruff_candidate_scope_src_scripts_tests": "PASS",
+    "safety": "PASS",
+    "scorer": "PASS",
+    "v2_all60_zero_api_runtime": "PASS_60_OF_60"
+  },
+  "cost_usd": 0.0,
+  "evidence": {
+    "local_11_replay_sha256": "c4bfd60d4ab1ec8d1ced491c7c11ef6c1c73cb08d76581e7b7ef807f3c8e396d",
+    "original_19_local_preservation_sha256": "c5f63be72199ed048d2526e7fad103d33e05db71be497fa42f2ee490e4b70d15",
+    "v2_zero_api_60_preflight_sha256": "047fe24b19e164c53c6b526edad373c76eb3570c873dade96081ae8ba53a9db7",
+    "v6_full_local_regression_sha256": "3594fc4e57da36fccad39e008fa0b173429703a4122676daa7b306ee21d28677"
+  },
+  "passed": true,
+  "protected_groups": {
+    "acl_allow": "3/3",
+    "acl_deny": "3/3",
+    "correct_abstentions": "20/20",
+    "prompt_injection": "4/4",
+    "scorer_normalization": "4/4",
+    "single_semantic": "8/8",
+    "three_document": "16/16",
+    "unanswerable": "6/6",
+    "version_sensitive": "8/8"
+  },
+  "ruff_note": "Repository-wide Ruff was also executed and found 116 pre-existing findings in immutable historical data/experiments runner snapshots; the maintained candidate scope src scripts tests passed.",
+  "timestamp": "2026-08-20T23:45:39.605610+00:00",
+  "verdict": "FULL_ZERO_API_LOCAL_REGRESSION_PASSED"
+}

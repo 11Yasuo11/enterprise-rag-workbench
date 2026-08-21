@@ -1,0 +1,6 @@
+{"ts": "2026-08-21T09:20:33.615097+00:00", "kind": "embedding_query", "model": "text-embedding-3-small", "external_calls": 0, "estimated_cost_usd": 1e-05}
+{"ts": "2026-08-21T09:20:41.543701+00:00", "kind": "embedding_smoke", "model": "text-embedding-3-small", "estimated_cost_usd": 1e-05}
+{"ts": "2026-08-21T09:20:45.210444+00:00", "kind": "luna_smoke", "model": "gpt-5.6-luna", "estimated_cost_usd": 0.02}
+{"ts": "2026-08-21T09:21:30.265292+00:00", "kind": "embedding_smoke", "model": "text-embedding-3-small", "estimated_cost_usd": 1e-05}
+{"ts": "2026-08-21T09:21:32.212780+00:00", "kind": "luna_smoke", "model": "gpt-5.6-luna", "estimated_cost_usd": 0.02}
+{"ts": "2026-08-21T09:36:14.427209+00:00", "kind": "embedding_query", "model": "text-embedding-3-small", "external_calls": 0, "estimated_cost_usd": 1e-05}

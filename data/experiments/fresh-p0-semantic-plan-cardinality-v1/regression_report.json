@@ -1,0 +1,197 @@
+{
+  "all_passed": true,
+  "atomic_requirement_contract": {
+    "downstream_redecomposition": false,
+    "same_plan_validator_assembler": true,
+    "stable_hash": true,
+    "stable_ids": true
+  },
+  "current_protected_category_plan_checks": {
+    "cases": [
+      {
+        "cardinality_match": true,
+        "case_id": "fresh_v1_001",
+        "category": "single_semantic"
+      },
+      {
+        "cardinality_match": true,
+        "case_id": "fresh_v1_002",
+        "category": "single_semantic"
+      },
+      {
+        "cardinality_match": true,
+        "case_id": "fresh_v1_003",
+        "category": "single_semantic"
+      },
+      {
+        "cardinality_match": true,
+        "case_id": "fresh_v1_004",
+        "category": "single_semantic"
+      },
+      {
+        "cardinality_match": true,
+        "case_id": "fresh_v1_005",
+        "category": "single_semantic"
+      },
+      {
+        "cardinality_match": true,
+        "case_id": "fresh_v1_006",
+        "category": "single_semantic"
+      },
+      {
+        "cardinality_match": true,
+        "case_id": "fresh_v1_007",
+        "category": "single_semantic"
+      },
+      {
+        "cardinality_match": true,
+        "case_id": "fresh_v1_008",
+        "category": "single_semantic"
+      },
+      {
+        "cardinality_match": true,
+        "case_id": "fresh_v1_045",
+        "category": "access_control_allow"
+      },
+      {
+        "cardinality_match": true,
+        "case_id": "fresh_v1_046",
+        "category": "access_control_allow"
+      },
+      {
+        "cardinality_match": true,
+        "case_id": "fresh_v1_047",
+        "category": "access_control_allow"
+      },
+      {
+        "cardinality_match": true,
+        "case_id": "fresh_v1_048",
+        "category": "access_control_deny"
+      },
+      {
+        "cardinality_match": true,
+        "case_id": "fresh_v1_049",
+        "category": "access_control_deny"
+      },
+      {
+        "cardinality_match": true,
+        "case_id": "fresh_v1_050",
+        "category": "access_control_deny"
+      },
+      {
+        "cardinality_match": true,
+        "case_id": "fresh_v1_051",
+        "category": "prompt_injection"
+      },
+      {
+        "cardinality_match": true,
+        "case_id": "fresh_v1_052",
+        "category": "prompt_injection"
+      },
+      {
+        "cardinality_match": true,
+        "case_id": "fresh_v1_053",
+        "category": "prompt_injection"
+      },
+      {
+        "cardinality_match": true,
+        "case_id": "fresh_v1_054",
+        "category": "prompt_injection"
+      },
+      {
+        "cardinality_match": true,
+        "case_id": "fresh_v1_055",
+        "category": "unanswerable"
+      },
+      {
+        "cardinality_match": true,
+        "case_id": "fresh_v1_056",
+        "category": "unanswerable"
+      },
+      {
+        "cardinality_match": true,
+        "case_id": "fresh_v1_057",
+        "category": "unanswerable"
+      },
+      {
+        "cardinality_match": true,
+        "case_id": "fresh_v1_058",
+        "category": "unanswerable"
+      },
+      {
+        "cardinality_match": true,
+        "case_id": "fresh_v1_059",
+        "category": "unanswerable"
+      },
+      {
+        "cardinality_match": true,
+        "case_id": "fresh_v1_060",
+        "category": "unanswerable"
+      }
+    ],
+    "n": 24,
+    "passed": 24
+  },
+  "fresh_previously_successful_categories": {
+    "access_control_allow": {
+      "n": 3,
+      "passed": 3,
+      "regressions": []
+    },
+    "access_control_deny": {
+      "n": 3,
+      "passed": 3,
+      "regressions": []
+    },
+    "prompt_injection": {
+      "n": 4,
+      "passed": 4,
+      "regressions": []
+    },
+    "single_semantic": {
+      "n": 8,
+      "passed": 8,
+      "regressions": []
+    },
+    "unanswerable": {
+      "n": 6,
+      "passed": 6,
+      "regressions": []
+    }
+  },
+  "historical_local": {
+    "correct_historical_abstentions": {
+      "n": 20,
+      "passed": 20
+    },
+    "scorer_normalization_fixes": {
+      "n": 4,
+      "passed": 4
+    },
+    "three_document_generator_fixes": {
+      "n": 16,
+      "passed": 16
+    },
+    "version_sensitive_local_fixes": {
+      "n": 8,
+      "passed": 8
+    }
+  },
+  "local_test_execution": {
+    "focused_contract_suite": {
+      "command": ".venv/bin/pytest tests/unit/test_atomic_requirement_contract_v1.py tests/unit/test_requirement_assembler_selective_routing_v1.py tests/unit/test_universal_requirement_completeness_v1.py tests/unit/test_combined_targeted_real_api_validation_v1.py -q",
+      "n": 60,
+      "passed": 60
+    },
+    "ruff": {
+      "passed": true
+    },
+    "unit_suite": {
+      "command": ".venv/bin/pytest tests/unit -q",
+      "n": 431,
+      "passed": 431
+    }
+  },
+  "method": "frozen saved-result regression audit plus current local test suite",
+  "new_api_calls": 0
+}

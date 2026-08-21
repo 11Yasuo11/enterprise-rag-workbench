@@ -1,0 +1,145 @@
+{
+  "assembler_hash": "1b1d4a68a510c8f23d16d0dcadcf8b47b675d370b4b8067d67f2af4b9774b20c",
+  "canonical_evidence_mapping_schema_hash": "c66924259020a0e0c714f045d231f076362a0a18f417e46b2313240fe54a25d9",
+  "canonical_question_plan_baseline_sha256": "273a974ed3bd303c29235c898c6dd4d33b5b8779a7ec289e8a9ea9faca9ece25",
+  "citation_authorization_hash": "d6c39189eaad50d437d12606dcc9aeaf30560bce48c362cb93d56e021d776ae3",
+  "constraint_engine_hash": "f550af0e91ae18afd358df606e8f1aa30e1b3cb12b42e9401dcdefb4629845af",
+  "cross_encoder": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+  "deterministic_support_hash": "81e5ae06430c4ca9f9d3440cbd483579f8f4ef0a6eb039a76dbb4dfa4c9e85b1",
+  "dirty_worktree": true,
+  "dirty_worktree_diff_hash": "dd57b3deeb9778dbdfd24d4c25864806aa247cf05ca1751d8ca9e57c368dee44",
+  "embedding_model": "text-embedding-3-small",
+  "freeze_id": "RC_FINAL_PRE_API_V10",
+  "fresh_v3_stage_cap_usd": 0.3,
+  "frozen_runtime_inputs_sha256": "5e3f4338abf607e68739c38656c70969fdde44ffe633a9132ea68d44c2b43cd3",
+  "git_sha": "6e9741f55dc0436963ea1c0ba30b9a30bccbd207",
+  "luna_model": "gpt-5.6-luna",
+  "normalization_adapter_hash": "c66924259020a0e0c714f045d231f076362a0a18f417e46b2313240fe54a25d9",
+  "p0_hash": "b7c594eb94bb1d6b016772cc4581e4b2550b54330f4dba3418b6cee66f09eed3",
+  "p1_hash": "1f5311894b10e198528df2ac5c160a0a098763006eb0b7cfa8bc415b407aa2ca",
+  "p2_hash": "6a69dfaa67c711c45cf915b2e5bbd2e991bdb91d27b57583aa5e0b9eb734a7a2",
+  "p3_hash": "da45e0fce1bec1a4d15330f0874ae42ae049c4614f5eb84835a6d88da27ecd7e",
+  "p4_hash": "f550af0e91ae18afd358df606e8f1aa30e1b3cb12b42e9401dcdefb4629845af",
+  "p5_hash": "09ade8d67355d293e5e375b366708a7d39a49ac6d8a51f61a0e14fcc5c356640",
+  "planner_hash": "869a43e7fa0edfafb2dcac600dc200b31e0b0539772ecc4c6063f08bbc28aed2",
+  "post_freeze_changes_forbidden": [
+    "code",
+    "prompt",
+    "config"
+  ],
+  "preflight_sha256": "5eec8294b1ed2d17800afc2374aec6c904f14dfd9ffd5b3cba6f22d7b3e3624f",
+  "pricing": {
+    "context": "short-context <=272K list prices",
+    "models": {
+      "gpt-5.6-luna": {
+        "cache_write_per_million": 0.25,
+        "cached_input_per_million": 0.02,
+        "input_per_million": 0.2,
+        "output_per_million": 1.2
+      },
+      "gpt-5.6-sol": {
+        "cache_write_per_million": 6.25,
+        "cached_input_per_million": 0.5,
+        "input_per_million": 5.0,
+        "output_per_million": 30.0
+      }
+    },
+    "source": {
+      "consulted_at": "2026-08-20",
+      "luna": "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+      "pricing": "https://developers.openai.com/api/docs/pricing",
+      "sol": "https://developers.openai.com/api/docs/models/gpt-5.6-sol"
+    }
+  },
+  "prompt_hashes": {
+    "schemas": "81e0529e5b8b03c4b28b1e48fa5f8d55997d3d157086975d63d8eb4ec4ad2664",
+    "verifier": "58634e34316c423a7c7df0794712f2255633e5fa5baa065d8d526a2c0dc21b85"
+  },
+  "retrieval_configuration": {
+    "architecture": "ACL/Tenant/Region -> temporal expansion -> dense(50)+BM25(50) -> RRF(k=60, union=100) -> Cross-Encoder -> Top-15",
+    "index_identity": "e598d9fb91b13a8c6bd6be94b1bc0a54bbce27dd4e98dc158669d7198bc6f466",
+    "top_k": 15
+  },
+  "router_hash": "5e1741a13b9ae8a7bf33347298b0c8844329339fa1e99532171cb2ddade17e22",
+  "safety_configuration_hash": "0b30ec367c2cb1634b99b9d923060cc80cf8d5b73719acbeef4ac36ca5337f30",
+  "scorer": {
+    "hash": "f61e017702267a65ed509edad34e5bacc98c2652d50c46987655c52770c61a03",
+    "id": "FINAL_E2E_SCORER_V2"
+  },
+  "sol_model": "gpt-5.6-sol",
+  "source_hashes": {
+    "scripts/run_p1_version_temporal_targeted_real_api_confirmation_v1.py": "3066061b72430be99081166cc189924d5e1bf03d72c6e2feb77a5a8bcdca4267",
+    "scripts/run_p1_version_temporal_v1.py": "de44ad863f5275182ba4c109686cd1db2e6f69fa22303c1217bb3b126f89e9cf",
+    "scripts/run_rag_release_pipeline_v10_fresh_v3.py": "db2f286915315439f0257cf0d7f640750d2cbd76e992e57c6dfe5fdd9ba48c3a",
+    "scripts/run_rag_release_pipeline_v10_targeted_three.py": "9500dbd863293bce387a4046a4c1b34616266fd132d5e38080587918118ea1f4",
+    "scripts/run_rag_release_pipeline_v4_evaluation.py": "c6120ba1cd7b91b010501cde38b4c31fbc73a14a525158700877459bf9f975ed",
+    "src/rag_workbench/config.py": "8aa630c3dcc4a86c3877fbc60a03347a4e6f59006c88b1a3fb7fb82057e9fda5",
+    "src/rag_workbench/evaluation/citation_authorization.py": "d6c39189eaad50d437d12606dcc9aeaf30560bce48c362cb93d56e021d776ae3",
+    "src/rag_workbench/evaluation/final_e2e_scorer_v2.py": "f61e017702267a65ed509edad34e5bacc98c2652d50c46987655c52770c61a03",
+    "src/rag_workbench/evaluation/stage_guard.py": "a91d3123e84be9fb4c986539706cd9f8bc8ec2b8dc6ce1cc0b070b00f2a1de4e",
+    "src/rag_workbench/experiments/atomic_requirement_contract_v1/contract.py": "869a43e7fa0edfafb2dcac600dc200b31e0b0539772ecc4c6063f08bbc28aed2",
+    "src/rag_workbench/experiments/atomic_requirement_contract_v1/deterministic_support.py": "81e5ae06430c4ca9f9d3440cbd483579f8f4ef0a6eb039a76dbb4dfa4c9e85b1",
+    "src/rag_workbench/experiments/atomic_requirement_contract_v1/evidence_mapping.py": "c66924259020a0e0c714f045d231f076362a0a18f417e46b2313240fe54a25d9",
+    "src/rag_workbench/experiments/atomic_requirement_contract_v1/verifier.py": "775b031c53b723ce5e2fc83fb47470c790c8188587c43ba3f426074f5ef8e9f1",
+    "src/rag_workbench/experiments/deterministic_constraint_inference.py": "f550af0e91ae18afd358df606e8f1aa30e1b3cb12b42e9401dcdefb4629845af",
+    "src/rag_workbench/experiments/requirement_assembler_selective_routing_v1/assembler.py": "1b1d4a68a510c8f23d16d0dcadcf8b47b675d370b4b8067d67f2af4b9774b20c",
+    "src/rag_workbench/experiments/requirement_assembler_selective_routing_v1/router.py": "5e1741a13b9ae8a7bf33347298b0c8844329339fa1e99532171cb2ddade17e22",
+    "src/rag_workbench/experiments/requirement_assembler_selective_routing_v1/versioning.py": "523a8e2c83ef38034cfb0442b2752f0a7bb5875b7385135e4d807be4a4e28efb",
+    "src/rag_workbench/experiments/safe_recovery_luna_v2/identities.py": "7351e3d36d3cceb88cbba73f14d31fa099c69a570aa339b96181560bb3af6d99",
+    "src/rag_workbench/experiments/safe_recovery_luna_v2/pipeline.py": "5742349259a080d85540f942dc89b161c831b3ab9129a49af5954de82a2ac05a",
+    "src/rag_workbench/experiments/safe_recovery_luna_v2/pricing.py": "4cb8598d295816aa13c20503e5f53208c9b69015fa3d77727cfe2a629ff9452e",
+    "src/rag_workbench/reranking/cross_encoder.py": "6233437a63950b62f5185cb5b74458b6771ae0059a54f100f863023c75af3546",
+    "src/rag_workbench/retrieval/bm25.py": "f434f79e1d33185aff46a9a577dc63668b61740089058cb1b1844f715c11c27f",
+    "src/rag_workbench/retrieval/filters.py": "f54ad923616b0f5958f9910b7804858145b178b5b3b59d10dbefdb3e0d3ca472",
+    "src/rag_workbench/retrieval/hybrid.py": "3cec7a36b922b75fc18bb7c19df89d28aa49bff8bffb6e4764cc551ec220c028",
+    "src/rag_workbench/retrieval/retriever.py": "db08ae036df08ee62add42af7317ae25d78ab002d6709d86a12c9efe7684e3c4",
+    "src/rag_workbench/retrieval/temporal.py": "1f5311894b10e198528df2ac5c160a0a098763006eb0b7cfa8bc415b407aa2ca",
+    "src/rag_workbench/safety/question_injection_guard_v2.py": "31dbcd441b01c97b785a66b83c4ac541ebf82c9308c4cc60c9decf98049697e1"
+  },
+  "stage_guard_configuration": {
+    "FRESH_HOLDOUT_V3": {
+      "case_count": 60,
+      "max_luna_calls_per_case": 1,
+      "max_sol_calls_per_case": 1,
+      "stage": "FRESH_HOLDOUT_V3",
+      "stage_cost_cap_usd": 0.3
+    },
+    "FRESH_V2_REGRESSION": {
+      "case_count": 60,
+      "max_luna_calls_per_case": 1,
+      "max_sol_calls_per_case": 1,
+      "stage": "FRESH_V2_REGRESSION",
+      "stage_cost_cap_usd": 0.3
+    },
+    "TARGETED_19": {
+      "case_count": 19,
+      "max_luna_calls_per_case": 1,
+      "max_sol_calls_per_case": 1,
+      "stage": "TARGETED_19",
+      "stage_cost_cap_usd": 0.2
+    },
+    "TARGETED_FOUR": {
+      "case_count": 4,
+      "max_luna_calls_per_case": 1,
+      "max_sol_calls_per_case": 1,
+      "stage": "TARGETED_FOUR",
+      "stage_cost_cap_usd": 0.1
+    },
+    "TARGETED_THREE": {
+      "case_count": 3,
+      "max_luna_calls_per_case": 1,
+      "max_sol_calls_per_case": 1,
+      "stage": "TARGETED_THREE",
+      "stage_cost_cap_usd": 0.08
+    }
+  },
+  "stage_guard_implementation_hash": "a91d3123e84be9fb4c986539706cd9f8bc8ec2b8dc6ce1cc0b070b00f2a1de4e",
+  "targeted_three_stage_cap_usd": 0.08,
+  "temporal_planner_hash": "1f5311894b10e198528df2ac5c160a0a098763006eb0b7cfa8bc415b407aa2ca",
+  "timestamp": "2026-08-21T00:54:48.239157+00:00",
+  "top_k": 15,
+  "total_v10_cap_usd": 0.68,
+  "v2_regression_stage_cap_usd": 0.3,
+  "verifier_hash": "775b031c53b723ce5e2fc83fb47470c790c8188587c43ba3f426074f5ef8e9f1",
+  "version_resolver_hash": "523a8e2c83ef38034cfb0442b2752f0a7bb5875b7385135e4d807be4a4e28efb"
+}

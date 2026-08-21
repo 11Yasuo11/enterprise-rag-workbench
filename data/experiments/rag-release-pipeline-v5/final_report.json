@@ -1,0 +1,40 @@
+{
+  "cost": {
+    "cumulative_v4_v5_paid_usd": 0.028908290000000003,
+    "fresh_v2_usd": 0.0,
+    "old_60_partial_usd": 0.0031391500000000003,
+    "targeted_v5_usd": 0.00917172,
+    "v5_cycle_total_usd": 0.012310870000000001
+  },
+  "final_status": "NOT_READY_FOR_PRODUCTION",
+  "pipeline_verdict": "PIPELINE_V5_FAILED_REGRESSION",
+  "rc": "RC_FINAL_PRE_API_V5",
+  "stages": {
+    "case_017_local_replay": "PASS_SUSPICIOUS_ABSTAIN",
+    "fresh_holdout_v2": "NOT_RUN",
+    "full_local_regression": "PASS",
+    "local_19_replay": "PASS_STILL_FAILING_0",
+    "old_60_regression": "INCOMPLETE_FROZEN_RUNTIME_FAILURE",
+    "targeted_19_v5": "PASS_19_OF_19"
+  },
+  "targeted_quality": {
+    "citation_completeness": 1.0,
+    "citation_correctness": 1.0,
+    "citation_validity": 1.0,
+    "contract_mismatches": 0,
+    "correct": 19,
+    "incorrect_abstentions": 0,
+    "requirement_completeness": 1.0,
+    "total": 19,
+    "unsupported_answers": 0,
+    "version_correctness": 1.0
+  },
+  "targeted_safety": {
+    "acl_violations": 0,
+    "invalid_citations": 0,
+    "prompt_injection_regressions": 0,
+    "region_violations": 0,
+    "restricted_data_leaks": 0,
+    "tenant_violations": 0
+  }
+}

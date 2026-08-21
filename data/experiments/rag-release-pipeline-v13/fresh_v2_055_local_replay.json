@@ -1,0 +1,31 @@
+{
+  "answer": null,
+  "api_calls": 0,
+  "case_id": "fresh_v2_055",
+  "citations": [],
+  "deterministic_support": {
+    "complete": false,
+    "failure_code": "SECURITY_PRECHECK_FAILED"
+  },
+  "initial_route": {
+    "reason": "security_precheck",
+    "route": "SAFE_ABSTAIN"
+  },
+  "injection_precheck": true,
+  "no_model_call_if_blocked": true,
+  "status": "FIXED_LOCALLY",
+  "still_failing": 0,
+  "timestamp": "2026-08-21T08:52:36.491922+00:00",
+  "version_resolution": {
+    "reason": "unique valid candidate",
+    "selected_version_ids": [
+      "f522ba37-fc14-4476-9246-0405ca653aa3"
+    ],
+    "selections_by_document": {
+      "security-training-example": [
+        "1"
+      ]
+    },
+    "status": "VERSION_RESOLVED"
+  }
+}

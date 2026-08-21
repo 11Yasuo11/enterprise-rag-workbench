@@ -1,0 +1,12 @@
+{
+  "final_status": "NOT_READY_FOR_PRODUCTION",
+  "gates": {
+    "fresh_holdout_v2": "NOT_RUN_DUE_TO_REGRESSION_FAILURE",
+    "full_local_regression": "PASS",
+    "old_60_regression": "FAIL_INCOMPLETE_RUNTIME",
+    "targeted_19_v5": "PASS_19_OF_19"
+  },
+  "pipeline_verdict": "PIPELINE_V5_FAILED_REGRESSION",
+  "production_deployed": false,
+  "stopped_at_first_mandatory_failure": true
+}

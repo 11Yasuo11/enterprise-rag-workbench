@@ -1,0 +1,45 @@
+{
+  "api_calls": 0,
+  "contract_id": "STAGE_SCOPED_MODEL_CALL_COST_GUARD_V1",
+  "error_contract": {
+    "budget": "STAGE_BUDGET_GUARD_TRIGGERED",
+    "generic": "MODEL_CALL_GUARD_TRIGGERED",
+    "per_case_sol": "PER_CASE_ESCALATION_LIMIT_TRIGGERED",
+    "wrong_stage": "WRONG_STAGE_GUARD_CONFIGURATION"
+  },
+  "invariants": [
+    "Each execution has one explicit active stage identity.",
+    "Each case may make at most one Luna call and one normal Sol escalation.",
+    "The projected cost of the next call is checked before provider invocation.",
+    "Stage call counters and stage spend begin at zero when a new stage starts.",
+    "Closed-stage spend remains in the cumulative experiment ledger.",
+    "No global targeted-stage Sol-call ceiling governs a 60-case stage.",
+    "Inference routing, evidence, prompts, validation, assembly, scoring, and safety semantics are unchanged."
+  ],
+  "stage_configurations": {
+    "FRESH_HOLDOUT_V3": {
+      "case_count": 60,
+      "max_luna_calls_per_case": 1,
+      "max_sol_calls_per_case": 1,
+      "stage_cost_cap_usd": 0.3
+    },
+    "FRESH_V2_REGRESSION": {
+      "case_count": 60,
+      "max_luna_calls_per_case": 1,
+      "max_sol_calls_per_case": 1,
+      "stage_cost_cap_usd": 0.3
+    },
+    "TARGETED_19": {
+      "case_count": 19,
+      "max_luna_calls_per_case": 1,
+      "max_sol_calls_per_case": 1,
+      "stage_cost_cap_usd": 0.2
+    },
+    "TARGETED_FOUR": {
+      "case_count": 4,
+      "max_luna_calls_per_case": 1,
+      "max_sol_calls_per_case": 1,
+      "stage_cost_cap_usd": 0.1
+    }
+  }
+}

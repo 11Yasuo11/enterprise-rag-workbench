@@ -1,0 +1,46 @@
+{
+  "api_calls": 0,
+  "assembled_preserves_all_version_scoped_units": true,
+  "case_id": "fresh_v2_035",
+  "deterministic_mappings": [
+    {
+      "requirement_id": "R1",
+      "span": "Under the 2025 policy , employees could work remotely three days per week .",
+      "version": "2025"
+    },
+    {
+      "requirement_id": "R1",
+      "span": "Under the current 2026 policy , employees may work remotely two days per week .",
+      "version": "2026"
+    },
+    {
+      "requirement_id": "R2",
+      "span": "Under the 2025 policy , suspected severity-one incidents had to be reported to the security duty officer within 60 minutes of discovery .",
+      "version": "2025"
+    },
+    {
+      "requirement_id": "R2",
+      "span": "Under the current 2026 policy , suspected severity-one incidents must be reported to the security duty officer within 15 minutes of discovery .",
+      "version": "2026"
+    }
+  ],
+  "no_first_only_truncation": true,
+  "requirement_identity": [
+    "R1",
+    "R2"
+  ],
+  "version_scoped_units_required": {
+    "R1": [
+      "2025 allowance",
+      "2026 allowance"
+    ],
+    "R2": [
+      "2025 deadline",
+      "2026 deadline"
+    ]
+  },
+  "year_qualifiers": [
+    "2025",
+    "2026"
+  ]
+}

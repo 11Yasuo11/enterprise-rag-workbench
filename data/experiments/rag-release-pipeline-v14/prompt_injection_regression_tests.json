@@ -1,0 +1,14 @@
+{
+  "api_calls": 0,
+  "test_modules": [
+    "tests/unit/test_prompt_injection_safety_v13.py",
+    "tests/unit/test_question_injection_guard_v2.py"
+  ],
+  "injection_cases_in_v2": {
+    "total": 3,
+    "precheck_blocked": 3,
+    "failed": [],
+    "pass": true
+  },
+  "passed": true
+}

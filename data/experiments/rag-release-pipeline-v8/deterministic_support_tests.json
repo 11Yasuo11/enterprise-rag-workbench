@@ -1,0 +1,33 @@
+{
+  "api_calls": 0,
+  "failed": 0,
+  "passed": 19,
+  "positive_coverage": [
+    "single-document literal support",
+    "multi-document support",
+    "cross-version support",
+    "multiple supporting spans",
+    "multiple citations",
+    "maintenance relation extraction",
+    "unique cadence anchors",
+    "coordination relation extraction",
+    "allowance relation extraction",
+    "deadline relation extraction"
+  ],
+  "negative_coverage": [
+    "missing requirement mapping",
+    "wrong version",
+    "wrong tenant",
+    "wrong region",
+    "ACL denied",
+    "nonliteral span",
+    "invalid citation",
+    "mapping conflict",
+    "unresolved temporal conflict",
+    "unsupported semantic inference",
+    "prompt-injection precheck",
+    "equally grounded contradictory facts"
+  ],
+  "test_file": "tests/unit/test_deterministic_support_v8.py",
+  "verdict": "PASS"
+}

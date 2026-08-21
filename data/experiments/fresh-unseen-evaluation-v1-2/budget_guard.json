@@ -1,0 +1,14 @@
+{
+  "direct_sol_usd": 0.0,
+  "embedding_actual_usd": 2.08e-05,
+  "expected_luna_usd": 0.064733,
+  "experiment_id": "FRESH_UNSEEN_EVALUATION_V1_2",
+  "hard_cap_usd": 0.5,
+  "no_quality_or_architecture_change": true,
+  "passes": true,
+  "projected_total_usd": 0.41443379999999996,
+  "reasonable_sol_escalation_reserve_calls": 12,
+  "reasonable_sol_escalation_reserve_usd": 0.34968,
+  "retrieval_dry_run_passed": true,
+  "verdict": "PASS"
+}

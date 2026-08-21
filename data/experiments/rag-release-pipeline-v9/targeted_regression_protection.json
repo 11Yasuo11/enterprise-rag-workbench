@@ -1,0 +1,15 @@
+{
+  "api_calls": 0,
+  "candidate_inference_files_compared": 23,
+  "candidate_inference_hash_mismatches": 0,
+  "evaluation_orchestration_changes": [
+    "scripts/run_rag_release_pipeline_v4_evaluation.py",
+    "src/rag_workbench/evaluation/stage_guard.py",
+    "scripts/run_rag_release_pipeline_v9_fresh_v3.py"
+  ],
+  "inference_semantics_changed": false,
+  "original_targeted_19": "PRESERVED_BY_IDENTICAL_INFERENCE_HASHES_AND_LOCAL_REPLAY_19_OF_19",
+  "targeted_four": "PRESERVED_BY_IDENTICAL_INFERENCE_HASHES_AND_LOCAL_REPLAY_4_OF_4",
+  "v8_immutable_results_modified": false,
+  "verdict": "PAID_TARGETED_RERUN_NOT_REQUIRED"
+}

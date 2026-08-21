@@ -1,0 +1,62 @@
+{
+  "bm25_membership": "TRACE_INSUFFICIENT",
+  "complete_case_ids": [
+    "fresh_v1_009",
+    "fresh_v1_011",
+    "fresh_v1_013",
+    "fresh_v1_015",
+    "fresh_v1_016",
+    "fresh_v1_017",
+    "fresh_v1_022",
+    "fresh_v1_023",
+    "fresh_v1_025",
+    "fresh_v1_028",
+    "fresh_v1_030",
+    "fresh_v1_036",
+    "fresh_v1_040",
+    "fresh_v1_044"
+  ],
+  "dense_membership": "TRACE_INSUFFICIENT",
+  "incomplete_cases": [
+    {
+      "case_id": "fresh_v1_029",
+      "cause": "inactive historical version excluded by frozen active-only retrieval",
+      "missing_facts": [
+        "three days per week"
+      ]
+    },
+    {
+      "case_id": "fresh_v1_031",
+      "cause": "inactive historical version excluded by frozen active-only retrieval",
+      "missing_facts": [
+        "three days per week"
+      ]
+    },
+    {
+      "case_id": "fresh_v1_032",
+      "cause": "inactive historical version excluded by frozen active-only retrieval",
+      "missing_facts": [
+        "every quarter"
+      ]
+    },
+    {
+      "case_id": "fresh_v1_033",
+      "cause": "inactive historical version excluded by frozen active-only retrieval",
+      "missing_facts": [
+        "60 minutes"
+      ]
+    },
+    {
+      "case_id": "fresh_v1_035",
+      "cause": "inactive historical version excluded by frozen active-only retrieval",
+      "missing_facts": [
+        "60 minutes"
+      ]
+    }
+  ],
+  "required_evidence_complete_in_top15": 14,
+  "required_evidence_incomplete_in_top15": 5,
+  "required_evidence_present_in_corpus": 19,
+  "rrf_membership": "TRACE_INSUFFICIENT",
+  "trace_note": "The frozen dry-run saved branch counts and Top-15 IDs, not dense/BM25/RRF membership IDs. Frozen source code proves both branches filter DocumentVersion.is_active=true."
+}

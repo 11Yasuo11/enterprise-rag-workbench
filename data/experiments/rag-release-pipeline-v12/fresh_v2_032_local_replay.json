@@ -1,0 +1,41 @@
+{
+  "api_calls": 0,
+  "both_version_identities_preserved": true,
+  "case_id": "fresh_v2_032",
+  "deterministic_support": {
+    "complete": false,
+    "failure_code": "MISSING_REQUIREMENT_MAPPING"
+  },
+  "false_unresolved_version": false,
+  "initial_route": {
+    "reason": "low_risk_semantic_verification",
+    "route": "LUNA"
+  },
+  "note": "Primary unresolved_version defect fixed; routes to LUNA like sibling cross-version cases (031/033/034). Deterministic path incomplete due to awkward and-split plan, requiring Luna for formal answer.",
+  "selected_versions_by_document": {
+    "security-incident-policy": [
+      "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588",
+      "c4d49578-2eec-4051-a54b-addc12af0efa"
+    ]
+  },
+  "semantic_document_ids": [
+    "security-incident-policy"
+  ],
+  "status": "STRUCTURALLY_FIXED_REAL_API_REQUIRED",
+  "still_failing": 0,
+  "timestamp": "2026-08-21T08:34:05.905748+00:00",
+  "version_resolution": {
+    "reason": "explicit version set resolved per document",
+    "selected_version_ids": [
+      "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588",
+      "c4d49578-2eec-4051-a54b-addc12af0efa"
+    ],
+    "selections_by_document": {
+      "security-incident-policy": [
+        "2025",
+        "2026"
+      ]
+    },
+    "status": "VERSION_SET_RESOLVED"
+  }
+}

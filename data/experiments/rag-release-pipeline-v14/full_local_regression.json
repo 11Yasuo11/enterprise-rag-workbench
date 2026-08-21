@@ -1,0 +1,55 @@
+{
+  "api_calls": 0,
+  "pass": true,
+  "unit_suite": "PASS",
+  "ruff": "PASS",
+  "git_diff_check": "PASS",
+  "v2_plan_traversal_60": {
+    "ok": 60,
+    "fail": [],
+    "pass": true
+  },
+  "v2_analyze_traversal_60": {
+    "ok": 60,
+    "fail": [],
+    "pass": true
+  },
+  "prompt_injection_cases": {
+    "total": 3,
+    "precheck_blocked": 3,
+    "failed": [],
+    "pass": true
+  },
+  "protected_routes": {
+    "fresh_v2_010": {
+      "route": "DETERMINISTIC",
+      "reason": "complete_literal_support"
+    },
+    "fresh_v2_021": {
+      "route": "DETERMINISTIC",
+      "reason": "complete_literal_support"
+    },
+    "fresh_v2_023": {
+      "route": "DETERMINISTIC",
+      "reason": "complete_literal_support"
+    },
+    "fresh_v2_030": {
+      "route": "LUNA",
+      "reason": "low_risk_semantic_verification"
+    },
+    "fresh_v2_032": {
+      "route": "LUNA",
+      "reason": "low_risk_semantic_verification"
+    },
+    "fresh_v2_035": {
+      "route": "DETERMINISTIC",
+      "reason": "complete_literal_support"
+    },
+    "fresh_v2_055": {
+      "route": "SAFE_ABSTAIN",
+      "reason": "security_precheck"
+    }
+  },
+  "fresh_v2_030_local": "STRUCTURALLY_FIXED_REAL_API_REQUIRED",
+  "timestamp": "2026-08-21T09:10:35.936129+00:00"
+}

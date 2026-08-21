@@ -1,0 +1,21 @@
+{
+  "api_calls": 0,
+  "case_id_branches": false,
+  "hardcoded_gold": false,
+  "primary_root_cause": "SEMANTIC_DOCUMENT_SCOPE_EMPTY",
+  "fixes": [
+    {
+      "id": "semantic_document_ids_evidence_tokens_and_fallback",
+      "file": "scripts/run_p1_version_temporal_v1.py"
+    },
+    {
+      "id": "cross_version_full_requested_set_fail_closed",
+      "file": "src/rag_workbench/experiments/requirement_assembler_selective_routing_v1/versioning.py"
+    },
+    {
+      "id": "cross_version_resolution_tests_v12",
+      "file": "tests/unit/test_cross_version_resolution_v12.py"
+    }
+  ],
+  "timestamp": "2026-08-21T08:33:52.395292+00:00"
+}

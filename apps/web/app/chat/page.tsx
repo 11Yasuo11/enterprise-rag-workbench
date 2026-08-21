@@ -7,10 +7,14 @@ import { PageHeading } from "@/components/page-heading";
 import { apiRequest, Citation } from "@/lib/api";
 
 type RagResponse = {
+  request_id?: string;
   run_id: string;
-  status: "answered" | "abstained";
+  status: "answer" | "abstain" | "unavailable" | "answered" | "abstained";
   answer: string | null;
   citations: Citation[];
+  route?: "deterministic" | "luna" | "sol" | "abstain";
+  error_class?: string | null;
+  requirements?: Array<{ requirement_id: string; requirement_text: string; status: string }>;
 };
 
 export default function ChatPage() {
@@ -43,8 +47,14 @@ export default function ChatPage() {
       <ErrorMessage message={error} />
       {result ? (
         <section className="resultPanel" aria-live="polite">
-          <div className="resultHeader"><h2>Result</h2><span className={`status ${result.status}`}>{result.status}</span></div>
+          <div className="resultHeader">
+            <h2>Result</h2>
+            <span className={`status ${result.status === "answer" || result.status === "answered" ? "answered" : "abstained"}`}>
+              {result.status}
+            </span>
+          </div>
           <p className="answer">{result.answer ?? "The corpus does not contain sufficient evidence to answer."}</p>
+          {result.route ? <small>Route {result.route}</small> : null}
           {result.citations.length > 0 ? <h3>Citations</h3> : null}
           {result.citations.map((citation) => (
             <article className="citation" key={citation.chunk_id}>

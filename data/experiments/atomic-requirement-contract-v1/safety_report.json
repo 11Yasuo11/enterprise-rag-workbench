@@ -1,0 +1,11 @@
+{
+  "acl_violations": 0,
+  "experiment_id": "ATOMIC_REQUIREMENT_CONTRACT_V1",
+  "final_generator_openai_calls": 0,
+  "invalid_citations": 0,
+  "passed": true,
+  "prompt_injection_regressions": 0,
+  "region_violations": 0,
+  "tenant_violations": 0,
+  "unsupported_answers": 0
+}

@@ -1,0 +1,75 @@
+{
+  "chains": [
+    {
+      "case_ids": [
+        "fresh_v1_009",
+        "fresh_v1_011",
+        "fresh_v1_013",
+        "fresh_v1_015",
+        "fresh_v1_016",
+        "fresh_v1_023",
+        "fresh_v1_025",
+        "fresh_v1_028",
+        "fresh_v1_030",
+        "fresh_v1_036",
+        "fresh_v1_044"
+      ],
+      "flow": [
+        "scope/conjunction mis-decomposed",
+        "multiple requested facts share one R or extra qualifier becomes R",
+        "validator accepts identity-consistent mapping",
+        "assembler retains first mapping or validator encounters unrelated version",
+        "incomplete answer or abstention"
+      ],
+      "name": "semantic plan cardinality"
+    },
+    {
+      "case_ids": [
+        "fresh_v1_029",
+        "fresh_v1_031",
+        "fresh_v1_032",
+        "fresh_v1_033",
+        "fresh_v1_035"
+      ],
+      "flow": [
+        "DocumentVersion.is_active=true in dense and BM25",
+        "2025 chunks excluded",
+        "single candidate resolver selects 2026",
+        "Luna lacks historical evidence",
+        "incorrect abstention"
+      ],
+      "name": "current-only version path"
+    },
+    {
+      "case_ids": [
+        "fresh_v1_009",
+        "fresh_v1_015",
+        "fresh_v1_016",
+        "fresh_v1_017",
+        "fresh_v1_023",
+        "fresh_v1_036"
+      ],
+      "flow": [
+        "one document version selected",
+        "selected_version_ids applied to all mapped documents",
+        "valid unrelated-document mapping rejected as WRONG_VERSION",
+        "Sol sees same evidence/invariant",
+        "abstention"
+      ],
+      "name": "global version whitelist"
+    },
+    {
+      "case_ids": [
+        "fresh_v1_040",
+        "fresh_v1_044"
+      ],
+      "flow": [
+        "exact rule retrieved",
+        "derived numeric comparison not represented deterministically",
+        "Luna ABSTAIN/unsupported derived requirement",
+        "safe abstention"
+      ],
+      "name": "literal verifier vs derived boundary"
+    }
+  ]
+}

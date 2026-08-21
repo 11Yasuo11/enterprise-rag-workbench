@@ -1,0 +1,71 @@
+{
+  "api_calls": 0,
+  "census": [
+    {
+      "can_fix_deterministically": false,
+      "case_ids": [
+        "fresh_v2_003",
+        "fresh_v2_011",
+        "fresh_v2_017",
+        "fresh_v2_019",
+        "fresh_v2_025"
+      ],
+      "failure_count": 5,
+      "first_failure_stage": "LUNA",
+      "model_confirmation_required": true,
+      "root_cause": "LUNA_FALSE_NEGATIVE"
+    },
+    {
+      "can_fix_deterministically": true,
+      "case_ids": [
+        "fresh_v2_013",
+        "fresh_v2_035"
+      ],
+      "failure_count": 2,
+      "first_failure_stage": "QUESTION_PLAN",
+      "model_confirmation_required": true,
+      "root_cause": "QUESTION_PLAN_ERROR"
+    },
+    {
+      "can_fix_deterministically": true,
+      "case_ids": [
+        "fresh_v2_024",
+        "fresh_v2_048"
+      ],
+      "failure_count": 2,
+      "first_failure_stage": "QUESTION_PLAN",
+      "model_confirmation_required": true,
+      "root_cause": "QUALIFIER_REQUIREMENT_ERROR"
+    },
+    {
+      "can_fix_deterministically": true,
+      "case_ids": [
+        "fresh_v2_020"
+      ],
+      "failure_count": 1,
+      "first_failure_stage": "RETRIEVAL",
+      "model_confirmation_required": true,
+      "root_cause": "RETRIEVAL_MISS"
+    },
+    {
+      "can_fix_deterministically": true,
+      "case_ids": [
+        "fresh_v2_034"
+      ],
+      "failure_count": 1,
+      "first_failure_stage": "TEMPORAL_SCOPE",
+      "model_confirmation_required": true,
+      "root_cause": "TEMPORAL_SCOPE_ERROR"
+    }
+  ],
+  "method": "earliest causal stage wins",
+  "primary_cause_counts": {
+    "LUNA_FALSE_NEGATIVE": 5,
+    "QUALIFIER_REQUIREMENT_ERROR": 2,
+    "QUESTION_PLAN_ERROR": 2,
+    "RETRIEVAL_MISS": 1,
+    "TEMPORAL_SCOPE_ERROR": 1
+  },
+  "timestamp": "2026-08-20T23:30:23.607378+00:00",
+  "total_failures": 11
+}

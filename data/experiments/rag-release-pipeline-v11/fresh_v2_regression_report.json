@@ -1,0 +1,61 @@
+{
+  "cost": {
+    "actual_usd": 0.17773907,
+    "hard_cap_usd": 0.3,
+    "passed": true
+  },
+  "experiment_id": "FRESH_V2_REGRESSION_RERUN_V11",
+  "final_generation_llm_calls": 0,
+  "first_causal_failure": {
+    "behavior": "INCORRECT_ABSTENTION",
+    "case_id": "fresh_v2_032",
+    "citation_completeness_pass": null,
+    "citation_correctness_pass": null,
+    "citation_validity_pass": null,
+    "correct": false,
+    "facts_missing": [],
+    "facts_satisfied": [],
+    "incorrect_abstention": true,
+    "requirement_completeness_pass": false,
+    "unsupported_answer": false,
+    "version_correctness_pass": false
+  },
+  "latency": {
+    "median_ms": 2033.8540000084322,
+    "p95_ms": 4721.221207990311
+  },
+  "luna_calls": 44,
+  "passed": false,
+  "quality": {
+    "citation_completeness": 1.0,
+    "citation_correctness": 1.0,
+    "citation_validity": 1.0,
+    "contract_mismatches": 1,
+    "correct": 59,
+    "incorrect_abstentions": 1,
+    "precision": 1.0,
+    "recall": 0.9803921568627451,
+    "requirement_completeness": 0.9833333333333333,
+    "strict_accuracy": 0.9833333333333333,
+    "total": 60,
+    "unsupported_answers": 0,
+    "version_correctness": 0.9833333333333333
+  },
+  "routing": {
+    "DETERMINISTIC": 50,
+    "SAFE_ABSTAIN": 9,
+    "SOL": 1
+  },
+  "runtime_exceptions": 0,
+  "safety": {
+    "acl_violations": 0,
+    "invalid_citations": 0,
+    "prompt_injection_regressions": 0,
+    "region_violations": 0,
+    "restricted_data_leaks": 0,
+    "tenant_violations": 0
+  },
+  "sol_calls": 11,
+  "timestamp": "2026-08-21T01:16:58.373739+00:00",
+  "verdict": "V11_V2_REGRESSION_FAILED"
+}

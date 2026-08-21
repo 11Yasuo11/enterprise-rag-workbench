@@ -1,0 +1,37 @@
+{
+  "api_calls": 0,
+  "census": [
+    {
+      "can_fix_deterministically": true,
+      "case_ids": [
+        "fresh_v2_010"
+      ],
+      "failure_count": 1,
+      "first_failure_stage": "QUESTION_PLAN",
+      "fix_contract": "Split coordinated dual-output connectors such as 'alongside' into independent atomic requirements.",
+      "retrieval_change_required": false,
+      "root_cause": "QUESTION_PLAN_ERROR"
+    },
+    {
+      "can_fix_deterministically": true,
+      "case_ids": [
+        "fresh_v2_021",
+        "fresh_v2_023"
+      ],
+      "failure_count": 2,
+      "first_failure_stage": "QUESTION_PLAN",
+      "fix_contract": "Strip leading version/evidence-scope clauses (Using only ... revision,; Read the current ... text and <output-verb>) into context_qualifiers, not output requirements.",
+      "retrieval_change_required": false,
+      "root_cause": "QUALIFIER_REQUIREMENT_ERROR"
+    }
+  ],
+  "finding": "All three V9 failures are first-causal at Question Plan. Top-15 holds required evidence 3/3. Do not change Top-K/retrieval. Shared fix surface is the atomic requirement planner contract.",
+  "method": "earliest causal stage wins",
+  "primary_cause_counts": {
+    "QUALIFIER_REQUIREMENT_ERROR": 2,
+    "QUESTION_PLAN_ERROR": 1
+  },
+  "timestamp": "2026-08-21T00:44:32.627234+00:00",
+  "top15_required_evidence_complete": "3/3",
+  "total_failures": 3
+}

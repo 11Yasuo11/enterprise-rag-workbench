@@ -1,0 +1,22 @@
+{
+  "api_calls": 0,
+  "case_id_branches": false,
+  "hardcoded_gold": false,
+  "primary_root_cause": "EVIDENCE_PACKET_MISS",
+  "secondary_cause": "DETERMINISTIC_SUPPORT_FALSE_NEGATIVE",
+  "first_failure_stage": "REQUIREMENT_SCOPED_EVIDENCE_PACKETS",
+  "fixes": [
+    {
+      "id": "packet_terms_retain_calendar_years",
+      "file": "src/rag_workbench/experiments/atomic_requirement_contract_v1/verifier.py",
+      "contract": "requirement_packet_terms keeps 20xx year tokens so temporal edition requirements retain lexical overlap with year-stamped spans under single-version scope, without restoring blanket single-version zero-overlap fill."
+    },
+    {
+      "id": "year_edition_packet_regression_tests_v14",
+      "file": "tests/unit/test_prompt_injection_safety_v13.py"
+    }
+  ],
+  "preserves_v13_injection_zero_overlap_guard": true,
+  "preserves_prompt_injection_055_056_057": true,
+  "timestamp": "2026-08-21T09:06:55.904842+00:00"
+}

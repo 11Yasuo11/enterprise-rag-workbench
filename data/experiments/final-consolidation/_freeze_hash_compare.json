@@ -1,0 +1,210 @@
+{
+  "timestamp": "2026-08-21T09:32:19.336126+00:00",
+  "freeze_id": "RC_FINAL_PRE_API_V14",
+  "verifier_unchanged_vs_v14_freeze": true,
+  "source_hash_checks": [
+    {
+      "path": "scripts/run_p1_version_temporal_targeted_real_api_confirmation_v1.py",
+      "match": true,
+      "expected": "3066061b72430be99081166cc189924d5e1bf03d72c6e2feb77a5a8bcdca4267",
+      "actual": "3066061b72430be99081166cc189924d5e1bf03d72c6e2feb77a5a8bcdca4267"
+    },
+    {
+      "path": "scripts/run_p1_version_temporal_v1.py",
+      "match": true,
+      "expected": "1721c557872b0d6eb130be6683fc38a4e998045b7e9610dafc48150194fad3e4",
+      "actual": "1721c557872b0d6eb130be6683fc38a4e998045b7e9610dafc48150194fad3e4"
+    },
+    {
+      "path": "scripts/run_rag_release_pipeline_v14_targeted_030.py",
+      "match": true,
+      "expected": "be9b8a1239c27cc88867271e3801e35be6e204d0f15376e3cbba4dffea8ad7ba",
+      "actual": "be9b8a1239c27cc88867271e3801e35be6e204d0f15376e3cbba4dffea8ad7ba"
+    },
+    {
+      "path": "scripts/run_rag_release_pipeline_v4_evaluation.py",
+      "match": true,
+      "expected": "980d730cfa061a0faa8f9cb608531b5801a12ff2613d77f370ad11860d23d31d",
+      "actual": "980d730cfa061a0faa8f9cb608531b5801a12ff2613d77f370ad11860d23d31d"
+    },
+    {
+      "path": "src/rag_workbench/config.py",
+      "match": true,
+      "expected": "8aa630c3dcc4a86c3877fbc60a03347a4e6f59006c88b1a3fb7fb82057e9fda5",
+      "actual": "8aa630c3dcc4a86c3877fbc60a03347a4e6f59006c88b1a3fb7fb82057e9fda5"
+    },
+    {
+      "path": "src/rag_workbench/evaluation/citation_authorization.py",
+      "match": true,
+      "expected": "d6c39189eaad50d437d12606dcc9aeaf30560bce48c362cb93d56e021d776ae3",
+      "actual": "d6c39189eaad50d437d12606dcc9aeaf30560bce48c362cb93d56e021d776ae3"
+    },
+    {
+      "path": "src/rag_workbench/evaluation/final_e2e_scorer_v2.py",
+      "match": true,
+      "expected": "f61e017702267a65ed509edad34e5bacc98c2652d50c46987655c52770c61a03",
+      "actual": "f61e017702267a65ed509edad34e5bacc98c2652d50c46987655c52770c61a03"
+    },
+    {
+      "path": "src/rag_workbench/evaluation/stage_guard.py",
+      "match": true,
+      "expected": "a91d3123e84be9fb4c986539706cd9f8bc8ec2b8dc6ce1cc0b070b00f2a1de4e",
+      "actual": "a91d3123e84be9fb4c986539706cd9f8bc8ec2b8dc6ce1cc0b070b00f2a1de4e"
+    },
+    {
+      "path": "src/rag_workbench/experiments/atomic_requirement_contract_v1/contract.py",
+      "match": true,
+      "expected": "9b116dbfee8e385ad6bef69f7ac618605ed516eb28aaa5c52ff5fb09b6ebddbf",
+      "actual": "9b116dbfee8e385ad6bef69f7ac618605ed516eb28aaa5c52ff5fb09b6ebddbf"
+    },
+    {
+      "path": "src/rag_workbench/experiments/atomic_requirement_contract_v1/deterministic_support.py",
+      "match": true,
+      "expected": "0af068393aaf739db98755c7aa9f8c7d6ff137ac98cd48bf76832c0179a3f0d1",
+      "actual": "0af068393aaf739db98755c7aa9f8c7d6ff137ac98cd48bf76832c0179a3f0d1"
+    },
+    {
+      "path": "src/rag_workbench/experiments/atomic_requirement_contract_v1/evidence_mapping.py",
+      "match": true,
+      "expected": "56a927128b01117bc9536742241044accb33a137544c68cfb0e139779a5b770d",
+      "actual": "56a927128b01117bc9536742241044accb33a137544c68cfb0e139779a5b770d"
+    },
+    {
+      "path": "src/rag_workbench/experiments/atomic_requirement_contract_v1/verifier.py",
+      "match": true,
+      "expected": "2c65cf4e7b629ecac0c13d04a58feae41bc876c0804d5e2a412dfe772713f923",
+      "actual": "2c65cf4e7b629ecac0c13d04a58feae41bc876c0804d5e2a412dfe772713f923"
+    },
+    {
+      "path": "src/rag_workbench/experiments/deterministic_constraint_inference.py",
+      "match": true,
+      "expected": "f550af0e91ae18afd358df606e8f1aa30e1b3cb12b42e9401dcdefb4629845af",
+      "actual": "f550af0e91ae18afd358df606e8f1aa30e1b3cb12b42e9401dcdefb4629845af"
+    },
+    {
+      "path": "src/rag_workbench/experiments/requirement_assembler_selective_routing_v1/assembler.py",
+      "match": true,
+      "expected": "1b1d4a68a510c8f23d16d0dcadcf8b47b675d370b4b8067d67f2af4b9774b20c",
+      "actual": "1b1d4a68a510c8f23d16d0dcadcf8b47b675d370b4b8067d67f2af4b9774b20c"
+    },
+    {
+      "path": "src/rag_workbench/experiments/requirement_assembler_selective_routing_v1/router.py",
+      "match": true,
+      "expected": "5e1741a13b9ae8a7bf33347298b0c8844329339fa1e99532171cb2ddade17e22",
+      "actual": "5e1741a13b9ae8a7bf33347298b0c8844329339fa1e99532171cb2ddade17e22"
+    },
+    {
+      "path": "src/rag_workbench/experiments/requirement_assembler_selective_routing_v1/versioning.py",
+      "match": true,
+      "expected": "9111b661a05b8ba9871c364b073007d9dee30e751e91b970498dbfc17c861188",
+      "actual": "9111b661a05b8ba9871c364b073007d9dee30e751e91b970498dbfc17c861188"
+    },
+    {
+      "path": "src/rag_workbench/experiments/safe_recovery_luna_v2/identities.py",
+      "match": true,
+      "expected": "7351e3d36d3cceb88cbba73f14d31fa099c69a570aa339b96181560bb3af6d99",
+      "actual": "7351e3d36d3cceb88cbba73f14d31fa099c69a570aa339b96181560bb3af6d99"
+    },
+    {
+      "path": "src/rag_workbench/experiments/safe_recovery_luna_v2/pipeline.py",
+      "match": true,
+      "expected": "5742349259a080d85540f942dc89b161c831b3ab9129a49af5954de82a2ac05a",
+      "actual": "5742349259a080d85540f942dc89b161c831b3ab9129a49af5954de82a2ac05a"
+    },
+    {
+      "path": "src/rag_workbench/experiments/safe_recovery_luna_v2/pricing.py",
+      "match": true,
+      "expected": "4cb8598d295816aa13c20503e5f53208c9b69015fa3d77727cfe2a629ff9452e",
+      "actual": "4cb8598d295816aa13c20503e5f53208c9b69015fa3d77727cfe2a629ff9452e"
+    },
+    {
+      "path": "src/rag_workbench/reranking/cross_encoder.py",
+      "match": true,
+      "expected": "6233437a63950b62f5185cb5b74458b6771ae0059a54f100f863023c75af3546",
+      "actual": "6233437a63950b62f5185cb5b74458b6771ae0059a54f100f863023c75af3546"
+    },
+    {
+      "path": "src/rag_workbench/retrieval/bm25.py",
+      "match": false,
+      "expected": "f434f79e1d33185aff46a9a577dc63668b61740089058cb1b1844f715c11c27f",
+      "actual": "4cae7fe539e8b40cc40e7e042ee1999b271e820119b27e465c7de896b1fa9c7b"
+    },
+    {
+      "path": "src/rag_workbench/retrieval/filters.py",
+      "match": true,
+      "expected": "f54ad923616b0f5958f9910b7804858145b178b5b3b59d10dbefdb3e0d3ca472",
+      "actual": "f54ad923616b0f5958f9910b7804858145b178b5b3b59d10dbefdb3e0d3ca472"
+    },
+    {
+      "path": "src/rag_workbench/retrieval/hybrid.py",
+      "match": true,
+      "expected": "3cec7a36b922b75fc18bb7c19df89d28aa49bff8bffb6e4764cc551ec220c028",
+      "actual": "3cec7a36b922b75fc18bb7c19df89d28aa49bff8bffb6e4764cc551ec220c028"
+    },
+    {
+      "path": "src/rag_workbench/retrieval/retriever.py",
+      "match": false,
+      "expected": "db08ae036df08ee62add42af7317ae25d78ab002d6709d86a12c9efe7684e3c4",
+      "actual": "9206071bdd0af644555b337a61169b5da339ea633ce74c19d95ccb3be2054b42"
+    },
+    {
+      "path": "src/rag_workbench/retrieval/temporal.py",
+      "match": true,
+      "expected": "1f5311894b10e198528df2ac5c160a0a098763006eb0b7cfa8bc415b407aa2ca",
+      "actual": "1f5311894b10e198528df2ac5c160a0a098763006eb0b7cfa8bc415b407aa2ca"
+    },
+    {
+      "path": "src/rag_workbench/safety/question_injection_guard_v2.py",
+      "match": true,
+      "expected": "9306ace46b69e1aacaa60f8fb4258192c0c179430d267451d6d3c8c91910dcdd",
+      "actual": "9306ace46b69e1aacaa60f8fb4258192c0c179430d267451d6d3c8c91910dcdd"
+    }
+  ],
+  "named_hash_checks": [
+    {
+      "key": "verifier_hash",
+      "path": "src/rag_workbench/experiments/atomic_requirement_contract_v1/verifier.py",
+      "freeze_named": "2c65cf4e7b629ecac0c13d04a58feae41bc876c0804d5e2a412dfe772713f923",
+      "file_actual": "2c65cf4e7b629ecac0c13d04a58feae41bc876c0804d5e2a412dfe772713f923",
+      "source_hashes_match": true,
+      "named_equals_file": true
+    },
+    {
+      "key": "deterministic_support_hash",
+      "path": "src/rag_workbench/experiments/atomic_requirement_contract_v1/deterministic_support.py",
+      "freeze_named": "0af068393aaf739db98755c7aa9f8c7d6ff137ac98cd48bf76832c0179a3f0d1",
+      "file_actual": "0af068393aaf739db98755c7aa9f8c7d6ff137ac98cd48bf76832c0179a3f0d1",
+      "source_hashes_match": true,
+      "named_equals_file": true
+    },
+    {
+      "key": "prompt_injection_precheck_hash",
+      "path": "src/rag_workbench/safety/question_injection_guard_v2.py",
+      "freeze_named": "9306ace46b69e1aacaa60f8fb4258192c0c179430d267451d6d3c8c91910dcdd",
+      "file_actual": "9306ace46b69e1aacaa60f8fb4258192c0c179430d267451d6d3c8c91910dcdd",
+      "source_hashes_match": true,
+      "named_equals_file": true
+    },
+    {
+      "key": "planner_hash",
+      "path": "src/rag_workbench/experiments/atomic_requirement_contract_v1/contract.py",
+      "freeze_named": "9b116dbfee8e385ad6bef69f7ac618605ed516eb28aaa5c52ff5fb09b6ebddbf",
+      "file_actual": "9b116dbfee8e385ad6bef69f7ac618605ed516eb28aaa5c52ff5fb09b6ebddbf",
+      "source_hashes_match": true,
+      "named_equals_file": true
+    },
+    {
+      "key": "canonical_evidence_mapping_schema_hash",
+      "path": "src/rag_workbench/experiments/atomic_requirement_contract_v1/evidence_mapping.py",
+      "freeze_named": "56a927128b01117bc9536742241044accb33a137544c68cfb0e139779a5b770d",
+      "file_actual": "56a927128b01117bc9536742241044accb33a137544c68cfb0e139779a5b770d",
+      "source_hashes_match": true,
+      "named_equals_file": true
+    }
+  ],
+  "changed_since_v14_freeze": [
+    "src/rag_workbench/retrieval/bm25.py",
+    "src/rag_workbench/retrieval/retriever.py"
+  ],
+  "quality_logic_still_validates_frozen_v14": true
+}

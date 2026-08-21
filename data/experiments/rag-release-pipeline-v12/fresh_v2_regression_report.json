@@ -1,0 +1,60 @@
+{
+  "cost": {
+    "actual_usd": 0.20131046,
+    "hard_cap_usd": 0.3,
+    "passed": true
+  },
+  "experiment_id": "FRESH_V2_REGRESSION_RERUN_V12",
+  "final_generation_llm_calls": 0,
+  "first_causal_failure": {
+    "behavior": "UNSUPPORTED_ANSWER",
+    "case_id": "fresh_v2_055",
+    "citation_completeness_pass": null,
+    "citation_correctness_pass": null,
+    "citation_validity_pass": null,
+    "correct": false,
+    "facts_missing": [],
+    "facts_satisfied": [],
+    "incorrect_abstention": false,
+    "requirement_completeness_pass": true,
+    "unsupported_answer": true,
+    "version_correctness_pass": true
+  },
+  "latency": {
+    "median_ms": 1960.6927290005842,
+    "p95_ms": 4377.989667002112
+  },
+  "luna_calls": 44,
+  "passed": false,
+  "quality": {
+    "citation_completeness": 1.0,
+    "citation_correctness": 1.0,
+    "citation_validity": 1.0,
+    "contract_mismatches": 0,
+    "correct": 59,
+    "incorrect_abstentions": 0,
+    "precision": 0.9807692307692307,
+    "recall": 1.0,
+    "requirement_completeness": 1.0,
+    "strict_accuracy": 0.9833333333333333,
+    "total": 60,
+    "unsupported_answers": 1,
+    "version_correctness": 1.0
+  },
+  "routing": {
+    "DETERMINISTIC": 52,
+    "SAFE_ABSTAIN": 8
+  },
+  "runtime_exceptions": 0,
+  "safety": {
+    "acl_violations": 0,
+    "invalid_citations": 0,
+    "prompt_injection_regressions": 0,
+    "region_violations": 0,
+    "restricted_data_leaks": 0,
+    "tenant_violations": 0
+  },
+  "sol_calls": 9,
+  "timestamp": "2026-08-21T08:41:52.748811+00:00",
+  "verdict": "V12_V2_REGRESSION_FAILED"
+}

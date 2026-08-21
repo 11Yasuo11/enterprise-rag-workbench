@@ -1,0 +1,36 @@
+{
+  "answers_assembled_deterministically": 49,
+  "direct_sol_answers": 1,
+  "final_routes": {
+    "DETERMINISTIC": 48,
+    "SAFE_ABSTAIN": 11,
+    "SOL": 1
+  },
+  "initial_routes": {
+    "DETERMINISTIC": 9,
+    "LUNA": 48,
+    "SAFE_ABSTAIN": 2,
+    "SOL": 1
+  },
+  "luna_calls": 48,
+  "luna_decisions": {
+    "ABSTAIN": 11,
+    "GO": 37,
+    "UNCERTAIN": 0
+  },
+  "safe_abstentions": 9,
+  "sol_calls": 12,
+  "sol_decisions": {
+    "ABSTAIN": 7,
+    "GO": 5,
+    "UNCERTAIN": 0
+  },
+  "model_free_deterministic_answers": 9,
+  "sol_non_rescues": 8,
+  "sol_rescue_call_cost_usd": 0.041862,
+  "sol_rescue_count": 3,
+  "sol_rescue_direct_average_cost_usd": 0.013954,
+  "sol_rescue_economic_cost_usd": 0.06463883333333333,
+  "sol_total_cost_usd": 0.1939165,
+  "stage_cost_usd": 0.21249544
+}

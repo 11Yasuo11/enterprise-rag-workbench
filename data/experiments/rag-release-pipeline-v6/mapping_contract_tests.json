@@ -1,0 +1,23 @@
+{
+  "api_calls": 0,
+  "contract_test_count": 14,
+  "coverage": [
+    "single supporting_span",
+    "supporting_spans single",
+    "supporting_spans multiple",
+    "multiple citations",
+    "cross-version",
+    "multi-document",
+    "unauthorized rejection",
+    "wrong-version rejection",
+    "structured fail-closed",
+    "assembler span/citation preservation",
+    "no index-zero truncation",
+    "fresh_v1_005-equivalent plural shape"
+  ],
+  "failed_count": 0,
+  "passed": true,
+  "passed_count": 14,
+  "test_file": "tests/unit/test_evidence_mapping_contract_v6.py",
+  "timestamp": "2026-08-20T19:49:56.010661+00:00"
+}

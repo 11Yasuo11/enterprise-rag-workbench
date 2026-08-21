@@ -1,0 +1,985 @@
+{
+  "cases": [
+    {
+      "assembler": {
+        "actual_answer": null,
+        "all_requirements_present": true,
+        "emitted": false,
+        "unsupported_fact_present": false
+      },
+      "case_id": "fresh_v1_029",
+      "category": "version_temporal",
+      "citation": {
+        "cited_sources": [],
+        "complete": true,
+        "correct": true,
+        "valid": true
+      },
+      "evidence": "The 2025 fact exists in corpus but active-only retrieval admitted only 2026; resolver selected 2026 for an explicit 2025 question.",
+      "final_abstention_trigger": "LUNA_ABSTAIN",
+      "first_failure_stage": "ACTIVE_VERSION_RETRIEVAL_FILTER",
+      "gold_answerability": true,
+      "gold_required_documents": [
+        "remote-work-policy"
+      ],
+      "gold_required_facts": [
+        "three days per week"
+      ],
+      "gold_required_versions": {
+        "remote-work-policy": "2025"
+      },
+      "local_validation": {
+        "passed": true,
+        "reason": null
+      },
+      "luna": {
+        "called": true,
+        "correct_relative_to_top15": true,
+        "decision": "ABSTAIN",
+        "local_validation": {
+          "passed": true,
+          "reason": null
+        },
+        "requirement_statuses": {
+          "R1": "UNSUPPORTED",
+          "R2": "UNSUPPORTED"
+        }
+      },
+      "outcome": "INCORRECT_ABSTENTION",
+      "primary_root_cause": "TEMPORAL_SCOPE_ERROR",
+      "question": "Under the 2025 remote-work policy, how many remote days per week were allowed?",
+      "question_plan": {
+        "qualifiers": [],
+        "question_plan_hash": "972cb008734a13cd9baa941af150fb6c33ed48ee77ff8a942fb9359ff7eedc47",
+        "requirements": [
+          {
+            "requirement_id": "R1",
+            "requirement_text": "Under the 2025 remote-work policy",
+            "requirement_type": "fact"
+          },
+          {
+            "requirement_id": "R2",
+            "requirement_text": "how many remote days per week were allowed",
+            "requirement_type": "fact"
+          }
+        ]
+      },
+      "retrieval": {
+        "acl_tenant_region_survival": true,
+        "active_version_filter_survival": false,
+        "candidate_pool_trace_status": "TRACE_INSUFFICIENT: frozen dry-run persisted counts but not dense/BM25/RRF membership IDs",
+        "minimum_missing_facts": [
+          "three days per week"
+        ],
+        "missing_corpus_facts": [],
+        "required_document_ranks": {
+          "remote-work-policy": 1
+        },
+        "required_evidence_in_bm25_pool": null,
+        "required_evidence_in_corpus": true,
+        "required_evidence_in_dense_pool": null,
+        "required_evidence_in_rrf_pool": null,
+        "required_evidence_in_top15": false,
+        "required_fact_presence_top15": {
+          "three days per week": false
+        }
+      },
+      "router": {
+        "appropriate": true,
+        "final_route": "SAFE_ABSTAIN",
+        "initial_route": "LUNA",
+        "reason": "required_evidence_absent"
+      },
+      "scorer": {
+        "classification": "INCORRECT_ABSTENTION",
+        "correct": true
+      },
+      "secondary_root_causes": [
+        "WRONG_VERSION_SELECTED",
+        "VERSION_RESOLVER_OVER_FILTER",
+        "QUALIFIER_REQUIREMENT_ERROR"
+      ],
+      "sol": {
+        "called": false,
+        "correct_relative_to_top15": null,
+        "decision": null,
+        "local_validation": null
+      },
+      "version": {
+        "comparison_required": false,
+        "correct": false,
+        "gold_versions": {
+          "remote-work-policy": "2025"
+        },
+        "versions_available": [
+          {
+            "active": false,
+            "document_id": "remote-work-policy",
+            "version": "2025",
+            "version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac"
+          },
+          {
+            "active": true,
+            "document_id": "remote-work-policy",
+            "version": "2026",
+            "version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c"
+          }
+        ],
+        "versions_selected": [
+          {
+            "document_id": "remote-work-policy",
+            "version": "2026",
+            "version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c"
+          }
+        ]
+      }
+    },
+    {
+      "assembler": {
+        "actual_answer": "R1: Under the current 2026 policy , employees may work remotely two days per week . [C1]",
+        "all_requirements_present": false,
+        "emitted": true,
+        "unsupported_fact_present": false
+      },
+      "case_id": "fresh_v1_030",
+      "category": "version_temporal",
+      "citation": {
+        "cited_sources": [
+          {
+            "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+            "document_id": "remote-work-policy",
+            "text": "Under the current 2026 policy , employees may work remotely two days per week .",
+            "version": "2026"
+          }
+        ],
+        "complete": false,
+        "correct": false,
+        "valid": true
+      },
+      "evidence": "Both current-version facts were Top-15 and mapped to one R1; assembly emitted only the allowance span and omitted monthly review.",
+      "final_abstention_trigger": null,
+      "first_failure_stage": "QUESTION_PLAN",
+      "gold_answerability": true,
+      "gold_required_documents": [
+        "remote-work-policy"
+      ],
+      "gold_required_facts": [
+        "two days per week",
+        "every month"
+      ],
+      "gold_required_versions": {
+        "remote-work-policy": "2026"
+      },
+      "local_validation": {
+        "passed": true,
+        "reason": null
+      },
+      "luna": {
+        "called": true,
+        "correct_relative_to_top15": true,
+        "decision": "GO",
+        "local_validation": {
+          "passed": true,
+          "reason": null
+        },
+        "requirement_statuses": {
+          "R1": "SUPPORTED"
+        }
+      },
+      "outcome": "UNSUPPORTED_ANSWER",
+      "primary_root_cause": "QUESTION_PLAN_ERROR",
+      "question": "Under the current 2026 remote-work policy, how many remote days are allowed and how often are schedules reviewed?",
+      "question_plan": {
+        "qualifiers": [
+          {
+            "qualifier_id": "Q1",
+            "qualifier_type": "version",
+            "text": "Under the current 2026 remote-work policy"
+          }
+        ],
+        "question_plan_hash": "43c72f3c8d8c8855b6942971577fafa54a598904493736e05de71780e1f2e145",
+        "requirements": [
+          {
+            "requirement_id": "R1",
+            "requirement_text": "how many remote days are allowed and how often are schedules reviewed",
+            "requirement_type": "fact"
+          }
+        ]
+      },
+      "retrieval": {
+        "acl_tenant_region_survival": true,
+        "active_version_filter_survival": true,
+        "candidate_pool_trace_status": "TRACE_INSUFFICIENT: frozen dry-run persisted counts but not dense/BM25/RRF membership IDs",
+        "minimum_missing_facts": [],
+        "missing_corpus_facts": [],
+        "required_document_ranks": {
+          "remote-work-policy": 1
+        },
+        "required_evidence_in_bm25_pool": null,
+        "required_evidence_in_corpus": true,
+        "required_evidence_in_dense_pool": null,
+        "required_evidence_in_rrf_pool": null,
+        "required_evidence_in_top15": true,
+        "required_fact_presence_top15": {
+          "every month": true,
+          "two days per week": true
+        }
+      },
+      "router": {
+        "appropriate": true,
+        "final_route": "DETERMINISTIC",
+        "initial_route": "LUNA",
+        "reason": "validated_luna_go"
+      },
+      "scorer": {
+        "classification": "UNSUPPORTED_ANSWER",
+        "correct": true
+      },
+      "secondary_root_causes": [
+        "DETERMINISTIC_ASSEMBLER_ERROR",
+        "CITATION_MAPPING_ERROR",
+        "LOCAL_VALIDATOR_FALSE_ACCEPT"
+      ],
+      "sol": {
+        "called": false,
+        "correct_relative_to_top15": null,
+        "decision": null,
+        "local_validation": null
+      },
+      "version": {
+        "comparison_required": false,
+        "correct": true,
+        "gold_versions": {
+          "remote-work-policy": "2026"
+        },
+        "versions_available": [
+          {
+            "active": false,
+            "document_id": "remote-work-policy",
+            "version": "2025",
+            "version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac"
+          },
+          {
+            "active": true,
+            "document_id": "remote-work-policy",
+            "version": "2026",
+            "version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c"
+          }
+        ],
+        "versions_selected": [
+          {
+            "document_id": "remote-work-policy",
+            "version": "2026",
+            "version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c"
+          }
+        ]
+      }
+    },
+    {
+      "assembler": {
+        "actual_answer": null,
+        "all_requirements_present": true,
+        "emitted": false,
+        "unsupported_fact_present": false
+      },
+      "case_id": "fresh_v1_031",
+      "category": "version_temporal",
+      "citation": {
+        "cited_sources": [],
+        "complete": true,
+        "correct": true,
+        "valid": true
+      },
+      "evidence": "Comparison requires 2025+2026, but active-only retrieval retained only 2026 and the resolver can select only one version.",
+      "final_abstention_trigger": "LUNA_ABSTAIN",
+      "first_failure_stage": "ACTIVE_VERSION_RETRIEVAL_FILTER",
+      "gold_answerability": true,
+      "gold_required_documents": [
+        "remote-work-policy"
+      ],
+      "gold_required_facts": [
+        "three days per week",
+        "two days per week"
+      ],
+      "gold_required_versions": {
+        "remote-work-policy": "2026"
+      },
+      "local_validation": {
+        "passed": true,
+        "reason": null
+      },
+      "luna": {
+        "called": true,
+        "correct_relative_to_top15": true,
+        "decision": "ABSTAIN",
+        "local_validation": {
+          "passed": true,
+          "reason": null
+        },
+        "requirement_statuses": {
+          "R1": "UNSUPPORTED"
+        }
+      },
+      "outcome": "INCORRECT_ABSTENTION",
+      "primary_root_cause": "VERSION_COMPARISON_UNSUPPORTED",
+      "question": "How did the remote-work allowance change from the 2025 policy to the 2026 policy?",
+      "question_plan": {
+        "qualifiers": [],
+        "question_plan_hash": "06c0809c5908cb4716912e0c2692bc27001e0d6b40f95db211729cffc95f38c3",
+        "requirements": [
+          {
+            "requirement_id": "R1",
+            "requirement_text": "How did the remote-work allowance change from the 2025 policy to the 2026 policy",
+            "requirement_type": "fact"
+          }
+        ]
+      },
+      "retrieval": {
+        "acl_tenant_region_survival": true,
+        "active_version_filter_survival": false,
+        "candidate_pool_trace_status": "TRACE_INSUFFICIENT: frozen dry-run persisted counts but not dense/BM25/RRF membership IDs",
+        "minimum_missing_facts": [
+          "three days per week"
+        ],
+        "missing_corpus_facts": [],
+        "required_document_ranks": {
+          "remote-work-policy": 1
+        },
+        "required_evidence_in_bm25_pool": null,
+        "required_evidence_in_corpus": true,
+        "required_evidence_in_dense_pool": null,
+        "required_evidence_in_rrf_pool": null,
+        "required_evidence_in_top15": false,
+        "required_fact_presence_top15": {
+          "three days per week": false,
+          "two days per week": true
+        }
+      },
+      "router": {
+        "appropriate": true,
+        "final_route": "SAFE_ABSTAIN",
+        "initial_route": "LUNA",
+        "reason": "required_evidence_absent"
+      },
+      "scorer": {
+        "classification": "INCORRECT_ABSTENTION",
+        "correct": true
+      },
+      "secondary_root_causes": [
+        "VERSION_RESOLVER_OVER_FILTER"
+      ],
+      "sol": {
+        "called": false,
+        "correct_relative_to_top15": null,
+        "decision": null,
+        "local_validation": null
+      },
+      "version": {
+        "comparison_required": true,
+        "correct": false,
+        "gold_versions": {
+          "remote-work-policy": [
+            "2025",
+            "2026"
+          ]
+        },
+        "versions_available": [
+          {
+            "active": false,
+            "document_id": "remote-work-policy",
+            "version": "2025",
+            "version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac"
+          },
+          {
+            "active": true,
+            "document_id": "remote-work-policy",
+            "version": "2026",
+            "version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c"
+          }
+        ],
+        "versions_selected": [
+          {
+            "document_id": "remote-work-policy",
+            "version": "2026",
+            "version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c"
+          }
+        ]
+      }
+    },
+    {
+      "assembler": {
+        "actual_answer": null,
+        "all_requirements_present": true,
+        "emitted": false,
+        "unsupported_fact_present": false
+      },
+      "case_id": "fresh_v1_032",
+      "category": "version_temporal",
+      "citation": {
+        "cited_sources": [],
+        "complete": true,
+        "correct": true,
+        "valid": true
+      },
+      "evidence": "Comparison requires quarterly 2025 plus monthly 2026 evidence; only active 2026 survived retrieval.",
+      "final_abstention_trigger": "LUNA_ABSTAIN",
+      "first_failure_stage": "ACTIVE_VERSION_RETRIEVAL_FILTER",
+      "gold_answerability": true,
+      "gold_required_documents": [
+        "remote-work-policy"
+      ],
+      "gold_required_facts": [
+        "every quarter",
+        "every month"
+      ],
+      "gold_required_versions": {
+        "remote-work-policy": "2026"
+      },
+      "local_validation": {
+        "passed": true,
+        "reason": null
+      },
+      "luna": {
+        "called": true,
+        "correct_relative_to_top15": true,
+        "decision": "ABSTAIN",
+        "local_validation": {
+          "passed": true,
+          "reason": null
+        },
+        "requirement_statuses": {
+          "R1": "UNSUPPORTED"
+        }
+      },
+      "outcome": "INCORRECT_ABSTENTION",
+      "primary_root_cause": "VERSION_COMPARISON_UNSUPPORTED",
+      "question": "How did manager review frequency for remote-work schedules change between 2025 and 2026?",
+      "question_plan": {
+        "qualifiers": [],
+        "question_plan_hash": "0ae848baf3c03ae4e6637d162e3c9abb1013e3c6e3840817b2a9b5f113a5b135",
+        "requirements": [
+          {
+            "requirement_id": "R1",
+            "requirement_text": "How did manager review frequency for remote-work schedules change between 2025 and 2026",
+            "requirement_type": "fact"
+          }
+        ]
+      },
+      "retrieval": {
+        "acl_tenant_region_survival": true,
+        "active_version_filter_survival": false,
+        "candidate_pool_trace_status": "TRACE_INSUFFICIENT: frozen dry-run persisted counts but not dense/BM25/RRF membership IDs",
+        "minimum_missing_facts": [
+          "every quarter"
+        ],
+        "missing_corpus_facts": [],
+        "required_document_ranks": {
+          "remote-work-policy": 1
+        },
+        "required_evidence_in_bm25_pool": null,
+        "required_evidence_in_corpus": true,
+        "required_evidence_in_dense_pool": null,
+        "required_evidence_in_rrf_pool": null,
+        "required_evidence_in_top15": false,
+        "required_fact_presence_top15": {
+          "every month": true,
+          "every quarter": false
+        }
+      },
+      "router": {
+        "appropriate": true,
+        "final_route": "SAFE_ABSTAIN",
+        "initial_route": "LUNA",
+        "reason": "required_evidence_absent"
+      },
+      "scorer": {
+        "classification": "INCORRECT_ABSTENTION",
+        "correct": true
+      },
+      "secondary_root_causes": [
+        "VERSION_RESOLVER_OVER_FILTER"
+      ],
+      "sol": {
+        "called": false,
+        "correct_relative_to_top15": null,
+        "decision": null,
+        "local_validation": null
+      },
+      "version": {
+        "comparison_required": true,
+        "correct": false,
+        "gold_versions": {
+          "remote-work-policy": [
+            "2025",
+            "2026"
+          ]
+        },
+        "versions_available": [
+          {
+            "active": false,
+            "document_id": "remote-work-policy",
+            "version": "2025",
+            "version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac"
+          },
+          {
+            "active": true,
+            "document_id": "remote-work-policy",
+            "version": "2026",
+            "version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c"
+          }
+        ],
+        "versions_selected": [
+          {
+            "document_id": "remote-work-policy",
+            "version": "2026",
+            "version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c"
+          }
+        ]
+      }
+    },
+    {
+      "assembler": {
+        "actual_answer": null,
+        "all_requirements_present": true,
+        "emitted": false,
+        "unsupported_fact_present": false
+      },
+      "case_id": "fresh_v1_033",
+      "category": "version_temporal",
+      "citation": {
+        "cited_sources": [],
+        "complete": true,
+        "correct": true,
+        "valid": true
+      },
+      "evidence": "The 2025 reporting fact exists in corpus, but active-only retrieval and single-version resolution selected 2026.",
+      "final_abstention_trigger": "LUNA_ABSTAIN",
+      "first_failure_stage": "ACTIVE_VERSION_RETRIEVAL_FILTER",
+      "gold_answerability": true,
+      "gold_required_documents": [
+        "security-incident-policy"
+      ],
+      "gold_required_facts": [
+        "60 minutes"
+      ],
+      "gold_required_versions": {
+        "security-incident-policy": "2025"
+      },
+      "local_validation": {
+        "passed": true,
+        "reason": null
+      },
+      "luna": {
+        "called": true,
+        "correct_relative_to_top15": true,
+        "decision": "ABSTAIN",
+        "local_validation": {
+          "passed": true,
+          "reason": null
+        },
+        "requirement_statuses": {
+          "R1": "UNSUPPORTED"
+        }
+      },
+      "outcome": "INCORRECT_ABSTENTION",
+      "primary_root_cause": "TEMPORAL_SCOPE_ERROR",
+      "question": "What was the severity-one reporting window under the 2025 security policy?",
+      "question_plan": {
+        "qualifiers": [],
+        "question_plan_hash": "2978b848056117f7f8dd544bc54566c54a759f81149e43a0ba526e6ff89bf962",
+        "requirements": [
+          {
+            "requirement_id": "R1",
+            "requirement_text": "What was the severity-one reporting window under the 2025 security policy",
+            "requirement_type": "fact"
+          }
+        ]
+      },
+      "retrieval": {
+        "acl_tenant_region_survival": true,
+        "active_version_filter_survival": false,
+        "candidate_pool_trace_status": "TRACE_INSUFFICIENT: frozen dry-run persisted counts but not dense/BM25/RRF membership IDs",
+        "minimum_missing_facts": [
+          "60 minutes"
+        ],
+        "missing_corpus_facts": [],
+        "required_document_ranks": {
+          "security-incident-policy": 1
+        },
+        "required_evidence_in_bm25_pool": null,
+        "required_evidence_in_corpus": true,
+        "required_evidence_in_dense_pool": null,
+        "required_evidence_in_rrf_pool": null,
+        "required_evidence_in_top15": false,
+        "required_fact_presence_top15": {
+          "60 minutes": false
+        }
+      },
+      "router": {
+        "appropriate": true,
+        "final_route": "SAFE_ABSTAIN",
+        "initial_route": "LUNA",
+        "reason": "required_evidence_absent"
+      },
+      "scorer": {
+        "classification": "INCORRECT_ABSTENTION",
+        "correct": true
+      },
+      "secondary_root_causes": [
+        "WRONG_VERSION_SELECTED",
+        "VERSION_RESOLVER_OVER_FILTER"
+      ],
+      "sol": {
+        "called": false,
+        "correct_relative_to_top15": null,
+        "decision": null,
+        "local_validation": null
+      },
+      "version": {
+        "comparison_required": false,
+        "correct": false,
+        "gold_versions": {
+          "security-incident-policy": "2025"
+        },
+        "versions_available": [
+          {
+            "active": false,
+            "document_id": "security-incident-policy",
+            "version": "2025",
+            "version_id": "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588"
+          },
+          {
+            "active": true,
+            "document_id": "security-incident-policy",
+            "version": "2026",
+            "version_id": "c4d49578-2eec-4051-a54b-addc12af0efa"
+          }
+        ],
+        "versions_selected": [
+          {
+            "document_id": "security-incident-policy",
+            "version": "2026",
+            "version_id": "c4d49578-2eec-4051-a54b-addc12af0efa"
+          }
+        ]
+      }
+    },
+    {
+      "assembler": {
+        "actual_answer": null,
+        "all_requirements_present": true,
+        "emitted": false,
+        "unsupported_fact_present": false
+      },
+      "case_id": "fresh_v1_035",
+      "category": "version_temporal",
+      "citation": {
+        "cited_sources": [],
+        "complete": true,
+        "correct": true,
+        "valid": true
+      },
+      "evidence": "Cross-version comparison needed 2025 and 2026; only 2026 entered Top-15, so Luna correctly lacked the 60-minute span relative to supplied evidence.",
+      "final_abstention_trigger": "LUNA_ABSTAIN",
+      "first_failure_stage": "ACTIVE_VERSION_RETRIEVAL_FILTER",
+      "gold_answerability": true,
+      "gold_required_documents": [
+        "security-incident-policy"
+      ],
+      "gold_required_facts": [
+        "60 minutes",
+        "15 minutes"
+      ],
+      "gold_required_versions": {
+        "security-incident-policy": "2026"
+      },
+      "local_validation": {
+        "passed": true,
+        "reason": null
+      },
+      "luna": {
+        "called": true,
+        "correct_relative_to_top15": true,
+        "decision": "ABSTAIN",
+        "local_validation": {
+          "passed": true,
+          "reason": null
+        },
+        "requirement_statuses": {
+          "R1": "UNSUPPORTED",
+          "R2": "SUPPORTED"
+        }
+      },
+      "outcome": "INCORRECT_ABSTENTION",
+      "primary_root_cause": "VERSION_COMPARISON_UNSUPPORTED",
+      "question": "Compare the severity-one reporting deadline in the 2025 and 2026 security policies.",
+      "question_plan": {
+        "qualifiers": [],
+        "question_plan_hash": "98d06f47a7c1314c08b5b04e698de17f717cd4b0e2c88cc32981aa13d8aecaf3",
+        "requirements": [
+          {
+            "requirement_id": "R1",
+            "requirement_text": "Compare the severity-one reporting deadline in the 2025",
+            "requirement_type": "fact"
+          },
+          {
+            "requirement_id": "R2",
+            "requirement_text": "2026 security policies",
+            "requirement_type": "fact"
+          }
+        ]
+      },
+      "retrieval": {
+        "acl_tenant_region_survival": true,
+        "active_version_filter_survival": false,
+        "candidate_pool_trace_status": "TRACE_INSUFFICIENT: frozen dry-run persisted counts but not dense/BM25/RRF membership IDs",
+        "minimum_missing_facts": [
+          "60 minutes"
+        ],
+        "missing_corpus_facts": [],
+        "required_document_ranks": {
+          "security-incident-policy": 1
+        },
+        "required_evidence_in_bm25_pool": null,
+        "required_evidence_in_corpus": true,
+        "required_evidence_in_dense_pool": null,
+        "required_evidence_in_rrf_pool": null,
+        "required_evidence_in_top15": false,
+        "required_fact_presence_top15": {
+          "15 minutes": true,
+          "60 minutes": false
+        }
+      },
+      "router": {
+        "appropriate": true,
+        "final_route": "SAFE_ABSTAIN",
+        "initial_route": "LUNA",
+        "reason": "required_evidence_absent"
+      },
+      "scorer": {
+        "classification": "INCORRECT_ABSTENTION",
+        "correct": true
+      },
+      "secondary_root_causes": [
+        "VERSION_RESOLVER_OVER_FILTER",
+        "QUESTION_PLAN_ERROR"
+      ],
+      "sol": {
+        "called": false,
+        "correct_relative_to_top15": null,
+        "decision": null,
+        "local_validation": null
+      },
+      "version": {
+        "comparison_required": true,
+        "correct": false,
+        "gold_versions": {
+          "security-incident-policy": [
+            "2025",
+            "2026"
+          ]
+        },
+        "versions_available": [
+          {
+            "active": false,
+            "document_id": "security-incident-policy",
+            "version": "2025",
+            "version_id": "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588"
+          },
+          {
+            "active": true,
+            "document_id": "security-incident-policy",
+            "version": "2026",
+            "version_id": "c4d49578-2eec-4051-a54b-addc12af0efa"
+          }
+        ],
+        "versions_selected": [
+          {
+            "document_id": "security-incident-policy",
+            "version": "2026",
+            "version_id": "c4d49578-2eec-4051-a54b-addc12af0efa"
+          }
+        ]
+      }
+    },
+    {
+      "assembler": {
+        "actual_answer": null,
+        "all_requirements_present": true,
+        "emitted": false,
+        "unsupported_fact_present": false
+      },
+      "case_id": "fresh_v1_036",
+      "category": "version_temporal",
+      "citation": {
+        "cited_sources": [],
+        "complete": true,
+        "correct": true,
+        "valid": true
+      },
+      "evidence": "Both current facts were Top-2 and Luna/Sol returned GO; one R1 covered two documents and selected remote-work version was enforced against security-policy evidence.",
+      "final_abstention_trigger": "POST_SOL_VALIDATION_REJECT",
+      "first_failure_stage": "QUESTION_PLAN",
+      "gold_answerability": true,
+      "gold_required_documents": [
+        "remote-work-policy",
+        "security-incident-policy"
+      ],
+      "gold_required_facts": [
+        "two days per week",
+        "15 minutes"
+      ],
+      "gold_required_versions": {
+        "remote-work-policy": "2026",
+        "security-incident-policy": "2026"
+      },
+      "local_validation": {
+        "passed": false,
+        "reason": "WRONG_VERSION"
+      },
+      "luna": {
+        "called": true,
+        "correct_relative_to_top15": true,
+        "decision": "GO",
+        "local_validation": {
+          "passed": false,
+          "reason": "WRONG_VERSION"
+        },
+        "requirement_statuses": {
+          "R1": "SUPPORTED"
+        }
+      },
+      "outcome": "INCORRECT_ABSTENTION",
+      "primary_root_cause": "QUESTION_PLAN_ERROR",
+      "question": "As of the current 2026 editions, combine the remote-work allowance with the severity-one notification deadline.",
+      "question_plan": {
+        "qualifiers": [
+          {
+            "qualifier_id": "Q1",
+            "qualifier_type": "time",
+            "text": "As of the current 2026 editions"
+          }
+        ],
+        "question_plan_hash": "ad41e09e9ee614b50e771fa60d661f3df72ce940b67eb4433df2b5bc40a8f56a",
+        "requirements": [
+          {
+            "requirement_id": "R1",
+            "requirement_text": "combine the remote-work allowance with the severity-one notification deadline",
+            "requirement_type": "fact"
+          }
+        ]
+      },
+      "retrieval": {
+        "acl_tenant_region_survival": true,
+        "active_version_filter_survival": true,
+        "candidate_pool_trace_status": "TRACE_INSUFFICIENT: frozen dry-run persisted counts but not dense/BM25/RRF membership IDs",
+        "minimum_missing_facts": [],
+        "missing_corpus_facts": [],
+        "required_document_ranks": {
+          "remote-work-policy": 2,
+          "security-incident-policy": 1
+        },
+        "required_evidence_in_bm25_pool": null,
+        "required_evidence_in_corpus": true,
+        "required_evidence_in_dense_pool": null,
+        "required_evidence_in_rrf_pool": null,
+        "required_evidence_in_top15": true,
+        "required_fact_presence_top15": {
+          "15 minutes": true,
+          "two days per week": true
+        }
+      },
+      "router": {
+        "appropriate": true,
+        "final_route": "SOL",
+        "initial_route": "LUNA",
+        "reason": "luna_go_failed_local_validation"
+      },
+      "scorer": {
+        "classification": "INCORRECT_ABSTENTION",
+        "correct": true
+      },
+      "secondary_root_causes": [
+        "VERSION_RESOLVER_OVER_FILTER",
+        "LOCAL_VALIDATOR_FALSE_REJECT",
+        "DETERMINISTIC_ASSEMBLER_ERROR"
+      ],
+      "sol": {
+        "called": true,
+        "correct_relative_to_top15": true,
+        "decision": "GO",
+        "local_validation": {
+          "passed": false,
+          "reason": "WRONG_VERSION"
+        }
+      },
+      "version": {
+        "comparison_required": false,
+        "correct": true,
+        "gold_versions": {
+          "remote-work-policy": "2026",
+          "security-incident-policy": "2026"
+        },
+        "versions_available": [
+          {
+            "active": false,
+            "document_id": "remote-work-policy",
+            "version": "2025",
+            "version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac"
+          },
+          {
+            "active": true,
+            "document_id": "remote-work-policy",
+            "version": "2026",
+            "version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c"
+          },
+          {
+            "active": false,
+            "document_id": "security-incident-policy",
+            "version": "2025",
+            "version_id": "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588"
+          },
+          {
+            "active": true,
+            "document_id": "security-incident-policy",
+            "version": "2026",
+            "version_id": "c4d49578-2eec-4051-a54b-addc12af0efa"
+          }
+        ],
+        "versions_selected": [
+          {
+            "document_id": "remote-work-policy",
+            "version": "2026",
+            "version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c"
+          }
+        ]
+      }
+    }
+  ],
+  "category_total": 8,
+  "comparison_failures": [
+    "fresh_v1_031",
+    "fresh_v1_032",
+    "fresh_v1_035"
+  ],
+  "evidence": "Dense and BM25 frozen SQL require is_active=true, excluding 2025. The resolver returns one candidate and predictions contain at most one selected version ID.",
+  "failed_case_ids": [
+    "fresh_v1_029",
+    "fresh_v1_030",
+    "fresh_v1_031",
+    "fresh_v1_032",
+    "fresh_v1_033",
+    "fresh_v1_035",
+    "fresh_v1_036"
+  ],
+  "failed_count": 7,
+  "historical_only_failures": [
+    "fresh_v1_029",
+    "fresh_v1_033"
+  ],
+  "other_version_failures": [
+    "fresh_v1_030",
+    "fresh_v1_036"
+  ],
+  "version_resolver_supports_both_historical_and_current_simultaneously": "NO"
+}

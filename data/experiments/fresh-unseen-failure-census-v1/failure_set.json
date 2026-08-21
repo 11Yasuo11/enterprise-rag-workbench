@@ -1,0 +1,33 @@
+{
+  "artifact_failure_count": 19,
+  "case_ids": [
+    "fresh_v1_009",
+    "fresh_v1_011",
+    "fresh_v1_013",
+    "fresh_v1_015",
+    "fresh_v1_016",
+    "fresh_v1_017",
+    "fresh_v1_022",
+    "fresh_v1_023",
+    "fresh_v1_025",
+    "fresh_v1_028",
+    "fresh_v1_029",
+    "fresh_v1_030",
+    "fresh_v1_031",
+    "fresh_v1_032",
+    "fresh_v1_033",
+    "fresh_v1_035",
+    "fresh_v1_036",
+    "fresh_v1_040",
+    "fresh_v1_044"
+  ],
+  "experiment_id": "FRESH_UNSEEN_FAILURE_CENSUS_V1",
+  "matches_user_known_failure_set": true,
+  "new_api_calls": 0,
+  "outcome_counts": {
+    "INCORRECT_ABSTENTION": 15,
+    "UNSUPPORTED_ANSWER": 4
+  },
+  "prediction_sha256_verified": "a6e44ddc85161b4494f15996ad75a80db90c1b7014d3f324c7538ceaabe42280",
+  "source_experiment": "FRESH_UNSEEN_EVALUATION_V1_2"
+}

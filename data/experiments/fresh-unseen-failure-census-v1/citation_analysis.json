@@ -1,0 +1,55 @@
+{
+  "cases": [
+    {
+      "case_id": "fresh_v1_011",
+      "classification": "incomplete source set / assembler retained only first mapping",
+      "complete": false,
+      "correct": false,
+      "missing_facts": [
+        "Platform Interfaces"
+      ],
+      "valid": true
+    },
+    {
+      "case_id": "fresh_v1_013",
+      "classification": "incomplete source set / assembler retained only first mapping",
+      "complete": false,
+      "correct": false,
+      "missing_facts": [
+        "Tuesdays and Thursdays"
+      ],
+      "valid": true
+    },
+    {
+      "case_id": "fresh_v1_028",
+      "classification": "incomplete source set / assembler retained only first mapping",
+      "complete": false,
+      "correct": false,
+      "missing_facts": [
+        "Platform Interfaces",
+        "Finance Operations"
+      ],
+      "valid": true
+    },
+    {
+      "case_id": "fresh_v1_030",
+      "classification": "incomplete source set / assembler retained only first mapping",
+      "complete": false,
+      "correct": false,
+      "missing_facts": [
+        "every month"
+      ],
+      "valid": true
+    }
+  ],
+  "cause": "Each cited first span was valid, but additional valid source mappings were dropped, leaving incomplete citation sets.",
+  "citation_completeness": 0.9322916666666666,
+  "citation_correctness": 0.9322916666666666,
+  "citation_validity": 1.0,
+  "responsible_case_ids": [
+    "fresh_v1_011",
+    "fresh_v1_013",
+    "fresh_v1_028",
+    "fresh_v1_030"
+  ]
+}

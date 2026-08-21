@@ -1,0 +1,23 @@
+{
+  "api_calls": 0,
+  "complete_case_ids": [
+    "fresh_v2_003",
+    "fresh_v2_011",
+    "fresh_v2_013",
+    "fresh_v2_017",
+    "fresh_v2_019",
+    "fresh_v2_024",
+    "fresh_v2_025",
+    "fresh_v2_035"
+  ],
+  "finding": "8/11 are complete in Top-15. The one ordinary retrieval failure is a singular/plural BM25 miss, not a ranking-depth failure; two others were removed by temporal scope.",
+  "incomplete_case_ids": [
+    "fresh_v2_020",
+    "fresh_v2_034",
+    "fresh_v2_048"
+  ],
+  "required_evidence_complete_in_top15": 8,
+  "required_evidence_incomplete_in_top15": 3,
+  "timestamp": "2026-08-20T23:30:23.607561+00:00",
+  "top_k_change_justified_globally": false
+}

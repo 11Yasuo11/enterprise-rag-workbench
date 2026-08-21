@@ -1,0 +1,60 @@
+{
+  "cost": {
+    "additional_v4_total_usd": 0.016597420000000002,
+    "fresh_holdout_v2_usd": 0.0,
+    "old_60_regression_usd": 0.0,
+    "p1_targeted_v2_usd": 0.0017676200000000001,
+    "targeted_19_cap_usd": 0.2,
+    "targeted_19_usd": 0.0148298,
+    "total_additional_cap_usd": 0.8
+  },
+  "final_status": "NOT_READY_FOR_PRODUCTION",
+  "pipeline_verdict": "PIPELINE_V4_FAILED_TARGETED",
+  "quality": {
+    "citation_completeness": 1.0,
+    "citation_correctness": 1.0,
+    "citation_validity": 1.0,
+    "contract_mismatches": 1,
+    "correct": 18,
+    "incorrect_abstentions": 1,
+    "requirement_completeness": 0.9473684210526315,
+    "targeted_total": 19,
+    "unsupported_answers": 0,
+    "version_correctness": 0.9473684210526315
+  },
+  "routing": {
+    "deterministic_final": 18,
+    "luna_calls": 17,
+    "safe_abstain_final": 1,
+    "sol_calls": 0
+  },
+  "safety": {
+    "acl_violations": 0,
+    "invalid_citations": 0,
+    "prompt_injection_regressions": 0,
+    "region_violations": 0,
+    "restricted_data_leaks": 0,
+    "tenant_violations": 0
+  },
+  "stages": {
+    "fresh_holdout_v2": "NOT_RUN",
+    "full_local_regression": "PASS",
+    "local_19_replay": "PASS_STILL_FAILING_0",
+    "old_60_regression": "NOT_RUN",
+    "p1_targeted_v2": "PASS_5_OF_5_AUTHORIZED_8_OF_8",
+    "p2": "PASS",
+    "p3": "PASS",
+    "p4": "PASS",
+    "p5": "PASS",
+    "rc_freeze": "RC_FINAL_PRE_API_V4",
+    "targeted_19": "FAIL_18_OF_19"
+  },
+  "targeted_failure": {
+    "case_id": "fresh_v1_017",
+    "classification": "INCORRECT_ABSTENTION",
+    "final_route_reason": "required_evidence_absent",
+    "luna_raw_decision": "ABSTAIN",
+    "prediction_sha256": "8d9405dba0b3aa052c60764ecd050c9d9f7b68b638d1582734fb5c740fec4a49",
+    "root_cause": "Authorized literal R1 evidence was present and deterministically grounded, but the requirement-scoped lexical packet did not surface it; Luna's false negative was therefore treated as genuine absence instead of suspicious abstention, so Sol was not invoked."
+  }
+}

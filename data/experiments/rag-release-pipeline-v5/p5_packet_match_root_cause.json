@@ -1,0 +1,23 @@
+{
+  "api_calls": 0,
+  "case_id": "fresh_v1_017",
+  "classification": "GENERAL_REQUIREMENT_PACKET_CANDIDATE_LOSS",
+  "frozen_v4_prediction_modified": false,
+  "literal_source_span": "Receipts are required for expenses above 25 euros .",
+  "old_match": {
+    "genuine_required_evidence_absence": true,
+    "packet_chunk_ids": [],
+    "router_reason": "required_evidence_absent",
+    "router_route": "SAFE_ABSTAIN"
+  },
+  "omitted_validated_mapping": {
+    "chunk_id": "7bdffe91-3861-44db-8be2-d6c7328997e8",
+    "document_id": "finance-expense-policy",
+    "document_version_id": "4c469613-1997-4632-9a1e-81c37f786041",
+    "requirement_id": "R1",
+    "requirement_text": "the receipt threshold",
+    "supporting_span": "Receipts are required for expenses above 25 euros ."
+  },
+  "root_cause": "The old packet builder rediscovered candidates only through surface-token overlap. It discarded an already grounded deterministic mapping because receipt and receipts did not normalize to the same token and the abstract term threshold was not literal in the factual policy sentence.",
+  "source_prediction_sha256": "8d9405dba0b3aa052c60764ecd050c9d9f7b68b638d1582734fb5c740fec4a49"
+}

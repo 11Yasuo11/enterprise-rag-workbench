@@ -1,0 +1,11 @@
+{
+  "query": "For the current security incident policy and remote work policy, what must managers do when an incident coincides with remote schedule review?",
+  "status": "answer",
+  "route": "luna",
+  "luna_calls": 1,
+  "sol_calls": 0,
+  "error_class": null,
+  "budget_usd": 0.03,
+  "pass": true,
+  "note": "Recorded whatever canonical router selected; not forced."
+}

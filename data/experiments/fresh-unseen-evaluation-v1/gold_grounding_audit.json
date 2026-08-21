@@ -1,0 +1,9 @@
+{
+  "blocking_verdict": "FRESH_EVAL_DATASET_OVERLAP_REQUIRES_REPLACEMENT",
+  "experiment_id": "FRESH_UNSEEN_EVALUATION_V1",
+  "gold_content_loaded": false,
+  "paid_api_calls": 0,
+  "reason": "Historical overlap audit hard-failed first; prompt requires STOP. Gold file remained content-isolated.",
+  "status": "NOT_RUN_MANDATORY_PRIOR_GATE_FAILED",
+  "timestamp": "2026-08-20T15:14:20.439205+00:00"
+}

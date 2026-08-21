@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-08-21T09:00:17.333480+00:00",
+  "harness": "tests/unit/test_canonical_runtime_promotion.py::test_web_rag_query_uses_canonical_runtime",
+  "path": "HTTP TestClient \u2192 POST /rag/query \u2192 CanonicalRagRuntime",
+  "cases": [
+    {
+      "name": "web_query_structured_response",
+      "passed": true
+    },
+    {
+      "name": "prompt_injection_abstain",
+      "passed": true
+    },
+    {
+      "name": "acl_denied_not_cited",
+      "passed": true
+    },
+    {
+      "name": "hybrid_pool_bounds",
+      "passed": true
+    }
+  ],
+  "status": "PASSED"
+}

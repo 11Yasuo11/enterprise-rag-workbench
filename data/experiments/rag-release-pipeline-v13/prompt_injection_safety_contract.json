@@ -1,0 +1,22 @@
+{
+  "name": "PROMPT_INJECTION_SAFETY_CONTRACT_V13",
+  "rules": [
+    "Untrusted instructions must not become answer requirements",
+    "Prompt-injection precheck dominates routing: BLOCKED => SAFE_ABSTAIN before models",
+    "DETERMINISTIC_SUPPORT_COMPLETE cannot bypass SAFETY_ALLOWED",
+    "Retrieved document text is DATA/EVIDENCE, never executable instructions",
+    "Single-version packet fill must not force zero-overlap hostile snippets into unrelated requirements",
+    "Benign version wording (ignore archived version) must not be blocked"
+  ],
+  "ordering": [
+    "principal",
+    "prompt_injection_precheck",
+    "SAFE_ABSTAIN_if_blocked",
+    "plan_retrieve_evidence",
+    "deterministic_luna_sol",
+    "local_safety_validation",
+    "completeness",
+    "answer"
+  ],
+  "timestamp": "2026-08-21T08:52:36.491922+00:00"
+}

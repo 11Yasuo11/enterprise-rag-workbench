@@ -1,0 +1,145 @@
+{
+  "access_control_safety": {
+    "gold_leakage_detected": false,
+    "runtime_not_started": true
+  },
+  "budget_guard": {
+    "evaluated": false,
+    "hard_cap_usd": 0.5
+  },
+  "category_results": null,
+  "cost": {
+    "new_openai_cost_usd": 0.0
+  },
+  "dataset": {
+    "case_count": 60,
+    "dataset_id": "acmeai-fresh-unseen-eval-v1.1-20260820",
+    "package_archive": ".local/evaluation-input/fresh_unseen_eval_v1_1_package.zip",
+    "parent_dataset_id": "acmeai-fresh-unseen-eval-v1-20260820",
+    "preserved_case_count": 59,
+    "replacement_audit": "dataset_replacement_audit.json",
+    "replacement_case_id": "fresh_v1_048"
+  },
+  "dry_run": {
+    "blocking_reason": "DRY_RUN_EMBEDDING_CACHE_MISS_ALL_60_AND_PAID_CALLS_FORBIDDEN_BEFORE_DRY_RUN_PASS",
+    "complete_structurally_executable_count": 0,
+    "embedding_cache_hits": 0,
+    "missing_embeddings": 60,
+    "passed": false,
+    "question_plans_frozen": 60
+  },
+  "experiment_id": "FRESH_UNSEEN_EVALUATION_V1_1",
+  "failures": [
+    {
+      "constraint": "No paid call permitted before dry-run pass; changing embedding/retrieval mode prohibited.",
+      "count": 60,
+      "failure": "ALL_FRESH_QUERY_EMBEDDINGS_MISSING",
+      "gate": "ZERO_API_DRY_RUN"
+    }
+  ],
+  "files": {
+    "api_cost_ledger.jsonl": {
+      "exists": true,
+      "reason_if_absent": null
+    },
+    "category_metrics.json": {
+      "exists": true,
+      "reason_if_absent": null
+    },
+    "final_report.json": {
+      "exists": true,
+      "reason_if_absent": null
+    },
+    "freeze_manifest.json": {
+      "exists": true,
+      "reason_if_absent": null
+    },
+    "fresh_eval_dry_run.json": {
+      "exists": true,
+      "reason_if_absent": null
+    },
+    "fresh_predictions.jsonl": {
+      "exists": false,
+      "reason_if_absent": "Not created because the mandatory zero-API dry-run gate failed before prediction execution."
+    },
+    "gold_grounding_audit.json": {
+      "exists": true,
+      "reason_if_absent": null
+    },
+    "historical_overlap_audit.json": {
+      "exists": true,
+      "reason_if_absent": null
+    },
+    "per_case_scoring.jsonl": {
+      "exists": false,
+      "reason_if_absent": "Not created because the mandatory zero-API dry-run gate failed before prediction execution."
+    },
+    "predictions_freeze.json": {
+      "exists": false,
+      "reason_if_absent": "Not created because the mandatory zero-API dry-run gate failed before prediction execution."
+    },
+    "routing_analysis.json": {
+      "exists": true,
+      "reason_if_absent": null
+    },
+    "safety_report.json": {
+      "exists": true,
+      "reason_if_absent": null
+    }
+  },
+  "freeze": {
+    "candidate_matches_v1_freeze": true,
+    "completed": true,
+    "manifest": "freeze_manifest.json"
+  },
+  "gold_grounding_audit": {
+    "audit_process_isolated_from_prediction_runtime": true,
+    "case_count": 60,
+    "passed": true
+  },
+  "historical_overlap_audit": {
+    "exact_duplicate_count": 0,
+    "passed": true,
+    "replacement_nearest_composite": 0.493212,
+    "suspicious_near_duplicate_count": 0
+  },
+  "latency": null,
+  "overall_quality": null,
+  "predictions": {
+    "frozen": false,
+    "status": "NOT_CREATED"
+  },
+  "production_deployed": false,
+  "real_api_execution": {
+    "new_openai_cost_usd": 0.0,
+    "paid_api_calls": 0,
+    "status": "NOT_RUN"
+  },
+  "release_decision": "NOT_READY_FOR_RELEASE",
+  "release_gates": {
+    "evaluated": false,
+    "reason": "Mandatory dry-run gate failed"
+  },
+  "requirement_contract": {
+    "question_plans_frozen": 60,
+    "runtime_not_started": true
+  },
+  "routing": {
+    "partial_preflight_safe_abstain": 3,
+    "unresolved_at_embedding_boundary": 57
+  },
+  "tests": [
+    "v1.1 manifest hashes match generated files",
+    "59 nonreplacement question cases unchanged",
+    "59 nonreplacement gold cases unchanged",
+    "All-60 overlap audit passed against 1,907 historical questions",
+    "Gold grounding audit passed 60/60 in isolated preflight process",
+    "Questions-only anti-leakage assertion passed",
+    "60/60 question plans froze deterministically",
+    "Candidate source hashes still match the original frozen candidate",
+    "API cost ledger is empty"
+  ],
+  "timestamp": "2026-08-20T15:25:27.515779+00:00",
+  "verdict": "FRESH_UNSEEN_EVALUATION_INCONCLUSIVE",
+  "version_numeric_date": null
+}

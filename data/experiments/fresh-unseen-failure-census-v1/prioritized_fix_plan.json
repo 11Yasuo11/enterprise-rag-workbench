@@ -1,0 +1,134 @@
+{
+  "do_not_implement_in_this_task": true,
+  "priorities": [
+    {
+      "affected_count": 11,
+      "affected_failures": [
+        "fresh_v1_009",
+        "fresh_v1_011",
+        "fresh_v1_013",
+        "fresh_v1_015",
+        "fresh_v1_016",
+        "fresh_v1_023",
+        "fresh_v1_025",
+        "fresh_v1_028",
+        "fresh_v1_030",
+        "fresh_v1_036",
+        "fresh_v1_044"
+      ],
+      "api_cost_impact": "none for deterministic validation",
+      "complexity": "medium",
+      "currently_passing_categories_at_risk": [
+        "single_semantic",
+        "multidoc_two",
+        "multidoc_three",
+        "version_temporal",
+        "numeric_date_boundary"
+      ],
+      "fix": "Enforce semantic output cardinality: one requested output per R ID; qualifiers remain Q; reject or preserve every mapping when one R spans independent facts.",
+      "maximum_supported_scope": "11 planning-primary failures; deterministically prevents all 4 unsupported emissions, though secondary version issues limit guaranteed recovery.",
+      "new_api_required_initially": 0,
+      "priority": "P0",
+      "regression_risk": "medium"
+    },
+    {
+      "affected_count": 5,
+      "affected_failures": [
+        "fresh_v1_029",
+        "fresh_v1_031",
+        "fresh_v1_032",
+        "fresh_v1_033",
+        "fresh_v1_035"
+      ],
+      "api_cost_impact": "larger local candidate/evidence pools",
+      "complexity": "high",
+      "currently_passing_categories_at_risk": [
+        "version_temporal",
+        "single_semantic"
+      ],
+      "fix": "Make retrieval/resolution temporal-scope aware and represent simultaneous historical+current version sets.",
+      "maximum_supported_scope": "5 failures with missing historical facts",
+      "new_api_required_initially": 0,
+      "priority": "P1",
+      "regression_risk": "medium-high"
+    },
+    {
+      "affected_count": 6,
+      "affected_failures": [
+        "fresh_v1_009",
+        "fresh_v1_015",
+        "fresh_v1_016",
+        "fresh_v1_017",
+        "fresh_v1_023",
+        "fresh_v1_036"
+      ],
+      "api_cost_impact": "may avoid repeated Sol calls",
+      "complexity": "low-medium",
+      "currently_passing_categories_at_risk": [
+        "multidoc_two",
+        "multidoc_three",
+        "version_temporal"
+      ],
+      "fix": "Scope selected-version validation by document instead of globally across every cited document.",
+      "maximum_supported_scope": "6 false validator rejects; 3 have immediately assemblable complete plans, while 3 retain planning/Sol issues.",
+      "new_api_required_initially": 0,
+      "priority": "P2",
+      "regression_risk": "low-medium"
+    },
+    {
+      "affected_count": 2,
+      "affected_failures": [
+        "fresh_v1_025",
+        "fresh_v1_040"
+      ],
+      "api_cost_impact": "potentially more Sol calls",
+      "complexity": "low",
+      "currently_passing_categories_at_risk": [
+        "unanswerable",
+        "prompt_injection"
+      ],
+      "fix": "Treat ABSTAIN with all requirements SUPPORTED as inconsistent and escalate/fail closed rather than accepting safe abstention.",
+      "maximum_supported_scope": "2 missed escalations",
+      "new_api_required_initially": 0,
+      "priority": "P3",
+      "regression_risk": "low"
+    },
+    {
+      "affected_count": 2,
+      "affected_failures": [
+        "fresh_v1_040",
+        "fresh_v1_044"
+      ],
+      "api_cost_impact": "may reduce verifier calls",
+      "complexity": "medium",
+      "currently_passing_categories_at_risk": [
+        "numeric_date_boundary",
+        "unanswerable"
+      ],
+      "fix": "Add deterministic comparison checks for simple deadline/cadence boundary questions.",
+      "maximum_supported_scope": "2 numeric/date failures",
+      "new_api_required_initially": 0,
+      "priority": "P4",
+      "regression_risk": "medium"
+    },
+    {
+      "affected_count": 1,
+      "affected_failures": [
+        "fresh_v1_022"
+      ],
+      "api_cost_impact": "none initially",
+      "complexity": "medium",
+      "currently_passing_categories_at_risk": [
+        "single_semantic",
+        "access_control_deny",
+        "prompt_injection",
+        "unanswerable"
+      ],
+      "fix": "Diagnose Luna multi-document false-negative on complete literal evidence without changing broad verifier behavior.",
+      "maximum_supported_scope": "1 isolated Luna false negative",
+      "new_api_required_initially": 0,
+      "priority": "P5",
+      "regression_risk": "high if prompt is broadly changed"
+    }
+  ]
+}

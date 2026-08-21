@@ -1,0 +1,101 @@
+{
+  "all_correct": true,
+  "cases": [
+    {
+      "case_id": "fresh_v1_029",
+      "cited_versions": [
+        "2025"
+      ],
+      "current_historical_distinct": true,
+      "expected_requirement_versions_evaluation_only": {
+        "R1": "2025"
+      },
+      "required_verified_cited_identity_match": true,
+      "verified_requirement_versions": {
+        "R1": [
+          "2025"
+        ]
+      }
+    },
+    {
+      "case_id": "fresh_v1_031",
+      "cited_versions": [
+        "2025",
+        "2026"
+      ],
+      "current_historical_distinct": true,
+      "expected_requirement_versions_evaluation_only": {
+        "R1": "2025",
+        "R2": "2026"
+      },
+      "required_verified_cited_identity_match": true,
+      "verified_requirement_versions": {
+        "R1": [
+          "2025"
+        ],
+        "R2": [
+          "2026"
+        ]
+      }
+    },
+    {
+      "case_id": "fresh_v1_032",
+      "cited_versions": [
+        "2025",
+        "2026"
+      ],
+      "current_historical_distinct": true,
+      "expected_requirement_versions_evaluation_only": {
+        "R1": "2025",
+        "R2": "2026"
+      },
+      "required_verified_cited_identity_match": true,
+      "verified_requirement_versions": {
+        "R1": [
+          "2025"
+        ],
+        "R2": [
+          "2026"
+        ]
+      }
+    },
+    {
+      "case_id": "fresh_v1_033",
+      "cited_versions": [
+        "2025"
+      ],
+      "current_historical_distinct": true,
+      "expected_requirement_versions_evaluation_only": {
+        "R1": "2025"
+      },
+      "required_verified_cited_identity_match": true,
+      "verified_requirement_versions": {
+        "R1": [
+          "2025"
+        ]
+      }
+    },
+    {
+      "case_id": "fresh_v1_035",
+      "cited_versions": [
+        "2025",
+        "2026"
+      ],
+      "current_historical_distinct": true,
+      "expected_requirement_versions_evaluation_only": {
+        "R1": "2025",
+        "R2": "2026"
+      },
+      "required_verified_cited_identity_match": true,
+      "verified_requirement_versions": {
+        "R1": [
+          "2025"
+        ],
+        "R2": [
+          "2026"
+        ]
+      }
+    }
+  ],
+  "experiment_id": "P1_VERSION_TEMPORAL_TARGETED_REAL_API_CONFIRMATION_V2"
+}

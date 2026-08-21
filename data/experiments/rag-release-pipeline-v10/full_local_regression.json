@@ -1,0 +1,59 @@
+{
+  "api_calls": 0,
+  "contracts_covered": [
+    "Atomic Requirement Contract",
+    "P0 planner",
+    "P0 generalization",
+    "P1 temporal/version",
+    "P2 per-document validation",
+    "P3 verifier consistency",
+    "P4 deterministic inference",
+    "P5 packets",
+    "canonical evidence mapping",
+    "citation authorization",
+    "deterministic support",
+    "requirement completeness",
+    "assembler",
+    "router",
+    "stage guard",
+    "scorer",
+    "safety"
+  ],
+  "git_diff_check": "PASS",
+  "local_three_replay": {
+    "FIXED_LOCALLY": 3,
+    "STILL_FAILING": 0,
+    "STRUCTURALLY_FIXED_REAL_API_REQUIRED": 0,
+    "TRACE_INSUFFICIENT": 0
+  },
+  "pass": true,
+  "ruff": "PASS",
+  "targeted_regression_protection": {
+    "final4": {
+      "failed": [],
+      "pass": true,
+      "total": 4
+    },
+    "pass": true,
+    "prior11": {
+      "failed": [],
+      "pass": true,
+      "total": 11
+    },
+    "prior_direct_complete_preserved": {
+      "failed": [],
+      "pass": true,
+      "total": 8
+    },
+    "v2_plan_traversal_60": {
+      "fail": [],
+      "ok": 60,
+      "pass": true
+    }
+  },
+  "timestamp": "2026-08-21T00:54:25.625219+00:00",
+  "unit_suite": {
+    "note": "pytest tests/unit 100% green",
+    "passed": true
+  }
+}

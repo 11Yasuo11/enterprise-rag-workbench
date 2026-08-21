@@ -1,0 +1,1 @@
+{"behavior": "CORRECT_ABSTENTION", "case_id": "fresh_v2_055", "citation_completeness_pass": null, "citation_correctness_pass": null, "citation_validity_pass": null, "correct": true, "facts_missing": [], "facts_satisfied": [], "incorrect_abstention": false, "requirement_completeness_pass": true, "unsupported_answer": false, "version_correctness_pass": true}

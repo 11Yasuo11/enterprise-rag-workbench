@@ -1,0 +1,1050 @@
+{
+  "audit_process_isolated_from_prediction_runtime": true,
+  "candidate_predictions_loaded": false,
+  "case_count": 60,
+  "cases": [
+    {
+      "case_id": "fresh_v1_001",
+      "category": "single_semantic",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_002",
+      "category": "single_semantic",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_003",
+      "category": "single_semantic",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_004",
+      "category": "single_semantic",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_005",
+      "category": "single_semantic",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_006",
+      "category": "single_semantic",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_007",
+      "category": "single_semantic",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_008",
+      "category": "single_semantic",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_009",
+      "category": "multidoc_two",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_010",
+      "category": "multidoc_two",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_011",
+      "category": "multidoc_two",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_012",
+      "category": "multidoc_two",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_013",
+      "category": "multidoc_two",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_014",
+      "category": "multidoc_two",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_015",
+      "category": "multidoc_two",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_016",
+      "category": "multidoc_two",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_017",
+      "category": "multidoc_two",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_018",
+      "category": "multidoc_two",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_019",
+      "category": "multidoc_three",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_020",
+      "category": "multidoc_three",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_021",
+      "category": "multidoc_three",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_022",
+      "category": "multidoc_three",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_023",
+      "category": "multidoc_three",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_024",
+      "category": "multidoc_three",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_025",
+      "category": "multidoc_three",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_026",
+      "category": "multidoc_three",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_027",
+      "category": "multidoc_three",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_028",
+      "category": "multidoc_three",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_029",
+      "category": "version_temporal",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_030",
+      "category": "version_temporal",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_031",
+      "category": "version_temporal",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_032",
+      "category": "version_temporal",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_033",
+      "category": "version_temporal",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_034",
+      "category": "version_temporal",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_035",
+      "category": "version_temporal",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_036",
+      "category": "version_temporal",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_037",
+      "category": "numeric_date_boundary",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_038",
+      "category": "numeric_date_boundary",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_039",
+      "category": "numeric_date_boundary",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_040",
+      "category": "numeric_date_boundary",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_041",
+      "category": "numeric_date_boundary",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_042",
+      "category": "numeric_date_boundary",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_043",
+      "category": "numeric_date_boundary",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_044",
+      "category": "numeric_date_boundary",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_045",
+      "category": "access_control_allow",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_046",
+      "category": "access_control_allow",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_047",
+      "category": "access_control_allow",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": true,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_048",
+      "category": "access_control_deny",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": false,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_049",
+      "category": "access_control_deny",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": false,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_050",
+      "category": "access_control_deny",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": false,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_051",
+      "category": "prompt_injection",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "prompt_injection_security_expectation_defined": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": false,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_052",
+      "category": "prompt_injection",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "prompt_injection_security_expectation_defined": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": false,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_053",
+      "category": "prompt_injection",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "prompt_injection_security_expectation_defined": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": false,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_054",
+      "category": "prompt_injection",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "prompt_injection_security_expectation_defined": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": false,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_055",
+      "category": "unanswerable",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "requested_missing_fact_absent_from_authorized_corpus": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": false,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_056",
+      "category": "unanswerable",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "requested_missing_fact_absent_from_authorized_corpus": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": false,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_057",
+      "category": "unanswerable",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "requested_missing_fact_absent_from_authorized_corpus": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": false,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_058",
+      "category": "unanswerable",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "requested_missing_fact_absent_from_authorized_corpus": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": false,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_059",
+      "category": "unanswerable",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "requested_missing_fact_absent_from_authorized_corpus": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": false,
+      "passed": true
+    },
+    {
+      "case_id": "fresh_v1_060",
+      "category": "unanswerable",
+      "checks": {
+        "expected_facts_supported": true,
+        "forbidden_documents_denied": true,
+        "forbidden_documents_exist": true,
+        "forbidden_facts_exist_only_in_restricted_scope": true,
+        "no_external_knowledge_required": true,
+        "requested_missing_fact_absent_from_authorized_corpus": true,
+        "required_chunk_markers_supported": true,
+        "required_documents_authorized": true,
+        "required_documents_exist": true,
+        "required_versions_exist": true
+      },
+      "expected_answerability": false,
+      "passed": true
+    }
+  ],
+  "dataset_gold_sha256": "046db8470d89c31855158197904504da995b5162fc87fe1fd66994b464ff57bc",
+  "dataset_id": "acmeai-fresh-unseen-eval-v1.1-20260820",
+  "experiment_id": "FRESH_UNSEEN_EVALUATION_V1_2",
+  "failed_case_ids": [],
+  "failed_count": 0,
+  "gate_passed": true,
+  "local_revalidation_passed": true,
+  "paid_api_calls": 0,
+  "passed_count": 60,
+  "reused_from": "data/experiments/fresh-unseen-evaluation-v1-1/gold_grounding_audit.json",
+  "revalidated_at": "2026-08-20T15:30:42.075330+00:00",
+  "source_artifact_sha256": "8889c088eae793e2158398e09822ea729ec5b1893f546312093907044882b771",
+  "verdict": "PASS"
+}

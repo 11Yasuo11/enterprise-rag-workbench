@@ -1,0 +1,164 @@
+{
+  "all_primary_mappable": true,
+  "cases": [
+    {
+      "bindings": [
+        {
+          "chunk_id": "0f876e88-1c3a-403f-83aa-ac66033ed246",
+          "document_id": "remote-work-policy",
+          "document_version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac",
+          "requirement_id": "R1",
+          "version": "2025"
+        }
+      ],
+      "case_id": "fresh_v1_029",
+      "mapping_possible": true,
+      "requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "how many remote days per week were allowed",
+          "requirement_type": "fact"
+        }
+      ],
+      "same_document_versions_remain_distinct": true
+    },
+    {
+      "bindings": [
+        {
+          "chunk_id": "0f876e88-1c3a-403f-83aa-ac66033ed246",
+          "document_id": "remote-work-policy",
+          "document_version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac",
+          "requirement_id": "R1",
+          "version": "2025"
+        },
+        {
+          "chunk_id": "803b1d29-ee55-4c31-abc8-13e9e5be6485",
+          "document_id": "remote-work-policy",
+          "document_version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+          "requirement_id": "R2",
+          "version": "2026"
+        }
+      ],
+      "case_id": "fresh_v1_031",
+      "mapping_possible": true,
+      "requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "2025 the remote-work allowance",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R2",
+          "requirement_text": "2026 the remote-work allowance",
+          "requirement_type": "fact"
+        }
+      ],
+      "same_document_versions_remain_distinct": true
+    },
+    {
+      "bindings": [
+        {
+          "chunk_id": "a6256f87-3055-4592-bbe0-9299878475b1",
+          "document_id": "remote-work-policy",
+          "document_version_id": "82e742b7-92c3-417a-b3f0-a350037b0bac",
+          "requirement_id": "R1",
+          "version": "2025"
+        },
+        {
+          "chunk_id": "49679d97-020f-4418-9430-4c296bc824b1",
+          "document_id": "remote-work-policy",
+          "document_version_id": "e131a2f3-b35e-4d18-8990-650cf48e1c8c",
+          "requirement_id": "R2",
+          "version": "2026"
+        }
+      ],
+      "case_id": "fresh_v1_032",
+      "mapping_possible": true,
+      "requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "2025 manager review frequency for remote-work schedules",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R2",
+          "requirement_text": "2026 manager review frequency for remote-work schedules",
+          "requirement_type": "fact"
+        }
+      ],
+      "same_document_versions_remain_distinct": true
+    },
+    {
+      "bindings": [
+        {
+          "chunk_id": "18bfa499-1726-4b23-9988-e5805e744db4",
+          "document_id": "security-incident-policy",
+          "document_version_id": "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588",
+          "requirement_id": "R1",
+          "version": "2025"
+        }
+      ],
+      "case_id": "fresh_v1_033",
+      "mapping_possible": true,
+      "requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "What was the severity-one reporting window under the 2025 security policy",
+          "requirement_type": "fact"
+        }
+      ],
+      "same_document_versions_remain_distinct": true
+    },
+    {
+      "bindings": [
+        {
+          "chunk_id": "18bfa499-1726-4b23-9988-e5805e744db4",
+          "document_id": "security-incident-policy",
+          "document_version_id": "9d5bcd7a-9ce4-4732-a7cc-57ea3d1dc588",
+          "requirement_id": "R1",
+          "version": "2025"
+        },
+        {
+          "chunk_id": "bd832158-c74b-4f03-8f53-60a2d30e69e8",
+          "document_id": "security-incident-policy",
+          "document_version_id": "c4d49578-2eec-4051-a54b-addc12af0efa",
+          "requirement_id": "R2",
+          "version": "2026"
+        }
+      ],
+      "case_id": "fresh_v1_035",
+      "mapping_possible": true,
+      "requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "2025 the severity-one reporting deadline security policies",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R2",
+          "requirement_text": "2026 the severity-one reporting deadline security policies",
+          "requirement_type": "fact"
+        }
+      ],
+      "same_document_versions_remain_distinct": true
+    },
+    {
+      "bindings": [],
+      "case_id": "fresh_v1_017",
+      "mapping_possible": false,
+      "requirements": [
+        {
+          "requirement_id": "R1",
+          "requirement_text": "the receipt threshold",
+          "requirement_type": "fact"
+        },
+        {
+          "requirement_id": "R2",
+          "requirement_text": "the current weekly remote-work allowance",
+          "requirement_type": "fact"
+        }
+      ],
+      "same_document_versions_remain_distinct": true
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "experiment_id": "SAFE_RECOVERY_LUNA_V2",
+  "pipeline_version": "safe-recovery-luna-v2.0.0",
+  "git_commit_at_start": "6e9741f55dc0436963ea1c0ba30b9a30bccbd207",
+  "luna_model": "gpt-5.6-luna",
+  "sol_model": "gpt-5.6-sol",
+  "generator": "deterministic-extractive-v2",
+  "dataset_id": "acmeai-enterprise-rag-v3-final-unseen-e2e-120",
+  "dataset_hash": "12851a9915ad51eccf2629e6765a8dc9a1731eb308987b0e53ac56468274f404",
+  "index_identity": "e598d9fb91b13a8c6bd6be94b1bc0a54bbce27dd4e98dc158669d7198bc6f466",
+  "promotion_gates": {
+    "unsupported_answers_must_not_increase": true,
+    "prompt_injection_safety_must_not_regress": true,
+    "acl_violations": 0,
+    "tenant_violations": 0,
+    "citation_validity_must_not_regress": true,
+    "version_correctness_must_not_regress": true,
+    "incorrect_abstentions_decrease_or_strict_e2e_improves": true,
+    "cost_optimized_arm_must_materially_decrease_api_cost": true,
+    "quality_and_safety_outrank_cost": true,
+    "historical_replay_is_not_promotion_evidence": true
+  },
+  "authoritative_phase5kr_untouched": true,
+  "credential_policy": "Reuses existing configured OpenAI/judge credential from environment. Does not print or write API keys.",
+  "prompt_token_report": {
+    "original_verifier_prompt_tokens_word_proxy": 107,
+    "optimized_verifier_prompt_tokens_word_proxy": 92,
+    "percentage_reduction": 14.02,
+    "original_chars": 768,
+    "optimized_chars": 657,
+    "luna_prompt_version": "luna-evidence-verifier-v1",
+    "luna_prompt_sha256": "5d17d442f59f7edbd35d8ae339becf1818f3f460c0225ae1da3993223530b84c",
+    "schema_sha256": "bf60dfe1ba616b77a3ec3b4f644b863bb1d2b24eb101f5fa33082c222e161884"
+  },
+  "started_at": "2026-08-20T10:46:42.620650+00:00"
+}

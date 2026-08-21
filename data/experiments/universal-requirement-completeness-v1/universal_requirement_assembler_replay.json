@@ -1,0 +1,247 @@
+{
+  "experiment_id": "UNIVERSAL_REQUIREMENT_COMPLETENESS_V1",
+  "new_openai_calls": 0,
+  "populations": {
+    "correct_abstentions": {
+      "n": 20,
+      "passed": 20,
+      "regressions": []
+    },
+    "previously_recovered_adaptive": {
+      "cases": [
+        {
+          "api_calls": 0,
+          "query_id": "p5k_single_document_001",
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "query_id": "p5k_single_document_006",
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "query_id": "p5k_single_document_008",
+          "status": "answered"
+        }
+      ],
+      "n": 3,
+      "passed": 3,
+      "population": "previously_recovered_adaptive",
+      "regressions": []
+    },
+    "three_document": {
+      "cases": [
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_027",
+          "requirement_count": 3,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_028",
+          "requirement_count": 3,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_029",
+          "requirement_count": 3,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_030",
+          "requirement_count": 3,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_031",
+          "requirement_count": 3,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_032",
+          "requirement_count": 3,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_033",
+          "requirement_count": 3,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_034",
+          "requirement_count": 3,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_035",
+          "requirement_count": 3,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_036",
+          "requirement_count": 3,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_037",
+          "requirement_count": 3,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_038",
+          "requirement_count": 3,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_039",
+          "requirement_count": 3,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_040",
+          "requirement_count": 3,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_041",
+          "requirement_count": 3,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 3,
+          "query_id": "p5k_three_document_042",
+          "requirement_count": 3,
+          "status": "answered"
+        }
+      ],
+      "n": 16,
+      "passed": 16,
+      "population": "three_document",
+      "regressions": []
+    },
+    "unsupported_four": {
+      "n": 4,
+      "passed": 4,
+      "regressions": []
+    },
+    "version_sensitive": {
+      "cases": [
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 1,
+          "query_id": "p5k_version_sensitive_079",
+          "requirement_count": 1,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 1,
+          "query_id": "p5k_version_sensitive_080",
+          "requirement_count": 1,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 1,
+          "query_id": "p5k_version_sensitive_081",
+          "requirement_count": 1,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 1,
+          "query_id": "p5k_version_sensitive_082",
+          "requirement_count": 1,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 1,
+          "query_id": "p5k_version_sensitive_083",
+          "requirement_count": 1,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 1,
+          "query_id": "p5k_version_sensitive_084",
+          "requirement_count": 1,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 1,
+          "query_id": "p5k_version_sensitive_085",
+          "requirement_count": 1,
+          "status": "answered"
+        },
+        {
+          "api_calls": 0,
+          "failure_code": null,
+          "output_requirement_count": 1,
+          "query_id": "p5k_version_sensitive_086",
+          "requirement_count": 1,
+          "status": "answered"
+        }
+      ],
+      "n": 8,
+      "passed": 8,
+      "population": "version_sensitive",
+      "regressions": []
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "api_calls": 0,
+  "called": 11,
+  "correct_abstain_for_received_evidence": 4,
+  "decisions": {
+    "ABSTAIN": 10,
+    "GO": 1
+  },
+  "evidence_complete_but_verifier_failed": 5,
+  "go_later_rejected": 1,
+  "incorrect_abstain_for_received_evidence": 6,
+  "incorrect_uncertain": 0,
+  "primary_finding": "Evidence available but verifier/router/validator too conservative is the dominant shared behavior; five clean cases are direct Luna false negatives.",
+  "timestamp": "2026-08-20T23:30:23.607788+00:00"
+}

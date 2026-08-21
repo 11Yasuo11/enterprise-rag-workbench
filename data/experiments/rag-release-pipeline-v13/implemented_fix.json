@@ -1,0 +1,27 @@
+{
+  "api_calls": 0,
+  "case_id_branches": false,
+  "hardcoded_gold": false,
+  "primary_root_cause": "PROMPT_INJECTION_PRECHECK_BYPASS",
+  "secondary_cause": "ROUTER_SAFETY_BYPASS_VIA_VERSION_RESOLVED_PACKET_FILL",
+  "fixes": [
+    {
+      "id": "injection_guard_v2_coverage",
+      "file": "src/rag_workbench/safety/question_injection_guard_v2.py"
+    },
+    {
+      "id": "execute_safety_hard_gate",
+      "file": "scripts/run_rag_release_pipeline_v4_evaluation.py"
+    },
+    {
+      "id": "packet_zero_overlap_only_multi_version",
+      "file": "src/rag_workbench/experiments/atomic_requirement_contract_v1/verifier.py"
+    },
+    {
+      "id": "prompt_injection_safety_tests_v13",
+      "file": "tests/unit/test_prompt_injection_safety_v13.py"
+    }
+  ],
+  "preserves_v12_032_version_fix": true,
+  "timestamp": "2026-08-21T08:52:36.491922+00:00"
+}

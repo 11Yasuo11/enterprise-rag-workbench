@@ -1,0 +1,154 @@
+{
+  "cases": [
+    {
+      "actual": {
+        "expected_count": 1,
+        "failure_code": null,
+        "output_count": 1,
+        "passed": true
+      },
+      "constraints": [
+        {
+          "constraint_type": "numeric",
+          "operator": ">",
+          "raw_text": "> 25",
+          "unit": null,
+          "upper_value": null,
+          "value": "25"
+        }
+      ],
+      "evidence": "> 25",
+      "expected_pass": true,
+      "output": "> 25"
+    },
+    {
+      "actual": {
+        "expected_count": 1,
+        "failure_code": null,
+        "output_count": 1,
+        "passed": true
+      },
+      "constraints": [
+        {
+          "constraint_type": "numeric",
+          "operator": ">=",
+          "raw_text": ">= 25",
+          "unit": null,
+          "upper_value": null,
+          "value": "25"
+        }
+      ],
+      "evidence": ">= 25",
+      "expected_pass": true,
+      "output": ">= 25"
+    },
+    {
+      "actual": {
+        "expected_count": 1,
+        "failure_code": "OUTPUT_CONSTRAINT_MISMATCH",
+        "output_count": 1,
+        "passed": false
+      },
+      "constraints": [
+        {
+          "constraint_type": "numeric",
+          "operator": ">",
+          "raw_text": "> 25",
+          "unit": null,
+          "upper_value": null,
+          "value": "25"
+        }
+      ],
+      "evidence": "> 25",
+      "expected_pass": false,
+      "output": ">= 25"
+    },
+    {
+      "actual": {
+        "expected_count": 1,
+        "failure_code": "OUTPUT_CONSTRAINT_MISMATCH",
+        "output_count": 1,
+        "passed": false
+      },
+      "constraints": [
+        {
+          "constraint_type": "date",
+          "operator": "before",
+          "raw_text": "before April 12, 2026",
+          "unit": null,
+          "upper_value": null,
+          "value": "April 12, 2026"
+        }
+      ],
+      "evidence": "before April 12, 2026",
+      "expected_pass": false,
+      "output": "on or before April 12, 2026"
+    },
+    {
+      "actual": {
+        "expected_count": 1,
+        "failure_code": "OUTPUT_CONSTRAINT_MISMATCH",
+        "output_count": 1,
+        "passed": false
+      },
+      "constraints": [
+        {
+          "constraint_type": "date",
+          "operator": "after",
+          "raw_text": "after April 12, 2026",
+          "unit": null,
+          "upper_value": null,
+          "value": "April 12, 2026"
+        }
+      ],
+      "evidence": "after April 12, 2026",
+      "expected_pass": false,
+      "output": "on or after April 12, 2026"
+    },
+    {
+      "actual": {
+        "expected_count": 1,
+        "failure_code": null,
+        "output_count": 1,
+        "passed": true
+      },
+      "constraints": [
+        {
+          "constraint_type": "duration",
+          "operator": "within",
+          "raw_text": "within 10 days",
+          "unit": "days",
+          "upper_value": null,
+          "value": "10"
+        }
+      ],
+      "evidence": "within 10 days",
+      "expected_pass": true,
+      "output": "within 10 days"
+    },
+    {
+      "actual": {
+        "expected_count": 1,
+        "failure_code": null,
+        "output_count": 1,
+        "passed": true
+      },
+      "constraints": [
+        {
+          "constraint_type": "numeric",
+          "operator": "range",
+          "raw_text": "between 10 and 20 percent",
+          "unit": "percent",
+          "upper_value": "20",
+          "value": "10"
+        }
+      ],
+      "evidence": "between 10 and 20 percent",
+      "expected_pass": true,
+      "output": "between 10 and 20 percent"
+    }
+  ],
+  "experiment_id": "UNIVERSAL_REQUIREMENT_COMPLETENESS_V1",
+  "n": 7,
+  "passed": 7
+}

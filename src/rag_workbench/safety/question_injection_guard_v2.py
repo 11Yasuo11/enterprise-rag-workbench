@@ -48,7 +48,10 @@ _TREAT_AS_SYSTEM_OR_AUTHORITATIVE = re.compile(
 )
 
 _OVERRIDE_RULES = re.compile(
-    r"(?is)\b(ignore|disregard|override(?:s)?|override\s+all|bypass)\b.{0,120}\b(previous|prior|earlier|system|assistant|rules|guardrails|safety|policies?)\b"
+    r"(?is)\b(ignore|disregard|override(?:s)?|override\s+all|bypass|discard)\b.{0,120}\b("
+    r"previous|prior|earlier|system|assistant|rules|guardrails|safety|policies?|"
+    r"governing\s+instructions?|instructions?"
+    r")\b"
 )
 
 _FOLLOW_RETRIEVED_INSTRUCTIONS = re.compile(
@@ -56,16 +59,29 @@ _FOLLOW_RETRIEVED_INSTRUCTIONS = re.compile(
 )
 
 _REVEAL_SECRETS = re.compile(
-    r"(?is)\b(reveal|expose|dump|show)\b.{0,120}\b(system\s+secrets?|secrets?|credentials?|api\s+keys?|confidential|private|hidden)\b"
+    r"(?is)\b(reveal|expose|dump|show|print|disclose)\b.{0,120}\b("
+    r"system\s+secrets?|secrets?|credentials?|api\s+keys?|confidential|private|hidden|"
+    r"private\s+configuration|system\s+configuration|developer\s+prompt"
+    r")\b"
 )
 
 _DROP_CITATIONS_OR_ANSWER_WITHOUT_EVIDENCE = re.compile(
-    r"(?is)\b(drop|ignore)\b.{0,80}\b(citations?|evidence)\b"
+    r"(?is)\b(drop|ignore|suppress|omit|hide|remove)\b.{0,80}\b(citations?|evidence|sources?|references?)\b"
     r"|\b(answer|respond|produce|output)\b.{0,120}\b(without\s+citations|no\s+citations)\b"
 )
 
 _IGNORE_SAFETY_GUARDRAILS = re.compile(
     r"(?is)\b(ignore|bypass)\b.{0,120}\b(safety|guardrails?|restrictions?|guardrail|policy|policies?)\b"
+)
+
+_BYPASS_AUTHORIZATION = re.compile(
+    r"(?is)\b(bypass|override|circumvent|disable)\b.{0,120}\b("
+    r"acl|access\s+control|authorization|authorisation|permissions?|tenant\s+isolation|"
+    r"unauthorized|unauthorised"
+    r")\b"
+    r"|\b(answer|respond|use)\b.{0,120}\b(unauthorized|unauthorised)\b.{0,80}\b("
+    r"documents?|evidence|chunks?|sources?"
+    r")\b"
 )
 
 _ANSWER_WITHOUT_EVIDENCE = re.compile(
@@ -92,7 +108,7 @@ def is_question_injection_v2(question: str) -> bool:
     if _TREAT_AS_SYSTEM_OR_AUTHORITATIVE.search(q):
         return True
 
-    # Override / ignore system/assistant rules
+    # Override / ignore / discard system/assistant/governing instructions
     if _OVERRIDE_RULES.search(q) and (
         "assistant" in q_lower
         or "system" in q_lower
@@ -100,6 +116,7 @@ def is_question_injection_v2(question: str) -> bool:
         or "guardrails" in q_lower
         or "safety" in q_lower
         or "policy" in q_lower
+        or "instruction" in q_lower
     ):
         return True
 
@@ -117,6 +134,10 @@ def is_question_injection_v2(question: str) -> bool:
 
     # Bypass safety/guardrails
     if _IGNORE_SAFETY_GUARDRAILS.search(q):
+        return True
+
+    # Bypass ACL / authorization boundaries
+    if _BYPASS_AUTHORIZATION.search(q):
         return True
 
     # Answer despite lack of evidence

@@ -35,3 +35,8 @@ docker-data/
 
 # Local hygiene baselines (not research artifacts)
 data/repo_hygiene/
+
+# Local caches / bulk export zips (not source of truth)
+.local/
+artifacts/
+*.zip

@@ -2,34 +2,52 @@
 
 Interview-oriented component guide for Enterprise RAG Workbench.
 
-**Stable release:** V2 (`main` / `v2.0.0`).  
+**CURRENT EXECUTING PATH (2026-08):** `CanonicalRagRuntime` — Dense20 + BM25 20 → RRF k=60 → cap≤30 → Cross-Encoder → **Top-15** → requirements / packets / deterministic|Luna|Sol → assembler-v3.
+Web `POST /rag/query` and eval `POST /eval/run` share that runtime. See [`PRODUCTION_RAG_ARCHITECTURE.md`](PRODUCTION_RAG_ARCHITECTURE.md) and the README Mermaid.
+
+**Historical note:** Sections below that say Top-5 / Sol-as-primary-Judge / `RagService` describe the **frozen V2 research narrative** and earlier experiment language. They are not the current serving stack.
+
 **V3 research:** closed and **not promoted** (`V3_QUALITY_IMPROVEMENT_NOT_CONFIRMED`, `V3_RELEASE_PROMOTION_REJECTED`).
 
-Related: [`ENGINEERING_DECISIONS.md`](ENGINEERING_DECISIONS.md) (frozen V2 design narrative), [`RAG_FAILURE_ANALYSIS.md`](RAG_FAILURE_ANALYSIS.md), [`V3_RAG_RESEARCH_POSTMORTEM_AND_INTERVIEW_GUIDE.md`](V3_RAG_RESEARCH_POSTMORTEM_AND_INTERVIEW_GUIDE.md).
+Related: [`ENGINEERING_DECISIONS.md`](ENGINEERING_DECISIONS.md), [`RAG_FAILURE_ANALYSIS.md`](RAG_FAILURE_ANALYSIS.md), [`V3_RAG_RESEARCH_POSTMORTEM_AND_INTERVIEW_GUIDE.md`](V3_RAG_RESEARCH_POSTMORTEM_AND_INTERVIEW_GUIDE.md).
 
-## Canonical pipeline
+## Canonical pipeline (CURRENT)
 
 ```mermaid
 flowchart TB
-  Q[User Query] --> S[Tenant / ACL / Active-Version]
-  S --> E[text-embedding-3-small]
-  E --> D[Dense Top-20]
-  E --> B[BM25 Top-20]
-  D --> R[RRF k=60]
-  B --> R
-  R --> P[Candidate Pool]
-  P --> C[Pointwise Cross-Encoder]
-  C --> T[Top-5]
-  T --> J[GPT-5.6 Sol Evidence Sufficiency Judge]
-  J -->|Insufficient| A[Safe Abstention]
-  J -->|Sufficient| SAF[Generate→Verify / Safety]
-  SAF --> G[GENERATOR_COMPLETENESS_V2]
-  G --> ANS[Answer + Citations]
-  ANS --> CIT[Citation Validation]
+  Q[User Query] --> ACL[ACL / Tenant / Region]
+  ACL --> PI[Prompt-Injection Precheck]
+  PI --> TP[Temporal + Question Plan]
+  TP --> D[Dense Top-20]
+  TP --> B[BM25 Top-20]
+  D --> RRF[RRF k=60]
+  B --> RRF
+  RRF --> CAP[Candidate ≤30]
+  CAP --> CE[Cross-Encoder]
+  CE --> T15[Top-15 Pool]
+  T15 --> VA[Version / Auth]
+  VA --> REQ[Atomic Requirements]
+  REQ --> MAP[Evidence Mapping + Packets]
+  MAP --> DS{Deterministic Support?}
+  DS -->|yes| DET[Deterministic]
+  DS -->|no| LUNA[Luna Verifier]
+  LUNA --> SOL[Sol escalation only]
+  DET --> VAL[Validation + Completeness]
+  SOL --> VAL
+  LUNA --> VAL
+  VAL --> ASM[Assembler-v3]
+  ASM --> OUT[Answer + Citations / Abstain]
 ```
 
-Primary orchestration: `RagService.query` in `src/rag_workbench/generation/generator.py`.  
-HTTP entry: `POST /rag/query` in `src/rag_workbench/api/app.py`.
+Primary orchestration: `CanonicalRagRuntime.query` in `src/rag_workbench/runtime/canonical_runtime.py`.
+HTTP entry: `POST /rag/query` (and `POST /eval/run`) in `src/rag_workbench/api/app.py`.
+Legacy `RagService` remains for historical tests only.
+
+---
+
+## Historical V2 research pipeline (not current serving)
+
+The diagram and Top-5 / Judge-centric sections that follow document the earlier V2 research path. Prefer the CURRENT diagram above in interviews.
 
 ---
 
@@ -125,7 +143,7 @@ Code: `src/rag_workbench/recovery/`, `src/rag_workbench/safety/`
 | **TRADE-OFF** | Limited synthesis; not semantic answer grading |
 | **LIMITATION** | Did not produce a net final-benchmark win vs stable V2 (all arms 74.17%) |
 
-Code: `src/rag_workbench/providers/llm/extractive.py`  
+Code: `src/rag_workbench/providers/llm/extractive.py`
 Note: Frozen V2 also documents `deterministic-extractive-v1.1` as the historical release generator identity.
 
 ## Citation validation

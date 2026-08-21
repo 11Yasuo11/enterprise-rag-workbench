@@ -1,0 +1,56 @@
+{
+  "audit_id": "interview-final-audit",
+  "timestamp": "2026-08-21T10:05:00+00:00",
+  "branch": "chore/repository-hygiene-cleanup",
+  "verdict": "INTERVIEW_READY_COMPLETE",
+  "success_definition": {
+    "Repository_understandable": "PASS",
+    "README_current": "PASS",
+    "Demo_runbook": "READY",
+    "Technical_explanation": "READY",
+    "Interview_QA": "READY",
+    "Cheat_sheet": "READY",
+    "Zero_API_tests": "PASS",
+    "Tracked_secrets": 0,
+    "Unresolved_historical_secrets": 0,
+    "Frontend_secret_exposure": 0,
+    "Evaluation_gold_runtime_leakage": 0,
+    "Prompt_injection_safety": "PASS",
+    "ACL_Tenant_Region": "PASS",
+    "Ruff": "PASS",
+    "git_diff_check": "PASS",
+    "No_production_deployment": "CONFIRMED"
+  },
+  "local_policy": {
+    "embedding_provider": "hashing",
+    "allow_external_calls": false,
+    "paid_api_calls_this_cycle": false,
+    "cost_usd": 0.0
+  },
+  "quality_reference": {
+    "suite": "V2_REGRESSION_V14",
+    "score": "60/60",
+    "disclaimer": "regression_not_unseen_generalization"
+  },
+  "serving_status": "integrated_and_validated_not_externally_deployed",
+  "artifacts": [
+    "docs/INTERVIEW_REPOSITORY_AUDIT.md",
+    "docs/INTERVIEW_DEMO_RUNBOOK.md",
+    "docs/INTERVIEW_TECHNICAL_EXPLANATION.md",
+    "docs/INTERVIEW_QA.md",
+    "docs/INTERVIEW_CHEAT_SHEET.md",
+    "docs/SECURITY_REVIEW.md",
+    "data/experiments/interview-final-audit/test_audit.json",
+    "data/experiments/interview-final-audit/security_audit.json",
+    "data/experiments/interview-final-audit/evaluation_leakage_audit.json",
+    "data/experiments/interview-final-audit/repository_audit.json",
+    "data/experiments/interview-final-audit/final_report.json"
+  ],
+  "code_hygiene_changes": [
+    "pyproject.toml pytest pythonpath",
+    "pyproject.toml ruff extend-exclude for frozen experiment scripts and export_audit.py",
+    "ARCHITECTURE_DECISIONS current banner",
+    "REPOSITORY_QUALITY_STATUS historical limitations label",
+    "README What It Is + interview doc map"
+  ]
+}

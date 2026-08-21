@@ -1,10 +1,21 @@
 # Enterprise RAG Workbench
 
-## What This Project Is
+## What It Is
 
-A production-oriented enterprise RAG research/workbench focused on **grounded answers**, **authorization**, **version correctness**, **requirement completeness**, **safe abstention**, and **evaluation-driven architecture improvement**.
+A production-oriented enterprise RAG workbench focused on:
+
+- grounded answers
+- hybrid retrieval
+- authorization
+- temporal/version correctness
+- completeness
+- safe abstention
+- evaluation-driven improvement
 
 It is not a deployed SaaS product. The AcmeAI corpus under `data/synthetic_company` is synthetic. Serving and evaluation share one inference path: `CanonicalRagRuntime`.
+
+**Local safe mode** (default): `EMBEDDING_PROVIDER=hashing`, `ALLOW_EXTERNAL_CALLS=false`.
+**Production configuration** (validated separately): `text-embedding-3-small` + Cross-Encoder / Luna–Sol when external calls are explicitly enabled.
 
 ## Why I Built It
 
@@ -177,7 +188,12 @@ Copy `.env.example` → `.env`. Local/CI may use hashing embeddings; production 
 | [Current Serving Path](docs/CURRENT_SERVING_RAG_ARCHITECTURE.md) | Browser → API call graph |
 | [Architecture Decisions](docs/ARCHITECTURE_DECISIONS.md) | Component why / trade-offs |
 | [RAG Failure Analysis](docs/RAG_FAILURE_ANALYSIS.md) | Causal failure classes |
-| [Interview Demo Runbook](docs/INTERVIEW_DEMO_RUNBOOK.md) | Short walkthrough |
+| [Interview Demo Runbook](docs/INTERVIEW_DEMO_RUNBOOK.md) | Exact local demo commands + queries |
+| [Interview Cheat Sheet](docs/INTERVIEW_CHEAT_SHEET.md) | One-page architecture + results |
+| [Interview Q&A](docs/INTERVIEW_QA.md) | High-probability technical questions |
+| [Technical Explanation](docs/INTERVIEW_TECHNICAL_EXPLANATION.md) | 2-minute EN/JA explanation |
+| [Repository Audit](docs/INTERVIEW_REPOSITORY_AUDIT.md) | First-look readability audit |
+| [Security Review](docs/SECURITY_REVIEW.md) | Secret / leakage / auth audit |
 | [V3 Postmortem](docs/V3_RAG_RESEARCH_POSTMORTEM_AND_INTERVIEW_GUIDE.md) | Closed research cycle |
 | [Experiments](docs/EXPERIMENTS.md) | Controlled experiment chronology |
 | [BENCHMARK.md](BENCHMARK.md) | Full measured research log |

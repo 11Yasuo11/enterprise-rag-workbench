@@ -1,0 +1,60 @@
+{
+  "audit_id": "interview-final-audit-tests",
+  "timestamp": "2026-08-21T10:05:00+00:00",
+  "branch": "chore/repository-hygiene-cleanup",
+  "base_commit_before_docs": "a1198cf",
+  "external_api_calls": false,
+  "allow_external_calls": false,
+  "embedding_provider_policy": "hashing_local_safe_mode",
+  "paid_v2_formal_run": false,
+  "frozen_quality_reference": {
+    "artifact": "data/experiments/rag-release-pipeline-v14/fresh_v2_regression_report.json",
+    "verdict": "FRESH_V2_REGRESSION_PASSED",
+    "cases": "60/60",
+    "label": "V2_REGRESSION_NOT_UNSEEN"
+  },
+  "gates": {
+    "ruff_check_dot": "PASS",
+    "git_diff_check": "PASS",
+    "focused_zero_api_pytest": {
+      "status": "PASS",
+      "tests_collected": 196,
+      "files": [
+        "tests/unit/test_canonical_runtime_promotion.py",
+        "tests/unit/test_eval_canonical_runtime.py",
+        "tests/unit/test_hybrid_retrieval.py",
+        "tests/unit/test_cross_encoder_reranking.py",
+        "tests/unit/test_prompt_injection_safety_v13.py",
+        "tests/unit/test_question_injection_guard_v2.py",
+        "tests/unit/test_deterministic_support_v8.py",
+        "tests/unit/test_evidence_mapping_contract_v6.py",
+        "tests/unit/test_requirement_packet_grounding_v5.py",
+        "tests/unit/test_atomic_requirement_contract_v1.py",
+        "tests/unit/test_universal_requirement_completeness_v1.py",
+        "tests/unit/test_p1_version_temporal_v1.py",
+        "tests/unit/test_citation_authorization.py",
+        "tests/unit/test_requirement_assembler_selective_routing_v1.py",
+        "tests/unit/test_cross_version_resolution_v12.py"
+      ],
+      "coverage_notes": [
+        "canonical runtime / web-eval parity",
+        "hybrid retrieval + RRF",
+        "cross-encoder (local/mocked)",
+        "question planning / temporal / authorization",
+        "CanonicalEvidenceMapping / requirement packets",
+        "deterministic support / completeness / assembler",
+        "prompt injection",
+        "API /rag/query and /eval/run covered via canonical runtime unit tests"
+      ]
+    },
+    "full_unit_pytest": {
+      "status": "PASS",
+      "tests_collected": 578,
+      "notes": "pythonpath=. added so scripts.* imports resolve; Starlette/httpx TestClient deprecation warning non-blocking"
+    }
+  },
+  "hygiene_fixes_for_gates": [
+    "pytest pythonpath=['.'] for scripts imports",
+    "ruff extend-exclude for export_audit.py and data/experiments frozen utilities"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "audit_id": "interview-final-audit-repository",
+  "timestamp": "2026-08-21T10:05:00+00:00",
+  "branch": "chore/repository-hygiene-cleanup",
+  "git": {
+    "working_tree": "clean_before_audit_edits",
+    "tracking": "origin/chore/repository-hygiene-cleanup",
+    "up_to_date_before_audit": true
+  },
+  "readability": {
+    "understand_30s": "PASS",
+    "architecture_2m": "PASS",
+    "interesting_decisions": "PASS",
+    "evaluation_clarity": "PASS",
+    "historical_vs_current": "PASS",
+    "deployment_clarity": "PASS",
+    "local_run": "PASS"
+  },
+  "readme": {
+    "current_architecture_knobs": "20/20/60/30/15",
+    "regression_wording": "correct",
+    "deployment_claim": "not_externally_deployed",
+    "local_vs_production_distinguished": true
+  },
+  "stale_doc_findings": [
+    {
+      "doc": "docs/ARCHITECTURE_DECISIONS.md",
+      "issue": "previously presented Top-5/RagService as canonical",
+      "action": "CURRENT banner + current Mermaid added; historical sections retained"
+    },
+    {
+      "doc": "docs/V3_RAG_INTERVIEW_CHEAT_SHEET.md",
+      "issue": "historical Top-5 cheat sheet",
+      "action": "left as historical V3 artifact; prefer docs/INTERVIEW_CHEAT_SHEET.md"
+    },
+    {
+      "doc": "docs/REPOSITORY_QUALITY_STATUS.md",
+      "issue": "limitations table looked current vs V14 60/60",
+      "action": "labeled as historical research holdout limitations"
+    }
+  ],
+  "doc": "docs/INTERVIEW_REPOSITORY_AUDIT.md",
+  "verdict": "PASS"
+}

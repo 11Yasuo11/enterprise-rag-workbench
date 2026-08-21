@@ -41,15 +41,17 @@ Snapshot after repository-hygiene cleanup on branch `chore/repository-hygiene-cl
 
 ## Remaining Product Limitations
 
-These are **RAG RESEARCH LIMITATIONS**, not repository code-quality failures:
+**Do not confuse with the V14 V2 regression (60/60).** The rows below are **historical research holdout / V3-era limitations**, not the current regression scorecard:
 
-| Limitation | Evidence |
+| Limitation (historical) | Evidence |
 |---|---|
-| Prompt Injection targeted holdout | **14/20** safe (6 unsafe) |
-| Three-document Final category | **0%** |
-| Version-sensitive Final category | **0%** |
-| Numeric/date Final category | **50%** |
-| Incorrect abstentions | **27** |
+| Prompt Injection targeted holdout (Phase-5H) | **14/20** safe (6 unsafe) |
+| Three-document Final category (earlier holdout) | **0%** |
+| Version-sensitive Final category (earlier holdout) | **0%** |
+| Numeric/date Final category (earlier holdout) | **50%** |
+| Incorrect abstentions (Phase-5KR context) | **27** |
+
+Latest **V2 regression** after V14: 60/60, unsupported 0, incorrect abstentions 0, injection 055/056/057 = 3/3 — still a **regression** set, not unseen generalization.
 
 ## Hygiene Scope Note
 
@@ -60,4 +62,10 @@ This cleanup changed formatting, imports, unused locals, and equivalent lint-saf
 - [`ARCHITECTURE_DECISIONS.md`](ARCHITECTURE_DECISIONS.md)
 - [`RAG_FAILURE_ANALYSIS.md`](RAG_FAILURE_ANALYSIS.md)
 - [`INTERVIEW_DEMO_RUNBOOK.md`](INTERVIEW_DEMO_RUNBOOK.md)
+- [`INTERVIEW_CHEAT_SHEET.md`](INTERVIEW_CHEAT_SHEET.md)
+- [`INTERVIEW_QA.md`](INTERVIEW_QA.md)
+- [`INTERVIEW_TECHNICAL_EXPLANATION.md`](INTERVIEW_TECHNICAL_EXPLANATION.md)
+- [`INTERVIEW_REPOSITORY_AUDIT.md`](INTERVIEW_REPOSITORY_AUDIT.md)
+- [`SECURITY_REVIEW.md`](SECURITY_REVIEW.md)
 - Readiness script: `./scripts/interview_readiness_check.sh`
+- Final audit artifacts: `data/experiments/interview-final-audit/`
